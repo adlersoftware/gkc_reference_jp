@@ -1,0 +1,95 @@
+[
+  {
+    "type": "screenObjectivesSystem",
+    "fields": {
+      "showObjectivesActive": "オンで画面上の目標アイコン表示システム全体を有効化。",
+      "mainMapCreatorManagerName": "マップ生成マネージャー名の指定。本クラスでは参照されない。"
+    }
+  },
+  {
+    "type": "setGravity",
+    "fields": {
+      "useWithPlayer": "オンで`playerTag`を持つプレイヤーに重力変更を適用。",
+      "useWithNPC": "オンで`friendTag`と`enemyTag`のNPCにも重力変更を適用。",
+      "useWithVehicles": "オンで`vehicleGravityControl`を持つ乗り物にも重力を適用。",
+      "rotateVehicleToGravityDirection": "オンで乗り物を新しい重力方向へ向けて回転させる。",
+      "useCenterPointOnVehicle": "オンで乗り物にも`centerPoint`を重力中心として渡す。",
+      "playerTag": "プレイヤーと判定するタグ。一致した物体に重力を適用。",
+      "friendTag": "味方NPCと判定するタグ。`useWithNPC`と組み合わせて使用。",
+      "enemyTag": "敵NPCと判定するタグ。`useWithNPC`と組み合わせて使用。",
+      "useWithAnyRigidbody": "オンでタグに関係なくRigidbody物体へ人工重力を付与。",
+      "checkOnlyForArtificialGravitySystem": "オンで人工重力用コンポーネントを持つ物体だけを対象に限定。",
+      "typeOfTrigger": "重力を切り替えるタイミング。侵入時・退出時・両方から選択。",
+      "setGravityMode": "オンで以下の重力モード設定をトリガー時に反映する。",
+      "setRegularGravity": "オンで通常重力へ戻し、人工重力を解除する。",
+      "setZeroGravity": "オンで無重力モードを有効にする。",
+      "disableZeroGravity": "オンで無重力モードを回転なしで解除する。",
+      "setCustomGravityForce": "オンで`customGravityForce`の値を重力加速度として設定。",
+      "customGravityForce": "キャラクターや物体に設定する重力加速度の値。",
+      "setCustomGravityForceOnCharactersEnabled": "オンでキャラクターにもカスタム重力値を適用し、退出時に戻す。",
+      "dropObjectIfGabbed": "オンで重力変更時につかんでいる物体を落とさせる。",
+      "dropObjectOnlyIfNotGrabbedPhysically": "オンで物理的につかんでいない場合のみ落下させる。",
+      "useCustomGravityDirection": "オンで`customGravityDirection`を重力方向として使用。",
+      "customGravityDirection": "適用する重力方向のベクトル。中心点より優先される。",
+      "useCenterPoint": "オンで`centerPoint`へ向かう方向に重力を発生させる。",
+      "centerPoint": "重力の中心となる位置。未設定ならこの物体自身を使用。",
+      "useCenterPointOnCharacters": "オンでキャラクターにも中心点を重力中心として設定する。",
+      "useCenterPointForRigidbodies": "オンでRigidbody物体にも中心点を重力中心として設定。",
+      "useInverseDirectionToCenterPoint": "オンで中心点へ引く重力の向きを反転させる。",
+      "changeGravityDirectionActive": "オンで算出した方向へ重力を直接変更する。",
+      "rotateToSurfaceSmoothly": "オンで`changeOnTrigger`を使い滑らかに姿勢を回転させる。",
+      "setCircumnavigateSurfaceState": "オンで表面回り込みの設定をトリガー時に反映する。",
+      "circumnavigateSurfaceState": "表面を回り込む移動を有効にするかどうかの値。",
+      "setCheckSurfaceInFrontState": "オンで前方の表面チェック設定をトリガー時に反映する。",
+      "checkSurfaceInFrontState": "前方の表面チェックを有効にするかどうかの値。",
+      "setCheckSurfaceBelowLedgeState": "オンで足場下の縁チェック設定をトリガー時に反映する。",
+      "checkSurfaceBelowLedgeState": "足場下の縁チェックを有効にするかどうかの値。",
+      "preservePlayerVelocity": "オンで重力方向変更時にプレイヤーの速度を維持する。",
+      "storeSetGravityManager": "オンでこのトリガーを現在の重力設定元として記録させる。",
+      "setTargetParent": "オンで重力変更時に`targetParent`へ親子付けする。",
+      "setRigidbodiesParent": "オンでRigidbody物体の親を`targetParent`に設定する。",
+      "targetParent": "重力変更時に親として設定するオブジェクト。",
+      "useAnimation": "オンでアニメーションを再生し矢印などの演出を動かす。",
+      "animationName": "`mainAnimation`で再生するアニメーションのクリップ名。",
+      "mainAnimation": "再生に使う`Animation`。未設定なら自動で取得を試みる。",
+      "useCenterPointList": "オンで複数の中心点から最も近いものを重力中心にする。",
+      "useCenterIfPointListTooClose": "オンで中心点一覧より`centerPoint`が近い場合に優先する。",
+      "useCenterPointListForRigidbodies": "オンでRigidbody物体にも中心点一覧を使用させる。",
+      "useInitialObjectsOnGravityList": "オンで開始時に一覧内の物体へ重力変更を適用する。",
+      "showDebugPrint": "オンで対象判定などのデバッグログをコンソールに出力。"
+    }
+  },
+  {
+    "type": "simpleSwitch",
+    "fields": {
+      "buttonEnabled": "オンでこのスイッチを操作できる状態にする。",
+      "useSingleSwitch": "オンで押すたび単発動作、オフでオンとオフを切り替える。",
+      "buttonUsesAnimation": "オンで押下時に`buttonAnimation`を再生する。",
+      "switchAnimationName": "再生するスイッチアニメーションのクリップ名。",
+      "animationSpeed": "アニメーションの再生速度倍率。負値で逆再生になる。",
+      "notUsableWhileAnimationIsPlaying": "オンでアニメーション再生中は再操作できなくする。",
+      "pressSound": "押した時に再生する`AudioClip`。",
+      "pressAudioElement": "効果音の音量や音源を設定する`AudioElement`。",
+      "sendCurrentUser": "オンで操作したプレイヤーを`setCurrentUser`で通知する。",
+      "useUnityEvents": "オンでUnityEventを実行、オフでSendMessageを使う。",
+      "objectToCallFunctions": "単発スイッチ時に実行するUnityEvent。",
+      "switchTurnedOn": "スイッチがオン状態かどうかの現在値。初期状態も指定。",
+      "turnOnEvent": "オンに切り替えた時に実行するUnityEvent。",
+      "turnOffEvent": "オフに切り替えた時に実行するUnityEvent。",
+      "objectToActive": "UnityEventを使わずSendMessageを送る対象オブジェクト。",
+      "activeFunctionName": "`objectToActive`へ送る関数の名前。",
+      "sendThisButton": "オンで送信時にこのスイッチ自身を引数として渡す。",
+      "audioSource": "効果音を再生する`AudioSource`。未設定なら自動取得。",
+      "buttonAnimation": "スイッチ動作に使う`Animation`コンポーネント。",
+      "deviceStringActionManager": "ボタンの表示名を切り替える`deviceStringAction`。"
+    }
+  },
+  {
+    "type": "tagLayerSystem",
+    "fields": {
+      "newTag": "入力した名前のタグをプロジェクトのタグ一覧へ追加する。",
+      "minLayerIndexToCheck": "レイヤー一覧で扱う最小インデックス。既定は8のユーザー領域。",
+      "newLayer": "空いているレイヤースロットへ新しいレイヤーを追加する。"
+    }
+  }
+]

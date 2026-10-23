@@ -1,0 +1,738 @@
+[
+ {
+  "type": "hitCombat",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Powers\\hitCombat.cs",
+  "methods": [
+   {
+    "sig": "checkTriggerInfo(Collider col, bool isEnter)",
+    "line": 156
+   },
+   {
+    "sig": "checkObjectDetection(GameObject objectDetected, bool isTrigger)",
+    "line": 171
+   },
+   {
+    "sig": "checkObjectDetected(GameObject objectDetected, bool isTrigger)",
+    "line": 196
+   },
+   {
+    "sig": "checkDamageToApplyOnObject(GameObject objectToDamage)",
+    "line": 242
+   },
+   {
+    "sig": "checkPushCharactersOnObject(GameObject objectToDamage)",
+    "line": 280
+   },
+   {
+    "sig": "setCustomForceDirection(Vector3 newValue)",
+    "line": 298
+   },
+   {
+    "sig": "setCustomForceAmount(float newValue)",
+    "line": 303
+   },
+   {
+    "sig": "setCustomForceMode(ForceMode newForceMode)",
+    "line": 308
+   },
+   {
+    "sig": "removeCustomForceMode()",
+    "line": 315
+   },
+   {
+    "sig": "setIgnoreForcesToApplyOnAttackActiveState(bool state)",
+    "line": 320
+   },
+   {
+    "sig": "setCustomForceToVehiclesMultiplier(float newValue)",
+    "line": 325
+   },
+   {
+    "sig": "setAddForceMultiplierValue(float newValue)",
+    "line": 330
+   },
+   {
+    "sig": "checkForceToApplyOnObject(GameObject objectToDamage)",
+    "line": 335
+   },
+   {
+    "sig": "checkDecalsToApplyOnObject(GameObject objectToDamage)",
+    "line": 403
+   },
+   {
+    "sig": "getLastSurfaceDetected()",
+    "line": 410
+   },
+   {
+    "sig": "setLastSurfaceDetected(GameObject newSurface)",
+    "line": 415
+   },
+   {
+    "sig": "getOwner(GameObject ownerObject)",
+    "line": 420
+   },
+   {
+    "sig": "getMainCollider()",
+    "line": 435
+   },
+   {
+    "sig": "setMainColliderEnabledState(bool state)",
+    "line": 442
+   },
+   {
+    "sig": "reloadMainColliderEnabled()",
+    "line": 455
+   },
+   {
+    "sig": "setCurrentState(bool value)",
+    "line": 469
+   },
+   {
+    "sig": "setIgnoreDetectedObjectsOnListState(bool state)",
+    "line": 488
+   },
+   {
+    "sig": "setConfigureDamageAsConstant(bool state)",
+    "line": 493
+   },
+   {
+    "sig": "setUseCastAllDamageDetectionState(bool state)",
+    "line": 498
+   },
+   {
+    "sig": "setNewHitDamage(float newValue)",
+    "line": 525
+   },
+   {
+    "sig": "setIgnoreShieldState(bool state)",
+    "line": 530
+   },
+   {
+    "sig": "setCurrentExtraDamageValue(float extraDamageValue)",
+    "line": 535
+   },
+   {
+    "sig": "activePushCharacterOnce()",
+    "line": 544
+   },
+   {
+    "sig": "deactivatePushCHaracterOnce()",
+    "line": 549
+   },
+   {
+    "sig": "setUsePushCharacterState(bool state)",
+    "line": 554
+   },
+   {
+    "sig": "setCurrentAttackInfoIndex(int combatTypeIndex, int attackIndex)",
+    "line": 559
+   },
+   {
+    "sig": "getDamageAppliedInLastAttackState()",
+    "line": 565
+   },
+   {
+    "sig": "setDetectSurfaceStateActive(bool state)",
+    "line": 570
+   },
+   {
+    "sig": "isDetectSurfaceStateActive()",
+    "line": 575
+   },
+   {
+    "sig": "activateDamage(GameObject objectToDamage)",
+    "line": 580
+   },
+   {
+    "sig": "getLastDamageApplied()",
+    "line": 587
+   },
+   {
+    "sig": "setCustomDamageCanBeBlockedState(bool state)",
+    "line": 592
+   },
+   {
+    "sig": "setTriggerId(int newValue)",
+    "line": 601
+   },
+   {
+    "sig": "setTriggerIdOnEditor(int newValue)",
+    "line": 606
+   },
+   {
+    "sig": "setCheckTriggerSurfacesState(bool state)",
+    "line": 613
+   },
+   {
+    "sig": "setCustomObjectToSendMessage(GameObject newObject)",
+    "line": 618
+   },
+   {
+    "sig": "setCustomLayerMask(LayerMask newLayerMask)",
+    "line": 623
+   },
+   {
+    "sig": "setCustomTagsToIgnore(List<string> newTagList)",
+    "line": 628
+   },
+   {
+    "sig": "setSendMessageOnDamageDetectedState(bool state)",
+    "line": 641
+   },
+   {
+    "sig": "setCanActivateReactionSystemTemporallyState(bool state)",
+    "line": 646
+   },
+   {
+    "sig": "setNewDamageReactionID(int newValue)",
+    "line": 651
+   },
+   {
+    "sig": "setNewDamageTypeID(int newValue)",
+    "line": 656
+   },
+   {
+    "sig": "setNewSphereColliderTriggerRadius(float newValue)",
+    "line": 661
+   },
+   {
+    "sig": "setNewBoxColliderTriggerSize(Vector3 newValue)",
+    "line": 668
+   },
+   {
+    "sig": "addOrRemoveObjectToIgnore(GameObject newObject, bool state)",
+    "line": 675
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 692
+   }
+  ]
+ },
+ {
+  "type": "powersListManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Powers\\powersListManager.cs",
+  "methods": [
+   {
+    "sig": "setTouchingMenuPanelState(bool state)",
+    "line": 568
+   },
+   {
+    "sig": "updateCurrentSelectedPowerSlotIcon(otherPowers.Powers currentPowerOnPowersManager)",
+    "line": 595
+   },
+   {
+    "sig": "enableOrDisablePowerSlot(string powerName, bool state)",
+    "line": 623
+   },
+   {
+    "sig": "editPowersSlots()",
+    "line": 642
+   },
+   {
+    "sig": "selectPower(powerSlotInfo slotInfo)",
+    "line": 677
+   },
+   {
+    "sig": "changeSlotSize(powerSlotInfo slotInfo, bool setRegularSize, float sizeMultiplier, bool smoothSizeChange)",
+    "line": 694
+   },
+   {
+    "sig": "selectPowersSlots()",
+    "line": 723
+   },
+   {
+    "sig": "closePowerListManagerMenus()",
+    "line": 777
+   },
+   {
+    "sig": "canBeOpened()",
+    "line": 788
+   },
+   {
+    "sig": "checkDuplicatedSlot(string powerName)",
+    "line": 818
+   },
+   {
+    "sig": "isEditingPowers()",
+    "line": 829
+   },
+   {
+    "sig": "getPowerByNumberKeyIndex(int numberKeyToSearch)",
+    "line": 834
+   },
+   {
+    "sig": "updateSlotsInfo(bool isEditingPowers)",
+    "line": 847
+   },
+   {
+    "sig": "assignPowerToSlot(otherPowers.Powers currentPowerToAssign, powerSlotInfo powerSlotToUse, bool slotWithPowerAssigned)",
+    "line": 1031
+   },
+   {
+    "sig": "playSound(AudioElement sound)",
+    "line": 1073
+   },
+   {
+    "sig": "inputEditPowerSlots()",
+    "line": 1081
+   },
+   {
+    "sig": "inputOpenOrClosePowersWheel(bool openPowersWheel)",
+    "line": 1094
+   },
+   {
+    "sig": "setUsedByAIState(bool state)",
+    "line": 1110
+   },
+   {
+    "sig": "setPowerListManagerEnabledState(bool state)",
+    "line": 1115
+   },
+   {
+    "sig": "setPowerListManagerEnabledStateFromEditor(bool state)",
+    "line": 1120
+   }
+  ]
+ },
+ {
+  "type": "gravityWallRunSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Powers\\gravityWallRunSystem.cs",
+  "methods": [
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 123
+   },
+   {
+    "sig": "checkIfActivateWallWalk()",
+    "line": 316
+   },
+   {
+    "sig": "activateWallWalk()",
+    "line": 378
+   },
+   {
+    "sig": "stopWallWalk()",
+    "line": 434
+   },
+   {
+    "sig": "setAnimSpeedMultiplierOnWallRunValue(float newValue)",
+    "line": 503
+   },
+   {
+    "sig": "setOriginalAnimSpeedMultiplierOnWallRunValue()",
+    "line": 508
+   },
+   {
+    "sig": "isWallWalkActive()",
+    "line": 513
+   },
+   {
+    "sig": "setWalkWallEnabledState(bool state)",
+    "line": 518
+   },
+   {
+    "sig": "toggleWalkWallEnabledState()",
+    "line": 537
+   },
+   {
+    "sig": "disableWalkWallState()",
+    "line": 542
+   },
+   {
+    "sig": "setForceWalkWallActiveExternallyState(bool state)",
+    "line": 551
+   },
+   {
+    "sig": "enableOrDisableWalkWallExternally(bool state, bool activateRunAction)",
+    "line": 556
+   },
+   {
+    "sig": "setMeshesInfo()",
+    "line": 601
+   },
+   {
+    "sig": "getMaterialList()",
+    "line": 630
+   },
+   {
+    "sig": "clearRendererList()",
+    "line": 656
+   },
+   {
+    "sig": "storePlayerRenderer()",
+    "line": 661
+   },
+   {
+    "sig": "addplayerGameObjectListFromEditor(GameObject newObject)",
+    "line": 692
+   },
+   {
+    "sig": "storePlayerRendererFromEditor()",
+    "line": 701
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 708
+   }
+  ]
+ },
+ {
+  "type": "timeBullet",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Powers\\timeBullet.cs",
+  "methods": [
+   {
+    "sig": "activateTime()",
+    "line": 46
+   },
+   {
+    "sig": "updateTimeBulletTime(float newValue)",
+    "line": 64
+   },
+   {
+    "sig": "updateTimeScaleValue()",
+    "line": 69
+   },
+   {
+    "sig": "disableTimeBullet()",
+    "line": 75
+   },
+   {
+    "sig": "disableTimeBulletTotally()",
+    "line": 84
+   },
+   {
+    "sig": "reActivateTime()",
+    "line": 93
+   },
+   {
+    "sig": "changeAudioPitch()",
+    "line": 120
+   },
+   {
+    "sig": "activateTimeBulletXSeconds(float timeBulletDuration, float timeScale)",
+    "line": 131
+   },
+   {
+    "sig": "setCustomTimeBulletDuration(float timeScale)",
+    "line": 151
+   },
+   {
+    "sig": "activateTimeBulletXSeconds(float timeBulletDuration)",
+    "line": 156
+   },
+   {
+    "sig": "setBulletTimeState(bool state, float timeScale)",
+    "line": 175
+   },
+   {
+    "sig": "setNewTimeBulletTimeSpeedValue(float newValue)",
+    "line": 183
+   },
+   {
+    "sig": "setOriginalTimeBulletTimeSpeed()",
+    "line": 188
+   },
+   {
+    "sig": "setTimeValues(bool state, float timeScale)",
+    "line": 193
+   },
+   {
+    "sig": "inputActivateBulletTime()",
+    "line": 212
+   },
+   {
+    "sig": "setTimeBulletByInputEnabledState(bool state)",
+    "line": 219
+   },
+   {
+    "sig": "isTimeBulletActivated()",
+    "line": 224
+   },
+   {
+    "sig": "setTimeBulletByInputEnabledStateFromEditor(bool state)",
+    "line": 230
+   }
+  ]
+ },
+ {
+  "type": "pushObjectsPower",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Powers\\New Powers Behaviors\\pushObjectsPower.cs",
+  "methods": [
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 192
+   },
+   {
+    "sig": "activatePowerWithUpdate()",
+    "line": 219
+   },
+   {
+    "sig": "deactivatePowerWithUpdate()",
+    "line": 234
+   },
+   {
+    "sig": "activatePower()",
+    "line": 243
+   },
+   {
+    "sig": "checkObjectToApplyForce(GameObject currentObject)",
+    "line": 282
+   },
+   {
+    "sig": "setPowerEnabledState(bool state)",
+    "line": 691
+   },
+   {
+    "sig": "setPowerEnabledStateOneFrame()",
+    "line": 712
+   },
+   {
+    "sig": "cleanGameObjectFoundList()",
+    "line": 721
+   },
+   {
+    "sig": "checkRemoteEvent(GameObject objectToCheck)",
+    "line": 726
+   },
+   {
+    "sig": "setUseRemoteEventOnObjectsFoundState(bool state)",
+    "line": 742
+   },
+   {
+    "sig": "setUseMessageToPushCharactersFoundState(bool state)",
+    "line": 747
+   },
+   {
+    "sig": "setUseOfPowerPausedState(bool state)",
+    "line": 752
+   },
+   {
+    "sig": "setNewPushCenterDistance(float newValue)",
+    "line": 757
+   }
+  ]
+ },
+ {
+  "type": "launchedObjects",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Powers\\launchedObjects.cs",
+  "methods": [
+   {
+    "sig": "setOnTriggerInfoCheckState(bool state, LayerMask newLayermask)",
+    "line": 79
+   },
+   {
+    "sig": "setUseCustomDamageAmountValues(bool state, float amount)",
+    "line": 101
+   },
+   {
+    "sig": "setCurrentPlayer(GameObject player)",
+    "line": 187
+   },
+   {
+    "sig": "setCurrentPlayerAndCollider(GameObject player, Collider playerCollider)",
+    "line": 192
+   },
+   {
+    "sig": "setIgnoreShieldState(bool state)",
+    "line": 199
+   },
+   {
+    "sig": "setCanActivateReactionSystemTemporally(bool state)",
+    "line": 204
+   },
+   {
+    "sig": "setCamageReactionID(int newValue)",
+    "line": 209
+   },
+   {
+    "sig": "setCheckCollisionsEnabledState(bool state)",
+    "line": 214
+   }
+  ]
+ },
+ {
+  "type": "slowObject",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Powers\\slowObject.cs",
+  "methods": [
+   {
+    "sig": "getObjectToCallFunction()",
+    "line": 55
+   },
+   {
+    "sig": "isUseCustomSlowSpeedEnabled()",
+    "line": 60
+   },
+   {
+    "sig": "getCustomSlowSpeed()",
+    "line": 65
+   },
+   {
+    "sig": "checkChildsObjectsToIgnore(Transform obj)",
+    "line": 70
+   },
+   {
+    "sig": "useMeshesToIgnoreEnabled()",
+    "line": 82
+   },
+   {
+    "sig": "checkEventOnReducedSpeed()",
+    "line": 87
+   },
+   {
+    "sig": "checkEventOnRegularSpeed()",
+    "line": 92
+   }
+  ]
+ },
+ {
+  "type": "gravityBootsSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Powers\\gravityBootsSystem.cs",
+  "methods": [
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 91
+   },
+   {
+    "sig": "stopGravityBoots()",
+    "line": 272
+   },
+   {
+    "sig": "areGravityBootsActive()",
+    "line": 299
+   },
+   {
+    "sig": "setGravityBootsEnabledState(bool state)",
+    "line": 304
+   },
+   {
+    "sig": "toggleGravityBootsEnabledState()",
+    "line": 333
+   },
+   {
+    "sig": "disableGravityBootsState()",
+    "line": 338
+   }
+  ]
+ },
+ {
+  "type": "joinObjectsPower",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Powers\\New Powers Behaviors\\joinObjectsPower.cs",
+  "methods": [
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 74
+   },
+   {
+    "sig": "addForce(Vector3 direction, Rigidbody rigidbodyAffected, ForceMode forceModeToUsse, bool isVehicle)",
+    "line": 171
+   },
+   {
+    "sig": "activatePower()",
+    "line": 184
+   },
+   {
+    "sig": "removeObjectsjoin()",
+    "line": 295
+   }
+  ]
+ },
+ {
+  "type": "blackHoleProjectile",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Powers\\blackHoleProjectile.cs",
+  "methods": [
+   {
+    "sig": "dropBlackHoleObjects()",
+    "line": 265
+   },
+   {
+    "sig": "stopBlackHole()",
+    "line": 314
+   },
+   {
+    "sig": "activateProjectileAbility()",
+    "line": 319
+   }
+  ]
+ },
+ {
+  "type": "powersAndAbilitiesSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Powers\\powersAndAbilitiesSystem.cs",
+  "methods": [
+   {
+    "sig": "disableGeneralPower(string powerName)",
+    "line": 10
+   },
+   {
+    "sig": "enableGeneralPower(string powerName)",
+    "line": 21
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 32
+   }
+  ]
+ },
+ {
+  "type": "changeGlobalGravityPower",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Powers\\New Powers Behaviors\\changeGlobalGravityPower.cs",
+  "methods": [
+   {
+    "sig": "activatePower()",
+    "line": 41
+   },
+   {
+    "sig": "activateSecondaryPower()",
+    "line": 57
+   }
+  ]
+ },
+ {
+  "type": "deviceToControlAtDistance",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Powers\\New Powers Behaviors\\deviceToControlAtDistance.cs",
+  "methods": [
+   {
+    "sig": "isDeviceToControlEnabled()",
+    "line": 15
+   },
+   {
+    "sig": "getDeviceToControlGameObject()",
+    "line": 20
+   }
+  ]
+ },
+ {
+  "type": "removeGravityFromCharactersProjectile",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Powers\\New Projectiles Behaviors\\removeGravityFromCharactersProjectile.cs",
+  "methods": [
+   {
+    "sig": "checkObjectDetected(Collider col)",
+    "line": 16
+   },
+   {
+    "sig": "applyEffect(GameObject objectToAffect)",
+    "line": 47
+   }
+  ]
+ },
+ {
+  "type": "changeObjectsPositionPower",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Powers\\New Powers Behaviors\\changeObjectsPositionPower.cs",
+  "methods": [
+   {
+    "sig": "activatePower()",
+    "line": 29
+   }
+  ]
+ },
+ {
+  "type": "useDevicesAtDistancePower",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Powers\\New Powers Behaviors\\useDevicesAtDistancePower.cs",
+  "methods": [
+   {
+    "sig": "activatePower()",
+    "line": 40
+   }
+  ]
+ }
+]

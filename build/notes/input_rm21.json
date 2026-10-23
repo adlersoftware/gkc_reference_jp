@@ -1,0 +1,296 @@
+[
+ {
+  "type": "playerLadderSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Ladder System\\playerLadderSystem.cs",
+  "methods": [
+   {
+    "sig": "setLadderFoundState(bool state, ladderSystem newLadderSystem)",
+    "line": 321
+   },
+   {
+    "sig": "setLadderDirectionTransform(Transform newLadderDirectionTransform, Transform newLadderRaycastDirectionTransform)",
+    "line": 483
+   },
+   {
+    "sig": "setLadderHorizontalMovementState(bool state)",
+    "line": 489
+   },
+   {
+    "sig": "setMoveInLadderCenterState(bool state)",
+    "line": 494
+   },
+   {
+    "sig": "isLadderFound()",
+    "line": 499
+   },
+   {
+    "sig": "setUseLocalMovementDirectionState(bool state)",
+    "line": 504
+   },
+   {
+    "sig": "checkLadderEventsOnThirdPerson(bool state)",
+    "line": 509
+   },
+   {
+    "sig": "rotateCharacterOnJump()",
+    "line": 520
+   },
+   {
+    "sig": "rotateCharacterOnJumpCoroutine()",
+    "line": 534
+   },
+   {
+    "sig": "checkEventOnJump()",
+    "line": 580
+   },
+   {
+    "sig": "inputJumpFromLadder()",
+    "line": 613
+   },
+   {
+    "sig": "activeJumpOnLadder()",
+    "line": 622
+   }
+  ]
+ },
+ {
+  "type": "ladderSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Ladder System\\ladderSystem.cs",
+  "methods": [
+   {
+    "sig": "checkTriggerInfo(Collider col, bool isEnter)",
+    "line": 80
+   },
+   {
+    "sig": "checkEventOnJump()",
+    "line": 134
+   },
+   {
+    "sig": "isJumpOnThirdPersonEnabled()",
+    "line": 141
+   },
+   {
+    "sig": "isJumpOnFirstPersonEnabled()",
+    "line": 146
+   }
+  ]
+ },
+ {
+  "type": "touchJoystick",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Mobile\\touchJoystick.cs",
+  "methods": [
+   {
+    "sig": "setHoverState(bool state)",
+    "line": 127
+   },
+   {
+    "sig": "GetAxis()",
+    "line": 308
+   },
+   {
+    "sig": "getRawAxis()",
+    "line": 313
+   },
+   {
+    "sig": "setTouchPadState(bool state)",
+    "line": 405
+   },
+   {
+    "sig": "setShowJoystickState(bool state)",
+    "line": 410
+   },
+   {
+    "sig": "setSnapsToFingerState(bool state)",
+    "line": 417
+   },
+   {
+    "sig": "setHideOnReleaseState(bool state)",
+    "line": 422
+   },
+   {
+    "sig": "setJoystickColorVisibleState(bool state)",
+    "line": 427
+   },
+   {
+    "sig": "touchJoystickIsPressed()",
+    "line": 446
+   }
+  ]
+ },
+ {
+  "type": "touchButtonListener",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Mobile\\touchButtonListener.cs",
+  "methods": [
+   {
+    "sig": "OnPointerDown(PointerEventData eventData)",
+    "line": 64
+   },
+   {
+    "sig": "checkTouchID()",
+    "line": 82
+   },
+   {
+    "sig": "getCurrentFingerId()",
+    "line": 103
+   },
+   {
+    "sig": "OnPointerUp(PointerEventData eventData)",
+    "line": 109
+   },
+   {
+    "sig": "setButtonColorVisibleState(bool state)",
+    "line": 193
+   },
+   {
+    "sig": "resetButtonState()",
+    "line": 210
+   },
+   {
+    "sig": "setButtonIconComponent()",
+    "line": 225
+   }
+  ]
+ },
+ {
+  "type": "checkpointSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Checkpoint\\checkpointSystem.cs",
+  "methods": [
+   {
+    "sig": "setCurrentCheckpointElement(Transform currentCheckpoint)",
+    "line": 42
+   },
+   {
+    "sig": "respawnPlayer(GameObject currentPlayer)",
+    "line": 51
+   },
+   {
+    "sig": "thereIsLastCheckpoint()",
+    "line": 92
+   },
+   {
+    "sig": "disableCheckPoint(int checkpointID)",
+    "line": 97
+   },
+   {
+    "sig": "setCheckpointSystemEnabledState(bool state)",
+    "line": 108
+   },
+   {
+    "sig": "isCheckpointSystemEnabled()",
+    "line": 113
+   },
+   {
+    "sig": "checkCheckpointStateOnCharacterGetUp(ragdollActivator currentRagdollActivator, GameObject characterGameObject)",
+    "line": 118
+   },
+   {
+    "sig": "isDeathLoadCheckpointRespawnActivee()",
+    "line": 150
+   },
+   {
+    "sig": "addNewCheckpoint()",
+    "line": 157
+   },
+   {
+    "sig": "removeCheckpoint(int checkpointIndex)",
+    "line": 191
+   },
+   {
+    "sig": "removeAllCheckpoints()",
+    "line": 202
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 217
+   }
+  ]
+ },
+ {
+  "type": "checkpointElement",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Checkpoint\\checkpointElement.cs",
+  "methods": [
+   {
+    "sig": "setCheckPointManager(checkpointSystem manager)",
+    "line": 73
+   },
+   {
+    "sig": "OnTriggerEnter(Collider col)",
+    "line": 80
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 133
+   }
+  ]
+ },
+ {
+  "type": "AudioElementHolder",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Audio\\AudioElementHolder.cs",
+  "methods": [
+   {
+    "sig": "Play()",
+    "line": 9
+   },
+   {
+    "sig": "PlayOneShot(float volumeScale)",
+    "line": 14
+   },
+   {
+    "sig": "PlayOneShot()",
+    "line": 19
+   },
+   {
+    "sig": "Stop()",
+    "line": 24
+   },
+   {
+    "sig": "Pause()",
+    "line": 29
+   },
+   {
+    "sig": "UnPause()",
+    "line": 34
+   }
+  ]
+ },
+ {
+  "type": "AudioElementHolderPlayer",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Audio\\AudioElementHolderPlayer.cs",
+  "methods": [
+   {
+    "sig": "Play()",
+    "line": 9
+   },
+   {
+    "sig": "PlayOneShot(float volumeScale)",
+    "line": 14
+   },
+   {
+    "sig": "PlayOneShot()",
+    "line": 19
+   },
+   {
+    "sig": "Stop()",
+    "line": 24
+   },
+   {
+    "sig": "Pause()",
+    "line": 29
+   },
+   {
+    "sig": "UnPause()",
+    "line": 34
+   }
+  ]
+ },
+ {
+  "type": "AudioManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Audio\\AudioManager.cs",
+  "methods": [
+   {
+    "sig": "GetExternalAudioPlayer()",
+    "line": 26
+   }
+  ]
+ }
+]

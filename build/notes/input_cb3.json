@@ -1,0 +1,412 @@
+[
+ {
+  "type": "airAttackToLandSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\Melee Combat System\\airAttackToLandSystem.cs",
+  "methods": [
+   {
+    "sig": "activateAirAttackToLand()",
+    "line": 42
+   }
+  ]
+ },
+ {
+  "type": "cuttingModeSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\Melee Combat System\\Slice System\\cuttingModeSystem.cs",
+  "methods": [
+   {
+    "sig": "setSliceInputPausedForStaminaState(bool state)",
+    "line": 159
+   },
+   {
+    "sig": "inputToggleCameraRotation()",
+    "line": 164
+   },
+   {
+    "sig": "inputActivateCut()",
+    "line": 175
+   },
+   {
+    "sig": "setCuttingModeActiveState(bool state)",
+    "line": 204
+   },
+   {
+    "sig": "checkSetBulletTime()",
+    "line": 285
+   },
+   {
+    "sig": "stopCheckSetBulletTimeCoroutine()",
+    "line": 298
+   },
+   {
+    "sig": "stopActivateCutCoroutine()",
+    "line": 314
+   },
+   {
+    "sig": "setGeneralStaminaUseMultiplierValue(float newValue)",
+    "line": 362
+   },
+   {
+    "sig": "setUseStaminaOnSliceEnabledState(bool state)",
+    "line": 367
+   }
+  ]
+ },
+ {
+  "type": "dualWieldMeleeWeaponObjectSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\Melee Combat System\\dualWieldMeleeWeaponObjectSystem.cs",
+  "methods": [
+   {
+    "sig": "enableDualWieldMeleeweapobObject(grabbedObjectMeleeAttackSystem newGrabbedObjectMeleeAttackSystem, bool useEventsOnDamageDetected)",
+    "line": 54
+   },
+   {
+    "sig": "enableOrDisableDualWieldMeleeWeaponObject(bool state)",
+    "line": 99
+   },
+   {
+    "sig": "disableDualWieldMeleeweapobObject()",
+    "line": 106
+   },
+   {
+    "sig": "setHitCombatScale(Vector3 newScale)",
+    "line": 121
+   },
+   {
+    "sig": "setHitCombatScaleMultiplier(float newMultiplier)",
+    "line": 128
+   },
+   {
+    "sig": "setHitCombatOffset(Vector3 newValue)",
+    "line": 135
+   },
+   {
+    "sig": "setOriginalHitCombatScale()",
+    "line": 142
+   },
+   {
+    "sig": "setOriginalHitCombatOffset()",
+    "line": 147
+   }
+  ]
+ },
+ {
+  "type": "hiddenMeleeSurface",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\Melee Combat System\\hiddenMeleeSurface.cs",
+  "methods": [
+   {
+    "sig": "isSurfaceEnabled()",
+    "line": 11
+   },
+   {
+    "sig": "setHiddenSurfaceEnabledState(bool state)",
+    "line": 16
+   }
+  ]
+ },
+ {
+  "type": "meleeCombatAttackStartState",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\Melee Combat System\\meleeCombatAttackStartState.cs",
+  "methods": [
+   {
+    "sig": "resetActivateDamageTriggerCoroutine()",
+    "line": 11
+   }
+  ]
+ },
+ {
+  "type": "meleeShieldObjectSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\Melee Combat System\\meleeShieldObjectSystem.cs",
+  "methods": [
+   {
+    "sig": "setCurrentCharacter(GameObject newObject)",
+    "line": 43
+   },
+   {
+    "sig": "getCurrentCharacter()",
+    "line": 48
+   },
+   {
+    "sig": "checkDurabilityOnBlockWithShield(float extraMultiplier)",
+    "line": 53
+   },
+   {
+    "sig": "updateDurabilityAmountState()",
+    "line": 66
+   },
+   {
+    "sig": "getDurabilityAmount()",
+    "line": 73
+   },
+   {
+    "sig": "initializeDurabilityValue(float newAmount, int currentObjectIndex)",
+    "line": 82
+   },
+   {
+    "sig": "setInventoryObjectIndex(int currentObjectIndex)",
+    "line": 91
+   },
+   {
+    "sig": "repairObjectFully()",
+    "line": 98
+   },
+   {
+    "sig": "breakFullDurabilityOnCurrentWeapon()",
+    "line": 105
+   },
+   {
+    "sig": "setUseObjectDurabilityOnBlockValue(bool newValue)",
+    "line": 112
+   },
+   {
+    "sig": "setDurabilityUsedOnBlockValue(float newValue)",
+    "line": 117
+   },
+   {
+    "sig": "setUseObjectDurabilityOnBlockValueFromEditor(bool newValue)",
+    "line": 122
+   },
+   {
+    "sig": "setDurabilityUsedOnBlockValueFromEditor(float newValue)",
+    "line": 129
+   },
+   {
+    "sig": "setObjectNameFromEditor(string newName)",
+    "line": 136
+   },
+   {
+    "sig": "setDurabilityAmountFromEditor(float newValue)",
+    "line": 143
+   },
+   {
+    "sig": "setMaxDurabilityAmountFromEditor(float newValue)",
+    "line": 150
+   }
+  ]
+ },
+ {
+  "type": "meleeUISystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\Melee Combat System\\meleeUISystem.cs",
+  "methods": [
+   {
+    "sig": "setCurrentMeleeWeaponName(string newName)",
+    "line": 38
+   },
+   {
+    "sig": "setCurrrentMeleeWeaponIcon(Texture newIcon)",
+    "line": 45
+   },
+   {
+    "sig": "enableOrDisableMeleeUI(bool state)",
+    "line": 50
+   }
+  ]
+ },
+ {
+  "type": "meleeWeaponAttackListInfoSocket",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\Melee Combat System\\meleeWeaponAttackListInfoSocket.cs",
+  "methods": [
+   {
+    "sig": "copyWeaponInfoToTemplate(bool settingInfoOnEditorTime)",
+    "line": 10
+   },
+   {
+    "sig": "copyTemplateToWeaponAttackInfo(bool settingInfoOnEditorTime)",
+    "line": 19
+   }
+  ]
+ },
+ {
+  "type": "objectToFollowOnThrowMeleeWeapon",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\Melee Combat System\\objectToFollowOnThrowMeleeWeapon.cs",
+  "methods": [
+   {
+    "sig": "getMainObjectToFollow()",
+    "line": 11
+   },
+   {
+    "sig": "setComponentedAddedTemporalyState(bool state)",
+    "line": 20
+   }
+  ]
+ },
+ {
+  "type": "objectToUseMatchTargetSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\objectToUseMatchTargetSystem.cs",
+  "methods": [
+   {
+    "sig": "removeAllMatchTargetList()",
+    "line": 89
+   }
+  ]
+ },
+ {
+  "type": "perfectDodgeSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\perfectDodgeSystem.cs",
+  "methods": [
+   {
+    "sig": "activatePerfectDodgeToCharacter(GameObject newCharacter)",
+    "line": 60
+   },
+   {
+    "sig": "activatePerfectDodge()",
+    "line": 77
+   }
+  ]
+ },
+ {
+  "type": "runtimeShatterRecursive",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\Melee Combat System\\Slice System\\runtimeShatterRecursive.cs",
+  "methods": [
+   {
+    "sig": "activateShatterOnObject()",
+    "line": 75
+   },
+   {
+    "sig": "randomShatter()",
+    "line": 100
+   },
+   {
+    "sig": "addObjectsToShatter(GameObject newObject)",
+    "line": 126
+   },
+   {
+    "sig": "randomShatterSingle(GameObject objectToShatter)",
+    "line": 133
+   },
+   {
+    "sig": "checkEventOnShatter()",
+    "line": 186
+   }
+  ]
+ },
+ {
+  "type": "searchMeleeSurfaceSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\Melee Combat System\\searchMeleeSurfaceSystem.cs",
+  "methods": [
+   {
+    "sig": "checkSurfaceDown()",
+    "line": 55
+   },
+   {
+    "sig": "checkHiddenSurfacesDown()",
+    "line": 60
+   },
+   {
+    "sig": "checkSurface()",
+    "line": 167
+   }
+  ]
+ },
+ {
+  "type": "simpleSliceSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\Melee Combat System\\Slice System\\simpleSliceSystem.cs",
+  "methods": [
+   {
+    "sig": "getRandomString()",
+    "line": 65
+   },
+   {
+    "sig": "setRandomString(string newValue)",
+    "line": 70
+   },
+   {
+    "sig": "setRandomString()",
+    "line": 77
+   },
+   {
+    "sig": "destroyAllSlicedPiecesByRandomString()",
+    "line": 90
+   },
+   {
+    "sig": "initializeValuesOnHackableComponent()",
+    "line": 104
+   },
+   {
+    "sig": "setDestructionPending(bool state)",
+    "line": 115
+   },
+   {
+    "sig": "activateSlice(Collider objectCollider, Vector3 newNormalInWorldSpaceValue, Vector3 positionInWorldSpace, Vector3 slicePosition, bool updateLastObjectSpeed, Vector3 lastSpeed)",
+    "line": 120
+   },
+   {
+    "sig": "searchBodyParts()",
+    "line": 142
+   },
+   {
+    "sig": "setTagOnBodyParts(string newTag)",
+    "line": 178
+   },
+   {
+    "sig": "getMainAlternatePrefab()",
+    "line": 187
+   },
+   {
+    "sig": "getSeverables()",
+    "line": 192
+   },
+   {
+    "sig": "setNewSeverablesList(GameObject newObject)",
+    "line": 197
+   },
+   {
+    "sig": "createRagdollPrefab()",
+    "line": 214
+   },
+   {
+    "sig": "setSliceEnabledState(bool state)",
+    "line": 223
+   },
+   {
+    "sig": "setMainSurfaceToSlice(surfaceToSlice newSurface)",
+    "line": 232
+   },
+   {
+    "sig": "setSliceEnabledStateFromEditor(bool state)",
+    "line": 238
+   }
+  ]
+ },
+ {
+  "type": "sliceSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\Melee Combat System\\Slice System\\sliceSystem.cs",
+  "methods": [
+   {
+    "sig": "setCustomSliceTransformValues(string sliceInfoName)",
+    "line": 126
+   },
+   {
+    "sig": "setCustomCutTransformValues(Vector3 newCutOverlapBoxSize, Transform newcutPositionTransform, Transform newCutDirectionTransform, Transform newPlaneDefiner1, Transform newPlaneDefiner2, Transform newPlaneDefiner3)",
+    "line": 147
+   },
+   {
+    "sig": "activateCutExternally()",
+    "line": 196
+   },
+   {
+    "sig": "activateCut()",
+    "line": 203
+   },
+   {
+    "sig": "getLastCollidersListDetected()",
+    "line": 232
+   },
+   {
+    "sig": "processObject(GameObject obj, Collider objectCollider, Vector3 slicePosition)",
+    "line": 249
+   },
+   {
+    "sig": "sliceCurrentObject(GameObject obj, Collider objectCollider, Material crossSectionMaterial, Vector3 slicePosition)",
+    "line": 356
+   },
+   {
+    "sig": "checkForceToApplyOnObject(GameObject objectToDamage)",
+    "line": 558
+   },
+   {
+    "sig": "anyObjectDetectedOnLastSlice()",
+    "line": 747
+   }
+  ]
+ }
+]

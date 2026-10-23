@@ -1,0 +1,578 @@
+[
+ {
+  "type": "weaponAttachmentSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\Attachments\\weaponAttachmentSystem.cs",
+  "source": "Weapons/Attachments/weaponAttachmentSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "editAttachmentsEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "canEditWeaponWithoutAttchments",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "canChangeAttachmentWithNumberKeys",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useOffsetPanels",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "thirdPersonCameraMovementSpeed",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "setPickedAttachments",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useSmoothTransitionFreeCamera",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useSmoothTransitionLockedCamera",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "UILinesScaleMultiplier",
+    "label": "",
+    "section": "UI Settings"
+   },
+   {
+    "field": "dualWeaponOffsetScale",
+    "label": "",
+    "section": "UI Settings"
+   },
+   {
+    "field": "disableHUDWhenEditingAttachments",
+    "label": "",
+    "section": "UI Settings"
+   },
+   {
+    "field": "showCurrentAttachmentHoverInfo",
+    "label": "",
+    "section": "UI Settings"
+   },
+   {
+    "field": "startEditWeaponSound",
+    "label": "",
+    "section": "Sound Settings"
+   },
+   {
+    "field": "startEditWeaponAudioElement",
+    "label": "",
+    "section": "Sound Settings"
+   },
+   {
+    "field": "stopEditWeaponSound",
+    "label": "",
+    "section": "Sound Settings"
+   },
+   {
+    "field": "stopEditWeaponAudioElement",
+    "label": "",
+    "section": "Sound Settings"
+   },
+   {
+    "field": "showDebugPrint",
+    "label": "",
+    "section": "Attachment State"
+   },
+   {
+    "field": "weaponSystem",
+    "label": "",
+    "section": "Element Settings"
+   },
+   {
+    "field": "IKWeaponManager",
+    "label": "",
+    "section": "Element Settings"
+   },
+   {
+    "field": "weaponsManager",
+    "label": "",
+    "section": "Element Settings"
+   },
+   {
+    "field": "attachmentInfoGameObject",
+    "label": "",
+    "section": "Element Settings"
+   },
+   {
+    "field": "attachmentSlotGameObject",
+    "label": "",
+    "section": "Element Settings"
+   },
+   {
+    "field": "weaponAttachmentsMenu",
+    "label": "",
+    "section": "Element Settings"
+   },
+   {
+    "field": "attachmentHoverInfoPanelGameObject",
+    "label": "",
+    "section": "Element Settings"
+   },
+   {
+    "field": "attachmentHoverInfoText",
+    "label": "",
+    "section": "Element Settings"
+   },
+   {
+    "field": "weaponsCamera",
+    "label": "",
+    "section": "Element Settings"
+   },
+   {
+    "field": "mainAudioSource",
+    "label": "",
+    "section": "Element Settings"
+   },
+   {
+    "field": "removeAttachmentSound",
+    "label": "",
+    "section": "Element Settings"
+   },
+   {
+    "field": "removeAttachmentAudioElement",
+    "label": "",
+    "section": "Element Settings"
+   },
+   {
+    "field": "showGizmo",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "showDualWeaponsGizmo",
+    "label": "",
+    "section": "Gizmo Options"
+   }
+  ]
+ },
+ {
+  "type": "weaponBuilder",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\weaponBuilder.cs",
+  "source": "Weapons/weaponBuilder.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "weaponName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "relativePathUsableWeaponPrefab",
+    "label": "",
+    "section": "Usable Weapon Prefab Settings"
+   },
+   {
+    "field": "usableWeaponPrefab",
+    "label": "",
+    "section": "Usable Weapon Prefab Settings"
+   },
+   {
+    "field": "layerToPlaceWeaponPrefab",
+    "label": "",
+    "section": "Usable Weapon Prefab Settings"
+   },
+   {
+    "field": "armsParent",
+    "label": "",
+    "section": "Arms Settings"
+   },
+   {
+    "field": "currentArmsModel",
+    "label": "",
+    "section": "Arms Settings"
+   },
+   {
+    "field": "replaceArmsModel",
+    "label": "",
+    "section": "Arms Settings"
+   },
+   {
+    "field": "newArmsModel",
+    "label": "",
+    "section": "Arms Settings"
+   },
+   {
+    "field": "buildWeaponExplanation",
+    "label": "",
+    "section": "Explanation"
+   },
+   {
+    "field": "showGizmo",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "showGizmoLabel",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoLabelColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoRadius",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "useHandle",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "mainPlayerWeaponsManager",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "weaponParent",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "mainIKWeaponSystem",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "mainPlayerWeaponSystem",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "weaponMeshParent",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "newWeaponMeshParent",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "weaponViewTransform",
+    "label": "",
+    "section": "Components"
+   }
+  ]
+ },
+ {
+  "type": "weaponTransformInfoSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\weaponTransformInfoSystem.cs",
+  "source": "Weapons/weaponTransformInfoSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "mainWeaponTransformData",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "weaponID",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "numberOfElements",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "newListToAddName",
+    "label": "",
+    "section": "Add New List Settings"
+   },
+   {
+    "field": "newListToAddParent",
+    "label": "",
+    "section": "Add New List Settings"
+   },
+   {
+    "field": "mainWeaponTransform",
+    "label": "",
+    "section": "Weapon Position Reference Settings"
+   },
+   {
+    "field": "currentOffsetParentThirdPerson",
+    "label": "",
+    "section": "Weapon Offset Settings"
+   }
+  ]
+ },
+ {
+  "type": "zeroGravityRoomSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Gravity\\zeroGravityRoomSystem.cs",
+  "source": "Gravity/zeroGravityRoomSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "roomHasRegularGravity",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "roomHasZeroGravity",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "gravityDirectionTransform",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "explanation",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useNewGravityOutside",
+    "label": "",
+    "section": "New Gravity Outside Of Room Settings"
+   },
+   {
+    "field": "outsideHasZeroGravity",
+    "label": "",
+    "section": "New Gravity Outside Of Room Settings"
+   },
+   {
+    "field": "outsideGravityDirectionTransform",
+    "label": "",
+    "section": "New Gravity Outside Of Room Settings"
+   },
+   {
+    "field": "objectsAffectedByGravity",
+    "label": "",
+    "section": "Objects Affected Settings"
+   },
+   {
+    "field": "changeGravityForceForObjects",
+    "label": "",
+    "section": "Objects Affected Settings"
+   },
+   {
+    "field": "newGravityForceForObjects",
+    "label": "",
+    "section": "Objects Affected Settings"
+   },
+   {
+    "field": "charactersAffectedByGravity",
+    "label": "",
+    "section": "Characters Affected Settings"
+   },
+   {
+    "field": "changeGravityForceForCharacters",
+    "label": "",
+    "section": "Characters Affected Settings"
+   },
+   {
+    "field": "newGravityForceForCharacters",
+    "label": "",
+    "section": "Characters Affected Settings"
+   },
+   {
+    "field": "addForceToObjectsOnZeroGravityState",
+    "label": "",
+    "section": "Zero Gravity Settings"
+   },
+   {
+    "field": "forceAmountToObjectOnZeroGravity",
+    "label": "",
+    "section": "Zero Gravity Settings"
+   },
+   {
+    "field": "forceDirectionToObjectsOnZeroGravity",
+    "label": "",
+    "section": "Zero Gravity Settings"
+   },
+   {
+    "field": "forceModeToObjectsOnZeroGravity",
+    "label": "",
+    "section": "Zero Gravity Settings"
+   },
+   {
+    "field": "addInitialForceToObjectsOnZeroGravityState",
+    "label": "",
+    "section": "Zero Gravity Settings"
+   },
+   {
+    "field": "initialForceToObjectsOnZeroGravity",
+    "label": "",
+    "section": "Zero Gravity Settings"
+   },
+   {
+    "field": "initialForceRadiusToObjectsOnZeroGravity",
+    "label": "",
+    "section": "Zero Gravity Settings"
+   },
+   {
+    "field": "initialForcePositionToObjectsOnZeroGravity",
+    "label": "",
+    "section": "Zero Gravity Settings"
+   },
+   {
+    "field": "playerTag",
+    "label": "",
+    "section": "Tags To Affect"
+   },
+   {
+    "field": "highestPointPoisition",
+    "label": "",
+    "section": "Room Points List"
+   },
+   {
+    "field": "lowestPointPosition",
+    "label": "",
+    "section": "Room Points List"
+   },
+   {
+    "field": "roomPointsParent",
+    "label": "",
+    "section": "Room Points List"
+   },
+   {
+    "field": "addObjectsInsideParent",
+    "label": "",
+    "section": "Objects Inside Room List"
+   },
+   {
+    "field": "objectsInsideParent",
+    "label": "",
+    "section": "Objects Inside Room List"
+   },
+   {
+    "field": "useSounds",
+    "label": "",
+    "section": "Sound Settings"
+   },
+   {
+    "field": "mainAudioSource",
+    "label": "",
+    "section": "Sound Settings"
+   },
+   {
+    "field": "regularGravitySound",
+    "label": "",
+    "section": "Sound Settings"
+   },
+   {
+    "field": "regularGravityAudioElement",
+    "label": "",
+    "section": "Sound Settings"
+   },
+   {
+    "field": "zeroGravitySound",
+    "label": "",
+    "section": "Sound Settings"
+   },
+   {
+    "field": "zeroGravityAudioElement",
+    "label": "",
+    "section": "Sound Settings"
+   },
+   {
+    "field": "customGravitySound",
+    "label": "",
+    "section": "Sound Settings"
+   },
+   {
+    "field": "customGravityAudioElement",
+    "label": "",
+    "section": "Sound Settings"
+   },
+   {
+    "field": "useSoundsOnCharacters",
+    "label": "",
+    "section": "Sound Settings"
+   },
+   {
+    "field": "soundOnEntering",
+    "label": "",
+    "section": "Sound Settings"
+   },
+   {
+    "field": "onEnteringAudioElement",
+    "label": "",
+    "section": "Sound Settings"
+   },
+   {
+    "field": "soundOnExiting",
+    "label": "",
+    "section": "Sound Settings"
+   },
+   {
+    "field": "onExitingAudioElement",
+    "label": "",
+    "section": "Sound Settings"
+   },
+   {
+    "field": "debugModeActive",
+    "label": "",
+    "section": "Debug Settings"
+   },
+   {
+    "field": "debugModeListActive",
+    "label": "",
+    "section": "Debug Settings"
+   },
+   {
+    "field": "showDebugPrint",
+    "label": "",
+    "section": "Debug Settings"
+   },
+   {
+    "field": "showGizmo",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "centerGizmoScale",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "roomCenterColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoLabelColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "linesColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "useHandleForWaypoints",
+    "label": "",
+    "section": "Gizmo Settings"
+   }
+  ]
+ }
+]

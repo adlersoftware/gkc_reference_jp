@@ -1,0 +1,472 @@
+[
+ {
+  "type": "IKWeaponSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\IKWeaponSystem.cs",
+  "methods": [
+   {
+    "sig": "initializeComponents()",
+    "line": 408
+   },
+   {
+    "sig": "isWeaponUpdateActive()",
+    "line": 469
+   },
+   {
+    "sig": "activateWeaponUpdate()",
+    "line": 474
+   },
+   {
+    "sig": "stopActivateWeaponUpdate()",
+    "line": 487
+   },
+   {
+    "sig": "setInitialWeaponState()",
+    "line": 789
+   },
+   {
+    "sig": "checkIfWeaponUsesAttachment()",
+    "line": 804
+   },
+   {
+    "sig": "setPlayerOnJumpStartState(bool state)",
+    "line": 809
+   },
+   {
+    "sig": "setPlayerOnJumpEndState(bool state)",
+    "line": 814
+   },
+   {
+    "sig": "isWeaponMoving()",
+    "line": 819
+   },
+   {
+    "sig": "isDrawingWeaponInProcess()",
+    "line": 824
+   },
+   {
+    "sig": "isHolsteringWeaponInProcess()",
+    "line": 829
+   },
+   {
+    "sig": "isAimingWeaponInProcess()",
+    "line": 834
+   },
+   {
+    "sig": "weaponCanFire()",
+    "line": 839
+   },
+   {
+    "sig": "weaponCanAim()",
+    "line": 864
+   },
+   {
+    "sig": "isWeaponSurfaceDetected()",
+    "line": 877
+   },
+   {
+    "sig": "setWeaponSystemManager()",
+    "line": 882
+   },
+   {
+    "sig": "checkWeaponBuilder()",
+    "line": 891
+   },
+   {
+    "sig": "getWeaponSystemManager()",
+    "line": 900
+   },
+   {
+    "sig": "getPlayerWeaponsManager()",
+    "line": 905
+   },
+   {
+    "sig": "getWeaponSystemKeyNumber()",
+    "line": 910
+   },
+   {
+    "sig": "isUseRemainAmmoFromInventoryActive()",
+    "line": 915
+   },
+   {
+    "sig": "isWeaponEnabled()",
+    "line": 920
+   },
+   {
+    "sig": "setWeaponEnabledState(bool state)",
+    "line": 925
+   },
+   {
+    "sig": "getWeaponSystemName()",
+    "line": 932
+   },
+   {
+    "sig": "renameWeapon(string newWeaponName)",
+    "line": 937
+   },
+   {
+    "sig": "renameWeaponAmmo(string currentAmmoName, string newAmmoName)",
+    "line": 942
+   },
+   {
+    "sig": "getWeaponSystemAmmoName()",
+    "line": 947
+   },
+   {
+    "sig": "getWeaponOriginalClipSize()",
+    "line": 952
+   },
+   {
+    "sig": "setRemainAmmoAmount(int newRemainAmmoAmount)",
+    "line": 957
+   },
+   {
+    "sig": "setInitialProjectilesInMagazine(int newProjectilesInMagazine)",
+    "line": 962
+   },
+   {
+    "sig": "getProjectilesInMagazine()",
+    "line": 967
+   },
+   {
+    "sig": "isCurrentMagazineEmpty()",
+    "line": 972
+   },
+   {
+    "sig": "isRemainAmmoEmpty()",
+    "line": 977
+   },
+   {
+    "sig": "checkWeaponSidePosition()",
+    "line": 982
+   },
+   {
+    "sig": "drawOrKeepWeaponThirdPerson(bool state)",
+    "line": 1015
+   },
+   {
+    "sig": "isUseDrawKeepWeaponAnimationActive()",
+    "line": 1086
+   },
+   {
+    "sig": "isUseDrawKeepWeaponAnimationActiveOnThisWeapon()",
+    "line": 1093
+   },
+   {
+    "sig": "updateFBAValues(bool useRifleValues)",
+    "line": 1335
+   },
+   {
+    "sig": "resetFBAValues()",
+    "line": 1415
+   },
+   {
+    "sig": "setNewFBAAimInfo(string infoName)",
+    "line": 1448
+   },
+   {
+    "sig": "setRegularFBAAimInfo()",
+    "line": 1459
+   },
+   {
+    "sig": "setNewExtraColliderOnFireWeaponOnFBAValues(Vector3 newScaleValues, Vector3 newCenterValues)",
+    "line": 1464
+   },
+   {
+    "sig": "isdrawKeepWeaponAnimationInProcess()",
+    "line": 1474
+   },
+   {
+    "sig": "setHandDeactivateIKStateToDisable()",
+    "line": 2305
+   },
+   {
+    "sig": "setHandTargetValue(IKWeaponsPosition handInfo, float newValue)",
+    "line": 2320
+   },
+   {
+    "sig": "setElbowTargetValue(IKWeaponsPosition handInfo, float newValue)",
+    "line": 2325
+   },
+   {
+    "sig": "placeWeaponDirectlyOnDrawHand(bool state)",
+    "line": 2330
+   },
+   {
+    "sig": "aimOrDrawWeaponThirdPerson(bool state)",
+    "line": 2722
+   },
+   {
+    "sig": "walkOrSurfaceCollision(bool state)",
+    "line": 3140
+   },
+   {
+    "sig": "setWeaponRegularCursorState(bool firstPersonActive)",
+    "line": 3295
+   },
+   {
+    "sig": "walkOrRunWeaponPosition(bool state)",
+    "line": 3326
+   },
+   {
+    "sig": "checkCursorState(bool firstPersonActive)",
+    "line": 3480
+   },
+   {
+    "sig": "setJumpStatetWeaponPosition(bool isJumpStart, bool isJumpEnd)",
+    "line": 3505
+   },
+   {
+    "sig": "updateWeaponWalkPositionToFullBodyAwarenessState(bool state)",
+    "line": 3656
+   },
+   {
+    "sig": "setCrouchStatetWeaponPosition(bool state)",
+    "line": 3834
+   },
+   {
+    "sig": "isWeaponInRunPosition()",
+    "line": 3949
+   },
+   {
+    "sig": "useRunPositionOnFirstPerson()",
+    "line": 3954
+   },
+   {
+    "sig": "useRunPositionOnThirdPerson()",
+    "line": 3959
+   },
+   {
+    "sig": "useRunPositionOnFBA()",
+    "line": 3964
+   },
+   {
+    "sig": "isPlayerRunning()",
+    "line": 3969
+   },
+   {
+    "sig": "setPlayerRunningState(bool state)",
+    "line": 3974
+   },
+   {
+    "sig": "isWeaponItJumpStart()",
+    "line": 3979
+   },
+   {
+    "sig": "isWeaponItJumpEnd()",
+    "line": 3984
+   },
+   {
+    "sig": "isjumpingOnProcess()",
+    "line": 3989
+   },
+   {
+    "sig": "weaponUseJumpPositions()",
+    "line": 3994
+   },
+   {
+    "sig": "useNewFovOnRunOnThirdPerson()",
+    "line": 4001
+   },
+   {
+    "sig": "useNewFovOnRunOnFirstPerson()",
+    "line": 4006
+   },
+   {
+    "sig": "isCursorHidden()",
+    "line": 4011
+   },
+   {
+    "sig": "setCursorHiddenState(bool state)",
+    "line": 4016
+   },
+   {
+    "sig": "setCurrentSwayInfo(bool state)",
+    "line": 4023
+   },
+   {
+    "sig": "isUseReticleOnAimingEnabled()",
+    "line": 4068
+   },
+   {
+    "sig": "isUseReticleEnabled()",
+    "line": 4075
+   },
+   {
+    "sig": "walkOrMeleeAttackWeaponPosition()",
+    "line": 4082
+   },
+   {
+    "sig": "checkWeaponCameraShake()",
+    "line": 4407
+   },
+   {
+    "sig": "setUseShotShakeState(bool state)",
+    "line": 4412
+   },
+   {
+    "sig": "checkMeleeAttackExternally()",
+    "line": 4418
+   },
+   {
+    "sig": "checkMeleeAttackShakeInfo()",
+    "line": 4425
+   },
+   {
+    "sig": "checkMeleeAttackDamage()",
+    "line": 4430
+   },
+   {
+    "sig": "isMeleeAtacking()",
+    "line": 4683
+   },
+   {
+    "sig": "setHandsIKTargetValue(float leftValue, float rightValue)",
+    "line": 4688
+   },
+   {
+    "sig": "setElbowsIKTargetValue(float leftValue, float rightValue)",
+    "line": 4717
+   },
+   {
+    "sig": "setIKWeight(float leftValue, float rightValue)",
+    "line": 4746
+   },
+   {
+    "sig": "resetElbowIKPositions()",
+    "line": 4773
+   },
+   {
+    "sig": "quickDrawWeaponThirdPerson()",
+    "line": 4784
+   },
+   {
+    "sig": "checkDeactivateIKIfNotAiming()",
+    "line": 4872
+   },
+   {
+    "sig": "adjustWeaponPositionToDeactivateIKOnHands()",
+    "line": 4944
+   },
+   {
+    "sig": "quickKeepWeaponThirdPerson()",
+    "line": 4975
+   },
+   {
+    "sig": "quickDrawWeaponThirdPersonAction()",
+    "line": 5069
+   },
+   {
+    "sig": "quickKeepWeaponThirdPersonAction()",
+    "line": 5074
+   },
+   {
+    "sig": "isWeaponHandsOnPositionToAim()",
+    "line": 5149
+   },
+   {
+    "sig": "isRightWeaponHandOnPositionToAim()",
+    "line": 5161
+   },
+   {
+    "sig": "isLeftWeaponHandOnPositionToAim()",
+    "line": 5166
+   },
+   {
+    "sig": "aimOrDrawWeaponFirstPerson(bool state)",
+    "line": 5172
+   },
+   {
+    "sig": "drawOrKeepWeaponFirstPerson(bool state)",
+    "line": 5245
+   },
+   {
+    "sig": "setNewSightPosition(Transform newTransform)",
+    "line": 5439
+   },
+   {
+    "sig": "setNewSightRecoilPosition(Transform newTransform)",
+    "line": 5444
+   },
+   {
+    "sig": "reloadWeaponFirstPerson()",
+    "line": 5449
+   },
+   {
+    "sig": "isReloadingWeapon()",
+    "line": 5625
+   },
+   {
+    "sig": "cancelReloadIfActive()",
+    "line": 5630
+   },
+   {
+    "sig": "quickKeepWeaponFirstPerson()",
+    "line": 5652
+   },
+   {
+    "sig": "resetWeaponPositionInFirstPerson()",
+    "line": 5689
+   },
+   {
+    "sig": "resetWeaponPositionInAnyView()",
+    "line": 5707
+   },
+   {
+    "sig": "setWeaponHasRecoilState(bool state)",
+    "line": 5745
+   },
+   {
+    "sig": "startRecoilFromExternalFunction()",
+    "line": 5751
+   },
+   {
+    "sig": "startRecoil(bool isThirdPersonView)",
+    "line": 5765
+   },
+   {
+    "sig": "endRecoil(bool isThirdPersonView)",
+    "line": 5976
+   },
+   {
+    "sig": "disableOtherWeaponsStates()",
+    "line": 6093
+   },
+   {
+    "sig": "resetOtherWeaponsStates()",
+    "line": 6108
+   },
+   {
+    "sig": "stopWeaponMovement()",
+    "line": 6127
+   },
+   {
+    "sig": "setWeaponSway(float mouseX, float mouseY, float vertical, float horizontal, bool running, bool shooting, bool onGround, bool externalShakingActive, bool usingDevice, bool isThirdPersonView, bool canMove, bool isFullBodyAwarenessActive)",
+    "line": 6143
+   },
+   {
+    "sig": "getSwayPosition(Vector3 speed, Vector3 amount, float multiplier)",
+    "line": 6427
+   },
+   {
+    "sig": "resetSwayValue()",
+    "line": 6438
+   },
+   {
+    "sig": "stopResetSwayValue()",
+    "line": 6445
+   },
+   {
+    "sig": "checkIfResetWeaponSway()",
+    "line": 6521
+   },
+   {
+    "sig": "checkIfResetWeaponSway(bool ignoreIfAiming)",
+    "line": 6528
+   },
+   {
+    "sig": "setWeaponSwayPausedState(bool state)",
+    "line": 6535
+   }
+  ]
+ }
+]

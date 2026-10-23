@@ -1,0 +1,528 @@
+[
+ {
+  "type": "waterSurfaceSystem",
+  "summary": "水面の高さ・法線・密度などを外部へ提供する基底クラス。各メソッドは`virtual`で既定値だけを返し、実処理は派生クラスが上書きする。",
+  "methods": {
+   "GetWaterLevel(Vector3 worldPoint)": "`worldPoint`の水面高さを返す基底実装で、常に-1を返す。",
+   "GetSurfaceNormal(Vector3 worldPoint)": "`worldPoint`の水面法線を返す基底実装で、常に`Vector3.zero`を返す。",
+   "getGravityForce()": "水面で働く重力ベクトルを返す基底実装で、常に`Vector3.zero`を返す。",
+   "getDensity()": "水の密度を返す基底実装で、常に-1を返す。",
+   "CalculateVolume_Mesh(Mesh mesh, Transform trans)": "`mesh`と`trans`から体積を求める基底実装で、常に-1を返す。",
+   "IsPointInsideCollider(Vector3 point, Collider collider, ref Bounds colliderBounds)": "`point`が`collider`内かを判定する基底実装で、`colliderBounds`も更新せず常に`false`を返す。"
+  }
+ },
+ {
+  "type": "windOnObjectState",
+  "summary": "オブジェクトが風を受けている状態と、その風向き・風力を保持する小さな状態クラス。",
+  "methods": {
+   "setWindDetectedState(bool state)": "`windDetectEnabled`が`true`の時だけ`windDetected`を`state`に更新する。",
+   "setWindDirectionValues(Vector3 newValues)": "`windDirection`に`newValues`を代入するだけ。",
+   "setWindForceValue(float newValue)": "`windForce`に`newValue`を代入するだけ。",
+   "isWindDetected()": "`windDetected`の値をそのまま返すだけ。",
+   "getwindDirection()": "`windDetected`が`true`なら`windDirection`、そうでなければ`Vector3.zero`を返す。",
+   "getWindForce()": "`windDetected`が`true`なら`windForce`、そうでなければ0を返す。"
+  }
+ },
+ {
+  "type": "GKCTeleportHelper",
+  "summary": "シーン上のメインプレイヤーを対象に、テレポート・ダイアログ起動・移動速度の制限をまとめて行う補助コンポーネント。",
+  "methods": {
+   "TeleportPlayer(GameObject player)": "`teleportTarget`（未設定なら自身）の位置と向きへ`player`を移動し、`playerController`があればそれ経由で反映する。",
+   "TeleportMainPlayer()": "`GKC_Utils.findMainPlayerOnScene`でメインプレイヤーを探して`TeleportPlayer`を呼び、見つからなければ警告を出す。",
+   "ActivateDialogOnSystem(GameObject dialogSystemObj)": "`dialogSystemObj`にメインプレイヤーを渡してダイアログを起動し、`electronicDevice`があれば外部使用を優先する。",
+   "SetPlayerWalkingSpeedLimit()": "メインプレイヤーを歩き速度既定に切り替え、NavMesh側の移動速度を0.5に制限する。",
+   "RestorePlayerSpeed()": "歩き速度既定を解除して元の速度へ戻し、NavMeshのカスタム速度も無効化する。"
+  }
+ },
+ {
+  "type": "coinPocketSystem",
+  "summary": "キャラクターが所持するコイン枚数を管理し、取得時と全ドロップ時にイベントを発火する。",
+  "methods": {
+   "getCoinAmount()": "`currentCointAmount`をそのまま返すだけ。",
+   "addCoinAmount(int newAmount)": "`currentCointAmount`に`newAmount`を加算し、取得イベント設定時は`eventOnPickedCoin`を発火する。",
+   "dropAllCoins()": "所持数が0より大きい時、枚数を引数に`eventToSetAmountOfCoins`と`eventOnDropAllCoins`を発火してから0に戻す。",
+   "canPickCoins()": "`pickCoinsEnabled`をそのまま返すだけ。",
+   "setPickCoinsEnabledState(bool state)": "`pickCoinsEnabled`に`state`を代入するだけ。"
+  }
+ },
+ {
+  "type": "enableOrDisableObjectsOnDistanceSystem",
+  "summary": "カメラからの距離と画面内判定に応じて、登録オブジェクトの有効状態をまとめて切り替える管理コンポーネント。",
+  "methods": {
+   "getComponentInstance()": "静的インスタンスを自身に設定する初期化で、既に別インスタンスがあれば自身の`GameObject`を破棄する。",
+   "enableOrDisableObject(bool state, int index)": "`objectInfoList[index]`を`state`でSetActiveし、対応する管理コンポーネントにも状態を通知する。",
+   "addObject(enableOrDisableObjectOnDistanceManager newEnableOrDisableObjectOnDistanceManager)": "受け取った管理側から`objectInfo`を組み立てて`objectInfoList`に追加し、監視無効時は対象を非アクティブにする。",
+   "removeObject(Transform newTransform)": "`objectInfoList`から`objectTransform`が`newTransform`と一致する要素を探して削除する。",
+   "updateScreenValues()": "`screenWidth`と`screenHeight`を現在の`Screen`サイズで更新する。"
+  }
+ },
+ {
+  "type": "flyingTurretSystem",
+  "summary": "追従対象の周囲に飛行タレットを生成し、手動射撃の有効化やAI制御の切り替えを行う。",
+  "methods": {
+   "enableOrDisableFlyingTurret()": "`flyingTurretActive`を反転して`setFlyingTurretActiveState`を呼ぶ。",
+   "setFlyingTurretActiveState(bool state)": "`flyingTurretActive`を更新し、必要ならタレットを生成して追従設定・手動射撃設定・SetActiveまで行う。",
+   "enableOrDisableManualFireOnTurret(bool state)": "タレット稼働中かつ手動射撃入力有効時、制御の上書きと射撃入力を`state`に合わせる。",
+   "enableOrDisableManualStateOnTurret(bool state)": "`currentAITurret`の制御上書きを`state`にし、`manualControlActive`も更新する。",
+   "inputToggleManualFire()": "タレット稼働中に`manualControlActive`を反転して手動制御状態を切り替える。"
+  }
+ },
+ {
+  "type": "followObjectPositionUpdateSystem",
+  "summary": "指定した`objectToFollow`へ毎フレーム位置と回転を追従させる単純な追従コンポーネント。",
+  "methods": {
+   "setFollowObjectActiveState(bool state)": "`followObjectActive`に`state`を代入するだけ。",
+   "setObjectToFollow(Transform newObject)": "`objectToFollow`に`newObject`を代入するだけ。",
+   "setEnabledState(bool state)": "コンポーネントの`enabled`に`state`を代入するだけ。",
+   "setObjectToFollowFromEditor(Transform newObject)": "`setObjectToFollow`を呼んだ後に`updateComponent`でエディタ上の変更をシーンへ反映する。",
+   "updateComponent()": "`GKC_Utils.updateComponent`と`updateDirtyScene`を呼び、シーンをダーティとして保存対象にする。"
+  }
+ },
+ {
+  "type": "graphicQualitySettingsSystem",
+  "summary": "画質レベル・解像度・ウィンドウ表示・アンチエイリアスを、設定リストの名前指定で切り替える。",
+  "methods": {
+   "setGraphicQualityValue(string newValue)": "名前一致の画質項目を現在設定にして`QualitySettings.SetQualityLevel`を呼び、項目のイベントを発火する。",
+   "setScreenResolution(string newValue)": "名前一致の解像度項目を現在設定にして`Screen.SetResolution`を呼び、変更イベントを発火する。",
+   "setGameWindowedState(bool state)": "現在の解像度設定を維持したまま、`Screen.fullScreen`を`state`に合わせて再設定する。",
+   "setAntiAliasingState(string valueString)": "`valueString`を整数へ変換できた時だけ`setAntiAliasingState(int)`へ渡す。",
+   "setAntiAliasingState(int newValue)": "`canChangeAntiAliasingEnabled`が`true`なら`QualitySettings.antiAliasing`を`newValue`に設定する。"
+  }
+ },
+ {
+  "type": "setCharacterAsChildSystem",
+  "summary": "プレイヤーと子キャラクターを親子関係にし、入力・速度・IK・コライダー衝突を同期させる。",
+  "methods": {
+   "stopUpdateCoroutine()": "実行中の`updateCoroutine`があれば停止するだけ。",
+   "toggleParenting()": "`parentingActive`を反転して`enableOrDisableParenting`を呼ぶ。",
+   "enableOrDisableParenting(bool state)": "親子設定を`state`に切り替え、入力停止・`isKinematic`・コライダー無視・IK・更新コルーチンをまとめて設定する。",
+   "setMainCharacter(GameObject newCharacter)": "`playerController`をメインキャラクターに設定してIKとRigidbodyを取得し直す（子キャラ指定時は端末リストから外すだけ）。",
+   "setChildCharacter(GameObject newCharacter)": "`playerController`を子キャラクターに設定し、`playerInputManager`を取得し直す。"
+  }
+ },
+ {
+  "type": "setObjectParentSystem",
+  "summary": "子オブジェクトのリストを指定した親Transformへ付け替える（開始時の自動実行にも対応）。",
+  "methods": {
+   "setObjectsParent()": "`parentTransform`があれば`childList`をその子にし、必要ならローカル位置を0に、親が無く`setNullParent`なら親を外す。",
+   "setParentTransform(Transform newTransform)": "`parentTransform`に`newTransform`を代入するだけ。",
+   "getParentTransform()": "`parentTransform`をそのまま返すだけ。",
+   "setParentOnStartState(bool state)": "`setParentOnStart`に`state`を代入するだけ。",
+   "setParentOnStartStateFromEditor(bool state)": "状態を設定したうえで`updateComponent`を呼び、エディタ上のシーンを更新する。"
+  }
+ },
+ {
+  "type": "shakeCharacterBodyPartSystem",
+  "summary": "人型ボーンの1つを一定時間揺らす演出を行い、対象ボーンを名前かTransformで指定できる。",
+  "methods": {
+   "setShakePartCustomDuration(float newDuration)": "`customDuration`に`newDuration`を入れ、0以外なら`useCustomDuration`を`true`にする。",
+   "activatShakeAnimationXSecondsFromEditor()": "`currentBodyPartName`を使って名前指定の揺れ開始処理を呼ぶ。",
+   "activatShakeAnimationXSecondsByName(string bodyPartName)": "名前一致のボーンを探して揺れを開始し、見つからなければデバッグ表示だけ行う。",
+   "activatShakeAnimationXSecondsByTransform(Transform bodyPartTransform)": "Transform一致のボーンを探して揺れを開始し、対象名をコンソールに出力する。",
+   "storeCharacterBones()": "`animator`から頭・胴・手足などのボーンを取得してリストを作り直し、null要素を除去する。"
+  }
+ },
+ {
+  "type": "updateRigidbodyStateInsideRigidbodySystem",
+  "summary": "トリガー内に入ったRigidbodyを親Transformへ親子付けし、プレイヤーならカメラや移動状態も切り替える。",
+  "methods": {
+   "removeAllObjects()": "`rigidbodyInfoList`の各要素について`removeGameObject`を呼び、登録をすべて解除する。",
+   "addGameObject(GameObject newObject)": "検出有効時のみ、`newObject`の`Collider`を取得して`checkTriggerType`を進入扱いで呼ぶ。",
+   "removeGameObject(GameObject newObject)": "検出有効時のみ、`newObject`の`Collider`を取得して`checkTriggerType`を退出扱いで呼ぶ。",
+   "checkTriggerType(Collider col, bool isEnter)": "レイヤーとタグで対象を絞り、`isEnter`なら親子付けとリスト登録、退出なら解除とプレイヤー状態の復元を行う。",
+   "checkIfObjectOnList(GameObject newObject)": "`gameObjectList`に`newObject`が含まれるかを返すだけ。"
+  }
+ },
+ {
+  "type": "enableOrDisableObjectOnDistanceManager",
+  "summary": "距離管理システムへ自身を登録する側のコンポーネントで、有効・無効の切り替え時にイベントを発火する。",
+  "methods": {
+   "removeObjectFromSystem()": "メインシステムを取得済みなら`removeObject`に自身の`mainTransform`を渡して登録を解除する。",
+   "setActiveState(bool state)": "`objectActive`が変わる時だけ更新し、有効化/無効化のイベントを発火する。",
+   "setAddObjectToMainSystemState(bool state)": "`addObjectToMainSystem`を更新し、非再生時のみ登録または解除と非アクティブ化を行う。",
+   "isSetActiveStateOnMainTransformEnabled()": "`setActiveStateOnMainTransformEnabled`をそのまま返すだけ。"
+  }
+ },
+ {
+  "type": "eventObjectFoundOnRaycastSystem",
+  "summary": "指定Transformからレイキャストし、検出オブジェクトが変わった時にイベントやリモートイベントを呼ぶ。",
+  "methods": {
+   "activateRaycastDetectionOnUpdate()": "固定更新ごとに`checkObjectWithRaycast`を呼ぶコルーチンを開始する。",
+   "checkObjectWithRaycast()": "前方へレイを飛ばし、検出対象が前回と違う時だけキャプチャ・リモートイベント・検出イベントを実行する。",
+   "setRaycastTransform(Transform newObject)": "`raycastTransform`に`newObject`を代入するだけ。",
+   "setCheckObjectsEnabledState(bool state)": "`checkObjectsEnabled`に`state`を代入するだけ。"
+  }
+ },
+ {
+  "type": "moveObjectLateUpdate",
+  "summary": "`LateUpdate`でコサイン波に沿ってオブジェクトを往復移動させる簡易コンポーネント。",
+  "methods": {
+   "enableMovement()": "`setMovementEnabledState(true)`を呼ぶだけ。",
+   "disableMovement()": "`setMovementEnabledState(false)`を呼ぶだけ。",
+   "setMovementEnabledState(bool state)": "`movementEnabled`に`state`を代入するだけ。",
+   "changeMovementEnabledState()": "`movementEnabled`を反転させて設定するだけ。"
+  }
+ },
+ {
+  "type": "pauseAnimationSystem",
+  "summary": "人型ボーンのTransformをスナップショットで固定し、アニメーションを止めたように見せる。",
+  "methods": {
+   "setPauseAnimationActiveState(bool state)": "`pauseAnimationEnabled`が`false`の時の有効化は無視し、それ以外は`pauseAnimationActive`を`state`にする。",
+   "activatPauseAnimationXSeconds(float newDuration)": "既存コルーチンを止めてから、`newDuration`秒だけ停止するコルーチンを開始する。",
+   "setNumberOfFrames(int newValue)": "`numberOfFrames`に`newValue`を代入するだけ。",
+   "storeCharacterBones()": "`animator`から主要ボーンを取得して`transformList`を作り直し、null要素を除去する。"
+  }
+ },
+ {
+  "type": "scanElementInfo",
+  "summary": "スキャン対象の情報を`dataBase.txt`へ保存・削除し、既読状態を管理する。",
+  "methods": {
+   "saveElement()": "未スキャンなら既存データベースを読み、`dataObject`に連番`id`を振って追記保存し`objectScanned`を立てる。",
+   "removeELement()": "データベースから`dataObject.id`と一致する要素を削除して保存し、既読状態と`id`をリセットする。",
+   "isScanned()": "`dataObject.read`をそのまま返すだけ。",
+   "scanObject()": "`dataObject.read`を`true`にし、イベントが設定されていれば`eventFunction`を発火する。"
+  }
+ },
+ {
+  "type": "selectObjectManager",
+  "summary": "エディタ用のオブジェクト選択支援で、名前検索した結果から階層上の対象を選択する。",
+  "methods": {
+   "clearObjectsSearcResultList()": "`objectSearchResultList`を空にし、検索語と`searchObjectsActive`も初期化する。",
+   "showObjectsBySearchName()": "`objectSearcherName`を小文字化し、名前や追加タグに一致する項目を`objectSearchResultList`へ重複なく追加する。",
+   "selectObjectByName(string objectName)": "`objectName`と一致する項目を探して`selectObjectByIndex`を呼ぶ。",
+   "selectObjectByIndex(int index)": "指定項目がコンポーネント選択ならメニューコマンドを実行し、そうでなければ対象`GameObject`をエディタでアクティブにする。"
+  }
+ },
+ {
+  "type": "vehiclePassengerUnderwater",
+  "summary": "車両の乗員が水中に入ったかをカメラ位置で判定し、水中エフェクト用のイベントを発火する。",
+  "methods": {
+   "stopUpdateCoroutine()": "`updateCoroutine`があれば停止するだけ。",
+   "disableVehiclePassengerUnderwaterStateWithoutCallingEvents()": "有効時のみ状態と`cameraBelowWater`を`false`にし、更新コルーチンを止める（イベントは呼ばない）。",
+   "setVehiclePassengerUnderwaterState(bool state)": "設定有効かつ状態変化時のみ、更新コルーチンの開始/停止と水中状態のイベント発火を行う。",
+   "setCurrentSwimTrigger(BoxCollider newCollider)": "`currentSwimTrigger`を差し替え、nullでないかを`currentSwimTriggerLocated`に記録する。"
+  }
+ },
+ {
+  "type": "checkIfCharacterUsingWeaponsToChangeMode",
+  "summary": "プレイヤーが武器を使用しているかをコルーチンで監視し、状態変化に応じてモード切替のイベントを扱う。",
+  "methods": {
+   "activateCheck()": "`checkStateEnabled`が`true`の時、既存コルーチンを止めて監視コルーチンを開始し`coroutineActive`を立てる。",
+   "stopCheck()": "`checkStateEnabled`が`true`の時、監視コルーチンを停止する。",
+   "stopUpdateCheckCoroutine()": "実行中ならコルーチンを止め、`carryingWeapons`などのフラグと`coroutineActive`をリセットする。"
+  }
+ },
+ {
+  "type": "combineMeshSystem",
+  "summary": "子階層の`MeshFilter`を集めて1つのメッシュに結合し、必要なら`MeshCollider`も付ける。",
+  "methods": {
+   "CombineMeshes(bool showCreatedMeshInfo)": "親から外してTransformを原点に戻し、メッシュを結合して元の状態へ戻す。`showCreatedMeshInfo`は生成情報の出力可否。",
+   "getObjectMeshes()": "対象の`MeshFilter`を集めて`listMeshFilter`を作り直し、パーティクルと自身のものを除外する。",
+   "clearMeshList()": "`listMeshFilter`を空にして`updateComponent`でエディタ表示を更新する。"
+  }
+ },
+ {
+  "type": "mechanismPart",
+  "summary": "歯車機構の回転パーツで、速度・回転の有効状態・歯車の装着状態を保持して`Update`で回す。",
+  "methods": {
+   "setVelocity(float v)": "`rotationSpeed`に`v`を代入するだけ。",
+   "setEnableRotationState(bool state)": "`enableRotation`に`state`を代入するだけ。",
+   "setGearActivatedState(bool state)": "`gearActivated`を`state`にし、`gear`の`rotatoryGear`へ回転有効を伝えてタグを`box`に変える。"
+  }
+ },
+ {
+  "type": "regularVehicleOnWater",
+  "summary": "水上を走る車両向けに、乗員の水中判定や浮力、水面の上下で発火するイベントを扱う。",
+  "methods": {
+   "disableVehiclePassengerUnderwaterStateWithoutCallingEvents()": "`mainVehicleHUDManager`の乗員一覧を回り、各乗員の`vehiclePassengerUnderwater`をイベント無しで解除する。",
+   "checkVehiclePassengersState()": "`vehicleIsSinking`が`true`の時だけ、乗員を水中状態にする。",
+   "checkEventStateOnBeloworAboveSurface(bool state)": "`useEventsOnVehicleBelowOrAboveSurface`が`true`の時、`state`に応じて水面上下のイベントを発火する。"
+  }
+ },
+ {
+  "type": "rotateObjectSmoothlySystem",
+  "summary": "複数の回転状態を名前で切り替え、コルーチンで滑らかに回転させる。",
+  "methods": {
+   "rotateObjectToRandomRotationState()": "有効時、必要なら処理中かを確認し、リストからランダムな回転状態名でコルーチンを開始する。",
+   "rotateObjectToRotation(string rotationName)": "有効時、実行中コルーチンを止めて`rotationName`の回転状態へ向かうコルーチンを開始する。",
+   "stopRotateObjectToRotationCoroutine()": "`rotationCoroutine`があれば停止し、`rotationInProcess`を`false`にする。"
+  }
+ },
+ {
+  "type": "setGameObjectActiveState",
+  "summary": "対象`GameObject`のSetActive状態を保持し、反転や開始時の初期化を行う。",
+  "methods": {
+   "changeActiveState()": "`objectActive`を反転させて`setActiveState`を呼ぶ。",
+   "setActiveState(bool state)": "`objectActive`を`state`にし、`objectToActive`の`activeSelf`が異なる場合だけSetActiveする。",
+   "changeActiveStateFromEditor()": "`changeActiveState`を呼んだ後に`updateComponent`でシーンを更新する。"
+  }
+ },
+ {
+  "type": "showGameInfoHud",
+  "summary": "HUD要素を親名と要素名で検索して返し、必要ならパネルをプレハブから生成する。",
+  "methods": {
+   "getHudElement(string parentName, string elementName)": "`parentName`一致の要素群から`elementName`一致の`rectTransform`の`GameObject`を返し、無ければ`null`を返す。",
+   "getHudElements(string parentName, List<string> elementNames)": "`parentName`配下で`elementNames`に含まれる名前の要素を集め、`List<GameObject>`として返す。",
+   "getHudElementParent(string parentName)": "`parentName`一致の親を返し、未生成でプレハブ指定があれば生成してから返す。"
+  }
+ },
+ {
+  "type": "simpleLamp",
+  "summary": "ランプの設置状態と点灯を管理し、切り替え時にスイッチ音を鳴らす。",
+  "methods": {
+   "lampPlaced()": "`hasLamp`を`true`にするだけ。",
+   "activateDevice()": "`lampLight`の`activeSelf`を反転させて`setActivateDeviceState`を呼ぶ。",
+   "setActivateDeviceState(bool state)": "`hasLamp`が`true`の時だけスイッチ音を鳴らし、`lampLight`のSetActiveを`state`に合わせる。"
+  }
+ },
+ {
+  "type": "simpleLightingModifier",
+  "summary": "環境光（アンビエント）の色を一括で変更するだけの小さな設定コンポーネント。",
+  "methods": {
+   "setAmbientColor(Color newColor)": "設定有効時、`RenderSettings`のambient/equator/groundカラーをすべて`newColor`に揃える。",
+   "setAmbientColor(Vector4 newValue)": "現在のequatorカラーに`newValue`のRGBAを流し込み、`Color`版の`setAmbientColor`へ渡す。",
+   "setAmbientColor(float newValue)": "`newValue`をRGBAすべてに使った`Vector4`を作り、`setAmbientColor`へ渡す。"
+  }
+ },
+ {
+  "type": "simpleScannerSystem",
+  "summary": "スキャナーカメラの有効状態を切り替え、`cullingMask`とイベントを更新する。",
+  "methods": {
+   "enableOrDisableCamera(bool state)": "設定有効かつ状態変化時のみ、`cameraActive`を更新してイベント発火と`cullingMask`の切り替えを行う。",
+   "toggleCameraEnabledState()": "`cameraActive`を反転して`enableOrDisableCamera`を呼ぶ。"
+  }
+ },
+ {
+  "type": "UIMouseHoverEvent",
+  "summary": "UIへのポインタ進入・退出を検知してUnityEventを呼ぶだけのコンポーネント。",
+  "methods": {
+   "OnPointerEnter(PointerEventData pointerEventData)": "`eventOnTriggerEnterEnabled`が`true`なら`eventOnTriggerEnter`を発火する。",
+   "OnPointerExit(PointerEventData pointerEventData)": "`eventOnTriggerExitEnabled`が`true`なら`eventOnTriggerExit`を発火する。"
+  }
+ },
+ {
+  "type": "enableOrDisableAIOnDistanceManager",
+  "summary": "距離管理からAIキャラクターの有効/無効を切り替え、メッシュ・Animator・カメラも連動させる。",
+  "methods": {
+   "enableOrDisbleAI(bool state)": "設定有効かつ状態変化時のみ、`AINavMesh`の停止、メッシュ・重心・Animator・カメラの状態を`state`に合わせる。",
+   "setEnableOrDisableAIOnDistanceEnabledState(bool state)": "`enableOrDisableAIOnDistanceEnabled`に`state`を代入するだけ。"
+  }
+ },
+ {
+  "type": "headExplodeExample",
+  "summary": "頭部パーツを消すデモ用スクリプトで、任意でタイムバレット演出も併用する。",
+  "methods": {
+   "explode()": "`useTimeBullet`ならタイムバレットを発動し、`headTransform`の`localScale`を0にする。",
+   "explodeBodyPart(Transform objectToExplode)": "`objectToExplode`がnullでなければ`localScale`を0にするだけ。"
+  }
+ },
+ {
+  "type": "moveObjectSmoothlySystem",
+  "summary": "登録した位置状態へコルーチンでオブジェクトを滑らかに移動させる。",
+  "methods": {
+   "moveObjectToPosition(string positionName)": "有効かつ自身がアクティブなら、既存コルーチンを止めて`positionName`向けの移動コルーチンを開始する。",
+   "stopMoveObjectToPositionCoroutine()": "`movementCoroutine`があれば停止するだけ。"
+  }
+ },
+ {
+  "type": "replaceMaterialSystem",
+  "summary": "対象オブジェクトのマテリアルを一括で差し替え、元のマテリアルへ戻せるようにする。",
+  "methods": {
+   "setMaterialState(bool state)": "`renderInfoList`の各`Renderer`で、`state`なら全スロットを`materialToReplace`に、そうでなければ保存したマテリアルに戻す。",
+   "checkObjectMaterials()": "`renderInfoList`が空の時、`objectToUse`配下の`Renderer`（パーティクル除く）とそのマテリアルを収集して記録する。"
+  }
+ },
+ {
+  "type": "setCharacterParentOnMovingObject",
+  "summary": "動くオブジェクトに乗ったプレイヤーや車両を親子付けし、移動プラットフォームとして扱う。",
+  "methods": {
+   "addPassenger(Transform newPassenger)": "未登録なら`passengersInfoList`に`playerTransform`と`playerController`を組にした情報を追加する。",
+   "addVehicle(Transform newVehicle)": "未登録なら`vehiclesInfoList`に`vehicleTransform`と`vehicleHUDManager`を組にした情報を追加する。"
+  }
+ },
+ {
+  "type": "setObjectScaleSystem",
+  "summary": "名前付きのスケール状態へコルーチンで補間しながら拡大縮小する。",
+  "methods": {
+   "setScaleState(string scaleStateName)": "`scaleStateInfoList`から名前一致の項目を選び、その`objectScale`で`changeScale`を呼ぶ。",
+   "changeScale(Vector3 newScale)": "既存コルーチンを止め、`newScale`へLerpで近づけるコルーチンを開始する。"
+  }
+ },
+ {
+  "type": "simpleBulletTimeOnCharacterEffect",
+  "summary": "キャラクターの移動速度とタイムスケールを下げるスローモーション演出と、メッシュの残像生成を行う。",
+  "methods": {
+   "stopUpdateCoroutine()": "`updateCoroutine`があれば停止するだけ。",
+   "enableOrDisableEffect(bool state)": "有効時、`state`に応じて移動速度とタイムバレットを切り替え、残像コルーチンの開始/停止と生成済み残像の破棄を行う。"
+  }
+ },
+ {
+  "type": "simpleSoundSystem",
+  "summary": "カテゴリ別の効果音リストからランダムに1つ選んで再生する。",
+  "methods": {
+   "playRandomSound()": "`soundsEnabled`が`true`の時、ランダムなカテゴリと音を選んで`AudioPlayer.PlayOneShot`で再生する。",
+   "playRandomSoundFromCategoryByName(string categoryName)": "`categoryName`一致のカテゴリからランダムな音を選んで再生し、見つからなければ何もしない。"
+  }
+ },
+ {
+  "type": "FloatingObjectSocket",
+  "summary": "ソケットに置かれた`FloatingObject`を保持して返すだけの小さなコンポーネント。",
+  "methods": {
+   "getFloatingObject()": "`mainFloatingObject`をそのまま返すだけ。"
+  }
+ },
+ {
+  "type": "changeObjectColors",
+  "summary": "マテリアル群の色を元の色へ時間をかけて戻す補間処理を持つ。",
+  "methods": {
+   "setCurrentColors(List<Material> materialsList, List<Color> originalColorList)": "対象マテリアルと元色のリストを差し替え、`Update`の色補間を有効にする。"
+  }
+ },
+ {
+  "type": "consoleLogOnScreenSystem",
+  "summary": "アプリケーションログを`Text`へ蓄積表示し、長すぎる場合は切り詰める。",
+  "methods": {
+   "Log(string logString, string stackTrace, LogType type)": "`logString`を先頭に追記し、`maxTextLength`を超えたら先頭から`textLenghtToRemoveOnMaxAmount`文字だけ残す。"
+  }
+ },
+ {
+  "type": "createMeshDuplicate",
+  "summary": "`SkinnedMeshRenderer`をベイクして静的メッシュの複製を作り、基準オブジェクトの子としてまとめる。",
+  "methods": {
+   "createDuplicate()": "各`SkinnedMeshRenderer`を`BakeMesh`して複製を作り、`duplicateBaseGameObject`のインスタンス下にまとめてイベントを発火する。"
+  }
+ },
+ {
+  "type": "fadeObject",
+  "summary": "レンダラーのアルファを下げてオブジェクトを消す演出を行い、プール返却にも対応する。",
+  "methods": {
+   "activeVanish(float newSpeed)": "`newSpeed`が0より大きければ`vanishSpeed`を更新し、フェードか遅延削除で消す（プール設定時はDespawn）。"
+  }
+ },
+ {
+  "type": "filesChecker",
+  "summary": "エディタ用のプリファブ検査ツールで、指定パス以下のプレファブの位置・回転・スケールやAudioSourceを確認する。",
+  "methods": {
+   "checkPrefabs()": "`prefabsPath`以下の`.prefab`を読み込み、中心位置やスケールのずれ、AudioSourceのクリップ情報を集計して出力する。"
+  }
+ },
+ {
+  "type": "ignoreCollisionSystem",
+  "summary": "指定コライダーとの衝突を無視させる設定をまとめて行う。",
+  "methods": {
+   "activateIgnoreCollision(Collider objectToIgnore)": "有効時、`useColliderList`ならリスト各員と無視設定し、そうでなければ`mainCollider`との`Physics.IgnoreCollision`を有効にする。"
+  }
+ },
+ {
+  "type": "initialPopUpWindow",
+  "summary": "エディタでGKCの初期情報ウィンドウを表示する`EditorWindow`で、`OnGUI`で内容を描画する。",
+  "methods": {
+   "Init()": "本体が空で何もしない。"
+  }
+ },
+ {
+  "type": "openInitialPopUpWindow",
+  "summary": "プレイ開始時に案内用ポップアップウィンドウを開くかどうかを制御するエディタ補助。",
+  "methods": {
+   "setShowInitialPopWindowEnabledState(bool state)": "`showInitialPopWindowEnabled`を更新し、`false`にした時は`checkForPresetsActive`も`false`にする。"
+  }
+ },
+ {
+  "type": "playSoundOnCollision",
+  "summary": "衝突時に効果音を再生し、最低速度を条件にできる。",
+  "methods": {
+   "playSound()": "`audioElementHolder`とその`audioElement`がnullでなければ`AudioPlayer.Play`で音を再生する。"
+  }
+ },
+ {
+  "type": "playSoundOnTriggerEnter",
+  "summary": "トリガー進入時に一度だけ効果音を再生する。",
+  "methods": {
+   "playSound()": "再生中でなければ`AudioPlayer.PlayOneShot`で`soundToPlayAudioElement`を鳴らし、`playingSound`を立てる。"
+  }
+ },
+ {
+  "type": "preventCharacterCollisionOnTop",
+  "summary": "キャラクターの上に乗られた時に押し出す力を加え、位置ずれを防ぐ。",
+  "methods": {
+   "stopUpdateCoroutine()": "`updateCoroutine`があれば停止し、`pushInProcess`を`false`にする。"
+  }
+ },
+ {
+  "type": "putGear",
+  "summary": "歯車がレール上に落ちたかを判定し、持ち主から離して所定位置へはめる。",
+  "methods": {
+   "checkToDropObjectOnRail()": "`gear`の`grabbedObjectState`を取得し、保持中なら`GKC_Utils.dropObject`で持ち主に落とさせる。"
+  }
+ },
+ {
+  "type": "rotatoryGear",
+  "summary": "歯車の回転可否フラグを保持するだけの小さなコンポーネント。",
+  "methods": {
+   "setRotationEnabledState(bool state)": "`rotationEnabled`に`state`を代入するだけ。"
+  }
+ },
+ {
+  "type": "setInitialPositionAtGameStart",
+  "summary": "ゲーム開始時に登録オブジェクトを指定位置・回転へ移動させる。",
+  "methods": {
+   "setInitialPosition()": "`useCustomTransform`や`positionOffset`から目標位置・回転を決め、必要なら地面へレイキャストで合わせて全対象へ適用する。"
+  }
+ },
+ {
+  "type": "simpleActionButton",
+  "summary": "ボタンから指定オブジェクトへ名前でメソッドを送るだけのコンポーネント。",
+  "methods": {
+   "activateDevice()": "`objectToActive`へ`functionName`のメソッドを`SendMessage`で送る（受信先が無くてもエラーにしない）。"
+  }
+ },
+ {
+  "type": "simpleCoinPickup",
+  "summary": "コイン取得時にキャラクターの`coinPocketSystem`へ枚数を加算して自身を消す。",
+  "methods": {
+   "checkToPickCoin(GameObject characterDetected)": "`characterDetected`の`coinPocketSystem`が取得可能なら`coinAmount`を加算し、`coinPickupGameObject`を破棄する。"
+  }
+ },
+ {
+  "type": "simpleGUILayoutStateManager",
+  "summary": "シーン内の全`MonoBehaviour`の`useGUILayout`を一括で切り替える。",
+  "methods": {
+   "setGUILayoutState(bool state)": "シーン内の全`MonoBehaviour`を取得し、`useGUILayout`が`state`と違うものをまとめて設定する。"
+  }
+ },
+ {
+  "type": "simpleLensFlareSystem",
+  "summary": "レンズフレア用オブジェクトを一定時間だけ表示する。",
+  "methods": {
+   "enableOrDisableLesnFlare(bool state)": "既存コルーチンを止め、`lensActiveDuration`秒だけ`lensFlareGameObject`を表示するコルーチンを開始する（`state`は未使用）。"
+  }
+ },
+ {
+  "type": "simpleMoveObjectSystem",
+  "summary": "対象オブジェクトを目標Transformの位置・回転へ速度に応じて補間移動する。",
+  "methods": {
+   "activateMovement()": "有効時、既存コルーチンを止めて`targetPositionTransform`へ向かう移動コルーチンを開始する。"
+  }
+ },
+ {
+  "type": "simpleRandomTextManager",
+  "summary": "登録したテキストからランダムまたはID指定で1つ選び、`Text`に表示する。",
+  "methods": {
+   "setRandomText(int randomTextID)": "`randomTextID`が0以上ならID一致、-1以下ならランダムに項目を選び、前回と同じものを避けて`mainText`に表示する。"
+  }
+ },
+ {
+  "type": "simpleRaycastPlacementDetector",
+  "summary": "レイキャストの当たった面に合わせてオブジェクトを配置する。",
+  "methods": {
+   "activePlacement()": "有効時、`raycastDirection`からレイを飛ばし、当たった面の法線向きと位置に`mainTransform`を合わせる。"
+  }
+ },
+ {
+  "type": "simpleSetQuaternionRotation",
+  "summary": "回転を初期化するだけの最小コンポーネント。",
+  "methods": {
+   "resetRotation()": "`transform.rotation`を`Quaternion.identity`にするだけ。"
+  }
+ }
+]

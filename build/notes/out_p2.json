@@ -1,0 +1,125 @@
+[
+  {
+    "type": "pickupType",
+    "summary": "拾えるオブジェクトの基底クラスで、取得可否の判定、取得確定、取得メッセージ表示、アビリティ解放や設計図追加といった共通処理を持つ。個々の取得挙動はサブクラスが上書きして実装する。",
+    "methods": {
+      "takePickupByButton()": "状態を同期し、取得可能なら `confirmTakePickupByButton` を呼ぶ。",
+      "takePickupByTrigger()": "状態を同期し、取得可能なら `confirmTakePickupByTrigger` を呼ぶ。",
+      "assignPickupObjectState()": "取得者情報とトリガー取得フラグを `mainPickupObject` からコピーし、取得可否を false に戻す。",
+      "checkIfCanBePicked()": "`canPickCurrentObject` を返すだけ。",
+      "confirmTakePickup()": "本体が空で何もしない。",
+      "showPickupTakenMessage(int amountToShow)": "`-AMOUNT-` を個数に置換した文言を `showRecieveInfo` で表示する（保存時は在庫用文言）。",
+      "showPickupTakenMessage(string messageToUse)": "空でない文言をそのまま `mainPickupObject.showRecieveInfo` で表示する。",
+      "checkIfUseInventoryObjectWhenPicked()": "インベントリ保存かつ使用設定のとき、`useInventoryObjectByName` で対象オブジェクトを1個使用する。",
+      "checkIfEnableAbilitiesOnTakePickup(GameObject currentPlayer)": "設定された能力リストの能力群を `currentPlayer` に対して有効化する。",
+      "checkIfActivateAbilitiesOnTakePickup(GameObject currentPlayer)": "指定能力を `currentPlayer` で発動し、一時発動フラグも渡す。",
+      "checkIfaddNewBlueprintsUnlockedList(GameObject currentPlayer)": "`craftingRecipesList` の設計図を `currentPlayer` に追加する。",
+      "setObjectTakenAsPickupMessage(string newMessage)": "`objectTakenAsPickupMessage` を設定するだけ。",
+      "setObjectTakenAsInventoryMessage(string newMessage)": "`objectTakenAsInventoryMessage` を設定するだけ。",
+      "renameObject(string newName)": "本体が空で何もしない（サブクラスで上書きするための仮想メソッド）。"
+    }
+  },
+  {
+    "type": "chestSystem",
+    "summary": "プレイヤーが近づいて開くと、設定された中身のピックアップを生成して箱の中に並べる宝箱。開閉アニメ、再補充・再開封の待ち時間、施錠と解錠、開閉イベントを管理する。",
+    "methods": {
+      "stopUpdateCoroutine()": "`mainCoroutine` を停止して開封後の監視更新を止める（null なら何もしない）。",
+      "addNewObject(GameObject newObject)": "生成物を箱の子にし、トリガー半径の変更やトリガー無効化を行って一覧に加え、設定時は生成イベントを送る。",
+      "setCurrentWaitToOpenChestValue(float newValue)": "開封までの待ち時間を設定し、0より大きければ待機を有効にする。",
+      "getRemainTimeToReopen()": "`refilledTime` から経過時間を引いた再補充までの残り時間を返し、0未満は0に丸める。",
+      "checkEventToSendRemainTimeToRefillOnSaveState()": "セーブ時に再補充までの残り時間を `eventToSendRemainTimeToRefill` で送る。",
+      "openOrCloseChest()": "待ち時間を確認して開封アニメを再生し、中身を生成して開封イベントを発火、再補充しない設定なら操作を無効化する。",
+      "unlockChest()": "`setLockedState(false)` を呼んで施錠を解除するだけ。",
+      "setLockedState(bool state)": "`isLocked` を反映し、マップ表示の切替と `openWhenUnlocked` 時の即開封を行う。",
+      "getManagerPickUpList()": "`pickUpManager` を検索・生成して `managerPickUpList` をコピーし、更新する。",
+      "updateComponent()": "`GKC_Utils.updateComponent` で値を反映し、シーンをダーティにして宝箱の設定更新を通知する。"
+    }
+  },
+  {
+    "type": "dropPickUpSystem",
+    "summary": "敵などの位置に、抽選・確率・ランダム内容の設定に従ってピックアップを生成し、爆発力で周囲に散らすシステム。設計図の分解素材ドロップや生成イベントにも対応する。",
+    "methods": {
+      "setIgnoreCreateDropPickupObjectsActiveState(bool state)": "`ignoreCreateDropPickupObjectsActive` を設定するだけ。",
+      "createDropPickUpObjects()": "ドロップ有効かつ自身がアクティブなときだけ、遅延付きの生成コルーチンを開始する。",
+      "setDropPickupsEnabledState(bool state)": "`dropPickupsEnabled` を設定するだけ。",
+      "getManagerPickUpList()": "`pickUpManager` を検索・生成して一覧をコピーし、更新とログ出力を行う。",
+      "updateComponent()": "`GKC_Utils.updateComponent` で値を反映し、シーンをダーティにして更新を通知する。",
+      "getOffset()": "`pickUpOffset` を、カスタム出現位置か自身のローカル軸に沿ったワールドオフセットへ変換して返す。",
+      "getMainInventoryManager()": "`inventoryListManager` を取得し、無ければ生成や検索を試みて、発見状態をフラグに保持する。",
+      "setDropPickupsEnabledStateFromEditor(bool state)": "エディタ用にドロップ有効状態を設定し、続けてコンポーネントを更新する。"
+    }
+  },
+  {
+    "type": "explosiveBarrel",
+    "summary": "衝突速度やダメージで爆発する爆発性の樽。範囲ダメージ、爆風、破片生成、フェード削除、遅延爆発を設定でき、プレイヤーが把持している間は衝突爆発を止められる。",
+    "methods": {
+      "explodeBarrel()": "表示とコライダーを無効化して範囲ダメージと爆発を発生させ、破片の生成と爆風、死亡処理を行って破棄コルーチンを開始する。",
+      "canExplodeState(bool state)": "`canExplode` を設定するだけ（把持中に衝突爆発を止める用途）。",
+      "setExplosiveBarrelOwner(GameObject newBarrelOwner)": "爆発の発生源となる `barrelOwner` を設定するだけ。",
+      "getBarrelRigidbody()": "`mainRigidbody` が未設定なら自身の `Rigidbody` を取得して保持する。",
+      "setBarrelRigidbody(Rigidbody rigidbodyToUse)": "`mainRigidbody` を指定された `Rigidbody` に差し替えるだけ。",
+      "waitToExplode()": "`explosionDelay` が0より大きければ遅延コルーチンを開始し、そうでなければ即座に爆発させる。",
+      "setExplosionValues(float force, float radius)": "爆発の威力 `explosionForce` とダメージ半径 `damageRadius` をまとめて設定する。"
+    }
+  },
+  {
+    "type": "crate",
+    "summary": "速度の出た衝突で壊れる木箱。破片の生成・飛散・フェード削除と破壊音を扱い、`canBeBroken` で破壊を抑止できる。",
+    "methods": {
+      "breakCrate()": "表示とコライダーを無効化して破片を生成・飛散させ、死亡処理と破棄コルーチンを開始する。",
+      "crateCanBeBrokenState(bool state)": "`canBeBroken` を設定するだけ。",
+      "getCrateRigidbody()": "`mainRigidbody` が未設定なら自身の `Rigidbody` を取得する。",
+      "setBarrelRigidbody(Rigidbody rigidbodyToUse)": "`mainRigidbody` を差し替えるだけ（名前は樽用だが木箱の剛体を設定する）。"
+    }
+  },
+  {
+    "type": "weaponPickup",
+    "summary": "武器そのものを拾うピックアップ。`playerWeaponsManager` で所持状況やエイム中・武器切替中かを確認して取得可否を決め、取得・インベントリ保存・メッセージ表示を行う。",
+    "methods": {
+      "setWeaponName(string newWeaponName)": "`weaponName` を設定するだけ。",
+      "getWeaponName()": "`weaponName` を返すだけ。"
+    }
+  },
+  {
+    "type": "weaponAttachmentPickup",
+    "summary": "武器アタッチメント用のピックアップ。インベントリへ保存するか、所持武器へ装着できるかを判定し、取得メッセージとサウンドを出して消える。",
+    "methods": {
+      "setAttachmentName(string newName)": "`attachmentName` を設定するだけ。"
+    }
+  },
+  {
+    "type": "meleeWeaponPickup",
+    "summary": "近接武器用のピックアップ。インベントリに保存できる場合のみ取得可とし、取得時はメッセージ・サウンド・レベルからの削除を行う。",
+    "methods": {
+      "setMeleeWeaponName(string newWeaponName)": "`weaponName` を設定するだけ。"
+    }
+  },
+  {
+    "type": "meleeWeaponConsumablePickup",
+    "summary": "近接武器の消耗品用ピックアップ。インベントリ保存時のみ取得可能とし、取得時はメッセージとサウンドを出してレベルから取り除く。",
+    "methods": {
+      "setWeaponConsumableName(string newWeaponConsumableName)": "`weaponConsumableName` を設定するだけ。"
+    }
+  },
+  {
+    "type": "meleeShieldPickup",
+    "summary": "盾用のピックアップ。`meleeWeaponsGrabbedManager` の設定に応じて装備かインベントリ保存かを切り替え、取得処理とメッセージ表示を行う。",
+    "methods": {
+      "setMeleeShieldName(string newShieldName)": "`shieldName` を設定するだけ。"
+    }
+  },
+  {
+    "type": "generalPickup",
+    "summary": "汎用ピックアップ。インベントリへ保存するか、プレイヤーステータスの加算、リモートイベント、アビリティ解放、設計図追加を直接実行するかを選べる。",
+    "methods": {
+      "setConsumableName(string newConsumableName)": "`pickupName` を設定するだけ。"
+    }
+  },
+  {
+    "type": "ammoPickup",
+    "summary": "弾薬用のピックアップ。所持武器や車両武器の弾薬上限を確認して取得量を決め、`AddAmmo` または車両HUDへ加算し、残量があれば再取得イベントを送る。",
+    "methods": {
+      "setAmmoName(string newAmmoName)": "`ammoName` を設定するだけ。"
+    }
+  }
+]

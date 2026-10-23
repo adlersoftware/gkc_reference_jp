@@ -1,0 +1,818 @@
+[
+ {
+  "type": "menuPause",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Menu\\menuPause.cs",
+  "methods": [
+   {
+    "sig": "activateFadePanelBackgroundIn()",
+    "line": 469
+   },
+   {
+    "sig": "activateFadePanelBackgroundOut()",
+    "line": 486
+   },
+   {
+    "sig": "deactivateFadePanelBackground()",
+    "line": 503
+   },
+   {
+    "sig": "setCustomFadeScreenSpeed(float newValue)",
+    "line": 516
+   },
+   {
+    "sig": "disableMenuList()",
+    "line": 532
+   },
+   {
+    "sig": "setOpenOrClosePauseMenuExternallyPausedState(bool state)",
+    "line": 551
+   },
+   {
+    "sig": "openPauseMenuByName(string menuName)",
+    "line": 556
+   },
+   {
+    "sig": "closePauseMenuByName(string menuName)",
+    "line": 565
+   },
+   {
+    "sig": "openOrClosePauseMenuByName(string menuName, bool state)",
+    "line": 574
+   },
+   {
+    "sig": "setPauseScreenWithoutPausingGameState(bool state)",
+    "line": 659
+   },
+   {
+    "sig": "inGameWindowOpened()",
+    "line": 736
+   },
+   {
+    "sig": "getIngameMenuPanelByName(string menueName)",
+    "line": 752
+   },
+   {
+    "sig": "setIngameMenuOpenedState(string ingameMenuName, bool state, bool activateEvents)",
+    "line": 765
+   },
+   {
+    "sig": "fadeInGameMenuPanel(ingameMenuInfo newIngameMenuInfo, bool fadingPanel)",
+    "line": 850
+   },
+   {
+    "sig": "checkTouchControlsWithoutDisableThem(bool state)",
+    "line": 898
+   },
+   {
+    "sig": "enableOrDisableTouchControlsExternally(bool state)",
+    "line": 913
+   },
+   {
+    "sig": "enableOrDisablePlayerMenu(bool state, bool pausePlayerMovement, bool ignoreActionActiveCheck)",
+    "line": 918
+   },
+   {
+    "sig": "checkEnableOrDisableTouchZoneList(bool state)",
+    "line": 986
+   },
+   {
+    "sig": "setIgnoreDisableTouchZoneListState(bool state)",
+    "line": 999
+   },
+   {
+    "sig": "usingDeviceState(bool state)",
+    "line": 1005
+   },
+   {
+    "sig": "usingPointAndClickState(bool state)",
+    "line": 1010
+   },
+   {
+    "sig": "usingSubMenuState(bool state)",
+    "line": 1015
+   },
+   {
+    "sig": "pauseGame()",
+    "line": 1022
+   },
+   {
+    "sig": "setMenuPausedState(bool state)",
+    "line": 1047
+   },
+   {
+    "sig": "pause()",
+    "line": 1058
+   },
+   {
+    "sig": "checkEventOnPauseResumeGame(bool state)",
+    "line": 1201
+   },
+   {
+    "sig": "checkEventOnOpenCloseInGameMenu(bool state)",
+    "line": 1212
+   },
+   {
+    "sig": "setTimeScale(float newValue)",
+    "line": 1223
+   },
+   {
+    "sig": "getTimeTime()",
+    "line": 1236
+   },
+   {
+    "sig": "getDeltaTime()",
+    "line": 1245
+   },
+   {
+    "sig": "isRegularTimeScaleActive()",
+    "line": 1254
+   },
+   {
+    "sig": "setMouseButtonPressPausedState(bool state)",
+    "line": 1259
+   },
+   {
+    "sig": "showOrHideMouseCursorController(bool state)",
+    "line": 1264
+   },
+   {
+    "sig": "showOrHideMouseCursorController(playerInputManager newInput, bool state, bool pausingGame)",
+    "line": 1269
+   },
+   {
+    "sig": "setMouseCursorControllerSpeedOnGameValue(float newValue)",
+    "line": 1274
+   },
+   {
+    "sig": "setOriginalMouseCursorControllerSpeedOnGameValue()",
+    "line": 1279
+   },
+   {
+    "sig": "showOrHideCursor(bool value)",
+    "line": 1286
+   },
+   {
+    "sig": "setIgnoreHideCursorOnClickActiveState(bool state)",
+    "line": 1345
+   },
+   {
+    "sig": "showOrHideMouseCursorAndPauseHideCheckOnClickExternally(bool state)",
+    "line": 1350
+   },
+   {
+    "sig": "checkTouchControls(bool state)",
+    "line": 1364
+   },
+   {
+    "sig": "updateTouchButtonsComponents()",
+    "line": 1379
+   },
+   {
+    "sig": "setIgnoreCheckCloseIngameMenusIfOpenedState(bool state)",
+    "line": 1386
+   },
+   {
+    "sig": "checkCloseIngameMenusIfOpened()",
+    "line": 1391
+   },
+   {
+    "sig": "setMenuOpenedWithActionSystemState(bool state, string menuName)",
+    "line": 1410
+   },
+   {
+    "sig": "checkCloseMenuOpenedByActionSystem()",
+    "line": 1417
+   },
+   {
+    "sig": "setIgnoreDeathStateOnMenuPauseState(bool state)",
+    "line": 1428
+   },
+   {
+    "sig": "death()",
+    "line": 1434
+   },
+   {
+    "sig": "getUp()",
+    "line": 1468
+   },
+   {
+    "sig": "restart()",
+    "line": 1484
+   },
+   {
+    "sig": "changeCameraState(bool state)",
+    "line": 1512
+   },
+   {
+    "sig": "changeCursorState(bool state)",
+    "line": 1528
+   },
+   {
+    "sig": "openOrClosePlayerMenu(bool state, Transform blurUIParent, bool useBlurUIPanel)",
+    "line": 1543
+   },
+   {
+    "sig": "openPlayerMenuWithBlurPanel(Transform blurUIParent)",
+    "line": 1558
+   },
+   {
+    "sig": "enterSubMenu()",
+    "line": 1568
+   },
+   {
+    "sig": "exitSubMenu()",
+    "line": 1575
+   },
+   {
+    "sig": "switchControls()",
+    "line": 1582
+   },
+   {
+    "sig": "enableOrDisableTouchControlsOutOfPauseMenu(bool state)",
+    "line": 1595
+   },
+   {
+    "sig": "setUseTouchControlsState(bool state)",
+    "line": 1606
+   },
+   {
+    "sig": "setUseTouchControlsStateFromEditor(bool state)",
+    "line": 1611
+   },
+   {
+    "sig": "setBlurPanelEnabledState(bool state)",
+    "line": 1618
+   },
+   {
+    "sig": "setBlurPanelEnabledStateFromEditor(bool state)",
+    "line": 1623
+   },
+   {
+    "sig": "isUsingTouchControls()",
+    "line": 1630
+   },
+   {
+    "sig": "confirmExit()",
+    "line": 1636
+   },
+   {
+    "sig": "confirmGoToHomeMenu()",
+    "line": 1641
+   },
+   {
+    "sig": "enableOrDisableTouchControls(bool state)",
+    "line": 1656
+   },
+   {
+    "sig": "reloadStart()",
+    "line": 1661
+   },
+   {
+    "sig": "setIgnoreBlurPanelActiveState(bool state)",
+    "line": 1666
+   },
+   {
+    "sig": "resetPauseMenuBlurPanel()",
+    "line": 1671
+   },
+   {
+    "sig": "changeBlurUIPanelValue(bool state, Transform blurUIParent, bool useBlurUIPanel)",
+    "line": 1676
+   },
+   {
+    "sig": "checkBlurSizeID()",
+    "line": 1765
+   },
+   {
+    "sig": "setIgnoreChangeHUDElementsState(bool state)",
+    "line": 1772
+   },
+   {
+    "sig": "enableOrDisableDynamicElementsOnScreen(bool state)",
+    "line": 1777
+   },
+   {
+    "sig": "pauseOrResumeShowHealthSliders(bool state)",
+    "line": 1788
+   },
+   {
+    "sig": "pauseOrResumeShowObjectives(bool state)",
+    "line": 1793
+   },
+   {
+    "sig": "pauseOrResumeShowIcons(bool state)",
+    "line": 1798
+   },
+   {
+    "sig": "enableOrDisableDynamicUIElementsParent(bool state)",
+    "line": 1803
+   },
+   {
+    "sig": "enableOrDisableDynamicElementsOnScreenFromEditor(bool state)",
+    "line": 1810
+   },
+   {
+    "sig": "pauseOrResumeShowHealthSlidersFromEditor(bool state)",
+    "line": 1821
+   },
+   {
+    "sig": "pauseOrResumeShowObjectivesFromEditor(bool state)",
+    "line": 1826
+   },
+   {
+    "sig": "pauseOrResumeShowIconsFromEditor(bool state)",
+    "line": 1831
+   },
+   {
+    "sig": "inputPauseGame()",
+    "line": 1837
+   },
+   {
+    "sig": "inputReturnPauseGameFromGamepad()",
+    "line": 1856
+   },
+   {
+    "sig": "inputOpenPreviousPlayerOpenMenu()",
+    "line": 1877
+   },
+   {
+    "sig": "inputOpenNextPlayerOpenMenu()",
+    "line": 1884
+   },
+   {
+    "sig": "inputOpenOrClosePlayerMenu()",
+    "line": 1891
+   },
+   {
+    "sig": "setPauseGameInputPausedState(bool state)",
+    "line": 1904
+   },
+   {
+    "sig": "openOrClosePlayerMenu()",
+    "line": 1909
+   },
+   {
+    "sig": "openNextPlayerOpenMenu()",
+    "line": 1949
+   },
+   {
+    "sig": "openPreviousPlayerOpenMenu()",
+    "line": 1998
+   },
+   {
+    "sig": "openPlayerOpenMenuByName(string menuName)",
+    "line": 2047
+   },
+   {
+    "sig": "closePlayerMenuByName(string menuName)",
+    "line": 2077
+   },
+   {
+    "sig": "enableCanUsePreviousNextMenuButtonsState(bool state, string menuName)",
+    "line": 2106
+   },
+   {
+    "sig": "disableCanUsePreviousNextMenuButtonsState(bool state, string menuName)",
+    "line": 2111
+   },
+   {
+    "sig": "enableOrDisableCanUsePreviousNextMenuButtonsState(bool state, string menuName)",
+    "line": 2116
+   },
+   {
+    "sig": "checkcreateIngameMenuPanel(string menuName)",
+    "line": 2154
+   },
+   {
+    "sig": "setIgnoreCreateIngameMenuPanelState(bool state)",
+    "line": 2165
+   },
+   {
+    "sig": "setEnabledMenuCanBeUsedState(string menuNameToSearch)",
+    "line": 2214
+   },
+   {
+    "sig": "setDisabledMenuCanBeUsedState(string menuNameToSearch)",
+    "line": 2219
+   },
+   {
+    "sig": "setMenuCanBeUsedState(string menuNameToSearch, bool state)",
+    "line": 2224
+   },
+   {
+    "sig": "checkIfMenuCanBeUsedByName(string menuNameToSearch)",
+    "line": 2242
+   },
+   {
+    "sig": "setOpenOrClosePlayerOpenMenuByNamePausedState(bool state)",
+    "line": 2255
+   },
+   {
+    "sig": "isOpenOrClosePlayerOpenMenuByNamePaused()",
+    "line": 2260
+   },
+   {
+    "sig": "setAllowToExitMenuWithTitleMenuTextButtonActiveState(bool state)",
+    "line": 2265
+   },
+   {
+    "sig": "setChangeBetweenIngameMenuPausedState(bool state)",
+    "line": 2270
+   },
+   {
+    "sig": "enableOrDisablePlayerHUD(bool state)",
+    "line": 2275
+   },
+   {
+    "sig": "enableOrDisableSecondaryPlayerHUD(bool state)",
+    "line": 2280
+   },
+   {
+    "sig": "enableOrDisableVehicleHUD(bool state)",
+    "line": 2285
+   },
+   {
+    "sig": "getMainCanvasSizeDelta()",
+    "line": 2290
+   },
+   {
+    "sig": "getMainCanvas()",
+    "line": 2295
+   },
+   {
+    "sig": "getCanvasInfoList()",
+    "line": 2300
+   },
+   {
+    "sig": "addNewCanvasToList(Canvas newCanvas)",
+    "line": 2305
+   },
+   {
+    "sig": "getCanvasInfoListByCanvasObject(Canvas newCanvas)",
+    "line": 2322
+   },
+   {
+    "sig": "isCanvasAlreadyOnInfoList(Canvas newCanvas)",
+    "line": 2337
+   },
+   {
+    "sig": "isUsingScreenSpaceCamera()",
+    "line": 2352
+   },
+   {
+    "sig": "getMainCanvasScaler()",
+    "line": 2357
+   },
+   {
+    "sig": "getMainCanvasCamera()",
+    "line": 2362
+   },
+   {
+    "sig": "setCanvasInfo(bool creatingCharactersOnEditor)",
+    "line": 2367
+   },
+   {
+    "sig": "getMainCameraTransform()",
+    "line": 2372
+   },
+   {
+    "sig": "checkUpdateReticleActiveState(bool state)",
+    "line": 2377
+   },
+   {
+    "sig": "isMenuPaused()",
+    "line": 2382
+   },
+   {
+    "sig": "isGamePaused()",
+    "line": 2387
+   },
+   {
+    "sig": "isLoadGameEnabled()",
+    "line": 2392
+   },
+   {
+    "sig": "isPlayerMenuActive()",
+    "line": 2397
+   },
+   {
+    "sig": "saveGameInfoFromEditor(string saveInfoName)",
+    "line": 2402
+   },
+   {
+    "sig": "setGameVolume(float newValue)",
+    "line": 2407
+   },
+   {
+    "sig": "setSelectedUIGameObject(GameObject newGameObject)",
+    "line": 2412
+   },
+   {
+    "sig": "isUsingGamepad()",
+    "line": 2464
+   },
+   {
+    "sig": "setCurrentOpenMenuSystem(openMenuSystem newOpenMenuSystem)",
+    "line": 2469
+   },
+   {
+    "sig": "setHeadBobPausedState(bool state)",
+    "line": 2478
+   },
+   {
+    "sig": "getPlayerControllerGameObject()",
+    "line": 2483
+   },
+   {
+    "sig": "getHudAndMenus()",
+    "line": 2488
+   },
+   {
+    "sig": "setAnimatorUnscaledTimeState(bool state)",
+    "line": 2493
+   },
+   {
+    "sig": "getCurrentIdleID()",
+    "line": 2498
+   },
+   {
+    "sig": "setCurrentIdleIDValue(float animatorIdle)",
+    "line": 2503
+   },
+   {
+    "sig": "updateIdleIDOnAnimator()",
+    "line": 2508
+   },
+   {
+    "sig": "setUsingDeviceState(bool state)",
+    "line": 2513
+   },
+   {
+    "sig": "stopEditorOrGame()",
+    "line": 2518
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 2527
+   }
+  ]
+ },
+ {
+  "type": "ingameMenuPanel",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Menu\\ingameMenuPanel.cs",
+  "methods": [
+   {
+    "sig": "closeMenuPanelIfOpened()",
+    "line": 104
+   },
+   {
+    "sig": "openOrCloseMenuPanel(bool state)",
+    "line": 111
+   },
+   {
+    "sig": "openOrCloseMenuFromTouch()",
+    "line": 164
+   },
+   {
+    "sig": "openOrCloseMenuFromTouchExternally()",
+    "line": 175
+   },
+   {
+    "sig": "openMenuPanelState()",
+    "line": 180
+   },
+   {
+    "sig": "closeMenuPanelState()",
+    "line": 185
+   },
+   {
+    "sig": "setPauseManager(menuPause currentMenuPause)",
+    "line": 190
+   },
+   {
+    "sig": "initializeMenuPanel()",
+    "line": 197
+   },
+   {
+    "sig": "checkMenuIfCurrentOpened()",
+    "line": 202
+   },
+   {
+    "sig": "checkMenuIfNotCurrentOpened()",
+    "line": 207
+   },
+   {
+    "sig": "checkAllMenusClosed()",
+    "line": 212
+   },
+   {
+    "sig": "openNextPlayerOpenMenu()",
+    "line": 217
+   },
+   {
+    "sig": "openPreviousPlayerOpenMenu()",
+    "line": 226
+   },
+   {
+    "sig": "closePlayerMenuByName(string menuName)",
+    "line": 235
+   },
+   {
+    "sig": "checkEventsOnStateChange(bool state)",
+    "line": 244
+   },
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 255
+   },
+   {
+    "sig": "enableMovePanel(RectTransform panelToMove)",
+    "line": 312
+   },
+   {
+    "sig": "disableMovePanel()",
+    "line": 337
+   },
+   {
+    "sig": "toggleMenuPanelActiveState(GameObject buttonObject)",
+    "line": 354
+   },
+   {
+    "sig": "openOrCloseAllMenuPanels(bool state)",
+    "line": 375
+   },
+   {
+    "sig": "setMenuPanelActive(GameObject panelGameObject)",
+    "line": 384
+   },
+   {
+    "sig": "setMenuPanelDeactive(GameObject panelGameObject)",
+    "line": 389
+   },
+   {
+    "sig": "setMenuPanelActiveState(bool state, GameObject buttonObject)",
+    "line": 394
+   }
+  ]
+ },
+ {
+  "type": "homeMenu",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Menu\\homeMenu.cs",
+  "methods": [
+   {
+    "sig": "confirmExit()",
+    "line": 65
+   },
+   {
+    "sig": "loadScene(int sceneNumber)",
+    "line": 70
+   },
+   {
+    "sig": "disableMenuList()",
+    "line": 76
+   },
+   {
+    "sig": "openOrClosePauseMenuByName(string menuName, bool state)",
+    "line": 95
+   },
+   {
+    "sig": "openPauseMenuByName(string menuName)",
+    "line": 148
+   },
+   {
+    "sig": "closePauseMenuByName(string menuName)",
+    "line": 153
+   },
+   {
+    "sig": "enterSubMenu()",
+    "line": 158
+   },
+   {
+    "sig": "exitSubMenu()",
+    "line": 163
+   }
+  ]
+ },
+ {
+  "type": "openMenuSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Menu\\openMenuSystem.cs",
+  "methods": [
+   {
+    "sig": "toggleOpenOrCloseMenu()",
+    "line": 57
+   },
+   {
+    "sig": "openMenu()",
+    "line": 62
+   },
+   {
+    "sig": "closeMenu()",
+    "line": 67
+   },
+   {
+    "sig": "closeMenuIfOpened()",
+    "line": 72
+   },
+   {
+    "sig": "openOrCloseMenu(bool state)",
+    "line": 79
+   },
+   {
+    "sig": "stopOpenOrCloseMenuCoroutine()",
+    "line": 101
+   },
+   {
+    "sig": "setCurrentPlayer(GameObject newPlayer)",
+    "line": 196
+   },
+   {
+    "sig": "getPauseManager()",
+    "line": 205
+   }
+  ]
+ },
+ {
+  "type": "sceneLoadSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Menu\\sceneLoadSystem.cs",
+  "methods": [
+   {
+    "sig": "loadScene(Button buttonToCheck)",
+    "line": 81
+   },
+   {
+    "sig": "setSceneNumberInOrder()",
+    "line": 111
+   },
+   {
+    "sig": "setSceneNumberInOrderByIndex(int index)",
+    "line": 122
+   },
+   {
+    "sig": "enableAddSceneToListByIndex(int index)",
+    "line": 139
+   },
+   {
+    "sig": "disableAddSceneToListByIndex(int index)",
+    "line": 152
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 165
+   }
+  ]
+ },
+ {
+  "type": "simpleUIButtonInfo",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Menu\\simpleUIButtonInfo.cs",
+  "methods": [
+   {
+    "sig": "setCurrentName(string newValue)",
+    "line": 26
+   },
+   {
+    "sig": "getCurrentName()",
+    "line": 31
+   }
+  ]
+ },
+ {
+  "type": "GKCLoadingScreenSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Menu\\GKCLoadingScreenSystem.cs",
+  "methods": [
+   {
+    "sig": "setKeyPressedState(bool state)",
+    "line": 225
+   }
+  ]
+ },
+ {
+  "type": "customActionOpenMenuSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Menu\\customActionOpenMenuSystem.cs",
+  "methods": [
+   {
+    "sig": "openOrCloseMenu(bool state, GameObject currentPlayer)",
+    "line": 13
+   }
+  ]
+ },
+ {
+  "type": "resetScrollRectOnEnable",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Menu\\resetScrollRectOnEnable.cs",
+  "methods": [
+   {
+    "sig": "resetRectTransform()",
+    "line": 37
+   }
+  ]
+ },
+ {
+  "type": "setCanvasParentSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Menu\\setCanvasParentSystem.cs",
+  "methods": [
+   {
+    "sig": "activateParentChange()",
+    "line": 31
+   }
+  ]
+ }
+]

@@ -1,0 +1,1 @@
+# Inventory Camera Position

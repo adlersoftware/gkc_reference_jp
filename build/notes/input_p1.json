@@ -1,0 +1,314 @@
+[
+ {
+  "type": "pickUpObject",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\PickUps\\pickUpObject.cs",
+  "methods": [
+   {
+    "sig": "activatePickupMovement()",
+    "line": 159
+   },
+   {
+    "sig": "getComponents()",
+    "line": 211
+   },
+   {
+    "sig": "playPickupSound()",
+    "line": 243
+   },
+   {
+    "sig": "pickObject()",
+    "line": 257
+   },
+   {
+    "sig": "removePickupFromLevel()",
+    "line": 267
+   },
+   {
+    "sig": "checkEventOnTaken()",
+    "line": 309
+   },
+   {
+    "sig": "checkEventOnRemainingAmount()",
+    "line": 338
+   },
+   {
+    "sig": "getAmountPicked()",
+    "line": 353
+   },
+   {
+    "sig": "setUpIcon()",
+    "line": 363
+   },
+   {
+    "sig": "pausePickupIconState()",
+    "line": 398
+   },
+   {
+    "sig": "resumePickupIconState()",
+    "line": 405
+   },
+   {
+    "sig": "removePickupIcon()",
+    "line": 412
+   },
+   {
+    "sig": "removePickupIconAndDisableObject()",
+    "line": 417
+   },
+   {
+    "sig": "setCurrentUser(GameObject newObject)",
+    "line": 426
+   },
+   {
+    "sig": "pickObjectByButton()",
+    "line": 435
+   },
+   {
+    "sig": "confirmTakePickupByButton()",
+    "line": 456
+   },
+   {
+    "sig": "cancelPickObject()",
+    "line": 463
+   },
+   {
+    "sig": "OnTriggerEnter(Collider col)",
+    "line": 479
+   },
+   {
+    "sig": "OnTriggerExit(Collider col)",
+    "line": 484
+   },
+   {
+    "sig": "checkTriggerInfoByGameObject(GameObject objectToCheck)",
+    "line": 491
+   },
+   {
+    "sig": "checkTriggerInfo(Collider col)",
+    "line": 502
+   },
+   {
+    "sig": "confirmTakePickupByTrigger()",
+    "line": 613
+   },
+   {
+    "sig": "setFinderType(bool isPlayer, bool isVehicle, bool isCharacter)",
+    "line": 684
+   },
+   {
+    "sig": "tryToPickUpObject()",
+    "line": 710
+   },
+   {
+    "sig": "setIgnoreMessagesAndDestroyPickupActiveState(bool state)",
+    "line": 789
+   },
+   {
+    "sig": "setDurabilityInfo(bool state, float newDurabilityAmount, float newMaxDurabilityAmount)",
+    "line": 794
+   },
+   {
+    "sig": "setDurabilityAmount(float newDurabilityAmount)",
+    "line": 803
+   },
+   {
+    "sig": "setMaxDurabilityAmount(float newMaxDurabilityAmount)",
+    "line": 808
+   },
+   {
+    "sig": "setUseDurabilityState(bool state)",
+    "line": 813
+   },
+   {
+    "sig": "getLastinventoryAmountPicked()",
+    "line": 818
+   },
+   {
+    "sig": "getPickupObjectName()",
+    "line": 823
+   },
+   {
+    "sig": "activateObjectTrigger()",
+    "line": 858
+   },
+   {
+    "sig": "showRecieveInfo(string message)",
+    "line": 865
+   },
+   {
+    "sig": "setPickUpAmount(int amountToSet)",
+    "line": 882
+   },
+   {
+    "sig": "getInventoryInfo()",
+    "line": 889
+   },
+   {
+    "sig": "setAmount(int newAmount)",
+    "line": 902
+   },
+   {
+    "sig": "setNewAmount(int newAmount)",
+    "line": 917
+   },
+   {
+    "sig": "getPickupTrigger()",
+    "line": 928
+   },
+   {
+    "sig": "removeDeviceFromListExternalCall(GameObject deviceGameObject)",
+    "line": 933
+   },
+   {
+    "sig": "setPickupOptionAsTrigger()",
+    "line": 948
+   },
+   {
+    "sig": "setPickupOptionAsButton()",
+    "line": 953
+   },
+   {
+    "sig": "pickObjectAfterXWait(GameObject newPlayer)",
+    "line": 969
+   },
+   {
+    "sig": "assignPickupElementsOnEditor()",
+    "line": 995
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 1022
+   }
+  ]
+ },
+ {
+  "type": "pickUpManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\PickUps\\pickUpManager.cs",
+  "methods": [
+   {
+    "sig": "getComponentInstance()",
+    "line": 33
+   },
+   {
+    "sig": "addNewPlayer(playerPickupIconManager newPlayer)",
+    "line": 55
+   },
+   {
+    "sig": "setPickUpIcon(GameObject target, string pickupIconGeneralName, string pickupIconName)",
+    "line": 79
+   },
+   {
+    "sig": "removeTarget(GameObject target)",
+    "line": 161
+   },
+   {
+    "sig": "removeAtTarget(int objectID, int objectIndex)",
+    "line": 179
+   },
+   {
+    "sig": "removeElementFromPickupListCalledByPlayer(int objectID)",
+    "line": 192
+   },
+   {
+    "sig": "setPauseState(bool state, GameObject iconObject)",
+    "line": 206
+   },
+   {
+    "sig": "setNamesConfigured(int currentIndex)",
+    "line": 224
+   },
+   {
+    "sig": "addNewPickup()",
+    "line": 235
+   },
+   {
+    "sig": "addNewPickupToList(int index)",
+    "line": 244
+   },
+   {
+    "sig": "udpateComponent()",
+    "line": 253
+   }
+  ]
+ },
+ {
+  "type": "playerPickupIconManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\PickUps\\playerPickupIconManager.cs",
+  "methods": [
+   {
+    "sig": "enableOrDisableIcon(bool state, int index)",
+    "line": 302
+   },
+   {
+    "sig": "setPickUpIcon(GameObject target, Texture targetTexture, int objectID, GameObject iconPrefab)",
+    "line": 322
+   },
+   {
+    "sig": "removeAtTarget(int index)",
+    "line": 425
+   },
+   {
+    "sig": "removeAtTargetByID(int objectID)",
+    "line": 445
+   },
+   {
+    "sig": "setPauseState(bool state, int index)",
+    "line": 464
+   },
+   {
+    "sig": "pauseOrResumeShowIcons(bool state)",
+    "line": 475
+   },
+   {
+    "sig": "pauseOrResumeShowIconsFromEditor(bool state)",
+    "line": 486
+   },
+   {
+    "sig": "setShowIconsActiveState(bool state)",
+    "line": 493
+   },
+   {
+    "sig": "updateScreenValues()",
+    "line": 498
+   },
+   {
+    "sig": "setShowIconsActiveStateFromEditor(bool state)",
+    "line": 504
+   }
+  ]
+ },
+ {
+  "type": "pickUpsScreenInfo",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\PickUps\\pickUpsScreenInfo.cs",
+  "methods": [
+   {
+    "sig": "recieveInfo(string info)",
+    "line": 86
+   },
+   {
+    "sig": "recieveInfo(string info, Texture icon)",
+    "line": 153
+   },
+   {
+    "sig": "setPickUpScreenInfoEnabled(bool state)",
+    "line": 262
+   },
+   {
+    "sig": "setPickUpScreenInfoEnabledFromEditor(bool state)",
+    "line": 267
+   },
+   {
+    "sig": "setUsedByAIState(bool state)",
+    "line": 274
+   },
+   {
+    "sig": "addTextFromEditor()",
+    "line": 279
+   },
+   {
+    "sig": "addTextAndIconFromEditor()",
+    "line": 284
+   }
+  ]
+ }
+]

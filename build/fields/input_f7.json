@@ -1,0 +1,488 @@
+[
+ {
+  "type": "electronicDevice",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\electronicDevice.cs",
+  "source": "Devices/electronicDevice.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "playerTag",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useOnlyForTrigger",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "functionToSetPlayer",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "activateDeviceOnTriggerEnter",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useMoveCameraToDevice",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "disableDeviceWhenStopUsing",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "stopUsingDeviceWhenUnlock",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "disableAndRemoveDeviceWhenUnlock",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "disableDeviceInteractionAfterUsingOnce",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "cameraMovementManager",
+    "label": "",
+    "section": "Camera Component Settings"
+   },
+   {
+    "field": "deviceMovementManager",
+    "label": "",
+    "section": "Camera Component Settings"
+   },
+   {
+    "field": "useFreeInteraction",
+    "label": "",
+    "section": "Free Interaction Settings"
+   },
+   {
+    "field": "useFreeInteractionEvent",
+    "label": "",
+    "section": "Free Interaction Settings"
+   },
+   {
+    "field": "freeInteractionEvent",
+    "label": "",
+    "section": "Free Interaction Settings"
+   },
+   {
+    "field": "functionToUseDevice",
+    "label": "",
+    "section": "Activate Device Settings"
+   },
+   {
+    "field": "showDebugPrint",
+    "label": "",
+    "section": "Device State"
+   },
+   {
+    "field": "activateEventIfUnableToUseDevice",
+    "label": "",
+    "section": "Activate Event If Unable To Use Device Settings"
+   },
+   {
+    "field": "unableToUseDeviceEvent",
+    "label": "",
+    "section": "Activate Event If Unable To Use Device Settings"
+   },
+   {
+    "field": "unlockFunctionCall",
+    "label": "",
+    "section": "Unlock Function Settings"
+   },
+   {
+    "field": "lockFunctionCall",
+    "label": "",
+    "section": "Lock Function Settings"
+   },
+   {
+    "field": "activateEventOnTriggerStay",
+    "label": "",
+    "section": "Activate Event On Trigger Stay Settings"
+   },
+   {
+    "field": "triggerStayEvent",
+    "label": "",
+    "section": "Activate Event On Trigger Stay Settings"
+   },
+   {
+    "field": "eventOnTriggerStayRate",
+    "label": "",
+    "section": "Activate Event On Trigger Stay Settings"
+   },
+   {
+    "field": "activateEventOnTriggerEnter",
+    "label": "",
+    "section": "Activate Event On Trigger Enter Settings"
+   },
+   {
+    "field": "triggerEnterEvent",
+    "label": "",
+    "section": "Activate Event On Trigger Enter Settings"
+   },
+   {
+    "field": "sendPlayerOnTriggerEnter",
+    "label": "",
+    "section": "Activate Event On Trigger Enter Settings"
+   },
+   {
+    "field": "eventToSendPlayerOnTriggerEnter",
+    "label": "",
+    "section": "Activate Event On Trigger Enter Settings"
+   },
+   {
+    "field": "activateEventOnTriggerExit",
+    "label": "",
+    "section": "Activate Event On Trigger Exit Settings"
+   },
+   {
+    "field": "triggerExitEvent",
+    "label": "",
+    "section": "Activate Event On Trigger Exit Settings"
+   },
+   {
+    "field": "sendPlayerOnTriggerExit",
+    "label": "",
+    "section": "Activate Event On Trigger Exit Settings"
+   },
+   {
+    "field": "eventToSendPlayerOnTriggerExit",
+    "label": "",
+    "section": "Activate Event On Trigger Exit Settings"
+   },
+   {
+    "field": "sendCurrentPlayerOnEvent",
+    "label": "",
+    "section": "Send Current Player On Event Settings"
+   },
+   {
+    "field": "setCurrentPlayerEvent",
+    "label": "",
+    "section": "Send Current Player On Event Settings"
+   },
+   {
+    "field": "useEventOnStartUsingDevice",
+    "label": "",
+    "section": "Start/Stop Using Device Settings"
+   },
+   {
+    "field": "eventOnStartUsingDevice",
+    "label": "",
+    "section": "Start/Stop Using Device Settings"
+   },
+   {
+    "field": "useEventOnStopUsingDevice",
+    "label": "",
+    "section": "Start/Stop Using Device Settings"
+   },
+   {
+    "field": "eventOnStopUsingDevice",
+    "label": "",
+    "section": "Start/Stop Using Device Settings"
+   },
+   {
+    "field": "useConditionSystemToStartDevice",
+    "label": "",
+    "section": "Condition Settings"
+   },
+   {
+    "field": "mainGKCConditionInfoToStartDevice",
+    "label": "",
+    "section": "Condition Settings"
+   },
+   {
+    "field": "useConditionSystemToStopDevice",
+    "label": "",
+    "section": "Condition Settings"
+   },
+   {
+    "field": "mainGKCConditionInfoToStopDevice",
+    "label": "",
+    "section": "Condition Settings"
+   }
+  ]
+ },
+ {
+  "type": "elevatorSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\elevatorSystem.cs",
+  "source": "Devices/elevatorSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "elevatorSystemEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "canUseElevatorButtonsWithoutPlayerInside",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "currentFloor",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "elevatorSpeed",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "floorHeight",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "hasInsideElevatorDoor",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "insideElevatorDoor",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "elevatorSwitchPrefab",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "elevatorDoorPrefab",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "addSwitchInNewFloors",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "addDoorInNewFloors",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "doorsClosed",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "changeIconFloorWhenMoving",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useEventsOnMoveStartAndEnd",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "eventOnMoveStart",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "eventOnMoveEnd",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "showGizmo",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoLabelColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   }
+  ]
+ },
+ {
+  "type": "eventInfoSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Event System\\eventInfoSystem.cs",
+  "source": "Event System/eventInfoSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "eventInfoEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useDelayEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useAccumulativeDelay",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useSpeedMultiplier",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "speedMultiplier",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "mainRemoteEventSystem",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useEventOnStopCoroutineIfActive",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "eventOnStopCoroutineIfActive",
+    "label": "",
+    "section": "Other Settings"
+   }
+  ]
+ },
+ {
+  "type": "eventTriggerSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Event System\\eventTriggerSystem.cs",
+  "source": "Event System/eventTriggerSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "useSameFunctionInList",
+    "label": "",
+    "section": "Use Same Function To Call Settings"
+   },
+   {
+    "field": "useSameObjectToCall",
+    "label": "",
+    "section": "Use Same Object To Call Settings"
+   },
+   {
+    "field": "callThisObject",
+    "label": "",
+    "section": "Use Same Object To Call Settings"
+   },
+   {
+    "field": "sameObjectToCall",
+    "label": "",
+    "section": "Use Same Object To Call Settings"
+   },
+   {
+    "field": "useObjectToTrigger",
+    "label": "",
+    "section": "Use Object To Trigger Settings"
+   },
+   {
+    "field": "objectNeededToTrigger",
+    "label": "",
+    "section": "Use Object To Trigger Settings"
+   },
+   {
+    "field": "useTagToTrigger",
+    "label": "",
+    "section": "Tag Settings"
+   },
+   {
+    "field": "useTagList",
+    "label": "",
+    "section": "Tag Settings"
+   },
+   {
+    "field": "tagNeededToTrigger",
+    "label": "",
+    "section": "Tag Settings"
+   },
+   {
+    "field": "dontUseDelay",
+    "label": "",
+    "section": "Same Delay Settings"
+   },
+   {
+    "field": "useSameDelay",
+    "label": "",
+    "section": "Same Delay Settings"
+   },
+   {
+    "field": "generalDelay",
+    "label": "",
+    "section": "Same Delay Settings"
+   },
+   {
+    "field": "useRandomDelay",
+    "label": "",
+    "section": "Same Delay Settings"
+   },
+   {
+    "field": "randomDelayRange",
+    "label": "",
+    "section": "Same Delay Settings"
+   },
+   {
+    "field": "triggeredByButton",
+    "label": "",
+    "section": "Trigger Settings"
+   },
+   {
+    "field": "triggerEventType",
+    "label": "",
+    "section": "Trigger Settings"
+   },
+   {
+    "field": "useLayerMask",
+    "label": "",
+    "section": "Layer Settings"
+   },
+   {
+    "field": "layerMask",
+    "label": "",
+    "section": "Layer Settings"
+   },
+   {
+    "field": "justCallOnTrigger",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "callFunctionEveryTimeTriggered",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "setParentToNull",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "triggerEventAtStart",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "loopEventAtTheEndEnabled",
+    "label": "",
+    "section": "Other Settings"
+   }
+  ]
+ }
+]

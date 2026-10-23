@@ -1,0 +1,163 @@
+[
+ {
+  "type": "AIWayPointPatrol",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\AIWayPointPatrol.cs",
+  "source": "AI/AIWayPointPatrol.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "waitTimeBetweenPoints",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "layerMask",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "newWaypointOffset",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "surfaceAdjusmentOffset",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "showGizmo",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "gizmoLabelColor",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "gizmoRadius",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "useHandleForVertex",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "useFreeHandle",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "handleRadius",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "handleGizmoColor",
+    "label": "",
+    "section": "Gizmo Options"
+   }
+  ]
+ },
+ {
+  "type": "BezierSpline",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\BezierSpline.cs",
+  "source": "Others/BezierSpline.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "directionScale",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "newPointOffset",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "newPointBezierOffset",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "handleSize",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "pickSize",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "showGizmo",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "showLookDirectionGizmo",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "lookDirectionGizmoRadius",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "lookDirectionArrowLength",
+    "label": "",
+    "section": "Gizmo Settings"
+   }
+  ]
+ },
+ {
+  "type": "CustomizableToolbarSettings",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Editor\\CustomizableToolbarSettings.cs",
+  "source": "Editor/CustomizableToolbarSettings.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "numberOfColumns",
+    "label": "",
+    "section": ""
+   },
+   {
+    "field": "windowsHeight",
+    "label": "",
+    "section": ""
+   }
+  ]
+ },
+ {
+  "type": "GKCUIManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\GKCUIManager.cs",
+  "source": "Others/GKCUIManager.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "managerEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "objectSearcherName",
+    "label": "Name To Search",
+    "section": "UI Object Searcher"
+   },
+   {
+    "field": "currentArrayElement",
+    "label": "",
+    "section": "UI Object To Search Result List"
+   }
+  ]
+ }
+]

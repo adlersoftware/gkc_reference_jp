@@ -1,0 +1,490 @@
+[
+ {
+  "type": "saveGameSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Save System\\saveGameSystem.cs",
+  "methods": [
+   {
+    "sig": "startGameSystem()",
+    "line": 221
+   },
+   {
+    "sig": "addSaveSlot(int index)",
+    "line": 328
+   },
+   {
+    "sig": "setSaveGameTransformInfo(Transform savePosition, bool canUsePlayerCameraOrientation)",
+    "line": 338
+   },
+   {
+    "sig": "activateSaveStation()",
+    "line": 372
+   },
+   {
+    "sig": "openSaveGameMenu()",
+    "line": 403
+   },
+   {
+    "sig": "getSaveButtonSelected(Button button)",
+    "line": 414
+   },
+   {
+    "sig": "showSaveInfoDebug()",
+    "line": 512
+   },
+   {
+    "sig": "showSaveInfoDebug(int saveNumberToDelete, string currentSaveDataPath, string extraFileString)",
+    "line": 538
+   },
+   {
+    "sig": "newGame()",
+    "line": 561
+   },
+   {
+    "sig": "continueGame()",
+    "line": 573
+   },
+   {
+    "sig": "saveGameOnHiddenSlotIndex(int saveSlotIndex)",
+    "line": 612
+   },
+   {
+    "sig": "setSavingGameManuallyActiveState(bool state)",
+    "line": 617
+   },
+   {
+    "sig": "saveGame()",
+    "line": 622
+   },
+   {
+    "sig": "saveGameBySlotIndex(int slotIndex)",
+    "line": 645
+   },
+   {
+    "sig": "playSavingGameAnimation()",
+    "line": 663
+   },
+   {
+    "sig": "showSavingGamePanelInfo()",
+    "line": 674
+   },
+   {
+    "sig": "saveGameCheckpoint(Transform customTransform, int checkpointID, int checkpointSceneID, bool overwriteThisCheckpointActive, bool savingGameToChangeScene, bool autoSaveGameOnSceneChangeEnabled)",
+    "line": 721
+   },
+   {
+    "sig": "saveCurrentGame(int saveSlotIndex, bool useCustomSaveTransform, bool isCheckpointSave, int checkpointID, int checkpointSceneID, bool savingGameToChangeScene, bool showSaveSlot, bool saveGameInfoActive)",
+    "line": 788
+   },
+   {
+    "sig": "saveCustomInfoList(string listName)",
+    "line": 986
+   },
+   {
+    "sig": "saveGameInfoFromEditor(int saveNumberToLoad, string infoTypeName, string extraFileString)",
+    "line": 1027
+   },
+   {
+    "sig": "saveGameOnCheckpointSlot()",
+    "line": 1045
+   },
+   {
+    "sig": "saveGameWhenReturningHomeMenu()",
+    "line": 1050
+   },
+   {
+    "sig": "getSaveInfoList()",
+    "line": 1059
+   },
+   {
+    "sig": "checkGameInfoToLoad(int lastSaveNumber, string currentSaveDataPath, string extraFileString)",
+    "line": 1064
+   },
+   {
+    "sig": "deleteGameInfo(int saveNumberToDelete, string currentSaveDataPath, string extraFileString)",
+    "line": 1159
+   },
+   {
+    "sig": "checkComponentsToInitialize()",
+    "line": 1182
+   },
+   {
+    "sig": "checkSaveInfoListToLoadOnStartOnAllScenes()",
+    "line": 1197
+   },
+   {
+    "sig": "updateSaveSlotContent(int saveSlotIndex, saveStationInfo newSave)",
+    "line": 1232
+   },
+   {
+    "sig": "reloadLastCheckpoint()",
+    "line": 1266
+   },
+   {
+    "sig": "activateAutoLoad()",
+    "line": 1292
+   },
+   {
+    "sig": "loadGameBySlotIndex(int slotIndexToLoad)",
+    "line": 1318
+   },
+   {
+    "sig": "loadGame()",
+    "line": 1333
+   },
+   {
+    "sig": "deleteAllGames()",
+    "line": 1368
+   },
+   {
+    "sig": "deleteGame()",
+    "line": 1396
+   },
+   {
+    "sig": "changeButtonsColor(bool state, bool save, bool load, bool delete)",
+    "line": 1462
+   },
+   {
+    "sig": "loadStates()",
+    "line": 1493
+   },
+   {
+    "sig": "setPhotoCapturerState(bool state)",
+    "line": 1603
+   },
+   {
+    "sig": "loadFile()",
+    "line": 1619
+   },
+   {
+    "sig": "isThereSaveSlotsLoaded()",
+    "line": 1646
+   },
+   {
+    "sig": "setStationIde(int idValue)",
+    "line": 1663
+   },
+   {
+    "sig": "showSaveList(List<saveStationInfo> saveList)",
+    "line": 1668
+   },
+   {
+    "sig": "showSaveSlotInfo(saveStationInfo saveSlot, int saveIndex)",
+    "line": 1681
+   },
+   {
+    "sig": "getPlayerComponents()",
+    "line": 1696
+   },
+   {
+    "sig": "resetScroll(Scrollbar scrollBarToReset)",
+    "line": 1709
+   },
+   {
+    "sig": "getLastSaveSlotIndex()",
+    "line": 1724
+   }
+  ]
+ },
+ {
+  "type": "elementOnScene",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Save System\\Elements On Scene\\elementOnScene.cs",
+  "methods": [
+   {
+    "sig": "setElementScene(int newValue)",
+    "line": 89
+   },
+   {
+    "sig": "setElementID(int newValue)",
+    "line": 94
+   },
+   {
+    "sig": "setNewPositionValues(Vector3 newValue)",
+    "line": 99
+   },
+   {
+    "sig": "setNewRotationValues(Vector3 newValue)",
+    "line": 104
+   },
+   {
+    "sig": "setUseEventOnObjectActiveState(bool state)",
+    "line": 109
+   },
+   {
+    "sig": "setUseEventOnObjectInactive(bool state)",
+    "line": 114
+   },
+   {
+    "sig": "setElementActiveState(bool state)",
+    "line": 119
+   },
+   {
+    "sig": "setElementPrefabIDValue(int newValue)",
+    "line": 131
+   },
+   {
+    "sig": "setNewInstantiatedElementOnSceneManagerIngame()",
+    "line": 136
+   },
+   {
+    "sig": "setElementActiveStateToMainElementOnSceneManager(bool state)",
+    "line": 153
+   },
+   {
+    "sig": "setNewInstantiatedElementOnSceneManagerIngameWithInfo()",
+    "line": 176
+   },
+   {
+    "sig": "addNewElementOnSceneManager()",
+    "line": 187
+   },
+   {
+    "sig": "checkStateOnLoad()",
+    "line": 203
+   },
+   {
+    "sig": "activateStateOnLoadWithDelay()",
+    "line": 233
+   },
+   {
+    "sig": "activateStateOnLoad()",
+    "line": 247
+   },
+   {
+    "sig": "getElementPosition()",
+    "line": 278
+   },
+   {
+    "sig": "getElementRotation()",
+    "line": 287
+   },
+   {
+    "sig": "isSaveElementEnabled()",
+    "line": 296
+   },
+   {
+    "sig": "setSaveElementEnabledState(bool state)",
+    "line": 301
+   },
+   {
+    "sig": "setObjectOriginallyOnSceneState(bool state)",
+    "line": 306
+   },
+   {
+    "sig": "setStatsSearchingByInfo(int currentElementScene, int currentElementID)",
+    "line": 313
+   },
+   {
+    "sig": "checkStatsStateOnLoad()",
+    "line": 324
+   },
+   {
+    "sig": "setStatsOnLoadWithDelay()",
+    "line": 339
+   },
+   {
+    "sig": "setStatsOnLoad()",
+    "line": 353
+   },
+   {
+    "sig": "setCurrentStatNameToSave(string newValue)",
+    "line": 379
+   },
+   {
+    "sig": "setCurrentFloatValueToSave(float newValue)",
+    "line": 384
+   },
+   {
+    "sig": "setCurrentBoolValueToSave(bool newValue)",
+    "line": 401
+   },
+   {
+    "sig": "checkEventOnStatsSave()",
+    "line": 418
+   },
+   {
+    "sig": "setUseElementPrefabIDState(bool state)",
+    "line": 437
+   },
+   {
+    "sig": "addSingleElementOnSceneToManager()",
+    "line": 445
+   }
+  ]
+ },
+ {
+  "type": "elementOnSceneManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Save System\\Elements On Scene\\elementOnSceneManager.cs",
+  "methods": [
+   {
+    "sig": "getComponentInstance()",
+    "line": 87
+   },
+   {
+    "sig": "initializeValues()",
+    "line": 116
+   },
+   {
+    "sig": "checkForInstantiatedElementsOnSceneOnSave()",
+    "line": 121
+   },
+   {
+    "sig": "setNewInstantiatedElementOnSceneManagerIngame(elementOnScene newElementOnScene)",
+    "line": 173
+   },
+   {
+    "sig": "setNewInstantiatedElementOnSceneManagerIngameWithInfo(elementOnScene newElementOnScene)",
+    "line": 192
+   },
+   {
+    "sig": "setTemporalElementActiveState(int elementID, int elementScene, bool elementActiveState)",
+    "line": 221
+   },
+   {
+    "sig": "removeElementFromSceneList(elementOnScene newElementOnScene)",
+    "line": 234
+   },
+   {
+    "sig": "getElementOnSceneInfo(int elementID, int elementScene)",
+    "line": 241
+   },
+   {
+    "sig": "addNewElementOnScene(elementOnScene newElementOnScene)",
+    "line": 265
+   },
+   {
+    "sig": "getAllElementsOnSceneOnLevel()",
+    "line": 280
+   },
+   {
+    "sig": "setStatsSearchingByInfo(int currentElementScene, int currentElementID, elementOnScene currentElementOnScene)",
+    "line": 306
+   },
+   {
+    "sig": "isSaveCurrentPlayerElementsOnSceneToSaveFile()",
+    "line": 316
+   },
+   {
+    "sig": "setSaveCurrentPlayerElementsOnSceneToSaveFileState(bool state)",
+    "line": 321
+   },
+   {
+    "sig": "getAllElementsOnSceneOnLevelAndAssignInfoToAllElements()",
+    "line": 327
+   },
+   {
+    "sig": "setEnableStateOnAllElementsOnScene(bool state)",
+    "line": 356
+   },
+   {
+    "sig": "setIDOnElementsOnScenePrefabs()",
+    "line": 375
+   },
+   {
+    "sig": "setIDOnElementsOnScenePrefabsLocatedOnScene()",
+    "line": 404
+   },
+   {
+    "sig": "getAllElementsOnSceneOnLevelByEditor()",
+    "line": 438
+   },
+   {
+    "sig": "clearElementsOnSceneList()",
+    "line": 446
+   },
+   {
+    "sig": "addSingleElementOnSceneToManager(elementOnScene newElementOnScene)",
+    "line": 458
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 479
+   }
+  ]
+ },
+ {
+  "type": "elementOnSceneHelper",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Save System\\Elements On Scene\\elementOnSceneHelper.cs",
+  "methods": [
+   {
+    "sig": "setElementActiveStateToMainElementOnSceneManager(bool state)",
+    "line": 15
+   },
+   {
+    "sig": "setNewInstantiatedElementOnSceneManagerIngameWithInfo()",
+    "line": 26
+   },
+   {
+    "sig": "setElementActiveState(bool state)",
+    "line": 37
+   },
+   {
+    "sig": "getElementScene()",
+    "line": 48
+   },
+   {
+    "sig": "getElementID()",
+    "line": 57
+   },
+   {
+    "sig": "setStatsSearchingByInfo(int currentElementScene, int currentElementID)",
+    "line": 66
+   }
+  ]
+ },
+ {
+  "type": "saveGameInfoHelper",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Save System\\saveGameInfoHelper.cs",
+  "methods": [
+   {
+    "sig": "checkIfGameCanContinue()",
+    "line": 40
+   },
+   {
+    "sig": "storeSaveNumberOnPlayerPrefs(int newValue)",
+    "line": 53
+   },
+   {
+    "sig": "removeSaveNumberOnPlayerPrefs()",
+    "line": 62
+   }
+  ]
+ },
+ {
+  "type": "saveGameInfo",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Save System\\Custom Class To Save\\saveGameInfo.cs",
+  "methods": [
+   {
+    "sig": "saveGame(int saveNumber, int playerID, string currentSaveDataPath, bool showDebugInfo, bool savingGameToChangeScene)",
+    "line": 28
+   },
+   {
+    "sig": "loadGame(int saveNumberToLoad, int playerID, string currentSaveDataPath, bool showDebugInfo)",
+    "line": 33
+   },
+   {
+    "sig": "saveGameFromEditor(int saveNumber, int playerID, string currentSaveDataPath, bool showDebugInfo)",
+    "line": 38
+   },
+   {
+    "sig": "initializeValuesOnComponent()",
+    "line": 43
+   },
+   {
+    "sig": "deleteGameInfo(int saveNumberToDelete, int playerID, string currentSaveDataPath, bool showDebugInfo)",
+    "line": 48
+   },
+   {
+    "sig": "copyGameInfo(int saveNumberToStoreDuplicate, int saveNumberToDuplicate, int playerID, string currentSaveDataPath, bool copyAllInfoWithoutChecks, bool showDebugInfo)",
+    "line": 53
+   },
+   {
+    "sig": "showSaveInfoDebug(int saveNumberToShow, int playerID, string currentSaveDataPath, bool showAllGameInfoDebug, bool showDebugInfo)",
+    "line": 59
+   },
+   {
+    "sig": "checkSaveInfoToLoadOnStartOnAllScenes(int saveNumberToLoad, int playerID, string currentSaveDataPath, bool showDebugInfo)",
+    "line": 65
+   }
+  ]
+ }
+]

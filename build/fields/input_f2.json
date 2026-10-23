@@ -1,0 +1,994 @@
+[
+ {
+  "type": "IKDrivingSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\IKDrivingSystem.cs",
+  "source": "Vehicles/IKDrivingSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "vehicle",
+    "label": "",
+    "section": "Driver Settings"
+   },
+   {
+    "field": "vehicelCameraGameObject",
+    "label": "",
+    "section": "Driver Settings"
+   },
+   {
+    "field": "useCustomVehicleGameObject",
+    "label": "",
+    "section": "Driver Settings"
+   },
+   {
+    "field": "customVehicleGameObject",
+    "label": "",
+    "section": "Driver Settings"
+   },
+   {
+    "field": "playerIsAlwaysDriver",
+    "label": "",
+    "section": "Driver Settings"
+   },
+   {
+    "field": "hidePlayerFromNPCs",
+    "label": "Hide Player From NPCs",
+    "section": "Driver Settings"
+   },
+   {
+    "field": "playerVisibleInVehicle",
+    "label": "",
+    "section": "Driver Settings"
+   },
+   {
+    "field": "hidePlayerWeaponsWhileDriving",
+    "label": "",
+    "section": "Driver Settings"
+   },
+   {
+    "field": "canBeDrivenRemotely",
+    "label": "",
+    "section": "Driver Settings"
+   },
+   {
+    "field": "resetAnimatorDrivingStateID",
+    "label": "",
+    "section": "Driver Settings"
+   },
+   {
+    "field": "ignoreObstacleCheckOnGetOffEnabled",
+    "label": "",
+    "section": "Driver Settings"
+   },
+   {
+    "field": "vehicleCanBeStolen",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "checkIfStealerSelectingDriverSeat",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "useRemoteEventsOnPreviuosDriverOnSteal",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "forcePassengersToGetOffOnExternalDestroy",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "drawFireWeaponIfCarryingPreviously",
+    "label": "",
+    "section": "Passengers Weapons Settings"
+   },
+   {
+    "field": "drawMeleeWeaponIfCarryingPreviously",
+    "label": "",
+    "section": "Passengers Weapons Settings"
+   },
+   {
+    "field": "resetCameraRotationWhenGetOn",
+    "label": "",
+    "section": "Camera Settings"
+   },
+   {
+    "field": "resetCameraRotationWhenGetOff",
+    "label": "",
+    "section": "Camera Settings"
+   },
+   {
+    "field": "setPlayerCameraStateOnGetOff",
+    "label": "",
+    "section": "Camera Settings"
+   },
+   {
+    "field": "setPlayerCameraStateOnFirstPersonOnGetOff",
+    "label": "",
+    "section": "Camera Settings"
+   },
+   {
+    "field": "playerCameraStateOnGetOff",
+    "label": "",
+    "section": "Camera Settings"
+   },
+   {
+    "field": "setVehicleCameraStateOnGetOn",
+    "label": "",
+    "section": "Camera Settings"
+   },
+   {
+    "field": "setVehicleCameraStateOnFirstPersonOnGetOn",
+    "label": "",
+    "section": "Camera Settings"
+   },
+   {
+    "field": "vehicleCameraStateOnGetOn",
+    "label": "",
+    "section": "Camera Settings"
+   },
+   {
+    "field": "ejectPlayerWhenDestroyed",
+    "label": "",
+    "section": "Eject Settings"
+   },
+   {
+    "field": "ejectingPlayerForce",
+    "label": "",
+    "section": "Eject Settings"
+   },
+   {
+    "field": "activateFreeFloatingModeOnEject",
+    "label": "",
+    "section": "Eject Settings"
+   },
+   {
+    "field": "activateFreeFloatingModeOnEjectDelay",
+    "label": "",
+    "section": "Eject Settings"
+   },
+   {
+    "field": "useExplosionForceWhenDestroyed",
+    "label": "",
+    "section": "Explosion Settings"
+   },
+   {
+    "field": "explosionRadius",
+    "label": "",
+    "section": "Explosion Settings"
+   },
+   {
+    "field": "explosionForce",
+    "label": "",
+    "section": "Explosion Settings"
+   },
+   {
+    "field": "explosionDamage",
+    "label": "",
+    "section": "Explosion Settings"
+   },
+   {
+    "field": "ignoreShield",
+    "label": "",
+    "section": "Explosion Settings"
+   },
+   {
+    "field": "damageTypeID",
+    "label": "",
+    "section": "Explosion Settings"
+   },
+   {
+    "field": "damageCanBeBlocked",
+    "label": "",
+    "section": "Explosion Settings"
+   },
+   {
+    "field": "searchClosestWeakSpot",
+    "label": "",
+    "section": "Explosion Settings"
+   },
+   {
+    "field": "useRemoteEventOnObjectsFound",
+    "label": "",
+    "section": "Explosion Settings"
+   },
+   {
+    "field": "removeEventName",
+    "label": "",
+    "section": "Explosion Settings"
+   },
+   {
+    "field": "pushCharactersOnExplosion",
+    "label": "",
+    "section": "Explosion Settings"
+   },
+   {
+    "field": "applyExplosionForceToVehicles",
+    "label": "",
+    "section": "Explosion Settings"
+   },
+   {
+    "field": "explosionForceToVehiclesMultiplier",
+    "label": "",
+    "section": "Explosion Settings"
+   },
+   {
+    "field": "killObjectsInRadius",
+    "label": "",
+    "section": "Explosion Settings"
+   },
+   {
+    "field": "forceMode",
+    "label": "",
+    "section": "Explosion Settings"
+   },
+   {
+    "field": "useLayerMask",
+    "label": "",
+    "section": "Explosion Settings"
+   },
+   {
+    "field": "layer",
+    "label": "",
+    "section": "Explosion Settings"
+   },
+   {
+    "field": "addCollisionForceDirectionToPassengers",
+    "label": "",
+    "section": "Shake Passengers Body Settings"
+   },
+   {
+    "field": "extraCollisionForceAmount",
+    "label": "",
+    "section": "Shake Passengers Body Settings"
+   },
+   {
+    "field": "useMinCollisionForce",
+    "label": "",
+    "section": "Shake Passengers Body Settings"
+   },
+   {
+    "field": "minCollisionForce",
+    "label": "",
+    "section": "Shake Passengers Body Settings"
+   },
+   {
+    "field": "debugCollisionForce",
+    "label": "",
+    "section": "Debug Settings"
+   },
+   {
+    "field": "addAngularDirectionToPassengers",
+    "label": "",
+    "section": "Debug Settings"
+   },
+   {
+    "field": "vehicleStabilitySpeed",
+    "label": "",
+    "section": "Debug Settings"
+   },
+   {
+    "field": "extraAngularDirectioAmount",
+    "label": "",
+    "section": "Debug Settings"
+   },
+   {
+    "field": "startGameInThisVehicle",
+    "label": "",
+    "section": "Start Game In Vehicle Settings"
+   },
+   {
+    "field": "playerForVehicle",
+    "label": "",
+    "section": "Start Game In Vehicle Settings"
+   },
+   {
+    "field": "activateActionScreen",
+    "label": "",
+    "section": "Action Screen Settings"
+   },
+   {
+    "field": "actionScreenName",
+    "label": "",
+    "section": "Action Screen Settings"
+   },
+   {
+    "field": "useEventOnDriverGetOn",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "eventOnDriverGetOn",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "useEventOnDriverGetOff",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "eventOnDriverGetOff",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "sendPlayersEnterExitTriggerToEvent",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "eventToSendPlayersEnterTriggerToEvent",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "eventToSendPlayersExitTriggerToEvent",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "useRemoteEventsOnPassengers",
+    "label": "",
+    "section": "Remote Event Settings"
+   },
+   {
+    "field": "actionManager",
+    "label": "",
+    "section": "Vehicle Elements"
+   },
+   {
+    "field": "vehicleCameraManager",
+    "label": "",
+    "section": "Vehicle Elements"
+   },
+   {
+    "field": "HUDManager",
+    "label": "",
+    "section": "Vehicle Elements"
+   },
+   {
+    "field": "currentVehicleWeaponSystem",
+    "label": "",
+    "section": "Vehicle Elements"
+   },
+   {
+    "field": "vehicleGravityManager",
+    "label": "",
+    "section": "Vehicle Elements"
+   },
+   {
+    "field": "mainCollider",
+    "label": "",
+    "section": "Vehicle Elements"
+   },
+   {
+    "field": "showGizmo",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoLabelColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoRadius",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "useHandleForVertex",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "handleRadius",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "handleGizmoColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "usePositionHandle",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "showDebugPrint",
+    "label": "",
+    "section": "Gizmo Settings"
+   }
+  ]
+ },
+ {
+  "type": "IKWeaponSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\IKWeaponSystem.cs",
+  "source": "Weapons/IKWeaponSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "weaponGameObject",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "extraRotation",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "aimFovValue",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "aimFovSpeed",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "weaponEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "hideWeaponIfKeptInThirdPerson",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "canBeDropped",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "setNewAnimatorWeaponID",
+    "label": "",
+    "section": "New Animator Weapon ID Settings"
+   },
+   {
+    "field": "newAnimatorWeaponID",
+    "label": "",
+    "section": "New Animator Weapon ID Settings"
+   },
+   {
+    "field": "setNewAnimatorDualWeaponID",
+    "label": "",
+    "section": "New Animator Weapon ID Settings"
+   },
+   {
+    "field": "newAnimatorDualWeaponID",
+    "label": "",
+    "section": "New Animator Weapon ID Settings"
+   },
+   {
+    "field": "setUpperBodyBendingMultiplier",
+    "label": "",
+    "section": "New Animator Weapon ID Settings"
+   },
+   {
+    "field": "horizontalBendingMultiplier",
+    "label": "",
+    "section": "New Animator Weapon ID Settings"
+   },
+   {
+    "field": "verticalBendingMultiplier",
+    "label": "",
+    "section": "New Animator Weapon ID Settings"
+   },
+   {
+    "field": "followFullRotationPointDirection",
+    "label": "",
+    "section": "New Animator Weapon ID Settings"
+   },
+   {
+    "field": "followFullRotationClampX",
+    "label": "",
+    "section": "New Animator Weapon ID Settings"
+   },
+   {
+    "field": "followFullRotationClampY",
+    "label": "",
+    "section": "New Animator Weapon ID Settings"
+   },
+   {
+    "field": "followFullRotationClampZ",
+    "label": "",
+    "section": "New Animator Weapon ID Settings"
+   },
+   {
+    "field": "setNewAnimatorCrouchID",
+    "label": "",
+    "section": "New Animator Weapon ID Settings"
+   },
+   {
+    "field": "newAnimatorCrouchID",
+    "label": "",
+    "section": "New Animator Weapon ID Settings"
+   },
+   {
+    "field": "ignoreCrouchWhileWeaponActive",
+    "label": "",
+    "section": "New Animator Weapon ID Settings"
+   },
+   {
+    "field": "pivotPointRotationActive",
+    "label": "",
+    "section": "New Animator Weapon ID Settings"
+   },
+   {
+    "field": "useNewMaxAngleDifference",
+    "label": "",
+    "section": "New Animator Weapon ID Settings"
+   },
+   {
+    "field": "horizontalMaxAngleDifference",
+    "label": "",
+    "section": "New Animator Weapon ID Settings"
+   },
+   {
+    "field": "verticalMaxAngleDifference",
+    "label": "",
+    "section": "New Animator Weapon ID Settings"
+   },
+   {
+    "field": "canUnlockCursor",
+    "label": "Can Unlock Cursor On First Person",
+    "section": "Unlock Cursor Settings"
+   },
+   {
+    "field": "canUnlockCursorOnThirdPerson",
+    "label": "",
+    "section": "Unlock Cursor Settings"
+   },
+   {
+    "field": "disableHUDWhenCursorUnlocked",
+    "label": "",
+    "section": "Unlock Cursor Settings"
+   },
+   {
+    "field": "weaponSystemManager",
+    "label": "",
+    "section": "Weapon Components"
+   },
+   {
+    "field": "weaponsManager",
+    "label": "",
+    "section": "Weapon Components"
+   },
+   {
+    "field": "weaponTransform",
+    "label": "",
+    "section": "Weapon Components"
+   },
+   {
+    "field": "rightHandMountPoint",
+    "label": "",
+    "section": "Weapon Components"
+   },
+   {
+    "field": "leftHandMountPoint",
+    "label": "",
+    "section": "Weapon Components"
+   },
+   {
+    "field": "useWeaponAnimatorFirstPerson",
+    "label": "",
+    "section": "First Person Animator Settings"
+   },
+   {
+    "field": "mainWeaponAnimatorSystem",
+    "label": "",
+    "section": "First Person Animator Settings"
+   },
+   {
+    "field": "layer",
+    "label": "",
+    "section": "Weapon Surface Collision Settings"
+   },
+   {
+    "field": "extraColliderCenterOnFireWeaponOnFBA",
+    "label": "",
+    "section": "Weapon Surface Collision Settings"
+   },
+   {
+    "field": "extraColliderScaleOnFireWeaponOnFBA",
+    "label": "",
+    "section": "Weapon Surface Collision Settings"
+   },
+   {
+    "field": "mainWeaponAttachmentSystem",
+    "label": "",
+    "section": "Weapon Attachment Components"
+   },
+   {
+    "field": "ignoreUseAttachmentSystem",
+    "label": "",
+    "section": "Weapon Attachment Components"
+   },
+   {
+    "field": "thirdPersonUseSwayInfo",
+    "label": "",
+    "section": "Third Person Weapon Settings"
+   },
+   {
+    "field": "firstPersonUseSwayInfo",
+    "label": "",
+    "section": "First Person Weapon Settings"
+   },
+   {
+    "field": "useWeaponIdle",
+    "label": "",
+    "section": "First Person Weapon Idle Settings"
+   },
+   {
+    "field": "timeToActiveWeaponIdle",
+    "label": "",
+    "section": "First Person Weapon Idle Settings"
+   },
+   {
+    "field": "idlePositionAmount",
+    "label": "",
+    "section": "First Person Weapon Idle Settings"
+   },
+   {
+    "field": "idleRotationAmount",
+    "label": "",
+    "section": "First Person Weapon Idle Settings"
+   },
+   {
+    "field": "idleSpeed",
+    "label": "",
+    "section": "First Person Weapon Idle Settings"
+   },
+   {
+    "field": "playerMoving",
+    "label": "",
+    "section": "Weapon State"
+   },
+   {
+    "field": "idleActive",
+    "label": "",
+    "section": "Weapon State"
+   },
+   {
+    "field": "showFBAGizmo",
+    "label": "",
+    "section": "Full Body Awareness Settings"
+   },
+   {
+    "field": "showFBAWalkGizmo",
+    "label": "",
+    "section": "Full Body Awareness Settings"
+   },
+   {
+    "field": "showFBAAimGizmo",
+    "label": "",
+    "section": "Full Body Awareness Settings"
+   },
+   {
+    "field": "showFBACrouchGizmo",
+    "label": "",
+    "section": "Full Body Awareness Settings"
+   },
+   {
+    "field": "showFBAJumpGizmo",
+    "label": "",
+    "section": "Full Body Awareness Settings"
+   },
+   {
+    "field": "showFBARunGizmo",
+    "label": "",
+    "section": "Full Body Awareness Settings"
+   },
+   {
+    "field": "showFBAObstacleGizmo",
+    "label": "",
+    "section": "Full Body Awareness Settings"
+   },
+   {
+    "field": "sameValueBothViews",
+    "label": "",
+    "section": "Shot Shake Settings"
+   },
+   {
+    "field": "useShotShakeInThirdPerson",
+    "label": "",
+    "section": "Shot Shake Settings"
+   },
+   {
+    "field": "useShotShakeInFirstPerson",
+    "label": "",
+    "section": "Shot Shake Settings"
+   },
+   {
+    "field": "useShotCameraNoise",
+    "label": "",
+    "section": "Shot Camera Noise Settings"
+   },
+   {
+    "field": "useShotCameraNoiseDuration",
+    "label": "",
+    "section": "Shot Camera Noise Settings"
+   },
+   {
+    "field": "shotCameraNoiseDuration",
+    "label": "",
+    "section": "Shot Camera Noise Settings"
+   },
+   {
+    "field": "showThirdPersonGizmo",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "showFirstPersonGizmo",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "gizmoLabelColor",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "showPositionGizmo",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "showMainWeaponPositionsGizmo",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "showCollisionDetectionGizmo",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "showEditAttachmentGizmo",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "showHandsWaypointGizmo",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "showWeaponWaypointGizmo",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "thirdPersonUseHandle",
+    "label": "",
+    "section": "Handle Options"
+   },
+   {
+    "field": "thirdPersonHandleRadius",
+    "label": "",
+    "section": "Handle Options"
+   },
+   {
+    "field": "thirdPersonHandleGizmoColor",
+    "label": "",
+    "section": "Handle Options"
+   },
+   {
+    "field": "thirdPersonUsePositionHandle",
+    "label": "",
+    "section": "Handle Options"
+   },
+   {
+    "field": "firstPersonUseHandle",
+    "label": "",
+    "section": "Handle Options"
+   },
+   {
+    "field": "firstPersonHandleRadius",
+    "label": "",
+    "section": "Handle Options"
+   },
+   {
+    "field": "firstPersonHandleGizmoColor",
+    "label": "",
+    "section": "Handle Options"
+   },
+   {
+    "field": "firstPersonUsePositionHandle",
+    "label": "",
+    "section": "Handle Options"
+   },
+   {
+    "field": "relativePathWeaponsPickups",
+    "label": "",
+    "section": "Weapon Pickup Prefab (No Inventory) Settings"
+   },
+   {
+    "field": "emtpyWeaponPrefab",
+    "label": "",
+    "section": "Weapon Pickup Prefab (No Inventory) Settings"
+   },
+   {
+    "field": "weaponPrefabModel",
+    "label": "Weapon Pickup (No Inventory)",
+    "section": "Weapon Pickup Prefab (No Inventory) Settings"
+   },
+   {
+    "field": "inventoryWeaponPrefabObject",
+    "label": "Weapon Pickup (Inventory)",
+    "section": "Weapon Pickup Prefab (Inventory) Settings"
+   },
+   {
+    "field": "relativePathWeaponsMesh",
+    "label": "",
+    "section": "Create Inventory Weapon And Ammo Prefabs Settings"
+   },
+   {
+    "field": "relativePathWeaponsAmmoMesh",
+    "label": "",
+    "section": "Create Inventory Weapon And Ammo Prefabs Settings"
+   },
+   {
+    "field": "inventoryWeaponCategoryName",
+    "label": "",
+    "section": "Create Inventory Weapon And Ammo Prefabs Settings"
+   },
+   {
+    "field": "weaponName",
+    "label": "",
+    "section": "Create Inventory Weapon And Ammo Prefabs Settings"
+   },
+   {
+    "field": "inventoryAmmoCategoryName",
+    "label": "",
+    "section": "Create Inventory Weapon And Ammo Prefabs Settings"
+   },
+   {
+    "field": "ammoAmountPerPickup",
+    "label": "",
+    "section": "Create Inventory Weapon And Ammo Prefabs Settings"
+   },
+   {
+    "field": "weaponAmmoMesh",
+    "label": "",
+    "section": "Create Inventory Weapon And Ammo Prefabs Settings"
+   },
+   {
+    "field": "weaponAmmoIconTexture",
+    "label": "",
+    "section": "Create Inventory Weapon And Ammo Prefabs Settings"
+   },
+   {
+    "field": "useLowerRotationSpeedAimedThirdPerson",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "verticalRotationSpeedAimedInThirdPerson",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "horizontalRotationSpeedAimedInThirdPerson",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "canAimInFirstPerson",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useLowerRotationSpeedAimed",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "verticalRotationSpeedAimedInFirstPerson",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "horizontalRotationSpeedAimedInFirstPerson",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "firstPersonArms",
+    "label": "",
+    "section": "First Person Arms Settings"
+   },
+   {
+    "field": "disableOnlyFirstPersonArmsMesh",
+    "label": "",
+    "section": "First Person Arms Settings"
+   },
+   {
+    "field": "firstPersonArmsMesh",
+    "label": "",
+    "section": "First Person Arms Settings"
+   },
+   {
+    "field": "headLookWhenAiming",
+    "label": "",
+    "section": "Head Look Settings"
+   },
+   {
+    "field": "headLookSpeed",
+    "label": "",
+    "section": "Head Look Settings"
+   },
+   {
+    "field": "headLookTarget",
+    "label": "",
+    "section": "Head Look Settings"
+   }
+  ]
+ },
+ {
+  "type": "WaypointCircuit",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\AI\\WaypointCircuit.cs",
+  "source": "Vehicles/AI/WaypointCircuit.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "smoothRoute",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "editorVisualisationSubsteps",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "showGizmo",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "gizmoLabelColor",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "gizmoRadius",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "useHandleForVertex",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "handleRadius",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "handleGizmoColor",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "showVertexHandles",
+    "label": "",
+    "section": "Gizmo Options"
+   }
+  ]
+ }
+]

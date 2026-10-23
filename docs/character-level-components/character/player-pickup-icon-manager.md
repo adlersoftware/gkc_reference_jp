@@ -1,0 +1,1 @@
+# Player Pickup Icon Manager

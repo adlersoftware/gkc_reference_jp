@@ -1,0 +1,64 @@
+[
+  {
+    "type": "playerInfoPanelOnScreenSystem",
+    "summary": "プレイヤーごとに画面上の情報パネルを管理し、対象オブジェクトに追従させてテキストや画像を表示する。画面座標変換・フェード・距離による自動解除も行う。",
+    "methods": {
+      "stopUpdateCoroutine()": "実行中の`updateCoroutine`があれば停止するだけで、表示状態は変えない。",
+      "calculatePanelPosition()": "追従対象の位置に`panelOffset`を加えて画面座標へ変換し、`targetOnScreen`判定と距離超過時の解除を行う。",
+      "getNewPanelInfo(infoPanelOnScreenSystem newInfoPanelOnScreenSystem)": "パネル設定を受け取り、テキスト・画像・位置を更新して表示し、更新コルーチンを開始する。",
+      "disablePanelInfo(Transform newObjectToFollow)": "指定対象を追従リストから外し、残りが無ければフェードアウトか非表示にして更新を止める。",
+      "enableOrDisablePanel(bool state)": "パネルのGameObjectのactive状態を`state`に合わせるだけ。",
+      "fadePanel(infoPanel newInfoPanel, bool fadingPanel)": "既存のフェードを停止し、`fadingPanel`がtrueならフェードアウト、falseならフェードインを開始する。"
+    }
+  },
+  {
+    "type": "infoPanelOnScreenSystem",
+    "summary": "トリガーに入ったプレイヤーへ表示する情報パネルの設定を持つコンポーネント。パネル名・テキスト・画像・位置を定義し、プレイヤー側の表示システムへ渡す。",
+    "methods": {
+      "checkTriggerInfo(Collider col, bool isEnter)": "トリガーの出入りでタグとレイヤーが一致すればプレイヤーリストを更新し、パネル表示を有効/無効にする。",
+      "disablePanelText()": "見つかっている全プレイヤーのパネルを閉じ、`infoPanelEnabled`をfalseにしてGameObjectを無効化する。",
+      "enableOrdisablePanelInfoFromPlayer(GameObject playerToCheck, bool enablePanel)": "プレイヤーの`playerComponentsManager`からパネル管理を取得し、`enablePanel`に応じて表示か追従解除を呼ぶ。",
+      "disablePanelInfoFromAllPlayersRemotely()": "リスト内の全プレイヤーにパネル非表示を要求する(遠隔操作用)。"
+    }
+  },
+  {
+    "type": "sliderInfoSystem",
+    "summary": "名前付きのUIスライダーを時間経過で増減させる管理コンポーネント。アクティブ中はコルーチンで値を加算または減算し続ける。",
+    "methods": {
+      "activateSliderByName(string sliderName)": "名前一致のスライダーを有効化し、最大値と初期値・増減方向を設定して更新コルーチンを開始する。",
+      "deactivateSliderByName(string sliderName)": "名前一致のスライダーGameObjectを非表示にし、コルーチンを止めて`sliderActive`をfalseにする。"
+    }
+  },
+  {
+    "type": "decalTypeInformation",
+    "summary": "オブジェクト表面のデカール(弾痕)種類を扱うコンポーネント。デカールマネージャへの参照取得、種類インデックスの保持、表面の有効状態を管理する。",
+    "methods": {
+      "getImpactListInfo()": "デカールマネージャの`impactListInfo`から名前配列`impactDecalList`を作り直し、コンポーネントを更新する。",
+      "checkGetDecalManager()": "`impactDecalManager`が未設定なら`Instance`・自動生成・`FindObjectOfType`の順に探して設定する。",
+      "getDecalImpactIndex()": "`decalSurfaceActive`なら`impactDecalIndex`を、falseなら-1を返す。",
+      "setNewDecalType(string decalName)": "名前が`impactDecalList`にあれば`impactDecalName`と`impactDecalIndex`を更新し、無ければ何もしない。",
+      "isParentScorchOnThisObjectEnabled()": "`parentScorchOnThisObject`の値を返すだけ。",
+      "setDecalSurfaceActiveState(bool state)": "`decalSurfaceActive`を`state`に設定するだけ。",
+      "updateComponent()": "`GKC_Utils.updateComponent`で自身のインスペクタ表示を更新するだけ。"
+    }
+  },
+  {
+    "type": "decalManager",
+    "summary": "デカール(弾痕・焦げ跡)システムのシングルトン管理コンポーネント。表面別の`impactInfo`設定やフェード、デカールの親オブジェクトを保持する。",
+    "methods": {
+      "getComponentInstance()": "初期化済みなら何もせず、別インスタンスがあれば自身を破棄し、それ以外は静的`Instance`に登録する。",
+      "surfaceUseNoise(int surfaceIndex)": "範囲内の`surfaceIndex`なら該当`impactInfo`の`useNoise`を返し、範囲外はfalseを返す。"
+    }
+  },
+  {
+    "type": "GKC_PlayerPrefabSpawner",
+    "summary": "オンライン時にプレイヤープレハブの生成位置とメインプレイヤー状態を初期化するコンポーネント。非メインプレイヤーではカメラ・入力・HUDを無効化する。",
+    "methods": {
+      "setPositionToSpawn(Vector3 newValue)": "`spawnPosition`を`newValue`に設定するだけ。",
+      "setRotationToSpawn(Vector3 newValue)": "`spawnRotation`を`newValue`に設定するだけ。",
+      "checkPlayerPrefabSpawnOnAwake()": "起動時に各マネージャを取得し、プレイヤー数からメイン判定してカメラ・入力・HUD・マップ・イベントを初期化する。",
+      "checkPlayerPrefabSpawn()": "プレイヤーを`spawnPosition`と`spawnRotation`へ移動し、メインプレイヤーなら入力マネージャを初期化する。",
+      "setIsMainPlayerState(bool state)": "`isMainPlayer`を`state`に設定するだけ。"
+    }
+  }
+]

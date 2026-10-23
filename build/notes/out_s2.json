@@ -1,0 +1,133 @@
+[
+ {
+  "type": "saveDialogInfo",
+  "summary": "`dialogManager`の対話進行（`dialogContentSystem`ごとの現在インデックス）をスロット／プレイヤー別に保存し、ロード時に完了位置を復元する。",
+  "methods": {
+   "saveGameContent(int currentSaveNumber, int playerID, string currentSaveDataPath, bool showDebugInfo, bool savingGameToChangeScene)": "現在シーンの`dialogContentSystem`から対話ID・シーン・現在インデックスを集め、同一スロット・`playerID`の既存データを差し替えて`BinaryFormatter`で保存する。",
+   "loadGameContent(int saveNumberToLoad, int playerID, string currentSaveDataPath, bool showDebugInfo)": "保存ファイルから`playerID`の対話リストを読み、現在シーン分だけ`persistanceInfoList`に入れて`setCompleteDialogIndex`で進行を反映する。",
+   "getPersistanceList(int playerID, bool showDebugInfo)": "`mainDialogManager`の`dialogContentSystemList`を走査し、`dialogContentID`・`dialogContentScene`・`currentDialogIndex`を`persistancePlayerDialogContentInfo`に詰める。"
+  }
+ },
+ {
+  "type": "saveElementsOnSceneInfo",
+  "summary": "シーン上の`elementOnScene`のアクティブ状態・位置・回転・統計値・プレハブIDを保存し、ロード時に既存要素へ適用、必要ならプレハブから生成する。",
+  "methods": {
+   "saveGameContent(int currentSaveNumber, int playerID, string currentSaveDataPath, bool showDebugInfo, bool savingGameToChangeScene)": "`getPersistanceList`で要素状態を取得し、同一スロットの同シーン分を削除してから追加し直し、保存ファイルへ書き出す。",
+   "loadGameContent(int saveNumberToLoad, int playerID, string currentSaveDataPath, bool showDebugInfo)": "保存データから現在シーンの要素情報を`persistanceInfoList`へ抽出し、`loadInfoOnMainComponent`でシーン上の要素へ適用する。",
+   "getPersistanceList(int playerID, bool showDebugInfo)": "`elementOnSceneList`の保存対象を走査して状態・位置・回転・統計・`elementPrefabID`を写し、`temporalElementOnSceneInfoList`の状態も統合する。",
+   "setStatsSearchingByInfo(int currentElementScene, int currentElementID, elementOnScene currentElementOnScene)": "`elementScene`と`elementID`が一致する要素を一時保存リストから探し、統計値を設定して`setStatsOnLoad`を呼ぶ。"
+  }
+ },
+ {
+  "type": "saveInventoryBankInfo",
+  "summary": "インベントリバンクの在庫（名前・数量・カテゴリ／要素インデックス）を保存し、ロード時に`inventoryListElement`の新しいリストとして復元する。",
+  "methods": {
+   "saveGameContent(int currentSaveNumber, int playerID, string currentSaveDataPath, bool showDebugInfo, bool savingGameToChangeScene)": "`bankInventoryList`を`inventoryObjectList`へ変換し、同一`saveNumber`の先頭エントリを上書きして保存する。",
+   "loadGameContent(int saveNumberToLoad, int playerID, string currentSaveDataPath, bool showDebugInfo)": "保存された`inventoryObjectList`を`inventoryListElement`へ変換して`persistanceInfoList`を作り、バンクの在庫として適用する。",
+   "getPersistanceList(int playerID, bool showDebugInfo)": "`bankInventoryList`を走査し、`Name`・`amount`・`infiniteAmount`・`categoryIndex`・`elementIndex`を`persistanceInventoryObjectInfo`へ写す。",
+   "saveGameContentFromEditor(int currentSaveNumber, int playerID, string currentSaveDataPath, bool showDebugInfo)": "エディタ用に`getPersistanceVendorListElement`で`inventoryListManagerList`を取得し、`File.Create`で保存ファイルを上書きする。",
+   "getPersistanceVendorListElement(int playerID, bool showDebugInfo)": "`mainInventoryBankManager.inventoryListManagerList`を走査し、`inventoryObjectName`などを`persistanceInventoryObjectInfo`へ変換して返す。"
+  }
+ },
+ {
+  "type": "saveMeleeWeaponsInfo",
+  "summary": "拾得済み近接武器を`weaponPrefabIndex`と現在装備フラグで保存し、ロード時にプレハブから武器を再生成する。",
+  "methods": {
+   "saveGameContent(int currentSaveNumber, int playerID, string currentSaveDataPath, bool showDebugInfo, bool savingGameToChangeScene)": "`meleeWeaponGrabbedInfoList`の武器インデックスと装備状態を集め、同一スロット・`playerID`の`meleeList`を差し替えて保存する。",
+   "loadGameContent(int saveNumberToLoad, int playerID, string currentSaveDataPath, bool showDebugInfo)": "保存スロットから`playerID`の`meleeList`を`persistanceInfoList`へ読み込み、`loadInfoOnMainComponent`で武器を再生成して適用する。"
+  }
+ },
+ {
+  "type": "saveMissionsInfo",
+  "summary": "`objectiveLogSystem`のミッション進行（ID・シーン・受注／進行／完了状態・サブ目標・報酬文言）を保存し、ロード時にミッション状態を再構築する。",
+  "methods": {
+   "saveGameContent(int currentSaveNumber, int playerID, string currentSaveDataPath, bool showDebugInfo, bool savingGameToChangeScene)": "`getPersistanceList`でミッション状態を集め、同一`saveNumber`・`playerID`の`missionsList`を置き換えて`BinaryFormatter`で保存する。",
+   "loadGameContent(int saveNumberToLoad, int playerID, string currentSaveDataPath, bool showDebugInfo)": "保存スロットから`playerID`の`missionsList`を`persistanceInfoList`へ読み込み、`loadInfoOnMainComponent`でミッション状態を再構築する。",
+   "getPersistanceList(int playerID, bool showDebugInfo)": "`objectiveSlotInfoList`を走査し、`missionID`・`missionScene`・完了／進行フラグ・目標文言・`subObjectiveCompleteList`を写す。",
+   "debugMissionInfo(persistanceMissionInfo missinInfo)": "`persistanceMissionInfo`の主要フィールドを1行に連結して`print`するだけ。"
+  }
+ },
+ {
+  "type": "savePlayerBlendshapesInfo",
+  "summary": "プレイヤーのブレンドシェイプ値・アクセサリ・`characterModelID`を保存し、ロード時にキャラクターカスタマイズへ反映する。",
+  "methods": {
+   "saveGameContent(int currentSaveNumber, int playerID, string currentSaveDataPath, bool showDebugInfo, bool savingGameToChangeScene)": "`storeBlendshapesCustomization`で現在値を取り込み、`getPersistanceList`の結果をスロットへ格納して保存する。",
+   "loadGameContent(int saveNumberToLoad, int playerID, string currentSaveDataPath, bool showDebugInfo)": "保存スロットから`blendshapesList`・`accessoriesList`・`characterModelID`を読み、`loadInfoFound`を立てて`loadInfoOnMainComponent`へ渡す。",
+   "getPersistanceList(int playerID, bool showDebugInfo)": "`temporalBlendshapeInfoList`から`Name`と`blendShapeValue`を写し、`temporalCurrentAccessoriesList`と`characterModelID`も詰めて返す。"
+  }
+ },
+ {
+  "type": "savePlayerInventoryInfo",
+  "summary": "プレイヤーインベントリの全アイテム情報（数量・装備・耐久度・弾数）とスロット数・クラフト情報を保存し、ロード時に復元する。",
+  "methods": {
+   "saveGameContent(int currentSaveNumber, int playerID, string currentSaveDataPath, bool showDebugInfo, bool savingGameToChangeScene)": "`getPersistanceList`の結果で同一`saveNumber`・`playerID`のエントリを丸ごと置換し、`gameSavedOnHomeMenu`も記録して保存する。",
+   "loadGameContent(int saveNumberToLoad, int playerID, string currentSaveDataPath, bool showDebugInfo)": "保存データを`inventoryListElement`へ変換し、スロット数・ブループリント・クラフト情報も`mainInventoryManager`へ反映して復元する。",
+   "getPersistanceList(int playerID, bool showDebugInfo)": "数量が正のアイテムだけを写し、装備・耐久度・弾数に加えてスロット数・クラフト情報・最後に持った武器名も収集する。",
+   "saveGameContentFromEditor(int currentSaveNumber, int playerID, string currentSaveDataPath, bool showDebugInfo)": "エディタ用に`getPersistanceInventoryListElement`で現在の管理リストを取得し、`File.Create`で保存ファイルを上書きする。",
+   "getPersistanceInventoryListElement(int playerID, bool showDebugInfo)": "`getCurrentInventoryListManagerList`を走査し、`Name`・`amount`・`categoryIndex`・`elementIndex`だけを`persistanceInventoryObjectInfo`へ写す。"
+  }
+ },
+ {
+  "type": "savePlayerOptionsInfo",
+  "summary": "`playerOptionsEditorSystem`の各オプション現在値（スクロールバー／スライダー／トグル／ドロップダウン）を保存・復元する。",
+  "methods": {
+   "saveGameContent(int currentSaveNumber, int playerID, string currentSaveDataPath, bool showDebugInfo, bool savingGameToChangeScene)": "`getPersistanceList`で取得した`optionsList`を同一スロットへ上書きし、`saveInfoOnRegularTxtFile`ならテキストにも出力する。",
+   "loadGameContent(int saveNumberToLoad, int playerID, string currentSaveDataPath, bool showDebugInfo)": "保存スロットから`playerID`の`optionsList`を`persistanceInfoList`へ読み込み、`loadInfoOnMainComponent`で各オプションへ適用する。",
+   "getPersistanceList(int playerID, bool showDebugInfo)": "`optionInfoList`を走査し、`optionName`とスクロールバー／スライダー／トグル／ドロップダウンの現在値を写す。"
+  }
+ },
+ {
+  "type": "savePlayerWeaponsInfo",
+  "summary": "プレイヤー武器の有効状態・現在装備・残弾・アタッチメント構成を保存し、ロード時に各武器へ反映する。",
+  "methods": {
+   "saveGameContent(int currentSaveNumber, int playerID, string currentSaveDataPath, bool showDebugInfo, bool savingGameToChangeScene)": "`getPersistanceList`で武器リストを作り、同一`saveNumber`・`playerID`の`weaponList`を上書きして保存する。",
+   "loadGameContent(int saveNumberToLoad, int playerID, string currentSaveDataPath, bool showDebugInfo)": "保存スロットから`playerID`の`weaponList`を`persistanceInfoList`へ読み込み、`loadInfoOnMainComponent`で武器状態を復元する。",
+   "getPersistanceList(int playerID, bool showDebugInfo)": "`weaponsList`を走査し、武器名・`isWeaponEnabled`・`isCurrentWeapon`・残弾・アタッチメント情報を`persistanceWeaponInfo`へ写す。"
+  }
+ },
+ {
+  "type": "saveSkillsInfo",
+  "summary": "`playerSkillsSystem`のカテゴリ別スキル状態（解放・有効・完了・現在値・レベル）を保存し、ロード時に復元する。",
+  "methods": {
+   "saveGameContent(int currentSaveNumber, int playerID, string currentSaveDataPath, bool showDebugInfo, bool savingGameToChangeScene)": "`getPersistanceList`でカテゴリ別スキル状態を集め、同一`saveNumber`・`playerID`の`categorySkillsList`を置き換えて保存する。",
+   "loadGameContent(int saveNumberToLoad, int playerID, string currentSaveDataPath, bool showDebugInfo)": "保存スロットから`playerID`の`categorySkillsList`を`persistanceInfoList`へ読み込み、`loadInfoOnMainComponent`で各スキルへ反映する。",
+   "getPersistanceList(int playerID, bool showDebugInfo)": "`skillCategoryInfoList`を二重に走査し、各`skillInfo`の解放／有効／完了フラグ・`currentValue`・`currentSkillLevel`を写す。"
+  }
+ },
+ {
+  "type": "saveStatsInfo",
+  "summary": "`playerStatsSystem`の各ステータスの現在値とbool状態を保存し、ロード時に`ignoreStatInitializationOnLoadGame`を除いて復元する。",
+  "methods": {
+   "saveGameContent(int currentSaveNumber, int playerID, string currentSaveDataPath, bool showDebugInfo, bool savingGameToChangeScene)": "`getPersistanceList`の統計リストを同一スロット・`playerID`へ上書きし、`BinaryFormatter`で保存する。",
+   "loadGameContent(int saveNumberToLoad, int playerID, string currentSaveDataPath, bool showDebugInfo)": "保存スロットから`playerID`の`statsList`を`persistanceInfoList`へ読み込み、`loadInfoOnMainComponent`で現在値を復元する。",
+   "getPersistanceList(int playerID, bool showDebugInfo)": "`statInfoList`の`currentValue`と`currentBoolState`を写し、`extraCurrentValue`の分を差し引いて0以上へ`Clamp`する。"
+  }
+ },
+ {
+  "type": "saveTravelStationInfo",
+  "summary": "発見済みトラベルステーションの遷移先シーン番号と`levelManagerID`を保存し、ロード時に発見リストへ戻す。",
+  "methods": {
+   "saveGameContent(int currentSaveNumber, int playerID, string currentSaveDataPath, bool showDebugInfo, bool savingGameToChangeScene)": "`foundTravelStationInfoList`の遷移先シーン番号と`levelManagerID`を集め、同一スロット・`playerID`のリストを置換して保存する。",
+   "loadGameContent(int saveNumberToLoad, int playerID, string currentSaveDataPath, bool showDebugInfo)": "保存スロットから`playerID`の`travelStationList`を`persistanceInfoList`へ読み込み、`loadInfoOnMainComponent`で発見リストへ追加する。"
+  }
+ },
+ {
+  "type": "saveVendorInfo",
+  "summary": "ベンダー在庫の数量・価格・売値・購入最小レベル・スポーン設定を保存し、ロード時にベンダー在庫として復元する。",
+  "methods": {
+   "saveGameContent(int currentSaveNumber, int playerID, string currentSaveDataPath, bool showDebugInfo, bool savingGameToChangeScene)": "`vendorInventoryList`を変換して同一`saveNumber`の`playerInventoryList[0]`へ上書きし、在庫を保存する。",
+   "loadGameContent(int saveNumberToLoad, int playerID, string currentSaveDataPath, bool showDebugInfo)": "保存された`playerInventoryList[0]`を`inventoryListElement`へ変換し、`vendorPrice`・`sellPrice`なども含めて`persistanceInfoList`に詰める。",
+   "getPersistanceList(int playerID, bool showDebugInfo)": "`vendorInventoryList`を走査し、`vendorPrice`・`sellPrice`・`minLevelToBuy`・`spawnObject`などを`persistanceInventoryObjectInfo`へ写す。",
+   "saveGameContentFromEditor(int currentSaveNumber, int playerID, string currentSaveDataPath, bool showDebugInfo)": "エディタ用に`getPersistanceVendorListElement`の在庫を取得し、`File.Create`で保存ファイルを丸ごと上書きする。",
+   "getPersistanceVendorListElement(int playerID, bool showDebugInfo)": "`mainVendorSystem.inventoryListManagerList`を走査し、価格や購入条件を含む在庫情報を`persistanceInventoryObjectInfo`へ変換する。"
+  }
+ },
+ {
+  "type": "elementsOnSceneData",
+  "summary": "`elementsOnSceneInfo`のリストを保持するScriptableObjectで、プレハブIDとプレハブ名から要素プレハブを検索する。",
+  "methods": {
+   "getElementScenePrefabById(int prefabID)": "`prefabID`が-1以下なら`null`を返し、それ以外は二重走査で一致する`elementPrefab`を返す。",
+   "getElementScenePrefabIDByName(string prefabName)": "二重走査でプレハブ名が`prefabName`と一致または含まれるものを探し、その`elementPrefabID`を返す。"
+  }
+ }
+]

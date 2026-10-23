@@ -1,0 +1,392 @@
+[
+ {
+  "type": "vehicleHUDManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\vehicleHUDManager.cs",
+  "methods": [
+   {
+    "sig": "setVehicleParticleSystemList()",
+    "line": 2661
+   },
+   {
+    "sig": "setVehiclePartsInfoList()",
+    "line": 2675
+   },
+   {
+    "sig": "setCustomVehiclePartsListToDestroy()",
+    "line": 2693
+   },
+   {
+    "sig": "setVehicleInput()",
+    "line": 2708
+   },
+   {
+    "sig": "setVehicleWeaponsComponents()",
+    "line": 2717
+   },
+   {
+    "sig": "getVehicleComponents()",
+    "line": 2724
+   },
+   {
+    "sig": "getAllDamageReceivers()",
+    "line": 2735
+   },
+   {
+    "sig": "getMaxHealthAmount()",
+    "line": 2761
+   },
+   {
+    "sig": "getAuxHealthAmount()",
+    "line": 2766
+   },
+   {
+    "sig": "addAuxHealthAmount(float amount)",
+    "line": 2771
+   },
+   {
+    "sig": "getHealthAmountToLimit()",
+    "line": 2776
+   },
+   {
+    "sig": "getCurrentEnergyAmount()",
+    "line": 2782
+   },
+   {
+    "sig": "getMaxEnergyAmount()",
+    "line": 2787
+   },
+   {
+    "sig": "getAuxEnergyAmount()",
+    "line": 2792
+   },
+   {
+    "sig": "addAuxEnergyAmount(float amount)",
+    "line": 2797
+   },
+   {
+    "sig": "getEnergyAmountToLimit()",
+    "line": 2802
+   },
+   {
+    "sig": "checkIfMaxEnergy()",
+    "line": 2807
+   },
+   {
+    "sig": "getCurrentFuelAmount()",
+    "line": 2813
+   },
+   {
+    "sig": "getMaxFuelAmount()",
+    "line": 2818
+   },
+   {
+    "sig": "getAuxFuelAmount()",
+    "line": 2823
+   },
+   {
+    "sig": "addAuxFuelAmount(float amount)",
+    "line": 2828
+   },
+   {
+    "sig": "getFuelAmountToLimit()",
+    "line": 2833
+   },
+   {
+    "sig": "hasFuel()",
+    "line": 2838
+   },
+   {
+    "sig": "killByButton()",
+    "line": 2843
+   },
+   {
+    "sig": "destroyVehicle()",
+    "line": 2848
+   },
+   {
+    "sig": "takeHealth(float damageAmount)",
+    "line": 2853
+   },
+   {
+    "sig": "damageVehicle(float damageAmount)",
+    "line": 2858
+   },
+   {
+    "sig": "getVehicleRadius()",
+    "line": 2863
+   },
+   {
+    "sig": "activateHorn()",
+    "line": 2868
+   },
+   {
+    "sig": "callToFriends()",
+    "line": 2877
+   },
+   {
+    "sig": "getPlaceToShoot()",
+    "line": 2900
+   },
+   {
+    "sig": "getCurrentDriver()",
+    "line": 2905
+   },
+   {
+    "sig": "getLastDriver()",
+    "line": 2914
+   },
+   {
+    "sig": "currentDriverIsAI()",
+    "line": 2923
+   },
+   {
+    "sig": "getOffFromVehicleToDriverAI()",
+    "line": 2932
+   },
+   {
+    "sig": "getVehicleName()",
+    "line": 2939
+   },
+   {
+    "sig": "setVehicleName(string newName)",
+    "line": 2944
+   },
+   {
+    "sig": "getImpactListInfo()",
+    "line": 2953
+   },
+   {
+    "sig": "getDecalImpactIndex()",
+    "line": 2973
+   },
+   {
+    "sig": "isUseImpactSurfaceActive()",
+    "line": 2978
+   },
+   {
+    "sig": "OnTriggerEnter(Collider col)",
+    "line": 2983
+   },
+   {
+    "sig": "OnTriggerExit(Collider col)",
+    "line": 2988
+   },
+   {
+    "sig": "checkTriggerInfo(Collider col, bool isEnter)",
+    "line": 2993
+   },
+   {
+    "sig": "getVehicleCameraController()",
+    "line": 3004
+   },
+   {
+    "sig": "getAudioSourceElement(string name)",
+    "line": 3009
+   },
+   {
+    "sig": "isVehicleBeingDriven()",
+    "line": 3022
+   },
+   {
+    "sig": "isVehicleFull()",
+    "line": 3027
+   },
+   {
+    "sig": "getIKDrivingSystem()",
+    "line": 3032
+   },
+   {
+    "sig": "getVehicleGravityControl()",
+    "line": 3037
+   },
+   {
+    "sig": "isForcingPassengersToGetOffOnVehicleDestroyedActive()",
+    "line": 3042
+   },
+   {
+    "sig": "setPlayerCameraParentAndPosition(Transform mainCameraTransform, playerCamera playerCameraManager)",
+    "line": 3048
+   },
+   {
+    "sig": "vehicleIsDestroyed()",
+    "line": 3057
+   },
+   {
+    "sig": "setInvencibleState(bool state)",
+    "line": 3062
+   },
+   {
+    "sig": "setInfiniteEnergyState(bool state)",
+    "line": 3067
+   },
+   {
+    "sig": "setInfiniteFuelState(bool state)",
+    "line": 3072
+   },
+   {
+    "sig": "setVehicleAndCameraParent(Transform newParent)",
+    "line": 3077
+   },
+   {
+    "sig": "setNewMainCameraTransform(Transform newTransform)",
+    "line": 3088
+   },
+   {
+    "sig": "setNewPlayerCameraTransform(Transform newTransform)",
+    "line": 3093
+   },
+   {
+    "sig": "setUseForwardDirectionForCameraDirectionState(bool state)",
+    "line": 3098
+   },
+   {
+    "sig": "setUseRightDirectionForCameraDirectionState(bool state)",
+    "line": 3103
+   },
+   {
+    "sig": "setAddExtraRotationPausedState(bool state)",
+    "line": 3108
+   },
+   {
+    "sig": "isVehicletAsChildOfParent()",
+    "line": 3113
+   },
+   {
+    "sig": "setVehicletAsChildOfParentState(bool state)",
+    "line": 3118
+   },
+   {
+    "sig": "setExplodeVehicleWhenDestroyedEnabledState(bool state)",
+    "line": 3123
+   },
+   {
+    "sig": "setFadeVehiclePiecesOnDestroyedState(bool state)",
+    "line": 3128
+   },
+   {
+    "sig": "checkIfMaxHealth()",
+    "line": 3133
+   },
+   {
+    "sig": "getHealthAmountToPick(float amount)",
+    "line": 3138
+   },
+   {
+    "sig": "checkIfMaxFuel()",
+    "line": 3161
+   },
+   {
+    "sig": "setRegenerateFuelState(bool state)",
+    "line": 3166
+   },
+   {
+    "sig": "setOriginalRegenerateFuelState()",
+    "line": 3171
+   },
+   {
+    "sig": "startBrakeVehicleToStopCompletely()",
+    "line": 3176
+   },
+   {
+    "sig": "endBrakeVehicleToStopCompletely()",
+    "line": 3181
+   },
+   {
+    "sig": "getCurrentSpeed()",
+    "line": 3186
+   },
+   {
+    "sig": "changeVehicleState()",
+    "line": 3191
+   },
+   {
+    "sig": "passengerGettingOnOff()",
+    "line": 3196
+   },
+   {
+    "sig": "isVehicleOnGround()",
+    "line": 3201
+   },
+   {
+    "sig": "getHorizontalAxis()",
+    "line": 3206
+   },
+   {
+    "sig": "getVerticalAxis()",
+    "line": 3211
+   },
+   {
+    "sig": "getPassengerGameObjectList()",
+    "line": 3216
+   },
+   {
+    "sig": "inputShowControlsMenu()",
+    "line": 3224
+   },
+   {
+    "sig": "inputSelfDestruct()",
+    "line": 3231
+   },
+   {
+    "sig": "inputEject()",
+    "line": 3246
+   },
+   {
+    "sig": "inputEjectWithFreeFloatingMode()",
+    "line": 3261
+   },
+   {
+    "sig": "inputUnLockCursor()",
+    "line": 3276
+   },
+   {
+    "sig": "inputHoldOrReleaseSecondaryButton(bool holdingButton)",
+    "line": 3283
+   },
+   {
+    "sig": "inputGetOffFromVehicle()",
+    "line": 3294
+   },
+   {
+    "sig": "inputJump()",
+    "line": 3305
+   },
+   {
+    "sig": "inputHoldOrReleaseJump(bool holdingButton)",
+    "line": 3310
+   },
+   {
+    "sig": "inputHoldOrReleaseTurbo(bool holdingButton)",
+    "line": 3315
+   },
+   {
+    "sig": "inputSetTurnOnState()",
+    "line": 3320
+   },
+   {
+    "sig": "inputHorn()",
+    "line": 3325
+   },
+   {
+    "sig": "inputHoldOrReleaseBrake(bool holdingButton)",
+    "line": 3330
+   },
+   {
+    "sig": "inputRefillFuelTankByInventoryObject()",
+    "line": 3335
+   },
+   {
+    "sig": "getAIVehicleNavmesh()",
+    "line": 3340
+   },
+   {
+    "sig": "setHealthAmount(float newValue)",
+    "line": 3386
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 3538
+   }
+  ]
+ }
+]

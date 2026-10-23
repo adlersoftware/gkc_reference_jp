@@ -1,0 +1,814 @@
+[
+ {
+  "type": "mapSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Map\\mapSystem.cs",
+  "source": "Map/mapSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "mapEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "openMenuEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "changeFloorWithTriggers",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "showWarningMessages",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "updateMapIconTypesOnStart",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "searchBuildingListIfNotAssigned",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "checkElementsOnAwakeEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "mainScreenObjectivesManagerName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "mainMapCreatorManagerName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "ingameMenuName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "beaconIconTypeName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "markIconTypeName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "mapCreatorManager",
+    "label": "",
+    "section": "Player Position In Map Settings"
+   },
+   {
+    "field": "mapCamera",
+    "label": "",
+    "section": "Player Position In Map Settings"
+   },
+   {
+    "field": "mapSystemPivotTransform",
+    "label": "",
+    "section": "Player Position In Map Settings"
+   },
+   {
+    "field": "mapSystemCameraTransform",
+    "label": "",
+    "section": "Player Position In Map Settings"
+   },
+   {
+    "field": "player",
+    "label": "",
+    "section": "Player Position In Map Settings"
+   },
+   {
+    "field": "mapRender",
+    "label": "",
+    "section": "Player Position In Map Settings"
+   },
+   {
+    "field": "mapWindow",
+    "label": "",
+    "section": "Player Position In Map Settings"
+   },
+   {
+    "field": "playerMapIcon",
+    "label": "",
+    "section": "Player Position In Map Settings"
+   },
+   {
+    "field": "playerIconChild",
+    "label": "",
+    "section": "Player Position In Map Settings"
+   },
+   {
+    "field": "removeMarkButtonImage",
+    "label": "",
+    "section": "Player Position In Map Settings"
+   },
+   {
+    "field": "quickTravelButtonImage",
+    "label": "",
+    "section": "Player Position In Map Settings"
+   },
+   {
+    "field": "useMapIndexWindow",
+    "label": "",
+    "section": "Player Position In Map Settings"
+   },
+   {
+    "field": "mapObjectTextIcon",
+    "label": "",
+    "section": "Player Position In Map Settings"
+   },
+   {
+    "field": "useBlurUIPanel",
+    "label": "",
+    "section": "Player Position In Map Settings"
+   },
+   {
+    "field": "playerInput",
+    "label": "",
+    "section": "Player Position In Map Settings"
+   },
+   {
+    "field": "pauseManager",
+    "label": "",
+    "section": "Player Position In Map Settings"
+   },
+   {
+    "field": "screenObjectivesManager",
+    "label": "",
+    "section": "Player Position In Map Settings"
+   },
+   {
+    "field": "playerControllerManager",
+    "label": "",
+    "section": "Player Position In Map Settings"
+   },
+   {
+    "field": "mapCreatorManager",
+    "label": "",
+    "section": "Player Position In Map Settings"
+   },
+   {
+    "field": "playerMapObjectInformation",
+    "label": "",
+    "section": "Player Position In Map Settings"
+   },
+   {
+    "field": "mainMapCamera",
+    "label": "",
+    "section": "Player Position In Map Settings"
+   },
+   {
+    "field": "mapCreatorPrefab",
+    "label": "",
+    "section": "Player Position In Map Settings"
+   },
+   {
+    "field": "playerIconMovementSpeed",
+    "label": "",
+    "section": "CONTROL"
+   },
+   {
+    "field": "openMapSpeed",
+    "label": "",
+    "section": "CONTROL"
+   },
+   {
+    "field": "mouseDragMapSpeed",
+    "label": "",
+    "section": "CONTROL"
+   },
+   {
+    "field": "keysDragMapSpeed",
+    "label": "",
+    "section": "CONTROL"
+   },
+   {
+    "field": "getClosestFloorToPlayerByDistance",
+    "label": "",
+    "section": "CONTROL"
+   },
+   {
+    "field": "mapCameraMovementType",
+    "label": "",
+    "section": "CONTROL"
+   },
+   {
+    "field": "recenterCameraSpeed",
+    "label": "",
+    "section": "CONTROL"
+   },
+   {
+    "field": "rotateMap",
+    "label": "",
+    "section": "ROTATION"
+   },
+   {
+    "field": "smoothRotationMap",
+    "label": "",
+    "section": "ROTATION"
+   },
+   {
+    "field": "rotationSpeed",
+    "label": "",
+    "section": "ROTATION"
+   },
+   {
+    "field": "usingCircleMap",
+    "label": "",
+    "section": "CIRCLE MAP"
+   },
+   {
+    "field": "circleMapRadius",
+    "label": "",
+    "section": "CIRCLE MAP"
+   },
+   {
+    "field": "showOffScreenIcons",
+    "label": "",
+    "section": "ICONS"
+   },
+   {
+    "field": "iconSize",
+    "label": "",
+    "section": "ICONS"
+   },
+   {
+    "field": "maxIconSize",
+    "label": "",
+    "section": "ICONS"
+   },
+   {
+    "field": "offScreenIconSize",
+    "label": "",
+    "section": "ICONS"
+   },
+   {
+    "field": "openMapIconSizeMultiplier",
+    "label": "",
+    "section": "ICONS"
+   },
+   {
+    "field": "changeIconSizeSpeed",
+    "label": "",
+    "section": "ICONS"
+   },
+   {
+    "field": "showIconsByFloor",
+    "label": "",
+    "section": "ICONS"
+   },
+   {
+    "field": "borderOffScreen",
+    "label": "",
+    "section": "ICONS"
+   },
+   {
+    "field": "useTextInIcons",
+    "label": "",
+    "section": "ICONS"
+   },
+   {
+    "field": "textIconsOffset",
+    "label": "",
+    "section": "ICONS"
+   },
+   {
+    "field": "mapObjectTextIconColor",
+    "label": "",
+    "section": "ICONS"
+   },
+   {
+    "field": "mapObjectTextSize",
+    "label": "",
+    "section": "ICONS"
+   },
+   {
+    "field": "playerUseMapObjectInformation",
+    "label": "",
+    "section": "ICONS"
+   },
+   {
+    "field": "playerIconOffset",
+    "label": "",
+    "section": "ICONS"
+   },
+   {
+    "field": "useCurrentMapIconPressed",
+    "label": "",
+    "section": "ICONS"
+   },
+   {
+    "field": "miniMapWindowEnabledInGame",
+    "label": "",
+    "section": "ICONS"
+   },
+   {
+    "field": "miniMapWindowSmoothOpening",
+    "label": "",
+    "section": "ICONS"
+   },
+   {
+    "field": "miniMapWindowWithMask",
+    "label": "",
+    "section": "ICONS"
+   },
+   {
+    "field": "checkMinimapWindowActiveStateOnOtherMenusEnabled",
+    "label": "",
+    "section": "ICONS"
+   },
+   {
+    "field": "useMapCursor",
+    "label": "",
+    "section": "MAP CURSOR SETTINGS"
+   },
+   {
+    "field": "showInfoIconInsideCursor",
+    "label": "",
+    "section": "MAP CURSOR SETTINGS"
+   },
+   {
+    "field": "maxDistanceToMapIcon",
+    "label": "",
+    "section": "MAP CURSOR SETTINGS"
+   },
+   {
+    "field": "zoomWhenOpen",
+    "label": "",
+    "section": "2D ZOOM SETTINGS"
+   },
+   {
+    "field": "zoomWhenClose",
+    "label": "",
+    "section": "2D ZOOM SETTINGS"
+   },
+   {
+    "field": "openCloseZoomSpeed",
+    "label": "",
+    "section": "2D ZOOM SETTINGS"
+   },
+   {
+    "field": "zoomSpeed",
+    "label": "",
+    "section": "2D ZOOM SETTINGS"
+   },
+   {
+    "field": "maxZoom",
+    "label": "",
+    "section": "2D ZOOM SETTINGS"
+   },
+   {
+    "field": "minZoom",
+    "label": "",
+    "section": "2D ZOOM SETTINGS"
+   },
+   {
+    "field": "zoomToActivateIcons",
+    "label": "",
+    "section": "2D ZOOM SETTINGS"
+   },
+   {
+    "field": "zoomToActivateTextIcons",
+    "label": "",
+    "section": "2D ZOOM SETTINGS"
+   },
+   {
+    "field": "zoomWhenOpen3d",
+    "label": "",
+    "section": "3D ZOOM SETTINGS"
+   },
+   {
+    "field": "zoomWhenClose3d",
+    "label": "",
+    "section": "3D ZOOM SETTINGS"
+   },
+   {
+    "field": "openCloseZoomSpeed3d",
+    "label": "",
+    "section": "3D ZOOM SETTINGS"
+   },
+   {
+    "field": "zoomSpeed3d",
+    "label": "",
+    "section": "3D ZOOM SETTINGS"
+   },
+   {
+    "field": "maxZoom3d",
+    "label": "",
+    "section": "3D ZOOM SETTINGS"
+   },
+   {
+    "field": "minZoom3d",
+    "label": "",
+    "section": "3D ZOOM SETTINGS"
+   },
+   {
+    "field": "zoomToActivateIcons3d",
+    "label": "",
+    "section": "3D ZOOM SETTINGS"
+   },
+   {
+    "field": "zoomToActivateTextIcons3d",
+    "label": "",
+    "section": "3D ZOOM SETTINGS"
+   },
+   {
+    "field": "setColorOnCurrent3dMapPart",
+    "label": "",
+    "section": "3D ZOOM SETTINGS"
+   },
+   {
+    "field": "colorOnCurrent3dMapPart",
+    "label": "",
+    "section": "3D ZOOM SETTINGS"
+   },
+   {
+    "field": "disabledRemoveMarkColor",
+    "label": "",
+    "section": "MARKS"
+   },
+   {
+    "field": "disabledQuickTravelColor",
+    "label": "",
+    "section": "MARKS"
+   },
+   {
+    "field": "map3dEnabled",
+    "label": "",
+    "section": "3D Map Settings"
+   },
+   {
+    "field": "map3dPositionSpeed",
+    "label": "",
+    "section": "3D Map Settings"
+   },
+   {
+    "field": "map3dRotationSpeed",
+    "label": "",
+    "section": "3D Map Settings"
+   },
+   {
+    "field": "rangeAngleX",
+    "label": "",
+    "section": "3D Map Settings"
+   },
+   {
+    "field": "rangeAngleY",
+    "label": "",
+    "section": "3D Map Settings"
+   },
+   {
+    "field": "transtionTo3dSpeed",
+    "label": "",
+    "section": "3D Map Settings"
+   },
+   {
+    "field": "maxTimeBetweenTransition",
+    "label": "",
+    "section": "3D Map Settings"
+   },
+   {
+    "field": "reset3dCameraSpeed",
+    "label": "",
+    "section": "3D Map Settings"
+   },
+   {
+    "field": "inital3dCameraRotation",
+    "label": "",
+    "section": "3D Map Settings"
+   },
+   {
+    "field": "hideOffscreenIconsOn3dView",
+    "label": "",
+    "section": "3D Map Settings"
+   },
+   {
+    "field": "showIconsOn3dView",
+    "label": "",
+    "section": "3D Map Settings"
+   },
+   {
+    "field": "use3dMeshForPlayer",
+    "label": "",
+    "section": "3D Map Settings"
+   },
+   {
+    "field": "player3dMesh",
+    "label": "",
+    "section": "3D Map Settings"
+   },
+   {
+    "field": "useEventIfMapEnabled",
+    "label": "",
+    "section": "Map Event Settings"
+   },
+   {
+    "field": "eventIfMapEnabled",
+    "label": "",
+    "section": "Map Event Settings"
+   },
+   {
+    "field": "useEventIfMapDisabled",
+    "label": "",
+    "section": "Map Event Settings"
+   },
+   {
+    "field": "eventIfMapDisabled",
+    "label": "",
+    "section": "Map Event Settings"
+   },
+   {
+    "field": "markPrefab",
+    "label": "",
+    "section": "Map Event Settings"
+   },
+   {
+    "field": "setMarkOnCurrenBuilding",
+    "label": "",
+    "section": "Map Event Settings"
+   },
+   {
+    "field": "setMarkOnCurrentFloor",
+    "label": "",
+    "section": "Map Event Settings"
+   },
+   {
+    "field": "raycastDistanceToPlaceMark",
+    "label": "",
+    "section": "Map Event Settings"
+   },
+   {
+    "field": "layerMaskToPlaceMark",
+    "label": "",
+    "section": "Map Event Settings"
+   },
+   {
+    "field": "useRaycastToPlaceMarkOn2dMap",
+    "label": "",
+    "section": "Map Event Settings"
+   },
+   {
+    "field": "useMapCameraAsRaycastPoisitionOn2dMap",
+    "label": "",
+    "section": "Map Event Settings"
+   },
+   {
+    "field": "compassDirections",
+    "label": "",
+    "section": "Map Event Settings"
+   },
+   {
+    "field": "northGameObject",
+    "label": "",
+    "section": "Map Event Settings"
+   },
+   {
+    "field": "southGameObject",
+    "label": "",
+    "section": "Map Event Settings"
+   },
+   {
+    "field": "eastGameObject",
+    "label": "",
+    "section": "Map Event Settings"
+   },
+   {
+    "field": "westGameObject",
+    "label": "",
+    "section": "Map Event Settings"
+   },
+   {
+    "field": "northEastGameObject",
+    "label": "",
+    "section": "Map Event Settings"
+   },
+   {
+    "field": "southWestGameObject",
+    "label": "",
+    "section": "Map Event Settings"
+   },
+   {
+    "field": "southEastGameObject",
+    "label": "",
+    "section": "Map Event Settings"
+   },
+   {
+    "field": "northwestGameObject",
+    "label": "",
+    "section": "Map Event Settings"
+   },
+   {
+    "field": "compassEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "compassOffset",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "compassScale",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "showIntermediateDirections",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "maximumLeftDistance",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "maximumRightDistance",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "usePlayerTransformOrientationOnCompassOnThirdPerson",
+    "label": "",
+    "section": "Compass Orientation Settings"
+   },
+   {
+    "field": "usePlayerTransformOrientationOnCompassOnFirstPerson",
+    "label": "",
+    "section": "Compass Orientation Settings"
+   },
+   {
+    "field": "usePlayerTransformOrientationOnCompassOnLockedCamera",
+    "label": "",
+    "section": "Compass Orientation Settings"
+   }
+  ]
+ },
+ {
+  "type": "mapTileBuilder",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Map\\mapTileBuilder.cs",
+  "source": "Map/mapTileBuilder.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "mapPartParent",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "mapPartBuildingIndex",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "mapPartFloorIndex",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "mapPartIndex",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "mapPartRendererOffset",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "newPositionOffset",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "mapPartEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useOtherColorIfMapPartDisabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "colorIfMapPartDisabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "showGizmo",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "showEnabledTrigger",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "showVerticesDistance",
+    "label": "Show Vertex Distance",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "mapLinesColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "mapPartMaterialColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "cubeGizmoScale",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoLabelColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "showVertexHandles",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "useHandleForVertex",
+    "label": "",
+    "section": "Handle Vertex Settings"
+   },
+   {
+    "field": "handleRadius",
+    "label": "",
+    "section": "Handle Vertex Settings"
+   },
+   {
+    "field": "mapPartName",
+    "label": "",
+    "section": "Rename Settings"
+   },
+   {
+    "field": "generate3dMapPartMesh",
+    "label": "",
+    "section": "Map Part 3d Mesh Settings"
+   },
+   {
+    "field": "onlyUse3dMapPartMesh",
+    "label": "",
+    "section": "Map Part 3d Mesh Settings"
+   },
+   {
+    "field": "generate3dMeshesShowGizmo",
+    "label": "",
+    "section": "Map Part 3d Mesh Settings"
+   },
+   {
+    "field": "mapPart3dHeight",
+    "label": "",
+    "section": "Map Part 3d Mesh Settings"
+   },
+   {
+    "field": "mapPart3dOffset",
+    "label": "",
+    "section": "Map Part 3d Mesh Settings"
+   },
+   {
+    "field": "mapPart3dGameObject",
+    "label": "",
+    "section": "Map Part 3d Mesh Settings"
+   }
+  ]
+ },
+ {
+  "type": "mapZoneUnlocker",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Map\\mapZoneUnlocker.cs",
+  "source": "Map/mapZoneUnlocker.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "mainMapCreatorManagerName",
+    "label": "",
+    "section": "Other Settings"
+   }
+  ]
+ }
+]

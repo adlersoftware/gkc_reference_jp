@@ -1,0 +1,840 @@
+[
+ {
+  "type": "vehicleHUDManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\vehicleHUDManager.cs",
+  "source": "Vehicles/vehicleHUDManager.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "vehicleName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "destroyedSound",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "destroyedAudioElement",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "destroyedSource",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "healthPercentageDamageParticles",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "placeToShoot",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "canSetTurnOnState",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "autoTurnOnWhenGetOn",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "vehicleRadius",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "layer",
+    "label": "Layer For Obstacles On Get Off",
+    "section": "Main Settings"
+   },
+   {
+    "field": "layerForPassengers",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "passengersParent",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "canUnlockCursor",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "disablePlayerHUDEnabled",
+    "label": "",
+    "section": "HUD Settings"
+   },
+   {
+    "field": "showVehicleHUD",
+    "label": "",
+    "section": "HUD Settings"
+   },
+   {
+    "field": "showVehicleSpeed",
+    "label": "",
+    "section": "HUD Settings"
+   },
+   {
+    "field": "invincible",
+    "label": "",
+    "section": "Health Settings"
+   },
+   {
+    "field": "healthAmount",
+    "label": "",
+    "section": "Health Settings"
+   },
+   {
+    "field": "maxHealthAmount",
+    "label": "",
+    "section": "Health Settings"
+   },
+   {
+    "field": "regenerateHealth",
+    "label": "",
+    "section": "Regenerate Health Settings"
+   },
+   {
+    "field": "constantHealthRegenerate",
+    "label": "",
+    "section": "Regenerate Health Settings"
+   },
+   {
+    "field": "regenerateHealthTime",
+    "label": "",
+    "section": "Regenerate Health Settings"
+   },
+   {
+    "field": "regenerateHealthSpeed",
+    "label": "",
+    "section": "Regenerate Health Settings"
+   },
+   {
+    "field": "regenerateHealthAmount",
+    "label": "",
+    "section": "Regenerate Health Settings"
+   },
+   {
+    "field": "destroyed",
+    "label": "",
+    "section": "Regenerate Health Settings"
+   },
+   {
+    "field": "vehicleUseBoost",
+    "label": "",
+    "section": "Energy Settings"
+   },
+   {
+    "field": "infiniteBoost",
+    "label": "",
+    "section": "Energy Settings"
+   },
+   {
+    "field": "boostAmount",
+    "label": "",
+    "section": "Energy Settings"
+   },
+   {
+    "field": "maxBoostAmount",
+    "label": "",
+    "section": "Energy Settings"
+   },
+   {
+    "field": "boostUseRate",
+    "label": "",
+    "section": "Energy Settings"
+   },
+   {
+    "field": "regenerateBoost",
+    "label": "",
+    "section": "Regenerate Boost Settings"
+   },
+   {
+    "field": "constantBoostRegenerate",
+    "label": "",
+    "section": "Regenerate Boost Settings"
+   },
+   {
+    "field": "regenerateBoostTime",
+    "label": "",
+    "section": "Regenerate Boost Settings"
+   },
+   {
+    "field": "regenerateBoostSpeed",
+    "label": "",
+    "section": "Regenerate Boost Settings"
+   },
+   {
+    "field": "regenerateBoostAmount",
+    "label": "",
+    "section": "Regenerate Boost Settings"
+   },
+   {
+    "field": "vehicleUseFuel",
+    "label": "",
+    "section": "Fuel Settings"
+   },
+   {
+    "field": "infiniteFuel",
+    "label": "",
+    "section": "Fuel Settings"
+   },
+   {
+    "field": "fuelAmount",
+    "label": "",
+    "section": "Fuel Settings"
+   },
+   {
+    "field": "maxFuelAmount",
+    "label": "",
+    "section": "Fuel Settings"
+   },
+   {
+    "field": "fuelUseRate",
+    "label": "",
+    "section": "Fuel Settings"
+   },
+   {
+    "field": "startWithGasTankEmpty",
+    "label": "",
+    "section": "Fuel Settings"
+   },
+   {
+    "field": "regenerateFuel",
+    "label": "",
+    "section": "Regenerate Fuel Settings"
+   },
+   {
+    "field": "constantFuelRegenerate",
+    "label": "",
+    "section": "Regenerate Fuel Settings"
+   },
+   {
+    "field": "regenerateFuelTime",
+    "label": "",
+    "section": "Regenerate Fuel Settings"
+   },
+   {
+    "field": "regenerateFuelSpeed",
+    "label": "",
+    "section": "Regenerate Fuel Settings"
+   },
+   {
+    "field": "regenerateFuelAmount",
+    "label": "",
+    "section": "Regenerate Fuel Settings"
+   },
+   {
+    "field": "gasTankGameObject",
+    "label": "",
+    "section": "Regenerate Fuel Settings"
+   },
+   {
+    "field": "healthStatName",
+    "label": "",
+    "section": "Main Stats Settings"
+   },
+   {
+    "field": "energyStatName",
+    "label": "",
+    "section": "Main Stats Settings"
+   },
+   {
+    "field": "fuelStatName",
+    "label": "",
+    "section": "Main Stats Settings"
+   },
+   {
+    "field": "useWeakSpots",
+    "label": "",
+    "section": "Damage Receiver List"
+   },
+   {
+    "field": "ignoreUseHealthAmountOnSpot",
+    "label": "",
+    "section": "Damage Receiver List"
+   },
+   {
+    "field": "useCustomVehiclePartsToDestroy",
+    "label": "",
+    "section": "Use Custom Vehicle Parts To Destroy Settings"
+   },
+   {
+    "field": "customVehiclePartsExplosionForce",
+    "label": "",
+    "section": "Use Custom Vehicle Parts To Destroy Settings"
+   },
+   {
+    "field": "customVehiclePartsExplosionRadius",
+    "label": "",
+    "section": "Use Custom Vehicle Parts To Destroy Settings"
+   },
+   {
+    "field": "customVehiclePartsExplosionForceMode",
+    "label": "",
+    "section": "Use Custom Vehicle Parts To Destroy Settings"
+   },
+   {
+    "field": "useEventOnCustomVehicleParts",
+    "label": "",
+    "section": "Use Custom Vehicle Parts To Destroy Settings"
+   },
+   {
+    "field": "eventOnCustomVehicleParts",
+    "label": "",
+    "section": "Use Custom Vehicle Parts To Destroy Settings"
+   },
+   {
+    "field": "checkOnCollisionEnterOnlyExternally",
+    "label": "",
+    "section": "Main Settings Settings"
+   },
+   {
+    "field": "useDamageParticles",
+    "label": "",
+    "section": "Damage and Fade Vehicle Pieces Settings"
+   },
+   {
+    "field": "damageParticles",
+    "label": "",
+    "section": "Damage and Fade Vehicle Pieces Settings"
+   },
+   {
+    "field": "useDestroyedParticles",
+    "label": "",
+    "section": "Damage and Fade Vehicle Pieces Settings"
+   },
+   {
+    "field": "destroyedParticles",
+    "label": "",
+    "section": "Damage and Fade Vehicle Pieces Settings"
+   },
+   {
+    "field": "removePiecesWhenDestroyed",
+    "label": "",
+    "section": "Damage and Fade Vehicle Pieces Settings"
+   },
+   {
+    "field": "fadeVehiclePiecesOnDestroyed",
+    "label": "",
+    "section": "Damage and Fade Vehicle Pieces Settings"
+   },
+   {
+    "field": "timeToFadePieces",
+    "label": "",
+    "section": "Damage and Fade Vehicle Pieces Settings"
+   },
+   {
+    "field": "destroyedMeshShader",
+    "label": "",
+    "section": "Damage and Fade Vehicle Pieces Settings"
+   },
+   {
+    "field": "defaultShaderName",
+    "label": "",
+    "section": "Damage and Fade Vehicle Pieces Settings"
+   },
+   {
+    "field": "colorPropertyName",
+    "label": "",
+    "section": "Damage and Fade Vehicle Pieces Settings"
+   },
+   {
+    "field": "setCollidersOnAllVehicleMeshParts",
+    "label": "",
+    "section": "Damage and Fade Vehicle Pieces Settings"
+   },
+   {
+    "field": "canUseSelfDestruct",
+    "label": "",
+    "section": "Eject/Self Destruction Settings"
+   },
+   {
+    "field": "canStopSelfDestruction",
+    "label": "",
+    "section": "Eject/Self Destruction Settings"
+   },
+   {
+    "field": "selfDestructDelay",
+    "label": "",
+    "section": "Eject/Self Destruction Settings"
+   },
+   {
+    "field": "ejectPassengerOnSelfDestruct",
+    "label": "",
+    "section": "Eject/Self Destruction Settings"
+   },
+   {
+    "field": "ejectPassengerForce",
+    "label": "",
+    "section": "Eject/Self Destruction Settings"
+   },
+   {
+    "field": "getOffPassengersOnSelfDestruct",
+    "label": "",
+    "section": "Eject/Self Destruction Settings"
+   },
+   {
+    "field": "ejectPassengerForce",
+    "label": "",
+    "section": "Eject/Self Destruction Settings"
+   },
+   {
+    "field": "damageObjectsOnCollision",
+    "label": "",
+    "section": "Collision Damage Settings"
+   },
+   {
+    "field": "damageMultiplierOnCollision",
+    "label": "",
+    "section": "Collision Damage Settings"
+   },
+   {
+    "field": "minVehicleVelocityToDamage",
+    "label": "",
+    "section": "Collision Damage Settings"
+   },
+   {
+    "field": "minCollisionVelocityToDamage",
+    "label": "",
+    "section": "Collision Damage Settings"
+   },
+   {
+    "field": "ignoreShieldOnCollision",
+    "label": "",
+    "section": "Collision Damage Settings"
+   },
+   {
+    "field": "useRemoteEventOnObjectsFound",
+    "label": "",
+    "section": "Remote Event Settings"
+   },
+   {
+    "field": "launchDriverOnCollision",
+    "label": "",
+    "section": "Launch Passengers On Collision Settings"
+   },
+   {
+    "field": "minCollisionVelocityToLaunch",
+    "label": "",
+    "section": "Launch Passengers On Collision Settings"
+   },
+   {
+    "field": "launchDirectionOffset",
+    "label": "",
+    "section": "Launch Passengers On Collision Settings"
+   },
+   {
+    "field": "extraCollisionForce",
+    "label": "",
+    "section": "Launch Passengers On Collision Settings"
+   },
+   {
+    "field": "ignoreRagdollCollider",
+    "label": "",
+    "section": "Launch Passengers On Collision Settings"
+   },
+   {
+    "field": "applyDamageToDriver",
+    "label": "",
+    "section": "Collision Damage Settings"
+   },
+   {
+    "field": "useCollisionVelocityAsDamage",
+    "label": "",
+    "section": "Collision Damage Settings"
+   },
+   {
+    "field": "collisionDamageAmount",
+    "label": "",
+    "section": "Collision Damage Settings"
+   },
+   {
+    "field": "ignoreShieldOnLaunch",
+    "label": "",
+    "section": "Collision Damage Settings"
+   },
+   {
+    "field": "explodeVehicleWhenDestroyedEnabled",
+    "label": "",
+    "section": "Vehicle Explosion Settings"
+   },
+   {
+    "field": "vehicleExplosionForce",
+    "label": "",
+    "section": "Vehicle Explosion Settings"
+   },
+   {
+    "field": "vehicleExplosionRadius",
+    "label": "",
+    "section": "Vehicle Explosion Settings"
+   },
+   {
+    "field": "vehicleExplosionForceMode",
+    "label": "",
+    "section": "Vehicle Explosion Settings"
+   },
+   {
+    "field": "receiveDamageFromCollision",
+    "label": "",
+    "section": "Damage On Collision Settings"
+   },
+   {
+    "field": "minVelocityToDamageCollision",
+    "label": "",
+    "section": "Damage On Collision Settings"
+   },
+   {
+    "field": "useCurrentVelocityAsDamage",
+    "label": "",
+    "section": "Damage On Collision Settings"
+   },
+   {
+    "field": "defaultDamageCollision",
+    "label": "",
+    "section": "Damage On Collision Settings"
+   },
+   {
+    "field": "collisionDamageMultiplier",
+    "label": "",
+    "section": "Damage On Collision Settings"
+   },
+   {
+    "field": "checkMinVerticalDistanceToGetDamageFromCollision",
+    "label": "",
+    "section": "Damage On Collision Settings"
+   },
+   {
+    "field": "minVerticalDistanceTransformToGetDamageFromCollision",
+    "label": "",
+    "section": "Damage On Collision Settings"
+   },
+   {
+    "field": "useColliderListToIgnoreDamageFromCollision",
+    "label": "",
+    "section": "Damage On Collision Settings"
+   },
+   {
+    "field": "useImpactSurface",
+    "label": "",
+    "section": "Impact Surface Settings"
+   },
+   {
+    "field": "mainDecalManagerName",
+    "label": "",
+    "section": "Impact Surface Settings"
+   },
+   {
+    "field": "useEventsOnStateChanged",
+    "label": "",
+    "section": "Events On Vehicle State Changed"
+   },
+   {
+    "field": "eventOnGetOn",
+    "label": "",
+    "section": "Events On Vehicle State Changed"
+   },
+   {
+    "field": "eventOnGetOff",
+    "label": "",
+    "section": "Events On Vehicle State Changed"
+   },
+   {
+    "field": "eventOnDestroyed",
+    "label": "",
+    "section": "Events On Vehicle State Changed"
+   },
+   {
+    "field": "eventOnFixDestroyedVehicle",
+    "label": "",
+    "section": "Events On Vehicle State Changed"
+   },
+   {
+    "field": "useJumpPlatformEvents",
+    "label": "",
+    "section": "Jump Platforms Events"
+   },
+   {
+    "field": "jumpPlatformEvent",
+    "label": "",
+    "section": "Jump Platforms Events"
+   },
+   {
+    "field": "jumpPlatformParableEvent",
+    "label": "",
+    "section": "Jump Platforms Events"
+   },
+   {
+    "field": "setNewJumpPowerEvent",
+    "label": "",
+    "section": "Jump Platforms Events"
+   },
+   {
+    "field": "setOriginalJumpPowerEvent",
+    "label": "",
+    "section": "Jump Platforms Events"
+   },
+   {
+    "field": "passengerGettingOnOffEvent",
+    "label": "",
+    "section": "Vehicle Driving State Events"
+   },
+   {
+    "field": "changeVehicleStateEvent",
+    "label": "",
+    "section": "Vehicle Driving State Events"
+   },
+   {
+    "field": "useEventsToCheckIfVehicleUsedByAIOnPassengerEnterExit",
+    "label": "",
+    "section": "Vehicle AI Events"
+   },
+   {
+    "field": "eventToCheckIfVehicleUsedByAIOnPassengerEnter",
+    "label": "",
+    "section": "Vehicle AI Events"
+   },
+   {
+    "field": "eventToCheckIfVehicleUsedByAIOnPassengerExit",
+    "label": "",
+    "section": "Vehicle AI Events"
+   },
+   {
+    "field": "useEventToSendPassenger",
+    "label": "",
+    "section": "Events To Send Passengers Settings"
+   },
+   {
+    "field": "eventToSendPassengerOnGetOn",
+    "label": "",
+    "section": "Events To Send Passengers Settings"
+   },
+   {
+    "field": "eventToSentPassengerOnGetOff",
+    "label": "",
+    "section": "Events To Send Passengers Settings"
+   },
+   {
+    "field": "eventToSendCurrentHealthAmount",
+    "label": "",
+    "section": "Events To Send Stats On Save"
+   },
+   {
+    "field": "eventToSendCurrentFuelAmount",
+    "label": "",
+    "section": "Events To Send Stats On Save"
+   },
+   {
+    "field": "eventToSendCurrentBoostAmount",
+    "label": "",
+    "section": "Events To Send Stats On Save"
+   },
+   {
+    "field": "useHornToCallFriends",
+    "label": "",
+    "section": "Horn/Friends Settings"
+   },
+   {
+    "field": "callOnlyFoundFriends",
+    "label": "",
+    "section": "Horn/Friends Settings"
+   },
+   {
+    "field": "radiusToCallFriends",
+    "label": "",
+    "section": "Horn/Friends Settings"
+   },
+   {
+    "field": "useHornEvent",
+    "label": "",
+    "section": "Horn/Friends Settings"
+   },
+   {
+    "field": "hornEvent",
+    "label": "",
+    "section": "Horn/Friends Settings"
+   },
+   {
+    "field": "canEjectFromVehicle",
+    "label": "",
+    "section": "Eject Settings"
+   },
+   {
+    "field": "ejectPassengerForce",
+    "label": "",
+    "section": "Eject Settings"
+   },
+   {
+    "field": "usedByAI",
+    "label": "",
+    "section": "AI Settings"
+   },
+   {
+    "field": "useMainUpdateRigidbodyStateInsideRigidbodySystem",
+    "label": "",
+    "section": "Move Inside Vehicle Settings"
+   },
+   {
+    "field": "mainUpdateRigidbodyStateInsideRigidbodySystem",
+    "label": "",
+    "section": "Move Inside Vehicle Settings"
+   },
+   {
+    "field": "showGizmo",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoLabelColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoRadius",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "alphaColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "showDebugLogCollisions",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "healthAmountToTakeOnEditor",
+    "label": "",
+    "section": "Debug Settings"
+   },
+   {
+    "field": "debugLaunchCharacterSpeed",
+    "label": "",
+    "section": "Debug Launch Driver"
+   },
+   {
+    "field": "debugLaunchCharacterPosition",
+    "label": "",
+    "section": "Debug Launch Driver"
+   },
+   {
+    "field": "IKDrivingManager",
+    "label": "",
+    "section": "Vehicle Elements"
+   },
+   {
+    "field": "weaponsManager",
+    "label": "",
+    "section": "Vehicle Elements"
+   },
+   {
+    "field": "mainRigidbody",
+    "label": "",
+    "section": "Vehicle Elements"
+   },
+   {
+    "field": "damageInScreenManager",
+    "label": "",
+    "section": "Vehicle Elements"
+   },
+   {
+    "field": "mapInformationManager",
+    "label": "",
+    "section": "Vehicle Elements"
+   },
+   {
+    "field": "vehicleCameraManager",
+    "label": "",
+    "section": "Vehicle Elements"
+   },
+   {
+    "field": "gasTankManager",
+    "label": "",
+    "section": "Vehicle Elements"
+   },
+   {
+    "field": "vehicleGravitymanager",
+    "label": "",
+    "section": "Vehicle Elements"
+   },
+   {
+    "field": "mainVehicleController",
+    "label": "",
+    "section": "Vehicle Elements"
+   },
+   {
+    "field": "mainVehicleAINavMesh",
+    "label": "",
+    "section": "Vehicle Elements"
+   }
+  ]
+ },
+ {
+  "type": "vehicleInterface",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\vehicleInterface.cs",
+  "source": "Vehicles/vehicleInterface.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "interfaceCanBeEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "interfaceEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "vehicle",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "interfaceCanvas",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useInterfacePanelInfoList",
+    "label": "",
+    "section": "Interface Panel Info List"
+   },
+   {
+    "field": "HUDManager",
+    "label": "",
+    "section": "Interface Panel Info List"
+   },
+   {
+    "field": "interfacePanelParent",
+    "label": "",
+    "section": "Interface Panel Info List"
+   },
+   {
+    "field": "movePanelSpeed",
+    "label": "",
+    "section": "Interface Panel Info List"
+   },
+   {
+    "field": "rotatePanelSpeed",
+    "label": "",
+    "section": "Interface Panel Info List"
+   }
+  ]
+ }
+]

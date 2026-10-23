@@ -1,0 +1,116 @@
+[
+ {
+  "type": "playerLadderSystem",
+  "summary": "プレイヤー側のはしご制御。はしごトリガーに応じて検出状態・重力・カメラ・足音・入力を切り替え、昇降とジャンプ離脱を扱う。",
+  "methods": {
+   "setLadderFoundState(bool state, ladderSystem newLadderSystem)": "`state`に応じて検出状態と現在のはしごを設定し、重力・接地判定・カメラ・足音を止めて昇降状態に切り替える。",
+   "setLadderDirectionTransform(Transform newLadderDirectionTransform, Transform newLadderRaycastDirectionTransform)": "`ladderDirectionTransform`と`ladderRaycastDirectionTransform`を設定するだけ。",
+   "setLadderHorizontalMovementState(bool state)": "`useLadderHorizontalMovement`を設定するだけ。",
+   "setMoveInLadderCenterState(bool state)": "`moveInLadderCenter`を設定するだけ。",
+   "isLadderFound()": "`ladderFoundFirstPerson`を返し、一人称ではしご上にいるかを示す。",
+   "setUseLocalMovementDirectionState(bool state)": "`useLocalMovementDirection`を設定するだけ。",
+   "checkLadderEventsOnThirdPerson(bool state)": "`useEventsOnThirdPerson`が有効なら、三人称でのはしご検出・解除イベントを発火する。",
+   "rotateCharacterOnJump()": "既存の回転コルーチンを止め、逆向きに回すコルーチンを開始する。",
+   "rotateCharacterOnJumpCoroutine()": "視点別の回転速度で、カメラまたは本体を正面と逆向きになるまで補間回転する。",
+   "checkEventOnJump()": "`useEventsOnJump`が有効なら、`eventOnJump`と現在のはしごのジャンプイベントを呼ぶ。",
+   "inputJumpFromLadder()": "はしご上にいる場合のみ`activeJumpOnLadder`を呼び、離脱ジャンプを実行する。",
+   "activeJumpOnLadder()": "視点別の許可設定を確認し、`impulseOnJump`の力を加えてはしごからジャンプし回転を始める。"
+  }
+ },
+ {
+  "type": "ladderSystem",
+  "summary": "はしご本体のコンポーネント。トリガーに入ったプレイヤーへ自身を登録して設定を渡し、退出時に解除する。",
+  "methods": {
+   "checkTriggerInfo(Collider col, bool isEnter)": "対象タグのプレイヤーにはしご検出状態と方向・移動設定を渡し、退出時は解除してイベントを呼ぶ。",
+   "checkEventOnJump()": "`useEventsOnJump`が有効なら`eventOnJump`を発火するだけ。",
+   "isJumpOnThirdPersonEnabled()": "`jumpOnThirdPersonEnabled`を返すだけ。",
+   "isJumpOnFirstPersonEnabled()": "`jumpOnFirstPersonEnabled`を返すだけ。"
+  }
+ },
+ {
+  "type": "touchJoystick",
+  "summary": "モバイル用の仮想ジョイスティック。タッチやマウスから軸値を求め、スティックの位置・表示・色を更新する。",
+  "methods": {
+   "setHoverState(bool state)": "ホバー状態を保存し、タッチ開始位置がゾーン内なら指IDを取得してスティックを掴む。",
+   "GetAxis()": "現在のスティック入力値`currentAxisValue`を返すだけ。",
+   "getRawAxis()": "`currentAxisValue`の符号だけを取り出した-1/0/1の軸値を返す。",
+   "setTouchPadState(bool state)": "`touchPad`を設定するだけ。",
+   "setShowJoystickState(bool state)": "`showJoystick`を設定し、ベースとスティックの表示を切り替える。",
+   "setSnapsToFingerState(bool state)": "`snapsToFinger`を設定するだけ。",
+   "setHideOnReleaseState(bool state)": "`hideOnRelease`を設定するだけ。",
+   "setJoystickColorVisibleState(bool state)": "`buttonColorVisible`を設定し、ベースとスティックの色のアルファを表示・非表示に合わせる。",
+   "touchJoystickIsPressed()": "指で触れているか`touching`を返すだけ。"
+  }
+ },
+ {
+  "type": "touchButtonListener",
+  "summary": "モバイル用タッチボタンの入力リスナー。押下・離上のフラグを管理し、設定時はアイコン色を変化させる。",
+  "methods": {
+   "OnPointerDown(PointerEventData eventData)": "`pressedDown`と`pressed`を立て、色変更とフラグ解除コルーチンを開始する。",
+   "checkTouchID()": "現在のタッチを走査し、開始された指のIDを`currentFingerId`に保存する。",
+   "getCurrentFingerId()": "`currentFingerId`を返すだけ。",
+   "OnPointerUp(PointerEventData eventData)": "`pressedUp`を立てて`pressed`を下ろし、色を戻してフラグ解除コルーチンを開始する。",
+   "setButtonColorVisibleState(bool state)": "`buttonColorVisible`を設定し、アイコン色のアルファを表示・非表示に合わせる。",
+   "resetButtonState()": "押下系フラグが立っていれば全て下ろし、必要ならアイコン色を戻す。",
+   "setButtonIconComponent()": "`RawImage`を`buttonIcon`として取得し、コンポーネントを更新する。"
+  }
+ },
+ {
+  "type": "checkpointSystem",
+  "summary": "チェックポイントの管理役。現在の要素を保持して死亡時の再出現やシーン再読み込みを行い、エディタでの追加・削除も担う。",
+  "methods": {
+   "setCurrentCheckpointElement(Transform currentCheckpoint)": "`checkPointList`内で一致する位置の`checkpointElement`を現在のチェックポイントにする。",
+   "respawnPlayer(GameObject currentPlayer)": "現在のチェックポイント位置へプレイヤーとカメラを移し、速度を0にして落下時間をリセットする。",
+   "thereIsLastCheckpoint()": "`currentCheckpointElement`が設定済みかどうかを返す。",
+   "disableCheckPoint(int checkpointID)": "`checkpointID`が一致する要素だけ無効化し、他のチェックポイントは有効化する。",
+   "setCheckpointSystemEnabledState(bool state)": "`checkpointSystemEnabled`を設定するだけ。",
+   "isCheckpointSystemEnabled()": "`checkpointSystemEnabled`を返すだけ。",
+   "checkCheckpointStateOnCharacterGetUp(ragdollActivator currentRagdollActivator, GameObject characterGameObject)": "死亡時の設定に応じて即起き上がり・再出現・シーン再読み込み・通常起き上がりを選び、使用有無を返す。",
+   "isDeathLoadCheckpointRespawnActivee()": "`deathLoackCheckpointType`が`respawn`かどうかを返す。",
+   "addNewCheckpoint()": "カメラのレイ先か前回位置に新しいチェックポイントを生成し、IDと管理者を設定して一覧へ追加する。",
+   "removeCheckpoint(int checkpointIndex)": "指定位置のチェックポイントを即時破棄し、位置と要素の一覧から削除する。",
+   "removeAllCheckpoints()": "全チェックポイントを即時破棄し、位置と要素の一覧を空にする。",
+   "updateComponent()": "`GKC_Utils.updateComponent`を呼び、シーンをダーティとして更新する。"
+  }
+ },
+ {
+  "type": "checkpointElement",
+  "summary": "個々のチェックポイント。プレイヤーが触れるとセーブを実行し、自身を現在のチェックポイントとして管理者へ登録する。",
+  "methods": {
+   "setCheckPointManager(checkpointSystem manager)": "`checkpointManager`を設定し、コンポーネントを更新する。",
+   "OnTriggerEnter(Collider col)": "対象タグのプレイヤーで条件を満たせばセーブし、自身を現在のチェックポイントに登録してイベントを呼ぶ。",
+   "updateComponent()": "`GKC_Utils.updateComponent`を呼び、シーンをダーティとして更新する。"
+  }
+ },
+ {
+  "type": "AudioElementHolder",
+  "summary": "`AudioElement`を1つ保持し、`AudioPlayer`の静的APIへ再生・停止などを委譲するコンポーネント。",
+  "methods": {
+   "Play()": "`audioElement`を`AudioPlayer.Play`で再生する。",
+   "PlayOneShot(float volumeScale)": "`audioElement`を`volumeScale`の音量で`PlayOneShot`再生する。",
+   "PlayOneShot()": "音量1.0で`PlayOneShot`を呼ぶ。",
+   "Stop()": "`AudioPlayer.Stop`で`audioElement`を停止する。",
+   "Pause()": "`AudioPlayer.Pause`で`audioElement`を一時停止する。",
+   "UnPause()": "`AudioPlayer.UnPause`で`audioElement`の再生を再開する。"
+  }
+ },
+ {
+  "type": "AudioElementHolderPlayer",
+  "summary": "`AudioElementHolder`への参照を持ち、再生・停止などの呼び出しをそのまま転送するラッパー。",
+  "methods": {
+   "Play()": "`audioElementHolder.Play`を呼ぶだけ。",
+   "PlayOneShot(float volumeScale)": "`volumeScale`を渡して`audioElementHolder.PlayOneShot`を呼ぶ。",
+   "PlayOneShot()": "音量1.0で`audioElementHolder.PlayOneShot`を呼ぶ。",
+   "Stop()": "`audioElementHolder.Stop`を呼ぶだけ。",
+   "Pause()": "`audioElementHolder.Pause`を呼ぶだけ。",
+   "UnPause()": "`audioElementHolder.UnPause`を呼ぶだけ。"
+  }
+ },
+ {
+  "type": "AudioManager",
+  "summary": "オーディオ関連のシングルトン。`Instance`を保持し、自身に付いた外部オーディオプレイヤー実装を取得する。",
+  "methods": {
+   "GetExternalAudioPlayer()": "自身に付いた`IExternalAudioPlayer`実装を`GetComponent`で取得して返す。"
+  }
+ }
+]

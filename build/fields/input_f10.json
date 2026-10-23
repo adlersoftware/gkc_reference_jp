@@ -1,0 +1,754 @@
+[
+ {
+  "type": "gravitySystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Gravity\\gravitySystem.cs",
+  "source": "Gravity/gravitySystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "gravityPowerEnabled",
+    "label": "",
+    "section": "Main Gravity Settings"
+   },
+   {
+    "field": "gravityPowerInputEnabled",
+    "label": "",
+    "section": "Main Gravity Settings"
+   },
+   {
+    "field": "liftToSearchEnabled",
+    "label": "",
+    "section": "Main Gravity Settings"
+   },
+   {
+    "field": "randomRotationOnAirEnabled",
+    "label": "",
+    "section": "Main Gravity Settings"
+   },
+   {
+    "field": "layer",
+    "label": "",
+    "section": "Main Gravity Settings"
+   },
+   {
+    "field": "searchSurfaceSpeed",
+    "label": "",
+    "section": "Main Gravity Settings"
+   },
+   {
+    "field": "airControlSpeed",
+    "label": "",
+    "section": "Main Gravity Settings"
+   },
+   {
+    "field": "accelerateSpeed",
+    "label": "",
+    "section": "Main Gravity Settings"
+   },
+   {
+    "field": "highGravityMultiplier",
+    "label": "",
+    "section": "Main Gravity Settings"
+   },
+   {
+    "field": "rotateToSurfaceSpeed",
+    "label": "",
+    "section": "Main Gravity Settings"
+   },
+   {
+    "field": "rotateToRegularGravitySpeed",
+    "label": "",
+    "section": "Main Gravity Settings"
+   },
+   {
+    "field": "preserveVelocityWhenDisableGravityPower",
+    "label": "",
+    "section": "Main Gravity Settings"
+   },
+   {
+    "field": "raycastDistanceToCheckBelowPlayer",
+    "label": "",
+    "section": "Main Gravity Settings"
+   },
+   {
+    "field": "useInfiniteRaycastDistanceToCheckBelowPlayer",
+    "label": "",
+    "section": "Main Gravity Settings"
+   },
+   {
+    "field": "searchNewSurfaceOnHighFallSpeed",
+    "label": "",
+    "section": "Other Gravity Settings"
+   },
+   {
+    "field": "minSpeedToSearchNewSurface",
+    "label": "",
+    "section": "Other Gravity Settings"
+   },
+   {
+    "field": "pauseSearchNewSurfaceOnHighFallSpeedOnReverseGravityInput",
+    "label": "",
+    "section": "Other Gravity Settings"
+   },
+   {
+    "field": "shakeCameraOnHighFallSpeed",
+    "label": "",
+    "section": "Other Gravity Settings"
+   },
+   {
+    "field": "minSpeedToShakeCamera",
+    "label": "",
+    "section": "Other Gravity Settings"
+   },
+   {
+    "field": "checkSurfaceBelowOnRegularState",
+    "label": "",
+    "section": "Other Gravity Settings"
+   },
+   {
+    "field": "timeToSetNullParentOnAir",
+    "label": "",
+    "section": "Other Gravity Settings"
+   },
+   {
+    "field": "stopAimModeWhenSearchingSurface",
+    "label": "",
+    "section": "Other Gravity Settings"
+   },
+   {
+    "field": "checkGravityArrowStateActive",
+    "label": "",
+    "section": "Other Gravity Settings"
+   },
+   {
+    "field": "hoverSpeed",
+    "label": "",
+    "section": "Hover Settings"
+   },
+   {
+    "field": "hoverAmount",
+    "label": "",
+    "section": "Hover Settings"
+   },
+   {
+    "field": "hoverSmooth",
+    "label": "",
+    "section": "Hover Settings"
+   },
+   {
+    "field": "currentNormal",
+    "label": "",
+    "section": "Current Normal Settings"
+   },
+   {
+    "field": "circumnavigateRotationSpeed",
+    "label": "",
+    "section": "Circumnavigation Settings"
+   },
+   {
+    "field": "useLerpRotation",
+    "label": "",
+    "section": "Circumnavigation Settings"
+   },
+   {
+    "field": "tagForCircumnavigate",
+    "label": "",
+    "section": "Circumnavigation Settings"
+   },
+   {
+    "field": "tagForMovingObjects",
+    "label": "",
+    "section": "Circumnavigation Settings"
+   },
+   {
+    "field": "checkCircumnavigateSurfaceOnZeroGravity",
+    "label": "",
+    "section": "Circumnavigation Settings"
+   },
+   {
+    "field": "checkSurfaceBelowLedge",
+    "label": "",
+    "section": "Circumnavigation Settings"
+   },
+   {
+    "field": "surfaceBelowLedgeRaycastDistance",
+    "label": "",
+    "section": "Circumnavigation Settings"
+   },
+   {
+    "field": "belowLedgeRotationSpeed",
+    "label": "",
+    "section": "Circumnavigation Settings"
+   },
+   {
+    "field": "surfaceBelowRaycastTransform",
+    "label": "",
+    "section": "Circumnavigation Settings"
+   },
+   {
+    "field": "checkSurfaceInFront",
+    "label": "",
+    "section": "Circumnavigation Settings"
+   },
+   {
+    "field": "surfaceInFrontRaycastDistance",
+    "label": "",
+    "section": "Circumnavigation Settings"
+   },
+   {
+    "field": "surfaceInFrontRotationSpeed",
+    "label": "",
+    "section": "Circumnavigation Settings"
+   },
+   {
+    "field": "surfaceInFrontRaycastTransform",
+    "label": "",
+    "section": "Circumnavigation Settings"
+   },
+   {
+    "field": "gravityAdherenceRaycastParent",
+    "label": "",
+    "section": "Circumnavigation Settings"
+   },
+   {
+    "field": "useEventsOnUseGravityPowerStateChange",
+    "label": "",
+    "section": "Events On Use Gravity Power Settings"
+   },
+   {
+    "field": "eventsOnUseGravityPowerStateEnabled",
+    "label": "",
+    "section": "Events On Use Gravity Power Settings"
+   },
+   {
+    "field": "eventsOnUseGravityPowerStateDisabled",
+    "label": "",
+    "section": "Events On Use Gravity Power Settings"
+   },
+   {
+    "field": "startWithZeroGravityMode",
+    "label": "",
+    "section": "Zero Gravity Mode Settings"
+   },
+   {
+    "field": "canResetRotationOnZeroGravityMode",
+    "label": "",
+    "section": "Zero Gravity Mode Settings"
+   },
+   {
+    "field": "canAdjustToForwardSurface",
+    "label": "",
+    "section": "Zero Gravity Mode Settings"
+   },
+   {
+    "field": "forwardSurfaceRayPosition",
+    "label": "",
+    "section": "Zero Gravity Mode Settings"
+   },
+   {
+    "field": "maxDistanceToAdjust",
+    "label": "",
+    "section": "Zero Gravity Mode Settings"
+   },
+   {
+    "field": "resetRotationZeroGravitySpeed",
+    "label": "",
+    "section": "Zero Gravity Mode Settings"
+   },
+   {
+    "field": "adjustToForwardSurfaceSpeed",
+    "label": "",
+    "section": "Zero Gravity Mode Settings"
+   },
+   {
+    "field": "setOnGroundStateOnTeleportToSurfaceOnZeroGravity",
+    "label": "",
+    "section": "Zero Gravity Mode Settings"
+   },
+   {
+    "field": "useCustomDirectionOnResetZeroGravityRotation",
+    "label": "",
+    "section": "Zero Gravity Mode Settings"
+   },
+   {
+    "field": "customDirectionOnResetZeroGravityRotation",
+    "label": "",
+    "section": "Zero Gravity Mode Settings"
+   },
+   {
+    "field": "useEventsOnZeroGravityModeStateChange",
+    "label": "",
+    "section": "Zero Gravity Mode Settings"
+   },
+   {
+    "field": "evenOnZeroGravityModeStateEnabled",
+    "label": "",
+    "section": "Zero Gravity Mode Settings"
+   },
+   {
+    "field": "eventOnZeroGravityModeStateDisabled",
+    "label": "",
+    "section": "Zero Gravity Mode Settings"
+   },
+   {
+    "field": "canActivateFreeFloatingMode",
+    "label": "",
+    "section": "Free Floating Mode Settings"
+   },
+   {
+    "field": "useEventsOnFreeFloatingModeStateChange",
+    "label": "",
+    "section": "Free Floating Mode Settings"
+   },
+   {
+    "field": "evenOnFreeFloatingModeStateEnabled",
+    "label": "",
+    "section": "Free Floating Mode Settings"
+   },
+   {
+    "field": "eventOnFreeFloatingModeStateDisabled",
+    "label": "",
+    "section": "Free Floating Mode Settings"
+   },
+   {
+    "field": "startWithNewGravity",
+    "label": "",
+    "section": "New Gravity At Start Settings"
+   },
+   {
+    "field": "usePlayerRotation",
+    "label": "",
+    "section": "New Gravity At Start Settings"
+   },
+   {
+    "field": "adjustRotationToSurfaceFound",
+    "label": "",
+    "section": "New Gravity At Start Settings"
+   },
+   {
+    "field": "newGravityToStart",
+    "label": "",
+    "section": "New Gravity At Start Settings"
+   },
+   {
+    "field": "changeModelColor",
+    "label": "",
+    "section": "Gravity Color Settings"
+   },
+   {
+    "field": "powerColor",
+    "label": "",
+    "section": "Gravity Color Settings"
+   },
+   {
+    "field": "usedByAI",
+    "label": "",
+    "section": "AI Settings"
+   },
+   {
+    "field": "showDebugPrint",
+    "label": "",
+    "section": "Debug Settings"
+   },
+   {
+    "field": "showGizmo",
+    "label": "",
+    "section": "Debug Settings"
+   },
+   {
+    "field": "debugGravityDirection",
+    "label": "",
+    "section": "Debug Settings"
+   },
+   {
+    "field": "playerCameraGameObject",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "pivotCameraTransform",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "gravityCenterCollider",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "playerControllerManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "powers",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "playerCollider",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "playerInput",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "weaponsManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "mainRigidbody",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "playerCameraManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "mainCameraTransform",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "gravityCenter",
+    "label": "",
+    "section": "Gravity Components"
+   },
+   {
+    "field": "cursor",
+    "label": "",
+    "section": "Gravity Components"
+   },
+   {
+    "field": "arrow",
+    "label": "",
+    "section": "Gravity Components"
+   },
+   {
+    "field": "playerRenderer",
+    "label": "",
+    "section": "Gravity Components"
+   }
+  ]
+ },
+ {
+  "type": "headBob",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Camera\\Player Camera\\headBob.cs",
+  "source": "Camera/Player Camera/headBob.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "headBobEnabled",
+    "label": "",
+    "section": "Settings"
+   },
+   {
+    "field": "staticIdleName",
+    "label": "",
+    "section": "Settings"
+   },
+   {
+    "field": "currentState",
+    "label": "",
+    "section": "Settings"
+   },
+   {
+    "field": "resetSpeed",
+    "label": "",
+    "section": "Settings"
+   },
+   {
+    "field": "shakeCameraInLockedMode",
+    "label": "",
+    "section": "Settings"
+   },
+   {
+    "field": "mainManagerName",
+    "label": "",
+    "section": "Settings"
+   },
+   {
+    "field": "useDynamicIdle",
+    "label": "",
+    "section": "Dynamic Idle Settings"
+   },
+   {
+    "field": "dynamicIdleName",
+    "label": "",
+    "section": "Dynamic Idle Settings"
+   },
+   {
+    "field": "timeToActiveDynamicIdle",
+    "label": "",
+    "section": "Dynamic Idle Settings"
+   },
+   {
+    "field": "externalShakeEnabled",
+    "label": "",
+    "section": "External Shake Settings"
+   },
+   {
+    "field": "externalForceStateName",
+    "label": "",
+    "section": "External Shake Settings"
+   },
+   {
+    "field": "jumpStartStateName",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "jumpEndStateName",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "jumpStartMaxIncrease",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "jumpStartSpeed",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "jumpEndMaxDecrease",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "jumpEndSpeed",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "jumpResetSpeed",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "showDebugPrint",
+    "label": "",
+    "section": "Player Bob State Debug"
+   },
+   {
+    "field": "playerControllerManager",
+    "label": "",
+    "section": "Player Elements Settings"
+   },
+   {
+    "field": "externalShakeManager",
+    "label": "",
+    "section": "Player Elements Settings"
+   },
+   {
+    "field": "playerBobState",
+    "label": "",
+    "section": "Current State Info"
+   }
+  ]
+ },
+ {
+  "type": "headTrack",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Head Track\\headTrack.cs",
+  "source": "Head Track/headTrack.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "headTrackEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "updateIKEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "head",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "headWeight",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "bodyWeight",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "rotationSpeed",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "weightChangeSpeed",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useTimeToChangeTarget",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "timeToChangeTarget",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "obstacleLayer",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useHeadTrackTarget",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "headTrackTargeTransform",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "lookInCameraDirection",
+    "label": "",
+    "section": "Look Camera Direction Settings"
+   },
+   {
+    "field": "cameraTargetToLook",
+    "label": "",
+    "section": "Look Camera Direction Settings"
+   },
+   {
+    "field": "cameraHeadWeight",
+    "label": "",
+    "section": "Look Camera Direction Settings"
+   },
+   {
+    "field": "cameraBodyWeight",
+    "label": "",
+    "section": "Look Camera Direction Settings"
+   },
+   {
+    "field": "cameraRangeAngleX",
+    "label": "",
+    "section": "Look Camera Direction Settings"
+   },
+   {
+    "field": "cameraRangeAngleY",
+    "label": "",
+    "section": "Look Camera Direction Settings"
+   },
+   {
+    "field": "maxDistanceToHeadToLookAtCameraTarget",
+    "label": "",
+    "section": "Look Camera Direction Settings"
+   },
+   {
+    "field": "lookInOppositeDirectionOutOfRange",
+    "label": "",
+    "section": "Look Camera Direction Settings"
+   },
+   {
+    "field": "lookInOppositeDirectionExtraRange",
+    "label": "",
+    "section": "Look Camera Direction Settings"
+   },
+   {
+    "field": "oppositeCameraTargetToLook",
+    "label": "",
+    "section": "Look Camera Direction Settings"
+   },
+   {
+    "field": "oppositeCameraTargetToLookParent",
+    "label": "",
+    "section": "Look Camera Direction Settings"
+   },
+   {
+    "field": "oppositeCameraParentRotationSpeed",
+    "label": "",
+    "section": "Look Camera Direction Settings"
+   },
+   {
+    "field": "lookBehindIfMoving",
+    "label": "",
+    "section": "Look Camera Direction Settings"
+   },
+   {
+    "field": "lookBehindRotationSpeed",
+    "label": "",
+    "section": "Look Camera Direction Settings"
+   },
+   {
+    "field": "useDeadZone",
+    "label": "",
+    "section": "Look Camera Direction Settings"
+   },
+   {
+    "field": "deadZoneLookBehind",
+    "label": "",
+    "section": "Look Camera Direction Settings"
+   },
+   {
+    "field": "useHeadRangeRotation",
+    "label": "",
+    "section": "Range Settings"
+   },
+   {
+    "field": "useTargetsToIgnoreList",
+    "label": "",
+    "section": "Targets To Ignore Settings"
+   },
+   {
+    "field": "animator",
+    "label": "",
+    "section": "Player Element"
+   },
+   {
+    "field": "playerControllerManager",
+    "label": "",
+    "section": "Player Element"
+   },
+   {
+    "field": "playerCameraManager",
+    "label": "",
+    "section": "Player Element"
+   },
+   {
+    "field": "IKManager",
+    "label": "",
+    "section": "Player Element"
+   },
+   {
+    "field": "showGizmo",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoRadius",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "arcGizmoRadius",
+    "label": "",
+    "section": "Gizmo Settings"
+   }
+  ]
+ }
+]

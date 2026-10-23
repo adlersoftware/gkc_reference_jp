@@ -1,0 +1,334 @@
+[
+ {
+  "type": "AIHidePositionsManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\AIHidePositionsManager.cs",
+  "methods": [
+   {
+    "sig": "addNewWayPoint()",
+    "line": 20
+   }
+  ]
+ },
+ {
+  "type": "AIViewTriggerSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\AIViewTriggerSystem.cs",
+  "methods": [
+   {
+    "sig": "checkTrigger(Collider col, bool isEnter)",
+    "line": 75
+   },
+   {
+    "sig": "callEvent(UnityEvent eventToCall)",
+    "line": 126
+   },
+   {
+    "sig": "callEventWithObject(eventParameters.eventToCallWithGameObject eventToCall, GameObject objectToSend)",
+    "line": 131
+   },
+   {
+    "sig": "setCheckTriggerEnabledState(bool state)",
+    "line": 136
+   }
+  ]
+ },
+ {
+  "type": "AIWalkToPosition",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\AIWalkToPosition.cs",
+  "methods": [
+   {
+    "sig": "activateWalkToPosition()",
+    "line": 48
+   },
+   {
+    "sig": "stopActivateWalkPosition()",
+    "line": 70
+   },
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 81
+   }
+  ]
+ },
+ {
+  "type": "AIAimRotationManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\Custom AI Behavior\\AIAimRotationManager.cs",
+  "methods": [
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 62
+   },
+   {
+    "sig": "setAIAImRotationState(string stateName)",
+    "line": 164
+   },
+   {
+    "sig": "setAIAimRotationEnabledState(bool state)",
+    "line": 229
+   },
+   {
+    "sig": "setAIAimRotationEnabledStateFromEditor(bool state)",
+    "line": 234
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 241
+   }
+  ]
+ },
+ {
+  "type": "shootBowSimpleAIAction",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\Custom AI Behavior\\shootBowSimpleAIAction.cs",
+  "methods": [
+   {
+    "sig": "setShootWeaponState(bool state)",
+    "line": 124
+   }
+  ]
+ },
+ {
+  "type": "shootFireWeaponSimpleAIAction",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\Custom AI Behavior\\shootFireWeaponSimpleAIAction.cs",
+  "methods": [
+   {
+    "sig": "setShootWeaponState(bool state)",
+    "line": 111
+   }
+  ]
+ },
+ {
+  "type": "shootPowerSimpleAIAction",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\Custom AI Behavior\\shootPowerSimpleAIAction.cs",
+  "methods": [
+   {
+    "sig": "setShootWeaponState(bool state)",
+    "line": 108
+   }
+  ]
+ },
+ {
+  "type": "useAbilitySimpleAIAction",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\Custom AI Behavior\\useAbilitySimpleAIAction.cs",
+  "methods": [
+   {
+    "sig": "setCurrentAbilityName(string abilityName)",
+    "line": 31
+   },
+   {
+    "sig": "setCurrentAbilityNameAndStartAIAction(string abilityName)",
+    "line": 36
+   }
+  ]
+ },
+ {
+  "type": "useCustomAbilitySimpleAIAction",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\Custom AI Behavior\\useCustomAbilitySimpleAIAction.cs",
+  "methods": [
+   {
+    "sig": "setCurrentAbilityName(string abilityName)",
+    "line": 47
+   },
+   {
+    "sig": "setCurrentAbilityNameAndStartAIAction(string abilityName)",
+    "line": 52
+   }
+  ]
+ },
+ {
+  "type": "characterToReceiveOrders",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\Custom Orders\\characterToReceiveOrders.cs",
+  "methods": [
+   {
+    "sig": "containsOrderName(string orderName)",
+    "line": 36
+   },
+   {
+    "sig": "activateOrder(string orderName)",
+    "line": 51
+   },
+   {
+    "sig": "setCustomTarget(Transform newTarget)",
+    "line": 108
+   },
+   {
+    "sig": "isOrderInProcess()",
+    "line": 127
+   }
+  ]
+ },
+ {
+  "type": "customOrderBehavior",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\Custom Orders\\customOrderBehavior.cs",
+  "methods": [
+   {
+    "sig": "activateOrder(Transform character)",
+    "line": 27
+   },
+   {
+    "sig": "activateOrder(Transform character, Transform orderOwner)",
+    "line": 32
+   },
+   {
+    "sig": "getCustomTarget(Transform character, Transform orderOwner)",
+    "line": 37
+   },
+   {
+    "sig": "setCustomTarget(Transform newTarget)",
+    "line": 44
+   },
+   {
+    "sig": "checkConditionToShowOrderButton(Transform character)",
+    "line": 55
+   }
+  ]
+ },
+ {
+  "type": "customOrderBehaviorToAttack",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\Custom Orders\\customOrderBehaviorToAttack.cs",
+  "methods": [
+   {
+    "sig": "canAIAttack(Transform AIFriend)",
+    "line": 122
+   },
+   {
+    "sig": "getClosestEnemy(Transform centerPointTransform)",
+    "line": 137
+   },
+   {
+    "sig": "getClosestEnemyToScreenView()",
+    "line": 182
+   }
+  ]
+ },
+ {
+  "type": "customOrderBehaviorToFollow",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\Custom Orders\\customOrderBehaviorToFollow.cs",
+  "methods": [
+   {
+    "sig": "canAIAttack(Transform AIFriend)",
+    "line": 134
+   },
+   {
+    "sig": "getClosestEnemy(Transform centerPointTransform)",
+    "line": 149
+   },
+   {
+    "sig": "getClosestEnemyToScreenView()",
+    "line": 194
+   }
+  ]
+ },
+ {
+  "type": "customOrderBehaviorToHide",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\Custom Orders\\customOrderBehaviorToHide.cs",
+  "methods": [
+   {
+    "sig": "getClosestHidePosition(Transform AIFriend)",
+    "line": 21
+   }
+  ]
+ },
+ {
+  "type": "customOrderBehaviorToUseAbility",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\Custom Orders\\customOrderBehaviorToUseAbility.cs",
+  "methods": [
+   {
+    "sig": "canAIAttack(Transform AIFriend)",
+    "line": 121
+   },
+   {
+    "sig": "getClosestEnemy(Transform centerPointTransform)",
+    "line": 136
+   },
+   {
+    "sig": "getClosestEnemyToScreenView()",
+    "line": 181
+   }
+  ]
+ },
+ {
+  "type": "addPatrolSystemToAI",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\addPatrolSystemToAI.cs",
+  "methods": [
+   {
+    "sig": "enableOrdisablePatrolOnAI(bool state)",
+    "line": 25
+   },
+   {
+    "sig": "assignAIWaypointPatrol()",
+    "line": 51
+   },
+   {
+    "sig": "addPatrolSystem()",
+    "line": 90
+   }
+  ]
+ },
+ {
+  "type": "animalAINavmesh",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\animalAINavmesh.cs",
+  "methods": [
+   {
+    "sig": "disableOverrideInputValues()",
+    "line": 34
+   }
+  ]
+ },
+ {
+  "type": "brainwashAIState",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\brainwashAIState.cs",
+  "methods": [
+   {
+    "sig": "activateState()",
+    "line": 39
+   },
+   {
+    "sig": "setnewPartnerGameObject(GameObject newObject)",
+    "line": 50
+   }
+  ]
+ },
+ {
+  "type": "eventOnTargetDetectedFaction",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\eventOnTargetDetectedFaction.cs",
+  "methods": [
+   {
+    "sig": "checkTargetDetected(GameObject newTarget)",
+    "line": 26
+   },
+   {
+    "sig": "removeTargetDetected(GameObject newTarget)",
+    "line": 39
+   },
+   {
+    "sig": "checkTargetDetected(string targetFactioName)",
+    "line": 52
+   },
+   {
+    "sig": "removeTargetDetected(string targetFactioName)",
+    "line": 77
+   },
+   {
+    "sig": "setCheckTargetsEnabledState(bool state)",
+    "line": 102
+   },
+   {
+    "sig": "setCheckTargetsEnabledStateFromEditor(bool state)",
+    "line": 107
+   }
+  ]
+ },
+ {
+  "type": "sleepingStateIconSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\sleepingStateIconSystem.cs",
+  "methods": [
+   {
+    "sig": "setSleepState(bool state)",
+    "line": 77
+   },
+   {
+    "sig": "stopSleepCoroutine()",
+    "line": 102
+   }
+  ]
+ }
+]

@@ -1,0 +1,109 @@
+[
+ {
+  "type": "objectStatsSystem",
+  "summary": "オブジェクト固有のステータスを`statInfoList`で持ち、読み込み時初期化とセーブ用の値取得/設定イベントを提供する。主人公側の`objectsStatsSystem`に登録される。",
+  "methods": {
+   "addObjectStatsToMainManager()": "主人公を確認し、その`objectsStatsSystem`へ自身を追加する。",
+   "setMainCharacterGameObject(GameObject newObject)": "`mainCharacterGameObject`を差し替えるだけ。",
+   "checkMainCharacterGameObject()": "未取得なら探索し、`characterLocated`をその有無に合わせて更新する。",
+   "getMainCharacterGameObject()": "本体が空のvirtualメソッドで、派生クラスが主人公を設定する。",
+   "checkStatsStateOnLoad()": "`useStats`が有効なら、`loadStatsDelay`の有無で即時または遅延の読み込み時設定を行う。",
+   "setStatsOnLoadWithDelay()": "`loadStatsDelay`秒待ってから`setStatsOnLoad`を呼ぶコルーチンを開始する。",
+   "setStatsOnLoad()": "各`statInfo`の初期化イベントを、数値またはboolの値付きで発火する。",
+   "setCurrentStatNameToSave(string newValue)": "保存対象のステータス名`currentStatNameToCheck`を設定するだけ。",
+   "setCurrentFloatValueToSave(float newValue)": "保存対象名に一致するステータスの`currentFloatValue`を更新し、見つかれば終了する。",
+   "setCurrentBoolValueToSave(bool newValue)": "保存対象名に一致するステータスの`currentBoolState`を更新し、見つかれば終了する。",
+   "checkEventOnStatsSave()": "各ステータス名を保存対象に設定しながら、数値取得またはbool取得イベントを順に発火する。"
+  }
+ },
+ {
+  "type": "objectsStatsSystem",
+  "summary": "複数の`objectStatsSystem`をリストで管理し、名前からの参照や有効状態の切り替えを行う。`increaseStat`は本体が未実装。",
+  "methods": {
+   "getObjectStatsInfoTemplateDataList()": "`objectStatsInfoTemplateDataList`をそのまま返すだけ。",
+   "addObjectStatsSystem(objectStatsSystem newObjectStatsSystem)": "有効時のみ、リストに未登録の`objectStatsSystem`を追加する。",
+   "getStatsFromObjectByName(string objectName)": "名前一致のオブジェクトのテンプレートから`objectStatInfoList`を返し、無効や不一致ならnull。",
+   "objectCanBeUpgraded(string objectName)": "名前一致のオブジェクトが登録されているかを返し、システム無効時はfalse。",
+   "increaseStat(string statName, float statExtraValue)": "本体はコメントアウトされており、有効判定のみで実際の加算は行わない。",
+   "setObjectsStatsSystemEnabledState(bool state)": "`objectsStatsSystemEnabled`を設定するだけ。",
+   "setObjectsStatsSystemEnabledStateFromEditor(bool state)": "エディタ用に`setObjectsStatsSystemEnabledState`を呼ぶだけ。"
+  }
+ },
+ {
+  "type": "externalStatsManager",
+  "summary": "`playerStatsSystem`への外部更新を中継するクラス。一時的なステータス名を保持し、無効時は何もしない。",
+  "methods": {
+   "setTemporalStatName(string statName)": "有効時のみ、一時的なステータス名`temporalStatName`を保持する。",
+   "updatePlayerStateOfTemporalStat(float statExtraValue)": "有効かつ名前が空でなければ、保持した名前で値を更新し、その後名前を空にする。",
+   "updateStatValueExternally(string statName, float newValue)": "有効時のみ、`mainPlayerStatsSystem`の同名メソッドへ値をそのまま渡す。",
+   "updateStatValueExternally(int statIndex, float newValue)": "有効時のみ、`mainPlayerStatsSystem`のインデックス指定版へ値をそのまま渡す。"
+  }
+ },
+ {
+  "type": "playerStatsSystem",
+  "summary": "キャラクターの数値・boolステータスを`statInfoList`で保持し、増減、上限Clamp、イベント発火、テンプレート保存/読込の中心となるクラス。",
+  "methods": {
+   "initializeStatsValues()": "有効時のみ、条件に応じてテンプレートを読み込み、各`statInfo`の初期化イベントを発火する。",
+   "setIsLoadingGameState(bool state)": "読み込み中かどうかの`isLoadingGame`を`state`に設定するだけ。",
+   "isLoadingGameState()": "`isLoadingGame`の値をそのまま返すだけ。",
+   "getStatMaxAmountByIndex(int statIndex)": "指定インデックスの最大値を返し、他ステータス参照時はその値（負なら現在値）を用いる。",
+   "getStatMaxAmountByName(string statName)": "名前で探した最大値を返し、`useMaxAmount`が無効か不一致なら-1を返す。",
+   "isStatOnMaxAmount(string statName)": "名前で探したステータスの現在値が最大値以上かを返し、それ以外はfalse。",
+   "increasePlayerStatWithNameAndAmount(string statNameAndAmountString)": "`;`区切りの「名前;数値」を分解し、値が正なら`increasePlayerStat`を呼ぶ。",
+   "setTemporalStatName(string statName)": "一時ステータス名`temporalStatName`を設定するだけ。",
+   "increasePlayerStateOfTemporalStat(float statExtraValue)": "保持した一時ステータス名で増加させ、その後`temporalStatName`を空にする。",
+   "increasePlayerStatByMultiplier(string statName, float statMultiplier)": "現在値の`statMultiplier`%を計算し、現在値が正なら加算する。",
+   "increasePlayerStat(string statName, float statExtraValue)": "名前一致のステータスへ値を加算し、上限があればClampして増加イベントを発火する。",
+   "increaseExtraPlayerStat(string statName, float statExtraValue)": "加算に加え`extraCurrentValue`にも値を積み、上限Clampと増加イベントを行う。",
+   "usePlayerStat(string statName, float statValueToUse)": "値を減算して0未満を0にし、使用イベントを発火する。",
+   "usePlayerStatByIndex(int statIndex, float statValueToUse)": "インデックスの範囲を確認してから、その名前で`usePlayerStat`を呼ぶ。",
+   "addOrRemovePlayerStatAmount(string statName, float amountToUse)": "符号付きの値を加算して0と上限でClampし、正なら追加、負なら使用イベントを発火する。",
+   "getStatName(int index)": "指定インデックスのステータス名を返し、範囲外なら空文字を返す。",
+   "getStatsNames()": "全ステータス名を新しいリストにして返す。",
+   "getStatValue(string statName)": "名前一致のステータス現在値を返し、見つからなければ-1を返す。",
+   "checkIfStatValueAvailable(string statName, int statAmount)": "現在値が`statAmount`以上かを返し、一致するステータスがなければfalse。",
+   "getStatValueByIndex(int statIndex)": "インデックスの現在値を返し、負のインデックスなら-1を返す。",
+   "getStatValueIndex(string statName)": "ステータス名のリスト内インデックスを返し、見つからなければ-1。",
+   "updateStatValue(string statName, float newValue)": "現在値を置き換えて上限Clampし、設定時イベントが有効ならインデックスと値を渡して発火する。",
+   "updateStatValueExternally(int statIndex, float newValue)": "インデックスを名前に変換し、外部更新版の`updateStatValueExternally`を呼ぶ。",
+   "updateStatValueExternally(string statName, float newValue)": "現在値を置き換えてClampし、外部更新用イベントが有効なら発火する。",
+   "updateStatValue(int statIndex, float newValue)": "インデックスを名前に変換して`updateStatValue`を呼ぶだけ。",
+   "enableOrDisableBoolPlayerStat(string statName, bool boolStateValue)": "boolステータスの状態を設定し、bool有効化イベントを発火する。",
+   "getBoolStatValue(string statName)": "名前一致のboolステータス状態を返し、見つからなければfalse。",
+   "updateBoolStatValue(string statName, bool boolStateValue)": "boolステータスの状態を保存するだけで、イベントは発火しない。",
+   "setPlayerStatsActiveState(bool state)": "`playerStatsActive`を`state`に設定するだけ。",
+   "saveSettingsToTemplate()": "テンプレートへ全ステータスの名前・数値・boolをコピーし、シーンをダーティにして保存ログを出す。",
+   "loadSettingsFromTemplate(bool loadingFromEditor)": "テンプレートと同名のステータスへ値とboolを戻し、エディタ読込時は更新とダーティ処理も行う。",
+   "initializeAllStatValuesFromEditor()": "全ステータスの初期化イベントを発火した後、コンポーネント更新とシーンのダーティ処理を行う。",
+   "initializeStatValueFromEditor(string statName, bool updateComponentValue)": "指定ステータスの初期化イベントを発火し、フラグが真ならコンポーネント更新とダーティ処理も行う。",
+   "updateStatValueFromEditor(string statName, float newValue)": "`updateStatValue`で値を更新した後、コンポーネント更新とシーンのダーティ処理を行う。",
+   "setPlayerStatsActiveStateFromEditor(bool state)": "有効状態を設定した後、コンポーネント更新とシーンのダーティ処理を行う。",
+   "updateComponent()": "`GKC_Utils.updateComponent`でこのコンポーネントを更新するだけ。"
+  }
+ },
+ {
+  "type": "showValuesOnScreenSystem",
+  "summary": "ステータス値やインベントリ個数を`Text`へ表示するHUDコンポーネント。パネルの表示制御と前後付加文字を扱う。",
+  "methods": {
+   "showInventoryObjectAmountByName()": "インベントリ名から個数を取得し、-1より大きければ画面表示を更新する。",
+   "showStatByName()": "`statNameToShow`の値を取得し、-1より大きければ画面表示を更新する。",
+   "updateValueAmount(int IDValue, float newValue)": "`IDValue`を無視して`updateValueAmount(float)`へ委譲する。",
+   "updateValueAmount(float newValue)": "パネルを表示して数値を文字列化し、前後付加文字を付けて`valueText`へ設定する。"
+  }
+ },
+ {
+  "type": "statType",
+  "summary": "ステータス変化を受け取るvirtualフック集で、既定実装はすべて空。派生クラスが初期化・増減・使用・bool切替の処理を実装する。",
+  "methods": {
+   "eventToInitializeStat(float newValue)": "本体が空のvirtualで、初期値`newValue`の利用は派生クラスが実装する。",
+   "eventToIncreaseStat(float newValue)": "本体が空で、増加量`newValue`の処理は派生クラスに委ねる。",
+   "eventToUseStat(float newValue)": "本体が空で、使用量`newValue`の処理は派生クラスに委ねる。",
+   "eventToAddAmount(float newValue)": "本体が空で、加算量`newValue`の処理は派生クラスに委ねる。",
+   "eventToInitializeBoolStat(bool newValue)": "本体が空で、boolの初期値`newValue`の利用は派生クラスが実装する。",
+   "eventToActivateBoolStat(bool newValue)": "本体が空で、bool状態`newValue`の反映は派生クラスが実装する。",
+   "eventToInitializeStatOnComponent()": "本体が空で、コンポーネント側の初期化は派生クラスが実装する。",
+   "eventToInitializeBoolStatOnComponent()": "本体が空で、bool用のコンポーネント初期化は派生クラスが実装する。",
+   "updateStatAmountWithoutUpdatingStatManager(int statId, float amount)": "本体が空で、`statId`と`amount`によるマネージャー非経由の更新は派生クラスが実装する。"
+  }
+ }
+]

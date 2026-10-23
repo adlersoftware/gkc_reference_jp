@@ -1,0 +1,696 @@
+[
+ {
+  "type": "playerCamera",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Camera\\Player Camera\\playerCamera.cs",
+  "methods": [
+   {
+    "sig": "setPauseUpdateRegularPlayerCameraPositionState(bool state)",
+    "line": 958
+   },
+   {
+    "sig": "setPlayerCameraTransformFollowsPlayerTransformRotationOnFBAState(bool state)",
+    "line": 1003
+   },
+   {
+    "sig": "setIgnoreHorizontalCameraRotationOnFBAState(bool state)",
+    "line": 1011
+   },
+   {
+    "sig": "setIgnoreVerticalCameraRotationOnFBAState(bool state)",
+    "line": 1016
+   },
+   {
+    "sig": "setIgnorePlayerRotationToCameraOnFBAState(bool state)",
+    "line": 1023
+   },
+   {
+    "sig": "getLookDirectionTransformRotationValue(Vector3 forwardDirection)",
+    "line": 2146
+   },
+   {
+    "sig": "checkEventOnMoveCamera(Vector2 currentAxisValues)",
+    "line": 2173
+   },
+   {
+    "sig": "getCurrentLookDirection2_5d()",
+    "line": 2193
+   },
+   {
+    "sig": "getCurrentLookDirectionTopDown()",
+    "line": 2198
+   },
+   {
+    "sig": "getDefaultThirdPersonStateName()",
+    "line": 2203
+   },
+   {
+    "sig": "getDefaultFirstPersonStateName()",
+    "line": 2208
+   },
+   {
+    "sig": "getDefaultVehiclePassengerStateName()",
+    "line": 2213
+   },
+   {
+    "sig": "getDefaultFullBodyAwarenessStateName()",
+    "line": 2218
+   },
+   {
+    "sig": "checkUpdateReticleActiveState(bool state)",
+    "line": 2223
+   },
+   {
+    "sig": "updateReticleActive()",
+    "line": 2234
+   },
+   {
+    "sig": "enableOrDisableMainCameraReticle(bool state)",
+    "line": 2267
+   },
+   {
+    "sig": "enableCustomReticle(string reticleName)",
+    "line": 2274
+   },
+   {
+    "sig": "disableCustomReticle(string reticleName)",
+    "line": 2279
+   },
+   {
+    "sig": "disableAllCustomReticle()",
+    "line": 2284
+   },
+   {
+    "sig": "enableOrDisableCustomReticle(bool state, string reticleName)",
+    "line": 2289
+   },
+   {
+    "sig": "setCurrentLockedCameraCursor(RectTransform currentCursor)",
+    "line": 2345
+   },
+   {
+    "sig": "sortTargetsListToLookTransformByDistance(Transform a, Transform b)",
+    "line": 2363
+   },
+   {
+    "sig": "checkChangeCurrentTargetToLook()",
+    "line": 2388
+   },
+   {
+    "sig": "setReverseVerticalAccelerometerState(bool state)",
+    "line": 2808
+   },
+   {
+    "sig": "setReverseHorizontalAccelerometerState(bool state)",
+    "line": 2813
+   },
+   {
+    "sig": "clampLookAngle(float deltaTimeToUse)",
+    "line": 2818
+   },
+   {
+    "sig": "checkCurrentRotationSpeed()",
+    "line": 2925
+   },
+   {
+    "sig": "sethorizontalCameraLimitActiveOnAirState(bool state)",
+    "line": 2936
+   },
+   {
+    "sig": "setShotCameraNoise(Vector2 noiseAmount)",
+    "line": 2979
+   },
+   {
+    "sig": "setShotCameraNoiseWithDuration(Vector2 noiseAmount, float duration)",
+    "line": 2987
+   },
+   {
+    "sig": "isCurrentCameraLookInPlayerDirection()",
+    "line": 3266
+   },
+   {
+    "sig": "lookInPlayerDirection(float rotationSpeedToUse, bool rotatePlayerCameraTransform, bool rotatePivotCameraTransform)",
+    "line": 3271
+   },
+   {
+    "sig": "projectOnSegment(Vector3 v1, Vector3 v2, Vector3 playerPosition)",
+    "line": 3338
+   },
+   {
+    "sig": "followPlayerPositionOnLockedCamera(float deltaTimeToUse)",
+    "line": 3356
+   },
+   {
+    "sig": "getHorizontalInput()",
+    "line": 3473
+   },
+   {
+    "sig": "getVerticalInput()",
+    "line": 3478
+   },
+   {
+    "sig": "setCanvasInfo(Vector2 newMainCanvasSizeDelta, bool newUsingScreenSpaceCamera, bool creatingCharactersOnEditor)",
+    "line": 3483
+   },
+   {
+    "sig": "setFollowingMultipleTargetsState(bool state, bool activatingFunctionFromEditor)",
+    "line": 3496
+   },
+   {
+    "sig": "setMultipleTargetsToFollowList(List<Transform> newMultipleTargetsToFollowList, bool activatingFunctionFromEditor)",
+    "line": 3505
+   },
+   {
+    "sig": "setextraPositionOffsetValue(Vector3 newOffset)",
+    "line": 3518
+   },
+   {
+    "sig": "getPositionToLimit(bool calculateOnRunTime)",
+    "line": 3523
+   },
+   {
+    "sig": "calculateBoundPosition(bool calculateOnRunTime)",
+    "line": 3763
+   },
+   {
+    "sig": "setIgnorePivotCameraCollisionActiveState(bool state)",
+    "line": 3781
+   },
+   {
+    "sig": "setPivotCameraTransformParent(Transform newParent)",
+    "line": 3786
+   },
+   {
+    "sig": "setPivotCameraTransformParentCurrentTransformToFollowWithDuration(float duration)",
+    "line": 3886
+   },
+   {
+    "sig": "setExtraFollowTransformPositionOffsetFBA(Vector3 newValue)",
+    "line": 3935
+   },
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 3944
+   },
+   {
+    "sig": "setUpdatePivotTransformPositionOnFBAIfCameraCantBeUsedActiveState(bool state)",
+    "line": 3974
+   },
+   {
+    "sig": "setUpdateFBAPivotCameraTransformInsideHeadPositionActiveState(bool state)",
+    "line": 3994
+   },
+   {
+    "sig": "isUpdateFBAPivotCameraTransformInsideHeadPositionActive()",
+    "line": 4016
+   },
+   {
+    "sig": "setCheckCameraCollisionEvenOnFullBodyAwarenessActiveState(bool state)",
+    "line": 4141
+   },
+   {
+    "sig": "checkCameraPosition()",
+    "line": 4148
+   },
+   {
+    "sig": "setTurnBasedCombatActionActiveState(bool state)",
+    "line": 4215
+   },
+   {
+    "sig": "setCameraToFreeOrLocked(typeOfCamera state, lockedCameraSystem.cameraAxis lockedCameraInfo)",
+    "line": 4220
+   },
+   {
+    "sig": "setClampAimDirectionsState(bool state)",
+    "line": 4731
+   },
+   {
+    "sig": "calculateLockedCameraLookAtPlayerPosition()",
+    "line": 4736
+   },
+   {
+    "sig": "setCameraLimit(bool useCameraLimitValue, bool useWidthLimitValue, float newWidthLimitRight, float newWidthLimitLeft, bool useHeightLimitValue, float newHeightLimitUpper, float newHeightLimitLower, Vector3 newCameraLimitPosition, bool depthLimitEnabled, float newDepthLimitFront, float newDepthLimitBackward)",
+    "line": 4790
+   },
+   {
+    "sig": "setNewCameraForwardPosition(float newCameraForwardPosition)",
+    "line": 4810
+   },
+   {
+    "sig": "isTopdownViewEnabled()",
+    "line": 4829
+   },
+   {
+    "sig": "callLockedCameraEventOnEnter(lockedCameraSystem.cameraAxis cameraAxisToCheck)",
+    "line": 4839
+   },
+   {
+    "sig": "callLockedCameraEventOnExit(lockedCameraSystem.cameraAxis cameraAxisToCheck)",
+    "line": 4848
+   },
+   {
+    "sig": "setUsing2_5ViewActiveState(bool state)",
+    "line": 4869
+   },
+   {
+    "sig": "setUseCustomOriginalLockedCameraPivotPositionTransformState(bool state)",
+    "line": 4928
+   },
+   {
+    "sig": "setCustomOriginalLockedCameraPivotPosition(Vector3 newValue)",
+    "line": 4933
+   },
+   {
+    "sig": "setNewOriginalLockedCameraPivotPosition(Vector3 newValue)",
+    "line": 4938
+   },
+   {
+    "sig": "getCameraRaycastDirection()",
+    "line": 4943
+   },
+   {
+    "sig": "setManualAimStateOnLockedCamera(bool state)",
+    "line": 4958
+   },
+   {
+    "sig": "setManualAimState(bool state)",
+    "line": 4965
+   },
+   {
+    "sig": "movePlayerToDefaultHorizontalValue2_5d()",
+    "line": 4989
+   },
+   {
+    "sig": "stopLockedCameraMovementCoroutine()",
+    "line": 5132
+   },
+   {
+    "sig": "lockedCameraMovement(bool isBeingSetToLocked)",
+    "line": 5141
+   },
+   {
+    "sig": "setCurrentAxisTransformValues(Transform newValues)",
+    "line": 5184
+   },
+   {
+    "sig": "setLockedMainCameraTransformRotation(Vector3 normal)",
+    "line": 5195
+   },
+   {
+    "sig": "setLockedCameraAxisPositionOnGravityChange(Vector3 newPosition)",
+    "line": 5297
+   },
+   {
+    "sig": "setCharacterRotatingToSurfaceState(bool state)",
+    "line": 5343
+   },
+   {
+    "sig": "getCurrentLockedCameraTransform()",
+    "line": 5348
+   },
+   {
+    "sig": "getCurrentLockedCameraAxis()",
+    "line": 5353
+   },
+   {
+    "sig": "getCameraTransform()",
+    "line": 5358
+   },
+   {
+    "sig": "getMainCamera()",
+    "line": 5363
+   },
+   {
+    "sig": "setNewMainCameraOnMainParent()",
+    "line": 5380
+   },
+   {
+    "sig": "setMainCameraParent(Transform newParent)",
+    "line": 5388
+   },
+   {
+    "sig": "resetMainCameraLocalPositionRotation()",
+    "line": 5399
+   },
+   {
+    "sig": "setLookAtBodyPartsOnCharactersState(bool state)",
+    "line": 5410
+   },
+   {
+    "sig": "setOriginalLookAtBodyPartsOnCharactersState()",
+    "line": 5415
+   },
+   {
+    "sig": "getClosestTargetToLook()",
+    "line": 5421
+   },
+   {
+    "sig": "setLookAtTargetStateInput(bool state)",
+    "line": 5783
+   },
+   {
+    "sig": "checkIfPlayerIsLookingAtDeadTarget(bool state)",
+    "line": 5818
+   },
+   {
+    "sig": "setTemporalObjectToLookAtTarget(Transform newObject)",
+    "line": 5840
+   },
+   {
+    "sig": "lookAtTemporalObjectToLookAtTarget()",
+    "line": 5845
+   },
+   {
+    "sig": "setLookAtTargetStateManual(bool state, Transform objectToLook)",
+    "line": 5852
+   },
+   {
+    "sig": "setLookAtTargetState(bool state, Transform objectToLook)",
+    "line": 5860
+   },
+   {
+    "sig": "setUseLookTargetIconState(bool state)",
+    "line": 6026
+   },
+   {
+    "sig": "setOriginalUseLookTargetIconValue()",
+    "line": 6031
+   },
+   {
+    "sig": "setLookAtTargetOnLockedCameraState()",
+    "line": 6053
+   },
+   {
+    "sig": "getClosestTargetToLookOnLockedCamera()",
+    "line": 6060
+   },
+   {
+    "sig": "checkRemoveEventOnLockedOnStart(Transform objectToCheck)",
+    "line": 6280
+   },
+   {
+    "sig": "checkRemoveEventOnLockOnEnd()",
+    "line": 6299
+   },
+   {
+    "sig": "checkEventOnLockAtTargetState(bool state)",
+    "line": 6322
+   },
+   {
+    "sig": "checkEventOnLockedOnStart()",
+    "line": 6333
+   },
+   {
+    "sig": "checkEventOnLockOnEnd()",
+    "line": 6340
+   },
+   {
+    "sig": "setTargetToLook(Transform newTarget)",
+    "line": 6347
+   },
+   {
+    "sig": "getLastCharacterToLook()",
+    "line": 6357
+   },
+   {
+    "sig": "getPlayerControllerGameObject()",
+    "line": 6367
+   },
+   {
+    "sig": "setHipsTransform(Transform newHips)",
+    "line": 6372
+   },
+   {
+    "sig": "updateHipsTransformInGame(Transform newHips)",
+    "line": 6379
+   },
+   {
+    "sig": "checkTargetToLookShader(Transform newObjectFound)",
+    "line": 6384
+   },
+   {
+    "sig": "checkIfSetNewShaderToObjectToGrabFound(GameObject objectToCheck)",
+    "line": 6399
+   },
+   {
+    "sig": "checkIfSetOriginalShaderToPreviousObjectToGrabFound()",
+    "line": 6410
+   },
+   {
+    "sig": "setLookAtTargetEnabledState(bool state)",
+    "line": 6421
+   },
+   {
+    "sig": "setLookAtTargetEnabledStateDuration(bool currentState, float duration, bool nextState)",
+    "line": 6426
+   },
+   {
+    "sig": "setLookAtTargetSpeedValue(float newValue)",
+    "line": 6454
+   },
+   {
+    "sig": "setOriginallookAtTargetSpeedValue()",
+    "line": 6459
+   },
+   {
+    "sig": "setMaxDistanceToFindTargetValue(float newValue)",
+    "line": 6464
+   },
+   {
+    "sig": "setOriginalmaxDistanceToFindTargetValue()",
+    "line": 6469
+   },
+   {
+    "sig": "setMaxDistanceToCameraCenter(bool useMaxDistance, float maxDistance)",
+    "line": 6474
+   },
+   {
+    "sig": "setHeadColliderRadiusOnFBA(float newValue)",
+    "line": 6497
+   },
+   {
+    "sig": "getHeadColliderOnFBA()",
+    "line": 6514
+   },
+   {
+    "sig": "setOriginalHeadColliderRadiusOnFBA()",
+    "line": 6519
+   },
+   {
+    "sig": "setUseHeadColliderOnFBAState(bool state)",
+    "line": 6524
+   },
+   {
+    "sig": "setUseHeadColliderOnThirdPersonState(bool state)",
+    "line": 6563
+   },
+   {
+    "sig": "checkGetUpStateFromDeathOnFBA()",
+    "line": 6568
+   },
+   {
+    "sig": "death(bool state, bool followHips)",
+    "line": 6577
+   },
+   {
+    "sig": "setCustomSmoothReturnSpeed(float newValue)",
+    "line": 6620
+   },
+   {
+    "sig": "setOriginalSmoothReturnSpeed()",
+    "line": 6624
+   },
+   {
+    "sig": "slerpCameraState(cameraStateInfo to, cameraStateInfo from, float lerpSpeed)",
+    "line": 6629
+   },
+   {
+    "sig": "slerpCameraStateAtOnce(cameraStateInfo to, cameraStateInfo from)",
+    "line": 6634
+   },
+   {
+    "sig": "setTargetToFollow(Transform newTargetToFollow)",
+    "line": 6639
+   },
+   {
+    "sig": "setOriginalTargetToFollow()",
+    "line": 6645
+   },
+   {
+    "sig": "setCameraStateOnlyOnThirdPerson(string stateName)",
+    "line": 6650
+   },
+   {
+    "sig": "setDefaultCameraStateOnlyOnThirdPerson()",
+    "line": 6661
+   },
+   {
+    "sig": "setCameraStateExternally(string stateName)",
+    "line": 6666
+   },
+   {
+    "sig": "setCameraState(string stateName)",
+    "line": 6675
+   },
+   {
+    "sig": "setNewNearClipPlaneValue(float nearClipPlaneValue)",
+    "line": 6742
+   },
+   {
+    "sig": "setDefaultNearClipPlaneValue()",
+    "line": 6747
+   },
+   {
+    "sig": "setIgnoreMainCameraFovOnSetCameraState(bool state)",
+    "line": 6752
+   },
+   {
+    "sig": "setDefaultThirdPersonStateName(string newName)",
+    "line": 6757
+   },
+   {
+    "sig": "setDefaultFirstPersonStateName(string newName)",
+    "line": 6762
+   },
+   {
+    "sig": "getCurrentStateName()",
+    "line": 6767
+   },
+   {
+    "sig": "setCameraPositionMouseWheelEnabledState(bool state)",
+    "line": 6772
+   },
+   {
+    "sig": "moveAwayCamera()",
+    "line": 6822
+   },
+   {
+    "sig": "isCurrentCameraStateHeadTrackActive()",
+    "line": 6853
+   },
+   {
+    "sig": "setMainCameraFov(float targetValue, float speed)",
+    "line": 6858
+   },
+   {
+    "sig": "stopFovChangeCoroutine()",
+    "line": 6869
+   },
+   {
+    "sig": "changeFovValue(float targetValue, float speed)",
+    "line": 6876
+   },
+   {
+    "sig": "setFieldOfViewValueWithoutCheckIgnoreExternalFovChange(float newValue)",
+    "line": 6904
+   },
+   {
+    "sig": "stopCameraFovStartAndEndCoroutine()",
+    "line": 6920
+   },
+   {
+    "sig": "changeFovValueStartAndEnd(float startTargetValue, float endTargetValue, float speed)",
+    "line": 6927
+   },
+   {
+    "sig": "isFOVChanging()",
+    "line": 6946
+   },
+   {
+    "sig": "quickChangeFovValue(float targetValue)",
+    "line": 6951
+   },
+   {
+    "sig": "setOriginalCameraFov()",
+    "line": 6956
+   },
+   {
+    "sig": "getMainCameraCurrentFov()",
+    "line": 6961
+   },
+   {
+    "sig": "setZoom(bool state)",
+    "line": 6967
+   },
+   {
+    "sig": "setZoomStateDuration(bool currentState, float duration, bool nextState)",
+    "line": 7006
+   },
+   {
+    "sig": "setZoomEnabledState(bool state)",
+    "line": 7028
+   },
+   {
+    "sig": "disableZoom()",
+    "line": 7033
+   },
+   {
+    "sig": "isUsingZoom()",
+    "line": 7044
+   },
+   {
+    "sig": "setUsingZoomOnValue(bool value)",
+    "line": 7049
+   },
+   {
+    "sig": "setScannerManagerState(bool state)",
+    "line": 7056
+   },
+   {
+    "sig": "changeRotationSpeedValue(float newVerticalRotationValue, float newHorizontalRotationValue)",
+    "line": 7063
+   },
+   {
+    "sig": "setOriginalRotationSpeed()",
+    "line": 7078
+   },
+   {
+    "sig": "updateOriginalRotationSpeedValues()",
+    "line": 7087
+   },
+   {
+    "sig": "setPauseChangeCameraFovActiveState(bool state)",
+    "line": 7135
+   },
+   {
+    "sig": "activateAiming()",
+    "line": 7141
+   },
+   {
+    "sig": "deactivateAiming()",
+    "line": 7226
+   },
+   {
+    "sig": "changeAimSide(int value)",
+    "line": 7260
+   },
+   {
+    "sig": "setUseCustomThirdPersonAimActivePausedState(bool state)",
+    "line": 7309
+   },
+   {
+    "sig": "isUseCustomThirdPersonAimActivePaused()",
+    "line": 7314
+   },
+   {
+    "sig": "setUseCustomThirdPersonAimActiveState(bool state, string newCustomDefaultThirdPersonAimRightStateName, string newCustomDefaultThirdPersonAimLeftStateName)",
+    "line": 7319
+   },
+   {
+    "sig": "setUseCustomThirdPersonAimCrouchActiveState(bool state, string newCustomDefaultThirdPersonAimRightCrouchStateName, string newCustomDefaultThirdPersonAimLeftCrouchStateName)",
+    "line": 7339
+   },
+   {
+    "sig": "setCheckUseCustomFBAAimActiveState(bool state)",
+    "line": 7360
+   },
+   {
+    "sig": "onGroundOrOnAir(bool state)",
+    "line": 7366
+   },
+   {
+    "sig": "startShakeCamera()",
+    "line": 7394
+   }
+  ]
+ }
+]

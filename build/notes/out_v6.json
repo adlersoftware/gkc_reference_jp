@@ -1,0 +1,183 @@
+[
+  {
+    "type": "GKCRiderSocketSystem",
+    "summary": "ライダー系コンポーネントへの参照を保持するだけの小さなソケット。`mainRiderSystem` を外部から取得するために使う。",
+    "methods": {
+      "getMainRiderSystem()": "保持している`mainRiderSystem`参照を返すだけ。"
+    }
+  },
+  {
+    "type": "WaypointCircuit",
+    "summary": "Transformのリストから周回コースを組み、距離に応じた位置と方向をCatmull-Rom補間で返すウェイポイント回路。経路の追加や名前整列、位置リセットなどのエディタ補助も持つ。",
+    "methods": {
+      "getClosestPosition(Vector3 position)": "指定位置に最も近いウェイポイントの座標を返し、見つからなければ`Vector3.zero`を返す。",
+      "getProgressValue(Vector3 position)": "最も近いウェイポイントを探し、先頭からそこまでの累積距離を返す（先頭なら直接距離、空なら-1）。",
+      "GetRoutePoint(float dist)": "`dist`位置の座標と、少し先との差分から求めた進行方向を`RoutePoint`として返す。",
+      "GetRoutePosition(float dist)": "`dist`を`Length`で折り返し、`smoothRoute`ならCatmull-Rom、違えば線形補間で座標を返す。",
+      "addNewWayPoint()": "末尾点の前方1m（無ければ自身の位置）に子オブジェクトを作り`waypointList`に追加して更新する。",
+      "addNewWayPointAtIndex(int index)": "新しいウェイポイントを作って指定インデックスの右3mに置き、その直後に挿入して名前を振り直す。",
+      "renameWaypoints()": "各ウェイポイントを1始まりの連番に改名し、親を付け直したうえでシーンを更新する。",
+      "resetWaypointsPositions()": "全ウェイポイントのローカル位置を原点から前方2mずつ並ぶようにリセットし、シーンを更新する。",
+      "updateComponent()": "`GKC_Utils.updateComponent`とダーティシーン更新を呼び、インスペクタ表示を更新する。"
+    }
+  },
+  {
+    "type": "WaypointProgressTracker",
+    "summary": "`WaypointCircuit`上の進捗距離を進めながら、注視点`target`を先読み位置へ動かす追従トラッカー。スムーズとポイント間の2モードを切り替えられる。",
+    "methods": {
+      "setWaypointActiveState(bool state)": "`waypointActive`を設定し、回路追従とAIの走行状態を有効/無効に切り替える。",
+      "activateTrackState()": "`waypointActive`がfalseのときだけ追従を有効にして再開する。",
+      "stopTrackState()": "`waypointActive`がtrueのときだけ追従を無効にして止める。",
+      "resetTrackerState()": "回路が無ければ戻り、あれば`target`をモードに応じた位置に合わせ`progressDistance`を再計算する。"
+    }
+  },
+  {
+    "type": "hoverBoardWayPoints",
+    "summary": "ホバーボード用レールのウェイポイント群を保持し、トリガーに進入した車両へレール移動を開始させるコンポーネント。エディタで点の追加・削除・改名も行う。",
+    "methods": {
+      "addNewWayPoint()": "`wayPointElement`を末尾点の前方に複製して子にし、方向・トリガー・メッシュ情報を`wayPoints`に追加する。",
+      "removeWaypoint(int index)": "指定インデックスのウェイポイントオブジェクトを即時削除して`wayPoints`から外し、シーンを更新する。",
+      "addNewWayPointAtIndex(int index)": "指定点の前方に新しい点を複製して`index`位置に挿入し、全点の名前を振り直す。",
+      "selectObjectByIndex(int index)": "指定インデックスのウェイポイントをエディタ上で選択するだけ。",
+      "renameAllWaypoints()": "各ウェイポイント名を1始まりの連番に直し、兄弟順もインデックスに合わせる。",
+      "updateComponent()": "`GKC_Utils.updateComponent`とダーティシーン更新を呼ぶだけ。"
+    }
+  },
+  {
+    "type": "launchTrayectory",
+    "summary": "カメラの向きから着弾点をレイキャストし、放物線の軌跡と着地点アイコンをLineRendererで表示する照準補助。2.5D/3Dビューやヘッドトラックにも対応する。",
+    "methods": {
+      "stopUpdateCoroutine()": "実行中の軌跡更新コルーチンがあれば停止するだけ（参照は残る）。",
+      "changeParableState(bool state)": "放物線表示の有効状態を設定し、LineRenderer・更新コルーチン・着地点アイコン・頭トラックを切り替える。",
+      "setMainCameraTransform(Transform newCameraTransform)": "`mainCameraTransform`を差し替えるだけ。",
+      "setShowLineRendererEnabledState(bool state)": "`showLineRendererEnabled`を設定するだけ。"
+    }
+  },
+  {
+    "type": "mainRiderSystem",
+    "summary": "車両のライダー（搭乗者）まわりの共通インターフェース。派生クラスが上書きする前提で、多くの仮想メソッドは空実装かnull/false/0を返す。",
+    "methods": {
+      "isVehicleOnlyForOnePlayerActive()": "`vehicleOnlyForOnePlayer`の値を返すだけ。",
+      "getVehicleCameraGameObject()": "基底では`null`を返す仮想メソッド。",
+      "getVehicleGravityControl()": "基底では`null`を返す仮想メソッド。",
+      "getVehicleGameObject()": "基底では`null`を返す仮想メソッド。",
+      "setTriggerToDetect(Collider newCollider)": "本体が空で何もしない。",
+      "setPlayerVisibleInVehicleState(bool state)": "本体が空で何もしない。",
+      "setResetCameraRotationWhenGetOnState(bool state)": "本体が空で何もしない。",
+      "setEjectPlayerWhenDestroyedState(bool state)": "本体が空で何もしない。",
+      "getCustomVehicleTransform()": "基底では`null`を返す仮想メソッド。",
+      "setEnteringOnVehicleFromDistanceState(bool state)": "本体が空で何もしない。",
+      "setCurrentPassenger(GameObject passenger)": "本体が空で何もしない。",
+      "getCurrentDriver()": "基底では`null`を返す仮想メソッド。",
+      "isBeingDrivenActive()": "基底では`false`を返す仮想メソッド。",
+      "getVehicleRadius()": "基底では`0`を返す仮想メソッド。",
+      "checkIfDetectSurfaceBelongToVehicle(Collider surfaceFound)": "基底では`false`を返す仮想メソッド。",
+      "getVehicleCollider()": "基底では`null`を返す仮想メソッド。"
+    }
+  },
+  {
+    "type": "remoteVehicleNavmeshOverride",
+    "summary": "外部オブジェクトから`vehicleAINavMesh`へ追従ターゲットを設定/解除する小さなブリッジ。目標の種別や自動ブレーキ設定も一緒に渡す。",
+    "methods": {
+      "setVehicleNavMeshTargetPosition()": "`targetTranform`（未設定なら自身）を追従させ、種別と自動ブレーキ設定も反映する。",
+      "removeVehicleNavmeshTarget()": "自動ブレーキ設定を反映したうえで`removeTarget`を呼び、追従対象を解除する。"
+    }
+  },
+  {
+    "type": "shipInterfaceInfo",
+    "summary": "宇宙船HUDのテキストやバーを毎フレーム更新する船用インターフェース。武器名・弾薬・体力・エネルギー・燃料などを表示する。",
+    "methods": {
+      "enableOrDisableInterface(bool state)": "`vehicleInterfaceEnabled`がfalseなら何もせず、trueなら状態を設定してキャンバスを切り替える。",
+      "shipCanLand(bool state)": "`canLand`テキストを着陸可否に応じて「YES」か「NO」にするだけ。",
+      "shipEnginesState(bool state)": "`enginesState`テキストを「ON」か「OFF」にするだけ。"
+    }
+  },
+  {
+    "type": "skidsManager",
+    "summary": "タイヤ痕を1つのメッシュに蓄積して描画するスキッドマーク管理。追加された節点から頂点・法線・UV・三角形を組み直す。",
+    "methods": {
+      "AddSkidMark(Vector3 pos, Vector3 normal, float intensity, int lastIndex)": "無効なら-1を返し、円環インデックスに節点を記録して幅方向の左右頂点を計算し、更新フラグを立てて通し番号を返す。",
+      "setSkidsEnabledState(bool state)": "`skidsEnabled`を設定するだけ。"
+    }
+  },
+  {
+    "type": "vehicleAINavMesh",
+    "summary": "NavMesh上を走るAI車両の追従・巡回路・回避・ブレーキ制御をまとめたコンポーネント。入力値の上書きや目標の再評価も行う。",
+    "methods": {
+      "enableOrDisableAIObject(bool state)": "AIオブジェクトのアクティブを切り替え、一時停止と使用状態を反映し、無効化時はAI運転中なら中断して入力をゼロにする。",
+      "enableOrDisableAIObjectWithoutActivatingDrivingState(bool state)": "運転状態を変えずに同じ切り替えを行い、使用状態だけを反映する。",
+      "setUsedByAIState(bool state)": "`mainVehicleHudManager.setUsedByAIState`に委譲するだけ。",
+      "setUsedByAIStateWithoutActivatingDrvingState(bool state)": "`mainVehicleHudManager`の同名メソッドに委譲するだけ。",
+      "enableOrDisablePatrolState(bool state)": "巡回マネージャがあるとき、開始なら一時停止を解いて最寄り点と巡回復帰を設定し、終了なら一時停止する。",
+      "SetTarget(Transform target)": "`m_Target`を新しいターゲットに差し替え、走行状態を有効にする。",
+      "setDrivingState(bool state)": "`driving`を設定し、反転状態やステア方向、反転時刻の記録をリセットする。",
+      "setUsingTrackActive(bool state)": "`usingTrackActive`を設定するだけ。",
+      "setVehicleAIActiveState(bool state)": "`vehicleAIActive`を設定するだけ。",
+      "setAutoBrakeOnRemoveTargetState(bool state)": "`autoBrakeOnRemoveTarget`を設定するだけ。"
+    }
+  },
+  {
+    "type": "vehicleDamageReceiver",
+    "summary": "車両の各コライダーに付いて被弾を受け、`vehicleHUDManager`へ体力・燃料・エネルギー処理を中継する受信コンポーネント。`healthManagement`の抽象メソッドも上書き実装する。",
+    "methods": {
+      "setDamage(float amount, Vector3 fromDirection, Vector3 damagePos, GameObject bulletOwner, GameObject projectile, bool damageConstant, bool searchClosestWeakSpot, bool damageCanBeBlocked)": "`damageMultiplier`を掛けた量を`hudManager.setDamage`へ渡し、部位体力設定なら部位も減らす。",
+      "setHeal(float amount)": "`hudManager.getHealth`に回復量をそのまま渡すだけ。",
+      "getMaxHealthAmount()": "`hudManager`の最大体力を返すだけ。",
+      "getAuxHealthAmount()": "`hudManager`の予備体力を返すだけ。",
+      "addAuxHealthAmount(float amount)": "`hudManager.addAuxHealthAmount`に委譲するだけ。",
+      "getCurrentFuelAmount()": "`hudManager`の現在燃料を返すだけ。",
+      "getMaxFuelAmount()": "`hudManager`の最大燃料を返すだけ。",
+      "getFuel(float amount)": "`hudManager.getFuel`に補充量を渡すだけ。",
+      "removeFuel(float amount)": "`hudManager.removeFuel`に消費量を渡すだけ。",
+      "destroyVehicle()": "`hudManager.destroyVehicle`を呼んで車両を破壊するだけ。",
+      "getDecalImpactIndex()": "`hudManager.getDecalImpactIndex`の値を返すだけ。",
+      "getEnergy(float amount)": "`hudManager.getEnergy`に補充量を渡すだけ。",
+      "removeEnergy(float amount)": "`hudManager.removeEnergy`に消費量を渡すだけ。",
+      "getCurrentEnergyAmount()": "`hudManager`の現在エネルギーを返すだけ。",
+      "getMaxEnergyAmount()": "`hudManager`の最大エネルギーを返すだけ。",
+      "getAuxEnergyAmount()": "`hudManager`の予備エネルギーを返すだけ。",
+      "addAuxEnergyAmount(float amount)": "`hudManager.addAuxEnergyAmount`に委譲するだけ。",
+      "isVehicleDestroyed()": "`hudManager.destroyed`を返すだけ。",
+      "ignoreCollisionWithSolidVehicleColliderList(Collider colliderToIgnore, bool state)": "`hudManager`の同名メソッドにコライダーと状態を渡すだけ。",
+      "setVehicle(GameObject vehicleGameObject, vehicleHUDManager currentVehicleHUDManager)": "`vehicle`と`hudManager`を差し替えてシーンを更新する。",
+      "setDamageTargetOverTimeState(float damageOverTimeDelay, float damageOverTimeDuration, float damageOverTimeAmount, float damageOverTimeRate, bool damageOverTimeToDeath, int damageTypeID)": "継続ダメージの遅延・時間・量・間隔・致死可否・種類を`hudManager`へ渡すだけ。",
+      "removeDamagetTargetOverTimeState()": "`hudManager.stopDamageOverTime`を呼ぶだけ。",
+      "getHUDManager()": "保持している`hudManager`を返すだけ。",
+      "updateComponent()": "`GKC_Utils.updateComponent`とダーティシーン更新を呼ぶだけ。"
+    }
+  },
+  {
+    "type": "vehicleInteractionPanelSystem",
+    "summary": "近くの車両を検知したときに運転/同乗の入力アイコンや満車表示を出すパネル。入力に応じてプレイヤーを車両へ搭乗させる。",
+    "methods": {
+      "stopUpdateCoroutine()": "実行中の更新コルーチンがあれば停止する。",
+      "setCurrentVehicleDetected(GameObject newVehicle)": "検知車両を保持し、車両なら席数や運転/同乗/満車アイコンとキー表示を更新する。",
+      "inputEnterOnVehicleAsDriver()": "満車・運転中・直後の再搭乗などのガードを通ったら、プレイヤーを運転席に乗せる。",
+      "inputEnterOnVehicleAsPassenger()": "運転中なら現車両をデバイスとして使い直し、そうでなければガード確認後に同乗させる。"
+    }
+  },
+  {
+    "type": "vehicleInterface",
+    "summary": "車両のUIキャンバスとUI要素リストを管理し、押された要素に応じて値送信イベントを発火するインターフェース。パネルの移動・回転操作も扱う。",
+    "methods": {
+      "setInterfaceCanBeEnabledState(bool state)": "`interfaceCanBeEnabled`を設定するだけ。",
+      "enableOrDisableInterface(bool state)": "有効化可否が真なら状態を設定してキャンバスを切り替え、無効化時は車両オフ用要素を初期値に戻す。",
+      "checkPressedUIElememt(GameObject uiElement)": "一致するUI要素の設定に従い、スライダー値やトグル/ボタンのboolを読んでテキストと対応イベントへ反映する。",
+      "setMoveInterfacePanelPressed(RectTransform panelToCheck)": "パネル情報の押下判定をしたうえで`movingPanel`を反転する。",
+      "setRotateInterfacePanelPressed(RectTransform panelToCheck)": "パネル情報の押下判定をしたうえで`rotatingPanel`を反転する。",
+      "checkInterfacePanelInfoPressed(RectTransform panelToCheck)": "対象パネルなら選択状態を反転し、選択時は親に付け替えてドライバーの入力管理を取得、解除時は元の親へ戻す。",
+      "resetInterfacePanelInfoPressed(RectTransform panelToCheck)": "対象パネルのローカル位置と回転を記録済みの初期値に戻す。",
+      "setInterfaceCanvasState(bool state)": "状態が異なるときだけ`interfaceCanvas`のアクティブを切り替える。",
+      "addInterfaceElement()": "名前「New Element」の要素を`interfaceElementList`に追加してシーンを更新する。",
+      "updateComponent()": "`GKC_Utils.updateComponent`とダーティシーン更新を呼ぶだけ。"
+    }
+  },
+  {
+    "type": "vehicleLaser",
+    "summary": "車両搭載レーザーの照射判定と描画を行うコンポーネント。ヒット位置に火花やパーティクルを出し、継続的にダメージを与える。",
+    "methods": {
+      "changeLaserState(bool state)": "描画と`laserActive`を設定し、有効化時は演出開始とドライバー取得、無効化時は火花とパーティクルを消す。",
+      "updateCustomRayPosition(Vector3 newPosition, Vector3 newDirection)": "`usingCustomRayPosition`を立て、カスタムの照射開始位置と方向を保存する。"
+    }
+  }
+]

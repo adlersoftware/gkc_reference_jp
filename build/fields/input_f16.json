@@ -1,0 +1,823 @@
+[
+ {
+  "type": "moveCameraToDevice",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\moveCameraToDevice.cs",
+  "source": "Devices/moveCameraToDevice.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "cameraMovementActive",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "cameraPosition",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "smoothCameraMovement",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useFixedLerpMovement",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "fixedLerpMovementSpeed",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "cameraMovementSpeedThirdPerson",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "cameraMovementSpeedFirstPerson",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "ignoreMoveCameraFunctionEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "secondMoveCameraToDevice",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "disablePlayerMeshGameObject",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "enablePlayerMeshGameObjectIfFirstPersonActive",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "ignoreFBAActiveIfDisablePlayerMesh",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "ignoreCameraPositionAdjusmentOnFBA",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "unlockCursor",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "ignoreHideCursorOnClick",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "setNewMouseCursorControllerSpeed",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "newMouseCursroControllerSpeed",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "alignPlayerWithCameraPositionOnStartUseDevice",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "alignPlayerWithCameraPositionOnStopUseDevice",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "alignPlayerWithCameraRotationOnStartUseDevice",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "alignPlayerWithCameraRotationOnStopUseDevice",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "customAlignPlayerTransform",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "resetPlayerCameraDirection",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "disableAllPlayerHUD",
+    "label": "",
+    "section": "HUD Settings"
+   },
+   {
+    "field": "disableSecondaryPlayerHUD",
+    "label": "",
+    "section": "HUD Settings"
+   },
+   {
+    "field": "disableAllDynamicUIElements",
+    "label": "",
+    "section": "HUD Settings"
+   },
+   {
+    "field": "disableTouchControls",
+    "label": "",
+    "section": "HUD Settings"
+   },
+   {
+    "field": "disableInteractionTouchButtonOnUsingDevice",
+    "label": "",
+    "section": "HUD Settings"
+   },
+   {
+    "field": "keepWeaponsIfCarrying",
+    "label": "",
+    "section": "Weapons Settings"
+   },
+   {
+    "field": "drawWeaponsIfPreviouslyCarrying",
+    "label": "",
+    "section": "Weapons Settings"
+   },
+   {
+    "field": "keepOnlyIfPlayerIsOnFirstPerson",
+    "label": "",
+    "section": "Weapons Settings"
+   },
+   {
+    "field": "disableWeaponsDirectlyOnStart",
+    "label": "",
+    "section": "Weapons Settings"
+   },
+   {
+    "field": "disableWeaponsCamera",
+    "label": "",
+    "section": "Weapons Settings"
+   },
+   {
+    "field": "carryWeaponOnLowerPositionActive",
+    "label": "",
+    "section": "Weapons Settings"
+   },
+   {
+    "field": "ignoreMeleeWeaponCheck",
+    "label": "",
+    "section": "Weapons Settings"
+   },
+   {
+    "field": "setPlayerCameraRotationOnExit",
+    "label": "",
+    "section": "Camera Rotation On Exit Settings"
+   },
+   {
+    "field": "playerCameraTransformThirdPerson",
+    "label": "",
+    "section": "Camera Rotation On Exit Settings"
+   },
+   {
+    "field": "playerPivotTransformThirdPerson",
+    "label": "",
+    "section": "Camera Rotation On Exit Settings"
+   },
+   {
+    "field": "playerCameraTransformFirstPerson",
+    "label": "",
+    "section": "Camera Rotation On Exit Settings"
+   },
+   {
+    "field": "playerPivotTransformFirstPerson",
+    "label": "",
+    "section": "Camera Rotation On Exit Settings"
+   },
+   {
+    "field": "showGizmo",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoRadius",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoLabelColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoArrowLength",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoArrowLineLength",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoArrowAngle",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoArrowColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   }
+  ]
+ },
+ {
+  "type": "moveDeviceToCamera",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\moveDeviceToCamera.cs",
+  "source": "Devices/moveDeviceToCamera.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "deviceGameObject",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "smoothCameraMovement",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useFixedLerpMovement",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "fixedLerpMovementSpeed",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "cameraMovementSpeedThirdPerson",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "cameraMovementSpeedFirstPerson",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "distanceFromCamera",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "rotateObjectOnCameraDirectionEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "layerToExaminateDevices",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "activateExaminateObjectSystem",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "objectHasActiveRigidbody",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "disablePlayerMeshGameObject",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "ignoreFBAActiveIfDisablePlayerMesh",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "useBlurUIPanel",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "useExamineDeviceCameraEnabled",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "setNewMouseCursorControllerSpeed",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "newMouseCursroControllerSpeed",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "hideMouseCursorIfUsingGamepad",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "disableAllPlayerHUD",
+    "label": "",
+    "section": "HUD Settings"
+   },
+   {
+    "field": "disableSecondaryPlayerHUD",
+    "label": "",
+    "section": "HUD Settings"
+   },
+   {
+    "field": "disableInteractionTouchButtonOnUsingDevice",
+    "label": "",
+    "section": "HUD Settings"
+   },
+   {
+    "field": "maxZoomDistance",
+    "label": "",
+    "section": "Zoom Settings"
+   },
+   {
+    "field": "minZoomDistance",
+    "label": "",
+    "section": "Zoom Settings"
+   },
+   {
+    "field": "zoomSpeed",
+    "label": "",
+    "section": "Zoom Settings"
+   },
+   {
+    "field": "deviceTrigger",
+    "label": "",
+    "section": "Collider List Settings"
+   },
+   {
+    "field": "useListOfDisabledObjects",
+    "label": "",
+    "section": "Disabled Object List Settings"
+   },
+   {
+    "field": "keepWeaponsIfCarrying",
+    "label": "",
+    "section": "Weapons Settings"
+   },
+   {
+    "field": "drawWeaponsIfPreviouslyCarrying",
+    "label": "",
+    "section": "Weapons Settings"
+   },
+   {
+    "field": "keepOnlyIfPlayerIsOnFirstPerson",
+    "label": "",
+    "section": "Weapons Settings"
+   },
+   {
+    "field": "disableWeaponsDirectlyOnStart",
+    "label": "",
+    "section": "Weapons Settings"
+   },
+   {
+    "field": "examineObjectManager",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "mainRigidbody",
+    "label": "",
+    "section": "Components"
+   }
+  ]
+ },
+ {
+  "type": "nonEssentialCharacterElementsManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\nonEssentialCharacterElementsManager.cs",
+  "source": "Others/nonEssentialCharacterElementsManager.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "explanation",
+    "label": "",
+    "section": "Information"
+   },
+   {
+    "field": "objectSearcherName",
+    "label": "Name To Search",
+    "section": "Object Searcher"
+   }
+  ]
+ },
+ {
+  "type": "objectiveEventSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Objectives Mission System\\objectiveEventSystem.cs",
+  "source": "Objectives Mission System/objectiveEventSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "missionID",
+    "label": "",
+    "section": "Main Info Settings"
+   },
+   {
+    "field": "missionScene",
+    "label": "",
+    "section": "Main Info Settings"
+   },
+   {
+    "field": "useObjectiveCounterInsteadOfList",
+    "label": "",
+    "section": "Objective Info List"
+   },
+   {
+    "field": "objectiveCounterToComplete",
+    "label": "",
+    "section": "Objective Info List"
+   },
+   {
+    "field": "showObjectiveName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "generalObjectiveName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "showObjectiveDescription",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "generalObjectiveDescription",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "objectiveFullDescription",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "objectiveLocation",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "objectiveRewards",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "hideObjectivePanelsAfterXTime",
+    "label": "",
+    "section": "UI Settings"
+   },
+   {
+    "field": "timeToHideObjectivePanel",
+    "label": "",
+    "section": "UI Settings"
+   },
+   {
+    "field": "showAmountOfSubObjectivesComplete",
+    "label": "",
+    "section": "UI Settings"
+   },
+   {
+    "field": "disableObjectivePanelOnMissionComplete",
+    "label": "",
+    "section": "UI Settings"
+   },
+   {
+    "field": "showMissionAcceptedPanel",
+    "label": "",
+    "section": "UI Settings"
+   },
+   {
+    "field": "delayToDisableMissionAcceptedPanel",
+    "label": "",
+    "section": "UI Settings"
+   },
+   {
+    "field": "showMissionCompletePanel",
+    "label": "",
+    "section": "UI Settings"
+   },
+   {
+    "field": "delayToDisableMissionPanel",
+    "label": "",
+    "section": "UI Settings"
+   },
+   {
+    "field": "objectivesFollowsOrder",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "searchPlayerOnSceneIfNotAssigned",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "addMissionToLogIfMissionStartsAndNotBeingInProcess",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "addObjectiveToPlayerLogSystem",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "removeMissionSlotFromObjectiveLogOnCancelMission",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "cancelMissionIfPlayerDiesEnabled",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "canCancelPreviousMissionToStartNewOne",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "missionCanBeCancelledEnabled",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "missionCanBeReplayed",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "saveGameOnMissionComplete",
+    "label": "",
+    "section": "Save/Load Mission Settings"
+   },
+   {
+    "field": "saveOnEachSubObjectiveComplete",
+    "label": "",
+    "section": "Save/Load Mission Settings"
+   },
+   {
+    "field": "updateSubobjectivesCompleteOnLoadGame",
+    "label": "",
+    "section": "Save/Load Mission Settings"
+   },
+   {
+    "field": "resumeMissionOnLoadGameIfNotComplete",
+    "label": "",
+    "section": "Save/Load Mission Settings"
+   },
+   {
+    "field": "resetSubobjectivesIfCancellingMission",
+    "label": "",
+    "section": "Save/Load Mission Settings"
+   },
+   {
+    "field": "useTimeLimit",
+    "label": "",
+    "section": "Time Settings"
+   },
+   {
+    "field": "timerSpeed",
+    "label": "",
+    "section": "Time Settings"
+   },
+   {
+    "field": "minutesToComplete",
+    "label": "",
+    "section": "Time Settings"
+   },
+   {
+    "field": "secondsToComplete",
+    "label": "",
+    "section": "Time Settings"
+   },
+   {
+    "field": "secondSoundTimerLowerThan",
+    "label": "",
+    "section": "Time Settings"
+   },
+   {
+    "field": "secondTimerSound",
+    "label": "",
+    "section": "Time Settings"
+   },
+   {
+    "field": "secondTimerAudioElement",
+    "label": "",
+    "section": "Time Settings"
+   },
+   {
+    "field": "timeToHideObjectivePanel",
+    "label": "",
+    "section": "Time Settings"
+   },
+   {
+    "field": "eventWhenObjectiveComplete",
+    "label": "",
+    "section": "Objective Complete Event Settings"
+   },
+   {
+    "field": "eventWhenObjectiveCompleteSendPlayer",
+    "label": "",
+    "section": "Objective Complete Event Settings"
+   },
+   {
+    "field": "callEventWhenObjectiveNotComplete",
+    "label": "",
+    "section": "Objective Not Complete Event Settings"
+   },
+   {
+    "field": "eventWhenObjectiveNotComplete",
+    "label": "",
+    "section": "Objective Not Complete Event Settings"
+   },
+   {
+    "field": "useEventOnObjectiveStart",
+    "label": "",
+    "section": "Objective Start Event Settings"
+   },
+   {
+    "field": "eventOnObjectiveStart",
+    "label": "",
+    "section": "Objective Start Event Settings"
+   },
+   {
+    "field": "useEventObjectiveCompleteReward",
+    "label": "",
+    "section": "Reward Event Settings"
+   },
+   {
+    "field": "giveRewardOnObjectiveComplete",
+    "label": "",
+    "section": "Reward Event Settings"
+   },
+   {
+    "field": "eventObjectiveCompleteReward",
+    "label": "",
+    "section": "Reward Event Settings"
+   },
+   {
+    "field": "useEventWhenLoadingGameAndObjectiveComplete",
+    "label": "",
+    "section": "Load Game & Objective Complete Event Settings"
+   },
+   {
+    "field": "eventWhenLoadingGameAndObjectiveComplete",
+    "label": "",
+    "section": "Load Game & Objective Complete Event Settings"
+   },
+   {
+    "field": "useMinPlayerLevel",
+    "label": "",
+    "section": "Mission Level Settings"
+   },
+   {
+    "field": "minPlayerLevel",
+    "label": "",
+    "section": "Mission Level Settings"
+   },
+   {
+    "field": "eventOnNotEnoughLevel",
+    "label": "",
+    "section": "Mission Level Settings"
+   },
+   {
+    "field": "enableAllMapObjectInformationAtOnce",
+    "label": "",
+    "section": "Map Object Information Settings"
+   },
+   {
+    "field": "enableAllMapObjectInformationOnTime",
+    "label": "",
+    "section": "Map Object Information Settings"
+   },
+   {
+    "field": "timeToEnableAllMapObjectInformation",
+    "label": "",
+    "section": "Map Object Information Settings"
+   },
+   {
+    "field": "useExtraListMapObjectInformation",
+    "label": "",
+    "section": "Map Object Information Settings"
+   },
+   {
+    "field": "useSoundOnSubObjectiveComplete",
+    "label": "Use Sound On Objective Complete",
+    "section": "Sounds Settings"
+   },
+   {
+    "field": "soundOnSubObjectiveComplete",
+    "label": "Sound On Objective Complete",
+    "section": "Sounds Settings"
+   },
+   {
+    "field": "subObjectiveCompleteAudioElement",
+    "label": "Sound On Objective Complete",
+    "section": "Sounds Settings"
+   },
+   {
+    "field": "useSoundOnObjectiveNotComplete",
+    "label": "",
+    "section": "Sounds Settings"
+   },
+   {
+    "field": "soundOnObjectiveNotComplete",
+    "label": "",
+    "section": "Sounds Settings"
+   },
+   {
+    "field": "objectiveNotCompleteAudioElement",
+    "label": "",
+    "section": "Sounds Settings"
+   },
+   {
+    "field": "timerPanelName",
+    "label": "",
+    "section": "Mission Text Info Settings"
+   },
+   {
+    "field": "timerTextPanelName",
+    "label": "",
+    "section": "Mission Text Info Settings"
+   },
+   {
+    "field": "objectiveInfoMainPanelName",
+    "label": "",
+    "section": "Mission Text Info Settings"
+   },
+   {
+    "field": "objectiveTextInfoPanelName",
+    "label": "",
+    "section": "Mission Text Info Settings"
+   },
+   {
+    "field": "objectiveDescriptionTextName",
+    "label": "",
+    "section": "Mission Text Info Settings"
+   },
+   {
+    "field": "objectiveInfoPanelName",
+    "label": "",
+    "section": "Mission Text Info Settings"
+   },
+   {
+    "field": "mainRemoteEventSystem",
+    "label": "",
+    "section": "Other Components"
+   },
+   {
+    "field": "setCurrentPlayerManually",
+    "label": "",
+    "section": "Player Settings"
+   },
+   {
+    "field": "currentPlayerToConfigure",
+    "label": "",
+    "section": "Player Settings"
+   },
+   {
+    "field": "numberOfObjectives",
+    "label": "",
+    "section": "Current State"
+   },
+   {
+    "field": "currentSubObjectiveIndex",
+    "label": "",
+    "section": "Current State"
+   }
+  ]
+ }
+]

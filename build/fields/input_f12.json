@@ -1,0 +1,573 @@
+[
+ {
+  "type": "inputActionManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Input\\inputActionManager.cs",
+  "source": "Input/inputActionManager.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "useAxisAsHorizontalMovementInput",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useAxisAsVerticalMovementInput",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "horizontalMovementInputLerpSpeed",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "verticalMovementInputLerpSpeed",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "showDebugActions",
+    "label": "",
+    "section": "Input State Debug"
+   },
+   {
+    "field": "manualControlActive",
+    "label": "",
+    "section": "Manual Control Settings"
+   },
+   {
+    "field": "manualHorizontalInput",
+    "label": "",
+    "section": "Manual Control Settings"
+   },
+   {
+    "field": "manualVerticalInput",
+    "label": "",
+    "section": "Manual Control Settings"
+   },
+   {
+    "field": "manualMouseHorizontalInput",
+    "label": "",
+    "section": "Manual Control Settings"
+   },
+   {
+    "field": "manualMouseVerticalInput",
+    "label": "",
+    "section": "Manual Control Settings"
+   },
+   {
+    "field": "setAutomaticValuesOnHorizontalInput",
+    "label": "",
+    "section": "Manual Control Settings"
+   },
+   {
+    "field": "setAutomaticValuesOnVerticalInput",
+    "label": "",
+    "section": "Manual Control Settings"
+   },
+   {
+    "field": "setAutomaticValuesOnMouseHorizontalInput",
+    "label": "",
+    "section": "Manual Control Settings"
+   },
+   {
+    "field": "setAutomaticValuesOnVerticalVerticalInput",
+    "label": "",
+    "section": "Manual Control Settings"
+   },
+   {
+    "field": "usingTouchMovementJoystick",
+    "label": "",
+    "section": "Touch Controls Settings"
+   },
+   {
+    "field": "enableTouchJoysticks",
+    "label": "",
+    "section": "Touch Controls Settings"
+   },
+   {
+    "field": "useExternalVehicleTouchControlsEnabled",
+    "label": "",
+    "section": "External Vehicle Touch Controls Settings"
+   },
+   {
+    "field": "disableTouchJoysticksOnExternalVehicleEnabled",
+    "label": "",
+    "section": "External Vehicle Touch Controls Settings"
+   },
+   {
+    "field": "eventToActivateTouchControlsOnExternalVehicle",
+    "label": "",
+    "section": "External Vehicle Touch Controls Settings"
+   },
+   {
+    "field": "eventToDeactivateTouchControlsOnExternalVehicle",
+    "label": "",
+    "section": "External Vehicle Touch Controls Settings"
+   }
+  ]
+ },
+ {
+  "type": "inputManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Input\\inputManager.cs",
+  "source": "Input/inputManager.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "showActionKeysOnMenu",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "checkInputManagerElementsOnStartEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useNewInputSystem",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "moveActionReference",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "lookActionReference",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "newInputSystemKeyboardAxisSmoothSpeed",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useRewired",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "ignoreGamepad",
+    "label": "",
+    "section": "Gamepad Settings"
+   },
+   {
+    "field": "allowKeyboardAndGamepad",
+    "label": "",
+    "section": "Gamepad Settings"
+   },
+   {
+    "field": "allowGamepadInTouchDevice",
+    "label": "",
+    "section": "Gamepad Settings"
+   },
+   {
+    "field": "checkConnectedGamepadRate",
+    "label": "",
+    "section": "Gamepad Settings"
+   },
+   {
+    "field": "showMissingInputWarningMessagesEnabled",
+    "label": "",
+    "section": "Debug Settings"
+   },
+   {
+    "field": "showKeyboardPressed",
+    "label": "",
+    "section": "Debug Settings"
+   },
+   {
+    "field": "showKeyboardPressedAction",
+    "label": "",
+    "section": "Debug Settings"
+   },
+   {
+    "field": "showGamepadPressed",
+    "label": "",
+    "section": "Debug Settings"
+   },
+   {
+    "field": "showGamepadPressedAction",
+    "label": "",
+    "section": "Debug Settings"
+   },
+   {
+    "field": "showPressedKeyWhenEditingInput",
+    "label": "",
+    "section": "Debug Settings"
+   },
+   {
+    "field": "showDebugKeyPressed",
+    "label": "",
+    "section": "Debug Settings"
+   },
+   {
+    "field": "usingGamepad",
+    "label": "",
+    "section": "Input State (DEBUG)"
+   },
+   {
+    "field": "onlyOnePlayer",
+    "label": "",
+    "section": "Input State (DEBUG)"
+   },
+   {
+    "field": "usingKeyBoard",
+    "label": "",
+    "section": "Input State (DEBUG)"
+   },
+   {
+    "field": "numberOfGamepads",
+    "label": "",
+    "section": "Input State (DEBUG)"
+   },
+   {
+    "field": "lastButtonPressedOnGamepad",
+    "label": "",
+    "section": "Input State (DEBUG)"
+   },
+   {
+    "field": "lastKeyPressedOnKeyboard",
+    "label": "",
+    "section": "Input State (DEBUG)"
+   },
+   {
+    "field": "useTouchControls",
+    "label": "",
+    "section": "Input State (DEBUG)"
+   },
+   {
+    "field": "editingInput",
+    "label": "",
+    "section": "Input State (DEBUG)"
+   },
+   {
+    "field": "checkInputKeyDuplicatedOnRebindAction",
+    "label": "",
+    "section": "Rebing Settings"
+   },
+   {
+    "field": "checkInputKeyDuplicatedOnlyOnSameInputCategory",
+    "label": "",
+    "section": "Rebing Settings"
+   },
+   {
+    "field": "loadOption",
+    "label": "",
+    "section": "Save/Load Settings"
+   },
+   {
+    "field": "useCustomInputFileName",
+    "label": "",
+    "section": "Save/Load Settings"
+   },
+   {
+    "field": "customInputFileName",
+    "label": "",
+    "section": "Save/Load Settings"
+   },
+   {
+    "field": "useCustomInputFilePathName",
+    "label": "",
+    "section": "Save/Load Settings"
+   },
+   {
+    "field": "customInputFilePathName",
+    "label": "",
+    "section": "Save/Load Settings"
+   },
+   {
+    "field": "editInputPanelPrefab",
+    "label": "",
+    "section": "Input Elements"
+   },
+   {
+    "field": "editInputMenu",
+    "label": "",
+    "section": "Input Elements"
+   },
+   {
+    "field": "currentInputPanelListText",
+    "label": "",
+    "section": "Input Elements"
+   },
+   {
+    "field": "charactersManager",
+    "label": "",
+    "section": "Input Elements"
+   },
+   {
+    "field": "pauseManager",
+    "label": "",
+    "section": "Input Elements"
+   },
+   {
+    "field": "mainGameManager",
+    "label": "",
+    "section": "Input Elements"
+   },
+   {
+    "field": "createRebindInputMenuWithCurrentAxes",
+    "label": "",
+    "section": "Rebind Input Menu Options"
+   },
+   {
+    "field": "rebindInputMenuPanelsAmount",
+    "label": "",
+    "section": "Rebind Input Menu Options"
+   },
+   {
+    "field": "rebindInputMenuActionsPerPanelAmount",
+    "label": "",
+    "section": "Rebind Input Menu Options"
+   },
+   {
+    "field": "actionKeyToFilter",
+    "label": "",
+    "section": "Show Current Input Action List Settings Filter"
+   },
+   {
+    "field": "joystickButtonToFilter",
+    "label": "",
+    "section": "Show Current Input Action List Settings Filter"
+   },
+   {
+    "field": "keyInputProp",
+    "label": "",
+    "section": "Keyboard Input"
+   },
+   {
+    "field": "currentArrayElement",
+    "label": "",
+    "section": "Input List"
+   },
+   {
+    "field": "currentArrayElement",
+    "label": "",
+    "section": "Input List"
+   },
+   {
+    "field": "currentArrayElement",
+    "label": "",
+    "section": "Input List"
+   },
+   {
+    "field": "currentArrayElement",
+    "label": "",
+    "section": "Input List"
+   },
+   {
+    "field": "currentArrayElement",
+    "label": "",
+    "section": "Input List"
+   },
+   {
+    "field": "currentArrayElement",
+    "label": "",
+    "section": "Input List"
+   },
+   {
+    "field": "currentArrayElement",
+    "label": "",
+    "section": "Input List"
+   },
+   {
+    "field": "currentArrayElement",
+    "label": "",
+    "section": "Input List"
+   }
+  ]
+ },
+ {
+  "type": "inventoryBankManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Inventory\\inventoryBankManager.cs",
+  "source": "Inventory/inventoryBankManager.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "gameSystemManager",
+    "label": "",
+    "section": "Main Inventory Elements"
+   },
+   {
+    "field": "mainInventoryManager",
+    "label": "",
+    "section": "Main Inventory Elements"
+   },
+   {
+    "field": "useMaxInventoryBankSlotsAmount",
+    "label": "",
+    "section": "Main Inventory Elements"
+   },
+   {
+    "field": "maxInventoryBankSlotsAmount",
+    "label": "",
+    "section": "Main Inventory Elements"
+   },
+   {
+    "field": "loadCurrentBankInventoryFromSaveFile",
+    "label": "",
+    "section": "Save/Load Bank Inventory Settings"
+   },
+   {
+    "field": "saveCurrentBankInventoryToSaveFile",
+    "label": "",
+    "section": "Save/Load Bank Inventory Settings"
+   },
+   {
+    "field": "currentElement",
+    "label": "",
+    "section": "Save/Load Bank Inventory Settings"
+   }
+  ]
+ },
+ {
+  "type": "inventoryBankSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Inventory\\inventoryBankSystem.cs",
+  "source": "Inventory/inventoryBankSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "openBankDelay",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "animationName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "openSound",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "openAudioElement",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "closeSound",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "closeAudioElement",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "attachToTransformActive",
+    "label": "",
+    "section": "Attach To Transform Settings"
+   },
+   {
+    "field": "transformToAttach",
+    "label": "",
+    "section": "Attach To Transform Settings"
+   },
+   {
+    "field": "localOffset",
+    "label": "",
+    "section": "Attach To Transform Settings"
+   },
+   {
+    "field": "useAsVendorSystem",
+    "label": "",
+    "section": "Vendor Settings"
+   },
+   {
+    "field": "useGeneralBuyPriceMultiplier",
+    "label": "",
+    "section": "Vendor Settings"
+   },
+   {
+    "field": "generalBuyPriceMultiplayerPercentage",
+    "label": "",
+    "section": "Vendor Settings"
+   },
+   {
+    "field": "useGeneralSellPriceMultiplier",
+    "label": "",
+    "section": "Vendor Settings"
+   },
+   {
+    "field": "generalSellPriceMultiplayerPercentage",
+    "label": "",
+    "section": "Vendor Settings"
+   },
+   {
+    "field": "infiniteVendorAmountAvailable",
+    "label": "",
+    "section": "Vendor Settings"
+   },
+   {
+    "field": "positionToSpawnObjects",
+    "label": "",
+    "section": "Vendor Settings"
+   },
+   {
+    "field": "useInventoryFromThisBank",
+    "label": "",
+    "section": "Custom Inventory Bank Settings"
+   },
+   {
+    "field": "useMaxInventoryBankSlotsAmount",
+    "label": "",
+    "section": "Bank Inventory List"
+   },
+   {
+    "field": "maxInventoryBankSlotsAmount",
+    "label": "",
+    "section": "Bank Inventory List"
+   },
+   {
+    "field": "useEventOnInventoryEmpty",
+    "label": "",
+    "section": "Empty Inventory Event Settings"
+   },
+   {
+    "field": "eventOnInventoryEmpty",
+    "label": "",
+    "section": "Empty Inventory Event Settings"
+   },
+   {
+    "field": "repeatEventOnInventoryEmpty",
+    "label": "",
+    "section": "Empty Inventory Event Settings"
+   },
+   {
+    "field": "mainAnimation",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "mainAudioSource",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "mainInventoryListManager",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "mainInventoryBankManager",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "mainSpawnObject",
+    "label": "",
+    "section": "Components"
+   }
+  ]
+ }
+]

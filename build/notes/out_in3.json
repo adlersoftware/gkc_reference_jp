@@ -1,0 +1,164 @@
+[
+ {
+  "type": "actionInputDelaySystem",
+  "summary": "入力の押下・解放から一定時間後にイベントを発火する遅延システム。長押し判定の`hold`と、離した時判定の`up`を切り替えて使う。",
+  "methods": {
+   "inputSetPressedDownState()": "押下フラグと押下時刻を更新し、`hold`設定で遅延時間を超えていれば`actionEvent` を一度だけ発火する。",
+   "inpuSetPressedUpState()": "押下フラグをfalseにし、`up`設定なら`useLowerDelay` に応じて遅延前後の経過でイベントを発火する。"
+  }
+ },
+ {
+  "type": "editControlPosition",
+  "summary": "タッチボタンをドラッグで移動させ、その位置をファイルへ保存・読み込みする編集コンポーネント。編集モードの開始・取消と既定位置への復帰を提供する。",
+  "methods": {
+   "stopUpdateCoroutine()": "実行中の`mainUpdateCoroutine` があれば停止するだけ。",
+   "checkSettings()": "`gameManager` を探し、未初期化なら相対パス設定と保存先パスを一度だけ取得する。",
+   "getDataPath()": "相対パスか`persistentDataPath` かでフォルダを決め、無ければ作成し末尾に`/` を付けたパスを返す。",
+   "getTouchButtons()": "`gameManager` のロード設定が有効なら、位置の`Load` と現在位置の退避を初期化フラグに応じて行う。",
+   "getTouchButtonsComponents()": "`input` を取得し、タッチボタンの`RectTransform`、既定位置、`touchButtonListener` をリストに集め直す。",
+   "activateEdit()": "編集モードを反転し、開始時はボタン入力を止めて更新コルーチンを開始、終了時は位置を集めて`Save` する。",
+   "disableEdit()": "編集中なら編集モードをfalseにし、各ボタンを退避しておいた位置へ戻す。",
+   "changeToDefault()": "全ボタンを既定位置`buttonPosDefault` に戻してから`Save` する。",
+   "changeButtonsState(bool state)": "各`touchButtonListener` の`enabled` を`state`にし、編集中の誤タップを防ぐ。",
+   "Save()": "各ボタン位置を`BinaryFormatter` でテキストファイルへ書き出し、書き出した値で`buttonsPos` を作り直す。",
+   "Load()": "保存ファイルがあればX/Yのリストを読み出し、件数がボタン数と一致する場合のみ位置を復元する。"
+  }
+ },
+ {
+  "type": "inputActionManager",
+  "summary": "`multiAxesList` の各アクションを毎フレーム判定してイベントを発火し、移動軸とマウス軸の値を公開する。手動制御・入力の上書き・タッチ操作との切替も扱う。",
+  "methods": {
+   "stopUpdateCoroutine()": "実行中の`updateCoroutine` があれば停止するだけ。",
+   "setPositiveVerticalMovementAxisValue(int newValue)": "上方向キーの押下フラグと垂直軸値を更新し、離した時に下方向が押されていれば-1を維持する。",
+   "setNegativeVerticalMovementAxisValue(int newValue)": "下方向キーの押下フラグと垂直軸値を更新し、離した時に上方向が押されていれば1を維持する。",
+   "setPositiveHorizontalMovementAxisValue(int newValue)": "右方向キーの押下フラグと水平軸値を更新し、離した時に左方向が押されていれば-1を維持する。",
+   "setNegativeHorizontalMovementAxisValue(int newValue)": "左方向キーの押下フラグと水平軸値を更新し、離した時に右方向が押されていれば1を維持する。",
+   "getPlayerMovementAxis()": "停止中や無効時はゼロを返し、手動制御や上書き中はその値、それ以外は`movementAxis` を返す。",
+   "getPlayerMouseAxis()": "停止中や無効時はゼロを返し、手動制御中は手動マウス値と`mouseAxis` を設定に応じて混ぜて返す。",
+   "getPlayerRawMovementAxis()": "生の移動軸を返し、手動制御時は-1/0/1に丸めた値、上書き時は上書き値の軸を返す。",
+   "resetMovementValues()": "`rawMovementAxis`、`movementAxis`、`mouseAxis` をゼロにするだけ。",
+   "enableOrDisableInput(bool state, GameObject driver)": "`inputActivated` を設定して更新コルーチンを再開始し、タッチ操作の設定を切替え、無効時は移動値とタッチ押下をリセットする。",
+   "pauseOrResumeInput(bool state)": "`inputPaused` を`state`にするだけ。",
+   "setInputCurrentlyActiveState(bool state)": "`inputCurrentlyActive` を`state`にするだけ。",
+   "overrideInputValues(Vector2 newInputValues, float newFootBrakeValue, float newHandBrakeValue, bool overrideState)": "上書き用の軸値と`overrideInputValuesActive`、フット/ハンドブレーキ値をまとめて設定する。",
+   "getFootBrakeValue()": "`footBrake` を返すだけ。",
+   "getHandBrakeValue()": "`handBrake` を返すだけ。",
+   "setInputManager()": "`input` を自身・Instance・シーン検索の順で取得し、`multiAxesList` の件数を更新する。",
+   "isGameManagerPaused()": "`inputManager` が見つかっていればその`isGameManagerPaused` を返し、無ければfalseを返す。",
+   "getIsUsingTouchControlsValue()": "`inputManager` があればタッチ操作中かを返し、無ければfalseを返す。",
+   "setInputManagerOnEditor()": "`input` が未設定ならシーンから`inputManager` を探し、`updateComponent` を呼ぶ。",
+   "addNewAxes()": "`input` のマルチ軸名一覧を複製した新しい`multiAxes` をリストに追加し、シーンを更新する。",
+   "addNewAction(int multiAxesIndex)": "指定マルチ軸に、対応するアクション名一覧を持つ空の`Axes` を追加してシーンを更新する。",
+   "updateMultiAxesList()": "各`multiAxes` の名前から`input` 内のインデックスを引き直し、見つからなければ-1にして警告を出す。",
+   "updateAxesList(int multiAxesListIndex)": "指定マルチ軸内の各アクションのインデックスと`keyButton` を`input` の定義から引き直す。",
+   "setAllAxesList(int multiAxesListIndex)": "指定マルチ軸の`axes` を空にして、`input` のアクション定義から全件を作り直す。",
+   "setMultiAxesEnabledState(bool state)": "全`multiAxes` の`currentlyActive` を`state`にし、シーンを更新する。",
+   "setAllActionsEnabledState(int multiAxesListIndex, bool state)": "指定マルチ軸内の全アクションの`actionEnabled` を`state`にし、シーンを更新する。",
+   "setAxesActionName(int multiAxesIndex, int axesIndex)": "指定アクションの`actionName` を`axesStringList` から設定し、インデックスが無効なら警告を出す。",
+   "updateComponent()": "`GKC_Utils.updateComponent` と`updateDirtyScene` でシーン更新を通知するだけ。"
+  }
+ },
+ {
+  "type": "inputDoubleClickEventSystem",
+  "summary": "クリック回数と制限時間から連打を判定し、規定回数に達したらイベントを発火する。全クリック共通の制限時間を使う方式にも切り替えられる。",
+  "methods": {
+   "checkClickInput()": "クリック回数を増やし、規定回数に達した時に制限時間内なら`eventOnActivateInput` を発火してカウントを戻す。"
+  }
+ },
+ {
+  "type": "inputPanelUISystem",
+  "summary": "入力パネルのGameObjectとアクション画面情報を保持し、`playerInputPanelSystem` と相互に参照し合うUI側コンポーネント。",
+  "methods": {
+   "setInputPanelGameObjectActiveState(bool state)": "`inputPanelGameObject` の表示を`state`にするだけ。",
+   "setMainPlayerInputPanelSystem(playerInputPanelSystem newplayerInputPanelSystem)": "`mainPlayerInputPanelSystem` を設定して`updateComponent` を呼ぶだけ。",
+   "searchPlayerInputPanelSystem(playerInputPanelSystem newPlayerInputPanelSystem)": "渡された値かシーンから`playerInputPanelSystem` を探して保持し、見つかれば自分を登録させる。"
+  }
+ },
+ {
+  "type": "mouseCursorController",
+  "summary": "ゲームパッドの軸入力でマウスカーソルを動かすコントローラ。右/左スティックの入力を`SetCursorPos` で実カーソルへ反映し、表示状態と速度を管理する。",
+  "methods": {
+   "getComponentInstance()": "未初期化なら自身を`Instance` に登録し、既に別インスタンスがあれば自身のGameObjectを破棄する。",
+   "getComponentInstanceOnApplicationPlaying()": "再生中のみ`getComponentInstance` を呼ぶだけ。",
+   "showOrHideMouseController(playerInputManager newInput, bool state, int newJoystickNumber, bool pausingGame)": "入力がnullかキーボード専用でない場合に限り`playerInput` とジョイスティック番号を更新し、表示切替本体を呼ぶ。",
+   "setIgnoreSetSelectedGameObjectOnUIByGamepadState(bool state)": "`ignoreSetSelectedGameObjectOnUIByGamepad` を`state`にするだけ。",
+   "showOrHideMouseController(bool state, bool pausingGame)": "ゲームパッド使用時のみカーソル状態と前回状態を更新し、必要なら位置をリセットしてUIへフォーカスを当てる。",
+   "resetCursorPosition()": "実カーソル位置を取得して内部座標を合わせ、初回は画面解像度から移動リミットを設定する。",
+   "getCursorPos()": "`cursorPos` を返すだけ。",
+   "setUseRightOrLeftJoysticsAxis(bool state)": "`useRightJoystickAxis` を`state`にするだけ。",
+   "getCurrentJoystickNumber()": "`joystickNumber` を返すだけ。",
+   "setMouseCursorControllerSpeedOnGameValue(float newValue)": "初回だけ元の速度を退避してから`cursorSpeedOnGame` を`newValue`に更新する。",
+   "setOriginalMouseCursorControllerSpeedOnGameValue()": "退避した元の速度があれば`setMouseCursorControllerSpeedOnGameValue` で戻すだけ。",
+   "getMouseAxis()": "`playerInput` があればカーソル状態に応じたマウス軸を、無ければ`Input.GetAxis` の合成値を返す。",
+   "getMovementAxis()": "`playerInput` があればカーソル状態に応じた移動軸を、無ければ`Input.GetAxis` の合成値を返す。"
+  }
+ },
+ {
+  "type": "playerInputPanelSystem",
+  "summary": "タッチパネルとアクション画面の表示切替をまとめて管理するコンポーネント。`inputPanelUISystem` を介して画面を出し入れし、ゲームパッド・キーボード別のパネルを切り替える。",
+  "methods": {
+   "setInputPanelGameObjectActiveState(bool state)": "`mainInputPanelUISystem` が見つかっている場合のみ、入力パネルのGameObject表示を`state`にする。",
+   "getTouchPanelsList()": "`touchPanelsInfoList` をそのまま返すだけ。",
+   "enableTouchPanelByName(string panelName)": "指定名のタッチパネルを表示するため、`enableOrDisableTouchPanelByName` をtrueで呼ぶだけ。",
+   "disableTouchPanelByName(string panelName)": "指定名のタッチパネルを非表示にするため、`enableOrDisableTouchPanelByName` をfalseで呼ぶだけ。",
+   "enableOrDisableTouchPanelByName(string panelName, bool state)": "名前が一致するタッチパネルの表示を`state`にし、最後に`playerInput` のタッチボタン押下状態をリセットする。",
+   "enableTouchPanelSchemeByName(string panelName)": "指定スキームを現在として記録し、含まれるパネルだけを表示、メインスキームのフラグも更新してタッチボタンをリセットする。",
+   "enableCurrentMainTouchPanelScheme()": "メインゲーム用かつ有効なスキームを探し、`enableTouchPanelSchemeByName` で再適用するだけ。",
+   "enablePreviousTouchPanelScheme()": "`previousTouchPanelsSchemesInfo` があれば、その名前でスキームを再適用するだけ。",
+   "enableOrDisableActionScreen(string actionScreenName)": "`canUseActionPanel` がtrueの時、指定画面のGameObject表示を反転し、現在/前回の画面情報を更新する。",
+   "enableOrDisableActionScreenTemporally(string actionScreenName)": "現在画面の記録は変えずに、指定アクション画面のGameObject表示だけを反転する。",
+   "enableOrDisableActionScreen(string actionScreenName, bool state)": "指定画面を`state`にし、ゲームパッド有無で対応GameObjectを選び、親パネルとメイン画面も調整する。",
+   "enableActionScreen(string actionScreenName)": "指定アクション画面を表示するだけで、非表示側のGameObjectは操作しない。",
+   "disableActionScreen(string actionScreenName)": "指定アクション画面の全GameObjectを非表示にし、メイン画面ならアクティブフラグもfalseにする。",
+   "enablePreviousActionScreen()": "前回のアクション画面があれば`enableSingleActionScreen` で復帰し、無ければ現在画面を閉じて記録を消す。",
+   "enableSingleActionScreen(string actionScreenName)": "指定画面だけを表示し、他のアクション画面のGameObjectを非表示にする排他切替。",
+   "checkEnableMainGameScreenActionPanel()": "有効なメインゲーム画面パネルを探し、`enableSingleActionScreen` で表示に戻す。",
+   "enableSecondaryActionPanel(string actionScreenName)": "`enableOrDisableSecondaryActionPanel` をtrueで呼ぶだけ。",
+   "disableSecondaryActionPanel(string actionScreenName)": "`enableOrDisableSecondaryActionPanel` をfalseで呼ぶだけ。",
+   "enableOrDisableSecondaryActionPanel(string actionScreenName, bool state)": "指定画面のサブパネルを、ゲームパッド用か通常用かを選んで`state`にし、もう一方は非表示にする。",
+   "checkDisableMainGameScreenActionPanel()": "有効なメインゲーム画面パネルのGameObjectをすべて非表示にする。",
+   "checkPanelsActiveOnGamepadOrKeyboard(bool checkKeyboard)": "表示中のアクション画面について、キーボードなら通常用、ゲームパッドならゲームパッド用GameObjectへ切り替える。",
+   "enableOrDisableScreenActionParent(bool state)": "`screenActionPanelsActive` がtrueの時、タッチ操作中でなければ親GameObjectの表示を`state`にする。",
+   "canUseActionPanel()": "パネルが有効かつアクティブで、タッチ操作中でない場合のみtrueを返す。",
+   "setScreenActionPanelsActiveState(bool state)": "親GameObjectの表示状態を退避してから`screenActionPanelsActive` を更新し、必要なら親の表示も切り替える。",
+   "setScreenActionPanelsActiveStateFromEditor(bool state)": "`setScreenActionPanelsActiveState` を呼んだ後、`updateComponent` でシーンを更新するだけ。",
+   "setScreenActionPanelsEnabledState(bool state)": "`screenActionPanelsEnabled` を設定し、`updateComponent` でシーンを更新するだけ。",
+   "instantiateInputPanelPrefab()": "UI未設定なら`inputPanelPrefab` を生成し、`searchPlayerInputPanelSystem` で自身を紐付けてキャンバスを設定する。",
+   "setInputPanelUISystem(inputPanelUISystem newInputPanelUISystem)": "`mainInputPanelUISystem` と`screenActionParent` を差し替え、`updateComponent` を呼ぶ。"
+  }
+ },
+ {
+  "type": "playerInputPauseSystem",
+  "summary": "カテゴリ単位で入力アクションを停止・再開し、停止前の有効状態を覚えておくコンポーネント。",
+  "methods": {
+   "pauseInputByCategory(string categoryName)": "指定カテゴリ内の各入力を無効化し、その前の有効状態を`previousActiveState` に保存する。",
+   "resumeInputByCategory(string categoryName)": "指定カテゴリ内で停止前に有効だった入力だけを`setPlayerInputMultiAxesState` で再開する。"
+  }
+ },
+ {
+  "type": "pressMultipleKeysActionInputSystem",
+  "summary": "複数キーの同時押しや順番押しを数え、規定数に達したらイベントを発火するシステム。",
+  "methods": {
+   "setPressedKeyState(bool state)": "押下でカウントを増減し、規定数に達したら`eventToUseOnKeysPressed` を発火、設定に応じてカウントを戻す。",
+   "setPressedKeyStateInOrder(int pressedKeyID)": "カウントと`pressedKeyID` が一致すれば増やし、不一致なら設定に応じてリセット、規定数でイベントを発火する。",
+   "setCheckPressKeysEnabledState(bool state)": "`checkPressKeysEnabled` を`state`にするだけ。"
+  }
+ },
+ {
+  "type": "touchButtonColorChangeSystem",
+  "summary": "タッチボタンの`RawImage` 色を通常時と押下時で切り替えるだけの小コンポーネント。",
+  "methods": {
+   "setRegularColor()": "`mainImage` の色を`regularColor` にするだけ。",
+   "setPressedColor()": "`mainImage` の色を`pressedColor` にするだけ。"
+  }
+ },
+ {
+  "type": "touchButtonEventSystem",
+  "summary": "UIのタッチボタン押下・解放を検知してUnityEventを発火する。無効化時に押下中なら解放イベントを送って状態を戻す。",
+  "methods": {
+   "OnPointerDown(PointerEventData eventData)": "`eventEnabled` なら`eventOnPressDown` を発火し、`buttonPressed` をtrueにする。",
+   "OnPointerUp(PointerEventData eventData)": "`eventEnabled` なら`eventOnPressUp` を発火し、`buttonPressed` をfalseにする。",
+   "setEventEnabledState(bool state)": "`eventEnabled` を`state`にし、押下中なら`eventOnPressUp` を発火して押下状態を解除する。"
+  }
+ }
+]

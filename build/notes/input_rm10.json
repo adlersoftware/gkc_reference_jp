@@ -1,0 +1,664 @@
+[
+ {
+  "type": "scannerSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\Scanner System\\scannerSystem.cs",
+  "methods": [
+   {
+    "sig": "playerIsBusy()",
+    "line": 345
+   },
+   {
+    "sig": "activateScanner()",
+    "line": 354
+   },
+   {
+    "sig": "executeScanner()",
+    "line": 367
+   },
+   {
+    "sig": "setScannedObjectInfo()",
+    "line": 401
+   },
+   {
+    "sig": "enableScanner()",
+    "line": 474
+   },
+   {
+    "sig": "disableScanner()",
+    "line": 508
+   },
+   {
+    "sig": "checkEventsOnEnableDisableScanner()",
+    "line": 525
+   },
+   {
+    "sig": "checkScannerCameraFov()",
+    "line": 534
+   },
+   {
+    "sig": "enableOrDisableScannerZoom(bool value)",
+    "line": 558
+   },
+   {
+    "sig": "checkScanDistance(bool value)",
+    "line": 588
+   },
+   {
+    "sig": "isScannerActivated()",
+    "line": 599
+   },
+   {
+    "sig": "checkFovCoroutine(float targetValue)",
+    "line": 604
+   },
+   {
+    "sig": "changeFovValue(float targetValue)",
+    "line": 613
+   },
+   {
+    "sig": "enableOrDisableScannerCameraComponents(bool state)",
+    "line": 631
+   },
+   {
+    "sig": "enableOrDisableScannerCamera(bool state)",
+    "line": 644
+   },
+   {
+    "sig": "toggleScannerCameraElement()",
+    "line": 655
+   },
+   {
+    "sig": "setPauseEnableOrDisableScannerCameraElementState(bool state)",
+    "line": 662
+   },
+   {
+    "sig": "togglePauseEnableOrDisableScannerCameraElementState()",
+    "line": 667
+   },
+   {
+    "sig": "addHealthWeakSpotList()",
+    "line": 672
+   },
+   {
+    "sig": "disableHealtWeakSpotList()",
+    "line": 781
+   },
+   {
+    "sig": "inputHoldScanner()",
+    "line": 797
+   },
+   {
+    "sig": "inputReleaseScanner()",
+    "line": 810
+   },
+   {
+    "sig": "setScannerSystemEnabledState(bool state)",
+    "line": 832
+   },
+   {
+    "sig": "setScannerSystemEnabledStateFromEditor(bool state)",
+    "line": 837
+   }
+  ]
+ },
+ {
+  "type": "consoleMode",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\Console Mode\\consoleMode.cs",
+  "methods": [
+   {
+    "sig": "stopUpdateConsoleCoroutine()",
+    "line": 90
+   },
+   {
+    "sig": "checkKeyPressed(string keyPressed)",
+    "line": 154
+   },
+   {
+    "sig": "resetAutocompleteParameters()",
+    "line": 327
+   },
+   {
+    "sig": "checkCurrentCommand(string currentCommand)",
+    "line": 336
+   },
+   {
+    "sig": "createNewCommandText(string commandContent)",
+    "line": 481
+   },
+   {
+    "sig": "setScrollRectPosition(Vector3 position)",
+    "line": 506
+   },
+   {
+    "sig": "showCommandList()",
+    "line": 527
+   },
+   {
+    "sig": "clearCommandList()",
+    "line": 534
+   },
+   {
+    "sig": "openOrCloseConsoleMode(bool state)",
+    "line": 551
+   },
+   {
+    "sig": "stopDeletingText()",
+    "line": 604
+   },
+   {
+    "sig": "checkPrefabsManager()",
+    "line": 611
+   },
+   {
+    "sig": "spawnObject()",
+    "line": 620
+   },
+   {
+    "sig": "showSpawnObjectsList()",
+    "line": 688
+   },
+   {
+    "sig": "spawnGameObject(GameObject objectToSpawn, Vector3 position, Quaternion rotation)",
+    "line": 701
+   },
+   {
+    "sig": "killAllEnemies()",
+    "line": 708
+   },
+   {
+    "sig": "killAllCharacters()",
+    "line": 713
+   },
+   {
+    "sig": "destroyAllVehicles()",
+    "line": 745
+   },
+   {
+    "sig": "inputActivateConsoleMode()",
+    "line": 754
+   },
+   {
+    "sig": "setConsoleModeEnabledState(bool state)",
+    "line": 767
+   },
+   {
+    "sig": "addCommand()",
+    "line": 773
+   },
+   {
+    "sig": "setConsoleModeEnabledStateFromEditor(bool state)",
+    "line": 784
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 791
+   }
+  ]
+ },
+ {
+  "type": "BezierSpline",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\BezierSpline.cs",
+  "methods": [
+   {
+    "sig": "GetControlPoint(int index)",
+    "line": 62
+   },
+   {
+    "sig": "SetControlPoint(int index, Vector3 point)",
+    "line": 67
+   },
+   {
+    "sig": "GetControlPointMode(int index)",
+    "line": 97
+   },
+   {
+    "sig": "SetControlPointMode(int index, BezierControlPointMode mode)",
+    "line": 102
+   },
+   {
+    "sig": "GetPoint(float t)",
+    "line": 160
+   },
+   {
+    "sig": "GetLookDirection(float t)",
+    "line": 176
+   },
+   {
+    "sig": "GetLookTransform(float t)",
+    "line": 191
+   },
+   {
+    "sig": "getPointIndex(float t)",
+    "line": 205
+   },
+   {
+    "sig": "GetVelocity(float t)",
+    "line": 213
+   },
+   {
+    "sig": "GetDirection(float t)",
+    "line": 228
+   },
+   {
+    "sig": "setInitialSplinePoint(Vector3 position)",
+    "line": 233
+   },
+   {
+    "sig": "setFinalSplinePoint(Vector3 position)",
+    "line": 238
+   },
+   {
+    "sig": "AccuracyToStepSize(float accuracy)",
+    "line": 269
+   },
+   {
+    "sig": "FindNearestPointTo(Vector3 worldPos, float accuracy = 100f, int secondPassIterations = 7, float secondPassExtents = 0.025f)",
+    "line": 278
+   },
+   {
+    "sig": "FindNearestPointTo(Vector3 worldPos, out float normalizedT, float accuracy = 100f, int secondPassIterations = 7, float secondPassExtents = 0.025f)",
+    "line": 285
+   },
+   {
+    "sig": "setSelectedIndex(int index)",
+    "line": 342
+   },
+   {
+    "sig": "AddCurve(int index, bool addingAtTheEnd)",
+    "line": 349
+   },
+   {
+    "sig": "removeCurve(int index)",
+    "line": 383
+   },
+   {
+    "sig": "Reset()",
+    "line": 428
+   },
+   {
+    "sig": "alignLookDirection(bool adjustPositionAndRotation)",
+    "line": 449
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 472
+   }
+  ]
+ },
+ {
+  "type": "spawnObject",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\spawnObject.cs",
+  "methods": [
+   {
+    "sig": "setCustomPositionToSpawn(Vector3 newPosition)",
+    "line": 143
+   },
+   {
+    "sig": "setCustomPositionOffsetYToSpawn(float newOffset)",
+    "line": 148
+   },
+   {
+    "sig": "activateSpawnObject()",
+    "line": 153
+   },
+   {
+    "sig": "createObject(GameObject newObject)",
+    "line": 199
+   },
+   {
+    "sig": "checkIfSpawnObjectsListNull()",
+    "line": 389
+   },
+   {
+    "sig": "removeSpawnedObjectFromList(GameObject objectToCheck)",
+    "line": 406
+   },
+   {
+    "sig": "getLastObjectSpawned()",
+    "line": 417
+   },
+   {
+    "sig": "checkEventsOnSpawnLimits()",
+    "line": 422
+   },
+   {
+    "sig": "destroySpawnedObjects()",
+    "line": 431
+   },
+   {
+    "sig": "setAmountOfSameObjectToSpawn(int newValue)",
+    "line": 444
+   },
+   {
+    "sig": "setSpawnObjectEnabledState(bool state)",
+    "line": 449
+   },
+   {
+    "sig": "enableRemovetEventState(string remoteEventName)",
+    "line": 454
+   },
+   {
+    "sig": "disableRemovetEventState(string remoteEventName)",
+    "line": 459
+   },
+   {
+    "sig": "enableOrDisableAllRemovetEventStates(bool state)",
+    "line": 464
+   },
+   {
+    "sig": "enableRemoteEventState(string remoteEventName)",
+    "line": 469
+   },
+   {
+    "sig": "disableRemoteEventState(string remoteEventName)",
+    "line": 474
+   },
+   {
+    "sig": "enableOrDisableAllRemoteEventStates(bool state)",
+    "line": 479
+   },
+   {
+    "sig": "setObjectToSpawn(GameObject newObject)",
+    "line": 495
+   },
+   {
+    "sig": "setSpawnPosition(Transform newTransform)",
+    "line": 500
+   }
+  ]
+ },
+ {
+  "type": "hideBodyPartOnCharacterSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\hideBodyPartOnCharacterSystem.cs",
+  "methods": [
+   {
+    "sig": "activateBodyPartFromMountPoint(string mountPointPartName)",
+    "line": 40
+   },
+   {
+    "sig": "deactivateBodyPartFromMountPoint(string mountPointPartName)",
+    "line": 45
+   },
+   {
+    "sig": "setActiveStateBodyPartFromMountPoint(string mountPointPartName, bool state)",
+    "line": 49
+   },
+   {
+    "sig": "setEnabledStateColliderBodyPartFromMountPoint(string mountPointPartName)",
+    "line": 70
+   },
+   {
+    "sig": "setDisabledStateColliderBodyPartFromMountPoint(string mountPointPartName)",
+    "line": 74
+   },
+   {
+    "sig": "setActiveStateColliderBodyPartFromMountPoint(string mountPointPartName, bool state)",
+    "line": 79
+   },
+   {
+    "sig": "hideBodyPartFromMountPoint(string mountPointPartName)",
+    "line": 94
+   },
+   {
+    "sig": "hideBodyPartFromMountPointWithoutBulletTimeCheck(string mountPointPartName)",
+    "line": 105
+   },
+   {
+    "sig": "hideBodyPart()",
+    "line": 116
+   },
+   {
+    "sig": "hideBodyPart(Transform newBodyPart)",
+    "line": 125
+   },
+   {
+    "sig": "hideBodyPartWithoutBulletTimeCheck()",
+    "line": 132
+   },
+   {
+    "sig": "hideBodyPartWithoutBulletTimeCheck(Transform newBodyPart)",
+    "line": 137
+   },
+   {
+    "sig": "setBodyPartScale()",
+    "line": 144
+   },
+   {
+    "sig": "resetHiddenBodyPartsList()",
+    "line": 161
+   },
+   {
+    "sig": "setUseTimeBulletValue(bool state)",
+    "line": 180
+   },
+   {
+    "sig": "setHideBodyPartEnabledState(bool state)",
+    "line": 185
+   },
+   {
+    "sig": "setUseTimeBulletValueFromEditor(bool state)",
+    "line": 190
+   },
+   {
+    "sig": "setHideBodyPartEnabledStateFromEditor(bool state)",
+    "line": 197
+   }
+  ]
+ },
+ {
+  "type": "destroyGameObject",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\destroyGameObject.cs",
+  "methods": [
+   {
+    "sig": "destroyObjectInTime()",
+    "line": 62
+   },
+   {
+    "sig": "stopDestroyObjectCoroutine()",
+    "line": 71
+   },
+   {
+    "sig": "setTimer(float timeToDestroy)",
+    "line": 95
+   },
+   {
+    "sig": "destroy()",
+    "line": 169
+   },
+   {
+    "sig": "setDestroyObjectEnabledState(bool state)",
+    "line": 240
+   },
+   {
+    "sig": "setIgnoreDestroyObjectEnabledState(bool state)",
+    "line": 245
+   },
+   {
+    "sig": "changeDestroyForSetActiveFunction(bool state)",
+    "line": 250
+   },
+   {
+    "sig": "setSendObjectToPoolSystemToDisableState(bool state)",
+    "line": 255
+   },
+   {
+    "sig": "checkToDestroyObjectInTime(bool callingFromStart)",
+    "line": 264
+   },
+   {
+    "sig": "cancelDestroy()",
+    "line": 273
+   },
+   {
+    "sig": "addObjectToGameObjectList(GameObject newObject)",
+    "line": 278
+   },
+   {
+    "sig": "setDestroyObjectEnabledStateFromEditor(bool state)",
+    "line": 292
+   },
+   {
+    "sig": "addObjectToGameObjectListFromEditor(GameObject newObject)",
+    "line": 299
+   }
+  ]
+ },
+ {
+  "type": "nonEssentialCharacterElementsManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\nonEssentialCharacterElementsManager.cs",
+  "methods": [
+   {
+    "sig": "clearObjectsSearcResultList()",
+    "line": 32
+   },
+   {
+    "sig": "showObjectsBySearchName()",
+    "line": 41
+   },
+   {
+    "sig": "selectObjectByName(string objectName)",
+    "line": 74
+   },
+   {
+    "sig": "selectObjectByIndex(int index)",
+    "line": 83
+   },
+   {
+    "sig": "removeObjectByName(string objectName)",
+    "line": 92
+   },
+   {
+    "sig": "destroyAllObjects()",
+    "line": 101
+   },
+   {
+    "sig": "removeObjectByIndex(int index, bool destroyingSingleObject)",
+    "line": 116
+   },
+   {
+    "sig": "updateObjectNames()",
+    "line": 153
+   },
+   {
+    "sig": "enableOrDisableObjectByName(string objectName, bool state)",
+    "line": 168
+   },
+   {
+    "sig": "enableOrDisableObjectByIndex(int index, bool state)",
+    "line": 179
+   },
+   {
+    "sig": "enableOrDisableAllObjects(bool state)",
+    "line": 198
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 221
+   }
+  ]
+ },
+ {
+  "type": "taskCounterSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\taskCounterSystem.cs",
+  "methods": [
+   {
+    "sig": "increaseTaskCounter()",
+    "line": 51
+   },
+   {
+    "sig": "decreaseTaskCounter()",
+    "line": 56
+   },
+   {
+    "sig": "completeTaskCounter()",
+    "line": 61
+   },
+   {
+    "sig": "addTaskCompleteState(string taskName)",
+    "line": 66
+   },
+   {
+    "sig": "removeTaskCompleteState(string taskName)",
+    "line": 92
+   },
+   {
+    "sig": "resetTasksListCompleteState()",
+    "line": 108
+   },
+   {
+    "sig": "decreaseMultipleTaskCounter(int newValue)",
+    "line": 119
+   },
+   {
+    "sig": "increaseMultipleTaskCounter(int newValue)",
+    "line": 124
+   },
+   {
+    "sig": "setTaskCounterEnabledState(bool state)",
+    "line": 173
+   },
+   {
+    "sig": "resetTaskCounter()",
+    "line": 178
+   },
+   {
+    "sig": "setTaskCompleteState(bool state)",
+    "line": 183
+   },
+   {
+    "sig": "resetTaskCounterAndDisableTaskComplete()",
+    "line": 188
+   }
+  ]
+ },
+ {
+  "type": "playerOptionsEditorSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\playerOptionsEditorSystem.cs",
+  "methods": [
+   {
+    "sig": "setIsLoadingGameState(bool state)",
+    "line": 115
+   },
+   {
+    "sig": "isLoadingGameState()",
+    "line": 120
+   },
+   {
+    "sig": "setOptionByScrollBar(Scrollbar scrollBarToSearch)",
+    "line": 125
+   },
+   {
+    "sig": "setOptionBySlider(Slider sliderToSearch)",
+    "line": 164
+   },
+   {
+    "sig": "setOptionByToggle(Toggle toggleToSearch)",
+    "line": 191
+   },
+   {
+    "sig": "setOptionByDropDown(Dropdown dropDownToSearch)",
+    "line": 218
+   },
+   {
+    "sig": "setDefaultValues()",
+    "line": 245
+   },
+   {
+    "sig": "enableOptionByName(string optionName)",
+    "line": 292
+   },
+   {
+    "sig": "disableOptionByName(string optionName)",
+    "line": 297
+   },
+   {
+    "sig": "enableOrDisableOptionByName(string optionName, bool state)",
+    "line": 302
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 315
+   }
+  ]
+ }
+]

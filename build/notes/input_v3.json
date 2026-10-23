@@ -1,0 +1,538 @@
+[
+ {
+  "type": "vehicleController",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\Vehicle Controllers\\vehicleController.cs",
+  "methods": [
+   {
+    "sig": "Awake()",
+    "line": 167
+   },
+   {
+    "sig": "Start()",
+    "line": 174
+   },
+   {
+    "sig": "checkCameraType()",
+    "line": 184
+   },
+   {
+    "sig": "vehicleUpdate()",
+    "line": 194
+   },
+   {
+    "sig": "update2_5DState()",
+    "line": 347
+   },
+   {
+    "sig": "updateCameraSteerState()",
+    "line": 534
+   },
+   {
+    "sig": "updateMovingState()",
+    "line": 550
+   },
+   {
+    "sig": "vehicleFixedUpdate()",
+    "line": 555
+   },
+   {
+    "sig": "setCollisionDetected(Collision currentCollision)",
+    "line": 560
+   },
+   {
+    "sig": "startBrakeVehicleToStopCompletely()",
+    "line": 565
+   },
+   {
+    "sig": "endBrakeVehicleToStopCompletely()",
+    "line": 570
+   },
+   {
+    "sig": "changeVehicleState()",
+    "line": 575
+   },
+   {
+    "sig": "passengerGettingOnOff()",
+    "line": 602
+   },
+   {
+    "sig": "checkVehicleStateOnPassengerGettingOnOrOff(bool state)",
+    "line": 607
+   },
+   {
+    "sig": "fixDestroyedVehicle()",
+    "line": 612
+   },
+   {
+    "sig": "disableVehicle()",
+    "line": 621
+   },
+   {
+    "sig": "getCurrentSpeed()",
+    "line": 631
+   },
+   {
+    "sig": "getMaxForwardSpeed()",
+    "line": 636
+   },
+   {
+    "sig": "inputJump()",
+    "line": 642
+   },
+   {
+    "sig": "inputHoldOrReleaseJump(bool holdingButton)",
+    "line": 652
+   },
+   {
+    "sig": "inputHoldOrReleaseTurbo(bool holdingButton)",
+    "line": 667
+   },
+   {
+    "sig": "inputSetTurnOnState()",
+    "line": 696
+   },
+   {
+    "sig": "inputHorn()",
+    "line": 709
+   },
+   {
+    "sig": "inputHoldOrReleaseBrake(bool holdingButton)",
+    "line": 716
+   },
+   {
+    "sig": "isBrakeActive()",
+    "line": 723
+   },
+   {
+    "sig": "pressHorn()",
+    "line": 729
+   },
+   {
+    "sig": "setAudioState(AudioElement source, float distance, float volume, bool loop, bool play, bool stop)",
+    "line": 735
+   },
+   {
+    "sig": "setIgnoreToTurnOnOrOffInputActiveState(bool state)",
+    "line": 751
+   },
+   {
+    "sig": "setEngineOnOrOffState()",
+    "line": 756
+   },
+   {
+    "sig": "turnOnOrOff(bool state, bool previouslyTurnedOn)",
+    "line": 763
+   },
+   {
+    "sig": "setTurnOnState()",
+    "line": 781
+   },
+   {
+    "sig": "setTurnOffState(bool previouslyTurnedOn)",
+    "line": 786
+   },
+   {
+    "sig": "changeGravityControlUse(bool state)",
+    "line": 810
+   },
+   {
+    "sig": "setNormal(Vector3 normalValue)",
+    "line": 818
+   },
+   {
+    "sig": "getNormal()",
+    "line": 823
+   },
+   {
+    "sig": "usingBoosting()",
+    "line": 829
+   },
+   {
+    "sig": "isUseOfGravityActive()",
+    "line": 834
+   },
+   {
+    "sig": "isDrivingActive()",
+    "line": 839
+   },
+   {
+    "sig": "isPlayerUsingInput()",
+    "line": 844
+   },
+   {
+    "sig": "isCameraTypeFree()",
+    "line": 853
+   },
+   {
+    "sig": "isPlayerMovingOn3dWorld()",
+    "line": 858
+   },
+   {
+    "sig": "isMovingBackwards()",
+    "line": 863
+   },
+   {
+    "sig": "getLastLookingInRightDirectionOn2_5d()",
+    "line": 884
+   },
+   {
+    "sig": "getCurrentNormal()",
+    "line": 897
+   },
+   {
+    "sig": "setNewMainCameraTransform(Transform newTransform)",
+    "line": 902
+   },
+   {
+    "sig": "setNewPlayerCameraTransform(Transform newTransform)",
+    "line": 907
+   },
+   {
+    "sig": "setUseForwardDirectionForCameraDirectionState(bool state)",
+    "line": 912
+   },
+   {
+    "sig": "setUseRightDirectionForCameraDirectionState(bool state)",
+    "line": 917
+   },
+   {
+    "sig": "setAddExtraRotationPausedState(bool state)",
+    "line": 922
+   },
+   {
+    "sig": "activateAutoBrakeOnGetOff()",
+    "line": 927
+   },
+   {
+    "sig": "checkAutoBrakeOnGetOffState()",
+    "line": 934
+   },
+   {
+    "sig": "isVehicleOnGround()",
+    "line": 945
+   },
+   {
+    "sig": "canUseHoverboardWaypoints()",
+    "line": 951
+   },
+   {
+    "sig": "getLastTimeReleasedFromWaypoint()",
+    "line": 956
+   },
+   {
+    "sig": "isUsingHoverBoardWaypoint()",
+    "line": 961
+   },
+   {
+    "sig": "enterOrExitFromWayPoint(bool state)",
+    "line": 966
+   },
+   {
+    "sig": "receiveWayPoints(hoverBoardWayPoints wayPoints)",
+    "line": 991
+   },
+   {
+    "sig": "getMotorInput()",
+    "line": 996
+   },
+   {
+    "sig": "getHorizontalAxis()",
+    "line": 1001
+   },
+   {
+    "sig": "getVerticalAxis()",
+    "line": 1006
+   },
+   {
+    "sig": "getPlayerMouseAxis()",
+    "line": 1011
+   },
+   {
+    "sig": "getPlayerMovementAxis()",
+    "line": 1016
+   },
+   {
+    "sig": "resetVehicleTransformRotation()",
+    "line": 1023
+   },
+   {
+    "sig": "resetVehicleTransformRotationCoroutine()",
+    "line": 1039
+   },
+   {
+    "sig": "pickOrReleaseHoverboardVehicle(bool state, bool auto)",
+    "line": 1063
+   },
+   {
+    "sig": "activeHoverboardMovement()",
+    "line": 1082
+   },
+   {
+    "sig": "stopMoveThroughWayPointsCoroutine()",
+    "line": 1089
+   },
+   {
+    "sig": "getVehicleComponents(GameObject mainVehicleObject)",
+    "line": 1271
+   }
+  ]
+ },
+ {
+  "type": "IKDrivingSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\IKDrivingSystem.cs",
+  "methods": [
+   {
+    "sig": "updateSeatsStates()",
+    "line": 199
+   },
+   {
+    "sig": "setNewAngularDirection(Vector3 newValue)",
+    "line": 224
+   },
+   {
+    "sig": "setCollisionForceDirectionToPassengers(Vector3 forceDirection)",
+    "line": 229
+   },
+   {
+    "sig": "setPassengerFirstPersonState(bool state, GameObject passengerToCheck)",
+    "line": 250
+   },
+   {
+    "sig": "setPlayerToStartGameOnThisVehicle(GameObject newPlayer)",
+    "line": 263
+   },
+   {
+    "sig": "setDriverExternally(GameObject currentDriver)",
+    "line": 272
+   },
+   {
+    "sig": "setPassengerExternally(GameObject currentDriver)",
+    "line": 301
+   },
+   {
+    "sig": "destroyVehicle()",
+    "line": 341
+   },
+   {
+    "sig": "fixDestroyedVehicle()",
+    "line": 356
+   },
+   {
+    "sig": "setMainColliderEnabledState(bool state)",
+    "line": 365
+   },
+   {
+    "sig": "disableVehicle()",
+    "line": 371
+   },
+   {
+    "sig": "ejectVehiclePassengersOnSelfDestruct(float ejectPassengerFoce)",
+    "line": 433
+   },
+   {
+    "sig": "ejectVehiclePassengers(bool ejectPassenger, float ejectForce)",
+    "line": 438
+   },
+   {
+    "sig": "checkIgnorPassengersCollidersState(List<passengerComponents> auxPassengerComponentsList)",
+    "line": 507
+   },
+   {
+    "sig": "setActivateFreeFloatingModeOnEjectEnabledState(bool state)",
+    "line": 554
+   },
+   {
+    "sig": "startOrStopVehicle(GameObject currentPassenger, Transform passengerParent, Vector3 normal, Vector3 nextPlayerPos)",
+    "line": 560
+   },
+   {
+    "sig": "stopEnterExitActionSystemOnPassengerCoroutine(Coroutine passengerCoroutine)",
+    "line": 737
+   },
+   {
+    "sig": "setPlayerCameraDirectionWithVehicleCameraDirection(passengerComponents currentPassengerComponents)",
+    "line": 1660
+   },
+   {
+    "sig": "checkIfNotDrivenRemotely(bool currentPassengerIsPlayer)",
+    "line": 1702
+   },
+   {
+    "sig": "setCanBeDrivenRemotelyState(bool state)",
+    "line": 1710
+   },
+   {
+    "sig": "getCanBeDrivenRemotelyValue()",
+    "line": 1715
+   },
+   {
+    "sig": "enableOrDisablePlayerVisibleInVehicle(bool state, passengerComponents currentPassengerComponents)",
+    "line": 1735
+   },
+   {
+    "sig": "checkCameraTranslationByPlayerCamera(bool state, playerCamera playerCameraManager)",
+    "line": 1747
+   },
+   {
+    "sig": "stopCameraTranslationByPlayerCamera(playerCamera playerCameraManager)",
+    "line": 1756
+   },
+   {
+    "sig": "checkCameraTranslation(bool state, passengerComponents currentPassengerComponents)",
+    "line": 1762
+   },
+   {
+    "sig": "stopCheckCameraTranslation(Coroutine moveCameraCoroutine)",
+    "line": 1772
+   },
+   {
+    "sig": "setPlayerCameraParentAndPosition(Transform mainCameraTransform, playerCamera playerCameraManager)",
+    "line": 1875
+   },
+   {
+    "sig": "checkDisableShowControlsMenu()",
+    "line": 1949
+   },
+   {
+    "sig": "inputOpenOrCloseControlsMenu(bool state)",
+    "line": 1956
+   },
+   {
+    "sig": "openOrCloseControlsMenu(bool state)",
+    "line": 1965
+   },
+   {
+    "sig": "setUnlockCursorState(bool state)",
+    "line": 1997
+   },
+   {
+    "sig": "setCameraAndWeaponsPauseState(bool state)",
+    "line": 2032
+   },
+   {
+    "sig": "pauseOrPlayVehicleCamera(bool state)",
+    "line": 2041
+   },
+   {
+    "sig": "getcurrentDriver()",
+    "line": 2046
+   },
+   {
+    "sig": "getLastDriver()",
+    "line": 2069
+   },
+   {
+    "sig": "currentDriverIsAI()",
+    "line": 2078
+   },
+   {
+    "sig": "getOffFromVehicleToDriverAI()",
+    "line": 2095
+   },
+   {
+    "sig": "getHUDManager()",
+    "line": 2106
+   },
+   {
+    "sig": "getPassengerGetOffPosition(GameObject currentPassenger)",
+    "line": 2140
+   },
+   {
+    "sig": "getGetOffPosition(IKDrivingInformation passengerInfo)",
+    "line": 2437
+   },
+   {
+    "sig": "getClosestSeatToPassengerIndex(GameObject currentPassenger)",
+    "line": 2446
+   },
+   {
+    "sig": "getClosestSeatToPassengerIndexWithoutStateCheck(GameObject currentPassenger)",
+    "line": 2487
+   },
+   {
+    "sig": "getDriverSeatPassengerIndex()",
+    "line": 2509
+   },
+   {
+    "sig": "getIKVehiclePassengerInfo(GameObject passenger)",
+    "line": 2522
+   },
+   {
+    "sig": "setPassengerInfo(IKDrivingInformation passengerInfo, GameObject passenger)",
+    "line": 2535
+   },
+   {
+    "sig": "setPassengerComponents(GameObject currentPassenger)",
+    "line": 2555
+   },
+   {
+    "sig": "removePassengerInfo(IKDrivingInformation passengerInfo)",
+    "line": 2637
+   },
+   {
+    "sig": "addPassenger()",
+    "line": 2676
+   },
+   {
+    "sig": "getPassengerGameObjectList()",
+    "line": 2686
+   },
+   {
+    "sig": "checkTriggerInfo(Collider col, bool isEnter)",
+    "line": 2691
+   },
+   {
+    "sig": "getPassengersInsideTrigger()",
+    "line": 2734
+   },
+   {
+    "sig": "isVehicleFull()",
+    "line": 2739
+   },
+   {
+    "sig": "arePassengerSeatsFull()",
+    "line": 2748
+   },
+   {
+    "sig": "isVehicleEmpty()",
+    "line": 2764
+   },
+   {
+    "sig": "getVehicleSeatsAmount()",
+    "line": 2773
+   },
+   {
+    "sig": "getMainCollider()",
+    "line": 2778
+   },
+   {
+    "sig": "checkActivateActionScreen(bool state, playerController playerControllerManager)",
+    "line": 2783
+   },
+   {
+    "sig": "getOffFromVehicle()",
+    "line": 2792
+   },
+   {
+    "sig": "isVehicleBeingDriven()",
+    "line": 2805
+   },
+   {
+    "sig": "isForcingPassengersToGetOffOnVehicleDestroyedActive()",
+    "line": 2814
+   },
+   {
+    "sig": "checkStateOnDestroyVehicleExternally()",
+    "line": 2819
+   },
+   {
+    "sig": "forceAllPassengersToGetOffFromVehicle()",
+    "line": 2826
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 2845
+   }
+  ]
+ }
+]

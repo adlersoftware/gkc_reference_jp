@@ -1,0 +1,754 @@
+[
+ {
+  "type": "projectileSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\Projectiles\\projectileSystem.cs",
+  "methods": [
+   {
+    "sig": "parentDestroyed()",
+    "line": 289
+   },
+   {
+    "sig": "setEnemy(GameObject obj)",
+    "line": 300
+   },
+   {
+    "sig": "setIgnoreProjectileWithAbilityState(bool state)",
+    "line": 332
+   },
+   {
+    "sig": "checkSurface(Collider col)",
+    "line": 337
+   },
+   {
+    "sig": "checkMapIcon()",
+    "line": 704
+   },
+   {
+    "sig": "createMapIconInfo()",
+    "line": 713
+   },
+   {
+    "sig": "checkExplodeProjectile()",
+    "line": 724
+   },
+   {
+    "sig": "explodeProjectileFunction()",
+    "line": 764
+   },
+   {
+    "sig": "setProjectileScorch()",
+    "line": 826
+   },
+   {
+    "sig": "createImpactSound(AudioElement impactSoundEffect)",
+    "line": 866
+   },
+   {
+    "sig": "canActivateEffect(Collider col)",
+    "line": 890
+   },
+   {
+    "sig": "creatImpactParticles()",
+    "line": 933
+   },
+   {
+    "sig": "disableBullet(float time)",
+    "line": 951
+   },
+   {
+    "sig": "setKinematicState(bool state)",
+    "line": 974
+   },
+   {
+    "sig": "setProjectileInfo(projectileInfo info)",
+    "line": 982
+   },
+   {
+    "sig": "setProjectileOnwer(GameObject owner)",
+    "line": 997
+   },
+   {
+    "sig": "setTargetToDamageLayer(LayerMask layer)",
+    "line": 1002
+   },
+   {
+    "sig": "setUseCustomIgnoreTags(bool state, List<string> newCustomTagsToIgnoreList)",
+    "line": 1007
+   },
+   {
+    "sig": "rayCastShoot(Collider surface, Vector3 position, Vector3 forwardDirection)",
+    "line": 1015
+   },
+   {
+    "sig": "setProjectileLocalRotation(Vector3 newProjectileLocalRotation)",
+    "line": 1042
+   },
+   {
+    "sig": "checkSurfaceWithDelay(Collider surface)",
+    "line": 1047
+   },
+   {
+    "sig": "checkRemoteEvents(GameObject objectToCheck)",
+    "line": 1125
+   },
+   {
+    "sig": "checkRemoteEventOnProjectile(string remoteEventName)",
+    "line": 1148
+   },
+   {
+    "sig": "checkRemoteEventsOnProjectile(List<string> remoteEventNameList)",
+    "line": 1157
+   },
+   {
+    "sig": "creatFakeProjectileTrail(Vector3 targetPosition)",
+    "line": 1170
+   },
+   {
+    "sig": "setDestroyTrailAfterTimeState(bool state)",
+    "line": 1187
+   },
+   {
+    "sig": "setFakeProjectileTrailSpeedMultiplier(float newValue)",
+    "line": 1196
+   },
+   {
+    "sig": "destroyProjectileWithDelay(float newTime)",
+    "line": 1207
+   },
+   {
+    "sig": "destroyProjectile()",
+    "line": 1229
+   },
+   {
+    "sig": "isProjectileUsed()",
+    "line": 1263
+   },
+   {
+    "sig": "setProjectileUsedState(bool state)",
+    "line": 1268
+   },
+   {
+    "sig": "initializeProjectile()",
+    "line": 1273
+   },
+   {
+    "sig": "returnBullet(Vector3 direction, GameObject owner, bool ignoreProjectileOwner)",
+    "line": 1332
+   },
+   {
+    "sig": "attachProjectileToSurface()",
+    "line": 1376
+   },
+   {
+    "sig": "checkEventOnProjectileFiredExternally()",
+    "line": 1438
+   },
+   {
+    "sig": "enableOrDisableProjectileCollider(bool state)",
+    "line": 1451
+   },
+   {
+    "sig": "checkProjectilesParent()",
+    "line": 1469
+   },
+   {
+    "sig": "setIgnoreParentDestroyedState(bool state)",
+    "line": 1480
+   },
+   {
+    "sig": "enableOrDisableSecondaryMeshCollider(bool state)",
+    "line": 1485
+   },
+   {
+    "sig": "enableOrDisableMainTrailRenderer(bool state)",
+    "line": 1492
+   },
+   {
+    "sig": "projectimeImpactState(GameObject objectToDamage)",
+    "line": 1505
+   },
+   {
+    "sig": "callEventOnImpact()",
+    "line": 1518
+   },
+   {
+    "sig": "checkCollisionDetectionMode()",
+    "line": 1527
+   },
+   {
+    "sig": "getProjectileRigibody()",
+    "line": 1558
+   },
+   {
+    "sig": "setNewProjectileDamage(float newValue)",
+    "line": 1563
+   },
+   {
+    "sig": "setProjectileDamageMultiplier(float newValue)",
+    "line": 1568
+   },
+   {
+    "sig": "getProjectileComponents(bool calledFromEditor)",
+    "line": 1575
+   },
+   {
+    "sig": "resetProjectile()",
+    "line": 1728
+   },
+   {
+    "sig": "checkToResetProjectile()",
+    "line": 1817
+   },
+   {
+    "sig": "setProjectileSpecialActionActiveState(bool state)",
+    "line": 1830
+   }
+  ]
+ },
+ {
+  "type": "simpleWeaponSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\simpleWeaponSystem.cs",
+  "methods": [
+   {
+    "sig": "shootWeaponExternally()",
+    "line": 254
+   },
+   {
+    "sig": "stopUpdateHoldShootWeaponCoroutine()",
+    "line": 276
+   },
+   {
+    "sig": "inputHoldOrReleaseShootWeapon(bool holdingButton)",
+    "line": 305
+   },
+   {
+    "sig": "inputShootWeaponOnPressDown()",
+    "line": 314
+   },
+   {
+    "sig": "inputShootWeaponOnPressUp()",
+    "line": 319
+   },
+   {
+    "sig": "inputShootWeaponOnPress()",
+    "line": 324
+   },
+   {
+    "sig": "shootWeapon(bool state)",
+    "line": 331
+   },
+   {
+    "sig": "addExternalProjectileToFire(GameObject newProjectile)",
+    "line": 344
+   },
+   {
+    "sig": "removeExternalProjectileToFire(GameObject newProjectile)",
+    "line": 351
+   },
+   {
+    "sig": "sendRemoteEventToExternalProjectile(string remoteEventName)",
+    "line": 358
+   },
+   {
+    "sig": "shootWeapon(bool isThirdPersonView, bool shootAtKeyDown)",
+    "line": 368
+   },
+   {
+    "sig": "checkWeaponAbility(bool keyDown)",
+    "line": 661
+   },
+   {
+    "sig": "updateProjectileInfoValues()",
+    "line": 844
+   },
+   {
+    "sig": "setProjectileInfoAssignedValue(bool state)",
+    "line": 851
+   },
+   {
+    "sig": "setTargetToDamageLayer(LayerMask newLayer)",
+    "line": 856
+   },
+   {
+    "sig": "setSeekerProjectileInfo(Vector3 shootPosition)",
+    "line": 865
+   },
+   {
+    "sig": "setProjectileSpread()",
+    "line": 871
+   },
+   {
+    "sig": "checkDroppedShellsRemoval()",
+    "line": 931
+   },
+   {
+    "sig": "playSound(AudioElement clipSound)",
+    "line": 991
+   },
+   {
+    "sig": "useAmmo()",
+    "line": 1034
+   },
+   {
+    "sig": "useAmmo(int amount)",
+    "line": 1039
+   },
+   {
+    "sig": "reloadWeapon(float waitTimeAmount)",
+    "line": 1102
+   },
+   {
+    "sig": "manualReload()",
+    "line": 1155
+   },
+   {
+    "sig": "canIncreaseRemainAmmo()",
+    "line": 1164
+   },
+   {
+    "sig": "hasMaximumAmmoAmount()",
+    "line": 1173
+   },
+   {
+    "sig": "hasAmmoLimit()",
+    "line": 1186
+   },
+   {
+    "sig": "ammoAmountToMaximumLimit()",
+    "line": 1191
+   },
+   {
+    "sig": "getAmmo(int amount)",
+    "line": 1197
+   },
+   {
+    "sig": "addAuxRemainAmmo(int amount)",
+    "line": 1216
+   },
+   {
+    "sig": "hasAnyAmmo()",
+    "line": 1221
+   },
+   {
+    "sig": "getAndUpdateAmmo(int amount)",
+    "line": 1230
+   },
+   {
+    "sig": "remainAmmoInClip()",
+    "line": 1235
+   },
+   {
+    "sig": "checkSendProjectileOnEventFire()",
+    "line": 1240
+   },
+   {
+    "sig": "launchCurrentProjectile(GameObject newProjectile, Rigidbody projectileRigidbody, Vector3 cameraDirection)",
+    "line": 1247
+   },
+   {
+    "sig": "checkParableTrayectory(bool usingThirdPerson, bool usingFirstPerson)",
+    "line": 1304
+   },
+   {
+    "sig": "getImpactListInfo()",
+    "line": 1313
+   },
+   {
+    "sig": "setReducedVelocity(float multiplierValue)",
+    "line": 1332
+   },
+   {
+    "sig": "setNormalVelocity()",
+    "line": 1337
+   },
+   {
+    "sig": "getWeaponSystemName()",
+    "line": 1342
+   },
+   {
+    "sig": "getWeaponClipSize()",
+    "line": 1347
+   },
+   {
+    "sig": "getCurrentAmmoText()",
+    "line": 1352
+   },
+   {
+    "sig": "enableMuzzleFlashLight()",
+    "line": 1361
+   },
+   {
+    "sig": "checkWeaponShootNoise()",
+    "line": 1387
+   },
+   {
+    "sig": "getCurrentProjectileSystem()",
+    "line": 1429
+   },
+   {
+    "sig": "getLastProjectilesSystemListFired()",
+    "line": 1434
+   },
+   {
+    "sig": "setCustomprojectilePosition(List<Transform> customProjectilePosition)",
+    "line": 1440
+   },
+   {
+    "sig": "setCustomTagsToIgnore(List<string> newTagList)",
+    "line": 1445
+   },
+   {
+    "sig": "setCustommainCameraTransform(Transform newTransform)",
+    "line": 1462
+   }
+  ]
+ },
+ {
+  "type": "bowSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\bowSystem.cs",
+  "methods": [
+   {
+    "sig": "stopUpdateBowStateCoroutine()",
+    "line": 252
+   },
+   {
+    "sig": "setBowLoadedState(bool state)",
+    "line": 360
+   },
+   {
+    "sig": "resetLastAmountOfFiredProjectiles()",
+    "line": 438
+   },
+   {
+    "sig": "getLastAmountOfFiredProjectiles()",
+    "line": 443
+   },
+   {
+    "sig": "fireLoadedArrow()",
+    "line": 448
+   },
+   {
+    "sig": "checkIfArrowsFoundOnInventoryToCancelBowState()",
+    "line": 475
+   },
+   {
+    "sig": "activateLoadBowAction()",
+    "line": 512
+   },
+   {
+    "sig": "setAimBowState(bool state)",
+    "line": 536
+   },
+   {
+    "sig": "setTimeBulletOnBowSystemExternally(bool state)",
+    "line": 573
+   },
+   {
+    "sig": "setBowActiveState(bool state)",
+    "line": 635
+   },
+   {
+    "sig": "cancelBowLoadedStateIfActive()",
+    "line": 823
+   },
+   {
+    "sig": "cancelBowState()",
+    "line": 832
+   },
+   {
+    "sig": "checkSetExtraRotationCoroutine(bool state)",
+    "line": 840
+   },
+   {
+    "sig": "stopCheckIfPlayerOnGroundCoroutine()",
+    "line": 868
+   },
+   {
+    "sig": "checkSpawnArrowInPlayerHand()",
+    "line": 913
+   },
+   {
+    "sig": "checkBowHolderLoadArrow()",
+    "line": 923
+   },
+   {
+    "sig": "checkBowHolderFireArrow()",
+    "line": 942
+   },
+   {
+    "sig": "checkUsePullBowMultipliersOnFireArrow()",
+    "line": 951
+   },
+   {
+    "sig": "checkBowEventOnStartAim()",
+    "line": 1054
+   },
+   {
+    "sig": "checkBowEventOnEndAim()",
+    "line": 1063
+   },
+   {
+    "sig": "checkEventOnCancelBowAction()",
+    "line": 1072
+   },
+   {
+    "sig": "setCurrentBowWeaponSystemByID(int bowWeaponID)",
+    "line": 1092
+   },
+   {
+    "sig": "fireCurrentBowWeapon()",
+    "line": 1145
+   },
+   {
+    "sig": "setPullBowState(bool state)",
+    "line": 1154
+   },
+   {
+    "sig": "setArrowsAvailableToFireState(bool state)",
+    "line": 1193
+   },
+   {
+    "sig": "setPositionToPlaceArrowActiveState(bool state)",
+    "line": 1198
+   },
+   {
+    "sig": "canUseWeaponsInput()",
+    "line": 1205
+   },
+   {
+    "sig": "setIgnoreUseDrawHolsterActionAnimationsState(bool state)",
+    "line": 1343
+   },
+   {
+    "sig": "setUseDrawHolsterActionAnimationsState(bool state)",
+    "line": 1348
+   },
+   {
+    "sig": "setArrowsManagedByInventoryState(bool state)",
+    "line": 1353
+   },
+   {
+    "sig": "setOriginalArrowsManagedByInventoryState()",
+    "line": 1358
+   },
+   {
+    "sig": "isAimingBowActive()",
+    "line": 1363
+   },
+   {
+    "sig": "inputSetAimBowState(bool state)",
+    "line": 1369
+   },
+   {
+    "sig": "inputFireArrow()",
+    "line": 1405
+   },
+   {
+    "sig": "inputStopFireArrowWithoutAim()",
+    "line": 1442
+   },
+   {
+    "sig": "inputChangeArrowType()",
+    "line": 1459
+   },
+   {
+    "sig": "inputSetTimeBulletOnBowSystem(bool state)",
+    "line": 1491
+   },
+   {
+    "sig": "inputToggleTimeBulletOnBowSystem()",
+    "line": 1502
+   },
+   {
+    "sig": "changeArrowTypeByIndex(int newIndex)",
+    "line": 1507
+   },
+   {
+    "sig": "setUseUpperBodyRotationSystemToAimState(bool state)",
+    "line": 1531
+   },
+   {
+    "sig": "setUseDrawHolsterActionAnimationsStateFromEditor(bool state)",
+    "line": 1538
+   },
+   {
+    "sig": "setUseUpperBodyRotationSystemToAimStateFromEditor(bool state)",
+    "line": 1545
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 1552
+   }
+  ]
+ },
+ {
+  "type": "weaponSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\weaponSystem.cs",
+  "methods": [
+   {
+    "sig": "setWeaponCarryState(bool thirdPersonCarry, bool firstPersonCarry)",
+    "line": 305
+   },
+   {
+    "sig": "setWeaponAimState(bool thirdPersonAim, bool firstPersonAim)",
+    "line": 362
+   },
+   {
+    "sig": "setUsingWeaponState(bool state)",
+    "line": 424
+   },
+   {
+    "sig": "checkCarryAndAimStates()",
+    "line": 441
+   },
+   {
+    "sig": "inputShootWeaponOnPressDown()",
+    "line": 452
+   },
+   {
+    "sig": "inputShootWeaponOnPressUp()",
+    "line": 471
+   },
+   {
+    "sig": "inputShootWeaponOnPress()",
+    "line": 484
+   },
+   {
+    "sig": "shootWeapon(bool state)",
+    "line": 501
+   },
+   {
+    "sig": "shootWeapon(bool isThirdPersonView, bool shootAtKeyDown)",
+    "line": 532
+   },
+   {
+    "sig": "checkWeaponAbility(bool keyDown)",
+    "line": 849
+   },
+   {
+    "sig": "removeLocatedEnemiesIcons()",
+    "line": 869
+   },
+   {
+    "sig": "setProjectileInfoAssignedValue(bool state)",
+    "line": 1022
+   },
+   {
+    "sig": "setSeekerProjectileInfo(Vector3 shootPosition)",
+    "line": 1027
+   },
+   {
+    "sig": "setProjectileSpread()",
+    "line": 1037
+   },
+   {
+    "sig": "checkDroppedShellsRemoval()",
+    "line": 1124
+   },
+   {
+    "sig": "playSound(AudioElement clipSound)",
+    "line": 1185
+   },
+   {
+    "sig": "useAmmo()",
+    "line": 1226
+   },
+   {
+    "sig": "useAmmo(int amount)",
+    "line": 1237
+   },
+   {
+    "sig": "reloadWeapon(float waitTimeAmount)",
+    "line": 1316
+   },
+   {
+    "sig": "manualReload()",
+    "line": 1370
+   },
+   {
+    "sig": "canIncreaseRemainAmmo()",
+    "line": 1379
+   },
+   {
+    "sig": "hasMaximumAmmoAmount()",
+    "line": 1388
+   },
+   {
+    "sig": "hasAmmoLimit()",
+    "line": 1401
+   },
+   {
+    "sig": "ammoAmountToMaximumLimit()",
+    "line": 1406
+   },
+   {
+    "sig": "getAmmo(int amount)",
+    "line": 1412
+   },
+   {
+    "sig": "addAuxRemainAmmo(int amount)",
+    "line": 1432
+   },
+   {
+    "sig": "hasAnyAmmo()",
+    "line": 1437
+   },
+   {
+    "sig": "getAndUpdateAmmo(int amount)",
+    "line": 1446
+   },
+   {
+    "sig": "remainAmmoInClip()",
+    "line": 1453
+   },
+   {
+    "sig": "launchCurrentProjectile(GameObject currentProjectile, Rigidbody projectileRigidbody, Vector3 cameraDirection)",
+    "line": 1458
+   },
+   {
+    "sig": "checkParableTrayectory(bool usingThirdPerson, bool usingFirstPerson)",
+    "line": 1514
+   },
+   {
+    "sig": "getWeaponComponents(playerWeaponsManager newPlayerWeaponsManager)",
+    "line": 1535
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 1558
+   },
+   {
+    "sig": "getImpactListInfo()",
+    "line": 1563
+   },
+   {
+    "sig": "setReducedVelocity(float multiplierValue)",
+    "line": 1584
+   },
+   {
+    "sig": "setNormalVelocity()",
+    "line": 1589
+   },
+   {
+    "sig": "getWeaponSystemName()",
+    "line": 1594
+   },
+   {
+    "sig": "getWeaponClipSize()",
+    "line": 1599
+   },
+   {
+    "sig": "getCurrentAmmoText()",
+    "line": 1604
+   },
+   {
+    "sig": "enableMuzzleFlashLight()",
+    "line": 1613
+   },
+   {
+    "sig": "checkWeaponShootNoise()",
+    "line": 1639
+   }
+  ]
+ }
+]

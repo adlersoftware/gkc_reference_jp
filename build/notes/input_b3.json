@@ -1,0 +1,608 @@
+[
+ {
+  "type": "playerController",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\playerController.cs",
+  "methods": [
+   {
+    "sig": "setOnGroundAnimatorIDValueWithoutCheck(bool state)",
+    "line": 7630
+   },
+   {
+    "sig": "setJumpAnimatorIDValue(float newValue)",
+    "line": 7637
+   },
+   {
+    "sig": "setRightArmdIDAnimatorIDValue(int newValue)",
+    "line": 7646
+   },
+   {
+    "sig": "setLeftArmIDAnimatorIDValue(int newValue)",
+    "line": 7651
+   },
+   {
+    "sig": "setTimeOnAirAnimatorIDValue()",
+    "line": 7656
+   },
+   {
+    "sig": "equipJetpack(bool state)",
+    "line": 7667
+   },
+   {
+    "sig": "setUsingJetpackState(bool state)",
+    "line": 7672
+   },
+   {
+    "sig": "isJetpackEquiped()",
+    "line": 7677
+   },
+   {
+    "sig": "isUsingJetpack()",
+    "line": 7682
+   },
+   {
+    "sig": "enableOrDisableFlyingMode(bool state)",
+    "line": 7687
+   },
+   {
+    "sig": "isFlyingActive()",
+    "line": 7696
+   },
+   {
+    "sig": "enableOrDisableFlyModeTurbo(bool state)",
+    "line": 7701
+   },
+   {
+    "sig": "setFreeClimbActiveState(bool state)",
+    "line": 7706
+   },
+   {
+    "sig": "isFreeClimbActive()",
+    "line": 7713
+   },
+   {
+    "sig": "setGrabbingToSurfaceActiveState(bool state)",
+    "line": 7718
+   },
+   {
+    "sig": "isGrabbingToSurfaceActive()",
+    "line": 7723
+   },
+   {
+    "sig": "setAdjustingToSurfaceToGrabInProcessState(bool state)",
+    "line": 7728
+   },
+   {
+    "sig": "isAjustingToSurfaceToGrabInProcess()",
+    "line": 7733
+   },
+   {
+    "sig": "setCarryingPhysicalObjectState(bool state)",
+    "line": 7738
+   },
+   {
+    "sig": "isCarryingPhysicalObject()",
+    "line": 7743
+   },
+   {
+    "sig": "enableOrDisableSwimMode(bool state)",
+    "line": 7748
+   },
+   {
+    "sig": "isSwimModeActive()",
+    "line": 7757
+   },
+   {
+    "sig": "setEnableExternalForceOnSwimModeState(bool state)",
+    "line": 7762
+   },
+   {
+    "sig": "setEnableExternalForceOnFlyModeState(bool state)",
+    "line": 7767
+   },
+   {
+    "sig": "setTurnAndForwardAnimatorValuesPausedState(bool state)",
+    "line": 7772
+   },
+   {
+    "sig": "setPauseCameraShakeFromGravityActiveState(bool state)",
+    "line": 7777
+   },
+   {
+    "sig": "isPauseCameraShakeFromGravityActive()",
+    "line": 7782
+   },
+   {
+    "sig": "setExternalControllerBehavior(externalControllerBehavior newExternalControllerBehavior)",
+    "line": 7791
+   },
+   {
+    "sig": "getCurrentExternalControllerBehavior()",
+    "line": 7826
+   },
+   {
+    "sig": "isExternalControllBehaviorActive()",
+    "line": 7831
+   },
+   {
+    "sig": "getCurrentExternalControllerBehaviorName()",
+    "line": 7836
+   },
+   {
+    "sig": "setUseExternalControllerBehaviorPausedState(bool state)",
+    "line": 7841
+   },
+   {
+    "sig": "isUseExternalControllerBehaviorPaused()",
+    "line": 7846
+   },
+   {
+    "sig": "getExternalControllerBehaviorWallRunning()",
+    "line": 7851
+   },
+   {
+    "sig": "checkChangeCameraViewStateOnExternalControllerBehavior()",
+    "line": 7856
+   },
+   {
+    "sig": "setAvoidListOfExternalControllerStatesActiveState(bool state, List<string> newList)",
+    "line": 7863
+   },
+   {
+    "sig": "isAvoidListOfExternalControllerStatesActive()",
+    "line": 7870
+   },
+   {
+    "sig": "getExternalControllerToAvoidList()",
+    "line": 7875
+   },
+   {
+    "sig": "checkIfInsideExternalControllerToAvoidList(string nameToCheck)",
+    "line": 7880
+   },
+   {
+    "sig": "setCustomCharacterControllerActiveState(bool state, customCharacterControllerBase customCharacterControllerBaseInfo)",
+    "line": 7890
+   },
+   {
+    "sig": "isCustomCharacterControllerActive()",
+    "line": 7903
+   },
+   {
+    "sig": "setExternalControlBehaviorForAirTypeActiveState(bool state)",
+    "line": 7908
+   },
+   {
+    "sig": "enableOrDisableAiminig(bool state)",
+    "line": 7913
+   },
+   {
+    "sig": "enableOrDisableAimingInFirstPerson(bool state)",
+    "line": 7930
+   },
+   {
+    "sig": "enableOrDisableAimingInThirdPerson(bool state)",
+    "line": 7937
+   },
+   {
+    "sig": "isPlayerAiming()",
+    "line": 7946
+   },
+   {
+    "sig": "isPlayerAimingInThirdPerson()",
+    "line": 7951
+   },
+   {
+    "sig": "isPlayerAimingInFirstPerson()",
+    "line": 7956
+   },
+   {
+    "sig": "checkOtherStatesOnAirID(bool state)",
+    "line": 7961
+   },
+   {
+    "sig": "isLookingInCameraDirection()",
+    "line": 7982
+   },
+   {
+    "sig": "getPlayerCameraManager()",
+    "line": 7987
+   },
+   {
+    "sig": "getPlayerCameraGameObject()",
+    "line": 7992
+   },
+   {
+    "sig": "isPlayerOnFirstPerson()",
+    "line": 7997
+   },
+   {
+    "sig": "setFirstPersonViewActiveState(bool state)",
+    "line": 8002
+   },
+   {
+    "sig": "setFullBodyAwarenessActiveStateAtStart(bool state)",
+    "line": 8027
+   },
+   {
+    "sig": "setFullBodyAwarenessActiveStateExternally(bool state)",
+    "line": 8032
+   },
+   {
+    "sig": "setFullBodyAwarenessActiveState(bool state)",
+    "line": 8037
+   },
+   {
+    "sig": "isFullBodyAwarenessActive()",
+    "line": 8087
+   },
+   {
+    "sig": "setPivotCameraTransformParentCurrentTransformToFollow()",
+    "line": 8092
+   },
+   {
+    "sig": "setPivotCameraTransformOriginalParent()",
+    "line": 8097
+   },
+   {
+    "sig": "resetPivotCameraTransformLocalRotation()",
+    "line": 8102
+   },
+   {
+    "sig": "setNewPlayerCharacterPositionAndRotation(Vector3 targetPosition, Vector3 targetRotation)",
+    "line": 8107
+   },
+   {
+    "sig": "stopShakeCamera()",
+    "line": 8118
+   },
+   {
+    "sig": "getForwardAmount()",
+    "line": 8123
+   },
+   {
+    "sig": "setForwardAmountExternally(float newValue)",
+    "line": 8128
+   },
+   {
+    "sig": "isPlayerMoving(float movingTolerance)",
+    "line": 8133
+   },
+   {
+    "sig": "isPlayerMovingHorizontal(float movingTolerance)",
+    "line": 8142
+   },
+   {
+    "sig": "isPlayerMovingVertical(float movingTolerance)",
+    "line": 8151
+   },
+   {
+    "sig": "isPlayerUsingInput()",
+    "line": 8160
+   },
+   {
+    "sig": "isPlayerUsingVerticalInput()",
+    "line": 8169
+   },
+   {
+    "sig": "isPlayerUsingHorizontalInput()",
+    "line": 8178
+   },
+   {
+    "sig": "getAxisValues()",
+    "line": 8187
+   },
+   {
+    "sig": "getRawAxisValues()",
+    "line": 8192
+   },
+   {
+    "sig": "resetPlayerControllerInput()",
+    "line": 8197
+   },
+   {
+    "sig": "resetLastMoveInputOnJumpValue()",
+    "line": 8203
+   },
+   {
+    "sig": "overrideMainCameraTransformDirection(Transform newCameraDirection, bool overrideState)",
+    "line": 8210
+   },
+   {
+    "sig": "setUseForwardDirectionForCameraDirectionState(bool state)",
+    "line": 8216
+   },
+   {
+    "sig": "setUseRightDirectionForCameraDirectionState(bool state)",
+    "line": 8221
+   },
+   {
+    "sig": "setOverrideTurnAmount(float newTurnAmount, bool newOverrideTurnAmountActiveState)",
+    "line": 8226
+   },
+   {
+    "sig": "setLockedCameraState(bool state, bool useTankControlsValue, bool useRelativeMovementToLockedCameraValue, bool playerCanMoveOnAimInTankModeValue, bool keepCameraRelativeMovementWhenNotAimingValue)",
+    "line": 8232
+   },
+   {
+    "sig": "isLockedCameraStateActive()",
+    "line": 8252
+   },
+   {
+    "sig": "setUpdate2_5dClampedPositionPausedState(bool state)",
+    "line": 8257
+   },
+   {
+    "sig": "isTankModeActive()",
+    "line": 8262
+   },
+   {
+    "sig": "canCharacterGetOnVehicles()",
+    "line": 8267
+   },
+   {
+    "sig": "setCanCharacterGetOnVehiclesState(bool state)",
+    "line": 8272
+   },
+   {
+    "sig": "setOriginalCanCharacterGetOnVehiclesState()",
+    "line": 8277
+   },
+   {
+    "sig": "isActionToGetOnVehicleActive()",
+    "line": 8282
+   },
+   {
+    "sig": "setActionToGetOnVehicleActiveState(bool state)",
+    "line": 8287
+   },
+   {
+    "sig": "isActionToGetOffFromVehicleActive()",
+    "line": 8292
+   },
+   {
+    "sig": "setActionToGetOffFromVehicleActiveState(bool state)",
+    "line": 8297
+   },
+   {
+    "sig": "canCharacterDrive()",
+    "line": 8302
+   },
+   {
+    "sig": "setCanDriveState(bool state)",
+    "line": 8307
+   },
+   {
+    "sig": "setOriginalCanDriveState()",
+    "line": 8312
+   },
+   {
+    "sig": "setCanMoveWhileAimLockedCameraValue(bool state)",
+    "line": 8317
+   },
+   {
+    "sig": "setOriginalCanMoveWhileAimLockedCameraValue()",
+    "line": 8322
+   },
+   {
+    "sig": "getPlayerManagersParentGameObject()",
+    "line": 8327
+   },
+   {
+    "sig": "setPlayerAndCameraParent(Transform newParent)",
+    "line": 8336
+   },
+   {
+    "sig": "setPlayerAndCameraAndFBAPivotTransformParent(Transform newParent)",
+    "line": 8349
+   },
+   {
+    "sig": "getCurrentTemporalPlayerParent()",
+    "line": 8362
+   },
+   {
+    "sig": "setMovingOnPlatformActiveState(bool state)",
+    "line": 8367
+   },
+   {
+    "sig": "setUpdatePlayerCameraPositionOnLateUpdateActiveState(bool state)",
+    "line": 8372
+   },
+   {
+    "sig": "setUpdatePlayerCameraPositionOnFixedUpdateActiveState(bool state)",
+    "line": 8377
+   },
+   {
+    "sig": "setMovingInsideVehicleState(bool state)",
+    "line": 8382
+   },
+   {
+    "sig": "isMovingInsideVehicle()",
+    "line": 8387
+   },
+   {
+    "sig": "setMovingInsideVehicleState(Vector3 externalForceInsideVehicleValue)",
+    "line": 8394
+   },
+   {
+    "sig": "isMovingOnPlatformActive()",
+    "line": 8399
+   },
+   {
+    "sig": "setReducedVelocity(float newValue)",
+    "line": 8405
+   },
+   {
+    "sig": "setNormalVelocity()",
+    "line": 8410
+   },
+   {
+    "sig": "getAnimSpeedMultiplier()",
+    "line": 8420
+   },
+   {
+    "sig": "setMoveSpeedMultiplierValue(float newValue)",
+    "line": 8425
+   },
+   {
+    "sig": "setOriginalMoveSpeedMultiplierValue()",
+    "line": 8430
+   },
+   {
+    "sig": "setNewAnimSpeedMultiplierDuringXTime(float newValue)",
+    "line": 8435
+   },
+   {
+    "sig": "setRegularAnimSpeedMultiplier()",
+    "line": 8444
+   },
+   {
+    "sig": "isAnimSpeedMultiplierChangedDuringXTimeActive()",
+    "line": 8489
+   },
+   {
+    "sig": "setPauseCharacterPriorityValue(int newValue)",
+    "line": 8496
+   },
+   {
+    "sig": "getPauseCharacterPriorityValue()",
+    "line": 8501
+   },
+   {
+    "sig": "changeControlInputType(bool value)",
+    "line": 8506
+   },
+   {
+    "sig": "setAIElementsEnabledState(bool state)",
+    "line": 8517
+   },
+   {
+    "sig": "setUsedByAIState(bool state)",
+    "line": 8524
+   },
+   {
+    "sig": "startOverride()",
+    "line": 8533
+   },
+   {
+    "sig": "stopOverride()",
+    "line": 8538
+   },
+   {
+    "sig": "overrideCharacterControlState(bool state)",
+    "line": 8543
+   },
+   {
+    "sig": "isCharacterUsedByAI()",
+    "line": 8554
+   },
+   {
+    "sig": "isCharacterControlOverrideActive()",
+    "line": 8559
+   },
+   {
+    "sig": "getHorizontalInput()",
+    "line": 8564
+   },
+   {
+    "sig": "getVerticalInput()",
+    "line": 8569
+   },
+   {
+    "sig": "getMoveInputDirection()",
+    "line": 8574
+   },
+   {
+    "sig": "setLookInCameraDirectionState(bool state)",
+    "line": 8579
+   },
+   {
+    "sig": "Move(AINavMeshMoveInfo inputInfo)",
+    "line": 8586
+   },
+   {
+    "sig": "setVisibleToAIState(bool state)",
+    "line": 8607
+   },
+   {
+    "sig": "isCharacterInVisibleState()",
+    "line": 8612
+   },
+   {
+    "sig": "isCharacterVisibleToAI()",
+    "line": 8617
+   },
+   {
+    "sig": "setStealthModeActiveState(bool state)",
+    "line": 8622
+   },
+   {
+    "sig": "isCharacterInStealthMode()",
+    "line": 8627
+   },
+   {
+    "sig": "setCharacterStateIcon(string stateName)",
+    "line": 8632
+   },
+   {
+    "sig": "disableCharacterStateIcon()",
+    "line": 8639
+   },
+   {
+    "sig": "getPlayerID()",
+    "line": 8646
+   },
+   {
+    "sig": "setPlayerID(int newID)",
+    "line": 8651
+   },
+   {
+    "sig": "setCharacterModelID(int newID)",
+    "line": 8656
+   },
+   {
+    "sig": "getCharacterModelID()",
+    "line": 8661
+   },
+   {
+    "sig": "isPlayerNonLocalAvatar()",
+    "line": 8666
+   },
+   {
+    "sig": "setPlayerIsNonLocalAvatarState(bool state)",
+    "line": 8671
+   },
+   {
+    "sig": "getPlayerNonLocalAvatarID()",
+    "line": 8676
+   },
+   {
+    "sig": "setPlayerNonLocalAvatarID(int newID)",
+    "line": 8681
+   },
+   {
+    "sig": "setPlayerDeadState(bool state)",
+    "line": 8687
+   },
+   {
+    "sig": "isPlayerDead()",
+    "line": 8706
+   },
+   {
+    "sig": "getLastTimeResurrect()",
+    "line": 8711
+   },
+   {
+    "sig": "setFallDamageCheckPausedState(bool state)",
+    "line": 8716
+   },
+   {
+    "sig": "setFallDamageCheckOnHealthPausedState(bool state)",
+    "line": 8721
+   },
+   {
+    "sig": "checkIfPlayerDeadFromHealthComponent()",
+    "line": 8726
+   }
+  ]
+ }
+]

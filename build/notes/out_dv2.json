@@ -1,0 +1,123 @@
+[
+  {
+    "type": "hologramDoor",
+    "summary": "`doorSystem` の手前に置くホログラム制御で、トリガーへの入退場とタグ判定で扉を開閉する。テキスト・色・透明度・効果音・`eventOnOpen` で施錠／解錠の見た目を演出する。",
+    "methods": {
+      "activateDevice()": "`openCurrentDoor` を呼び、開扉要求を委譲するだけ。",
+      "openCurrentDoor()": "解錠済みで閉扉・非移動・非占有なら開扉音とフェードを開始し、開扉コルーチンと `eventOnOpen` を実行する。",
+      "startChangeTransparencyCoroutine(bool state)": "色変更とフェードのコルーチンを止め、`state` 用の透明度フェードを開始する。",
+      "stopChangeTransparency()": "`changeTransparencyCoroutine` を停止してフェードを中断するだけ。",
+      "setHologramTransparencyAtOnce(bool state)": "`state` が true ならアルファを -1 で非表示、false なら 1 で表示に即時設定する。",
+      "startSetHologramColorsCoroutine(bool useUnlockedColors)": "色変更コルーチンを停止し、`useUnlockedColors` で元色か施錠色を選んで開始する。",
+      "stopSetHologramColors()": "`setHologramColorsCoroutine` を停止し色の補間を打ち切るだけ。",
+      "unlockHologram()": "`doorLocked` を false にし解除テキストへ変えて、元色へ戻す色変更を開始する。",
+      "lockHologram()": "`doorLocked` を true にし施錠テキストへ変えて、`lockedColor` への色変更を開始する。",
+      "startOpenDoorCoroutine()": "開扉コルーチンを止め、`openDelay` 待機後に扉を開く `openDoor` を開始する。",
+      "stopOpenDoor()": "`openDoorCoroutine` を停止し開扉待ちをキャンセルするだけ。",
+      "checkTriggerInfo(Collider col, bool isEnter)": "タグが `tagListToOpen` にある場合のみ、`isEnter` で入場／退場処理を呼び分ける。",
+      "enteringDoor()": "解錠なら開扉テキストにし `inside` を立て、扉停止中は施錠音か入場音、`openOnTrigger` なら開扉する。",
+      "exitingDoor()": "開閉無効なら中断し、通常テキストへ戻して `inside` を解除、リング演出を逆再生して退場音を鳴らす。",
+      "checkIfTagCanOpen(string tagToCheck)": "`tagListToOpen` に `tagToCheck` が含まれるかを返すだけ。",
+      "openHologramDoorByExternalInput()": "閉扉なら `openOnTrigger` を一時的に立てて入場処理、開扉なら退場処理と扉状態切替を行う。"
+    }
+  },
+  {
+    "type": "examineObjectSystem",
+    "summary": "オブジェクトをカメラ前に寄せ、回転・ズームで調べるためのデバイス。調べポイント押下の順序判定、メッセージ、イベント、使用終了や無効化を受け持つ。",
+    "methods": {
+      "showExamineMessage(bool state)": "`showingMessage` を更新し、プレイヤー取得後にメッセージ表示か停止を呼ぶ。",
+      "stopExamineDevice()": "`usingDevicesManager` があれば `useDevice` を呼び調べる操作を終える。",
+      "disableAndRemoveExamineDevice()": "デバイストリガー無視とコライダー無効化を行い、リストから外して調べられなくする。",
+      "cancelExamine()": "`secundaryCancelExamineFunction` に永続リスナーがあるとき発火するだけ。",
+      "pauseOrResumePlayerInteractionButton(bool state)": "`state` の逆値で使用ボタンの有効状態を設定するだけ。",
+      "examineDevice()": "`usingDevice` を反転し、開始時はプレイヤー取得、終了時はメッセージ解除と回転再開、アクション画面も同期する。",
+      "setExamineDeviceState(bool state)": "`usingDevice` を `state` にし、false ならタッチと回転停止を解除、プレイヤー側状態も更新する。",
+      "setRotationState(bool state)": "`rotationPaused` を `!state` にして回転の一時停止を切り替えるだけ。",
+      "getPlayerComponents()": "現在のプレイヤーから各マネージャと調べ用カメラを取得し、自分を調べ対象として登録する。",
+      "checkExaminePlaceInfo(Transform examinePlaceToCheck)": "一致する調べポイントの順序判定・メッセージ・イベント・使用終了・無効化・効果音をまとめて実行する。",
+      "setExaminePlaceEnabledState(Transform examinePlaceToCheck)": "`examinePlaceToCheck` に一致する調べポイントを `elementPlaceDisabled` にするだけ。",
+      "inputSetZoomValue(bool state)": "調べ中で回転操作が有効かつ `zoomCanBeUsed` のとき、`changeDeviceZoom` でズームを切り替える。",
+      "inputResetRotation()": "調べ中で回転・ズームが有効なとき `resetRotation` を呼び回転を初期化する。",
+      "inputResetRotationAndPosition()": "同じ条件で `resetRotationAndPosition` を呼び、回転と位置を戻す。",
+      "inputCancelExamine()": "調べ中かつ `useSecundaryCancelExamineFunction` のとき `cancelExamine` を呼ぶ。",
+      "inputCheckIfMessage()": "調べ中で `useExamineMessage` が有効なとき、メッセージ表示を反転させる。"
+    }
+  },
+  {
+    "type": "padlockSystem",
+    "summary": "数字ホイール式の南京錠で、タッチ・キーボード・マウスホイールの入力から現在のコードを組み立てる。`correctCode` と一致すると解錠して `unlockObject` を呼ぶ。",
+    "methods": {
+      "setCurrentWheelIndex(int amount)": "`amount` だけホイール番号を加算し折り返して、`currentWheelMark` をその位置へ動かす。",
+      "setPreviousNumber()": "回転方向を 1 にして、`checkNumber` に -1 を渡し前の数字へ回す。",
+      "setNextNumber()": "回転方向を -1 にして、`checkNumber` に -1 を渡し次の数字へ回す。",
+      "activatePadlock()": "`usingDevice` を反転し、開始時はプレイヤーと入力管理を取得して自分を現在のパドロックに登録する。",
+      "checkNumberByKeyboard(int number)": "ホイール回転中なら無視し、指定数字を設定してから次のホイールへ選択を移す。",
+      "checkNumber(wheelInfo wheel, int wheelNumber)": "ホイールの数字を設定または増減して回転を始め、コード更新後に `correctCode` と一致すれば解錠する。",
+      "getCurrentCodeOnWheels()": "各ホイールの `currentNumber` を連結した文字列を返すだけ。",
+      "setLockedState(bool state)": "`state` が true なら正解音・`unlocked`・コライダー無効化・解錠イベント・`unlockObject`・使用終了を実行する。",
+      "checkRotateWheel(int direction, wheelInfo wheel, int number)": "引数をそのまま渡して `rotateCenter` コルーチンを開始するだけ。",
+      "rotateCenter(int direction, wheelInfo wheel, int number)": "`number` から目標角度を求めて Slerp 回転し、`wheelRotating` とリセット状態を解除する。",
+      "resetPadLock()": "`resetingPadlock` を立てて全ホイールを 0 に戻し、選択番号を先頭へ戻す。",
+      "setCorrectCode()": "`resetingPadlock` を立てて `correctCode` の各桁をホイールに設定し、選択を先頭へ戻す。",
+      "changeExamineObjectState(bool state)": "`examineObjectManager` があれば `setExamineDeviceState` を呼ぶだけ。",
+      "inputRotateWheel(bool directionUp)": "マウスホイール回転が有効なとき、現在のホイールを `directionUp` で次か前の数字へ回す。"
+    }
+  },
+  {
+    "type": "waypointPlatform",
+    "summary": "ウェイポイント間を往復・周回する移動プラットフォームで、乗客や車両の親子付け、トリガー検出、ミラー移動、到達イベントを扱う。",
+    "methods": {
+      "setMirroringPlatformActiveState(bool state)": "ミラー無効なら何もせず、有効ならフラグを設定し基準位置を現在位置で更新する。",
+      "addPassenger(Transform newPassenger)": "未登録なら `passengersInfoList` に乗客と `playerController` を追加する。",
+      "addVehicle(Transform newVehicle)": "未登録なら `vehiclesInfoList` に車両と `vehicleHUDManager` を追加する。",
+      "disablePlatform()": "移動停止と `platformActive` 解除、乗客・車両の親解除、コライダーと自身の無効化を行う。",
+      "activatePlatformMovement()": "経路が空なら現在位置以降のウェイポイントを詰め直し、移動コルーチンを開始する。",
+      "deactivatePlatformMovement()": "`checkMovementCoroutine(false)` を呼び移動を止めるだけ。",
+      "checkMovementCoroutine(bool play)": "移動を止め、`platformActive` ならミラーを同期、`play` のときだけ移動コルーチンを開始する。",
+      "stopPlatformMovement()": "実行中の `movement` コルーチンを停止し、その場で移動を止める。",
+      "activetMovementByButton()": "移動方向を反転して経路を組み直し、デバイス表示名を更新して移動を開始する。",
+      "setDeviceStringActionState(bool state)": "`deviceStringActionManager` があれば `changeActionName` を呼ぶだけ。",
+      "addObjectDetectedBelow(GameObject objectToCheck)": "タグ一致か Rigidbody 持ちなら検出リストへ加え、経路番号を先頭に戻して移動を再開する。",
+      "removeObjectDetectedBelow(GameObject objectToCheck)": "検出リストに含まれていれば取り除くだけ。",
+      "addNewWayPoint()": "最後のウェイポイント前方に新しい点を作成してリストへ追加し、シーンを更新する。"
+    }
+  },
+  {
+    "type": "elevatorSystem",
+    "summary": "階リスト間を移動するエレベータで、内外扉の閉鎖完了を待ってから移動を始める。乗客の親子付け、階ボタン `callElevator`、階の追加削除も管理する。",
+    "methods": {
+      "nextFloor()": "有効時のみ `getFloorNumberToMove(1)` を呼び、1 つ上の階への移動を要求する。",
+      "previousFloor()": "有効時のみ `getFloorNumberToMove(-1)` を呼び、1 つ下の階への移動を要求する。",
+      "moveBetweenTwoPositions()": "`currentDirectionToMove` 方向へ移動を要求し、次回用に方向を反転させる。",
+      "checkIfInsideElevatorDoorSystem()": "現在階の外扉の `doorSystem` を未取得なら取得してキャッシュし、有無フラグを更新する。",
+      "goToNumberFloor(int floorNumber)": "条件を満たすとき扉を操作して目的階を設定し、乗客を親子付けして閉扉後の移動を準備、成否を返す。",
+      "callElevator(GameObject button)": "`button` の階を探し、現在階の外扉が施錠でなければ目的階を設定して移動、同階なら扉を開閉する。",
+      "addPassenger(Transform newPassenger)": "未登録なら `passengersInfoList` に乗客と `playerController` を追加する。",
+      "setElevatorSystemEnabledState(bool state)": "`elevatorSystemEnabled` を `state` にするだけ。",
+      "addNewFloor()": "最上階の `floorHeight` 上に階を作り、設定に応じスイッチと扉を生成して `floors` に追加する。",
+      "removeFloor(int floorIndex)": "`floorIndex` の階オブジェクトを即時破棄してリストから除き、シーンを更新する。",
+      "removeAllFloors()": "全階のオブジェクトを即時破棄して `floors` を空にし、シーンを更新する。",
+      "checkEventsOnMove(bool state)": "`useEventsOnMoveStartAndEnd` が有効なとき、`state` で開始か終了のイベントを発火する。",
+      "updateComponent()": "`GKC_Utils.updateComponent` でこのコンポーネントの表示を更新するだけ。"
+    }
+  },
+  {
+    "type": "accessTerminal",
+    "summary": "コード入力式の端末で、画面上のキーやキーボードから桁を入力して `code` と照合する。解錠時は `unlockObject` を呼び、表示色・テキスト・イベント・ハックパネルを切り替える。",
+    "methods": {
+      "stopUpdateCoroutine()": "`mainCoroutine` を停止し、端末の入力監視を止める。",
+      "pressButtonOnScreen()": "`checkPressedButton` を true にし、次回更新で画面ボタン押下を処理させる。",
+      "activateTerminal()": "使用状態を反転して入力監視を再起動し、開始時は操作プレイヤー取得、終了時はハッキングを止める。",
+      "enableTerminal()": "強制的に使用中にして入力監視を開始し、キー初期化と操作プレイヤー取得を行う。",
+      "disableTerminal()": "使用状態を解除して入力監視を止め、ハッキング中なら中止する。",
+      "getCurrentUser()": "現在の操作プレイヤーを取得し、そのメインカメラを `mainCamera` に保持する。",
+      "checkNumber(string numberString)": "入力桁を画面へ追加し、規定桁数で `code` と照合して解錠／施錠、不一致なら音とリセットを行う。",
+      "setLockedState(bool state)": "解錠／施錠の状態・表示・色を切り替え、必要なら `unlockObject`、ハックパネル停止、画面切替、イベントを行う。",
+      "setLockState(Scrollbar info)": "スクロールバー値が 0 なら `lockObject`、1 なら `unlockObject` を呼ぶだけ。",
+      "showPasswordOnHackPanel()": "ハックパネルに `code` を表示するだけ。",
+      "unlockAccessTerminal()": "入力欄を空にし桁数を 1 つ手前から `code` を一括入力して、照合による解錠を成立させる。",
+      "activateHackButton()": "`hackActiveButton` があればアクティブにするだけ。",
+      "setNewCode(string newCode)": "`code` を差し替え、表示桁数と 0 詰めの初期表示を更新する。"
+    }
+  }
+]

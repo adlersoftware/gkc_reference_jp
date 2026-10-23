@@ -1,0 +1,718 @@
+[
+ {
+  "type": "putObjectSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Grab Objects\\putObjectSystem.cs",
+  "source": "Grab Objects/putObjectSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "putObjectSystemEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useCertainObjectToPlace",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "certainObjectToPlace",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "objectName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useObjectNameListToPlace",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "objectNameToPlace",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "placeToPutObject",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "placeObjectPositionSpeed",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "placeObjectRotationSpeed",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "disableObjectOnceIsPlaced",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "minWaitToPutSameObjectAgain",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "updateTriggerStateAfterWait",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "destroyObjectOncePlaced",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "ignoreTriggerEnterExitFunctionsEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useRotationLimit",
+    "label": "",
+    "section": "Limit Settings"
+   },
+   {
+    "field": "maxUpRotationAngle",
+    "label": "",
+    "section": "Limit Settings"
+   },
+   {
+    "field": "maxForwardRotationAngle",
+    "label": "",
+    "section": "Limit Settings"
+   },
+   {
+    "field": "usePositionLimit",
+    "label": "",
+    "section": "Limit Settings"
+   },
+   {
+    "field": "maxPositionDistance",
+    "label": "",
+    "section": "Limit Settings"
+   },
+   {
+    "field": "needsOtherObjectPlacedBefore",
+    "label": "",
+    "section": "Objects To Place Before Settings"
+   },
+   {
+    "field": "numberOfObjectsToPlaceBefore",
+    "label": "",
+    "section": "Objects To Place Before Settings"
+   },
+   {
+    "field": "waitToObjectPlacedToCallEvent",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "objectPlacedEvent",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "objectRemovedEvent",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "useLimitToCheckIfObjectRemoved",
+    "label": "",
+    "section": "Remove Object Settings"
+   },
+   {
+    "field": "minDistanceToRemoveObject",
+    "label": "",
+    "section": "Remove Object Settings"
+   },
+   {
+    "field": "useSoundEffectOnObjectPlaced",
+    "label": "",
+    "section": "Sounds Settings"
+   },
+   {
+    "field": "soundEffectOnObjectPlaced",
+    "label": "",
+    "section": "Sounds Settings"
+   },
+   {
+    "field": "onObjectPlacedAudioElement",
+    "label": "",
+    "section": "Sounds Settings"
+   },
+   {
+    "field": "useSoundEffectOnObjectRemoved",
+    "label": "",
+    "section": "Sounds Settings"
+   },
+   {
+    "field": "soundEffectOnObjectRemoved",
+    "label": "",
+    "section": "Sounds Settings"
+   },
+   {
+    "field": "onObjectRemovedAudioElement",
+    "label": "",
+    "section": "Sounds Settings"
+   },
+   {
+    "field": "mainAudioSource",
+    "label": "",
+    "section": "Sounds Settings"
+   },
+   {
+    "field": "mainTrigger",
+    "label": "",
+    "section": "Sounds Settings"
+   },
+   {
+    "field": "objectInsideTrigger",
+    "label": "",
+    "section": "Current State"
+   },
+   {
+    "field": "objectPlaced",
+    "label": "",
+    "section": "Current State"
+   },
+   {
+    "field": "currentObjectPlaced",
+    "label": "",
+    "section": "Current State"
+   },
+   {
+    "field": "currentObjectToPlaceSystem",
+    "label": "",
+    "section": "Current State"
+   },
+   {
+    "field": "checkingIfObjectIsRemoved",
+    "label": "",
+    "section": "Current State"
+   },
+   {
+    "field": "objectAdjustedToPlacePosition",
+    "label": "",
+    "section": "Current State"
+   }
+  ]
+ },
+ {
+  "type": "ragdollActivator",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\ragdollActivator.cs",
+  "source": "Player/ragdollActivator.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "typeOfDeath",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "timeToGetUp",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "checkPlayerOnGroundToGetUp",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "getUpDelay",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useDeathSound",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "deathSound",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "mainAudioSource",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "deathSoundAudioElement",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "checkIfCharacterOnAirOnDeath",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "minDistanceToCheckIfCharacterOnAir",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "canMoveCharacterOnRagdollState",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "moveCharacterOnRagdollStateForceAmount",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "moveCharacterOnRagdollStateForceMode",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "checkpointManagerStateEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "setRagdollStateOnStart",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "pauseGetUpStateOnRagdollOnStart",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "ragdollOnStartForce",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "setSleepStateOnStart",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useDurationForSleepStateOnStart",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "durationForSleepStateOnStart",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "getUpFromBellyAnimatorName",
+    "label": "",
+    "section": "Animation Settings"
+   },
+   {
+    "field": "getUpFromBackAnimatorName",
+    "label": "",
+    "section": "Animation Settings"
+   },
+   {
+    "field": "deathAnimatorName",
+    "label": "",
+    "section": "Animation Settings"
+   },
+   {
+    "field": "deathAnimationID",
+    "label": "",
+    "section": "Animation Settings"
+   },
+   {
+    "field": "actionIDAnimatorName",
+    "label": "",
+    "section": "Animation Settings"
+   },
+   {
+    "field": "useGetUpFromBellyAfterDeathActive",
+    "label": "",
+    "section": "Animation Settings"
+   },
+   {
+    "field": "activateRagdollAfterDeath",
+    "label": "",
+    "section": "Animation Settings"
+   },
+   {
+    "field": "delayToActivateRagdollAfterDeath",
+    "label": "",
+    "section": "Animation Settings"
+   },
+   {
+    "field": "enableAnimatorLayerOnDeath",
+    "label": "",
+    "section": "Animation Settings"
+   },
+   {
+    "field": "animatorLayerToEnableName",
+    "label": "",
+    "section": "Animation Settings"
+   },
+   {
+    "field": "ragdollToMecanimBlendTime",
+    "label": "",
+    "section": "Ragdoll Physics Settings"
+   },
+   {
+    "field": "layer",
+    "label": "",
+    "section": "Ragdoll Physics Settings"
+   },
+   {
+    "field": "maxRagdollVelocity",
+    "label": "",
+    "section": "Ragdoll Physics Settings"
+   },
+   {
+    "field": "maxVelocityToGetUp",
+    "label": "",
+    "section": "Ragdoll Physics Settings"
+   },
+   {
+    "field": "extraForceOnRagdoll",
+    "label": "",
+    "section": "Ragdoll Physics Settings"
+   },
+   {
+    "field": "eventOnEnterRagdoll",
+    "label": "",
+    "section": "Ragdoll Events Settings"
+   },
+   {
+    "field": "eventOnExitRagdoll",
+    "label": "",
+    "section": "Ragdoll Events Settings"
+   },
+   {
+    "field": "eventOnDeath",
+    "label": "",
+    "section": "Ragdoll Events Settings"
+   },
+   {
+    "field": "eventOnResurrect",
+    "label": "",
+    "section": "Ragdoll Events Settings"
+   },
+   {
+    "field": "ragdollCanReceiveDamageOnImpact",
+    "label": "",
+    "section": "Receive Damage On Impact Settings"
+   },
+   {
+    "field": "minTimeToReceiveDamageOnImpact",
+    "label": "",
+    "section": "Receive Damage On Impact Settings"
+   },
+   {
+    "field": "minVelocityToReceiveDamageOnImpact",
+    "label": "",
+    "section": "Receive Damage On Impact Settings"
+   },
+   {
+    "field": "receiveDamageOnImpactMultiplier",
+    "label": "",
+    "section": "Receive Damage On Impact Settings"
+   },
+   {
+    "field": "minTimToReceiveImpactDamageAgain",
+    "label": "",
+    "section": "Receive Damage On Impact Settings"
+   },
+   {
+    "field": "timeToShowMenu",
+    "label": "",
+    "section": "Player Settings"
+   },
+   {
+    "field": "usedByAI",
+    "label": "",
+    "section": "AI Settings"
+   },
+   {
+    "field": "tagForColliders",
+    "label": "",
+    "section": "AI Settings"
+   },
+   {
+    "field": "setLayerOnRagdollState",
+    "label": "",
+    "section": "AI Settings"
+   },
+   {
+    "field": "layerOnRagdollState",
+    "label": "",
+    "section": "AI Settings"
+   },
+   {
+    "field": "playerState",
+    "label": "",
+    "section": "Ragdoll State"
+   },
+   {
+    "field": "currentState",
+    "label": "",
+    "section": "Ragdoll State"
+   },
+   {
+    "field": "characterBody",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "rootMotion",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "headTransform",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "leftFootTransform",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "rightFootTransform",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "hipsRigidbody",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "playerCOM",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "weaponsManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "mainCameraTransform",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "statesManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "healthManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "mainCollider",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "playerInput",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "mainAnimator",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "playerControllerManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "cameraManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "powersManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "gravityManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "IKSystemManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "mainRigidbody",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "stepsManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "combatManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "mainRagdollBuilder",
+    "label": "",
+    "section": "Player Elements"
+   }
+  ]
+ },
+ {
+  "type": "remoteEventSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Event System\\remoteEventSystem.cs",
+  "source": "Event System/remoteEventSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "remoteEventsEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "remoteEventSystemName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "remoteEventSystemID",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "activateRemoteEventsOnStart",
+    "label": "",
+    "section": "Remote Events On Start Settings"
+   },
+   {
+    "field": "objectSearcherName",
+    "label": "Name To Search",
+    "section": "Object Searcher"
+   },
+   {
+    "field": "showDebugPrint",
+    "label": "",
+    "section": "Debug"
+   },
+   {
+    "field": "currentArrayElement",
+    "label": "",
+    "section": "Debug"
+   }
+  ]
+ },
+ {
+  "type": "sceneLoadSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Menu\\sceneLoadSystem.cs",
+  "source": "Menu/sceneLoadSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "instantiateScenePanelsActivated",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "mainMenuContent",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "sceneLoadMenu",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "sceneSlotPrefab",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "sceneSlotsParent",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "mainScrollbar",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "mainScrollRect",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "startingSceneIndex",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "addSceneNumberToName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useLoadScreen",
+    "label": "",
+    "section": "Load Screen Settings"
+   },
+   {
+    "field": "loadScreenScene",
+    "label": "",
+    "section": "Load Screen Settings"
+   },
+   {
+    "field": "useLastSceneIndexAsLoadScreen",
+    "label": "",
+    "section": "Load Screen Settings"
+   },
+   {
+    "field": "sceneToLoadAsyncPrefsName",
+    "label": "",
+    "section": "Load Screen Settings"
+   },
+   {
+    "field": "checkLoadingScreenSceneConfigured",
+    "label": "",
+    "section": "Load Screen Settings"
+   },
+   {
+    "field": "loadingScreenSceneName",
+    "label": "",
+    "section": "Load Screen Settings"
+   }
+  ]
+ }
+]

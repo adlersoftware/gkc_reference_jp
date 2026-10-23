@@ -1,0 +1,738 @@
+[
+ {
+  "type": "deviceStringAction",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\deviceStringAction.cs",
+  "source": "Devices/deviceStringAction.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "deviceName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "deviceAction",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "secondaryDeviceAction",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "reloadDeviceActionOnPress",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "setUsingDeviceState",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useRaycastToDetectDeviceParts",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "ignoreUseOnlyDeviceIfVisibleOnCamera",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useFixedDeviceIconPosition",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useCustomDeviceTransformPosition",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "customDeviceTransformPosition",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "checkIfObstacleBetweenDeviceAndPlayer",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "hideIconOnPress",
+    "label": "",
+    "section": "Show/Hide Interaction Icon Settings"
+   },
+   {
+    "field": "disableIconOnPress",
+    "label": "",
+    "section": "Show/Hide Interaction Icon Settings"
+   },
+   {
+    "field": "hideIconOnUseDevice",
+    "label": "",
+    "section": "Show/Hide Interaction Icon Settings"
+   },
+   {
+    "field": "showIconOnStopUseDevice",
+    "label": "",
+    "section": "Show/Hide Interaction Icon Settings"
+   },
+   {
+    "field": "showIcon",
+    "label": "",
+    "section": "Show/Hide Interaction Icon Settings"
+   },
+   {
+    "field": "showTouchIconButton",
+    "label": "",
+    "section": "Show/Hide Interaction Icon Settings"
+   },
+   {
+    "field": "useMultipleInteraction",
+    "label": "",
+    "section": "Multiple Interaction Settings"
+   },
+   {
+    "field": "setTextFontSizeActive",
+    "label": "",
+    "section": "Text Font Settings"
+   },
+   {
+    "field": "textFontSize",
+    "label": "",
+    "section": "Text Font Settings"
+   },
+   {
+    "field": "ignoreDistanceToDevice",
+    "label": "",
+    "section": "Min Distance And Angle Settings"
+   },
+   {
+    "field": "useCustomMinDistanceToUseDevice",
+    "label": "",
+    "section": "Min Distance And Angle Settings"
+   },
+   {
+    "field": "customMinDistanceToUseDevice",
+    "label": "",
+    "section": "Min Distance And Angle Settings"
+   },
+   {
+    "field": "useCustomMinAngleToUse",
+    "label": "",
+    "section": "Min Distance And Angle Settings"
+   },
+   {
+    "field": "customMinAngleToUseDevice",
+    "label": "",
+    "section": "Min Distance And Angle Settings"
+   },
+   {
+    "field": "useRelativeDirectionBetweenPlayerAndObject",
+    "label": "",
+    "section": "Min Distance And Angle Settings"
+   },
+   {
+    "field": "removeDeviceFromPlayerListOnMaxDistance",
+    "label": "",
+    "section": "Min Distance And Angle Settings"
+   },
+   {
+    "field": "maxDistanceToRemoveDeviceFromPlayerList",
+    "label": "",
+    "section": "Min Distance And Angle Settings"
+   },
+   {
+    "field": "useMaxDistanceToCameraCenter",
+    "label": "",
+    "section": "Min Distance And Angle Settings"
+   },
+   {
+    "field": "maxDistanceToCameraCenter",
+    "label": "",
+    "section": "Min Distance And Angle Settings"
+   },
+   {
+    "field": "useCustomIconButtonInfo",
+    "label": "",
+    "section": "Use Custom Icon Button Info Settings"
+   },
+   {
+    "field": "customIconButtonInfoName",
+    "label": "",
+    "section": "Use Custom Icon Button Info Settings"
+   },
+   {
+    "field": "useTransformForStringAction",
+    "label": "",
+    "section": "Use Transform Settings"
+   },
+   {
+    "field": "useSeparatedTransformForEveryView",
+    "label": "",
+    "section": "Use Transform Settings"
+   },
+   {
+    "field": "transformForThirdPerson",
+    "label": "",
+    "section": "Use Transform Settings"
+   },
+   {
+    "field": "transformForFirstPerson",
+    "label": "",
+    "section": "Use Transform Settings"
+   },
+   {
+    "field": "transformForStringAction",
+    "label": "",
+    "section": "Use Transform Settings"
+   },
+   {
+    "field": "actionOffset",
+    "label": "",
+    "section": "Use Transform Settings"
+   },
+   {
+    "field": "useLocalOffset",
+    "label": "",
+    "section": "Use Transform Settings"
+   },
+   {
+    "field": "showIconTexture",
+    "label": "",
+    "section": "Other Object Info Settings"
+   },
+   {
+    "field": "iconTexture",
+    "label": "",
+    "section": "Other Object Info Settings"
+   },
+   {
+    "field": "useObjectDescription",
+    "label": "",
+    "section": "Other Object Info Settings"
+   },
+   {
+    "field": "objectDescription",
+    "label": "",
+    "section": "Other Object Info Settings"
+   },
+   {
+    "field": "descriptionFontSize",
+    "label": "",
+    "section": "Other Object Info Settings"
+   },
+   {
+    "field": "showObjectAmount",
+    "label": "",
+    "section": "Other Object Info Settings"
+   },
+   {
+    "field": "objectAmount",
+    "label": "",
+    "section": "Other Object Info Settings"
+   },
+   {
+    "field": "useHoldInteractionButton",
+    "label": "",
+    "section": "Other Object Info Settings"
+   },
+   {
+    "field": "holdInteractionButtonDuration",
+    "label": "",
+    "section": "Other Object Info Settings"
+   },
+   {
+    "field": "showGizmo",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoLabelColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoRadius",
+    "label": "",
+    "section": "Gizmo Settings"
+   }
+  ]
+ },
+ {
+  "type": "dialogContentSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Dialog System\\dialogContentSystem.cs",
+  "source": "Dialog System/dialogContentSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "dialogContentID",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "dialogContentScene",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "currentDialogIndex",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "dialogOwner",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "showDialogOnwerName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "pauseAIOnDialogStart",
+    "label": "",
+    "section": "AI Settings"
+   },
+   {
+    "field": "resumeAIOnDialogEnd",
+    "label": "",
+    "section": "AI Settings"
+   },
+   {
+    "field": "interruptWanderAroundStateIfActiveOnDialogStart",
+    "label": "",
+    "section": "AI Settings"
+   },
+   {
+    "field": "disableWanderAroundStateOnDialogEnd",
+    "label": "",
+    "section": "AI Settings"
+   },
+   {
+    "field": "useAnimations",
+    "label": "",
+    "section": "Animations Settings"
+   },
+   {
+    "field": "mainAnimator",
+    "label": "",
+    "section": "Animations Settings"
+   },
+   {
+    "field": "mainPlayerController",
+    "label": "",
+    "section": "Animations Settings"
+   },
+   {
+    "field": "dialogueActiveAnimatorName",
+    "label": "",
+    "section": "Animations Settings"
+   },
+   {
+    "field": "playerAnimationsOnDialogEnabled",
+    "label": "",
+    "section": "Animations Settings"
+   },
+   {
+    "field": "useEventsOnStartEndDialog",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "eventOnStartDialog",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "eventOnEndDialog",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "newCharacterToAddDialog",
+    "label": "",
+    "section": "Add Dialog To Character Manually Settings"
+   },
+   {
+    "field": "useDialogContentTemplate",
+    "label": "",
+    "section": "Dialog Content Template Settings"
+   },
+   {
+    "field": "mainDialogContentTemplate",
+    "label": "",
+    "section": "Dialog Content Template Settings"
+   },
+   {
+    "field": "currentArrayElement",
+    "label": "",
+    "section": "Dialog Content Template Settings"
+   },
+   {
+    "field": "currentArrayElement",
+    "label": "",
+    "section": "Dialogs List"
+   },
+   {
+    "field": "currentArrayElement",
+    "label": "",
+    "section": "Dialog Character Animations Settings"
+   }
+  ]
+ },
+ {
+  "type": "doorSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\doorSystem.cs",
+  "source": "Devices/doorSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "movementType",
+    "label": "",
+    "section": "Main Options"
+   },
+   {
+    "field": "animationName",
+    "label": "",
+    "section": "Main Options"
+   },
+   {
+    "field": "animationSpeed",
+    "label": "",
+    "section": "Main Options"
+   },
+   {
+    "field": "rotateInBothDirections",
+    "label": "",
+    "section": "Main Options"
+   },
+   {
+    "field": "openSound",
+    "label": "",
+    "section": "Main Options"
+   },
+   {
+    "field": "openSoundAudioElement",
+    "label": "",
+    "section": "Main Options"
+   },
+   {
+    "field": "closeSound",
+    "label": "",
+    "section": "Main Options"
+   },
+   {
+    "field": "closeSoundAudioElement",
+    "label": "",
+    "section": "Main Options"
+   },
+   {
+    "field": "doorTypeInfo",
+    "label": "",
+    "section": "Main Options"
+   },
+   {
+    "field": "doorState",
+    "label": "",
+    "section": "Main Options"
+   },
+   {
+    "field": "openSpeed",
+    "label": "",
+    "section": "Main Options"
+   },
+   {
+    "field": "hologram",
+    "label": "",
+    "section": "Main Options"
+   },
+   {
+    "field": "closeDoorOnTriggerExit",
+    "label": "",
+    "section": "Main Options"
+   },
+   {
+    "field": "closeAfterTime",
+    "label": "",
+    "section": "Main Options"
+   },
+   {
+    "field": "timeToClose",
+    "label": "",
+    "section": "Main Options"
+   },
+   {
+    "field": "setMapIconsOnDoor",
+    "label": "",
+    "section": "Main Options"
+   },
+   {
+    "field": "locked",
+    "label": "",
+    "section": "Locked Settings"
+   },
+   {
+    "field": "openDoorWhenUnlocked",
+    "label": "",
+    "section": "Locked Settings"
+   },
+   {
+    "field": "useSoundOnUnlock",
+    "label": "",
+    "section": "Locked Settings"
+   },
+   {
+    "field": "unlockSound",
+    "label": "",
+    "section": "Locked Settings"
+   },
+   {
+    "field": "unlockSoundAudioElement",
+    "label": "",
+    "section": "Locked Settings"
+   },
+   {
+    "field": "unlockAudioSource",
+    "label": "",
+    "section": "Locked Settings"
+   },
+   {
+    "field": "useEventOnOpenAndClose",
+    "label": "",
+    "section": "Open/Close Event Settings"
+   },
+   {
+    "field": "openEvent",
+    "label": "",
+    "section": "Open/Close Event Settings"
+   },
+   {
+    "field": "closeEvent",
+    "label": "",
+    "section": "Open/Close Event Settings"
+   },
+   {
+    "field": "useEventOnUnlockDoor",
+    "label": "",
+    "section": "Lock/Unlock Event Settings"
+   },
+   {
+    "field": "evenOnUnlockDoor",
+    "label": "",
+    "section": "Lock/Unlock Event Settings"
+   },
+   {
+    "field": "useEventOnLockDoor",
+    "label": "",
+    "section": "Lock/Unlock Event Settings"
+   },
+   {
+    "field": "eventOnLockDoor",
+    "label": "",
+    "section": "Lock/Unlock Event Settings"
+   },
+   {
+    "field": "useEventOnDoorFound",
+    "label": "",
+    "section": "Door Found Event Settings"
+   },
+   {
+    "field": "eventOnUnlockedDoorFound",
+    "label": "",
+    "section": "Door Found Event Settings"
+   },
+   {
+    "field": "eventOnLockedDoorFound",
+    "label": "",
+    "section": "Door Found Event Settings"
+   },
+   {
+    "field": "soundSource",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "mapObjectInformationManager",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "mainAnimation",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "hologramDoorManager",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "deviceStringActionManager",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "showGizmo",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "gizmoArrowLength",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "gizmoArrowLineLength",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "gizmoArrowAngle",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "gizmoArrowColor",
+    "label": "",
+    "section": "Gizmo Options"
+   }
+  ]
+ },
+ {
+  "type": "dropPickUpSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\PickUps\\dropPickUpSystem.cs",
+  "source": "PickUps/dropPickUpSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "dropPickupsEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "dropDelay",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "destroyAfterDropping",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "setPickupScale",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "pickUpScale",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "randomContent",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "maxRadiusToInstantiate",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "pickUpOffset",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "mainPickupManagerName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useCustomTransformPositionToSpawn",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "customTransformPositionToSpawn",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useGeneralProbabilityDropObjects",
+    "label": "",
+    "section": "Drop Object Probability Settings"
+   },
+   {
+    "field": "generalProbabilityDropObjects",
+    "label": "",
+    "section": "Drop Object Probability Settings"
+   },
+   {
+    "field": "dropRandomObject",
+    "label": "",
+    "section": "Drop Object Probability Settings"
+   },
+   {
+    "field": "showGizmo",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "ignoreCreateDropPickupObjectsActive",
+    "label": "",
+    "section": "Debug"
+   },
+   {
+    "field": "extraForceToPickup",
+    "label": "",
+    "section": "Force To Pickups Settings"
+   },
+   {
+    "field": "extraForceToPickupRadius",
+    "label": "",
+    "section": "Force To Pickups Settings"
+   },
+   {
+    "field": "forceMode",
+    "label": "",
+    "section": "Force To Pickups Settings"
+   },
+   {
+    "field": "useEventToSendSpawnedObjects",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "eventToSendSpawnedObjects",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "currentArrayElement",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "currentArrayElement",
+    "label": "",
+    "section": "Drop Object Probability Settings"
+   }
+  ]
+ }
+]

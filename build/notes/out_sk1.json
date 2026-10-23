@@ -1,0 +1,61 @@
+[
+  {
+    "type": "playerSkillsSystem",
+    "summary": "プレイヤーのスキルツリーを保持し、カテゴリ／スキルの値・Bool・レベル・解放状態とスキルポイント消費を管理する中核コンポーネント。テンプレートとの保存・読み込み、初期化イベント、ステータス増加、エディタ用の一括操作も備える。",
+    "methods": {
+      "isLoadingGameActive()": "読み込み中フラグ `isLoadingGame` の値を返すだけ。",
+      "initializeSkillsValues()": "テンプレート由来の完了スキルに値・Bool・解放・最終レベルを反映し、各スキルの初期化イベントを発火する。",
+      "setIsLoadingGameState(bool state)": "読み込み中フラグ `isLoadingGame` を `state` に設定するだけ。",
+      "isLoadingGameState()": "読み込み中フラグ `isLoadingGame` を返すだけ。",
+      "increasePlayerSkill(string skillName, float skillExtraValue)": "有効時のみ名前一致スキルの `currentValue` に `skillExtraValue` を加算し、増加イベントを発火する。",
+      "getSkillValue(string skillName)": "名前一致スキルの `currentValue` を返し、見つからなければ -1 を返す。",
+      "updateSkillValue(string skillName, float newValue)": "有効時のみ名前一致スキルの `currentValue` を `newValue` に上書きし、イベントは発火しない。",
+      "enableOrDisableBoolPlayerSkill(string skillName, bool boolSkillValue)": "有効時のみ名前一致スキルの `currentBoolState` を設定し、`eventToActivateBoolSkill` を発火する。",
+      "getBoolSkillValue(string skillName)": "名前一致スキルの `currentBoolState` を返し、見つからなければ false を返す。",
+      "updateBoolSkillValue(string skillName, bool boolSkillValue)": "有効時のみ名前一致スキルの `currentBoolState` を設定するだけで、イベントは発火しない。",
+      "getSkillInfoByIndex(int categoryIndex, int skillIndex)": "インデックスが範囲内なら該当 `skillInfo` を返し、範囲外なら null を返す。",
+      "useSkillPoints(int categoryIndex, int skillIndex, int totalSkillPoints, bool ignoreSkillPoints)": "ポイント充足か `ignoreSkillPoints` ならレベル・値・イベント・ステータスを反映して `skillActive` を立て、消費ポイント数を返す（不足時 -1）。",
+      "getSkillByName(string skillName)": "名前一致スキルを `useSkillPoints` に 0 ポイント・`ignoreSkillPoints` true で渡して有効化する。",
+      "disableSkillByName(string skillName)": "有効かつアクティブな該当スキルの完了を解除し、値0／Bool反転のうえ `skillActive` を false にする。",
+      "disableAllSkills()": "有効な全スキルの完了を解除し値0・Bool反転・レベル0に戻すが、`skillActive` は変更しない。",
+      "unlockSkillSlotByName(string skillName)": "名前一致スキルの `skillUnlocked` を true にするだけ。",
+      "getCategoryIndex(string categoryName)": "カテゴリ名が一致するインデックスを返し、無ければ -1 を返す。",
+      "getSkillIndex(string skillName)": "名前一致スキルのカテゴリ内インデックスを返し、無ければ -1 を返す。",
+      "getSkillIndex(string skillCategoryName, string skillName)": "指定カテゴリ内で名前一致するスキルのインデックスを返し、無ければ -1 を返す。",
+      "setPlayerSkillsActiveState(bool state)": "`playerSkillsActive` を `state` に設定するだけ。",
+      "saveSettingsToTemplate()": "テンプレートを再構築し各スキルの名前・`skillEnabled`・`skillComplete` を保存してシーンをダーティにする。",
+      "loadSettingsFromTemplate(bool loadingFromEditor)": "名前一致で `skillEnabled` と完了状態をテンプレートから反映し、`loadingFromEditor` 時のみ保存とダーティ更新を行う。",
+      "setAllSkillsCompleteStateOnTemplate(bool state)": "テンプレート全スキルの `skillComplete` を `state` にして更新とダーティ保存を行う。",
+      "enableAllSkillsOnEditor()": "全カテゴリに `enableOrDisableSkillsOnEditor(true, i)` を適用して `skillEnabled` を立てる。",
+      "disableAllSkillsOnEditor()": "全カテゴリのスキルの `skillEnabled` を false にする。",
+      "enableSkillsOnEditor(int categoryIndex)": "指定カテゴリの全スキルの `skillEnabled` を true にして更新する。",
+      "disableSkillsOnEditor(int categoryIndex)": "指定カテゴリの全スキルの `skillEnabled` を false にして更新する。",
+      "enableOrDisableSkillsOnEditor(bool state, int categoryIndex)": "指定カテゴリ全スキルの `skillEnabled` を `state` にし、`updateComponent` を呼ぶ。",
+      "activateSkillsOnEditor(int categoryIndex)": "指定カテゴリの有効スキルへ設定値を反映する `activateOrDeactivateSkillsOnEditor(true, …)` を呼ぶ。",
+      "deactivateSkillsOnEditor(int categoryIndex)": "指定カテゴリの有効スキルの値とBoolを無効側へ戻す `activateOrDeactivateSkillsOnEditor(false, …)` を呼ぶ。",
+      "activateOrDeactivateSkillsOnEditor(bool state, int categoryIndex)": "有効スキルのみBoolは設定値／反転、それ以外は `valueToConfigure` か0を `currentValue` に入れて更新する。",
+      "setPlayerSkillsActiveStateFromEditor(bool state)": "`playerSkillsActive` を設定したうえで `updateComponent` を呼ぶ。",
+      "updateComponent()": "`GKC_Utils.updateComponent` とシーンのダーティ更新のみを行う。"
+    }
+  },
+  {
+    "type": "playerSkillsUISystem",
+    "summary": "スキルメニューUIを制御し、カテゴリ／スロットの表示切替、選択中スキル情報の表示、必要ポイントの消費確認とスロット解放を行う。`playerSkillsSystem` と `playerExperienceSystem` を参照して表示とポイント消費を同期する。",
+    "methods": {
+      "updateSkillSlots()": "各スロットのロック／解放／アクティブ表示を切り替え、レベル使用時は現在レベルと総数の文字も更新する。",
+      "openOrCloseSkillsMenu(bool state)": "`skillsMenuOpened` とパネル表示を切り替え、開く際はスロット更新・先頭カテゴリ選択・スクロール初期化・オープンイベントを行う。",
+      "checkSkillPressed(GameObject skillSlot)": "選択スロットの情報と押下アイコンを更新し、再押下か設定次第でポイント使用確認パネルを表示する（完了・未解放なら中断）。",
+      "updateCurrentSkillInfo()": "選択中スキルのカテゴリ名・名前・説明・レベル説明・所持／必要ポイントをロック表示とローカライズを考慮して更新する。",
+      "confirmUseSkillPointsOnCurrentSkillSlot()": "選択スキルにポイントを消費してスロット表示と解放対象を更新し、成否で `eventOnSkillPointsUsed` か不足イベントを発火する。",
+      "cancelUseSkillPointsOnCurrentSkillSlot()": "ポイント使用確認パネルを非表示にするだけ。",
+      "unlockSkillSlot(int skillSlotIndex)": "指定スロットを解放表示に変え、`unlockSkillSlotByName` でデータ側の `skillUnlocked` も true にする。",
+      "checkSkillCategoryPressed(GameObject categorySlot)": "押したカテゴリのパネルだけを表示し、その先頭スキルを選択状態にして確認パネルを閉じる。",
+      "resetScroll(Scrollbar scrollBarToReset)": "2フレーム待ってから `scrollBarToReset.value` を1にするコルーチンを開始する。",
+      "resetScrollRectTransfrom(RectTransform listContent, ScrollRect scrollRectToReset)": "レイアウトを再構築して2フレーム待ち、`verticalNormalizedPosition` を1に戻すコルーチンを開始する。",
+      "assignSkillsToSlots()": "各UIスロットへカテゴリ名・スキル名から `categorySkillIndex` と `skillIndex` を割り当てて更新する（未発見なら -1）。",
+      "assignSkillsNamesToSlots(int listIndex)": "指定カテゴリの各スロットGameObject名を `skillSlotsName` + スキル名に設定して更新する。",
+      "activateAllSkills(int listIndex)": "指定カテゴリを選択し、各スロットを押下扱いにして `confirmUseSkillPointsOnCurrentSkillSlot` を順に実行する。",
+      "updateComponent()": "`GKC_Utils.updateComponent` とシーンのダーティ更新のみを行う。"
+    }
+  }
+]

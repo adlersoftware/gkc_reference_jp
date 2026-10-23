@@ -1,0 +1,1008 @@
+[
+ {
+  "type": "waterSurfaceSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\waterSurfaceSystem.cs",
+  "methods": [
+   {
+    "sig": "GetWaterLevel(Vector3 worldPoint)",
+    "line": 7
+   },
+   {
+    "sig": "GetSurfaceNormal(Vector3 worldPoint)",
+    "line": 13
+   },
+   {
+    "sig": "getGravityForce()",
+    "line": 19
+   },
+   {
+    "sig": "getDensity()",
+    "line": 25
+   },
+   {
+    "sig": "CalculateVolume_Mesh(Mesh mesh, Transform trans)",
+    "line": 31
+   },
+   {
+    "sig": "IsPointInsideCollider(Vector3 point, Collider collider, ref Bounds colliderBounds)",
+    "line": 37
+   }
+  ]
+ },
+ {
+  "type": "windOnObjectState",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\windOnObjectState.cs",
+  "methods": [
+   {
+    "sig": "setWindDetectedState(bool state)",
+    "line": 25
+   },
+   {
+    "sig": "setWindDirectionValues(Vector3 newValues)",
+    "line": 34
+   },
+   {
+    "sig": "setWindForceValue(float newValue)",
+    "line": 39
+   },
+   {
+    "sig": "isWindDetected()",
+    "line": 44
+   },
+   {
+    "sig": "getwindDirection()",
+    "line": 49
+   },
+   {
+    "sig": "getWindForce()",
+    "line": 58
+   }
+  ]
+ },
+ {
+  "type": "GKCTeleportHelper",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\GKCTeleportHelper.cs",
+  "methods": [
+   {
+    "sig": "TeleportPlayer(GameObject player)",
+    "line": 7
+   },
+   {
+    "sig": "TeleportMainPlayer()",
+    "line": 27
+   },
+   {
+    "sig": "ActivateDialogOnSystem(GameObject dialogSystemObj)",
+    "line": 40
+   },
+   {
+    "sig": "SetPlayerWalkingSpeedLimit()",
+    "line": 73
+   },
+   {
+    "sig": "RestorePlayerSpeed()",
+    "line": 98
+   }
+  ]
+ },
+ {
+  "type": "coinPocketSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\coinPocketSystem.cs",
+  "methods": [
+   {
+    "sig": "getCoinAmount()",
+    "line": 26
+   },
+   {
+    "sig": "addCoinAmount(int newAmount)",
+    "line": 31
+   },
+   {
+    "sig": "dropAllCoins()",
+    "line": 40
+   },
+   {
+    "sig": "canPickCoins()",
+    "line": 51
+   },
+   {
+    "sig": "setPickCoinsEnabledState(bool state)",
+    "line": 56
+   }
+  ]
+ },
+ {
+  "type": "enableOrDisableObjectsOnDistanceSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\enableOrDisableObjectsOnDistanceSystem.cs",
+  "methods": [
+   {
+    "sig": "getComponentInstance()",
+    "line": 72
+   },
+   {
+    "sig": "enableOrDisableObject(bool state, int index)",
+    "line": 216
+   },
+   {
+    "sig": "addObject(enableOrDisableObjectOnDistanceManager newEnableOrDisableObjectOnDistanceManager)",
+    "line": 228
+   },
+   {
+    "sig": "removeObject(Transform newTransform)",
+    "line": 257
+   },
+   {
+    "sig": "updateScreenValues()",
+    "line": 270
+   }
+  ]
+ },
+ {
+  "type": "flyingTurretSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\flyingTurretSystem.cs",
+  "methods": [
+   {
+    "sig": "enableOrDisableFlyingTurret()",
+    "line": 42
+   },
+   {
+    "sig": "setFlyingTurretActiveState(bool state)",
+    "line": 47
+   },
+   {
+    "sig": "enableOrDisableManualFireOnTurret(bool state)",
+    "line": 99
+   },
+   {
+    "sig": "enableOrDisableManualStateOnTurret(bool state)",
+    "line": 126
+   },
+   {
+    "sig": "inputToggleManualFire()",
+    "line": 135
+   }
+  ]
+ },
+ {
+  "type": "followObjectPositionUpdateSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\followObjectPositionUpdateSystem.cs",
+  "methods": [
+   {
+    "sig": "setFollowObjectActiveState(bool state)",
+    "line": 62
+   },
+   {
+    "sig": "setObjectToFollow(Transform newObject)",
+    "line": 67
+   },
+   {
+    "sig": "setEnabledState(bool state)",
+    "line": 72
+   },
+   {
+    "sig": "setObjectToFollowFromEditor(Transform newObject)",
+    "line": 77
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 84
+   }
+  ]
+ },
+ {
+  "type": "graphicQualitySettingsSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\graphicQualitySettingsSystem.cs",
+  "methods": [
+   {
+    "sig": "setGraphicQualityValue(string newValue)",
+    "line": 46
+   },
+   {
+    "sig": "setScreenResolution(string newValue)",
+    "line": 86
+   },
+   {
+    "sig": "setGameWindowedState(bool state)",
+    "line": 131
+   },
+   {
+    "sig": "setAntiAliasingState(string valueString)",
+    "line": 152
+   },
+   {
+    "sig": "setAntiAliasingState(int newValue)",
+    "line": 161
+   }
+  ]
+ },
+ {
+  "type": "setCharacterAsChildSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\setCharacterAsChildSystem.cs",
+  "methods": [
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 53
+   },
+   {
+    "sig": "toggleParenting()",
+    "line": 95
+   },
+   {
+    "sig": "enableOrDisableParenting(bool state)",
+    "line": 100
+   },
+   {
+    "sig": "setMainCharacter(GameObject newCharacter)",
+    "line": 167
+   },
+   {
+    "sig": "setChildCharacter(GameObject newCharacter)",
+    "line": 192
+   }
+  ]
+ },
+ {
+  "type": "setObjectParentSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\setObjectParentSystem.cs",
+  "methods": [
+   {
+    "sig": "setObjectsParent()",
+    "line": 32
+   },
+   {
+    "sig": "setParentTransform(Transform newTransform)",
+    "line": 53
+   },
+   {
+    "sig": "getParentTransform()",
+    "line": 58
+   },
+   {
+    "sig": "setParentOnStartState(bool state)",
+    "line": 63
+   },
+   {
+    "sig": "setParentOnStartStateFromEditor(bool state)",
+    "line": 68
+   }
+  ]
+ },
+ {
+  "type": "shakeCharacterBodyPartSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\shakeCharacterBodyPartSystem.cs",
+  "methods": [
+   {
+    "sig": "setShakePartCustomDuration(float newDuration)",
+    "line": 122
+   },
+   {
+    "sig": "activatShakeAnimationXSecondsFromEditor()",
+    "line": 129
+   },
+   {
+    "sig": "activatShakeAnimationXSecondsByName(string bodyPartName)",
+    "line": 134
+   },
+   {
+    "sig": "activatShakeAnimationXSecondsByTransform(Transform bodyPartTransform)",
+    "line": 151
+   },
+   {
+    "sig": "storeCharacterBones()",
+    "line": 195
+   }
+  ]
+ },
+ {
+  "type": "updateRigidbodyStateInsideRigidbodySystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\updateRigidbodyStateInsideRigidbodySystem.cs",
+  "methods": [
+   {
+    "sig": "removeAllObjects()",
+    "line": 115
+   },
+   {
+    "sig": "addGameObject(GameObject newObject)",
+    "line": 124
+   },
+   {
+    "sig": "removeGameObject(GameObject newObject)",
+    "line": 141
+   },
+   {
+    "sig": "checkTriggerType(Collider col, bool isEnter)",
+    "line": 172
+   },
+   {
+    "sig": "checkIfObjectOnList(GameObject newObject)",
+    "line": 348
+   }
+  ]
+ },
+ {
+  "type": "enableOrDisableObjectOnDistanceManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\enableOrDisableObjectOnDistanceManager.cs",
+  "methods": [
+   {
+    "sig": "removeObjectFromSystem()",
+    "line": 127
+   },
+   {
+    "sig": "setActiveState(bool state)",
+    "line": 134
+   },
+   {
+    "sig": "setAddObjectToMainSystemState(bool state)",
+    "line": 149
+   },
+   {
+    "sig": "isSetActiveStateOnMainTransformEnabled()",
+    "line": 164
+   }
+  ]
+ },
+ {
+  "type": "eventObjectFoundOnRaycastSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\eventObjectFoundOnRaycastSystem.cs",
+  "methods": [
+   {
+    "sig": "activateRaycastDetectionOnUpdate()",
+    "line": 70
+   },
+   {
+    "sig": "checkObjectWithRaycast()",
+    "line": 86
+   },
+   {
+    "sig": "setRaycastTransform(Transform newObject)",
+    "line": 160
+   },
+   {
+    "sig": "setCheckObjectsEnabledState(bool state)",
+    "line": 165
+   }
+  ]
+ },
+ {
+  "type": "moveObjectLateUpdate",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\moveObjectLateUpdate.cs",
+  "methods": [
+   {
+    "sig": "enableMovement()",
+    "line": 60
+   },
+   {
+    "sig": "disableMovement()",
+    "line": 65
+   },
+   {
+    "sig": "setMovementEnabledState(bool state)",
+    "line": 70
+   },
+   {
+    "sig": "changeMovementEnabledState()",
+    "line": 75
+   }
+  ]
+ },
+ {
+  "type": "pauseAnimationSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\pauseAnimationSystem.cs",
+  "methods": [
+   {
+    "sig": "setPauseAnimationActiveState(bool state)",
+    "line": 89
+   },
+   {
+    "sig": "activatPauseAnimationXSeconds(float newDuration)",
+    "line": 98
+   },
+   {
+    "sig": "setNumberOfFrames(int newValue)",
+    "line": 154
+   },
+   {
+    "sig": "storeCharacterBones()",
+    "line": 159
+   }
+  ]
+ },
+ {
+  "type": "scanElementInfo",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\scanElementInfo.cs",
+  "methods": [
+   {
+    "sig": "saveElement()",
+    "line": 43
+   },
+   {
+    "sig": "removeELement()",
+    "line": 112
+   },
+   {
+    "sig": "isScanned()",
+    "line": 156
+   },
+   {
+    "sig": "scanObject()",
+    "line": 161
+   }
+  ]
+ },
+ {
+  "type": "selectObjectManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\selectObjectManager.cs",
+  "methods": [
+   {
+    "sig": "clearObjectsSearcResultList()",
+    "line": 22
+   },
+   {
+    "sig": "showObjectsBySearchName()",
+    "line": 31
+   },
+   {
+    "sig": "selectObjectByName(string objectName)",
+    "line": 81
+   },
+   {
+    "sig": "selectObjectByIndex(int index)",
+    "line": 90
+   }
+  ]
+ },
+ {
+  "type": "vehiclePassengerUnderwater",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\vehiclePassengerUnderwater.cs",
+  "methods": [
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 46
+   },
+   {
+    "sig": "disableVehiclePassengerUnderwaterStateWithoutCallingEvents()",
+    "line": 85
+   },
+   {
+    "sig": "setVehiclePassengerUnderwaterState(bool state)",
+    "line": 96
+   },
+   {
+    "sig": "setCurrentSwimTrigger(BoxCollider newCollider)",
+    "line": 129
+   }
+  ]
+ },
+ {
+  "type": "checkIfCharacterUsingWeaponsToChangeMode",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\checkIfCharacterUsingWeaponsToChangeMode.cs",
+  "methods": [
+   {
+    "sig": "activateCheck()",
+    "line": 62
+   },
+   {
+    "sig": "stopCheck()",
+    "line": 79
+   },
+   {
+    "sig": "stopUpdateCheckCoroutine()",
+    "line": 92
+   }
+  ]
+ },
+ {
+  "type": "combineMeshSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\combineMeshSystem.cs",
+  "methods": [
+   {
+    "sig": "CombineMeshes(bool showCreatedMeshInfo)",
+    "line": 117
+   },
+   {
+    "sig": "getObjectMeshes()",
+    "line": 473
+   },
+   {
+    "sig": "clearMeshList()",
+    "line": 515
+   }
+  ]
+ },
+ {
+  "type": "mechanismPart",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\mechanismPart.cs",
+  "methods": [
+   {
+    "sig": "setVelocity(float v)",
+    "line": 78
+   },
+   {
+    "sig": "setEnableRotationState(bool state)",
+    "line": 83
+   },
+   {
+    "sig": "setGearActivatedState(bool state)",
+    "line": 88
+   }
+  ]
+ },
+ {
+  "type": "regularVehicleOnWater",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\regularVehicleOnWater.cs",
+  "methods": [
+   {
+    "sig": "disableVehiclePassengerUnderwaterStateWithoutCallingEvents()",
+    "line": 187
+   },
+   {
+    "sig": "checkVehiclePassengersState()",
+    "line": 208
+   },
+   {
+    "sig": "checkEventStateOnBeloworAboveSurface(bool state)",
+    "line": 297
+   }
+  ]
+ },
+ {
+  "type": "rotateObjectSmoothlySystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\rotateObjectSmoothlySystem.cs",
+  "methods": [
+   {
+    "sig": "rotateObjectToRandomRotationState()",
+    "line": 34
+   },
+   {
+    "sig": "rotateObjectToRotation(string rotationName)",
+    "line": 53
+   },
+   {
+    "sig": "stopRotateObjectToRotationCoroutine()",
+    "line": 70
+   }
+  ]
+ },
+ {
+  "type": "setGameObjectActiveState",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\setGameObjectActiveState.cs",
+  "methods": [
+   {
+    "sig": "changeActiveState()",
+    "line": 41
+   },
+   {
+    "sig": "setActiveState(bool state)",
+    "line": 48
+   },
+   {
+    "sig": "changeActiveStateFromEditor()",
+    "line": 57
+   }
+  ]
+ },
+ {
+  "type": "showGameInfoHud",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\showGameInfoHud.cs",
+  "methods": [
+   {
+    "sig": "getHudElement(string parentName, string elementName)",
+    "line": 25
+   },
+   {
+    "sig": "getHudElements(string parentName, List<string> elementNames)",
+    "line": 49
+   },
+   {
+    "sig": "getHudElementParent(string parentName)",
+    "line": 74
+   }
+  ]
+ },
+ {
+  "type": "simpleLamp",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\simpleLamp.cs",
+  "methods": [
+   {
+    "sig": "lampPlaced()",
+    "line": 37
+   },
+   {
+    "sig": "activateDevice()",
+    "line": 42
+   },
+   {
+    "sig": "setActivateDeviceState(bool state)",
+    "line": 47
+   }
+  ]
+ },
+ {
+  "type": "simpleLightingModifier",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\simpleLightingModifier.cs",
+  "methods": [
+   {
+    "sig": "setAmbientColor(Color newColor)",
+    "line": 20
+   },
+   {
+    "sig": "setAmbientColor(Vector4 newValue)",
+    "line": 35
+   },
+   {
+    "sig": "setAmbientColor(float newValue)",
+    "line": 51
+   }
+  ]
+ },
+ {
+  "type": "simpleScannerSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\Scanner System\\simpleScannerSystem.cs",
+  "methods": [
+   {
+    "sig": "enableOrDisableCamera(bool state)",
+    "line": 22
+   },
+   {
+    "sig": "toggleCameraEnabledState()",
+    "line": 49
+   }
+  ]
+ },
+ {
+  "type": "UIMouseHoverEvent",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\UIMouseHoverEvent.cs",
+  "methods": [
+   {
+    "sig": "OnPointerEnter(PointerEventData pointerEventData)",
+    "line": 26
+   },
+   {
+    "sig": "OnPointerExit(PointerEventData pointerEventData)",
+    "line": 34
+   }
+  ]
+ },
+ {
+  "type": "enableOrDisableAIOnDistanceManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\enableOrDisableAIOnDistanceManager.cs",
+  "methods": [
+   {
+    "sig": "enableOrDisbleAI(bool state)",
+    "line": 31
+   },
+   {
+    "sig": "setEnableOrDisableAIOnDistanceEnabledState(bool state)",
+    "line": 64
+   }
+  ]
+ },
+ {
+  "type": "headExplodeExample",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\headExplodeExample.cs",
+  "methods": [
+   {
+    "sig": "explode()",
+    "line": 13
+   },
+   {
+    "sig": "explodeBodyPart(Transform objectToExplode)",
+    "line": 26
+   }
+  ]
+ },
+ {
+  "type": "moveObjectSmoothlySystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\moveObjectSmoothlySystem.cs",
+  "methods": [
+   {
+    "sig": "moveObjectToPosition(string positionName)",
+    "line": 25
+   },
+   {
+    "sig": "stopMoveObjectToPositionCoroutine()",
+    "line": 38
+   }
+  ]
+ },
+ {
+  "type": "replaceMaterialSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\replaceMaterialSystem.cs",
+  "methods": [
+   {
+    "sig": "setMaterialState(bool state)",
+    "line": 26
+   },
+   {
+    "sig": "checkObjectMaterials()",
+    "line": 61
+   }
+  ]
+ },
+ {
+  "type": "setCharacterParentOnMovingObject",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\setCharacterParentOnMovingObject.cs",
+  "methods": [
+   {
+    "sig": "addPassenger(Transform newPassenger)",
+    "line": 103
+   },
+   {
+    "sig": "addVehicle(Transform newVehicle)",
+    "line": 158
+   }
+  ]
+ },
+ {
+  "type": "setObjectScaleSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\setObjectScaleSystem.cs",
+  "methods": [
+   {
+    "sig": "setScaleState(string scaleStateName)",
+    "line": 18
+   },
+   {
+    "sig": "changeScale(Vector3 newScale)",
+    "line": 28
+   }
+  ]
+ },
+ {
+  "type": "simpleBulletTimeOnCharacterEffect",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\simpleBulletTimeOnCharacterEffect.cs",
+  "methods": [
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 54
+   },
+   {
+    "sig": "enableOrDisableEffect(bool state)",
+    "line": 133
+   }
+  ]
+ },
+ {
+  "type": "simpleSoundSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\simpleSoundSystem.cs",
+  "methods": [
+   {
+    "sig": "playRandomSound()",
+    "line": 46
+   },
+   {
+    "sig": "playRandomSoundFromCategoryByName(string categoryName)",
+    "line": 59
+   }
+  ]
+ },
+ {
+  "type": "FloatingObjectSocket",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\FloatingObjectSocket.cs",
+  "methods": [
+   {
+    "sig": "getFloatingObject()",
+    "line": 9
+   }
+  ]
+ },
+ {
+  "type": "changeObjectColors",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\changeObjectColors.cs",
+  "methods": [
+   {
+    "sig": "setCurrentColors(List<Material> materialsList, List<Color> originalColorList)",
+    "line": 28
+   }
+  ]
+ },
+ {
+  "type": "consoleLogOnScreenSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\consoleLogOnScreenSystem.cs",
+  "methods": [
+   {
+    "sig": "Log(string logString, string stackTrace, LogType type)",
+    "line": 25
+   }
+  ]
+ },
+ {
+  "type": "createMeshDuplicate",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\createMeshDuplicate.cs",
+  "methods": [
+   {
+    "sig": "createDuplicate()",
+    "line": 35
+   }
+  ]
+ },
+ {
+  "type": "fadeObject",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\fadeObject.cs",
+  "methods": [
+   {
+    "sig": "activeVanish(float newSpeed)",
+    "line": 29
+   }
+  ]
+ },
+ {
+  "type": "filesChecker",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\filesChecker.cs",
+  "methods": [
+   {
+    "sig": "checkPrefabs()",
+    "line": 35
+   }
+  ]
+ },
+ {
+  "type": "ignoreCollisionSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\ignoreCollisionSystem.cs",
+  "methods": [
+   {
+    "sig": "activateIgnoreCollision(Collider objectToIgnore)",
+    "line": 37
+   }
+  ]
+ },
+ {
+  "type": "initialPopUpWindow",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\initialPopUpWindow.cs",
+  "methods": [
+   {
+    "sig": "Init()",
+    "line": 95
+   }
+  ]
+ },
+ {
+  "type": "openInitialPopUpWindow",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\openInitialPopUpWindow.cs",
+  "methods": [
+   {
+    "sig": "setShowInitialPopWindowEnabledState(bool state)",
+    "line": 50
+   }
+  ]
+ },
+ {
+  "type": "playSoundOnCollision",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\playSoundOnCollision.cs",
+  "methods": [
+   {
+    "sig": "playSound()",
+    "line": 54
+   }
+  ]
+ },
+ {
+  "type": "playSoundOnTriggerEnter",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\playSoundOnTriggerEnter.cs",
+  "methods": [
+   {
+    "sig": "playSound()",
+    "line": 53
+   }
+  ]
+ },
+ {
+  "type": "preventCharacterCollisionOnTop",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\preventCharacterCollisionOnTop.cs",
+  "methods": [
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 110
+   }
+  ]
+ },
+ {
+  "type": "putGear",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\putGear.cs",
+  "methods": [
+   {
+    "sig": "checkToDropObjectOnRail()",
+    "line": 56
+   }
+  ]
+ },
+ {
+  "type": "rotatoryGear",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\rotatoryGear.cs",
+  "methods": [
+   {
+    "sig": "setRotationEnabledState(bool state)",
+    "line": 9
+   }
+  ]
+ },
+ {
+  "type": "setInitialPositionAtGameStart",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\setInitialPositionAtGameStart.cs",
+  "methods": [
+   {
+    "sig": "setInitialPosition()",
+    "line": 49
+   }
+  ]
+ },
+ {
+  "type": "simpleActionButton",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\simpleActionButton.cs",
+  "methods": [
+   {
+    "sig": "activateDevice()",
+    "line": 17
+   }
+  ]
+ },
+ {
+  "type": "simpleCoinPickup",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\simpleCoinPickup.cs",
+  "methods": [
+   {
+    "sig": "checkToPickCoin(GameObject characterDetected)",
+    "line": 11
+   }
+  ]
+ },
+ {
+  "type": "simpleGUILayoutStateManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\simpleGUILayoutStateManager.cs",
+  "methods": [
+   {
+    "sig": "setGUILayoutState(bool state)",
+    "line": 27
+   }
+  ]
+ },
+ {
+  "type": "simpleLensFlareSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\simpleLensFlareSystem.cs",
+  "methods": [
+   {
+    "sig": "enableOrDisableLesnFlare(bool state)",
+    "line": 18
+   }
+  ]
+ },
+ {
+  "type": "simpleMoveObjectSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\simpleMoveObjectSystem.cs",
+  "methods": [
+   {
+    "sig": "activateMovement()",
+    "line": 26
+   }
+  ]
+ },
+ {
+  "type": "simpleRandomTextManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\simpleRandomTextManager.cs",
+  "methods": [
+   {
+    "sig": "setRandomText(int randomTextID)",
+    "line": 29
+   }
+  ]
+ },
+ {
+  "type": "simpleRaycastPlacementDetector",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\simpleRaycastPlacementDetector.cs",
+  "methods": [
+   {
+    "sig": "activePlacement()",
+    "line": 27
+   }
+  ]
+ },
+ {
+  "type": "simpleSetQuaternionRotation",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\simpleSetQuaternionRotation.cs",
+  "methods": [
+   {
+    "sig": "resetRotation()",
+    "line": 7
+   }
+  ]
+ }
+]

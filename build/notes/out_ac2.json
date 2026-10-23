@@ -1,0 +1,94 @@
+[
+  {
+    "type": "sharedActionSystem",
+    "summary": "キャラクター同士で共有するアクションを管理するコンポーネント。アクション名から情報を検索して条件判定を行い、成立するとアクション用オブジェクトを配置して2体のキャラのアクションを同期再生する。",
+    "methods": {
+      "setExternalCharacter(GameObject newCharacter)": "`currentExternalCharacter`に`newCharacter`を設定するだけ。",
+      "setFirstCharacter(GameObject newCharacter)": "`firstCharacter`に`newCharacter`を設定するだけ。",
+      "setSecondCharacter(GameObject newCharacter)": "`secondCharacter`に`newCharacter`を設定するだけ。",
+      "isLastSharedActionFound()": "直前のアクション起動が成功したかどうかを返すだけ。",
+      "isSharedActionEnabled()": "`sharedActionEnabled`の値を返すだけ。",
+      "isSharedActionActive()": "`sharedActionActive`の値、つまり共有アクション実行中かどうかを返すだけ。",
+      "activateRandomSharedActionByName(string actionName)": "ランダム設定が有効な時、`actionName`の情報から無作為に選んだ名前で起動する。",
+      "activateSharedActionByName(string actionName)": "名前で条件を判定し、成功時は`lastSharedActionFound`をtrueにしてコルーチンを開始、失敗時はイベント発火。",
+      "stopUpdateCoroutine()": "`updateCoroutine`が実行中なら停止するだけ。",
+      "stopSharedActionDueToCharactersUnableToFinish()": "両キャラのアクションと待機状態を解除し、`sharedActionActive`をfalseにしてオブジェクトを非表示にする。",
+      "setSharedActionEnabledState(bool state)": "`sharedActionEnabled`に`state`を設定するだけ。",
+      "setSharedActionEnabledStateFromEditor(bool state)": "状態を設定した後、`updateComponent`でシーンを更新するエディタ用関数。"
+    }
+  },
+  {
+    "type": "sharedActionButtonActivator",
+    "summary": "プレイヤー側の共有アクション起動を扱うコンポーネント。アクション名と有効状態を保持し、ランダム指定や一定時間だけの有効化に対応する。",
+    "methods": {
+      "setuseRandomSharedActionNameState(bool state)": "`useRandomSharedActionName`に`state`を設定するだけ。",
+      "enableActivatorAndSetSharedActioName(string newName)": "アクティベータを有効化したうえで`setSharedActionName`に`newName`を渡す。",
+      "setSharedActionName(string newName)": "有効時のみ`sharedActionName`を更新し、名前設定イベントと一致リストのイベントを発火する。",
+      "setSharedActionNameAndEnableWithDuration(string newName)": "`newName`を`;`で名前と秒数に分割し、名前設定と`enableActivatorWithDuration`を行う。",
+      "setExternalCharacter(GameObject newCharacter)": "`currentExternalCharacter`に`newCharacter`を設定するだけ。",
+      "activateRandomSharedActionByName()": "`useRandomSharedActionName`を一時的に有効にして起動し、元の値に戻す。",
+      "activateSharedActionByName()": "有効状態と外部キャラを確認して共有アクションを起動し、成否に応じたイベントを発火する。",
+      "enableActivator()": "`enableOrDisableaActivator(true)`を呼ぶだけ。",
+      "disableActivator()": "`enableOrDisableaActivator(false)`を呼ぶだけ。",
+      "enableOrDisableaActivator(bool state)": "有効時のみ`buttonActive`を`state`にしてアクティブ状態変更イベントを発火する。",
+      "enableActivatorWithDuration(float newDuration)": "`enableOrDisableActivatorWithDuration(true, newDuration)`を呼ぶだけ。",
+      "disableActivatorWithDuration()": "実行中または待機中なら`enableOrDisableActivatorWithDuration(false, 0)`を呼ぶ。",
+      "enableOrDisableActivatorWithDuration(bool state, float newDuration)": "コルーチンを止めて時間を設定し、有効時は指定秒後に自動で無効化する処理を開始、無効時は即イベントを発火する。",
+      "stopUpdateCoroutine()": "`updateCoroutine`が実行中なら停止するだけ。",
+      "setButtonActivatorEnabledState(bool state)": "`buttonActivatorEnabled`に`state`を設定するだけ。",
+      "setButtonActivatorEnabledStateFromEditor(bool state)": "状態を設定した後、`updateComponent`でシーンを更新するエディタ用関数。"
+    }
+  },
+  {
+    "type": "sharedActionZone",
+    "summary": "特定位置で共有アクションを再生するためのゾーン。対象アクション名、アクション用オブジェクト、距離や角度の条件、初期位置などを保持する。",
+    "methods": {
+      "storeInitialPosition()": "必要ならアクション用オブジェクトを生成し、未保存の初期位置と初期角度を記録する。",
+      "getInitialPosition()": "`initialPosition`を返すだけ。",
+      "getInitialEuler()": "`initialEuler`を返すだけ。",
+      "setSharedActionZoneEnabledState(bool state)": "`sharedActionZoneEnabled`に`state`を設定するだけ。",
+      "isSharedActionZoneEnabled()": "`sharedActionZoneEnabled`の値を返すだけ。",
+      "setDisableSharedActionZoneAfterUseState(bool state)": "`disableSharedActionZoneAfterUse`に`state`を設定するだけ。",
+      "getSharedActionName()": "`sharedActionName`を返すだけ。",
+      "isUseSharedActionContentActive()": "`useSharedActionContent`の値を返すだけ。",
+      "getSharedActionContent()": "`mainSharedActionContent`を返すだけ。",
+      "getSetPlayerAsFirstCharacter()": "`setPlayerAsFirstCharacter`の値を返すだけ。",
+      "getSetAIAsFirstCharacterIfSignalOwner()": "`setAIAsFirstCharacterIfSignalOwner`の値を返すだけ。",
+      "getMaxDistanceToUseSharedActionZone()": "`maxDistanceToUseSharedActionZone`を返すだけ。",
+      "spawnSharedActionObjectOnSceneFromEditor()": "プレハブからアクション用オブジェクトを生成して選択状態にし、シーンを更新する。",
+      "getSharedActionManagerrOnScene()": "シーン上の`sharedActionZoneManager`を検索し、無ければ新規GameObjectに追加して選択する。"
+    }
+  },
+  {
+    "type": "sharedActionSystemRemoteActivator",
+    "summary": "AIなどが対象を検出して相手キャラの共有アクションシステムを遠隔起動するコンポーネント。レイキャストや照準、目標システムで相手を探してアクション名を送る。",
+    "methods": {
+      "setCustomSharedActionNameToUse(string newName)": "`customSharedActionName`を設定し、空文字でなければ有効フラグを立てる。",
+      "removeCustomSharedActionName()": "空文字を設定してカスタム名を無効化するだけ。",
+      "checkSharedActionSystemByExternalDetection(string actionName)": "検出方法で相手キャラを探し、見つかればその共有アクションシステムで`actionName`を起動、失敗時はイベントを発火する。",
+      "activateSharedActionByName()": "`remoteActivatorEnabled`と有効状態を確認し、外部キャラを渡して起動、結果でイベントを発火する。",
+      "setSetAllSharedActionsActivatorResultAsNotActivatedState(bool state)": "`setAllSharedActionsActivatorResultAsNotActivated`に`state`を設定するだけ。",
+      "setRemoteActivatorEnabledState(bool state)": "`remoteActivatorEnabled`に`state`を設定するだけ。",
+      "checkSharedActionSystemByExternalDetectionFromEditor()": "`sharedActionName`を引数に`checkSharedActionSystemByExternalDetection`を呼ぶだけ。",
+      "setSetAllSharedActionsActivatorResultAsNotActivatedStateFromEditor(bool state)": "状態を設定した後、`updateComponent`でシーンを更新するエディタ用関数。",
+      "activateSharedActionByNameFromEditor()": "`activateSharedActionByName`を呼ぶだけ。"
+    }
+  },
+  {
+    "type": "sharedActionZoneManager",
+    "summary": "シーン内の共有アクションゾーンを一覧管理するコンポーネント。ゾーン全体の有効状態とゾーンリストを保持する。",
+    "methods": {
+      "isSharedActionZonesEnabled()": "`sharedActionZonesEnabled`の値を返すだけ。",
+      "getSharedActionZoneList()": "`sharedActionZoneList`を返すだけ。",
+      "setSharedActionZonesEnabledState(bool state)": "`sharedActionZonesEnabled`に`state`を設定するだけ。",
+      "getAllSharedActionZonesOnScene()": "シーン上の全`sharedActionZone`を集めてリストを再構築し、シーンを更新する。"
+    }
+  },
+  {
+    "type": "sharedActionZoneTrigger",
+    "summary": "トリガーの進入と退出を検出して、プレイヤーの共有アクション起動状態を切り替えるコンポーネント。タグやレイヤで対象を絞り込める。",
+    "methods": {
+      "checkTriggerInfo(Collider col, bool isEnter)": "タグやレイヤで対象を絞り、進入時はアクティベータ有効化と名前設定、退出時は無効化やカスタム名削除を行う。"
+    }
+  }
+]

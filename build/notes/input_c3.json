@@ -1,0 +1,744 @@
+[
+ {
+  "type": "playerWeaponsManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\playerWeaponsManager.cs",
+  "methods": [
+   {
+    "sig": "initializePlayerWeaponsValues()",
+    "line": 609
+   },
+   {
+    "sig": "enableOrDisableWeaponsCamera(bool state)",
+    "line": 757
+   },
+   {
+    "sig": "resetInitialWeaponCheckedOnCharacterSpawn()",
+    "line": 1100
+   },
+   {
+    "sig": "checkWeaponToSelectOnQuickAccessSlots(string weaponName, bool changeToWeaponWithoutDoubleSelection)",
+    "line": 1105
+   },
+   {
+    "sig": "checkPlayerIsNotCarringWeapons()",
+    "line": 1151
+   },
+   {
+    "sig": "checkInitialWeapon()",
+    "line": 1245
+   },
+   {
+    "sig": "setTouchingMenuPanelState(bool state)",
+    "line": 1332
+   },
+   {
+    "sig": "checkWeaponToChangeByIndex(IKWeaponSystem currentWeaponToCheck, int keyNumberToCheck, int weaponSlotIndex, int weaponIndex)",
+    "line": 1337
+   },
+   {
+    "sig": "checkShowWeaponSlotsParentWhenWeaponSelected(int weaponSlotIndex)",
+    "line": 1472
+   },
+   {
+    "sig": "checkForDisableFreeFireModeAfterStopFiring()",
+    "line": 1479
+   },
+   {
+    "sig": "disableFreeFireModeAfterStopFiring()",
+    "line": 1492
+   },
+   {
+    "sig": "stopShootingFireWeaponIfActive()",
+    "line": 1509
+   },
+   {
+    "sig": "stopShootingFireWeaponIfActiveWithoutChangingAimState()",
+    "line": 1526
+   },
+   {
+    "sig": "resetWeaponFiringAndAimingIfPlayerDisabled()",
+    "line": 1535
+   },
+   {
+    "sig": "setWeaponsJumpStartPositionState(bool state)",
+    "line": 1550
+   },
+   {
+    "sig": "setWeaponsJumpEndPositionState(bool state)",
+    "line": 1567
+   },
+   {
+    "sig": "disableWeaponJumpState()",
+    "line": 1584
+   },
+   {
+    "sig": "setRunningState(bool state)",
+    "line": 1600
+   },
+   {
+    "sig": "isPlayerRunning()",
+    "line": 1605
+   },
+   {
+    "sig": "isPlayerCrouching()",
+    "line": 1610
+   },
+   {
+    "sig": "setPlayerRunningState(bool state, IKWeaponSystem IKWeaponToUse)",
+    "line": 1621
+   },
+   {
+    "sig": "disablePlayerRunningState()",
+    "line": 1643
+   },
+   {
+    "sig": "resetPlayerRunningState()",
+    "line": 1656
+   },
+   {
+    "sig": "isPlayerRunningWithNewFov()",
+    "line": 1662
+   },
+   {
+    "sig": "useMeleeAttack()",
+    "line": 1667
+   },
+   {
+    "sig": "checkMeleeAttackExternally()",
+    "line": 1684
+   },
+   {
+    "sig": "isPlayerCarringWeapon()",
+    "line": 1701
+   },
+   {
+    "sig": "currentWeaponIsMoving()",
+    "line": 1714
+   },
+   {
+    "sig": "isWeaponHandsOnPositionToAim()",
+    "line": 1727
+   },
+   {
+    "sig": "isDrawingWeaponInProcess()",
+    "line": 1741
+   },
+   {
+    "sig": "isHolsteringWeaponInProcess()",
+    "line": 1754
+   },
+   {
+    "sig": "isdrawKeepWeaponAnimationInProcess()",
+    "line": 1767
+   },
+   {
+    "sig": "checkIfWeaponStateIsBusy()",
+    "line": 1780
+   },
+   {
+    "sig": "currentWeaponWithHandsInPosition()",
+    "line": 1789
+   },
+   {
+    "sig": "currentDualWeaponWithHandsInPosition(bool isRightWeapon)",
+    "line": 1798
+   },
+   {
+    "sig": "weaponsAreMoving()",
+    "line": 1807
+   },
+   {
+    "sig": "checkTypeView()",
+    "line": 1816
+   },
+   {
+    "sig": "setFirstPersonViewActiveState(bool state)",
+    "line": 1823
+   },
+   {
+    "sig": "checkIfFirstPersonActiveExternally()",
+    "line": 1828
+   },
+   {
+    "sig": "isFirstPersonActive()",
+    "line": 1833
+   },
+   {
+    "sig": "isFullBodyAwarenessActive()",
+    "line": 1838
+   },
+   {
+    "sig": "setFullBodyAwarenessActiveState(bool state, bool settingInEditor, Transform pivotCameraTransform)",
+    "line": 1843
+   },
+   {
+    "sig": "updateFBAValues()",
+    "line": 2054
+   },
+   {
+    "sig": "checkAutoShootOnTag()",
+    "line": 2064
+   },
+   {
+    "sig": "checkAvoidShootOnTag()",
+    "line": 2118
+   },
+   {
+    "sig": "setCurrentWeaponCanMarkTargetsState(bool state)",
+    "line": 2171
+   },
+   {
+    "sig": "setCurrentWeaponCanAutoShootOnTagState(bool state)",
+    "line": 2176
+   },
+   {
+    "sig": "setCurrentWeaponCanWeaponAvoidShootAtTagState(bool state)",
+    "line": 2181
+   },
+   {
+    "sig": "checkIfCanMarkTargets()",
+    "line": 2186
+   },
+   {
+    "sig": "addElementToPlayerList(GameObject obj, bool addMapIcon, bool useCloseDistance, float radiusDistance, bool showOffScreen, bool showMapWindowIcon, bool showDistanceInfo, bool showDistanceOffScreenInfo, string objectiveIconName, bool useCustomObjectiveColor, Color objectiveColor, bool removeCustomObjectiveColor, int buildingIndex, float iconOffset, bool addIconOnRestOfPlayers)",
+    "line": 2234
+   },
+   {
+    "sig": "removeLocatedEnemiesIcons(GameObject objectToRemove)",
+    "line": 2242
+   },
+   {
+    "sig": "shootWeapon(bool state)",
+    "line": 2248
+   },
+   {
+    "sig": "checkToUpdateInventoryWeaponAmmoText()",
+    "line": 2296
+   },
+   {
+    "sig": "checkToUpdateInventoryWeaponAmmoTextByWeaponNumberKey(int currentWeaponNumberKey)",
+    "line": 2303
+   },
+   {
+    "sig": "shootDualWeapon(bool state, bool rightWeapon, bool shootBothWeapons)",
+    "line": 2312
+   },
+   {
+    "sig": "setShootingState(bool state)",
+    "line": 2379
+   },
+   {
+    "sig": "isCharacterShooting()",
+    "line": 2389
+   },
+   {
+    "sig": "isShootingBurst()",
+    "line": 2398
+   },
+   {
+    "sig": "isTurnBasedCombatActionActive()",
+    "line": 2412
+   },
+   {
+    "sig": "setTurnBasedCombatActionActiveState(bool state)",
+    "line": 2419
+   },
+   {
+    "sig": "playerIsBusy()",
+    "line": 2439
+   },
+   {
+    "sig": "setLastTimeFired()",
+    "line": 2469
+   },
+   {
+    "sig": "setLastTimeUsed()",
+    "line": 2476
+   },
+   {
+    "sig": "getLastTimeFired()",
+    "line": 2481
+   },
+   {
+    "sig": "setLastTimeMoved()",
+    "line": 2486
+   },
+   {
+    "sig": "setGamePausedState(bool state)",
+    "line": 2498
+   },
+   {
+    "sig": "setUsingDeviceState(bool state)",
+    "line": 2505
+   },
+   {
+    "sig": "getLastTimeAimWeapon()",
+    "line": 2517
+   },
+   {
+    "sig": "cancelReloadIfActive()",
+    "line": 2522
+   },
+   {
+    "sig": "setReloadingWithAnimationActiveState(bool state)",
+    "line": 2531
+   },
+   {
+    "sig": "isReloadingWithAnimationActive()",
+    "line": 2540
+   },
+   {
+    "sig": "setLastTimeReload()",
+    "line": 2545
+   },
+   {
+    "sig": "getLastTimeReload()",
+    "line": 2550
+   },
+   {
+    "sig": "reloadingActionNotActive()",
+    "line": 2555
+   },
+   {
+    "sig": "setUsingNewWeaponID(bool state)",
+    "line": 2568
+   },
+   {
+    "sig": "setCurrentWeaponID(int newValue)",
+    "line": 2573
+   },
+   {
+    "sig": "setCurrentWeaponIDSmoothly(int newValue)",
+    "line": 2580
+   },
+   {
+    "sig": "setCurrentCrouchID(int newValue)",
+    "line": 2587
+   },
+   {
+    "sig": "setIgnoreUpperBodyRotationSystem(bool state)",
+    "line": 2596
+   },
+   {
+    "sig": "setOriginalCameraBodyWeightValue()",
+    "line": 2601
+   },
+   {
+    "sig": "isActionActiveInPlayer()",
+    "line": 2608
+   },
+   {
+    "sig": "activateCustomAction(string actionName)",
+    "line": 2613
+   },
+   {
+    "sig": "setHeadBobShotShakeState(IKWeaponSystem.weaponShotShakeInfo newWeaponShotShakeInfo)",
+    "line": 2618
+   },
+   {
+    "sig": "checkWeaponCameraShake(bool usingRightHandDualWeapon)",
+    "line": 2623
+   },
+   {
+    "sig": "isPlayerOnGroundForWeapons()",
+    "line": 2672
+   },
+   {
+    "sig": "setPauseCurrentWeaponSwayMovementInputActiveState(bool state)",
+    "line": 2677
+   },
+   {
+    "sig": "setWeaponSway()",
+    "line": 2685
+   },
+   {
+    "sig": "checkNumberInput(int numberAmount)",
+    "line": 2721
+   },
+   {
+    "sig": "isPlayerOnGround()",
+    "line": 2726
+   },
+   {
+    "sig": "isPlayerMoving()",
+    "line": 2731
+   },
+   {
+    "sig": "isObstacleToAvoidMovementFound()",
+    "line": 2736
+   },
+   {
+    "sig": "drawOrKeepWeaponInput()",
+    "line": 2742
+   },
+   {
+    "sig": "drawWeaponAIInput()",
+    "line": 2751
+   },
+   {
+    "sig": "keepWeaponAIInput()",
+    "line": 2764
+   },
+   {
+    "sig": "drawOrKeepWeapon(bool state)",
+    "line": 2777
+   },
+   {
+    "sig": "aimCurrentWeaponWhenItIsReady(bool state)",
+    "line": 2808
+   },
+   {
+    "sig": "stopAimCurrentWeaponWhenItIsReady(bool state)",
+    "line": 2815
+   },
+   {
+    "sig": "drawCurrentWeaponWhenItIsReady(bool state)",
+    "line": 2822
+   },
+   {
+    "sig": "keepCurrentWeaponWhenItIsReady(bool state)",
+    "line": 2831
+   },
+   {
+    "sig": "aimCurrentWeaponInput()",
+    "line": 2841
+   },
+   {
+    "sig": "aimCurrentWeapon(bool state)",
+    "line": 2850
+   },
+   {
+    "sig": "drawOrKeepWeaponThirdPerson(bool state)",
+    "line": 2864
+   },
+   {
+    "sig": "weaponReadyToMove()",
+    "line": 2950
+   },
+   {
+    "sig": "dualWeaponReadyToMove(bool isRightWeapon)",
+    "line": 2955
+   },
+   {
+    "sig": "grabWeaponWithNoDrawHand()",
+    "line": 2968
+   },
+   {
+    "sig": "weaponReadyToMoveDirectlyOnDrawHand()",
+    "line": 2973
+   },
+   {
+    "sig": "dualWeaponReadyToMoveDirectlyOnDrawHand(bool isRightWeapon)",
+    "line": 2978
+   },
+   {
+    "sig": "enableOrDisableIKOnHands(bool state)",
+    "line": 2991
+   },
+   {
+    "sig": "checkIfStopAimIfPlayerCantGetUpFromCrouch()",
+    "line": 3003
+   },
+   {
+    "sig": "aimOrDrawWeaponThirdPerson(bool state)",
+    "line": 3015
+   },
+   {
+    "sig": "setAimAssistInThirdPersonState()",
+    "line": 3118
+   },
+   {
+    "sig": "setAimAssistInFirstPersonState()",
+    "line": 3169
+   },
+   {
+    "sig": "drawOrKeepWeaponFirstPerson(bool state)",
+    "line": 3193
+   },
+   {
+    "sig": "aimOrDrawWeaponFirstPerson(bool state)",
+    "line": 3243
+   },
+   {
+    "sig": "changeCameraFov(bool increaseFov)",
+    "line": 3289
+   },
+   {
+    "sig": "changeWeaponsCameraFov(bool increaseFov, float targetFov, float speed)",
+    "line": 3326
+   },
+   {
+    "sig": "setCurrentWeaponsParent(bool isFirstPerson)",
+    "line": 3358
+   },
+   {
+    "sig": "enableOrDisableWeaponsMesh(bool state)",
+    "line": 3598
+   },
+   {
+    "sig": "enableOrDisableCurrentWeaponsMesh(bool state)",
+    "line": 3609
+   },
+   {
+    "sig": "enableOrDisableAllWeaponsMeshes(bool state)",
+    "line": 3634
+   },
+   {
+    "sig": "enableOrDisableEnabledWeaponsMesh(bool state)",
+    "line": 3643
+   },
+   {
+    "sig": "checkIfWeaponEnabledByName(string weaponName)",
+    "line": 3654
+   },
+   {
+    "sig": "canUseWeapons()",
+    "line": 3668
+   },
+   {
+    "sig": "chooseNextWeapon(bool isDroppingWeapon, bool checkIfMoreThanOneWeaponAvailable)",
+    "line": 3674
+   },
+   {
+    "sig": "choosePreviousWeapon(bool isDroppingWeapon, bool checkIfMoreThanOneWeaponAvailable)",
+    "line": 3723
+   },
+   {
+    "sig": "checkIfChangeWeapon(bool isDroppingWeapon)",
+    "line": 3772
+   },
+   {
+    "sig": "updateWeaponHUDInfo()",
+    "line": 3837
+   },
+   {
+    "sig": "updateElementsEnabledOnHUD()",
+    "line": 3875
+   },
+   {
+    "sig": "updateAmmo()",
+    "line": 3920
+   },
+   {
+    "sig": "getWeaponNameByAmmoName(string ammoName)",
+    "line": 3985
+   },
+   {
+    "sig": "getWeaponAmmoNameByWeaponName(string weaponName)",
+    "line": 4005
+   },
+   {
+    "sig": "getCurrentWeaponName()",
+    "line": 4023
+   },
+   {
+    "sig": "getWeaponOriginalClipSize(string weaponName)",
+    "line": 4028
+   },
+   {
+    "sig": "canWeaponsBeStolenFromCharacter()",
+    "line": 4046
+   },
+   {
+    "sig": "setCanWeaponsBeStolenFromCharacter(bool state)",
+    "line": 4051
+   },
+   {
+    "sig": "checkEventOnWeaponStolen()",
+    "line": 4056
+   },
+   {
+    "sig": "enableOrDisableWeaponsHUD(bool state)",
+    "line": 4063
+   },
+   {
+    "sig": "isWeaponsHUDActive()",
+    "line": 4119
+   },
+   {
+    "sig": "enableOrDisableHUD(bool state)",
+    "line": 4124
+   },
+   {
+    "sig": "setWeaponsHUDEnabledState(bool state)",
+    "line": 4141
+   },
+   {
+    "sig": "checkDisableWeaponsHUDAfterDelay(bool state)",
+    "line": 4146
+   },
+   {
+    "sig": "stopDisableWeaponsHUDAfterDelay()",
+    "line": 4158
+   },
+   {
+    "sig": "resetLastAmountOfFiredProjectiles()",
+    "line": 4174
+   },
+   {
+    "sig": "getLastAmountOfFiredProjectiles()",
+    "line": 4187
+   },
+   {
+    "sig": "getCurrentWeapon()",
+    "line": 4201
+   },
+   {
+    "sig": "setWeaponByElement(IKWeaponSystem weaponToConfigure)",
+    "line": 4261
+   },
+   {
+    "sig": "checkAndSetWeaponsAvailable()",
+    "line": 4278
+   },
+   {
+    "sig": "setNextWeaponAvailableToIndex(int currentIndex)",
+    "line": 4296
+   },
+   {
+    "sig": "setFirstWeaponAvailable()",
+    "line": 4357
+   },
+   {
+    "sig": "setFirstWeaponWithLowerKeyNumber()",
+    "line": 4376
+   },
+   {
+    "sig": "checkIfWeaponsAvailable()",
+    "line": 4408
+   },
+   {
+    "sig": "checkIfUsableWeaponsPrefabListActive()",
+    "line": 4421
+   },
+   {
+    "sig": "moreThanOneWeaponAvailable()",
+    "line": 4433
+   },
+   {
+    "sig": "checkIfWeaponCanBePicked(string weaponName)",
+    "line": 4453
+   },
+   {
+    "sig": "checkIfWeaponExists(string weaponName)",
+    "line": 4474
+   },
+   {
+    "sig": "canStoreAnyNumberSameWeaponState()",
+    "line": 4487
+   },
+   {
+    "sig": "checkIfWeaponIsAvailable(string weaponName)",
+    "line": 4492
+   },
+   {
+    "sig": "hasAmmoLimit(string weaponName)",
+    "line": 4505
+   },
+   {
+    "sig": "hasMaximumAmmoAmount(string weaponName)",
+    "line": 4518
+   },
+   {
+    "sig": "getAmmoAmountToMaximumLimit(string weaponName)",
+    "line": 4531
+   },
+   {
+    "sig": "AddAmmo(int amount, string weaponName)",
+    "line": 4545
+   },
+   {
+    "sig": "addAmmoToCurrentWeapon(float amount)",
+    "line": 4562
+   },
+   {
+    "sig": "addAmmoForAllWeapons(float amount)",
+    "line": 4583
+   },
+   {
+    "sig": "setKillInOneShootToAllWeaponsState(bool state)",
+    "line": 4598
+   },
+   {
+    "sig": "enableOrDisableIKOnWeaponsDuringAction(bool state)",
+    "line": 4607
+   },
+   {
+    "sig": "setActionActiveState(bool state)",
+    "line": 4619
+   },
+   {
+    "sig": "enableAllAttachmentsInCurrentWeapon()",
+    "line": 4631
+   },
+   {
+    "sig": "enableWeaponByName(string weaponName)",
+    "line": 4643
+   },
+   {
+    "sig": "getRightHandTransform()",
+    "line": 4653
+   },
+   {
+    "sig": "getLeftHandTransform()",
+    "line": 4658
+   },
+   {
+    "sig": "getRightHandMountPoint()",
+    "line": 4663
+   },
+   {
+    "sig": "getLeftHandMountPoint()",
+    "line": 4668
+   },
+   {
+    "sig": "setVisibleToAIState(bool state)",
+    "line": 4673
+   },
+   {
+    "sig": "externalForce(Vector3 direction)",
+    "line": 4678
+   },
+   {
+    "sig": "checkPlayerCanJumpWhenAimingState()",
+    "line": 4683
+   },
+   {
+    "sig": "addWeaponToListInRunTime(GameObject weaponObject, bool showDebugInfo, bool addingOnRunTime, bool weaponEnabledState)",
+    "line": 4720
+   },
+   {
+    "sig": "updateWeaponsParentsInRuntime(Transform parent, Animator mainAnimtor)",
+    "line": 4840
+   },
+   {
+    "sig": "checkWeaponStateOnEmptyAmmo()",
+    "line": 4853
+   },
+   {
+    "sig": "changeToNextWeaponWithAmmo()",
+    "line": 4867
+   },
+   {
+    "sig": "addWeaponToSamePocket(string newWeaponName, string weaponToGetPocket)",
+    "line": 4976
+   },
+   {
+    "sig": "addWeaponToPocketByPrefab(string newWeaponName, GameObject newWeaponObject)",
+    "line": 5019
+   },
+   {
+    "sig": "removeAllWeaponsFromPocketList()",
+    "line": 5036
+   },
+   {
+    "sig": "removeAllNullWeaponsFromPocketList()",
+    "line": 5045
+   },
+   {
+    "sig": "selectWeaponOnListInEditor(int weaponIndex)",
+    "line": 5058
+   }
+  ]
+ }
+]

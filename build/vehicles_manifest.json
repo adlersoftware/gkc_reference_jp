@@ -1,0 +1,2704 @@
+{
+"WaypointCircuit": {
+"type": "WaypointCircuit",
+"file": "Vehicles/AI/WaypointCircuit.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\AI\\WaypointCircuit.cs",
+"methods": [
+{
+"sig": "getClosestPosition(Vector3 position)",
+"line": 48
+},
+{
+"sig": "getProgressValue(Vector3 position)",
+"line": 71
+},
+{
+"sig": "GetRoutePoint(float dist)",
+"line": 116
+},
+{
+"sig": "GetRoutePosition(float dist)",
+"line": 127
+},
+{
+"sig": "addNewWayPoint()",
+"line": 215
+},
+{
+"sig": "addNewWayPointAtIndex(int index)",
+"line": 237
+},
+{
+"sig": "renameWaypoints()",
+"line": 252
+},
+{
+"sig": "resetWaypointsPositions()",
+"line": 265
+},
+{
+"sig": "updateComponent()",
+"line": 279
+}
+]
+},
+"WaypointProgressTracker": {
+"type": "WaypointProgressTracker",
+"file": "Vehicles/AI/WaypointProgressTracker.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\AI\\WaypointProgressTracker.cs",
+"methods": [
+{
+"sig": "setWaypointActiveState(bool state)",
+"line": 95
+},
+{
+"sig": "activateTrackState()",
+"line": 106
+},
+{
+"sig": "stopTrackState()",
+"line": 113
+},
+{
+"sig": "resetTrackerState()",
+"line": 163
+}
+]
+},
+"remoteVehicleNavmeshOverride": {
+"type": "remoteVehicleNavmeshOverride",
+"file": "Vehicles/AI/remoteVehicleNavmeshOverride.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\AI\\remoteVehicleNavmeshOverride.cs",
+"methods": [
+{
+"sig": "setVehicleNavMeshTargetPosition()",
+"line": 27
+},
+{
+"sig": "removeVehicleNavmeshTarget()",
+"line": 42
+}
+]
+},
+"vehicleAINavMesh": {
+"type": "vehicleAINavMesh",
+"file": "Vehicles/AI/vehicleAINavMesh.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\AI\\vehicleAINavMesh.cs",
+"methods": [
+{
+"sig": "enableOrDisableAIObject(bool state)",
+"line": 360
+},
+{
+"sig": "enableOrDisableAIObjectWithoutActivatingDrivingState(bool state)",
+"line": 387
+},
+{
+"sig": "setUsedByAIState(bool state)",
+"line": 414
+},
+{
+"sig": "setUsedByAIStateWithoutActivatingDrvingState(bool state)",
+"line": 419
+},
+{
+"sig": "enableOrDisablePatrolState(bool state)",
+"line": 424
+},
+{
+"sig": "SetTarget(Transform target)",
+"line": 459
+},
+{
+"sig": "setDrivingState(bool state)",
+"line": 466
+},
+{
+"sig": "setUsingTrackActive(bool state)",
+"line": 479
+},
+{
+"sig": "setVehicleAIActiveState(bool state)",
+"line": 484
+},
+{
+"sig": "setAutoBrakeOnRemoveTargetState(bool state)",
+"line": 806
+}
+]
+},
+"GKCRiderSocketSystem": {
+"type": "GKCRiderSocketSystem",
+"file": "Vehicles/GKCRiderSocketSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\GKCRiderSocketSystem.cs",
+"methods": [
+{
+"sig": "getMainRiderSystem()",
+"line": 12
+}
+]
+},
+"GKCSimpleRiderSystem": {
+"type": "GKCSimpleRiderSystem",
+"file": "Vehicles/GKCSimpleRiderSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\GKCSimpleRiderSystem.cs",
+"methods": [
+{
+"sig": "setPlayerToStartGameOnThisVehicle(GameObject newPlayer)",
+"line": 243
+},
+{
+"sig": "setDriverExternally(GameObject currentDriver)",
+"line": 252
+},
+{
+"sig": "setPassengerExternally(GameObject currentDriver)",
+"line": 287
+},
+{
+"sig": "stopDriveVehicleExternally()",
+"line": 326
+},
+{
+"sig": "activateDevice()",
+"line": 343
+},
+{
+"sig": "setRiderState(bool state)",
+"line": 364
+},
+{
+"sig": "startOrStopObjectToOverride(bool state)",
+"line": 404
+},
+{
+"sig": "startOrStopVehicle(bool state)",
+"line": 617
+},
+{
+"sig": "stopEnterExitActionSystemOnPassengerCoroutine(Coroutine passengerCoroutine)",
+"line": 746
+},
+{
+"sig": "enableOrDisablePlayerVisibleInVehicle(bool state, IKDrivingSystem.passengerComponents newPassengerComponents)",
+"line": 1352
+},
+{
+"sig": "getGetOffPosition(IKDrivingSystem.IKDrivingInformation passengerInfo)",
+"line": 1363
+},
+{
+"sig": "removePassengerInfo(IKDrivingSystem.IKDrivingInformation passengerInfo)",
+"line": 1372
+},
+{
+"sig": "getPassengerGetOffPosition(GameObject currentPassenger)",
+"line": 1427
+},
+{
+"sig": "setPassengerGravityState(IKDrivingSystem.passengerComponents currentPassengerComponents)",
+"line": 1636
+},
+{
+"sig": "setChangeDriverGravityWhenGetsOffState(bool state)",
+"line": 1666
+},
+{
+"sig": "setCurrentNormal(Vector3 newValue)",
+"line": 1671
+},
+{
+"sig": "getHUDBars(playerHUDManager newVehicleHUDInfo, playerHUDManager.vehicleHUDElements hudElements, bool drivingState)",
+"line": 1686
+},
+{
+"sig": "setWeaponState(bool state)",
+"line": 1730
+},
+{
+"sig": "setVehicleWeaponsComponents()",
+"line": 1771
+},
+{
+"sig": "getAmmo(string ammoName, int amount)",
+"line": 1784
+},
+{
+"sig": "setDestroyedState(bool state)",
+"line": 1791
+},
+{
+"sig": "setWeaponName(string name, int ammoPerClip, int clipSize)",
+"line": 1797
+},
+{
+"sig": "useAmmo(int clipSize, int remainAmmo)",
+"line": 1809
+},
+{
+"sig": "reactivateCollidersIfPossible()",
+"line": 1822
+},
+{
+"sig": "getIKVehiclePassengerInfo(GameObject passenger)",
+"line": 1835
+},
+{
+"sig": "setPassengerInfo(IKDrivingSystem.IKDrivingInformation passengerInfo, GameObject passenger)",
+"line": 1848
+},
+{
+"sig": "getRiderGameObject(GameObject newRiderGameObject)",
+"line": 1869
+},
+{
+"sig": "setPassengerComponents(GameObject currentPassenger)",
+"line": 1874
+},
+{
+"sig": "checkDriverHeadMeshOnCameraViewChange(bool isFirstPersonCamera)",
+"line": 1960
+},
+{
+"sig": "findPlayerOnScene()",
+"line": 1969
+},
+{
+"sig": "killCharacterOnVehicle()",
+"line": 1980
+},
+{
+"sig": "ejectCharacterFromVehicle()",
+"line": 1995
+},
+{
+"sig": "getOffFromVehicle()",
+"line": 2006
+},
+{
+"sig": "getVehicleName()",
+"line": 2021
+},
+{
+"sig": "isVehicleFull()",
+"line": 2026
+},
+{
+"sig": "getDriverSeatPassengerIndex()",
+"line": 2035
+},
+{
+"sig": "getClosestSeatToPassengerIndex(GameObject currentPassenger)",
+"line": 2048
+},
+{
+"sig": "setPauseDriverGetOffInputActionState(bool state)",
+"line": 2164
+},
+{
+"sig": "inputGetOffFromVehicle()",
+"line": 2175
+}
+]
+},
+"IKDrivingSystem": {
+"type": "IKDrivingSystem",
+"file": "Vehicles/IKDrivingSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\IKDrivingSystem.cs",
+"methods": [
+{
+"sig": "updateSeatsStates()",
+"line": 199
+},
+{
+"sig": "setNewAngularDirection(Vector3 newValue)",
+"line": 224
+},
+{
+"sig": "setCollisionForceDirectionToPassengers(Vector3 forceDirection)",
+"line": 229
+},
+{
+"sig": "setPassengerFirstPersonState(bool state, GameObject passengerToCheck)",
+"line": 250
+},
+{
+"sig": "setPlayerToStartGameOnThisVehicle(GameObject newPlayer)",
+"line": 263
+},
+{
+"sig": "setDriverExternally(GameObject currentDriver)",
+"line": 272
+},
+{
+"sig": "setPassengerExternally(GameObject currentDriver)",
+"line": 301
+},
+{
+"sig": "destroyVehicle()",
+"line": 341
+},
+{
+"sig": "fixDestroyedVehicle()",
+"line": 356
+},
+{
+"sig": "setMainColliderEnabledState(bool state)",
+"line": 365
+},
+{
+"sig": "disableVehicle()",
+"line": 371
+},
+{
+"sig": "ejectVehiclePassengersOnSelfDestruct(float ejectPassengerFoce)",
+"line": 433
+},
+{
+"sig": "ejectVehiclePassengers(bool ejectPassenger, float ejectForce)",
+"line": 438
+},
+{
+"sig": "checkIgnorPassengersCollidersState(List<passengerComponents> auxPassengerComponentsList)",
+"line": 507
+},
+{
+"sig": "setActivateFreeFloatingModeOnEjectEnabledState(bool state)",
+"line": 554
+},
+{
+"sig": "startOrStopVehicle(GameObject currentPassenger, Transform passengerParent, Vector3 normal, Vector3 nextPlayerPos)",
+"line": 560
+},
+{
+"sig": "stopEnterExitActionSystemOnPassengerCoroutine(Coroutine passengerCoroutine)",
+"line": 737
+},
+{
+"sig": "setPlayerCameraDirectionWithVehicleCameraDirection(passengerComponents currentPassengerComponents)",
+"line": 1660
+},
+{
+"sig": "checkIfNotDrivenRemotely(bool currentPassengerIsPlayer)",
+"line": 1702
+},
+{
+"sig": "setCanBeDrivenRemotelyState(bool state)",
+"line": 1710
+},
+{
+"sig": "getCanBeDrivenRemotelyValue()",
+"line": 1715
+},
+{
+"sig": "enableOrDisablePlayerVisibleInVehicle(bool state, passengerComponents currentPassengerComponents)",
+"line": 1735
+},
+{
+"sig": "checkCameraTranslationByPlayerCamera(bool state, playerCamera playerCameraManager)",
+"line": 1747
+},
+{
+"sig": "stopCameraTranslationByPlayerCamera(playerCamera playerCameraManager)",
+"line": 1756
+},
+{
+"sig": "checkCameraTranslation(bool state, passengerComponents currentPassengerComponents)",
+"line": 1762
+},
+{
+"sig": "stopCheckCameraTranslation(Coroutine moveCameraCoroutine)",
+"line": 1772
+},
+{
+"sig": "setPlayerCameraParentAndPosition(Transform mainCameraTransform, playerCamera playerCameraManager)",
+"line": 1875
+},
+{
+"sig": "checkDisableShowControlsMenu()",
+"line": 1949
+},
+{
+"sig": "inputOpenOrCloseControlsMenu(bool state)",
+"line": 1956
+},
+{
+"sig": "openOrCloseControlsMenu(bool state)",
+"line": 1965
+},
+{
+"sig": "setUnlockCursorState(bool state)",
+"line": 1997
+},
+{
+"sig": "setCameraAndWeaponsPauseState(bool state)",
+"line": 2032
+},
+{
+"sig": "pauseOrPlayVehicleCamera(bool state)",
+"line": 2041
+},
+{
+"sig": "getcurrentDriver()",
+"line": 2046
+},
+{
+"sig": "getLastDriver()",
+"line": 2069
+},
+{
+"sig": "currentDriverIsAI()",
+"line": 2078
+},
+{
+"sig": "getOffFromVehicleToDriverAI()",
+"line": 2095
+},
+{
+"sig": "getHUDManager()",
+"line": 2106
+},
+{
+"sig": "getPassengerGetOffPosition(GameObject currentPassenger)",
+"line": 2140
+},
+{
+"sig": "getGetOffPosition(IKDrivingInformation passengerInfo)",
+"line": 2437
+},
+{
+"sig": "getClosestSeatToPassengerIndex(GameObject currentPassenger)",
+"line": 2446
+},
+{
+"sig": "getClosestSeatToPassengerIndexWithoutStateCheck(GameObject currentPassenger)",
+"line": 2487
+},
+{
+"sig": "getDriverSeatPassengerIndex()",
+"line": 2509
+},
+{
+"sig": "getIKVehiclePassengerInfo(GameObject passenger)",
+"line": 2522
+},
+{
+"sig": "setPassengerInfo(IKDrivingInformation passengerInfo, GameObject passenger)",
+"line": 2535
+},
+{
+"sig": "setPassengerComponents(GameObject currentPassenger)",
+"line": 2555
+},
+{
+"sig": "removePassengerInfo(IKDrivingInformation passengerInfo)",
+"line": 2637
+},
+{
+"sig": "addPassenger()",
+"line": 2676
+},
+{
+"sig": "getPassengerGameObjectList()",
+"line": 2686
+},
+{
+"sig": "checkTriggerInfo(Collider col, bool isEnter)",
+"line": 2691
+},
+{
+"sig": "getPassengersInsideTrigger()",
+"line": 2734
+},
+{
+"sig": "isVehicleFull()",
+"line": 2739
+},
+{
+"sig": "arePassengerSeatsFull()",
+"line": 2748
+},
+{
+"sig": "isVehicleEmpty()",
+"line": 2764
+},
+{
+"sig": "getVehicleSeatsAmount()",
+"line": 2773
+},
+{
+"sig": "getMainCollider()",
+"line": 2778
+},
+{
+"sig": "checkActivateActionScreen(bool state, playerController playerControllerManager)",
+"line": 2783
+},
+{
+"sig": "getOffFromVehicle()",
+"line": 2792
+},
+{
+"sig": "isVehicleBeingDriven()",
+"line": 2805
+},
+{
+"sig": "isForcingPassengersToGetOffOnVehicleDestroyedActive()",
+"line": 2814
+},
+{
+"sig": "checkStateOnDestroyVehicleExternally()",
+"line": 2819
+},
+{
+"sig": "forceAllPassengersToGetOffFromVehicle()",
+"line": 2826
+},
+{
+"sig": "updateComponent()",
+"line": 2845
+}
+]
+},
+"airCraftController": {
+"type": "airCraftController",
+"file": "Vehicles/Vehicle Controllers/airCraftController.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\Vehicle Controllers\\airCraftController.cs",
+"methods": [
+{
+"sig": "resetInputValues()",
+"line": 571
+},
+{
+"sig": "enableOrDisableTrailsState(bool state)",
+"line": 580
+},
+{
+"sig": "playAnimation(bool forward, GameObject obj, string name)",
+"line": 739
+},
+{
+"sig": "setTurnOnStateSound()",
+"line": 765
+},
+{
+"sig": "setTurnOffStateSound(bool previouslyTurnedOn)",
+"line": 772
+},
+{
+"sig": "inputSetRotateToLeftState(bool state)",
+"line": 952
+},
+{
+"sig": "inputSetRotateToRightState(bool state)",
+"line": 969
+},
+{
+"sig": "inputLandOrTakeOff()",
+"line": 986
+}
+]
+},
+"boatController": {
+"type": "boatController",
+"file": "Vehicles/Vehicle Controllers/boatController.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\Vehicle Controllers\\boatController.cs",
+"methods": [
+{
+"sig": "checkEventOnWindStateChange(bool state)",
+"line": 452
+},
+{
+"sig": "checkEventOnSailStateChange(bool state)",
+"line": 461
+},
+{
+"sig": "useVehicleJumpPlatform(Vector3 direction)",
+"line": 544
+},
+{
+"sig": "useJumpPlatformParable(Vector3 direction)",
+"line": 549
+},
+{
+"sig": "setNewJumpPower(float newJumpPower)",
+"line": 556
+},
+{
+"sig": "setOriginalJumpPower()",
+"line": 561
+},
+{
+"sig": "setCanJumpState(bool state)",
+"line": 566
+},
+{
+"sig": "setSailActiveState(bool state)",
+"line": 637
+},
+{
+"sig": "setWindCheckState(bool state)",
+"line": 644
+},
+{
+"sig": "inputToggleWindCheckState()",
+"line": 651
+},
+{
+"sig": "inputToggleSailActive()",
+"line": 658
+},
+{
+"sig": "inputIncreaseDensity()",
+"line": 665
+},
+{
+"sig": "inputDecreaseDensity()",
+"line": 678
+}
+]
+},
+"carController": {
+"type": "carController",
+"file": "Vehicles/Vehicle Controllers/carController.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\Vehicle Controllers\\carController.cs",
+"methods": [
+{
+"sig": "vehicleBounceMovement(float horizontalLeanAmount, float verticalLeanAmount)",
+"line": 999
+},
+{
+"sig": "rotateVehicle()",
+"line": 1125
+},
+{
+"sig": "useVehicleJumpPlatform(Vector3 direction)",
+"line": 1225
+},
+{
+"sig": "useJumpPlatformParable(Vector3 direction)",
+"line": 1230
+},
+{
+"sig": "setJumpPower(float newJumpPower)",
+"line": 1237
+},
+{
+"sig": "setNewJumpPower(float newJumpPower)",
+"line": 1242
+},
+{
+"sig": "setOriginalJumpPower()",
+"line": 1247
+},
+{
+"sig": "setMaxSpeed(float maxSpeedValue)",
+"line": 1252
+},
+{
+"sig": "setMaxAcceleration(float maxAccelerationValue)",
+"line": 1257
+},
+{
+"sig": "setMaxBrakePower(float maxBrakePower)",
+"line": 1262
+},
+{
+"sig": "setMaxTurboPower(float maxTurboPower)",
+"line": 1267
+},
+{
+"sig": "setCanJumpState(bool state)",
+"line": 1272
+},
+{
+"sig": "setRotateVehicleUpwardState(bool state)",
+"line": 1277
+},
+{
+"sig": "setPreserveDirectionWhileInAirState(bool state)",
+"line": 1282
+},
+{
+"sig": "setPauseAutoRotationActiveState(bool state)",
+"line": 1287
+}
+]
+},
+"flyingController": {
+"type": "flyingController",
+"file": "Vehicles/Vehicle Controllers/flyingController.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\Vehicle Controllers\\flyingController.cs",
+"methods": [
+{
+"sig": "stopVehicleParticles()",
+"line": 589
+},
+{
+"sig": "inputIncreaseHeightState(bool state)",
+"line": 728
+},
+{
+"sig": "inputDecreaseHeightState(bool state)",
+"line": 755
+},
+{
+"sig": "inputSetRotateToLeftState(bool state)",
+"line": 766
+},
+{
+"sig": "inputSetRotateToRightState(bool state)",
+"line": 787
+}
+]
+},
+"hoverBoardAnimationSystem": {
+"type": "hoverBoardAnimationSystem",
+"file": "Vehicles/Vehicle Controllers/hoverBoardAnimationSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\Vehicle Controllers\\hoverBoardAnimationSystem.cs",
+"methods": [
+{
+"sig": "changeVehicleState(bool state)",
+"line": 173
+}
+]
+},
+"hoverBoardController": {
+"type": "hoverBoardController",
+"file": "Vehicles/Vehicle Controllers/hoverBoardController.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\Vehicle Controllers\\hoverBoardController.cs",
+"methods": [
+{
+"sig": "useVehicleJumpPlatform(Vector3 direction)",
+"line": 493
+},
+{
+"sig": "useJumpPlatformParable(Vector3 direction)",
+"line": 500
+},
+{
+"sig": "setNewJumpPower(float newJumpPower)",
+"line": 507
+},
+{
+"sig": "setOriginalJumpPower()",
+"line": 512
+},
+{
+"sig": "setCanJumpState(bool state)",
+"line": 517
+}
+]
+},
+"hoverCraftController": {
+"type": "hoverCraftController",
+"file": "Vehicles/Vehicle Controllers/hoverCraftController.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\Vehicle Controllers\\hoverCraftController.cs",
+"methods": [
+{
+"sig": "useVehicleJumpPlatform(Vector3 direction)",
+"line": 588
+},
+{
+"sig": "useJumpPlatformParable(Vector3 direction)",
+"line": 595
+},
+{
+"sig": "setNewJumpPower(float newJumpPower)",
+"line": 602
+},
+{
+"sig": "setOriginalJumpPower()",
+"line": 607
+},
+{
+"sig": "setCanJumpState(bool state)",
+"line": 612
+}
+]
+},
+"motorBikeController": {
+"type": "motorBikeController",
+"file": "Vehicles/Vehicle Controllers/motorBikeController.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\Vehicle Controllers\\motorBikeController.cs",
+"methods": [
+{
+"sig": "checkDriverFootPosition()",
+"line": 593
+},
+{
+"sig": "playStandAnimation(bool playForward)",
+"line": 646
+},
+{
+"sig": "stopVehicleParticles()",
+"line": 744
+},
+{
+"sig": "useVehicleJumpPlatform(Vector3 direction)",
+"line": 802
+},
+{
+"sig": "useJumpPlatformParable(Vector3 direction)",
+"line": 807
+},
+{
+"sig": "setNewJumpPower(float newJumpPower)",
+"line": 812
+},
+{
+"sig": "setOriginalJumpPower()",
+"line": 817
+},
+{
+"sig": "setChassisRotation(Vector3 rotationAmount)",
+"line": 824
+},
+{
+"sig": "stopSetChassisRotationCoroutine()",
+"line": 830
+},
+{
+"sig": "adjustFeetToGround(bool adjustToGround)",
+"line": 869
+},
+{
+"sig": "stopAdjustHoldOnLedgeCoroutine()",
+"line": 876
+},
+{
+"sig": "setCanJumpState(bool state)",
+"line": 970
+}
+]
+},
+"sphereController": {
+"type": "sphereController",
+"file": "Vehicles/Vehicle Controllers/sphereController.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\Vehicle Controllers\\sphereController.cs",
+"methods": [
+{
+"sig": "preventSnapToGround()",
+"line": 616
+},
+{
+"sig": "useVehicleJumpPlatform(Vector3 direction)",
+"line": 834
+},
+{
+"sig": "useJumpPlatformParable(Vector3 direction)",
+"line": 839
+},
+{
+"sig": "setNewJumpPower(float newJumpPower)",
+"line": 846
+},
+{
+"sig": "setOriginalJumpPower()",
+"line": 851
+},
+{
+"sig": "inputSetClimbState(bool state)",
+"line": 938
+},
+{
+"sig": "inputToggleClimbState()",
+"line": 960
+}
+]
+},
+"vehicleController": {
+"type": "vehicleController",
+"file": "Vehicles/Vehicle Controllers/vehicleController.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\Vehicle Controllers\\vehicleController.cs",
+"methods": [
+{
+"sig": "Awake()",
+"line": 167
+},
+{
+"sig": "Start()",
+"line": 174
+},
+{
+"sig": "checkCameraType()",
+"line": 184
+},
+{
+"sig": "vehicleUpdate()",
+"line": 194
+},
+{
+"sig": "update2_5DState()",
+"line": 347
+},
+{
+"sig": "updateCameraSteerState()",
+"line": 534
+},
+{
+"sig": "updateMovingState()",
+"line": 550
+},
+{
+"sig": "vehicleFixedUpdate()",
+"line": 555
+},
+{
+"sig": "setCollisionDetected(Collision currentCollision)",
+"line": 560
+},
+{
+"sig": "startBrakeVehicleToStopCompletely()",
+"line": 565
+},
+{
+"sig": "endBrakeVehicleToStopCompletely()",
+"line": 570
+},
+{
+"sig": "changeVehicleState()",
+"line": 575
+},
+{
+"sig": "passengerGettingOnOff()",
+"line": 602
+},
+{
+"sig": "checkVehicleStateOnPassengerGettingOnOrOff(bool state)",
+"line": 607
+},
+{
+"sig": "fixDestroyedVehicle()",
+"line": 612
+},
+{
+"sig": "disableVehicle()",
+"line": 621
+},
+{
+"sig": "getCurrentSpeed()",
+"line": 631
+},
+{
+"sig": "getMaxForwardSpeed()",
+"line": 636
+},
+{
+"sig": "inputJump()",
+"line": 642
+},
+{
+"sig": "inputHoldOrReleaseJump(bool holdingButton)",
+"line": 652
+},
+{
+"sig": "inputHoldOrReleaseTurbo(bool holdingButton)",
+"line": 667
+},
+{
+"sig": "inputSetTurnOnState()",
+"line": 696
+},
+{
+"sig": "inputHorn()",
+"line": 709
+},
+{
+"sig": "inputHoldOrReleaseBrake(bool holdingButton)",
+"line": 716
+},
+{
+"sig": "isBrakeActive()",
+"line": 723
+},
+{
+"sig": "pressHorn()",
+"line": 729
+},
+{
+"sig": "setAudioState(AudioElement source, float distance, float volume, bool loop, bool play, bool stop)",
+"line": 735
+},
+{
+"sig": "setIgnoreToTurnOnOrOffInputActiveState(bool state)",
+"line": 751
+},
+{
+"sig": "setEngineOnOrOffState()",
+"line": 756
+},
+{
+"sig": "turnOnOrOff(bool state, bool previouslyTurnedOn)",
+"line": 763
+},
+{
+"sig": "setTurnOnState()",
+"line": 781
+},
+{
+"sig": "setTurnOffState(bool previouslyTurnedOn)",
+"line": 786
+},
+{
+"sig": "changeGravityControlUse(bool state)",
+"line": 810
+},
+{
+"sig": "setNormal(Vector3 normalValue)",
+"line": 818
+},
+{
+"sig": "getNormal()",
+"line": 823
+},
+{
+"sig": "usingBoosting()",
+"line": 829
+},
+{
+"sig": "isUseOfGravityActive()",
+"line": 834
+},
+{
+"sig": "isDrivingActive()",
+"line": 839
+},
+{
+"sig": "isPlayerUsingInput()",
+"line": 844
+},
+{
+"sig": "isCameraTypeFree()",
+"line": 853
+},
+{
+"sig": "isPlayerMovingOn3dWorld()",
+"line": 858
+},
+{
+"sig": "isMovingBackwards()",
+"line": 863
+},
+{
+"sig": "getLastLookingInRightDirectionOn2_5d()",
+"line": 884
+},
+{
+"sig": "getCurrentNormal()",
+"line": 897
+},
+{
+"sig": "setNewMainCameraTransform(Transform newTransform)",
+"line": 902
+},
+{
+"sig": "setNewPlayerCameraTransform(Transform newTransform)",
+"line": 907
+},
+{
+"sig": "setUseForwardDirectionForCameraDirectionState(bool state)",
+"line": 912
+},
+{
+"sig": "setUseRightDirectionForCameraDirectionState(bool state)",
+"line": 917
+},
+{
+"sig": "setAddExtraRotationPausedState(bool state)",
+"line": 922
+},
+{
+"sig": "activateAutoBrakeOnGetOff()",
+"line": 927
+},
+{
+"sig": "checkAutoBrakeOnGetOffState()",
+"line": 934
+},
+{
+"sig": "isVehicleOnGround()",
+"line": 945
+},
+{
+"sig": "canUseHoverboardWaypoints()",
+"line": 951
+},
+{
+"sig": "getLastTimeReleasedFromWaypoint()",
+"line": 956
+},
+{
+"sig": "isUsingHoverBoardWaypoint()",
+"line": 961
+},
+{
+"sig": "enterOrExitFromWayPoint(bool state)",
+"line": 966
+},
+{
+"sig": "receiveWayPoints(hoverBoardWayPoints wayPoints)",
+"line": 991
+},
+{
+"sig": "getMotorInput()",
+"line": 996
+},
+{
+"sig": "getHorizontalAxis()",
+"line": 1001
+},
+{
+"sig": "getVerticalAxis()",
+"line": 1006
+},
+{
+"sig": "getPlayerMouseAxis()",
+"line": 1011
+},
+{
+"sig": "getPlayerMovementAxis()",
+"line": 1016
+},
+{
+"sig": "resetVehicleTransformRotation()",
+"line": 1023
+},
+{
+"sig": "resetVehicleTransformRotationCoroutine()",
+"line": 1039
+},
+{
+"sig": "pickOrReleaseHoverboardVehicle(bool state, bool auto)",
+"line": 1063
+},
+{
+"sig": "activeHoverboardMovement()",
+"line": 1082
+},
+{
+"sig": "stopMoveThroughWayPointsCoroutine()",
+"line": 1089
+},
+{
+"sig": "getVehicleComponents(GameObject mainVehicleObject)",
+"line": 1271
+}
+]
+},
+"hoverBoardWayPoints": {
+"type": "hoverBoardWayPoints",
+"file": "Vehicles/hoverBoardWayPoints.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\hoverBoardWayPoints.cs",
+"methods": [
+{
+"sig": "addNewWayPoint()",
+"line": 107
+},
+{
+"sig": "removeWaypoint(int index)",
+"line": 138
+},
+{
+"sig": "addNewWayPointAtIndex(int index)",
+"line": 149
+},
+{
+"sig": "selectObjectByIndex(int index)",
+"line": 182
+},
+{
+"sig": "renameAllWaypoints()",
+"line": 191
+},
+{
+"sig": "updateComponent()",
+"line": 206
+}
+]
+},
+"launchTrayectory": {
+"type": "launchTrayectory",
+"file": "Vehicles/launchTrayectory.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\launchTrayectory.cs",
+"methods": [
+{
+"sig": "stopUpdateCoroutine()",
+"line": 114
+},
+{
+"sig": "changeParableState(bool state)",
+"line": 289
+},
+{
+"sig": "setMainCameraTransform(Transform newCameraTransform)",
+"line": 418
+},
+{
+"sig": "setShowLineRendererEnabledState(bool state)",
+"line": 423
+}
+]
+},
+"mainRiderSystem": {
+"type": "mainRiderSystem",
+"file": "Vehicles/mainRiderSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\mainRiderSystem.cs",
+"methods": [
+{
+"sig": "isVehicleOnlyForOnePlayerActive()",
+"line": 15
+},
+{
+"sig": "getVehicleCameraGameObject()",
+"line": 20
+},
+{
+"sig": "getVehicleGravityControl()",
+"line": 25
+},
+{
+"sig": "getVehicleGameObject()",
+"line": 30
+},
+{
+"sig": "setTriggerToDetect(Collider newCollider)",
+"line": 35
+},
+{
+"sig": "setPlayerVisibleInVehicleState(bool state)",
+"line": 40
+},
+{
+"sig": "setResetCameraRotationWhenGetOnState(bool state)",
+"line": 45
+},
+{
+"sig": "setEjectPlayerWhenDestroyedState(bool state)",
+"line": 50
+},
+{
+"sig": "getCustomVehicleTransform()",
+"line": 55
+},
+{
+"sig": "setEnteringOnVehicleFromDistanceState(bool state)",
+"line": 60
+},
+{
+"sig": "setCurrentPassenger(GameObject passenger)",
+"line": 65
+},
+{
+"sig": "getCurrentDriver()",
+"line": 70
+},
+{
+"sig": "isBeingDrivenActive()",
+"line": 75
+},
+{
+"sig": "getVehicleRadius()",
+"line": 80
+},
+{
+"sig": "checkIfDetectSurfaceBelongToVehicle(Collider surfaceFound)",
+"line": 85
+},
+{
+"sig": "getVehicleCollider()",
+"line": 90
+}
+]
+},
+"playerHUDManager": {
+"type": "playerHUDManager",
+"file": "Vehicles/playerHUDManager.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\playerHUDManager.cs",
+"methods": [
+{
+"sig": "setControlList(inputActionManager manager)",
+"line": 83
+},
+{
+"sig": "setTouchingMenuPanelState(bool state)",
+"line": 128
+},
+{
+"sig": "isFingerPressingTouchPanel()",
+"line": 133
+},
+{
+"sig": "openOrCloseControlsMenu(bool state)",
+"line": 138
+},
+{
+"sig": "setCurrentVehicleHUD(GameObject vehicle)",
+"line": 145
+},
+{
+"sig": "closeControlsMenu()",
+"line": 156
+},
+{
+"sig": "destroyCurrentVehicle()",
+"line": 163
+},
+{
+"sig": "damageCurrentVehicle(float damageAmount)",
+"line": 172
+},
+{
+"sig": "takeEnergyCurrentVehicle(float energyAmount)",
+"line": 181
+},
+{
+"sig": "takeFuelCurrentVehicle(float fuelAmount)",
+"line": 190
+},
+{
+"sig": "giveHealthCurrentVehicle(float healthAmount)",
+"line": 199
+},
+{
+"sig": "giveEnergyCurrentVehicle(float energyAmount)",
+"line": 208
+},
+{
+"sig": "giveFuelCurrentVehicle(float fuelAmount)",
+"line": 217
+},
+{
+"sig": "setInfiniteHealthCurrentVehicleState(bool state)",
+"line": 226
+},
+{
+"sig": "setInfiniteEnergyCurrentVehicleState(bool state)",
+"line": 235
+},
+{
+"sig": "setInfiniteFuelCurrentVehicleState(bool state)",
+"line": 244
+},
+{
+"sig": "setInfiniteStatCurrentVehicleState(bool state)",
+"line": 253
+},
+{
+"sig": "getHudElements()",
+"line": 262
+},
+{
+"sig": "getVehicleCursor()",
+"line": 267
+},
+{
+"sig": "setFreeInteractionDeviceCursorActiveState(bool state)",
+"line": 272
+},
+{
+"sig": "enableOrDisableHUD(bool state)",
+"line": 279
+},
+{
+"sig": "enableOrDisablePlayerBars(bool state)",
+"line": 284
+},
+{
+"sig": "enableOrDisablePlayerMode(bool state)",
+"line": 289
+},
+{
+"sig": "enableOrDisableHUDFromEditor(bool state)",
+"line": 294
+},
+{
+"sig": "enableOrDisablePlayerBarsFromEditor(bool state)",
+"line": 299
+},
+{
+"sig": "enableOrDisablePlayerModeFromEditor(bool state)",
+"line": 304
+},
+{
+"sig": "enableOrDisableVehicleHUD(bool state)",
+"line": 309
+},
+{
+"sig": "enableHUDElement(string elementName)",
+"line": 316
+},
+{
+"sig": "disableHUDElement(string elementName)",
+"line": 321
+},
+{
+"sig": "enableHUDElementFromEditor(string elementName)",
+"line": 326
+},
+{
+"sig": "disableHUDElementFromEditor(string elementName)",
+"line": 331
+},
+{
+"sig": "enableOrDisableHUDElement(string elementName, bool state, bool usedFromEditor)",
+"line": 336
+},
+{
+"sig": "isHUDElementEnabled(string elementName)",
+"line": 357
+}
+]
+},
+"shipInterfaceInfo": {
+"type": "shipInterfaceInfo",
+"file": "Vehicles/shipInterfaceInfo.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\shipInterfaceInfo.cs",
+"methods": [
+{
+"sig": "enableOrDisableInterface(bool state)",
+"line": 225
+},
+{
+"sig": "shipCanLand(bool state)",
+"line": 238
+},
+{
+"sig": "shipEnginesState(bool state)",
+"line": 247
+}
+]
+},
+"skidsManager": {
+"type": "skidsManager",
+"file": "Vehicles/skidsManager.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\skidsManager.cs",
+"methods": [
+{
+"sig": "AddSkidMark(Vector3 pos, Vector3 normal, float intensity, int lastIndex)",
+"line": 149
+},
+{
+"sig": "setSkidsEnabledState(bool state)",
+"line": 205
+}
+]
+},
+"vehicleBuilder": {
+"type": "vehicleBuilder",
+"file": "Vehicles/vehicleBuilder.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\vehicleBuilder.cs",
+"methods": [
+{
+"sig": "buildVehicle()",
+"line": 40
+},
+{
+"sig": "adjustVehicleParts()",
+"line": 53
+},
+{
+"sig": "adjustVehicleSettings()",
+"line": 114
+},
+{
+"sig": "adjustVehicleSettingsFromEditor()",
+"line": 129
+},
+{
+"sig": "completeVehicleBuild()",
+"line": 134
+},
+{
+"sig": "setVehicleName(string newValue)",
+"line": 152
+},
+{
+"sig": "resetTemporalVehicleParts()",
+"line": 157
+},
+{
+"sig": "removeTemporalVehicleParts()",
+"line": 171
+},
+{
+"sig": "getMeshParentTransformValues()",
+"line": 211
+},
+{
+"sig": "placeVehicleInCameraPosition()",
+"line": 223
+},
+{
+"sig": "alignViewWithVehicleCameraPosition()",
+"line": 238
+},
+{
+"sig": "setEditorCameraPosition(Transform transformToUse)",
+"line": 243
+}
+]
+},
+"vehicleDamageReceiver": {
+"type": "vehicleDamageReceiver",
+"file": "Vehicles/vehicleDamageReceiver.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\vehicleDamageReceiver.cs",
+"methods": [
+{
+"sig": "setDamage(float amount, Vector3 fromDirection, Vector3 damagePos, GameObject bulletOwner, GameObject projectile, bool damageConstant, bool searchClosestWeakSpot, bool damageCanBeBlocked)",
+"line": 25
+},
+{
+"sig": "setHeal(float amount)",
+"line": 36
+},
+{
+"sig": "getMaxHealthAmount()",
+"line": 46
+},
+{
+"sig": "getAuxHealthAmount()",
+"line": 51
+},
+{
+"sig": "addAuxHealthAmount(float amount)",
+"line": 56
+},
+{
+"sig": "getCurrentFuelAmount()",
+"line": 62
+},
+{
+"sig": "getMaxFuelAmount()",
+"line": 67
+},
+{
+"sig": "getFuel(float amount)",
+"line": 72
+},
+{
+"sig": "removeFuel(float amount)",
+"line": 77
+},
+{
+"sig": "destroyVehicle()",
+"line": 83
+},
+{
+"sig": "getDecalImpactIndex()",
+"line": 89
+},
+{
+"sig": "getEnergy(float amount)",
+"line": 95
+},
+{
+"sig": "removeEnergy(float amount)",
+"line": 100
+},
+{
+"sig": "getCurrentEnergyAmount()",
+"line": 105
+},
+{
+"sig": "getMaxEnergyAmount()",
+"line": 110
+},
+{
+"sig": "getAuxEnergyAmount()",
+"line": 115
+},
+{
+"sig": "addAuxEnergyAmount(float amount)",
+"line": 120
+},
+{
+"sig": "isVehicleDestroyed()",
+"line": 125
+},
+{
+"sig": "ignoreCollisionWithSolidVehicleColliderList(Collider colliderToIgnore, bool state)",
+"line": 130
+},
+{
+"sig": "setVehicle(GameObject vehicleGameObject, vehicleHUDManager currentVehicleHUDManager)",
+"line": 136
+},
+{
+"sig": "setDamageTargetOverTimeState(float damageOverTimeDelay, float damageOverTimeDuration, float damageOverTimeAmount, float damageOverTimeRate, bool damageOverTimeToDeath, int damageTypeID)",
+"line": 144
+},
+{
+"sig": "removeDamagetTargetOverTimeState()",
+"line": 149
+},
+{
+"sig": "getHUDManager()",
+"line": 154
+},
+{
+"sig": "updateComponent()",
+"line": 324
+}
+]
+},
+"vehicleHUDManager": {
+"type": "vehicleHUDManager",
+"file": "Vehicles/vehicleHUDManager.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\vehicleHUDManager.cs",
+"methods": [
+{
+"sig": "setUnlockCursorState(bool state)",
+"line": 517
+},
+{
+"sig": "disableUnlockedCursor()",
+"line": 528
+},
+{
+"sig": "setVehicleInteractionTriggerState(bool state)",
+"line": 541
+},
+{
+"sig": "isInteractionDisabledOnVehicle()",
+"line": 552
+},
+{
+"sig": "setIgnoreCanUseSelfDestructActiveState(bool state)",
+"line": 557
+},
+{
+"sig": "setIgnoreCanEjectFromVehicleActiveState(bool state)",
+"line": 562
+},
+{
+"sig": "activateSelfDestructionOnVehicleExternally(float newSelfDestructDelayTime)",
+"line": 567
+},
+{
+"sig": "activateSelfDestruction()",
+"line": 582
+},
+{
+"sig": "callEventOnGetOff()",
+"line": 641
+},
+{
+"sig": "callEventOnGetOn()",
+"line": 650
+},
+{
+"sig": "callEventOnDestroyed()",
+"line": 659
+},
+{
+"sig": "ejectFromVehicle()",
+"line": 668
+},
+{
+"sig": "ejectFromVehicleWithFreeFloatingMode()",
+"line": 699
+},
+{
+"sig": "changeIgnorePassengerCollidersState(bool state)",
+"line": 706
+},
+{
+"sig": "ignoreCollisionWithVehicleColliderList(List<Collider> colliderList, bool state)",
+"line": 724
+},
+{
+"sig": "ignoreCollisionWithVehicleColliderList(Collider colliderToIgnore, bool state)",
+"line": 737
+},
+{
+"sig": "ignoreCollisionWithSolidVehicleColliderList(Collider colliderToIgnore, bool state)",
+"line": 746
+},
+{
+"sig": "checkIgnorPassengersCollidersState()",
+"line": 755
+},
+{
+"sig": "setVehiceColliderWithMeshListLayer(string newLayerName)",
+"line": 775
+},
+{
+"sig": "setVehiceColliderListLayer(string newLayerName)",
+"line": 786
+},
+{
+"sig": "setVehicleOriginalListLayer()",
+"line": 797
+},
+{
+"sig": "getVehicleCollider()",
+"line": 806
+},
+{
+"sig": "manualStartOrStopVehicle(bool state, GameObject passenger)",
+"line": 821
+},
+{
+"sig": "setCurrentPassenger(GameObject passenger)",
+"line": 850
+},
+{
+"sig": "activateDevice()",
+"line": 860
+},
+{
+"sig": "setIgnoreSettingPassengerStateActiveState(bool state)",
+"line": 993
+},
+{
+"sig": "setPassengerState(bool passengerOnDriverSeat)",
+"line": 998
+},
+{
+"sig": "activateAutoBrakeOnGetOff()",
+"line": 1040
+},
+{
+"sig": "updatePassengersInVehicleCheckState()",
+"line": 1045
+},
+{
+"sig": "activaAIVehicle()",
+"line": 1054
+},
+{
+"sig": "setUsedByAIState(bool state)",
+"line": 1070
+},
+{
+"sig": "setUsedByAIStateWithoutActivatingDrvingState(bool state)",
+"line": 1089
+},
+{
+"sig": "currentVehicleVelocity()",
+"line": 1098
+},
+{
+"sig": "addObjectToIgnoreCollision(GameObject newObject)",
+"line": 1107
+},
+{
+"sig": "removeObjectToIgnoreCollision(GameObject newObject)",
+"line": 1122
+},
+{
+"sig": "checkOnCollisionEnterExternally(Collision collision)",
+"line": 1145
+},
+{
+"sig": "setNewVehicleGravityForce(float newVehicleGravityForce)",
+"line": 1308
+},
+{
+"sig": "setOriginalGravityForce()",
+"line": 1315
+},
+{
+"sig": "setReducedVehicleSpeed(float newValue)",
+"line": 1322
+},
+{
+"sig": "launchCharacterOnVehicleCollision(Vector3 collisionDirection, float collisionVelocity)",
+"line": 1329
+},
+{
+"sig": "checkIfDetectSurfaceBelongToVehicle(Collider surfaceFound)",
+"line": 1369
+},
+{
+"sig": "getHealth(float amount)",
+"line": 1379
+},
+{
+"sig": "updateHealthSlider(float value)",
+"line": 1406
+},
+{
+"sig": "getEnergy(float amount)",
+"line": 1414
+},
+{
+"sig": "removeEnergy(float amount)",
+"line": 1432
+},
+{
+"sig": "updateEnergySlider(float value)",
+"line": 1448
+},
+{
+"sig": "getFuel(float amount)",
+"line": 1455
+},
+{
+"sig": "updateFuelSlider(float value)",
+"line": 1470
+},
+{
+"sig": "setGasTankState(bool state)",
+"line": 1477
+},
+{
+"sig": "refillFuelTank()",
+"line": 1484
+},
+{
+"sig": "refillFuelTankByInventoryObject()",
+"line": 1495
+},
+{
+"sig": "getAmmo(string ammoName, int amount)",
+"line": 1514
+},
+{
+"sig": "getSpeed(float speed, float maxSpeed)",
+"line": 1522
+},
+{
+"sig": "manageBarInfo(string sliderType, bool regenerate, bool constantRegenerate, float regenerateSpeed, float regenerateTime, float regenerateAmount, Slider bar, float barAmount, float maxAmount, float lastTime)",
+"line": 1530
+},
+{
+"sig": "useBoost(bool moving)",
+"line": 1569
+},
+{
+"sig": "setVehicleUseFuelState(bool state)",
+"line": 1602
+},
+{
+"sig": "setPauseVehicleUseFuelState(bool state)",
+"line": 1607
+},
+{
+"sig": "useFuel()",
+"line": 1612
+},
+{
+"sig": "removeFuel(float amount)",
+"line": 1653
+},
+{
+"sig": "setRemainFuel(float newAmount)",
+"line": 1679
+},
+{
+"sig": "activateEventToSendCurrentFuelAmount()",
+"line": 1686
+},
+{
+"sig": "activateEventToSendCurrentHealthAmount()",
+"line": 1693
+},
+{
+"sig": "activateEventToSendCurrentBoostAmount()",
+"line": 1700
+},
+{
+"sig": "setRemainHealth(float newAmount)",
+"line": 1705
+},
+{
+"sig": "setRemainBoost(float newAmount)",
+"line": 1710
+},
+{
+"sig": "setHealthInfo()",
+"line": 1715
+},
+{
+"sig": "setBoostInfo()",
+"line": 1723
+},
+{
+"sig": "setFuelInfo()",
+"line": 1731
+},
+{
+"sig": "setWeaponName(string name, int ammoPerClip, int clipSize)",
+"line": 1740
+},
+{
+"sig": "useAmmo(int clipSize, int remainAmmo)",
+"line": 1752
+},
+{
+"sig": "setDamage(float amount, Vector3 fromDirection, Vector3 damagePos, GameObject bulletOwner, GameObject projectile, bool damageConstant, bool searchClosestWeakSpot, bool damageCanBeBlocked)",
+"line": 1767
+},
+{
+"sig": "setDamageTargetOverTimeState(float damageOverTimeDelay, float damageOverTimeDuration, float damageOverTimeAmount, float damageOverTimeRate, bool damageOverTimeToDeath, int damageTypeID)",
+"line": 1905
+},
+{
+"sig": "stopDamageOverTime()",
+"line": 1931
+},
+{
+"sig": "setDamageOrHealthTargetWithDelay(float waitAmount, float valueAmount, int damageTypeID)",
+"line": 1938
+},
+{
+"sig": "stopDamageOrHealthTargetWithDelay()",
+"line": 1958
+},
+{
+"sig": "getClosesWeakSpotIndex(Vector3 collisionPosition)",
+"line": 1965
+},
+{
+"sig": "fixDestroyedVehicle()",
+"line": 1996
+},
+{
+"sig": "destroyVehicleWithoutExplodeOrSeparateParts()",
+"line": 2015
+},
+{
+"sig": "destroyVehicleWithoutExplodeOrSeparatePartsAndDisableInteraction()",
+"line": 2032
+},
+{
+"sig": "destroyVehicle(Vector3 damagePosition)",
+"line": 2055
+},
+{
+"sig": "destroyVehicleAtOnce()",
+"line": 2240
+},
+{
+"sig": "getHUDBars(playerHUDManager newVehicleHUDInfo, playerHUDManager.vehicleHUDElements hudElements, bool drivingState)",
+"line": 2336
+},
+{
+"sig": "getCurrentHUDElements()",
+"line": 2448
+},
+{
+"sig": "getCurrentVehicleHUDInfo()",
+"line": 2453
+},
+{
+"sig": "setWeaponState(bool state)",
+"line": 2458
+},
+{
+"sig": "showVehicleHUDActive()",
+"line": 2480
+},
+{
+"sig": "isDisablePlayerHUDEnabled()",
+"line": 2485
+},
+{
+"sig": "useJumpPlatform(Vector3 direction)",
+"line": 2491
+},
+{
+"sig": "useJumpPlatformParable(Vector3 direction)",
+"line": 2498
+},
+{
+"sig": "useJumpPlatformWithKeyButton(bool state, float newJumpPower)",
+"line": 2505
+},
+{
+"sig": "debugLaunchCharacterOnVehicleCollision()",
+"line": 2527
+},
+{
+"sig": "setVehicleParts()",
+"line": 2549
+},
+{
+"sig": "setVehicleDamageReceivers()",
+"line": 2576
+},
+{
+"sig": "updateVehicleDamageReceivers()",
+"line": 2592
+},
+{
+"sig": "setColliderList()",
+"line": 2599
+},
+{
+"sig": "setColliderWithoutMeshesPartsToIgnore(List<Transform> newList)",
+"line": 2628
+},
+{
+"sig": "setVehicleRendererParts()",
+"line": 2647
+},
+{
+"sig": "setVehicleParticleSystemList()",
+"line": 2661
+},
+{
+"sig": "setVehiclePartsInfoList()",
+"line": 2675
+},
+{
+"sig": "setCustomVehiclePartsListToDestroy()",
+"line": 2693
+},
+{
+"sig": "setVehicleInput()",
+"line": 2708
+},
+{
+"sig": "setVehicleWeaponsComponents()",
+"line": 2717
+},
+{
+"sig": "getVehicleComponents()",
+"line": 2724
+},
+{
+"sig": "getAllDamageReceivers()",
+"line": 2735
+},
+{
+"sig": "getMaxHealthAmount()",
+"line": 2761
+},
+{
+"sig": "getAuxHealthAmount()",
+"line": 2766
+},
+{
+"sig": "addAuxHealthAmount(float amount)",
+"line": 2771
+},
+{
+"sig": "getHealthAmountToLimit()",
+"line": 2776
+},
+{
+"sig": "getCurrentEnergyAmount()",
+"line": 2782
+},
+{
+"sig": "getMaxEnergyAmount()",
+"line": 2787
+},
+{
+"sig": "getAuxEnergyAmount()",
+"line": 2792
+},
+{
+"sig": "addAuxEnergyAmount(float amount)",
+"line": 2797
+},
+{
+"sig": "getEnergyAmountToLimit()",
+"line": 2802
+},
+{
+"sig": "checkIfMaxEnergy()",
+"line": 2807
+},
+{
+"sig": "getCurrentFuelAmount()",
+"line": 2813
+},
+{
+"sig": "getMaxFuelAmount()",
+"line": 2818
+},
+{
+"sig": "getAuxFuelAmount()",
+"line": 2823
+},
+{
+"sig": "addAuxFuelAmount(float amount)",
+"line": 2828
+},
+{
+"sig": "getFuelAmountToLimit()",
+"line": 2833
+},
+{
+"sig": "hasFuel()",
+"line": 2838
+},
+{
+"sig": "killByButton()",
+"line": 2843
+},
+{
+"sig": "destroyVehicle()",
+"line": 2848
+},
+{
+"sig": "takeHealth(float damageAmount)",
+"line": 2853
+},
+{
+"sig": "damageVehicle(float damageAmount)",
+"line": 2858
+},
+{
+"sig": "getVehicleRadius()",
+"line": 2863
+},
+{
+"sig": "activateHorn()",
+"line": 2868
+},
+{
+"sig": "callToFriends()",
+"line": 2877
+},
+{
+"sig": "getPlaceToShoot()",
+"line": 2900
+},
+{
+"sig": "getCurrentDriver()",
+"line": 2905
+},
+{
+"sig": "getLastDriver()",
+"line": 2914
+},
+{
+"sig": "currentDriverIsAI()",
+"line": 2923
+},
+{
+"sig": "getOffFromVehicleToDriverAI()",
+"line": 2932
+},
+{
+"sig": "getVehicleName()",
+"line": 2939
+},
+{
+"sig": "setVehicleName(string newName)",
+"line": 2944
+},
+{
+"sig": "getImpactListInfo()",
+"line": 2953
+},
+{
+"sig": "getDecalImpactIndex()",
+"line": 2973
+},
+{
+"sig": "isUseImpactSurfaceActive()",
+"line": 2978
+},
+{
+"sig": "OnTriggerEnter(Collider col)",
+"line": 2983
+},
+{
+"sig": "OnTriggerExit(Collider col)",
+"line": 2988
+},
+{
+"sig": "checkTriggerInfo(Collider col, bool isEnter)",
+"line": 2993
+},
+{
+"sig": "getVehicleCameraController()",
+"line": 3004
+},
+{
+"sig": "getAudioSourceElement(string name)",
+"line": 3009
+},
+{
+"sig": "isVehicleBeingDriven()",
+"line": 3022
+},
+{
+"sig": "isVehicleFull()",
+"line": 3027
+},
+{
+"sig": "getIKDrivingSystem()",
+"line": 3032
+},
+{
+"sig": "getVehicleGravityControl()",
+"line": 3037
+},
+{
+"sig": "isForcingPassengersToGetOffOnVehicleDestroyedActive()",
+"line": 3042
+},
+{
+"sig": "setPlayerCameraParentAndPosition(Transform mainCameraTransform, playerCamera playerCameraManager)",
+"line": 3048
+},
+{
+"sig": "vehicleIsDestroyed()",
+"line": 3057
+},
+{
+"sig": "setInvencibleState(bool state)",
+"line": 3062
+},
+{
+"sig": "setInfiniteEnergyState(bool state)",
+"line": 3067
+},
+{
+"sig": "setInfiniteFuelState(bool state)",
+"line": 3072
+},
+{
+"sig": "setVehicleAndCameraParent(Transform newParent)",
+"line": 3077
+},
+{
+"sig": "setNewMainCameraTransform(Transform newTransform)",
+"line": 3088
+},
+{
+"sig": "setNewPlayerCameraTransform(Transform newTransform)",
+"line": 3093
+},
+{
+"sig": "setUseForwardDirectionForCameraDirectionState(bool state)",
+"line": 3098
+},
+{
+"sig": "setUseRightDirectionForCameraDirectionState(bool state)",
+"line": 3103
+},
+{
+"sig": "setAddExtraRotationPausedState(bool state)",
+"line": 3108
+},
+{
+"sig": "isVehicletAsChildOfParent()",
+"line": 3113
+},
+{
+"sig": "setVehicletAsChildOfParentState(bool state)",
+"line": 3118
+},
+{
+"sig": "setExplodeVehicleWhenDestroyedEnabledState(bool state)",
+"line": 3123
+},
+{
+"sig": "setFadeVehiclePiecesOnDestroyedState(bool state)",
+"line": 3128
+},
+{
+"sig": "checkIfMaxHealth()",
+"line": 3133
+},
+{
+"sig": "getHealthAmountToPick(float amount)",
+"line": 3138
+},
+{
+"sig": "checkIfMaxFuel()",
+"line": 3161
+},
+{
+"sig": "setRegenerateFuelState(bool state)",
+"line": 3166
+},
+{
+"sig": "setOriginalRegenerateFuelState()",
+"line": 3171
+},
+{
+"sig": "startBrakeVehicleToStopCompletely()",
+"line": 3176
+},
+{
+"sig": "endBrakeVehicleToStopCompletely()",
+"line": 3181
+},
+{
+"sig": "getCurrentSpeed()",
+"line": 3186
+},
+{
+"sig": "changeVehicleState()",
+"line": 3191
+},
+{
+"sig": "passengerGettingOnOff()",
+"line": 3196
+},
+{
+"sig": "isVehicleOnGround()",
+"line": 3201
+},
+{
+"sig": "getHorizontalAxis()",
+"line": 3206
+},
+{
+"sig": "getVerticalAxis()",
+"line": 3211
+},
+{
+"sig": "getPassengerGameObjectList()",
+"line": 3216
+},
+{
+"sig": "inputShowControlsMenu()",
+"line": 3224
+},
+{
+"sig": "inputSelfDestruct()",
+"line": 3231
+},
+{
+"sig": "inputEject()",
+"line": 3246
+},
+{
+"sig": "inputEjectWithFreeFloatingMode()",
+"line": 3261
+},
+{
+"sig": "inputUnLockCursor()",
+"line": 3276
+},
+{
+"sig": "inputHoldOrReleaseSecondaryButton(bool holdingButton)",
+"line": 3283
+},
+{
+"sig": "inputGetOffFromVehicle()",
+"line": 3294
+},
+{
+"sig": "inputJump()",
+"line": 3305
+},
+{
+"sig": "inputHoldOrReleaseJump(bool holdingButton)",
+"line": 3310
+},
+{
+"sig": "inputHoldOrReleaseTurbo(bool holdingButton)",
+"line": 3315
+},
+{
+"sig": "inputSetTurnOnState()",
+"line": 3320
+},
+{
+"sig": "inputHorn()",
+"line": 3325
+},
+{
+"sig": "inputHoldOrReleaseBrake(bool holdingButton)",
+"line": 3330
+},
+{
+"sig": "inputRefillFuelTankByInventoryObject()",
+"line": 3335
+},
+{
+"sig": "getAIVehicleNavmesh()",
+"line": 3340
+},
+{
+"sig": "setHealthAmount(float newValue)",
+"line": 3386
+},
+{
+"sig": "updateComponent()",
+"line": 3538
+}
+]
+},
+"vehicleInteractionPanelSystem": {
+"type": "vehicleInteractionPanelSystem",
+"file": "Vehicles/vehicleInteractionPanelSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\vehicleInteractionPanelSystem.cs",
+"methods": [
+{
+"sig": "stopUpdateCoroutine()",
+"line": 73
+},
+{
+"sig": "setCurrentVehicleDetected(GameObject newVehicle)",
+"line": 120
+},
+{
+"sig": "inputEnterOnVehicleAsDriver()",
+"line": 195
+},
+{
+"sig": "inputEnterOnVehicleAsPassenger()",
+"line": 237
+}
+]
+},
+"vehicleInterface": {
+"type": "vehicleInterface",
+"file": "Vehicles/vehicleInterface.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\vehicleInterface.cs",
+"methods": [
+{
+"sig": "setInterfaceCanBeEnabledState(bool state)",
+"line": 122
+},
+{
+"sig": "enableOrDisableInterface(bool state)",
+"line": 127
+},
+{
+"sig": "checkPressedUIElememt(GameObject uiElement)",
+"line": 205
+},
+{
+"sig": "setMoveInterfacePanelPressed(RectTransform panelToCheck)",
+"line": 351
+},
+{
+"sig": "setRotateInterfacePanelPressed(RectTransform panelToCheck)",
+"line": 358
+},
+{
+"sig": "checkInterfacePanelInfoPressed(RectTransform panelToCheck)",
+"line": 365
+},
+{
+"sig": "resetInterfacePanelInfoPressed(RectTransform panelToCheck)",
+"line": 390
+},
+{
+"sig": "setInterfaceCanvasState(bool state)",
+"line": 404
+},
+{
+"sig": "addInterfaceElement()",
+"line": 411
+},
+{
+"sig": "updateComponent()",
+"line": 422
+}
+]
+},
+"vehicleLaser": {
+"type": "vehicleLaser",
+"file": "Vehicles/vehicleLaser.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\vehicleLaser.cs",
+"methods": [
+{
+"sig": "changeLaserState(bool state)",
+"line": 141
+},
+{
+"sig": "updateCustomRayPosition(Vector3 newPosition, Vector3 newDirection)",
+"line": 165
+}
+]
+},
+"vehicleWeaponSystem": {
+"type": "vehicleWeaponSystem",
+"file": "Vehicles/vehicleWeaponSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\vehicleWeaponSystem.cs",
+"methods": [
+{
+"sig": "checkIfEnableWeaponCursor()",
+"line": 745
+},
+{
+"sig": "checkIfDisableWeaponCursor()",
+"line": 758
+},
+{
+"sig": "launchCurrentProjectile(Vector3 cameraDirection)",
+"line": 785
+},
+{
+"sig": "shootWeapon(bool shootAtKeyDown)",
+"line": 897
+},
+{
+"sig": "setVehicleWeaponCameraDirection()",
+"line": 1277
+},
+{
+"sig": "autoReload()",
+"line": 1295
+},
+{
+"sig": "changeWeaponLaserState(bool state)",
+"line": 1307
+},
+{
+"sig": "createShells()",
+"line": 1321
+},
+{
+"sig": "testWeaponShake(int weaponIndex)",
+"line": 1364
+},
+{
+"sig": "checkShotShake()",
+"line": 1385
+},
+{
+"sig": "getAmmo(string ammoName, int amount)",
+"line": 1552
+},
+{
+"sig": "addAuxRemainAmmo(vehicleWeapons weaponToCheck, int amount)",
+"line": 1577
+},
+{
+"sig": "chooseNextWeapon()",
+"line": 1585
+},
+{
+"sig": "choosePreviousWeapon()",
+"line": 1627
+},
+{
+"sig": "checkCurrentWeaponCustomReticle()",
+"line": 1699
+},
+{
+"sig": "checkParableTrayectory(bool parableState)",
+"line": 1724
+},
+{
+"sig": "isWeaponsEnabled()",
+"line": 1751
+},
+{
+"sig": "setVehicleHUDInfoManager(playerHUDManager newPlayerHUDManager)",
+"line": 1756
+},
+{
+"sig": "setCurrentDriver(GameObject newDriver)",
+"line": 1761
+},
+{
+"sig": "setGKCSimpleRiderSystem(GKCSimpleRiderSystem newGKCSimpleRiderSystem)",
+"line": 1766
+},
+{
+"sig": "checkIfDetectSurfaceBelongToVehicle(Collider colliderToCheck)",
+"line": 1774
+},
+{
+"sig": "changeWeaponState(bool state)",
+"line": 1790
+},
+{
+"sig": "getCameraInfo(Transform camera, bool useRotationInput)",
+"line": 1873
+},
+{
+"sig": "getWeaponCursorElements()",
+"line": 1882
+},
+{
+"sig": "setSeekerProjectileInfo(Vector3 shootPosition)",
+"line": 1929
+},
+{
+"sig": "setProjectileSpread()",
+"line": 1935
+},
+{
+"sig": "checkAutoShootOnTag()",
+"line": 1954
+},
+{
+"sig": "checkIfWeaponIsAvailable(string weaponName)",
+"line": 2007
+},
+{
+"sig": "canIncreaseRemainAmmo(vehicleWeapons weaponToCheck)",
+"line": 2018
+},
+{
+"sig": "hasMaximumAmmoAmount(vehicleWeapons weaponToCheck)",
+"line": 2027
+},
+{
+"sig": "hasAmmoLimit(string weaponName)",
+"line": 2042
+},
+{
+"sig": "ammoAmountToMaximumLimit(vehicleWeapons weaponToCheck)",
+"line": 2053
+},
+{
+"sig": "hasMaximumAmmoAmount(string weaponName)",
+"line": 2058
+},
+{
+"sig": "getCurrentWeaponName()",
+"line": 2069
+},
+{
+"sig": "getCurrentWeaponClipSize()",
+"line": 2078
+},
+{
+"sig": "getCurrentWeaponRemainAmmo()",
+"line": 2087
+},
+{
+"sig": "enableMuzzleFlashLight()",
+"line": 2267
+},
+{
+"sig": "setWeaponsPausedState(bool state)",
+"line": 2293
+},
+{
+"sig": "setWeaponsEnabedStateAndWeaponMeshes(bool state)",
+"line": 2298
+},
+{
+"sig": "setWeaponsEnabledState(bool state)",
+"line": 2307
+},
+{
+"sig": "setMainVehicleWeaponsGameObjectParent(Transform newParent)",
+"line": 2316
+},
+{
+"sig": "inputShootWeapon()",
+"line": 2324
+},
+{
+"sig": "inputHoldOrReleaseShootWeapon(bool holdingButton)",
+"line": 2338
+},
+{
+"sig": "inputNextOrPreviousWeapon(bool setNextWeapon)",
+"line": 2361
+},
+{
+"sig": "setVehicleWeaponsComponents()",
+"line": 2377
+},
+{
+"sig": "updateComponent()",
+"line": 2397
+},
+{
+"sig": "getImpactListInfo()",
+"line": 2402
+}
+]
+}
+}

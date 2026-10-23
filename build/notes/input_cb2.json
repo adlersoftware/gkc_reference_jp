@@ -1,0 +1,520 @@
+[
+ {
+  "type": "closeCombatSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\closeCombatSystem.cs",
+  "methods": [
+   {
+    "sig": "disableCurrentAttackInProcess()",
+    "line": 400
+   },
+   {
+    "sig": "canActivateAttack()",
+    "line": 407
+   },
+   {
+    "sig": "useAttack(string attackName)",
+    "line": 449
+   },
+   {
+    "sig": "getCombatTypeInfoByName(string comboName)",
+    "line": 910
+   },
+   {
+    "sig": "setAttackStartState(string attackName)",
+    "line": 927
+   },
+   {
+    "sig": "setGeneralStaminaUseMultiplierValue(float newValue)",
+    "line": 997
+   },
+   {
+    "sig": "setAttackInputPausedForStaminaState(bool state)",
+    "line": 1002
+   },
+   {
+    "sig": "setAttackEndState(string attackName)",
+    "line": 1007
+   },
+   {
+    "sig": "resetAttacksIndex(int combatTypeIndexToIgnore)",
+    "line": 1148
+   },
+   {
+    "sig": "setDamageDetectedOnTriggerById(int newId)",
+    "line": 1186
+   },
+   {
+    "sig": "checkEventOnDamage(int combatTypeIndex, int attackIndex, GameObject objectDetected, int combatLimbID)",
+    "line": 1196
+   },
+   {
+    "sig": "resetAttackIdOnAnimator()",
+    "line": 1274
+   },
+   {
+    "sig": "callEventWithDelay(combatAttackInfo currentCombatAttackInfoEvent, bool playAtStart)",
+    "line": 1297
+   },
+   {
+    "sig": "activateNextAttackIgnoringWaitingTimes()",
+    "line": 1398
+   },
+   {
+    "sig": "activateAttackWithoutCombatActive(string attackName)",
+    "line": 1417
+   },
+   {
+    "sig": "setCurrentPlayerMode(bool state)",
+    "line": 1475
+   },
+   {
+    "sig": "resetIdleStateOnCloseCombat()",
+    "line": 1577
+   },
+   {
+    "sig": "resetAttackInputStack()",
+    "line": 1592
+   },
+   {
+    "sig": "enableOrDisableUseAttackInputStack(bool state)",
+    "line": 1603
+   },
+   {
+    "sig": "checkEventsOnStateChange(bool state)",
+    "line": 1608
+   },
+   {
+    "sig": "checkEventsOnFBAStateChange(bool state)",
+    "line": 1619
+   },
+   {
+    "sig": "isAttackInProcess()",
+    "line": 1730
+   },
+   {
+    "sig": "checkIfFullBodyAwarenessActive()",
+    "line": 1835
+   },
+   {
+    "sig": "stopActivateDamageTriggerCoroutine()",
+    "line": 1977
+   },
+   {
+    "sig": "enableOrDisableTriggers(bool value)",
+    "line": 2187
+   },
+   {
+    "sig": "enableTriggersIfCombatModeActive()",
+    "line": 2198
+   },
+   {
+    "sig": "stopCheckEventInfoList()",
+    "line": 2205
+   },
+   {
+    "sig": "checkEventInfoList(combatAttackInfo currentCombatAttackInfo)",
+    "line": 2212
+   },
+   {
+    "sig": "stopAllAttacks()",
+    "line": 2296
+   },
+   {
+    "sig": "checkLookAtTargetActiveState()",
+    "line": 2311
+   },
+   {
+    "sig": "checkLookAtTargetDeactivateState()",
+    "line": 2328
+   },
+   {
+    "sig": "inputAttack(string attackName)",
+    "line": 2338
+   },
+   {
+    "sig": "inputSetBlockState(bool state)",
+    "line": 2357
+   },
+   {
+    "sig": "setBlockStateWithoutInputCheck(bool state)",
+    "line": 2366
+   },
+   {
+    "sig": "setBlockActiveState(bool state)",
+    "line": 2410
+   },
+   {
+    "sig": "checkEventsOnBlockDamage(bool state)",
+    "line": 2452
+   },
+   {
+    "sig": "updateRegularBlockDamageProtectionValue()",
+    "line": 2464
+   },
+   {
+    "sig": "updateReducedBlockDamageProtectionValue()",
+    "line": 2469
+   },
+   {
+    "sig": "setBlockDamageProtectionValue(bool state)",
+    "line": 2474
+   },
+   {
+    "sig": "setMeleeAttackInputPausedState(bool state)",
+    "line": 2493
+   },
+   {
+    "sig": "disableMeleeAttackInputPausedStateWithDuration(float pauseDuration)",
+    "line": 2499
+   },
+   {
+    "sig": "checkIfBlockActive()",
+    "line": 2524
+   },
+   {
+    "sig": "disableBlockInputPausedStateWithDuration(float pauseDuration)",
+    "line": 2531
+   },
+   {
+    "sig": "setCanCancelBlockToStartAttackActiveState(bool state)",
+    "line": 2566
+   },
+   {
+    "sig": "checkIfBlockInputIsCurrentlyInUse()",
+    "line": 2572
+   },
+   {
+    "sig": "disableBlockStateInProcess()",
+    "line": 2587
+   },
+   {
+    "sig": "checkOnAttackBlocked()",
+    "line": 2596
+   },
+   {
+    "sig": "checkOnAttackBlockedPerfectly()",
+    "line": 2610
+   },
+   {
+    "sig": "setNoDamageDetectedOnTriggerById(GameObject objectDetected)",
+    "line": 2626
+   },
+   {
+    "sig": "checkSurfaceFoundOnAttack(bool surfaceLocated, GameObject lastSurfaceDetected, int combatLimbID)",
+    "line": 2631
+   },
+   {
+    "sig": "checkSurfaceFoundOnAttackToProcess(string surfaceName, bool surfaceLocated, Vector3 attackPosition, Vector3 attackNormal, bool ignoreBounceEvent)",
+    "line": 2754
+   },
+   {
+    "sig": "setCombatTypeID(int newValue)",
+    "line": 2835
+   },
+   {
+    "sig": "getCombatTypeID()",
+    "line": 2840
+   },
+   {
+    "sig": "setNewParentForDamageTriggers(Transform newParent)",
+    "line": 2847
+   },
+   {
+    "sig": "setOriginalParentForDamageTriggers()",
+    "line": 2874
+   },
+   {
+    "sig": "setUseMatchTargetSystemOnAttackState(bool state)",
+    "line": 2903
+   },
+   {
+    "sig": "setOriginalUseMatchTargetSystemOnAttackState()",
+    "line": 2908
+   },
+   {
+    "sig": "setGeneralAttackDamageMultiplierValue(float newValue)",
+    "line": 2913
+   },
+   {
+    "sig": "generalAttackDamageMultiplierIncreaseStat(float extraValue)",
+    "line": 2918
+   },
+   {
+    "sig": "initializeGeneralAttackDamageMultiplierStatAmount(float newValue)",
+    "line": 2923
+   },
+   {
+    "sig": "getGeneralAttackDamageMultiplierValue()",
+    "line": 2928
+   },
+   {
+    "sig": "setPlaceTriggerInFrontOfCharacterOnAllAttacksState(bool state)",
+    "line": 2933
+   },
+   {
+    "sig": "getCombatPrefabs(GameObject combatPrefab)",
+    "line": 2939
+   },
+   {
+    "sig": "addCombatPlace(string name, float hitDamage, GameObject limb, colliderPlace limbType)",
+    "line": 2946
+   },
+   {
+    "sig": "assignBasicCombatTriggers()",
+    "line": 2960
+   },
+   {
+    "sig": "udpateHitCombatInfo()",
+    "line": 3039
+   },
+   {
+    "sig": "updateHitCombatTriggerRadius(float newValue)",
+    "line": 3076
+   },
+   {
+    "sig": "removeLimbParts()",
+    "line": 3093
+   },
+   {
+    "sig": "enableOrDisableCloseCombatTriggers(bool state)",
+    "line": 3113
+   },
+   {
+    "sig": "addOrRemoveObjectToIgnoreByHitTriggers(GameObject newObject, bool state)",
+    "line": 3122
+   },
+   {
+    "sig": "enableOrDisableUseAttackInputStackFromEditor(bool state)",
+    "line": 3131
+   },
+   {
+    "sig": "setCustomIgnoreTagsForCharacterFromEditor()",
+    "line": 3138
+   },
+   {
+    "sig": "setUseMatchTargetSystemOnAttackStateFromEditor(bool state)",
+    "line": 3151
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 3190
+   }
+  ]
+ },
+ {
+  "type": "meleeCombatThrowReturnWeaponSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\Melee Combat System\\meleeCombatThrowReturnWeaponSystem.cs",
+  "methods": [
+   {
+    "sig": "setNewGrabPhysicalObjectSystem(grabPhysicalObjectSystem newGrabPhysicalObjectSystem)",
+    "line": 340
+   },
+   {
+    "sig": "setCurrentGrabbedWeaponInfo(grabbedObjectMeleeAttackSystem.grabbedWeaponInfo newCurrentGrabbedWeaponInfo)",
+    "line": 345
+   },
+   {
+    "sig": "setNewGrabPhysicalObjectMeleeAttackSystem(grabPhysicalObjectMeleeAttackSystem newGrabPhysicalObjectMeleeAttackSystem)",
+    "line": 350
+   },
+   {
+    "sig": "removeGrabPhysicalObjectMeleeAttackSystem()",
+    "line": 373
+   },
+   {
+    "sig": "setThrowWeaponActionPausedState(bool state)",
+    "line": 390
+   },
+   {
+    "sig": "inputPressDownThrowObject()",
+    "line": 395
+   },
+   {
+    "sig": "inputPressUpThrowObject()",
+    "line": 400
+   },
+   {
+    "sig": "stopUpdateLocateTargetsCoroutine()",
+    "line": 684
+   },
+   {
+    "sig": "playSound(AudioElement newClip)",
+    "line": 773
+   },
+   {
+    "sig": "inputThrowOrReturnObject()",
+    "line": 797
+   },
+   {
+    "sig": "inputActivateTeleport()",
+    "line": 838
+   },
+   {
+    "sig": "throwObject()",
+    "line": 867
+   },
+   {
+    "sig": "setObjectThrownState(bool state)",
+    "line": 892
+   },
+   {
+    "sig": "continueThrowObject()",
+    "line": 1040
+   },
+   {
+    "sig": "checkSurfaceOnThrowWeapon(GameObject objectToCheck)",
+    "line": 1758
+   },
+   {
+    "sig": "returnObject()",
+    "line": 1889
+   },
+   {
+    "sig": "getLastTimeObjectReturn()",
+    "line": 2249
+   },
+   {
+    "sig": "checkEventOnThrowOrReturnObject(bool state)",
+    "line": 2254
+   },
+   {
+    "sig": "cancelThrowObject()",
+    "line": 2265
+   },
+   {
+    "sig": "activateTeleport()",
+    "line": 2288
+   },
+   {
+    "sig": "stopActivateTeleportCoroutine()",
+    "line": 2320
+   },
+   {
+    "sig": "setThrowObjectEnabledState(bool state)",
+    "line": 2391
+   },
+   {
+    "sig": "setReturnObjectEnabledState(bool state)",
+    "line": 2400
+   },
+   {
+    "sig": "setApplyDamageOnSurfaceDetectedOnReturnEnabledState(bool state)",
+    "line": 2405
+   },
+   {
+    "sig": "setApplyDamageOnObjectReturnPathEnabledState(bool state)",
+    "line": 2410
+   },
+   {
+    "sig": "setGeneralDamageMultiplierOnObjectReturnValue(float newValue)",
+    "line": 2415
+   },
+   {
+    "sig": "setGeneralDamageMultiplierOnReturnPathValue(float newValue)",
+    "line": 2420
+   },
+   {
+    "sig": "setGeneralDamageOnSurfaceDetectedOnThrowValue(float newValue)",
+    "line": 2425
+   },
+   {
+    "sig": "setObjectThrownTravellingToTargetState(bool state)",
+    "line": 2430
+   },
+   {
+    "sig": "isObjectThrownTravellingToTarget()",
+    "line": 2435
+   },
+   {
+    "sig": "isContinueObjecThrowActivated()",
+    "line": 2440
+   },
+   {
+    "sig": "isReturningThrownObject()",
+    "line": 2445
+   },
+   {
+    "sig": "getLastTimeObjectThrown()",
+    "line": 2450
+   },
+   {
+    "sig": "isCurrentWeaponThrown()",
+    "line": 2455
+   },
+   {
+    "sig": "setThrowObjectInputPausedForStaminaState(bool state)",
+    "line": 2460
+   },
+   {
+    "sig": "stopThrowStateOnRemoveMeleeWeapon()",
+    "line": 2465
+   },
+   {
+    "sig": "setSurfacecNotFoundState(bool state)",
+    "line": 2511
+   }
+  ]
+ },
+ {
+  "type": "matchPlayerToTargetSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\matchPlayerToTargetSystem.cs",
+  "methods": [
+   {
+    "sig": "findPlayerOnScene()",
+    "line": 137
+   },
+   {
+    "sig": "addCharacterAround(Transform newCharacter)",
+    "line": 142
+   },
+   {
+    "sig": "removeCharacterAround(Transform newCharacter)",
+    "line": 165
+   },
+   {
+    "sig": "clearAllCharactersAround()",
+    "line": 184
+   },
+   {
+    "sig": "setMatchPositionPausedState(bool state)",
+    "line": 195
+   },
+   {
+    "sig": "setMatchSystemEnabledstate(bool state)",
+    "line": 200
+   },
+   {
+    "sig": "setAddMainPlayerOnListForAIState(bool state)",
+    "line": 205
+   },
+   {
+    "sig": "activateMatchPosition(float customOffset)",
+    "line": 210
+   },
+   {
+    "sig": "activateMatchPosition(Transform targetToUse, float customOffset)",
+    "line": 255
+   },
+   {
+    "sig": "stopMovementIfActive()",
+    "line": 266
+   },
+   {
+    "sig": "stopMovement()",
+    "line": 273
+   },
+   {
+    "sig": "setUseFrontPositionAsPositionToMatchState(bool state)",
+    "line": 282
+   },
+   {
+    "sig": "getCurrentTargetToMatchPosition()",
+    "line": 437
+   },
+   {
+    "sig": "setGetClosestTargetWithoutConditionsActiveState(bool state)",
+    "line": 651
+   }
+  ]
+ }
+]

@@ -1,0 +1,958 @@
+[
+ {
+  "type": "playerController",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\playerController.cs",
+  "source": "Player/playerController.cs",
+  "part": 3,
+  "total_parts": 3,
+  "fields": [
+   {
+    "field": "mainExternalControllerBehaviorManager",
+    "label": "",
+    "section": "Characters Elements"
+   },
+   {
+    "field": "crouchSlidingEnabled",
+    "label": "",
+    "section": "Crouch Sliding Settings"
+   },
+   {
+    "field": "noAnimatorCrouchSlidingSpeed",
+    "label": "",
+    "section": "Crouch Sliding Settings"
+   },
+   {
+    "field": "noAnimatorCrouchSlidingDuration",
+    "label": "",
+    "section": "Crouch Sliding Settings"
+   },
+   {
+    "field": "noAnimatorCrouchSlidingLerpSpeed",
+    "label": "",
+    "section": "Crouch Sliding Settings"
+   },
+   {
+    "field": "noAnimatorCrouchSlidingLerpDelay",
+    "label": "",
+    "section": "Crouch Sliding Settings"
+   },
+   {
+    "field": "getUpAfterCrouchSlidingEnd",
+    "label": "",
+    "section": "Crouch Sliding Settings"
+   },
+   {
+    "field": "keepCrouchSlidingOnInclinatedSurface",
+    "label": "",
+    "section": "Crouch Sliding Settings"
+   },
+   {
+    "field": "minInclinitaonSurfaceAngleToCrouchcSliding",
+    "label": "",
+    "section": "Crouch Sliding Settings"
+   },
+   {
+    "field": "crouchSlidingOnAirEnabled",
+    "label": "",
+    "section": "Crouch Sliding Settings"
+   },
+   {
+    "field": "noAnimatorCrouchSlidingOnAirSpeed",
+    "label": "",
+    "section": "Crouch Sliding Settings"
+   },
+   {
+    "field": "useNoAnimatorCrouchSlidingDurationOnAir",
+    "label": "",
+    "section": "Crouch Sliding Settings"
+   },
+   {
+    "field": "noAnimatorCrouchSlidingDurationOnAir",
+    "label": "",
+    "section": "Crouch Sliding Settings"
+   },
+   {
+    "field": "eventOnCrouchSlidingStart",
+    "label": "",
+    "section": "Crouch Sliding Settings"
+   },
+   {
+    "field": "eventOnCrouchSlidingEnd",
+    "label": "",
+    "section": "Crouch Sliding Settings"
+   },
+   {
+    "field": "useCrouchSlidingOnThirdPersonEnabled",
+    "label": "",
+    "section": "Crouch Sliding Settings"
+   },
+   {
+    "field": "eventOnCrouchSlidingThirdPersonStart",
+    "label": "",
+    "section": "Crouch Sliding Settings"
+   },
+   {
+    "field": "eventOnCrouchSlidingThirdPersonEnd",
+    "label": "",
+    "section": "Crouch Sliding Settings"
+   },
+   {
+    "field": "wallRunningEnabled",
+    "label": "",
+    "section": "Wall Running Settings"
+   },
+   {
+    "field": "wallRunningExternalControllerBehavior",
+    "label": "",
+    "section": "Wall Running Settings"
+   },
+   {
+    "field": "airDashEnabled",
+    "label": "",
+    "section": "Air Dash Settings"
+   },
+   {
+    "field": "airDashForce",
+    "label": "",
+    "section": "Air Dash Settings"
+   },
+   {
+    "field": "airDashColdDown",
+    "label": "",
+    "section": "Air Dash Settings"
+   },
+   {
+    "field": "pauseGravityForce",
+    "label": "",
+    "section": "Air Dash Settings"
+   },
+   {
+    "field": "gravityForcePausedTime",
+    "label": "",
+    "section": "Air Dash Settings"
+   },
+   {
+    "field": "resetGravityForceOnDash",
+    "label": "",
+    "section": "Air Dash Settings"
+   },
+   {
+    "field": "useDashLimit",
+    "label": "",
+    "section": "Air Dash Settings"
+   },
+   {
+    "field": "dashLimit",
+    "label": "",
+    "section": "Air Dash Settings"
+   },
+   {
+    "field": "changeCameraFovOnDash",
+    "label": "",
+    "section": "Air Dash Settings"
+   },
+   {
+    "field": "cameraFovOnDash",
+    "label": "",
+    "section": "Air Dash Settings"
+   },
+   {
+    "field": "cameraFovOnDashSpeed",
+    "label": "",
+    "section": "Air Dash Settings"
+   },
+   {
+    "field": "minTimeOnAirToUseAirDash",
+    "label": "",
+    "section": "Air Dash Settings"
+   },
+   {
+    "field": "useEventsOnAirDash",
+    "label": "",
+    "section": "Air Dash Settings"
+   },
+   {
+    "field": "eventOnAirDashThirdPerson",
+    "label": "",
+    "section": "Air Dash Settings"
+   },
+   {
+    "field": "eventOnAirDashFirstPerson",
+    "label": "",
+    "section": "Air Dash Settings"
+   },
+   {
+    "field": "zeroGravityMovementSpeed",
+    "label": "",
+    "section": "Zero Gravity Mode Settings"
+   },
+   {
+    "field": "zeroGravityControlSpeed",
+    "label": "",
+    "section": "Zero Gravity Mode Settings"
+   },
+   {
+    "field": "zeroGravityLookCameraSpeed",
+    "label": "",
+    "section": "Zero Gravity Mode Settings"
+   },
+   {
+    "field": "useGravityDirectionLandMark",
+    "label": "",
+    "section": "Zero Gravity Mode Settings"
+   },
+   {
+    "field": "forwardSurfaceRayPosition",
+    "label": "",
+    "section": "Zero Gravity Mode Settings"
+   },
+   {
+    "field": "maxDistanceToAdjust",
+    "label": "",
+    "section": "Zero Gravity Mode Settings"
+   },
+   {
+    "field": "pauseCheckOnGroundStateZG",
+    "label": "",
+    "section": "Zero Gravity Mode Settings"
+   },
+   {
+    "field": "pushPlayerWhenZeroGravityModeIsEnabled",
+    "label": "",
+    "section": "Zero Gravity Mode Settings"
+   },
+   {
+    "field": "pushZeroGravityEnabledAmount",
+    "label": "",
+    "section": "Zero Gravity Mode Settings"
+   },
+   {
+    "field": "canMoveVerticallyOnZeroGravity",
+    "label": "",
+    "section": "Zero Gravity Mode Settings"
+   },
+   {
+    "field": "canMoveVerticallyAndHorizontalZG",
+    "label": "",
+    "section": "Zero Gravity Mode Settings"
+   },
+   {
+    "field": "zeroGravitySpeedMultiplier",
+    "label": "",
+    "section": "Zero Gravity Mode Settings"
+   },
+   {
+    "field": "zeroGravityModeVerticalSpeed",
+    "label": "",
+    "section": "Zero Gravity Mode Settings"
+   },
+   {
+    "field": "useMaxAngleToCheckOnGroundStateZGFF",
+    "label": "",
+    "section": "Zero Gravity And Free Floating Mode Settings"
+   },
+   {
+    "field": "maxAngleToChekOnGroundStateZGFF",
+    "label": "",
+    "section": "Zero Gravity And Free Floating Mode Settings"
+   },
+   {
+    "field": "freeFloatingMovementSpeed",
+    "label": "",
+    "section": "Free Floating Mode Settings"
+   },
+   {
+    "field": "freeFloatingControlSpeed",
+    "label": "",
+    "section": "Free Floating Mode Settings"
+   },
+   {
+    "field": "pauseCheckOnGroundStateFF",
+    "label": "",
+    "section": "Free Floating Mode Settings"
+   },
+   {
+    "field": "canMoveVerticallyOnFreeFloating",
+    "label": "",
+    "section": "Free Floating Mode Settings"
+   },
+   {
+    "field": "canMoveVerticallyAndHorizontalFF",
+    "label": "",
+    "section": "Free Floating Mode Settings"
+   },
+   {
+    "field": "freeFloatingSpeedMultiplier",
+    "label": "",
+    "section": "Free Floating Mode Settings"
+   },
+   {
+    "field": "pushFreeFloatingModeEnabledAmount",
+    "label": "",
+    "section": "Free Floating Mode Settings"
+   },
+   {
+    "field": "freeFloatingModeVerticalSpeed",
+    "label": "",
+    "section": "Free Floating Mode Settings"
+   },
+   {
+    "field": "useMaxAngleToCheckOnGroundStateZGFF",
+    "label": "",
+    "section": "Zero Gravity And Free Floating Mode Settings"
+   },
+   {
+    "field": "maxAngleToChekOnGroundStateZGFF",
+    "label": "",
+    "section": "Zero Gravity And Free Floating Mode Settings"
+   },
+   {
+    "field": "currentExternalControllerBehavior",
+    "label": "",
+    "section": "External Controller Behavior State"
+   },
+   {
+    "field": "showDebugPrint",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "showGizmo",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoLabelColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoRadius",
+    "label": "",
+    "section": "Gizmo Settings"
+   }
+  ]
+ },
+ {
+  "type": "playerExperienceSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Experience System\\playerExperienceSystem.cs",
+  "source": "Experience System/playerExperienceSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "experienceSystemEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "currentLevelExperienceAmount",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "currentLevelExperienceToNextLevel",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "totalExperienceAmount",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "totalExperiencePoints",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "currentLevel",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "totalExperienceAmountLimit",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "experienceTextMovementSpeed",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "experienceTextMovementDelay",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "playSoundOnLevelUpEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "timeToShowLevelUpPanel",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "experienceAmountTextOffset",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useMaxLevel",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "maxLevel",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "hideExperienceSliderAfterTime",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "timeToHideExperienceSlider",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "experienceMenuActive",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "callEventOnLevelReachedOnLoadEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "currentExperienceMultiplier",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "experienceMultiplerEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "extraTextOnLevelNumber",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "extraTextOnNewLevelNumber",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "totalExperiencePointsName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "totalExperienceAmountName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "currentLevelExperienceAmountName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "currentLevelExperienceToNextLevelName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "currentLevelName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "setLevelManually",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "XPExtraString",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "menuPanelName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "eventOnExperienceMultiplerEnabled",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "eventOnExperienceMultiplerDisabled",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "eventOnExperienceWithoutTextPosition",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "eventOnExperienceMenuOpened",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "eventOnExperienceMenuClosed",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "useEventIfSystemDisabled",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "eventIfSystemDisabled",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "playerSkillManager",
+    "label": "",
+    "section": "Main Component Elements"
+   },
+   {
+    "field": "playerStatsManager",
+    "label": "",
+    "section": "Main Component Elements"
+   },
+   {
+    "field": "mainCamera",
+    "label": "",
+    "section": "Main Component Elements"
+   },
+   {
+    "field": "pauseManager",
+    "label": "",
+    "section": "Main Component Elements"
+   },
+   {
+    "field": "levelUpAudioSource",
+    "label": "",
+    "section": "Main Component Elements"
+   },
+   {
+    "field": "levelUpAudioClip",
+    "label": "",
+    "section": "Main Component Elements"
+   },
+   {
+    "field": "levelUpAudioElement",
+    "label": "",
+    "section": "Main Component Elements"
+   },
+   {
+    "field": "currentLevelText",
+    "label": "",
+    "section": "Main Component Elements"
+   },
+   {
+    "field": "levelUpPanel",
+    "label": "",
+    "section": "Main Component Elements"
+   },
+   {
+    "field": "levelUpText",
+    "label": "",
+    "section": "Main Component Elements"
+   },
+   {
+    "field": "experienceTextTargetPosition",
+    "label": "",
+    "section": "Main Component Elements"
+   },
+   {
+    "field": "experienceSliderTransform",
+    "label": "",
+    "section": "Main Component Elements"
+   },
+   {
+    "field": "experienceSlider",
+    "label": "",
+    "section": "Main Component Elements"
+   },
+   {
+    "field": "experienceSliderPanel",
+    "label": "",
+    "section": "Main Component Elements"
+   },
+   {
+    "field": "playerControllerManager",
+    "label": "",
+    "section": "Main Component Elements"
+   },
+   {
+    "field": "mainPlayerCamera",
+    "label": "",
+    "section": "Main Component Elements"
+   },
+   {
+    "field": "experienceMenuGameObject",
+    "label": "",
+    "section": "Main Component Elements"
+   },
+   {
+    "field": "experienceObtaniedTextPrefab",
+    "label": "",
+    "section": "Main Component Elements"
+   },
+   {
+    "field": "experienceObtainedTextParent",
+    "label": "",
+    "section": "Main Component Elements"
+   },
+   {
+    "field": "experienceMultiplierTextPanel",
+    "label": "",
+    "section": "Main Component Elements"
+   },
+   {
+    "field": "experienceMultiplerText",
+    "label": "",
+    "section": "Main Component Elements"
+   },
+   {
+    "field": "experienceSliderPanelPositionInsideMenu",
+    "label": "",
+    "section": "Main Component Elements"
+   },
+   {
+    "field": "experienceSliderPanelPositionOutsideMenu",
+    "label": "",
+    "section": "Main Component Elements"
+   },
+   {
+    "field": "statsMenuPanel",
+    "label": "",
+    "section": "Main Component Elements"
+   }
+  ]
+ },
+ {
+  "type": "playerInputManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Input\\playerInputManager.cs",
+  "source": "Input/playerInputManager.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "playerID",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "showDebugActions",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useOnlyKeyboard",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "mouseSensitivity",
+    "label": "",
+    "section": "Sensitivity Settings"
+   },
+   {
+    "field": "useVerticalAndHorizontalGamepadSensitivity",
+    "label": "",
+    "section": "Sensitivity Settings"
+   },
+   {
+    "field": "leftGamepadJoystickHorizontalSensitivity",
+    "label": "",
+    "section": "Sensitivity Settings"
+   },
+   {
+    "field": "leftGamepadJoystickVerticalSensitivity",
+    "label": "",
+    "section": "Sensitivity Settings"
+   },
+   {
+    "field": "rightGamepadJoystickHorizontalSensitivity",
+    "label": "",
+    "section": "Sensitivity Settings"
+   },
+   {
+    "field": "rightGamepadJoystickVerticalSensitivity",
+    "label": "",
+    "section": "Sensitivity Settings"
+   },
+   {
+    "field": "leftGamepadJoystickSensitivity",
+    "label": "",
+    "section": "Sensitivity Settings"
+   },
+   {
+    "field": "rightGamepadJoystickSensitivity",
+    "label": "",
+    "section": "Sensitivity Settings"
+   },
+   {
+    "field": "leftTouchSensitivity",
+    "label": "",
+    "section": "Sensitivity Settings"
+   },
+   {
+    "field": "rightTouchSensitivity",
+    "label": "",
+    "section": "Sensitivity Settings"
+   },
+   {
+    "field": "useMovementOrientation",
+    "label": "",
+    "section": "Control Orientation Settings"
+   },
+   {
+    "field": "horizontalMovementOrientation",
+    "label": "",
+    "section": "Control Orientation Settings"
+   },
+   {
+    "field": "verticalMovementOrientation",
+    "label": "",
+    "section": "Control Orientation Settings"
+   },
+   {
+    "field": "useCameraOrientation",
+    "label": "",
+    "section": "Control Orientation Settings"
+   },
+   {
+    "field": "horizontalCameraOrientation",
+    "label": "",
+    "section": "Control Orientation Settings"
+   },
+   {
+    "field": "verticalCameraOrientation",
+    "label": "",
+    "section": "Control Orientation Settings"
+   },
+   {
+    "field": "touchMovementControl",
+    "label": "",
+    "section": "Touch Controls Settings"
+   },
+   {
+    "field": "touchCameraControl",
+    "label": "",
+    "section": "Touch Controls Settings"
+   },
+   {
+    "field": "touchPanel",
+    "label": "",
+    "section": "Touch Controls Settings"
+   },
+   {
+    "field": "usingTouchMovementJoystick",
+    "label": "",
+    "section": "Touch Controls Settings"
+   },
+   {
+    "field": "inputLerpSpeedTouchMovementButtons",
+    "label": "",
+    "section": "Touch Controls Settings"
+   },
+   {
+    "field": "useHorizontaTouchMovementButtons",
+    "label": "",
+    "section": "Touch Controls Settings"
+   },
+   {
+    "field": "useVerticalTouchMovementButtons",
+    "label": "",
+    "section": "Touch Controls Settings"
+   },
+   {
+    "field": "horizontalTouchMovementButtons",
+    "label": "",
+    "section": "Touch Controls Settings"
+   },
+   {
+    "field": "verticalTouchMovementButtons",
+    "label": "",
+    "section": "Touch Controls Settings"
+   },
+   {
+    "field": "inputEnabled",
+    "label": "",
+    "section": "Input State"
+   },
+   {
+    "field": "playerIsNonLocalAvatar",
+    "label": "",
+    "section": "Input State"
+   },
+   {
+    "field": "playerNonLocalAvatarID",
+    "label": "",
+    "section": "Input State"
+   },
+   {
+    "field": "movementAxis",
+    "label": "",
+    "section": "Input State"
+   },
+   {
+    "field": "mouseAxis",
+    "label": "",
+    "section": "Input State"
+   },
+   {
+    "field": "rawMovementAxis",
+    "label": "",
+    "section": "Input State"
+   },
+   {
+    "field": "ignoreAllActionsInput",
+    "label": "",
+    "section": "Input State"
+   },
+   {
+    "field": "ignoreAllAxisInput",
+    "label": "",
+    "section": "Input State"
+   },
+   {
+    "field": "manualControlActive",
+    "label": "",
+    "section": "Manual Control Settings"
+   },
+   {
+    "field": "manualMovementHorizontalInput",
+    "label": "",
+    "section": "Manual Control Settings"
+   },
+   {
+    "field": "manualMovementVerticalInput",
+    "label": "",
+    "section": "Manual Control Settings"
+   },
+   {
+    "field": "manualMouseHorizontalInput",
+    "label": "",
+    "section": "Manual Control Settings"
+   },
+   {
+    "field": "manualMouseVerticalInput",
+    "label": "",
+    "section": "Manual Control Settings"
+   },
+   {
+    "field": "currentSingleMultiAxes",
+    "label": "",
+    "section": "Multi Axes List"
+   },
+   {
+    "field": "input",
+    "label": "",
+    "section": "Player Element Settings"
+   },
+   {
+    "field": "playerControllerManager",
+    "label": "",
+    "section": "Player Element Settings"
+   },
+   {
+    "field": "mainPlayerInputPanelSystem",
+    "label": "",
+    "section": "Player Element Settings"
+   },
+   {
+    "field": "editInputPanelPrefab",
+    "label": "",
+    "section": "Player Element Settings"
+   },
+   {
+    "field": "editInputMenu",
+    "label": "",
+    "section": "Player Element Settings"
+   },
+   {
+    "field": "currentInputPanelListText",
+    "label": "",
+    "section": "Player Element Settings"
+   },
+   {
+    "field": "currentArrayElement",
+    "label": "",
+    "section": "Axes List"
+   },
+   {
+    "field": "currentArrayElement",
+    "label": "",
+    "section": "Axes List"
+   }
+  ]
+ },
+ {
+  "type": "playerInputPanelSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Input\\playerInputPanelSystem.cs",
+  "source": "Input/playerInputPanelSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "screenActionPanelsEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "instantiateInputPanelUIIfNotFound",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "playerInput",
+    "label": "",
+    "section": "Player Element Settings"
+   },
+   {
+    "field": "pauseManager",
+    "label": "",
+    "section": "Player Element Settings"
+   },
+   {
+    "field": "inputPanelPrefab",
+    "label": "",
+    "section": "Player Element Settings"
+   },
+   {
+    "field": "screenActionParent",
+    "label": "",
+    "section": "Player Element Settings"
+   },
+   {
+    "field": "mainInputPanelUISystem",
+    "label": "",
+    "section": "Player Element Settings"
+   }
+  ]
+ }
+]

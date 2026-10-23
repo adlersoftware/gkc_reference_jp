@@ -1,0 +1,378 @@
+[
+ {
+  "type": "hologramDoor",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\hologramDoor.cs",
+  "methods": [
+   {
+    "sig": "activateDevice()",
+    "line": 214
+   },
+   {
+    "sig": "openCurrentDoor()",
+    "line": 219
+   },
+   {
+    "sig": "startChangeTransparencyCoroutine(bool state)",
+    "line": 235
+   },
+   {
+    "sig": "stopChangeTransparency()",
+    "line": 244
+   },
+   {
+    "sig": "setHologramTransparencyAtOnce(bool state)",
+    "line": 306
+   },
+   {
+    "sig": "startSetHologramColorsCoroutine(bool useUnlockedColors)",
+    "line": 334
+   },
+   {
+    "sig": "stopSetHologramColors()",
+    "line": 341
+   },
+   {
+    "sig": "unlockHologram()",
+    "line": 390
+   },
+   {
+    "sig": "lockHologram()",
+    "line": 402
+   },
+   {
+    "sig": "startOpenDoorCoroutine()",
+    "line": 413
+   },
+   {
+    "sig": "stopOpenDoor()",
+    "line": 420
+   },
+   {
+    "sig": "checkTriggerInfo(Collider col, bool isEnter)",
+    "line": 455
+   },
+   {
+    "sig": "enteringDoor()",
+    "line": 473
+   },
+   {
+    "sig": "exitingDoor()",
+    "line": 495
+   },
+   {
+    "sig": "checkIfTagCanOpen(string tagToCheck)",
+    "line": 525
+   },
+   {
+    "sig": "openHologramDoorByExternalInput()",
+    "line": 534
+   }
+  ]
+ },
+ {
+  "type": "examineObjectSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\examineObjectSystem.cs",
+  "methods": [
+   {
+    "sig": "showExamineMessage(bool state)",
+    "line": 195
+   },
+   {
+    "sig": "stopExamineDevice()",
+    "line": 208
+   },
+   {
+    "sig": "disableAndRemoveExamineDevice()",
+    "line": 215
+   },
+   {
+    "sig": "cancelExamine()",
+    "line": 226
+   },
+   {
+    "sig": "pauseOrResumePlayerInteractionButton(bool state)",
+    "line": 233
+   },
+   {
+    "sig": "examineDevice()",
+    "line": 241
+   },
+   {
+    "sig": "setExamineDeviceState(bool state)",
+    "line": 268
+   },
+   {
+    "sig": "setRotationState(bool state)",
+    "line": 289
+   },
+   {
+    "sig": "getPlayerComponents()",
+    "line": 294
+   },
+   {
+    "sig": "checkExaminePlaceInfo(Transform examinePlaceToCheck)",
+    "line": 319
+   },
+   {
+    "sig": "setExaminePlaceEnabledState(Transform examinePlaceToCheck)",
+    "line": 387
+   },
+   {
+    "sig": "inputSetZoomValue(bool state)",
+    "line": 399
+   },
+   {
+    "sig": "inputResetRotation()",
+    "line": 413
+   },
+   {
+    "sig": "inputResetRotationAndPosition()",
+    "line": 424
+   },
+   {
+    "sig": "inputCancelExamine()",
+    "line": 435
+   },
+   {
+    "sig": "inputCheckIfMessage()",
+    "line": 444
+   }
+  ]
+ },
+ {
+  "type": "padlockSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\padlockSystem.cs",
+  "methods": [
+   {
+    "sig": "setCurrentWheelIndex(int amount)",
+    "line": 282
+   },
+   {
+    "sig": "setPreviousNumber()",
+    "line": 299
+   },
+   {
+    "sig": "setNextNumber()",
+    "line": 306
+   },
+   {
+    "sig": "activatePadlock()",
+    "line": 313
+   },
+   {
+    "sig": "checkNumberByKeyboard(int number)",
+    "line": 332
+   },
+   {
+    "sig": "checkNumber(wheelInfo wheel, int wheelNumber)",
+    "line": 343
+   },
+   {
+    "sig": "getCurrentCodeOnWheels()",
+    "line": 382
+   },
+   {
+    "sig": "setLockedState(bool state)",
+    "line": 393
+   },
+   {
+    "sig": "checkRotateWheel(int direction, wheelInfo wheel, int number)",
+    "line": 435
+   },
+   {
+    "sig": "rotateCenter(int direction, wheelInfo wheel, int number)",
+    "line": 440
+   },
+   {
+    "sig": "resetPadLock()",
+    "line": 463
+   },
+   {
+    "sig": "setCorrectCode()",
+    "line": 478
+   },
+   {
+    "sig": "changeExamineObjectState(bool state)",
+    "line": 493
+   },
+   {
+    "sig": "inputRotateWheel(bool directionUp)",
+    "line": 500
+   }
+  ]
+ },
+ {
+  "type": "waypointPlatform",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\waypointPlatform.cs",
+  "methods": [
+   {
+    "sig": "setMirroringPlatformActiveState(bool state)",
+    "line": 115
+   },
+   {
+    "sig": "addPassenger(Transform newPassenger)",
+    "line": 238
+   },
+   {
+    "sig": "addVehicle(Transform newVehicle)",
+    "line": 289
+   },
+   {
+    "sig": "disablePlatform()",
+    "line": 317
+   },
+   {
+    "sig": "activatePlatformMovement()",
+    "line": 332
+   },
+   {
+    "sig": "deactivatePlatformMovement()",
+    "line": 343
+   },
+   {
+    "sig": "checkMovementCoroutine(bool play)",
+    "line": 349
+   },
+   {
+    "sig": "stopPlatformMovement()",
+    "line": 368
+   },
+   {
+    "sig": "activetMovementByButton()",
+    "line": 519
+   },
+   {
+    "sig": "setDeviceStringActionState(bool state)",
+    "line": 542
+   },
+   {
+    "sig": "addObjectDetectedBelow(GameObject objectToCheck)",
+    "line": 549
+   },
+   {
+    "sig": "removeObjectDetectedBelow(GameObject objectToCheck)",
+    "line": 563
+   },
+   {
+    "sig": "addNewWayPoint()",
+    "line": 571
+   }
+  ]
+ },
+ {
+  "type": "elevatorSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\elevatorSystem.cs",
+  "methods": [
+   {
+    "sig": "nextFloor()",
+    "line": 105
+   },
+   {
+    "sig": "previousFloor()",
+    "line": 115
+   },
+   {
+    "sig": "moveBetweenTwoPositions()",
+    "line": 124
+   },
+   {
+    "sig": "checkIfInsideElevatorDoorSystem()",
+    "line": 160
+   },
+   {
+    "sig": "goToNumberFloor(int floorNumber)",
+    "line": 172
+   },
+   {
+    "sig": "callElevator(GameObject button)",
+    "line": 204
+   },
+   {
+    "sig": "addPassenger(Transform newPassenger)",
+    "line": 435
+   },
+   {
+    "sig": "setElevatorSystemEnabledState(bool state)",
+    "line": 464
+   },
+   {
+    "sig": "addNewFloor()",
+    "line": 470
+   },
+   {
+    "sig": "removeFloor(int floorIndex)",
+    "line": 532
+   },
+   {
+    "sig": "removeAllFloors()",
+    "line": 543
+   },
+   {
+    "sig": "checkEventsOnMove(bool state)",
+    "line": 554
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 565
+   }
+  ]
+ },
+ {
+  "type": "accessTerminal",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\accessTerminal.cs",
+  "methods": [
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 211
+   },
+   {
+    "sig": "pressButtonOnScreen()",
+    "line": 332
+   },
+   {
+    "sig": "activateTerminal()",
+    "line": 339
+   },
+   {
+    "sig": "enableTerminal()",
+    "line": 362
+   },
+   {
+    "sig": "disableTerminal()",
+    "line": 375
+   },
+   {
+    "sig": "getCurrentUser()",
+    "line": 388
+   },
+   {
+    "sig": "checkNumber(string numberString)",
+    "line": 420
+   },
+   {
+    "sig": "setLockedState(bool state)",
+    "line": 458
+   },
+   {
+    "sig": "setLockState(Scrollbar info)",
+    "line": 523
+   },
+   {
+    "sig": "showPasswordOnHackPanel()",
+    "line": 553
+   },
+   {
+    "sig": "unlockAccessTerminal()",
+    "line": 558
+   },
+   {
+    "sig": "activateHackButton()",
+    "line": 567
+   },
+   {
+    "sig": "setNewCode(string newCode)",
+    "line": 574
+   }
+  ]
+ }
+]

@@ -1,0 +1,683 @@
+[
+ {
+  "type": "quickPlayerModeChangeSystem",
+  "summary": "武器・能力・格闘などの「クイックモード」と、装備スロットに相当する「セレクション」の入力切替をまとめて扱うコンポーネント。モード名/セレクション名で現在の選択を切り替え、切替時イベントや射撃・ブロックの停止を行う。",
+  "methods": {
+   "stopUpdateCoroutine()": "`updateCoroutine` が null でなければ `StopCoroutine` で停止するだけ。",
+   "stopUpdateCheckChangeOfModeCoroutine()": "モード切替の監視コルーチンを停止し、切替中とセレクション有効のフラグを false に戻す。",
+   "setSelectionModeDisabled(string selectionName)": "`setSelectionModeEnabledOrDisabledState` を false で呼ぶだけ。",
+   "setSelectionModeEnabled(string selectionName)": "`setSelectionModeEnabledOrDisabledState` を true で呼ぶだけ。",
+   "setSelectionModeEnabledOrDisabledState(bool state, string selectionName)": "名前でセレクションを探して `selectionEnabled` を設定し、現在の選択を無効化したら次へ切り替える。",
+   "checkToSelectNextSelectionOnWeaponAmmoEmpty()": "武器モード中に現在の武器の残弾が0なら、次のセレクションへ切り替える。",
+   "setSelectionInfoEnabledState(bool state)": "`selectionInfoEnabled` を設定するだけ。",
+   "setSetSelectionInfoEnableStateEnabledState(bool state)": "`setSelectionInfoEnableStateEnabled` を設定するだけ。",
+   "setExternalSetSelectionInfoEnabledState(bool state)": "`externalSetSelectionInfoEnabled` を設定するだけ。",
+   "inputActiveModePressHold(string modeName)": "長押し入力時、現在のモードが押下中でパワーなら `inputHoldShootPower` を呼ぶ。",
+   "checkIfModeActiveToReleaseIt()": "押下中のモードがあれば `inputActiveModePressUp` を呼んで解放する。",
+   "inputActiveModePressUp(string modeName)": "押下中モードの離上処理。武器・弓・パワー・格闘の射撃やブロックを止め `pressDownActive` を false にする。",
+   "inputActivateMode(string modeName)": "名前からモードを検索して現在モードを切り替え、旧モードの射撃停止・選択解除イベント送出の後に `useMode` を呼ぶ。",
+   "inputActivateModeDownHoldUpExternally(string modeName)": "モード有効化・長押し・離上の3メソッドを順に呼ぶだけ。",
+   "inputSetNextOrPreviousSelectionInfo(bool state)": "前/次の有効なセレクションを弾薬も見て探し、射撃を止めて現在の選択と表示を更新する。",
+   "setSelectionInfoEnabledStateFromEditor(bool state)": "`selectionInfoEnabled` を設定した後に `updateComponent` を実行する。",
+   "setSetSelectionInfoEnableStateEnabledStateFromEditor(bool state)": "`setSelectionInfoEnableStateEnabled` を設定し `updateComponent` を実行。",
+   "setExternalSetSelectionInfoEnabledStateFromEditor(bool state)": "`externalSetSelectionInfoEnabled` を設定し `updateComponent` を実行。"
+  }
+ },
+ {
+  "type": "jetpackSystem",
+  "summary": "`externalControllerBehavior` を継承したジェットパック用モード。装備/使用状態、燃料、ターボ、推力パーティクル、IK、カメラFOV、HUD表示を一括して制御する。",
+  "methods": {
+   "canUseJetpack()": "燃料が残っており、かつ `jetpackModePaused` が false のときだけ true を返す。",
+   "startOrStopJetpack(bool state)": "`usingJetpack` を切り替え、アニメ、外部コントローラ、パーティクル、IK、airID、イベント、ターボ解除を更新する。",
+   "changeThrustsParticlesState(bool state)": "推力パーティクルを state に応じて再生し、停止時は loop を false にする。",
+   "enableOrDisableJetpack(bool state)": "装備状態を切り替え、HUD/メッシュ、外部コントローラ、イベントを更新し、解除時は使用中なら停止する。",
+   "getJetpackFuel(float amount)": "燃料を加算して最大値でクランプし、UIとスライダーを更新する。",
+   "getJetpackFuelAmountToPick()": "スライダー最大値から現在の燃料を引いた残量を返す。",
+   "enableOrDisableJetPackMesh(bool state)": "`jetpack` メッシュの表示を切り替え、未装備時は非表示設定を優先する。",
+   "removeJetpackMesh()": "`jetpack` オブジェクトを `DestroyImmediate` で削除する。",
+   "setUsedByAIState(bool state)": "`usedByAI` を設定するだけ。",
+   "enableOrDisableTurbo(bool state)": "ターボ状態を設定し、カメラFOVとシェイク、空中速度IDを切り替える。",
+   "setJetpackEnabledState(bool state)": "装備中なら解除してから `jetpackEnabled` を設定する。",
+   "setOriginalJetpackEnabledState()": "保存値 `originalJetpackEnabled` を `setJetpackEnabledState` に渡すだけ。",
+   "setJetpackModePausedState(bool state)": "true かつ使用中なら停止し、`jetpackModePaused` を設定する。",
+   "inputStartOrStopJetpack(bool state)": "装備中・非運転・使用可能の条件を満たすとき `startOrStopJetpack` を呼ぶ。",
+   "inputChangeTurboState(bool state)": "装備中・使用中・ターボ有効なら、エイム中は保留フラグを立て、それ以外は `enableOrDisableTurbo` を呼ぶ。",
+   "setJetpackEnabledStateFromEditor(bool state)": "`setJetpackEnabledState` を呼んだ後に `updateComponent` を実行する。"
+  }
+ },
+ {
+  "type": "swimSystem",
+  "summary": "`externalControllerBehavior` を継承した水泳モード。水面/潜水の判定、上下移動、ターボ、カメラ状態、水に入るトリガーのリストを管理する。",
+  "methods": {
+   "stopCheckIfPlayerNotOnVehicleCoroutine()": "`checkIfPlayerNotOnVehicleCoroutine` が null でなければ停止するだけ。",
+   "setSwimSystemActivestate(bool state)": "泳ぎ状態を切り替え、車両乗車時の判定コルーチン、水面歩行判定、コライダー無視、カメラ状態、各種フラグを更新する。",
+   "enableOrDisableTurbo(bool state)": "ターボを切り替え、飛行ターボ設定・空中速度値・開始/終了イベントを更新する。",
+   "setCanUseTurboPausedState(bool state)": "false でターボ中なら解除し、`canUseTurboPausedState` を設定する。",
+   "inputChangeTurboState(bool state)": "上書き移動中は無視し、泳ぎ中でターボ有効なら `enableOrDisableTurbo` を呼ぶ。",
+   "inputMoveUp(bool state)": "泳ぎ中の上昇入力。水面ではジャンプやクライム判定を行い、最後に上昇移動を有効化する。",
+   "inputMoveDown(bool state)": "泳ぎ中の下降入力で下降移動を有効化し、未潜水なら `setDivingState(true)` にする。",
+   "setSwimZoneTransform(Transform newSwimZoneTransform)": "`currentSwimZoneTransform` を設定するだけ。",
+   "setSwimTrigger(Collider newSwimTrigger)": "トリガーを設定し、null でないかを `currentSwimTriggerLocated` に反映する。",
+   "isSwimTriggerListEmpty()": "`swimTriggerList` が空かどうかを返す。",
+   "addSwimTrigger(Collider newTrigger)": "null でも重複でもなければ `swimTriggerList` に追加する。",
+   "removeSwimTrigger(Collider newTrigger)": "`swimTriggerList` に含まれていれば削除する。",
+   "clearSwimTriggerList()": "`swimTriggerList` を空にする。",
+   "setCurrentWaterSurfaceSystem(waterSurfaceSystem newWaterSurfaceSystem)": "水面システムを設定し、null でなければ動的更新フラグを true にする。",
+   "setDivingState(bool state)": "潜水/浮上状態を切り替え、`currentlyOnSurface`、潜水イベント、状態ID、表面到達フラグを更新する。",
+   "setEnableExternalForceOnSwimModeState(bool state)": "泳ぎ中のみ、プレイヤーへ外部力設定をそのまま転送する。"
+  }
+ },
+ {
+  "type": "wallSlideJumpSystem",
+  "summary": "壁に沿って滑り落ちるスライドと壁ジャンプを扱う `externalControllerBehavior`。壁検出の有効化、スライド状態に応じたアニメ・武器・カメラの切替、ジャンプ時の回転を行う。",
+  "methods": {
+   "setSlideImpulseForce(Vector3 forceAmount, bool useCameraDirection)": "指定力を最大速度変更量でクランプしてプレイヤーに設定し、`AddForce` で速度変更として加える。",
+   "setJumpActive(Vector3 newImpulseOnJumpAmount)": "スライド中なら解除し、上方向と前方向の合成インパルスでジャンプさせ、検出停止とジャンプ回転を行う。",
+   "setCheckIfDetectSlideActiveState(bool state)": "壁スライド検出の有効/無効を切り替え、外部コントローラ設定と落下ダメージ保留を更新し、無効化時はスライドも解除する。",
+   "setSlideActiveState(bool state)": "スライド状態を切り替え、地上判定・アニメーションID・武器入力・カメラ・頭追従・状態変更イベントをまとめて更新する。",
+   "setSlideEnabledState(bool state)": "false ならスライドを解除してから `slideEnabled` を設定する。",
+   "setSlideCanBeUsedState(bool state)": "`sliderCanBeUsed` を設定するだけ。",
+   "setSliderEnabledState()": "保存値 `originalSlideEnabled` を `setSlideEnabledState` に渡すだけ。",
+   "setOriginalSliderEnabledState()": "スライド中なら検出を止め、保存値 `originalSlideEnabled` を適用する。",
+   "setSlideDownSpeedMultiplier(float newValue)": "`slideDownSpeedMultiplier` を設定するだけ。",
+   "setForceSlowDownOnSurfaceActiveState(bool state)": "`forceSlowDownOnSurfaceActive` を設定するだけ。",
+   "enableCheckIfDetectSlideActiveStateExternally()": "既に有効なら何もせず、`setCheckIfDetectSlideActiveState(true)` を呼ぶ。",
+   "disableCheckIfDetectSlideActiveStateExternally()": "既に無効なら何もせず、`setCheckIfDetectSlideActiveState(false)` を呼ぶ。",
+   "checkEventsOnStateChange(bool state)": "一人称か三人称かに応じて、開始/終了の対応イベントを送出する。",
+   "setWallJumpSlidePausedState(bool state)": "true かつスライド中なら解除し、`wallJumpSlidePaused` を設定する。",
+   "rotateCharacterOnJump()": "既存の回転コルーチンを停止し、`rotateCharacterOnJumpCoroutine` を開始する。",
+   "rotateCharacterOnJumpCoroutine()": "カメラまたはプレイヤーの向きを反転させる目標へ Slerp で回転し、角度差か経過時間で終了する。"
+  }
+ },
+ {
+  "type": "ragdollBuilder",
+  "summary": "人型モデルのボーンからラグドール用のジョイント・リジッドボディ・コライダーを構築/削除するビルダー。構築後は `ragdollActivator` の各リストを更新する。",
+  "methods": {
+   "getCharacterBonesFromEditor()": "ボーンを取得し、不足があれば警告を出して `bonesTransforms` を空にする。",
+   "setCharacterBones(Transform newHead, Transform newRightElbow, Transform newLeftElbow, Transform newRightArm, Transform newLeftArm, Transform newMiddleSpine, Transform newPelvis, Transform newRightHips, Transform newLeftHips, Transform newRightKnee, Transform newLeftKnee)": "引数の11個のボーンTransformを対応するフィールドへ代入するだけ。",
+   "getCharacterBones()": "`animator` から人型ボーンを取得して格納し、`addBonesTransforms` でリスト化する。",
+   "checkAllBonesFound()": "頭・骨盤・脚・腕・背骨の全ボーンが null でないかを返す。",
+   "createRagdoll()": "ボーンを取得/検証して胴体・脚・腕・頭の部位を生成し、成功時はコンポーネント構築と作成イベント、 activator 更新を行う。",
+   "updateRagdollActivatorParts()": "`mainRagdollActivator` のコライダー/リジッドボディ/部位リストを再設定し、コンポーネントを更新する。",
+   "removeRagdoll()": "各ボーンから Joint・Rigidbody・Collider を削除し、`ragdollAdded` を false にする。",
+   "removeRagdollFromEditor()": "`removeRagdoll` を実行し、ボーンリストを空にして activator を更新し true を返す。",
+   "enableRagdollColliders()": "`setRagdollCollidersState(true)` を呼ぶだけ。",
+   "disableRagdollColliders()": "`setRagdollCollidersState(false)` を呼ぶだけ。",
+   "setRagdollCollidersState(bool state)": "`bones` 内の各ボーンの Collider の enabled を state に設定する。",
+   "setCheckIfRagdollComponentsAlreadyAddedOnModelActiveState(bool state)": "`checkIfRagdollComponentsAlreadyAddedOnModelActive` を設定するだけ。",
+   "setIgnoreStoreBonesByGetBoneTransformActiveState(bool state)": "`ignoreStoreBonesByGetBoneTransformActive` を設定するだけ。",
+   "getAnimator(Animator anim)": "`animator` フィールドを引数の Animator にするだけ。",
+   "setRagdollActivator(ragdollActivator newRagdollActivator)": "`mainRagdollActivator` を設定するだけ。"
+  }
+ },
+ {
+  "type": "customCharacterControllerManager",
+  "summary": "蜘蛛や狼などの「カスタムキャラクターコントローラ」への切替を管理するコンポーネント。名前で状態を選択し、プレハブの生成、開始/終了イベント、メッシュ表示、カプセル値の同期を行う。",
+  "methods": {
+   "toggleCustomCharacterControllerExternally(string characterControllerName)": "一時的に停止フラグを false にして `toggleCustomCharacterController` を呼び、元に戻す。",
+   "toggleCustomCharacterController(string characterControllerName)": "停止中なら無視し、未使用なら状態を設定、使用中なら解除したうえで設定に応じて新しいコントローラを有効化する。",
+   "disableCustomCharacterControllerState()": "使用中のみ、終了イベントを送出して `setCharacterState(false)` を呼び、参照と名前をクリアする。",
+   "setRandomCustomCharacterControllerState()": "リストからランダムに選び、その名前で `setCustomCharacterControllerState` を呼ぶ。",
+   "setCustomCharacterControllerState(string characterControllerStateName)": "同名なら無視し、現在状態を終了させたうえで対象を有効化し、必要ならプレハブを生成する。",
+   "isCustomCharacterControllerActive()": "`customCharacterControllerActive` を返すだけ。",
+   "checkEventsOnStateChange(bool state)": "イベント使用時、開始なら Enter、終了なら Exit のイベントを送出する。",
+   "setToggleCustomCharacterControllerPausedState(bool state)": "`toggleCustomCharacterControllerPaused` を設定するだけ。",
+   "addNewCustomCharacterController(customCharacterControllerBase newCustomCharacterControllerBase, string newName)": "名前とコントローラを持つ状態情報を新規作成してリストへ追加し、`updateComponent` を呼ぶ。",
+   "addNewCustomCharacterControllerToSpawn(GameObject newCustomCharacterControllerBaseObject, string newName)": "プレハブと生成フラグを持つ状態情報をリストへ追加し、`updateComponent` を呼ぶ。",
+   "toggleCharacterModelMeshOnEditor(bool state)": "エディタ上でカスタムモデルの表示を切り替え、メインキャラのメッシュと武器メッシュは逆の状態にして更新する。",
+   "setStartGameWithCustomCharacterControllerFromEditor(bool state)": "`startGameWithCustomCharacterController` を設定して更新する。",
+   "setCustomCharacterControllerToStartNameFromEditor(string newCharacterName)": "開始時のコントローラ名を設定し `updateComponent` を呼ぶ。",
+   "setCapsuleValuesFromMainCharacter()": "現在のカスタムコントローラへメインカプセルの方向・中心・半径・高さをコピーする。"
+  }
+ },
+ {
+  "type": "railSystem",
+  "summary": "ベジェスプラインに沿って移動するレールモードを提供する `externalControllerBehavior`。レール状態、ターボ、進行方向の反転可否、開始位置への調整を管理する。",
+  "methods": {
+   "setImpulseForce(Vector3 forceAmount, bool useCameraDirection)": "最大速度変更量を計算しつつ、実際は `impulseForce` をそのまま `AddForce` で速度変更として適用する。",
+   "setJumpActive(Vector3 newImpulseOnJumpAmount)": "レール中なら解除し、上方向と前方向を合成したインパルスでジャンプさせる。",
+   "setRailSystemActivestate(bool state)": "レール状態を切り替え、接地判定・アニメーション・カメラ・頭追従・各種イベント・ターボ解除まで更新する。",
+   "setRailEnabledState(bool state)": "false ならレールを解除してから `railSystemEnabled` を設定する。",
+   "enableOrDisableTurbo(bool state)": "ターボ状態を切り替え、使用時は開始/終了イベントを送出する。",
+   "setCanUseTurboPausedState(bool state)": "false でターボ中なら解除し、`canUseTurboPausedState` を設定する。",
+   "inputChangeTurboState(bool state)": "レール中かつターボ有効なら `enableOrDisableTurbo` を呼ぶ。",
+   "setCanChangeDirectionEnabledState(bool state)": "`canChangeDirectionEnabled` を設定するだけ。",
+   "setOriginalCanChangeDirectionEnabled()": "保存値 `originalCanChangeDirectionEnabled` で方向反転設定を戻す。",
+   "setCurrentSpline(BezierSpline newSpline)": "`currentSpline` を設定するだけ。",
+   "setCurrentBezierDuration(float newValue)": "`bezierDuration` を設定するだけ。",
+   "adjustPlayerToRailOnStart(Vector3 initialPosition)": "既存の回転コルーチンを止め、`adjustPlayerToRailOnStartCoroutine` を開始する。",
+   "resetPlayerRotation()": "既存の回転コルーチンを止め、`resetPlayerRotationCoroutine` を開始する。"
+  }
+ },
+ {
+  "type": "walkOnBalanceSystem",
+  "summary": "細い足場の上をウェイポイントに沿って歩くバランス移動モードを提供する `externalControllerBehavior`。開始時に最寄り地点と進行方向を決め、ターボやプレイヤーの子化も扱う。",
+  "methods": {
+   "setImpulseForce(Vector3 forceAmount, bool useCameraDirection)": "最大速度変更量を計算しつつ、実際は `impulseForce` をそのまま速度変更として `AddForce` に渡す。",
+   "setJumpActive(Vector3 newImpulseOnJumpAmount)": "移動モード中なら解除し、上方向と前方向を合成したインパルスでジャンプさせる。",
+   "setMovementSystemActivestate(bool state)": "バランス移動状態を切り替え、開始時は最寄りウェイポイントと進行方向を算出し、接地判定・カメラ・イベント・子化まで更新する。",
+   "setMovementEnabledState(bool state)": "false なら移動モードを解除してから `systemEnabled` を設定する。",
+   "enableOrDisableTurbo(bool state)": "ターボ状態を切り替え、使用時は開始/終了イベントを送出し、解除時はカメラシェイクを止める。",
+   "setCanUseTurboPausedState(bool state)": "false でターボ中なら解除し、`canUseTurboPausedState` を設定する。",
+   "inputChangeTurboState(bool state)": "移動モード中かつターボ有効なら `enableOrDisableTurbo` を呼ぶ。",
+   "setCurrentWaypoint(simpleWaypointSystem newSimpleWaypointSystem)": "ウェイポイントシステムを設定し、null でなければその `wayPoints` を取得する。",
+   "adjustPlayerToMovementOnStart(Vector3 initialPosition)": "既存の回転コルーチンを止め、`adjustPlayerToMovementOnStartCoroutine` を開始する。",
+   "resetPlayerRotation()": "既存の回転コルーチンを止め、`resetPlayerRotationCoroutine` を開始する。",
+   "getClosestPosition(Vector3 position)": "最も近いウェイポイントを探して `currentWaypointIndex` を更新し、その位置を返す。",
+   "setSetPlayerAsChildStateState(bool state, Transform newPlayerParentTransform)": "`setPlayerAsChildActive` と `playerParentTransform` を設定するだけ。",
+   "setJumpOnEndState(bool state)": "`jumpOnEndState` を設定するだけ。"
+  }
+ },
+ {
+  "type": "playerStateSystem",
+  "summary": "プレイヤーの状態を名前で管理するコンポーネント。優先度と割り込み可否を見て状態を切り替え、開始/終了イベントと持続時間コルーチンを扱う。",
+  "methods": {
+   "setPlayerState(string stateName)": "名前で状態を探し、変更可否を確認したうえで他の状態を終了イベント付きで止め、新しい状態を開始して持続時間コルーチンを起動する。",
+   "checkIfStateCanChange(int stateIndexToCheck)": "割り込み不可で優先度が高い状態が動作中なら false を返す。",
+   "setUseTemporalDurationOnState(string stateName)": "`名前_時間` 形式を分割して数値化し、対象状態の一時持続時間と使用フラグを設定する。",
+   "setStateEnabledState(bool state, string stateName)": "名前が一致する状態の `stateEnabled` を設定する。",
+   "setStateEnabledState(string stateName)": "`setStateEnabledState(true, stateName)` を呼ぶだけ。",
+   "setStateDisabledState(string stateName)": "`setStateEnabledState(false, stateName)` を呼ぶだけ。",
+   "setActivateStateOnStartState(bool state)": "`activateStateOnStart` を設定するだけ。",
+   "setStateToActivateOnStartValue(string newName)": "`stateToActivateOnStart` を設定するだけ。",
+   "setStateEnabledStateFromEditor(string stateName)": "状態を有効化してから `updateComponent` を呼ぶ。",
+   "setStateDisabledStateFromEditor(string stateName)": "状態を無効化してから `updateComponent` を呼ぶ。",
+   "setActivateStateOnStartStateFromEditor(bool state)": "値を設定してから `updateComponent` を呼ぶ。",
+   "setStateToActivateOnStartValueFromEditor(string newName)": "値を設定してから `updateComponent` を呼ぶ。"
+  }
+ },
+ {
+  "type": "bodyMountPointsSystem",
+  "summary": "武器や装備をキャラクターの各部位へ取り付けるためのマウントポイントを管理する。名前から人型ボーンやカスタムボーンを解決し、子オブジェクトの親子付けとオフセットを適用する。",
+  "methods": {
+   "removeCharacterBodyMountPointsToTemporalParent(Transform newParent)": "全マウントポイントの `objectTransform` を `newParent` の子へ移動する。",
+   "resetCharacterBodyMountPointsLocalPositions()": "全 `objectTransform` のローカル位置を零、ローカル回転を identity に戻す。",
+   "setCharacterBodyMountPointsInfoList()": "全マウントポイントについて個別設定メソッドを順に呼ぶ。",
+   "setIndividualCharacterBodyMountPointInfoByName(string mountPointName)": "名前から項目を探し、カスタム/人型ボーンを解決して各オブジェクトを親子付けし、位置・角度オフセットを適用する。",
+   "getMountPointTransformByName(string mountPointName)": "名前が一致するマウントポイントの最初の `objectTransform` を返し、無ければ null を返す。",
+   "getHumanBoneMountPointTransformByName(string mountPointName)": "名前からカスタムボーン、人型ボーン、代替ボーンの順に解決して返す。",
+   "setCustomBoneMountPointTransformByName(string mountPointName, Transform newCUstomBoneTransform, bool state)": "名前一致の項目にカスタムボーンの使用フラグとTransformを設定する。",
+   "setCustomBoneMountPointTransformByNameFromEditor(string mountPointName, Transform newCUstomBoneTransform, bool state)": "カスタムボーンを設定した後に `updateComponent` を呼ぶ。",
+   "toggleShowHandleGizmo()": "`showGizmo` を反転するだけ。",
+   "toggleEditMountPoint()": "編集モードを反転し、開始時は対象ポイントのプレハブを生成、終了時は削除する。",
+   "setNewAnimator(Animator newAnimator)": "`mainAnimator` を設定して `updateComponent` を呼ぶ。"
+  }
+ },
+ {
+  "type": "flySystem",
+  "summary": "空中を自由に飛ぶ飛行モードを提供する `externalControllerBehavior`。上下移動、ターボ、ダッシュID、IK、カメラFOV、COM回転のリセットを扱う。",
+  "methods": {
+   "enableOrDisableFlyingMode(bool state)": "飛行状態を切り替え、外部コントローラ、IK、airID、ダッシュ、イベント、COM回転を更新する。",
+   "enableOrDisableTurbo(bool state)": "ターボを設定し、飛行ターボ、カメラFOV、カメラシェイク、空中速度IDを切り替える。",
+   "resetCOMRotation()": "既存のCOM回転コルーチンを止め、`resetCOMRotationCoroutine` を開始する。",
+   "resetCOMRotationCoroutine()": "`COM` のローカル回転を identity へ Slerp で徐々に戻す。",
+   "inputChangeTurboState(bool state)": "飛行中かつターボ有効なら `enableOrDisableTurbo` を呼ぶ。",
+   "inputMoveUp(bool state)": "飛行中かつ上下移動が有効なら `enableOrDisableVerticalMovementUp` を呼ぶ。",
+   "inputMoveDown(bool state)": "飛行中かつ上下移動が有効なら `enableOrDisableVerticalMovementDown` を呼ぶ。",
+   "setFlyModeEnabledState(bool state)": "飛行中なら解除してから `flyModeEnabled` を設定する。",
+   "setOriginalFlyModeEnabledState()": "保存値 `originalFlyModeEnabled` で `setFlyModeEnabledState` を呼ぶだけ。",
+   "setEnableExternalForceOnFlyModeState(bool state)": "飛行中のみプレイヤーへ外部力設定を転送する。",
+   "setFlyModeEnabledStateFromEditor(bool state)": "値を設定してから `updateComponent` を呼ぶ。"
+  }
+ },
+ {
+  "type": "wallRunningSystem",
+  "summary": "壁に沿って走るウォールランニングを提供する `externalControllerBehavior`。左右の壁判定、ジャンプ用インパルス、アニメーション、カメラ状態、COM補正を管理する。",
+  "methods": {
+   "setWallRunningImpulseForce(Vector3 forceAmount, bool useCameraDirection)": "カメラまたはプレイヤーの前/上/右方向で力を合成し、左右で符号を変えてクランプした速度変更を適用する。",
+   "setJumpActive()": "壁走り中ならジャンプ用インパルスを適用し、現在速度を保存して壁走り状態を解除する。",
+   "setWallRunningActiveState(bool state)": "壁走り状態を切り替え、アニメーションと左右別イベント、武器入力、カメラ状態、足音、COM補正を更新する。",
+   "setWallRunningEnabledState(bool state)": "false かつ壁走り中なら解除して停止インパルスを加え、左右フラグを初期化してから有効状態を設定する。",
+   "setWallRunningCanBeUsedState(bool state)": "`wallRunningCanBeUsed` を設定するだけ。",
+   "setOriginalWallRunningEnabledState()": "保存値 `originalWallRunningEnabled` で有効状態を戻す。",
+   "setAutoUseDownMovementOnWallRunningActiveState(bool state)": "`autoUseDownMovementOnWallRunningActive` を設定するだけ。",
+   "setAutoUseStopWallRunningAfterDelayState(bool state)": "`autoUseStopWallRunningAfterDelay` を設定するだけ。",
+   "resetCOMRotation()": "COM回転コルーチンを止め、`resetCOMRotationCoroutine` を開始する。",
+   "resetCOMRotationCoroutine()": "`COM` を元の位置と回転へ Slerp で戻し、必要なら遅延後に武器を描画する。",
+   "setWallRunningEnabledStateFromEditor(bool state)": "値を設定してから `updateComponent` を呼ぶ。"
+  }
+ },
+ {
+  "type": "genericRagdollBuilder",
+  "summary": "人型に限らない汎用ラグドールを、ボーンTransformのリストから構築・削除するビルダー。構築後は `ragdollActivator` へボーン/リジッドボディ/コライダーを登録する。",
+  "methods": {
+   "checkAllBonesFound()": "頭・骨盤・背骨に加え、`ignoreEmptyLimbFieldsEnabled` でなければ手足のボーンも揃っているかを返す。",
+   "buildRagdoll()": "ボーンを検証し、揃っていれば構築して activator の更新と `updateComponent` を行う。",
+   "removeRagdoll()": "`bones` と `characterBody` 配下からジョイント・リジッドボディ・コライダーを削除する。",
+   "updateRagdollActivatorParts(bool addingRagdollOnEditorTime)": "`bones` からボーン/リジッドボディ/コライダーのリストを作り、activator へ ragdoll 情報として追加する。",
+   "updateRagdollActivatorPatsIngame()": "`updateRagdollActivatorParts(false)` を呼ぶだけ。",
+   "enableRagdollElements()": "`setActiveRagdollElements(true)` を呼ぶだけ。",
+   "disableRagdollElements()": "`setActiveRagdollElements(false)` を呼ぶだけ。",
+   "setActiveRagdollElements(bool state)": "各ボーンの Collider を state に、Rigidbody の `isKinematic` をその逆に設定する。",
+   "activateRagdollState()": "動作中なら無視し、コライダー有効化・衝突無視・レイヤー変更・`isKinematic` 解除・親解除を行う。",
+   "activateEventToSendBonesList()": "`bones` の Transform リストを作り、`eventToSentBonesList` で送出する。",
+   "getRagdollElementsOnBoneListManually()": "`characterBody` 配下の Rigidbody からボーンリストを再構築して activator を更新する。"
+  }
+ },
+ {
+  "type": "multipleInteractionSystem",
+  "summary": "1つのオブジェクトに複数種別のインタラクション（デバイス）を持たせ、プレイヤーごとの利用登録や入退場イベントを管理する。コライダーとタグの有効/無効も切り替える。",
+  "methods": {
+   "activateInteraction(List<string> typeNameList, GameObject character)": "有効かつ停止中でなければ、種別名リストに一致する項目を探し、遅延設定ならコルーチン、なければ即座に実行する。",
+   "checkEventOnEnterExit(bool state, GameObject newPlayer)": "入場なら Enter、退場なら Exit のイベントを、使用時のみ `newPlayer` 付きで送出する。",
+   "setInteractionPauseActiveState(bool state)": "`interactionPauseActive` を設定するだけ。",
+   "removeDeviceFromPlayerList()": "各プレイヤーの `usingDevicesSystem` から `mainInteractionObject` を解除する。",
+   "setMainColliderEnabledState(bool state)": "`mainCollider` の enabled が異なる場合だけ state に設定する。",
+   "disableInteractionIfActive()": "停止中なら何もせず、そうでなければ `enableOrDisableInteraction(false)` を呼ぶ。",
+   "enableOrDisableInteraction(bool state)": "全体無効時は何もせず、停止フラグを反転し、無効化時はデバイス解除、最後にコライダーを切り替える。",
+   "removeDeviceFromListAndDisableInteraction()": "デバイスをプレイヤーから解除し、タグを `Untagged` に変更する。",
+   "disableEntireMultipleInteraction()": "全体を無効化し、デバイス解除とタグ変更を行う。",
+   "stopActivateInteractionCoroutine()": "`delayCoroutine` が null でなければ停止するだけ。",
+   "disableEntireMultipleInteractionFromEditor()": "全体を無効化して `updateComponent` を実行する。"
+  }
+ },
+ {
+  "type": "handsOnMeleeWeaponIKSystem",
+  "summary": "近接武器を持っているときに両手を武器へ合わせるIKコンポーネント。`handInfoList` の手ごとの目標と重みを使い、多忙状態では重みを滑らかに落とす。",
+  "methods": {
+   "playerIsBusy()": "手使用中・非一人称・FF/無重力・近接/死亡/停止中・ジェットパック等なら true を返す。",
+   "setWeightLerpSpeedValue(float newValue)": "`weightLerpSpeed` を設定するだけ。",
+   "setOriginalWeightLerpSpeed()": "保存値 `originalWeightLerpSpeed` で `setWeightLerpSpeedValue` を呼ぶだけ。",
+   "setAdjustHandsPausedState(bool state)": "`adjustHandsPaused` を設定するだけ。",
+   "setSmoothBusyDisableActiveState(bool state)": "`smoothBusyDisableActive` を設定するだけ。",
+   "setAdjustHandsEnabledState(bool state)": "`adjustHandsEnabled` を設定するだけ。",
+   "enableHandsCheckPausedWithDelayActive(float duration)": "既存の遅延コルーチンを止め、指定時間後に再開するコルーチンを開始する。",
+   "stopUpdateDelayToResumeStateCoroutine()": "遅延コルーチンを停止し、`handsCheckPausedWithDelayActive` を false にする。",
+   "disableStateIfNotCurrentlyActiveOnIKSystem()": "IKManager 上で現在のコンポーネントでなければ `setActiveState(false)` を呼ぶ。",
+   "setAdjustHandsEnabledStateFromEditor(bool state)": "値を設定してから `updateComponent` を呼ぶ。"
+  }
+ },
+ {
+  "type": "handsOnSurfaceIKSystem",
+  "summary": "手を壁や床などの表面に合わせるIKコンポーネント。表面レイキャストで手の目標を決め、手ごとの重みを補間して適用する。",
+  "methods": {
+   "currentWeightInBothHandsEqualTo(float weightValue)": "両手の `currentHandWeight` が指定値と一致していれば true を返す。",
+   "playerIsBusy()": "手使用中・非一人称・FF/無重力・近接/アクション中・停止中・飛行/水泳・物所持なら true を返す。",
+   "setWeightLerpSpeedValue(float newValue)": "`weightLerpSpeed` を設定するだけ。",
+   "setOriginalWeightLerpSpeed()": "保存値 `originalWeightLerpSpeed` で `setWeightLerpSpeedValue` を呼ぶだけ。",
+   "setAdjustHandsPausedState(bool state)": "`adjustHandsPaused` を設定するだけ。",
+   "setSmoothBusyDisableActiveState(bool state)": "`smoothBusyDisableActive` を設定するだけ。",
+   "setAdjustHandsToSurfacesEnabledState(bool state)": "`adjustHandsToSurfacesEnabled` を設定するだけ。",
+   "enableHandsCheckPausedWithDelayActive(float duration)": "既存の遅延コルーチンを止め、指定時間後に再開するコルーチンを開始する。",
+   "stopUpdateDelayToResumeStateCoroutine()": "遅延コルーチンを停止し、`handsCheckPausedWithDelayActive` を false にする。",
+   "setAdjustHandsToSurfacesEnabledStateFromEditor(bool state)": "値を設定してから `updateComponent` を呼ぶ。"
+  }
+ },
+ {
+  "type": "characterStateIconSystem",
+  "summary": "キャラクターの状態に応じて、一人称/三人称用のアイコン表示と効果音を切り替えるコンポーネント。状態名から該当エントリを探して表示を更新する。",
+  "methods": {
+   "enableOrDisableCharacterIcon(characterStateInfo characterState, bool state)": "状態有効時、一人称・デバイス使用・画面表示設定に応じて一人称/三人称アイコンの `SetActive` を切り替える。",
+   "checkCharacterStateIconForViewChange()": "三人称アイコンがあれば現在状態で表示更新を呼ぶ。",
+   "setCharacterStateIcon(string stateName)": "名前一致の状態を探して他を非表示にし、対象を表示して時間非表示と効果音を設定する。",
+   "disableCharacterStateIcon()": "全状態のアイコンを非表示にし、`currentCharacterStateName` を空にする。",
+   "playSound(AudioElement sound)": "`sound` が null でなければ `AudioPlayer.PlayOneShot` で再生する。",
+   "enableOrDisableCharacterStateSound(bool state, string characterStateName)": "名前一致の状態の `useSound` を state に設定する。",
+   "enableCharacterStateSound(string characterStateName)": "`enableOrDisableCharacterStateSound(true, ...)` を呼ぶだけ。",
+   "disableCharacterStateSound(string characterStateName)": "`enableOrDisableCharacterStateSound(false, ...)` を呼ぶだけ。",
+   "enableCharacterStateSoundFromEditor(string characterStateName)": "効果音を有効にしてから `updateComponent` を呼ぶ。",
+   "disableCharacterStateSoundFromEditor(string characterStateName)": "効果音を無効にしてから `updateComponent` を呼ぶ。"
+  }
+ },
+ {
+  "type": "OnAnimatorIKComponent",
+  "summary": "IKコンポーネントの基底クラス。更新可否フラグと、派生クラスが上書きする仮想メソッド（状態設定・手の有効化・キャラクター要素設定）を提供する。",
+  "methods": {
+   "updateOnAnimatorIKState()": "基底の仮想メソッドで、`updateIKEnabled` が false なら即 return するだけで他は何もしない。",
+   "setUpdateIKEnabledState(bool state)": "`updateIKEnabled` を設定するだけ。",
+   "isUpdateIKEnabled()": "`updateIKEnabled` の値を返すだけ。",
+   "setActiveState(bool state)": "中身が空の仮想メソッドで、派生クラスでの実装用。",
+   "enableBothHands()": "`enableOrDisableRightOrLeftHand(true, false, true)` を呼ぶだけ。",
+   "enableOnlyLeftHand()": "`enableOrDisableRightOrLeftHand(true, false, false)` を呼ぶだけ。",
+   "enableOnlyRightHand()": "`enableOrDisableRightOrLeftHand(true, true, false)` を呼ぶだけ。",
+   "enableOrDisableRightOrLeftHand(bool state, bool isRightHand, bool setStateOnBothHands)": "中身が空の仮想メソッドで、派生クラスが手の有効化を実装する。",
+   "setCharacterElements(GameObject newCharacter)": "中身が空の仮想メソッドで、派生クラスがキャラクター参照を受け取る。"
+  }
+ },
+ {
+  "type": "bulletTimeFiringSystem",
+  "summary": "バレットタイム中の射撃姿勢やジャンプ・起き上がり動作を扱う `OnAnimatorIKComponent`。移動状態に応じてアニメーション、起き上がり方向イベント、時間スケールを切り替える。",
+  "methods": {
+   "setMovementActiveState(bool state)": "移動状態を切り替え、開始時はジャンプと時間停止、終了時は方向別の起き上がりイベントを出す。",
+   "stopActivateJumpForcesCoroutine()": "ジャンプ力コルーチンを停止し、`jumpCoroutineActive` を false にする。",
+   "disableMovement()": "移動中ならジャンプ力コルーチンを止め、フラグを戻して `setPlayerState(false)` を呼ぶ。",
+   "resetActionIdOnTimeBulletJump()": "`actionIDAnimatorID` の Animator 整数値を 0 にするだけ。",
+   "setCurrentPlayerActionSystemCustomActionCategoryID()": "移動中は custom、そうでなければ regular のアクションカテゴリIDを、-1 より大きい場合のみ設定する。",
+   "inputSetTimeBullettFiring()": "`checkIfSetBulletTimeFiringState()` を呼ぶだけ。",
+   "checkEventOnStateChange(bool state)": "開始なら `eventOnStart`、終了なら `eventOnEnd` を送出する。",
+   "setMovementEnabledState(bool state)": "`movementEnabled` を設定するだけ。",
+   "setMovementEnabledStateFromEditor(bool state)": "値を設定してから `updateComponent` を呼ぶ。"
+  }
+ },
+ {
+  "type": "climbDetectionCollisionSystem",
+  "summary": "フリークライム用の衝突判定オブジェクト。プレイヤーのコライダーの代わりに物理判定を行い、クライム面への接触状態を検出して公開する。",
+  "methods": {
+   "updateObjectPosition(Vector3 newPosition)": "`transform.position` を指定位置に設定するだけ。",
+   "enableOrDisableClimbDetection(bool state)": "検出を切り替え、物理/コライダー、角度閾値、衝突無視、位置合わせ、更新コルーチンを設定する。",
+   "stopUpdateCoroutine()": "`updateCoroutine` が null でなければ停止するだけ。",
+   "climbSurfaceDetected()": "`climbContactCount` が 0 より大きいかを返す。",
+   "getMainRigidbodyVelocity()": "`mainRigidbody.linearVelocity` を返すだけ。",
+   "getMainRigidbodyPosition()": "`mainRigidbody.position` を返すだけ。",
+   "getLastClimbNormal()": "`lastClimbNormal` を返すだけ。",
+   "getContactNormal()": "`contactNormal` を返すだけ。",
+   "setNewParent(Transform newParent)": "`transform.SetParent(newParent)` を呼ぶだけ。"
+  }
+ },
+ {
+  "type": "paragliderSystem",
+  "summary": "パラグライダーで滑空するモードを提供する `externalControllerBehavior`。重力と上昇力を調整して落下を緩め、カメラや接地アニメーションも切り替える。",
+  "methods": {
+   "enableOrDisableParagliderMode(bool state)": "滑空状態を切り替え、外部コントローラ、airID、イベント、スローフォール、重力の保存/復元、接地アニメーションを更新する。",
+   "inputToggletParagliderActiveState()": "滑空中なら終了し、そうでなければ判定フラグを反転して開始/終了を要求する。",
+   "inputSetParagliderActiveState(bool state)": "地上・FF/無重力・壁走り・水泳・運転・空中外部動作中は中止し、直近停止時間を確認してから判定コルーチンを開始/終了する。",
+   "stopCheckingToActivateParagliderCoroutine()": "`checkingToActivateCoroutine` が null でなければ停止するだけ。",
+   "setParagliderModePausedState(bool state)": "true かつ滑空中なら終了し、`paragliderModePaused` を設定する。",
+   "setUseLastTimeParagliderPauseActive(float newDuration)": "再使用禁止フラグを立て、現在時刻と指定時間を保存する。",
+   "setParagliderModeEnabledState(bool state)": "滑空中なら終了してから `paragliderModeEnabled` を設定する。",
+   "setOriginalParagliderModeEnabledState()": "保存値 `originalParagliderModeEnabled` で有効状態を戻す。",
+   "setParagliderModeEnabledStateFromEditor(bool state)": "値を設定してから `updateComponent` を呼ぶ。"
+  }
+ },
+ {
+  "type": "IKFootSystem",
+  "summary": "足のIKコンポーネント。脚の長さと足のオフセット初期値を算出し、接地レイキャストに合わせて足と腰の位置を補正する。",
+  "methods": {
+   "calculateInitialFootValues()": "左右の脚のオフセットと最大長を求め、腰位置を保存し、開始時に無効ならコンポーネントを無効化する。",
+   "getNewRaycastPosition(Vector3 targetTransformPosition, Vector3 lowerLegPosition, out float newDistance)": "対象位置とすね位置をローカル化し、高さ差を `newDistance` で返し、すねの高さに合わせたワールド位置を返す。",
+   "setIKFootPausedState(bool state)": "`IKFootPaused` を設定するだけ。",
+   "setLegsInfo(Transform newHips, Transform rightLowerLeg, Transform leftLowerLeg, Transform rightFoot, Transform leftFoot, Transform rightToes, Transform leftToes)": "腰と左右のすね・足・つま先を該当する `legInfo` に振り分けて設定し、`updateComponent` を呼ぶ。",
+   "setIKFootSystemEnabledState(bool state)": "有効フラグを設定し、必要なら再生中にコンポーネントを有効化する。",
+   "setIKFootSystemEnabledStateFromEditor(bool state)": "値を設定してから `updateComponent` を呼ぶ。",
+   "updateComponent()": "`GKC_Utils.updateComponent(this)` を呼ぶだけ。"
+  }
+ },
+ {
+  "type": "characterModelListManager",
+  "summary": "キャラクターモデルをリストから差し替えるコンポーネント。ID・名前・前後移動で選択し、BuildPlayer 経由でモデルの再構築、装備、身長、ラグドール設定を更新する。",
+  "methods": {
+   "getCurrentCharacterModelID()": "プレイヤーがいればそのモデルID、なければ `currentCharacterModelID` を返す。",
+   "replaceCharacterModelByID(int id)": "IDが一致するモデルを探し、その名前で `replaceCharacterModel` を呼ぶ。",
+   "replaceCharacterModel()": "`currentCharacterModelName` を引数に `replaceCharacterModel` を呼ぶだけ。",
+   "replaceCharacterModel(string name)": "同名なら中止し、旧モデルのイベント、生成、Animator・ボーン・装備・身長の更新、各種イベントを行う。",
+   "setNextCharacterModel()": "`setNextOrPreviousCharacterModel(true)` を呼ぶだけ。",
+   "setPreviousCharacterModel()": "`setNextOrPreviousCharacterModel(false)` を呼ぶだけ。",
+   "setNextOrPreviousCharacterModel(bool state)": "インデックスを前後へ循環させ、名前で `replaceCharacterModel` を呼ぶ。"
+  }
+ },
+ {
+  "type": "doubleJumpAnimationTrigger",
+  "summary": "通常ジャンプと二段ジャンプの際に、Animator のトリガーを送って専用アニメーションを再生するコンポーネント。状態に応じて再生可否を判定する。",
+  "methods": {
+   "activateGroundJumpAnimation()": "無視フラグや無効時は何もせず、カスタムキャラや外部ジャンプなら中止し、移動中かどうかで移動/停止用トリガーを送る。",
+   "activateDoubleJumpAnimation()": "FBA・武器・カスタム・移動不可・調整中・再使用待ちなら中止し、頭追従を止めてトリガーを送る。",
+   "setIgnoreGroundJumpAnimationActiveState(bool state)": "`ignoreGroundJumpAnimationActive` を設定するだけ。",
+   "setGroundJumpAnimationEnabledState(bool state)": "`groundJumpAnimationEnabled` を設定するだけ。",
+   "setDoubleJumpAnimationEnabledState(bool state)": "`doubleJumpAnimationEnabled` を設定するだけ。",
+   "setGroundJumpAnimationEnabledStateFromEditor(bool state)": "値を設定してから `updateComponent` を呼ぶ。",
+   "setDoubleJumpAnimationEnabledStateFromEditor(bool state)": "値を設定してから `updateComponent` を呼ぶ。"
+  }
+ },
+ {
+  "type": "adjustCharacterHeightSystem",
+  "summary": "キャラクターの身長に合わせて、モデル/カプセル/武器/カメラピボット/追加コライダーなどを一括調整するコンポーネント。エディタと実行時の両方で使える。",
+  "methods": {
+   "adjustHeightValueInRuntime()": "実行中フラグを立てて身長・カメラ・武器スケールを調整し、設定時は武器オフセットと参照位置も調整してフラグを戻す。",
+   "adjustHeightValue()": "モデル、マウントポイント、武器、カプセル、頭追従、NavMesh、追加コライダー、近接設定をまとめて更新する。",
+   "adjustFireWeaponsScale()": "設定時、全射撃武器のメッシュスケールを設定し、エディタ時は `updateComponent` を呼ぶ。",
+   "adjustFireWeaponsOffset()": "三人称オフセット値を設定して全射撃武器の位置を調整し、エディタ時は `updateComponent` を呼ぶ。",
+   "adjustFireWeaponsTransformReferences()": "全射撃武器の参照Transform位置をスケールで調整し、エディタ時は更新する。",
+   "adjustCameraStates()": "カメラ状態ごとのピボットYを身長割合から再計算し、現在のカメラ状態のピボット位置にも反映する。"
+  }
+ },
+ {
+  "type": "freeFallCharacterActivator",
+  "summary": "落下速度に応じてフリーフォール状態へ切り替えるコンポーネント。落下ターボや通常状態への復帰、開始判定のリセットを扱う。",
+  "methods": {
+   "disableFreeFallActiveState()": "リセットフラグを false にし、`setFreeFallState(false)` を呼ぶ。",
+   "setFreeFallPausedState(bool state)": "false かつフリーフォール中なら通常値へ戻して停止し、`freeFallPaused` を設定する。",
+   "checkFallSpeed()": "最低落下速度の使用時のみ縦速度と比較した結果を返し、未使用なら常に true を返す。",
+   "setResetCheckOnFreeFallActiveState(bool state)": "`resetCheckOnFreeFallActive` を設定するだけ。",
+   "inputEnableOrDisableFallTurbo(bool state)": "落下ターボが有効かつフリーフォール中なら `setTurboState` を呼ぶ。",
+   "stopFreeFallStateIfActive()": "フリーフォール中なら通常値へ戻し、`disableFreeFallActiveState` を呼ぶ。"
+  }
+ },
+ {
+  "type": "characterPropertiesSystem",
+  "summary": "キャラクターに付与された状態（炎上・毒など）の有効化をまとめるコンポーネント。名前が一致する `characterStateAffectedInfo` へ処理を委譲する。",
+  "methods": {
+   "activateStateAffected(string stateName, float stateDuration, float stateAmount)": "名前一致かつ有効な項目へ、時間と量を渡して状態を有効化する。",
+   "activateStateAffected(string stateName)": "`activateOrDeactivateStateAffected(stateName, true)` を呼ぶだけ。",
+   "deactivateStateAffected(string stateName)": "`activateOrDeactivateStateAffected(stateName, false)` を呼ぶだけ。",
+   "activateOrDeactivateStateAffected(string stateName, bool state)": "全体有効時、名前一致かつ有効な項目へ bool 版の `activateStateAffected` を渡す。",
+   "getCharacterStateAffectedInfoByName(string stateName)": "名前が一致する `characterStateAffectedInfo` を返し、無ければ null を返す。",
+   "getCharacterStateAffectedInfoGameObjectByName(string stateName)": "名前一致の状態情報の `gameObject` を返し、無ければ null を返す。"
+  }
+ },
+ {
+  "type": "remotePlayerNavmeshOverride",
+  "summary": "リモートプレイヤーのNavMesh目的地や有効状態を外部から操作するためのプロキシ。処理は `mainPlayerNavMeshSystem` へ委譲する。",
+  "methods": {
+   "setPlayerNavMeshWaypointTargetPosition(List<Transform> waypointList)": "`mainPlayerNavMeshSystem.setNewWaypointList` にウェイポイントリストを渡すだけ。",
+   "setPlayerNavMeshTransformTargetPosition(Transform newTransformPosition)": "指定Transformの位置でレイキャスト位置チェックを呼ぶ。",
+   "setPlayerNavMeshTargetPosition()": "自身の位置でレイキャスト位置チェックを呼ぶ。",
+   "enablePlayerNavMeshState()": "`setPlayerNavMeshEnabledState(true)` を呼ぶだけ。",
+   "disablePlayerNavMeshState()": "`setPlayerNavMeshEnabledState(false)` を呼ぶだけ。",
+   "setPlayerNavMeshEnabledState(bool state)": "外部使用フラグとNavMesh有効状態を設定し、`playerNavMeshActive` を更新する。"
+  }
+ },
+ {
+  "type": "freeClimbZoneSystem",
+  "summary": "フリークライム可能なゾーン。プレイヤーがトリガーへ入退場したときにクライム検出の有効化と自動掴みを行い、親子付けの設定も公開する。",
+  "methods": {
+   "checkTriggerInfo(Collider col, bool isEnter)": "ゾーン有効かつタグ一致時、入場ならクライム検出を有効化して設定に応じ自動で掴み、退場なら設定に応じ検出を無効化する。",
+   "checkPlayerParentState()": "子化設定が有効なら親Transformを、無効なら null を返す。",
+   "isIgnoreSurfaceToClimbEnabled()": "`ignoreSurfaceToClimbEnabled` を返すだけ。",
+   "setIgnoreSurfaceToClimbEnabledState(bool state)": "`ignoreSurfaceToClimbEnabled` を設定するだけ。",
+   "isAllowClimbSurfaceOnInputEnabled()": "`allowClimbSurfaceOnInputEnabled` を返すだけ。"
+  }
+ },
+ {
+  "type": "externalControllerBehaviorManager",
+  "summary": "名前付きの外部コントローラ動作を一括管理するコンポーネント。動作開始時に武器を退避し入力を止め、終了時に武器やIKを復帰させる。",
+  "methods": {
+   "setExternalControllerActive(string nameToCheck)": "`setExternalControllerState(nameToCheck, true)` を呼ぶだけ。",
+   "setExternalControllerDeactive(string nameToCheck)": "`setExternalControllerState(nameToCheck, false)` を呼ぶだけ。",
+   "setExternalControllerState(string nameToCheck, bool state)": "名前一致の項目を探し、入力の一時停止、状態イベント、射撃停止・武器退避/IK、近接武器の保持や終了時の描画を行う。",
+   "checkInputListToPauseDuringAction(List<playerActionSystem.inputToPauseOnActionIfo> inputList, bool state)": "state なら各入力の現在状態を保存して無効化し、false なら保存状態が有効だった入力を復帰させる。"
+  }
+ },
+ {
+  "type": "remotePlayerNavmeshOverrideSystem",
+  "summary": "シーン内の `remotePlayerNavmeshOverride` を探して、リモートプレイヤーのNavMesh有効化と目的地（ウェイポイントまたはTransform）を設定する。",
+  "methods": {
+   "setRemoteNavmeshState()": "`activateNavmesh` を引数に `setRemoteNavmeshStateExternally` を呼ぶだけ。",
+   "setRemoteNavmeshStateExternally(bool state)": "true なら有効化、false なら無効化のメソッドを呼ぶ。",
+   "activateRemoteNavmesh()": "参照が無ければ `FindObjectOfType` で取得し、有効化したうえでウェイポイントか対象Transformを設定する。",
+   "disableRemoteNavmesh()": "参照を確保してNavMeshを無効化し、ウェイポイント使用時はリストを null にする。"
+  }
+ },
+ {
+  "type": "playerSphereModeSystem",
+  "summary": "プレイヤーが球体になって転がる「スフィアモード」への切替を扱う。車両情報を選択し、状態変更コルーチンを起動する。",
+  "methods": {
+   "setCurrentVehicleInfo(string newVehicleInfoName)": "名前一致の車両情報を現在に設定し、他の項目を解除して必要なら球体モードを終了、選択イベントを送出する。",
+   "toggleSphereModeActiveState()": "`usingSphereMode` を反転して `setSphereModeActiveState` に渡すだけ。",
+   "setSphereModeActiveState(bool state)": "有効かつ使用可能なら、車両状態変更コルーチンを開始する。"
+  }
+ },
+ {
+  "type": "rollOnLandingSystem",
+  "summary": "空中で入力すると着地時にローリングする「着地ロール」を扱う。入力の受付時間と空中時間を判定し、コルーチンでロールを実行する。",
+  "methods": {
+   "setCancelCheckRollOnLandingOnceActive(bool state)": "キャンセルフラグを設定し、`lastTimeCancelCheckRoll` に現在時刻を記録する。",
+   "inputActivateRollOnLanding()": "直後0.7秒・接地中・各種条件では中止し、問題なければロールを開始する。",
+   "inputDeactivateRollOnLanding()": "無効時や接地中は何もせず、そうでなければロールコルーチンを停止する。"
+  }
+ },
+ {
+  "type": "AIMountManager",
+  "summary": "AIの乗り物（マウント）を呼び出したりテレポートさせたりする管理コンポーネント。プレイヤーとの距離に応じてリモートイベントを送る。",
+  "methods": {
+   "assignCurrentMountGameObject(GameObject newObject)": "機能有効時のみ `assignCurrentMountGameObjectCoroutine(newObject)` を開始する。",
+   "removeCurrentMountGameObject()": "割当済みならマウントとプレイヤーの参照を null にし、フラグと時刻をリセットする。",
+   "callCurrentMount()": "距離に応じてリモートイベント送信かテレポートを行い、実行時に呼び出しイベントを送出する。"
+  }
+ },
+ {
+  "type": "customCharacterControllerBaseBuilder",
+  "summary": "カスタムキャラクターコントローラへ設定リストを適用するビルダー。設定ごとの UnityEvent を呼び、対象コンポーネントを更新する。",
+  "methods": {
+   "adjustSettingsFromEditor()": "`adjustSettings()` を呼ぶだけ。",
+   "adjustSettings()": "カテゴリごとに設定リストを適用し、最後にコントローラのコンポーネントを更新する。",
+   "adjustSettingsFromList(List<buildPlayer.settingsInfo> settingsList)": "有効な設定のイベントを送って対象を更新し、最後にシーンをダーティにする。"
+  }
+ },
+ {
+  "type": "characterStateAffectedInfo",
+  "summary": "キャラクターに付与する状態効果の基底クラス。実際の効果は派生クラスが仮想メソッドを上書きして実装する。",
+  "methods": {
+   "activateStateAffected(float stateDuration, float stateAmount)": "中身が空の仮想メソッドで、派生クラスが時間と量を受け取って効果を実装する。",
+   "activateStateAffected(bool state)": "中身が空の仮想メソッドで、派生クラスが有効/無効を実装する。",
+   "isStateAffectedActive()": "`stateAffectedActive` の値を返すだけ。"
+  }
+ },
+ {
+  "type": "playerIdleSystem",
+  "summary": "待機（idle）アニメーションの開始/停止と、再生するidleのインデックスを管理するコンポーネント。",
+  "methods": {
+   "activateIdle()": "`playIdle()` を呼ぶだけ。",
+   "deactivateIdle()": "`stopIdle()` を呼ぶだけ。",
+   "setIdleIndex(int newValue)": "`currentIdleInfoIndex` を設定し、リスト末尾を超えたら 0 に戻す。"
+  }
+ },
+ {
+  "type": "spriteAnimatorSystem",
+  "summary": "3Dキャラクターを2Dスプライト表示へ切り替えるコンポーネント。Animator と SpriteAnimator、メッシュ、武器表示、ルートモーションを排他的に切り替える。",
+  "methods": {
+   "setSpriteAnimatorActiveState(bool state)": "Animator と SpriteAnimator を排他で切り替え、メッシュ・武器・ルートモーション・表示を更新する。",
+   "checkEventState(bool state)": "開始なら `eventOnSpriteEnabled`、終了なら `eventOnSpriteDisabled` を送出する。",
+   "setSpriteAnimatorActiveStateFromEditor(bool state)": "`setSpriteAnimatorActiveState(state)` を呼ぶだけ。"
+  }
+ },
+ {
+  "type": "characterModelElementInfo",
+  "summary": "差し替え用キャラクターモデルの付加情報を保持するコンポーネント。Animator、人型ボーン、装備データ、身長設定などをまとめ、ボーンを自動取得できる。",
+  "methods": {
+   "getCharacterElements()": "`getCharacterBones` でボーンを取得した後に `updateComponent` を呼ぶ。",
+   "getCharacterBones()": "Animator が無ければ取得し、頭・首・胸・背骨・腰・手足の人型ボーンを各フィールドへ格納する（不足時は警告や親による補正）。"
+  }
+ },
+ {
+  "type": "AddPlayerSpawned",
+  "summary": "生成されたプレイヤーを `playerCharactersManager` に登録する小さなコンポーネント。`Start` で自身を自動登録する。",
+  "methods": {
+   "AddNewPlayerSpawned(GameObject gameObj)": "`gameObj` が null なら自身を使い、プレイヤー管理に登録する。"
+  }
+ },
+ {
+  "type": "climbRopeTriggerMatchSystem",
+  "summary": "縄登り用の入退場トリガーを、プレイヤーの `climbRopeSystem` に登録/解除するマッチング用コンポーネント。",
+  "methods": {
+   "checkTriggerInfo(Collider col, bool isEnter)": "入場で登録、退場で解除するメソッドを呼ぶ。"
+  }
+ },
+ {
+  "type": "climbRopeTriggerSystem",
+  "summary": "縄登りゾーン。プレイヤーが入ると上下端や親子設定を `climbRopeSystem` に渡して開始し、退場時に解除する。",
+  "methods": {
+   "checkTriggerInfo(Collider col, bool isEnter)": "入場時にトリガー・親子設定・上下端・開始状態・アクションIDを設定し、退場時に子化解除・停止・端点クリア・ID復元を行う。"
+  }
+ },
+ {
+  "type": "portableClimbRopeTriggerSystem",
+  "summary": "設置型の縄の長さと向きを自動調整するコンポーネント。表面の有無や傾斜を確認し、レイキャスト結果に合わせてロープを伸縮させる。",
+  "methods": {
+   "activateClimbRopeTrigger()": "表面確認後にレイキャストで上下端を決め、距離に応じたスケールと向きを設定する。"
+  }
+ },
+ {
+  "type": "portableWalkOnBalanceTriggerSystem",
+  "summary": "設置型のバランス足場。表面の傾斜や位置に合わせて自身の向きを調整し、レイキャストで足場の長さをスケールさせる。",
+  "methods": {
+   "activateWalkOnBalanceTrigger()": "表面に合わせて姿勢を決め、前方レイキャストの距離で足場を伸縮させる。"
+  }
+ },
+ {
+  "type": "railTriggerSystem",
+  "summary": "レールモードの開始/終了トリガー。入場時にスプラインと移動時間を渡し、退場時にレールを解除する。",
+  "methods": {
+   "checkTriggerInfo(Collider col, bool isEnter)": "入場時にスプライン・時間・レール開始・方向反転設定を渡し、退場時にレール停止・スプライン解除・設定復元を行う。"
+  }
+ },
+ {
+  "type": "simpleWaypointSystem",
+  "summary": "ウェイポイントの Transform リストを保持して公開するだけのコンポーネント。",
+  "methods": {
+   "getWayPoints()": "`wayPoints` リストをそのまま返すだけ。"
+  }
+ },
+ {
+  "type": "slideZoneSystem",
+  "summary": "スライド（滑走）ゾーンのトリガー。入場時にスライド設定をプレイヤーへ渡し、退場時にスライドを終了させる。",
+  "methods": {
+   "checkTriggerInfo(Collider col, bool isEnter)": "入場時に各種スライド設定を渡して検出を開始し、退場時に検出停止とTransform解除を行う。"
+  }
+ },
+ {
+  "type": "swimTriggerSystem",
+  "summary": "水泳ゾーンのトリガー。プレイヤーの泳ぎ状態を開始/終了させ、車両が水に入った際の処理も行う。",
+  "methods": {
+   "checkTriggerInfo(Collider col, bool isEnter)": "入場時に泳ぎを開始し、退場時に最後のトリガーなら終了する。車両には水没処理も行う。"
+  }
+ },
+ {
+  "type": "walkOnBalanceTriggerSystem",
+  "summary": "バランス移動ゾーンのトリガー。入場時にウェイポイントや親子設定をプレイヤーへ渡して移動を開始し、退場時に解除する。",
+  "methods": {
+   "checkTriggerInfo(Collider col, bool isEnter)": "入場時に移動設定を渡して開始し、退場時に解除してジャンプ設定を戻す。"
+  }
+ },
+ {
+  "type": "wallSlideJumpZoneSystem",
+  "summary": "壁スライド用ゾーンのトリガー。入場時に滑り落ち速度と減速設定を適用して検出を有効化し、退場時に元へ戻す。",
+  "methods": {
+   "checkTriggerInfo(Collider col, bool isEnter)": "入場時に滑り落ち速度倍率と表面減速を設定して壁スライド検出を有効化し、退場時に倍率1・減速なし・検出無効へ戻す。"
+  }
+ },
+ {
+  "type": "setCustomCharacterStateTriggerSystem",
+  "summary": "トリガーに入ったプレイヤーのカスタムキャラクター状態を切り替えるコンポーネント。通常キャラに戻すか、指定名の状態を適用する。",
+  "methods": {
+   "checkCustomCharacterToActivate(GameObject newCharacterGameObject)": "通常キャラ設定ならカスタム状態を解除し、そうでなければ指定名の状態を設定する。"
+  }
+ },
+ {
+  "type": "spiderCharacterController",
+  "summary": "蜘蛛型のカスタムキャラクターコントローラ。`vehicleController` を継承し、蜘蛛固有の入力停止フラグを持つ。",
+  "methods": {
+   "setPauseSpiderInputState(bool state)": "`pauseSpiderInput` を設定するだけ。"
+  }
+ },
+ {
+  "type": "wolfCharacterController",
+  "summary": "狼型のカスタムキャラクターコントローラ。`vehicleController` を継承し、表面へ向けたモデルの回転や位置補正を行う。",
+  "methods": {
+   "setCharacterPivotTransform(Transform newTransform)": "`characterPivotTransform` を設定するだけ。"
+  }
+ },
+ {
+  "type": "setCharacterAffectedState",
+  "summary": "衝突したプレイヤーへ状態効果を付与する小さなコンポーネント。対象の `characterPropertiesSystem` に名前・時間・量を渡す。",
+  "methods": {
+   "checkObjectDetected(GameObject objectToDamage)": "対象から `characterPropertiesSystem` を取得し、名前・時間・量で状態を有効化する。"
+  }
+ },
+ {
+  "type": "stairAdherenceSystem",
+  "summary": "階段の昇降判定値をプレイヤーへ適用する小さなコンポーネント。最小/最大値と地面吸着力を渡す。",
+  "methods": {
+   "setStairsValuesOnPlayer(playerController newPlayerController)": "`setStairsValues` に最小値・最大値・地面吸着力を渡すだけ。"
+  }
+ }
+]

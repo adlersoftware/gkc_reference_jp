@@ -1,0 +1,1 @@
+# Simple Sniper Sight Manager

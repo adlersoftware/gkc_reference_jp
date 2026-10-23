@@ -1,0 +1,428 @@
+[
+ {
+  "type": "playerWeaponSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\playerWeaponSystem.cs",
+  "methods": [
+   {
+    "sig": "initializeComponents()",
+    "line": 284
+   },
+   {
+    "sig": "isWeaponUpdateActive()",
+    "line": 410
+   },
+   {
+    "sig": "activateWeaponUpdate()",
+    "line": 415
+   },
+   {
+    "sig": "stopActivateWeaponUpdate()",
+    "line": 428
+   },
+   {
+    "sig": "setWeaponCarryStateAtOnce(bool state)",
+    "line": 562
+   },
+   {
+    "sig": "setWeaponCarryState(bool thirdPersonCarry, bool firstPersonCarry)",
+    "line": 568
+   },
+   {
+    "sig": "setPauseDrawKeepWeaponSound()",
+    "line": 615
+   },
+   {
+    "sig": "setWeaponAimState(bool thirdPersonAim, bool firstPersonAim)",
+    "line": 620
+   },
+   {
+    "sig": "checkWeaponDrawEvents()",
+    "line": 670
+   },
+   {
+    "sig": "checkWeaponDrawEventsOnFullBodyAwarenessChangeState()",
+    "line": 709
+   },
+   {
+    "sig": "checkWeaponAimEvents()",
+    "line": 730
+   },
+   {
+    "sig": "checkWeaponEventsAfterReload()",
+    "line": 770
+   },
+   {
+    "sig": "setIgnoreSniperSightActiveState(bool state)",
+    "line": 780
+   },
+   {
+    "sig": "checkSniperSightUsedOnWeapon()",
+    "line": 789
+   },
+   {
+    "sig": "setFullBodyAwarenessActiveState(bool state)",
+    "line": 808
+   },
+   {
+    "sig": "getIKWeaponSystem()",
+    "line": 813
+   },
+   {
+    "sig": "weaponIsMoving()",
+    "line": 818
+   },
+   {
+    "sig": "isWeaponOnRecoil()",
+    "line": 823
+   },
+   {
+    "sig": "isAimingWeapon()",
+    "line": 828
+   },
+   {
+    "sig": "isAimingInThirdPerson()",
+    "line": 833
+   },
+   {
+    "sig": "carryingWeapon()",
+    "line": 838
+   },
+   {
+    "sig": "isShootingBurst()",
+    "line": 843
+   },
+   {
+    "sig": "resetLastAmountOfFiredProjectiles()",
+    "line": 850
+   },
+   {
+    "sig": "getLastAmountOfFiredProjectiles()",
+    "line": 855
+   },
+   {
+    "sig": "checkEventsOnWeaponInput(bool shootAtKeyDown)",
+    "line": 860
+   },
+   {
+    "sig": "shootWeapon(bool isThirdPersonView, bool shootAtKeyDown, bool fullbodyAwarenessActive)",
+    "line": 875
+   },
+   {
+    "sig": "checkWeaponCameraShake()",
+    "line": 1391
+   },
+   {
+    "sig": "checkMeleeAttackShakeInfo()",
+    "line": 1396
+   },
+   {
+    "sig": "checkWeaponAbility(bool keyDown)",
+    "line": 1409
+   },
+   {
+    "sig": "checkWeaponAbilityHoldButton()",
+    "line": 1436
+   },
+   {
+    "sig": "canUseSecondaryAction()",
+    "line": 1445
+   },
+   {
+    "sig": "activateSecondaryAction()",
+    "line": 1466
+   },
+   {
+    "sig": "activateSecondaryActionOnDownPress()",
+    "line": 1477
+   },
+   {
+    "sig": "activateSecondaryActionOnUpPress()",
+    "line": 1488
+   },
+   {
+    "sig": "activateSecondaryActionOnUpHold()",
+    "line": 1499
+   },
+   {
+    "sig": "activateForwardAcion()",
+    "line": 1510
+   },
+   {
+    "sig": "activateBackwardAcion()",
+    "line": 1519
+   },
+   {
+    "sig": "checkEventsOnWeaponActivatedOrDeactivated(bool state)",
+    "line": 1528
+   },
+   {
+    "sig": "removeLocatedEnemiesIcons()",
+    "line": 1542
+   },
+   {
+    "sig": "updateProjectileInfoValues()",
+    "line": 1743
+   },
+   {
+    "sig": "setProjectileInfoAssignedValue(bool state)",
+    "line": 1750
+   },
+   {
+    "sig": "setSeekerProjectileInfo(Vector3 shootPosition)",
+    "line": 1755
+   },
+   {
+    "sig": "setProjectileSpread()",
+    "line": 1765
+   },
+   {
+    "sig": "createShells()",
+    "line": 1805
+   },
+   {
+    "sig": "createShellsWithDelay()",
+    "line": 1816
+   },
+   {
+    "sig": "checkDroppedShellsRemoval()",
+    "line": 1910
+   },
+   {
+    "sig": "playSound(AudioElement clipSound)",
+    "line": 2010
+   },
+   {
+    "sig": "pauseOrResumePlaySoundOnWeapon(bool state)",
+    "line": 2030
+   },
+   {
+    "sig": "getAudioSourceFromPool()",
+    "line": 2035
+   },
+   {
+    "sig": "setAmmoValues()",
+    "line": 2114
+   },
+   {
+    "sig": "useAmmo()",
+    "line": 2136
+   },
+   {
+    "sig": "useAmmo(int amount)",
+    "line": 2150
+   },
+   {
+    "sig": "updateAmmoInfo()",
+    "line": 2164
+   },
+   {
+    "sig": "reloadSingleProjectile()",
+    "line": 2269
+   },
+   {
+    "sig": "checkToUpdateInventoryWeaponAmmoTextFromWeaponSystem()",
+    "line": 2329
+   },
+   {
+    "sig": "checkToUpdateInventoryWeaponAmmoTextByWeaponNumberKey()",
+    "line": 2334
+   },
+   {
+    "sig": "setInitialProjectilesInMagazine(int newProjectilesInMagazine)",
+    "line": 2339
+   },
+   {
+    "sig": "getProjectilesInMagazine()",
+    "line": 2346
+   },
+   {
+    "sig": "setRemainAmmoAmount(int newRemainAmmoAmount)",
+    "line": 2351
+   },
+   {
+    "sig": "setIgnoreReloadAnimationAndDelayActiveState(bool state)",
+    "line": 2366
+   },
+   {
+    "sig": "setIgnoreUseAmmoActiveState(bool state)",
+    "line": 2373
+   },
+   {
+    "sig": "reloadWeapon()",
+    "line": 2378
+   },
+   {
+    "sig": "stopReloadCoroutine()",
+    "line": 2395
+   },
+   {
+    "sig": "cancelReloadIfActive()",
+    "line": 2402
+   },
+   {
+    "sig": "stopReloadAction()",
+    "line": 2414
+   },
+   {
+    "sig": "isWeaponReloading()",
+    "line": 2429
+   },
+   {
+    "sig": "canUseReloadAnimation()",
+    "line": 2434
+   },
+   {
+    "sig": "manualReload()",
+    "line": 2605
+   },
+   {
+    "sig": "setReloadingWithAnimationActiveState(bool state)",
+    "line": 2614
+   },
+   {
+    "sig": "isReloadingWithAnimationActive()",
+    "line": 2619
+   },
+   {
+    "sig": "enableHUD(bool state)",
+    "line": 2626
+   },
+   {
+    "sig": "enableHUDTemporarily(bool state)",
+    "line": 2663
+   },
+   {
+    "sig": "changeHUDPosition(bool thirdPerson)",
+    "line": 2684
+   },
+   {
+    "sig": "getWeaponHUDGameObject()",
+    "line": 2721
+   },
+   {
+    "sig": "canIncreaseRemainAmmo()",
+    "line": 2726
+   },
+   {
+    "sig": "hasMaximumAmmoAmount()",
+    "line": 2735
+   },
+   {
+    "sig": "hasAmmoLimit()",
+    "line": 2748
+   },
+   {
+    "sig": "ammoAmountToMaximumLimit()",
+    "line": 2753
+   },
+   {
+    "sig": "getAmmo(int amount)",
+    "line": 2759
+   },
+   {
+    "sig": "useRemainAmmo(int amount)",
+    "line": 2791
+   },
+   {
+    "sig": "addAuxRemainAmmo(int amount)",
+    "line": 2804
+   },
+   {
+    "sig": "hasAnyAmmo()",
+    "line": 2809
+   },
+   {
+    "sig": "getAndUpdateAmmo(int amount)",
+    "line": 2817
+   },
+   {
+    "sig": "remainAmmoInClip()",
+    "line": 2823
+   },
+   {
+    "sig": "launchCurrentProjectile(GameObject currentProjectile, Rigidbody projectileRigidbody, Vector3 cameraDirection)",
+    "line": 2828
+   },
+   {
+    "sig": "checkParableTrayectory(bool usingThirdPerson, bool usingFirstPerson)",
+    "line": 2893
+   },
+   {
+    "sig": "setCurrentWeaponState(bool state)",
+    "line": 2914
+   },
+   {
+    "sig": "getWeaponParent()",
+    "line": 2933
+   },
+   {
+    "sig": "getWeaponsParent()",
+    "line": 2938
+   },
+   {
+    "sig": "getMainCameraTransform()",
+    "line": 2947
+   },
+   {
+    "sig": "setReducedVelocity(float multiplierValue)",
+    "line": 2952
+   },
+   {
+    "sig": "setNormalVelocity()",
+    "line": 2957
+   },
+   {
+    "sig": "getWeaponSystemAmmoName()",
+    "line": 2962
+   },
+   {
+    "sig": "getWeaponSystemName()",
+    "line": 2967
+   },
+   {
+    "sig": "getWeaponNumberKey()",
+    "line": 2972
+   },
+   {
+    "sig": "getOriginalWeaponNumberKey()",
+    "line": 2977
+   },
+   {
+    "sig": "getWeaponClipSize()",
+    "line": 2982
+   },
+   {
+    "sig": "getWeaponOriginalClipSize()",
+    "line": 2987
+   },
+   {
+    "sig": "getMagazineSize()",
+    "line": 2997
+   },
+   {
+    "sig": "isCurrentMagazineEmpty()",
+    "line": 3002
+   },
+   {
+    "sig": "isRemainAmmoEmpty()",
+    "line": 3007
+   },
+   {
+    "sig": "getCurrentAmmoText()",
+    "line": 3012
+   },
+   {
+    "sig": "getAllRemainAmmoOnWeapon()",
+    "line": 3021
+   },
+   {
+    "sig": "getRegularRemainAmmo()",
+    "line": 3030
+   },
+   {
+    "sig": "getWeaponIcon()",
+    "line": 3035
+   }
+  ]
+ }
+]

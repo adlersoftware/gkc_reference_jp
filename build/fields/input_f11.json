@@ -1,0 +1,984 @@
+[
+ {
+  "type": "health",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Health\\health.cs",
+  "source": "Health/health.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "invincible",
+    "label": "",
+    "section": "Main Health Settings"
+   },
+   {
+    "field": "healthAmount",
+    "label": "",
+    "section": "Main Health Settings"
+   },
+   {
+    "field": "maxHealthAmount",
+    "label": "",
+    "section": "Main Health Settings"
+   },
+   {
+    "field": "generalDamageMultiplerEnabled",
+    "label": "",
+    "section": "Damage Multiplier Settings"
+   },
+   {
+    "field": "generalDamageMultiplerActive",
+    "label": "",
+    "section": "Damage Multiplier Settings"
+   },
+   {
+    "field": "generalDamageMultiplier",
+    "label": "",
+    "section": "Damage Multiplier Settings"
+   },
+   {
+    "field": "regenerateHealth",
+    "label": "",
+    "section": "Regenerate Health Settings"
+   },
+   {
+    "field": "constantRegenerate",
+    "label": "",
+    "section": "Regenerate Health Settings"
+   },
+   {
+    "field": "regenerateTime",
+    "label": "",
+    "section": "Regenerate Health Settings"
+   },
+   {
+    "field": "regenerateSpeed",
+    "label": "",
+    "section": "Regenerate Health Settings"
+   },
+   {
+    "field": "regenerateAmount",
+    "label": "",
+    "section": "Regenerate Health Settings"
+   },
+   {
+    "field": "useShield",
+    "label": "",
+    "section": "Main Shield Settings"
+   },
+   {
+    "field": "mainShieldSystem",
+    "label": "",
+    "section": "Main Shield Settings"
+   },
+   {
+    "field": "playerStatsManager",
+    "label": "",
+    "section": "Health Stat Settings"
+   },
+   {
+    "field": "healthStatName",
+    "label": "",
+    "section": "Health Stat Settings"
+   },
+   {
+    "field": "maxHealthStatName",
+    "label": "",
+    "section": "Health Stat Settings"
+   },
+   {
+    "field": "useDamageHitReaction",
+    "label": "",
+    "section": "Damage Hit Reaction Settings"
+   },
+   {
+    "field": "sendDamageToReactionSystemIfShieldSystemActive",
+    "label": "",
+    "section": "Damage Hit Reaction Settings"
+   },
+   {
+    "field": "mainDamageHitReactionSystem",
+    "label": "",
+    "section": "Damage Hit Reaction Settings"
+   },
+   {
+    "field": "useEventsOnDamageBlocked",
+    "label": "",
+    "section": "Block Damage Settings"
+   },
+   {
+    "field": "eventOnDamageBlocked",
+    "label": "",
+    "section": "Block Damage Settings"
+   },
+   {
+    "field": "objectIsCharacter",
+    "label": "",
+    "section": "Others Settings"
+   },
+   {
+    "field": "placeToShootActive",
+    "label": "",
+    "section": "Others Settings"
+   },
+   {
+    "field": "placeToShoot",
+    "label": "",
+    "section": "Others Settings"
+   },
+   {
+    "field": "checkDamageReceiverOnChildrenTransform",
+    "label": "",
+    "section": "Others Settings"
+   },
+   {
+    "field": "damagePrefab",
+    "label": "",
+    "section": "Others Settings"
+   },
+   {
+    "field": "mainManagerName",
+    "label": "",
+    "section": "Others Settings"
+   },
+   {
+    "field": "sendInfoToCharacterCustomizationOnDamageEnabled",
+    "label": "",
+    "section": "Others Settings"
+   },
+   {
+    "field": "ignoreUseHealthAmountOnSpot",
+    "label": "",
+    "section": "Others Settings"
+   },
+   {
+    "field": "useCustomCharacterRadius",
+    "label": "",
+    "section": "Others Settings"
+   },
+   {
+    "field": "customCharacterRadius",
+    "label": "",
+    "section": "Others Settings"
+   },
+   {
+    "field": "useImpactSurface",
+    "label": "",
+    "section": "Impact Surface Settings"
+   },
+   {
+    "field": "mainDecalManagerName",
+    "label": "",
+    "section": "Impact Surface Settings"
+   },
+   {
+    "field": "useEventOnDamageEnabled",
+    "label": "",
+    "section": "Damage Event Settings"
+   },
+   {
+    "field": "eventOnDamage",
+    "label": "",
+    "section": "Damage Event Settings"
+   },
+   {
+    "field": "useEventOnDamageWithAttacker",
+    "label": "",
+    "section": "Damage Event Settings"
+   },
+   {
+    "field": "eventOnDamageWithAttacker",
+    "label": "",
+    "section": "Damage Event Settings"
+   },
+   {
+    "field": "useEventOnDamageWithAmount",
+    "label": "",
+    "section": "Damage Event Settings"
+   },
+   {
+    "field": "eventOnDamageWithAmount",
+    "label": "",
+    "section": "Damage Event Settings"
+   },
+   {
+    "field": "useEventOnDamageWithWeakSpotTransform",
+    "label": "",
+    "section": "Damage Event Settings"
+   },
+   {
+    "field": "eventOnDamageWithWeakSpotTransform",
+    "label": "",
+    "section": "Damage Event Settings"
+   },
+   {
+    "field": "useExtraDamageFunctions",
+    "label": "",
+    "section": "Damage Extra Event Settings"
+   },
+   {
+    "field": "eventDamageTargetOverTimeDuration",
+    "label": "",
+    "section": "Damage Extra Event Settings"
+   },
+   {
+    "field": "useEventOnDamageShield",
+    "label": "",
+    "section": "Shield Damage Event Settings"
+   },
+   {
+    "field": "eventOnDamageShield",
+    "label": "",
+    "section": "Shield Damage Event Settings"
+   },
+   {
+    "field": "useEventOnDamageShieldWithAttacker",
+    "label": "",
+    "section": "Shield Damage Event Settings"
+   },
+   {
+    "field": "eventOnDamageShieldWithAttacker",
+    "label": "",
+    "section": "Shield Damage Event Settings"
+   },
+   {
+    "field": "deadFuncionCall",
+    "label": "",
+    "section": "Death Event Settings"
+   },
+   {
+    "field": "useExtraDeadFunctions",
+    "label": "",
+    "section": "Death Extra Event Settings"
+   },
+   {
+    "field": "delayInExtraDeadFunctions",
+    "label": "",
+    "section": "Death Extra Event Settings"
+   },
+   {
+    "field": "extraDeadFunctionCall",
+    "label": "",
+    "section": "Death Extra Event Settings"
+   },
+   {
+    "field": "useEventWithAttackerOnDeath",
+    "label": "",
+    "section": "Event With Attacker On Death Settings"
+   },
+   {
+    "field": "eventWithAttackerOnDeath",
+    "label": "",
+    "section": "Event With Attacker On Death Settings"
+   },
+   {
+    "field": "resurrectFunctionCall",
+    "label": "",
+    "section": "Resurrect Event Settings"
+   },
+   {
+    "field": "resurrectAfterDelayEnabled",
+    "label": "",
+    "section": "Resurrect After Delay Event Settings"
+   },
+   {
+    "field": "resurrectDelay",
+    "label": "",
+    "section": "Resurrect After Delay Event Settings"
+   },
+   {
+    "field": "eventToResurrectAfterDelay",
+    "label": "",
+    "section": "Resurrect After Delay Event Settings"
+   },
+   {
+    "field": "useEventsOnInvincibleStateChange",
+    "label": "",
+    "section": "Invincible State Change Settings"
+   },
+   {
+    "field": "eventOnInvicibleOn",
+    "label": "",
+    "section": "Invincible State Change Settings"
+   },
+   {
+    "field": "eventOnInvicibleOff",
+    "label": "",
+    "section": "Invincible State Change Settings"
+   },
+   {
+    "field": "useEventOnDamageReceivedWithTemporalInvincibility",
+    "label": "",
+    "section": "Invincible State Change Settings"
+   },
+   {
+    "field": "maxDelayBetweenDamageReceivedAndInvincibilityStateActive",
+    "label": "",
+    "section": "Invincible State Change Settings"
+   },
+   {
+    "field": "eventOnDamageReceivedWithTemporalInvincibility",
+    "label": "",
+    "section": "Invincible State Change Settings"
+   },
+   {
+    "field": "sendAttackerOnEventDamageReceivedWithTemporalInvincibility",
+    "label": "",
+    "section": "Invincible State Change Settings"
+   },
+   {
+    "field": "eventToSendAttackerOnDamageReceivedWithTemporalInvincibility",
+    "label": "",
+    "section": "Invincible State Change Settings"
+   },
+   {
+    "field": "eventToSendCurrentHealthAmount",
+    "label": "",
+    "section": "Events To Send Stats On Save"
+   },
+   {
+    "field": "healthSlider",
+    "label": "",
+    "section": "HUD Health Slider Settings"
+   },
+   {
+    "field": "useCircleHealthSlider",
+    "label": "",
+    "section": "HUD Health Slider Settings"
+   },
+   {
+    "field": "circleHealthSlider",
+    "label": "",
+    "section": "HUD Health Slider Settings"
+   },
+   {
+    "field": "healthSliderText",
+    "label": "",
+    "section": "HUD Health Slider Settings"
+   },
+   {
+    "field": "hideHealthSliderWhenNotDamageReceived",
+    "label": "",
+    "section": "HUD Health Slider Settings"
+   },
+   {
+    "field": "timeToHideHealthSliderAfterDamage",
+    "label": "",
+    "section": "HUD Health Slider Settings"
+   },
+   {
+    "field": "mainHealthSliderParent",
+    "label": "",
+    "section": "HUD Health Slider Settings"
+   },
+   {
+    "field": "hiddenHealthSliderParent",
+    "label": "",
+    "section": "HUD Health Slider Settings"
+   },
+   {
+    "field": "mainHealthSliderTransform",
+    "label": "",
+    "section": "HUD Health Slider Settings"
+   },
+   {
+    "field": "useHealthSlider",
+    "label": "",
+    "section": "Health Slider Settings"
+   },
+   {
+    "field": "enemyHealthSlider",
+    "label": "Health Slider Prefab",
+    "section": "Health Slider Settings"
+   },
+   {
+    "field": "sliderOffset",
+    "label": "",
+    "section": "Health Slider Settings"
+   },
+   {
+    "field": "allyName",
+    "label": "",
+    "section": "Health Slider Settings"
+   },
+   {
+    "field": "allySliderColor",
+    "label": "",
+    "section": "Health Slider Settings"
+   },
+   {
+    "field": "enemyName",
+    "label": "",
+    "section": "Health Slider Settings"
+   },
+   {
+    "field": "enemySliderColor",
+    "label": "",
+    "section": "Health Slider Settings"
+   },
+   {
+    "field": "nameTextColor",
+    "label": "",
+    "section": "Health Slider Settings"
+   },
+   {
+    "field": "enemyTag",
+    "label": "",
+    "section": "Health Slider Settings"
+   },
+   {
+    "field": "friendTag",
+    "label": "",
+    "section": "Health Slider Settings"
+   },
+   {
+    "field": "removeHealthBarSliderOnDeath",
+    "label": "",
+    "section": "Health Slider Settings"
+   },
+   {
+    "field": "healthBarSliderActiveOnStart",
+    "label": "",
+    "section": "Health Slider Settings"
+   },
+   {
+    "field": "setHealthBarAsNotVisibleAtStart",
+    "label": "",
+    "section": "Health Slider Settings"
+   },
+   {
+    "field": "useHealthSlideInfoOnScreen",
+    "label": "",
+    "section": "Health Slider Settings"
+   },
+   {
+    "field": "mainDamageReceiver",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "ragdollManager",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "damageInScreenManager",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "debugDamageSourceTransform",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "mainInventoryCharacterCustomizationSystem",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "notHuman",
+    "label": "",
+    "section": "Main Advanced Settings"
+   },
+   {
+    "field": "showWeakSpotsInScannerMode",
+    "label": "",
+    "section": "Main Advanced Settings"
+   },
+   {
+    "field": "useHealthAmountOnSpotEnabled",
+    "label": "",
+    "section": "Main Advanced Settings"
+   },
+   {
+    "field": "scorchMarkPrefab",
+    "label": "",
+    "section": "Main Advanced Settings"
+   },
+   {
+    "field": "layer",
+    "label": "",
+    "section": "Main Advanced Settings"
+   },
+   {
+    "field": "weakSpotMesh",
+    "label": "",
+    "section": "Main Advanced Settings"
+   },
+   {
+    "field": "weakSpotMeshAlphaValue",
+    "label": "",
+    "section": "Main Advanced Settings"
+   },
+   {
+    "field": "receiveDamageFromCollisionsEnabled",
+    "label": "",
+    "section": "Damage On Collision Settings"
+   },
+   {
+    "field": "minTimeToReceiveDamageOnImpact",
+    "label": "",
+    "section": "Damage On Collision Settings"
+   },
+   {
+    "field": "minVelocityToReceiveDamageOnImpact",
+    "label": "",
+    "section": "Damage On Collision Settings"
+   },
+   {
+    "field": "receiveDamageOnImpactMultiplier",
+    "label": "",
+    "section": "Damage On Collision Settings"
+   },
+   {
+    "field": "haveRagdoll",
+    "label": "",
+    "section": "Ragdoll Settings"
+   },
+   {
+    "field": "activateRagdollOnDamageReceived",
+    "label": "",
+    "section": "Ragdoll Settings"
+   },
+   {
+    "field": "minDamageToEnableRagdoll",
+    "label": "",
+    "section": "Ragdoll Settings"
+   },
+   {
+    "field": "ragdollEvent",
+    "label": "",
+    "section": "Ragdoll Settings"
+   },
+   {
+    "field": "allowPushCharacterOnExplosions",
+    "label": "",
+    "section": "Ragdoll Settings"
+   },
+   {
+    "field": "ragdollCanReceiveDamageOnImpact",
+    "label": "",
+    "section": "Ragdoll Settings"
+   },
+   {
+    "field": "receiveDamageEvenDead",
+    "label": "",
+    "section": "Ragdoll Settings"
+   },
+   {
+    "field": "canBeSedated",
+    "label": "",
+    "section": "Ragdoll Settings"
+   },
+   {
+    "field": "awakeOnDamageIfSedated",
+    "label": "",
+    "section": "Ragdoll Settings"
+   },
+   {
+    "field": "useEventOnSedate",
+    "label": "",
+    "section": "Ragdoll Settings"
+   },
+   {
+    "field": "sedateStartEvent",
+    "label": "",
+    "section": "Ragdoll Settings"
+   },
+   {
+    "field": "sedateEndEvent",
+    "label": "",
+    "section": "Ragdoll Settings"
+   },
+   {
+    "field": "showGizmo",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoLabelColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoRadius",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "alphaColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "labelTextSize",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "useWeakSpots",
+    "label": "",
+    "section": "Weak Spots List"
+   },
+   {
+    "field": "addDamageReceiversToCustomTransformList",
+    "label": "",
+    "section": "Weak Spots List"
+   },
+   {
+    "field": "useEventOnHealthValueList",
+    "label": "",
+    "section": "Events On Health Value Settings"
+   },
+   {
+    "field": "useDamageTypeCheck",
+    "label": "",
+    "section": "Damage Type ID Settings"
+   },
+   {
+    "field": "checkOnlyDamageTypesOnDamageReceived",
+    "label": "",
+    "section": "Damage Type ID Settings"
+   },
+   {
+    "field": "showDamageReceivedDebugInfo",
+    "label": "",
+    "section": "Debug Options"
+   },
+   {
+    "field": "healthAmountToTakeOnEditor",
+    "label": "",
+    "section": "Debug Options"
+   },
+   {
+    "field": "healthAmountToGiveOnEditor",
+    "label": "",
+    "section": "Debug Options"
+   },
+   {
+    "field": "damageTypeExplanation",
+    "label": "",
+    "section": "Critical Damage Settings"
+   }
+  ]
+ },
+ {
+  "type": "hideCharacterFixedPlaceSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Hide System\\hideCharacterFixedPlaceSystem.cs",
+  "source": "Hide System/hideCharacterFixedPlaceSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "cameraTransform",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "pivotTransform",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "cameraPositionTransform",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "canResetCameraRotation",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "canResetCameraPosition",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useCharacterStateIcon",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "visibleCharacterStateName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "notVisibleCharacterStateName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "checkIfDetectedWhileHidden",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "cameraCanRotate",
+    "label": "",
+    "section": "Camera Rotation Settings"
+   },
+   {
+    "field": "rotationSpeed",
+    "label": "",
+    "section": "Camera Rotation Settings"
+   },
+   {
+    "field": "smoothCameraRotationSpeed",
+    "label": "",
+    "section": "Camera Rotation Settings"
+   },
+   {
+    "field": "useSpringRotation",
+    "label": "",
+    "section": "Camera Rotation Settings"
+   },
+   {
+    "field": "springRotationDelay",
+    "label": "",
+    "section": "Camera Rotation Settings"
+   },
+   {
+    "field": "cameraCanMove",
+    "label": "",
+    "section": "Camera Movement Settings"
+   },
+   {
+    "field": "moveCameraSpeed",
+    "label": "",
+    "section": "Camera Movement Settings"
+   },
+   {
+    "field": "smoothMoveCameraSpeed",
+    "label": "",
+    "section": "Camera Movement Settings"
+   },
+   {
+    "field": "useSpringMovement",
+    "label": "",
+    "section": "Camera Movement Settings"
+   },
+   {
+    "field": "springMovementDelay",
+    "label": "",
+    "section": "Camera Movement Settings"
+   },
+   {
+    "field": "hidenEvent",
+    "label": "",
+    "section": "Hide/Visible Event Settings"
+   },
+   {
+    "field": "hideEventDelay",
+    "label": "",
+    "section": "Hide/Visible Event Settings"
+   },
+   {
+    "field": "visbleEvent",
+    "label": "",
+    "section": "Hide/Visible Event Settings"
+   },
+   {
+    "field": "visibleEventDelay",
+    "label": "",
+    "section": "Hide/Visible Event Settings"
+   },
+   {
+    "field": "setHiddenFov",
+    "label": "",
+    "section": "Camera FOV Settings"
+   },
+   {
+    "field": "hiddenFov",
+    "label": "",
+    "section": "Camera FOV Settings"
+   },
+   {
+    "field": "zoomEnabled",
+    "label": "",
+    "section": "Camera FOV Settings"
+   },
+   {
+    "field": "zoomSpeed",
+    "label": "",
+    "section": "Camera FOV Settings"
+   },
+   {
+    "field": "maxZoom",
+    "label": "",
+    "section": "Camera FOV Settings"
+   },
+   {
+    "field": "minZoom",
+    "label": "",
+    "section": "Camera FOV Settings"
+   },
+   {
+    "field": "useMessageWhenUnableToHide",
+    "label": "",
+    "section": "Unable To Hide Message Settings"
+   },
+   {
+    "field": "unableToHideMessage",
+    "label": "",
+    "section": "Unable To Hide Message Settings"
+   },
+   {
+    "field": "showMessageTime",
+    "label": "",
+    "section": "Unable To Hide Message Settings"
+   },
+   {
+    "field": "activateActionScreen",
+    "label": "",
+    "section": "Action Screen Settings"
+   },
+   {
+    "field": "actionScreenName",
+    "label": "",
+    "section": "Action Screen Settings"
+   },
+   {
+    "field": "showGizmo",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "arcGizmoRadius",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoArrowLength",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoArrowAngle",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoArrowColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   }
+  ]
+ },
+ {
+  "type": "hoverBoardWayPoints",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\hoverBoardWayPoints.cs",
+  "source": "Vehicles/hoverBoardWayPoints.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "wayPointElement",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "movementSpeed",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "moveInOneDirection",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "triggerRadius",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "forceAtEnd",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "railsOffset",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "extraScale",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "vehicleTag",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "allowMovementOnBothDirections",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "modifyMovementSpeedEnabled",
+    "label": "",
+    "section": "Modify Speed Settings"
+   },
+   {
+    "field": "maxMovementSpeed",
+    "label": "",
+    "section": "Modify Speed Settings"
+   },
+   {
+    "field": "minMovementSpeed",
+    "label": "",
+    "section": "Modify Speed Settings"
+   },
+   {
+    "field": "modifyMovementSpeed",
+    "label": "",
+    "section": "Modify Speed Settings"
+   },
+   {
+    "field": "showGizmo",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoLabelColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoRadius",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "useHandleForVertex",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "handleRadius",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "handleGizmoColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "showVertexHandles",
+    "label": "",
+    "section": "Gizmo Settings"
+   }
+  ]
+ }
+]

@@ -1,0 +1,520 @@
+[
+ {
+  "type": "objectToPlaceSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Grab Objects\\objectToPlaceSystem.cs",
+  "methods": [
+   {
+    "sig": "getObjectName()",
+    "line": 120
+   },
+   {
+    "sig": "assignPutObjectSystem(putObjectSystem putObjectSystemToAssign)",
+    "line": 125
+   },
+   {
+    "sig": "setObjectPlaceState(bool state)",
+    "line": 130
+   },
+   {
+    "sig": "isObjectPlaced()",
+    "line": 135
+   },
+   {
+    "sig": "isObjectInGrabbedState()",
+    "line": 140
+   },
+   {
+    "sig": "setObjectToPlacedEnabledState(bool state)",
+    "line": 145
+   },
+   {
+    "sig": "isobjectToPlacedEnabled()",
+    "line": 150
+   },
+   {
+    "sig": "canObjectCanCallPlacedEvent()",
+    "line": 155
+   },
+   {
+    "sig": "canObjectCanCallRemovedEvent()",
+    "line": 160
+   },
+   {
+    "sig": "setObjectCanCallPlacedEventState(bool state)",
+    "line": 165
+   },
+   {
+    "sig": "setObjectCanCallRemovedEventState(bool state)",
+    "line": 170
+   },
+   {
+    "sig": "isUseCustomPlaceToPutObjectTransformActive()",
+    "line": 175
+   },
+   {
+    "sig": "getCustomPlaceToPutObjectTransform()",
+    "line": 180
+   },
+   {
+    "sig": "isUseSecondaryObjectToPlaceConnectedEnabled()",
+    "line": 185
+   },
+   {
+    "sig": "isSecondaryObjectToPlaceConnected()",
+    "line": 190
+   },
+   {
+    "sig": "getOtherObjectsToPlaceOnDropName()",
+    "line": 195
+   },
+   {
+    "sig": "isConnectedToOtherObjectToPlace()",
+    "line": 200
+   },
+   {
+    "sig": "setAdjustingObjectToPlaceInProcessState(bool state)",
+    "line": 205
+   },
+   {
+    "sig": "isAdjustingObjectToPlaceInProcess()",
+    "line": 210
+   },
+   {
+    "sig": "removeObjectIfPlaced()",
+    "line": 215
+   },
+   {
+    "sig": "removeObjectIfConnectedToOtherObject()",
+    "line": 232
+   },
+   {
+    "sig": "setObjectInGrabbedState(bool state)",
+    "line": 249
+   },
+   {
+    "sig": "checkToSetStateOnSecondaryObjectToPlaceOnObjectPlaceStateChange(bool state, objectToPlaceSystem originalObjectToPlace)",
+    "line": 299
+   },
+   {
+    "sig": "checkStateOnExtremesDisconnected()",
+    "line": 330
+   },
+   {
+    "sig": "checkStateOnExtremesOnObjectPlaced()",
+    "line": 359
+   },
+   {
+    "sig": "checkNameOnPutObjectSystemToCallEventResult(ref bool result, objectToPlaceSystem originalObjectToPlace)",
+    "line": 380
+   },
+   {
+    "sig": "checkIfExtremeConnected(ref bool result, bool ignoreIfThisObjectPlaced, objectToPlaceSystem originalObjectToPlace)",
+    "line": 416
+   },
+   {
+    "sig": "setSecondaryObjectToPlaceConnectedState(bool state)",
+    "line": 443
+   },
+   {
+    "sig": "checkEventsOnCurrentPutObjectSystemState(bool state)",
+    "line": 450
+   },
+   {
+    "sig": "checkEventOnObjectPlacedStateChanged(bool state)",
+    "line": 465
+   },
+   {
+    "sig": "checkEventOnConnectedToOtherObjectStateChanged(bool state)",
+    "line": 480
+   },
+   {
+    "sig": "setConnectedToOtherObjectToPlaceState(bool state, objectToPlaceSystem newObjectToPlaceSystem)",
+    "line": 495
+   },
+   {
+    "sig": "checkObjectsAround()",
+    "line": 625
+   },
+   {
+    "sig": "checkIfObjectNameIsCompatible(string nameToCheck)",
+    "line": 817
+   },
+   {
+    "sig": "getCustomPlaceToPutOtherObjectToPlaceTransform(string nameToCheck)",
+    "line": 832
+   }
+  ]
+ },
+ {
+  "type": "putObjectSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Grab Objects\\putObjectSystem.cs",
+  "methods": [
+   {
+    "sig": "destroyCurrentObjectPlaced()",
+    "line": 173
+   },
+   {
+    "sig": "OnTriggerEnter(Collider col)",
+    "line": 186
+   },
+   {
+    "sig": "OnTriggerExit(Collider col)",
+    "line": 195
+   },
+   {
+    "sig": "checkTriggerInfo(bool isEnter, GameObject objectToCheck)",
+    "line": 204
+   },
+   {
+    "sig": "placeObject(GameObject objectToCheck)",
+    "line": 209
+   },
+   {
+    "sig": "checkIfCanBePlaced(bool objectPlacedPreviously)",
+    "line": 268
+   },
+   {
+    "sig": "canBeDragged(GameObject objectToCheck)",
+    "line": 293
+   },
+   {
+    "sig": "moveObjectToPlace(bool objectPlacedPreviously)",
+    "line": 318
+   },
+   {
+    "sig": "stopMoveObjectToPlaceCoroutine()",
+    "line": 327
+   },
+   {
+    "sig": "removePlacedObject()",
+    "line": 508
+   },
+   {
+    "sig": "dropCurrentObjectPlaced(bool reactivateObjectToUseOnPlaceSystem)",
+    "line": 517
+   },
+   {
+    "sig": "removeObject()",
+    "line": 557
+   },
+   {
+    "sig": "checkEventsOnObjectPlacedOrRemoved(bool state)",
+    "line": 594
+   },
+   {
+    "sig": "disableObjectPlacedFromGrab()",
+    "line": 605
+   },
+   {
+    "sig": "increaseNumberObjectsPlaced()",
+    "line": 612
+   },
+   {
+    "sig": "decreaseNumberObjectsPlaced()",
+    "line": 617
+   },
+   {
+    "sig": "resetNumberObjectsPlaced()",
+    "line": 626
+   },
+   {
+    "sig": "playSound(AudioElement soundToPlay)",
+    "line": 641
+   },
+   {
+    "sig": "pausePutObject()",
+    "line": 648
+   },
+   {
+    "sig": "stopPausePutObjectCoroutine()",
+    "line": 655
+   },
+   {
+    "sig": "isPutObjectSystemEnabled()",
+    "line": 676
+   },
+   {
+    "sig": "getObjectName()",
+    "line": 681
+   },
+   {
+    "sig": "getPlaceToPutObjectPosition()",
+    "line": 686
+   }
+  ]
+ },
+ {
+  "type": "grabbedObjectState",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Grab Objects\\grabbedObjectState.cs",
+  "methods": [
+   {
+    "sig": "setGrabbedState(bool state)",
+    "line": 39
+   },
+   {
+    "sig": "isGrabbed()",
+    "line": 52
+   },
+   {
+    "sig": "setCurrentHolder(GameObject current)",
+    "line": 57
+   },
+   {
+    "sig": "getCurrentHolder()",
+    "line": 62
+   },
+   {
+    "sig": "setInsideZeroGravityRoomState(bool state)",
+    "line": 67
+   },
+   {
+    "sig": "isInsideZeroGravityRoom()",
+    "line": 72
+   },
+   {
+    "sig": "setCurrentZeroGravityRoom(zeroGravityRoomSystem gravityRoom)",
+    "line": 77
+   },
+   {
+    "sig": "getCurrentZeroGravityRoom()",
+    "line": 82
+   },
+   {
+    "sig": "checkGravityRoomState()",
+    "line": 87
+   },
+   {
+    "sig": "setCarryingObjectPhysicallyState(bool state)",
+    "line": 94
+   },
+   {
+    "sig": "isCarryingObjectPhysically()",
+    "line": 99
+   },
+   {
+    "sig": "removeGrabbedObjectComponent()",
+    "line": 104
+   }
+  ]
+ },
+ {
+  "type": "outlineObjectSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Grab Objects\\outlineObjectSystem.cs",
+  "methods": [
+   {
+    "sig": "enableCustomOutlineStateTemporaly()",
+    "line": 115
+   },
+   {
+    "sig": "stopUpdateTemporalStateCoroutine()",
+    "line": 124
+   },
+   {
+    "sig": "enableCustomOutlineState()",
+    "line": 146
+   },
+   {
+    "sig": "disableCustomOutlineState()",
+    "line": 151
+   },
+   {
+    "sig": "setOutlineState(bool state, Shader shaderToApply, float shaderOutlineWidth, Color shaderOutlineColor, playerController newPlayerToCheck)",
+    "line": 156
+   },
+   {
+    "sig": "isOutlineActive()",
+    "line": 255
+   },
+   {
+    "sig": "getMeshParent()",
+    "line": 260
+   },
+   {
+    "sig": "storeRenderElements()",
+    "line": 269
+   },
+   {
+    "sig": "checkChildsObjectsToIgnore(Transform obj)",
+    "line": 339
+   },
+   {
+    "sig": "disableOutlineAndRemoveUsers()",
+    "line": 352
+   },
+   {
+    "sig": "setTransparencyState(bool state, Shader shaderToApply, float alphaTransparency)",
+    "line": 367
+   },
+   {
+    "sig": "isTransparencyActive()",
+    "line": 439
+   }
+  ]
+ },
+ {
+  "type": "grabObjectsPowerSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Grab Objects\\grabObjectsPowerSystem.cs",
+  "methods": [
+   {
+    "sig": "grabCloseObjects()",
+    "line": 201
+   },
+   {
+    "sig": "grabSingleObject()",
+    "line": 225
+   },
+   {
+    "sig": "dropObjects()",
+    "line": 385
+   },
+   {
+    "sig": "addForceToLaunchObjects()",
+    "line": 425
+   },
+   {
+    "sig": "dropObject(grabbedObject currentGrabbedObject, Vector3 launchDirection)",
+    "line": 448
+   },
+   {
+    "sig": "checkIfDropObject(GameObject objectToCheck)",
+    "line": 556
+   },
+   {
+    "sig": "setGrabObjectsEnabledState(bool state)",
+    "line": 569
+   },
+   {
+    "sig": "inputGrabObjects()",
+    "line": 574
+   },
+   {
+    "sig": "inputHoldToLaunchObjects()",
+    "line": 598
+   },
+   {
+    "sig": "inputReleaseToLaunchObjects()",
+    "line": 606
+   }
+  ]
+ },
+ {
+  "type": "grabObjectGenericModeMountPointSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Grab Objects\\grabObjectGenericModeMountPointSystem.cs",
+  "methods": [
+   {
+    "sig": "isUseCustomGrabbedObjectScaleMultiplierActive()",
+    "line": 22
+   },
+   {
+    "sig": "getCustomGrabbedObjectScaleMultiplier()",
+    "line": 27
+   },
+   {
+    "sig": "isGrabObjectsEnabled()",
+    "line": 32
+   },
+   {
+    "sig": "getMountPointByName(string mountPointName)",
+    "line": 37
+   },
+   {
+    "sig": "getDefaultMountPoint()",
+    "line": 48
+   },
+   {
+    "sig": "getReferencePositionByName(string mountPointName, string referencePositionName)",
+    "line": 60
+   }
+  ]
+ },
+ {
+  "type": "grabObjectProperties",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Grab Objects\\grabObjectProperties.cs",
+  "methods": [
+   {
+    "sig": "getObjectWeight()",
+    "line": 46
+   },
+   {
+    "sig": "getExtraGrabDistance()",
+    "line": 55
+   },
+   {
+    "sig": "checkEventsOnGrabObject()",
+    "line": 64
+   },
+   {
+    "sig": "checkEventsOnDropObject()",
+    "line": 71
+   },
+   {
+    "sig": "checkEventToSetPlayer(GameObject newPlayer)",
+    "line": 78
+   },
+   {
+    "sig": "getMainTrigger()",
+    "line": 85
+   }
+  ]
+ },
+ {
+  "type": "objectDistributorSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Grab Objects\\objectDistributorSystem.cs",
+  "methods": [
+   {
+    "sig": "spawnObject()",
+    "line": 71
+   },
+   {
+    "sig": "stopDistributorCoroutine()",
+    "line": 90
+   },
+   {
+    "sig": "OnTriggerExit(Collider col)",
+    "line": 122
+   },
+   {
+    "sig": "removeDeviceFromList()",
+    "line": 160
+   }
+  ]
+ },
+ {
+  "type": "checkObjectOnTrigger",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Grab Objects\\checkObjectOnTrigger.cs",
+  "methods": [
+   {
+    "sig": "checkObjectOnTriggerEnter(GameObject newObject)",
+    "line": 45
+   },
+   {
+    "sig": "checkObjectOnTriggerExit(GameObject newObject)",
+    "line": 60
+   }
+  ]
+ },
+ {
+  "type": "grabObjectEventSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Grab Objects\\grabObjectEventSystem.cs",
+  "methods": [
+   {
+    "sig": "callEventOnGrab()",
+    "line": 15
+   },
+   {
+    "sig": "callEventOnDrop()",
+    "line": 22
+   }
+  ]
+ },
+ {
+  "type": "grabObjectParent",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Grab Objects\\grabObjectParent.cs",
+  "methods": [
+   {
+    "sig": "getObjectToGrab()",
+    "line": 12
+   }
+  ]
+ }
+]

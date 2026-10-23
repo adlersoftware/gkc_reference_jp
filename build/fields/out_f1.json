@@ -1,0 +1,47 @@
+[
+ {
+  "type": "AIWayPointPatrol",
+  "fields": {
+   "waitTimeBetweenPoints": "各ウェイポイント到達後、次へ進むまで待つ秒数。",
+   "layerMask": "`Adjust To Surface`で地面を検出するレイキャストの対象レイヤー。",
+   "newWaypointOffset": "新しい地点を追加するときの、前回地点からの相対距離。",
+   "surfaceAdjusmentOffset": "地表に合わせた地点をサーフェスから浮かせる高さ。",
+   "showGizmo": "シーンビューに巡回地点の球とラベルを表示する。",
+   "gizmoLabelColor": "シーンビューに表示する地点ラベルの文字色。",
+   "gizmoRadius": "巡回地点とウェイポイントを描く球ギズモの半径。",
+   "useHandleForVertex": "各地点にドラッグ移動用の`FreeMoveHandle`を表示する。",
+   "useFreeHandle": "各地点にUnity標準の移動・回転ハンドルを表示する。",
+   "handleRadius": "上記ハンドルの表示サイズと当たり判定の半径。",
+   "handleGizmoColor": "ハンドルを描画するときの色。"
+  }
+ },
+ {
+  "type": "BezierSpline",
+  "fields": {
+   "directionScale": "進行方向を示す緑の矢印の長さ倍率。",
+   "newPointOffset": "カーブ追加時に新しい点をずらす距離。",
+   "newPointBezierOffset": "ベジェ点追加時に制御点をずらす量（現在は未参照）。",
+   "handleSize": "スプライン点ハンドルの表示サイズ倍率。",
+   "pickSize": "スプライン点をクリック選択できる判定サイズ倍率。",
+   "showGizmo": "シーンビューにスプラインの線とハンドルを表示する。",
+   "showLookDirectionGizmo": "注視方向リストの球と矢印ギズモを表示する。",
+   "lookDirectionGizmoRadius": "注視方向ギズモの球の半径。",
+   "lookDirectionArrowLength": "注視方向ギズモの矢印の長さ。"
+  }
+ },
+ {
+  "type": "CustomizableToolbarSettings",
+  "fields": {
+   "numberOfColumns": "ツールバー1行に並べるボタンの数（この数で改行）。",
+   "windowsHeight": "ツールバーウィンドウの高さ（0なら30）。"
+  }
+ },
+ {
+  "type": "GKCUIManager",
+  "fields": {
+   "managerEnabled": "OFFにするとUI要素の有効/無効切替を一切行わない。",
+   "objectSearcherName": "UI要素名を部分一致で検索するための入力文字列。",
+   "currentArrayElement": "Inspectorがリスト要素を描画する際の作業用参照（保存対象外）。"
+  }
+ }
+]

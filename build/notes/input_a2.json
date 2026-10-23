@@ -1,0 +1,652 @@
+[
+ {
+  "type": "AINavMesh",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\AINavMesh.cs",
+  "methods": [
+   {
+    "sig": "Start()",
+    "line": 382
+   },
+   {
+    "sig": "resetInitialTargetCheckedOnCharacterSpawn()",
+    "line": 939
+   },
+   {
+    "sig": "activateJumpExternally(float jumpDistance)",
+    "line": 944
+   },
+   {
+    "sig": "setJumpPower(float newValue)",
+    "line": 975
+   },
+   {
+    "sig": "setOriginalJumpPower()",
+    "line": 980
+   },
+   {
+    "sig": "setAgentDestination(Vector3 targetPosition)",
+    "line": 1004
+   },
+   {
+    "sig": "updateCurrentNavMeshPath(Vector3 targetPosition)",
+    "line": 1041
+   },
+   {
+    "sig": "setOnGroundState(bool state)",
+    "line": 1064
+   },
+   {
+    "sig": "isAIOnGround()",
+    "line": 1069
+   },
+   {
+    "sig": "setLocked2_5dModeActiveState(bool state)",
+    "line": 1074
+   },
+   {
+    "sig": "isLocked2_5dModeActive()",
+    "line": 1079
+   },
+   {
+    "sig": "setMoveInXAxisOn2_5dModeState(bool state)",
+    "line": 1084
+   },
+   {
+    "sig": "getCanReachCurrentTargetValue()",
+    "line": 1089
+   },
+   {
+    "sig": "getRemainingPathDistanceToTarget()",
+    "line": 1094
+   },
+   {
+    "sig": "getCurrentDistanceToTarget()",
+    "line": 1121
+   },
+   {
+    "sig": "getMovementDirection()",
+    "line": 1126
+   },
+   {
+    "sig": "getCurrentMovementDirection()",
+    "line": 1142
+   },
+   {
+    "sig": "getDesiredVelocity()",
+    "line": 1147
+   },
+   {
+    "sig": "setPauseMoveNavMeshState(bool state)",
+    "line": 1152
+   },
+   {
+    "sig": "setMoveNavMeshPausedDuringActionState(bool state)",
+    "line": 1161
+   },
+   {
+    "sig": "setNavmeshPausedState(bool state)",
+    "line": 1166
+   },
+   {
+    "sig": "setCalculateMoveValueWithDirectionToTargetActiveState(bool state)",
+    "line": 1173
+   },
+   {
+    "sig": "isCalculateMoveValueWithDirectionToTargetActive()",
+    "line": 1178
+   },
+   {
+    "sig": "updateUseExtraColliderListState()",
+    "line": 1184
+   },
+   {
+    "sig": "moveNavMesh(Vector3 moveInput, bool crouch, bool jump)",
+    "line": 1248
+   },
+   {
+    "sig": "setReverseMoveInputDirectionActiveState(bool state)",
+    "line": 1665
+   },
+   {
+    "sig": "updateAIControllerInputValues()",
+    "line": 1670
+   },
+   {
+    "sig": "updateAICameraInputValues()",
+    "line": 1675
+   },
+   {
+    "sig": "setAIWalkSpeed(float newValue)",
+    "line": 1680
+   },
+   {
+    "sig": "setOriginalAIWalkSpeed(float newValue)",
+    "line": 1685
+   },
+   {
+    "sig": "setResetVerticalCameraRotationActiveState(bool state)",
+    "line": 1690
+   },
+   {
+    "sig": "setTurnBasedCombatActionActiveState(bool state)",
+    "line": 1695
+   },
+   {
+    "sig": "pauseAI(bool state)",
+    "line": 1706
+   },
+   {
+    "sig": "setAIStateToDead()",
+    "line": 1793
+   },
+   {
+    "sig": "setAIStateToAlive()",
+    "line": 1802
+   },
+   {
+    "sig": "isAIDead()",
+    "line": 1811
+   },
+   {
+    "sig": "recalculatePath()",
+    "line": 1816
+   },
+   {
+    "sig": "jumpStart()",
+    "line": 1823
+   },
+   {
+    "sig": "jumpEnded()",
+    "line": 1828
+   },
+   {
+    "sig": "placeAIOnNewPosition(Vector3 newPosition)",
+    "line": 1846
+   },
+   {
+    "sig": "setAINewRotation(Vector3 newRotation)",
+    "line": 1855
+   },
+   {
+    "sig": "setPatrolTarget(Transform newTarget)",
+    "line": 1860
+   },
+   {
+    "sig": "setTarget(Transform newTarget)",
+    "line": 1871
+   },
+   {
+    "sig": "checkStateOnSetTarget()",
+    "line": 1888
+   },
+   {
+    "sig": "getCurrentTarget()",
+    "line": 1893
+   },
+   {
+    "sig": "avoidTarget(Transform targetToAvoid)",
+    "line": 1898
+   },
+   {
+    "sig": "setAvoidTargetState(bool state)",
+    "line": 1903
+   },
+   {
+    "sig": "removeTarget()",
+    "line": 1908
+   },
+   {
+    "sig": "recalculateSetAgentDestination()",
+    "line": 1915
+   },
+   {
+    "sig": "resetCustomSpeedAndDistanceValues()",
+    "line": 1936
+   },
+   {
+    "sig": "anyTargetToReach()",
+    "line": 1943
+   },
+   {
+    "sig": "setGuidingPartnerActiveState(bool state)",
+    "line": 1948
+   },
+   {
+    "sig": "partnerFound(Transform currentPartner)",
+    "line": 1959
+   },
+   {
+    "sig": "setPartnerFoundInfo(Transform currentPartner)",
+    "line": 1968
+   },
+   {
+    "sig": "getCurrentPartner()",
+    "line": 1993
+   },
+   {
+    "sig": "setRemovePartnerPausedState(bool state)",
+    "line": 2000
+   },
+   {
+    "sig": "removeFromPartnerList()",
+    "line": 2005
+   },
+   {
+    "sig": "removePartner()",
+    "line": 2024
+   },
+   {
+    "sig": "lookAtTaget(bool state)",
+    "line": 2041
+   },
+   {
+    "sig": "getAgent()",
+    "line": 2055
+   },
+   {
+    "sig": "setStrafeModeActiveState(bool state)",
+    "line": 2060
+   },
+   {
+    "sig": "setPatrolState(bool state)",
+    "line": 2065
+   },
+   {
+    "sig": "setPatrolPauseState(bool state)",
+    "line": 2070
+   },
+   {
+    "sig": "isPatrolPaused()",
+    "line": 2075
+   },
+   {
+    "sig": "isPatrolling()",
+    "line": 2080
+   },
+   {
+    "sig": "setPatrolSpeed(float value)",
+    "line": 2085
+   },
+   {
+    "sig": "attack(Transform newTarget)",
+    "line": 2090
+   },
+   {
+    "sig": "follow(Transform newTarget)",
+    "line": 2097
+   },
+   {
+    "sig": "wait(Transform newTarget)",
+    "line": 2106
+   },
+   {
+    "sig": "hide(Transform newTarget)",
+    "line": 2113
+   },
+   {
+    "sig": "setFollowingTargetState(bool state)",
+    "line": 2120
+   },
+   {
+    "sig": "isCharacterAttacking()",
+    "line": 2125
+   },
+   {
+    "sig": "isCharacterFollowing()",
+    "line": 2130
+   },
+   {
+    "sig": "isCharacterWaiting()",
+    "line": 2135
+   },
+   {
+    "sig": "isCharacterHiding()",
+    "line": 2140
+   },
+   {
+    "sig": "isPartnerLocated()",
+    "line": 2145
+   },
+   {
+    "sig": "setCharacterStates(bool attackValue, bool followValue, bool waitValue, bool hideValue)",
+    "line": 2150
+   },
+   {
+    "sig": "setTargetType(bool isFriendly, bool isObject)",
+    "line": 2158
+   },
+   {
+    "sig": "setExtraMinDistanceState(bool state, float extraDistance)",
+    "line": 2168
+   },
+   {
+    "sig": "isFollowingTarget()",
+    "line": 2179
+   },
+   {
+    "sig": "isUseHalfMinDistanceActive()",
+    "line": 2184
+   },
+   {
+    "sig": "startOverride()",
+    "line": 2188
+   },
+   {
+    "sig": "stopOverride()",
+    "line": 2193
+   },
+   {
+    "sig": "overrideTurretControlState(bool state)",
+    "line": 2198
+   },
+   {
+    "sig": "setDistanceToEnemy(float newDistance)",
+    "line": 2203
+   },
+   {
+    "sig": "setUseDynamicObstacleDetectionState(bool state)",
+    "line": 2210
+   },
+   {
+    "sig": "setOriginalUseDynamicObstacleDetection()",
+    "line": 2215
+   },
+   {
+    "sig": "addObjectToIgnoreOnDynamicObstacle(GameObject newObject)",
+    "line": 2220
+   },
+   {
+    "sig": "removeObjectToIgnoreOnDynamicObstacle(GameObject newObject)",
+    "line": 2227
+   },
+   {
+    "sig": "setMinObstacleRotation(float newValue)",
+    "line": 2255
+   },
+   {
+    "sig": "setMediumObstacleRotation(float newValue)",
+    "line": 2260
+   },
+   {
+    "sig": "setMaximumObstacleRotation(float newValue)",
+    "line": 2265
+   },
+   {
+    "sig": "enableCustomNavMeshSpeed(float newValue)",
+    "line": 2270
+   },
+   {
+    "sig": "disableCustomNavMeshSpeed()",
+    "line": 2277
+   },
+   {
+    "sig": "enableCustomMinDistance(float newValue)",
+    "line": 2282
+   },
+   {
+    "sig": "enableHalfMinDistance()",
+    "line": 2289
+   },
+   {
+    "sig": "disableCustomMinDistance()",
+    "line": 2294
+   },
+   {
+    "sig": "setIgnoreGetClosestPositionIfTargetCantBeReachedState(bool state)",
+    "line": 2299
+   },
+   {
+    "sig": "setUseMinDistanceOffsetItTargetReachedState(bool state)",
+    "line": 2304
+   },
+   {
+    "sig": "setCheckCustomListToIgnoreOnDynamicObstacleEnabledState(bool state)",
+    "line": 2309
+   },
+   {
+    "sig": "setCheckForExtraCollidersOnOwnerIfDetectedState(bool state)",
+    "line": 2314
+   },
+   {
+    "sig": "setCheckCustomListToIgnoreOnDynamicObstacleEnabledStateFromEditor(bool state)",
+    "line": 2321
+   },
+   {
+    "sig": "setCheckForExtraCollidersOnOwnerIfDetectedStateFromEditor(bool state)",
+    "line": 2328
+   },
+   {
+    "sig": "setMinDistanceToEnemyFromEditor(float newDistance)",
+    "line": 2335
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 2342
+   }
+  ]
+ },
+ {
+  "type": "AIPatrolSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\AIPatrolSystem.cs",
+  "methods": [
+   {
+    "sig": "pauseOrPlayPatrol(bool state)",
+    "line": 187
+   },
+   {
+    "sig": "isPatrolPaused()",
+    "line": 196
+   },
+   {
+    "sig": "closestWaypoint(Vector3 currentPosition)",
+    "line": 201
+   },
+   {
+    "sig": "setNextPatrolList()",
+    "line": 240
+   },
+   {
+    "sig": "setNextWaypoint()",
+    "line": 270
+   },
+   {
+    "sig": "setNextRandomWaypoint()",
+    "line": 348
+   },
+   {
+    "sig": "setClosestWayPoint()",
+    "line": 422
+   },
+   {
+    "sig": "setCurrentPatrolTarget(Transform newTarget)",
+    "line": 439
+   },
+   {
+    "sig": "setReturningToPatrolState(bool state)",
+    "line": 446
+   },
+   {
+    "sig": "resumePatrolStateOnAI()",
+    "line": 455
+   },
+   {
+    "sig": "pausePatrolStateOnAI()",
+    "line": 462
+   }
+  ]
+ },
+ {
+  "type": "AIWayPointPatrol",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\AIWayPointPatrol.cs",
+  "methods": [
+   {
+    "sig": "addNewPatrol()",
+    "line": 31
+   },
+   {
+    "sig": "clearPatrolList()",
+    "line": 57
+   },
+   {
+    "sig": "addNewWayPoint(int index)",
+    "line": 70
+   },
+   {
+    "sig": "removeWaypoint(int patrolIndex, int waypointIndex)",
+    "line": 92
+   },
+   {
+    "sig": "clearWayPoint(int index)",
+    "line": 105
+   },
+   {
+    "sig": "adjustWayPoints()",
+    "line": 119
+   },
+   {
+    "sig": "invertPath()",
+    "line": 134
+   }
+  ]
+ },
+ {
+  "type": "AIAroundManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\AIAroundManager.cs",
+  "methods": [
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 87
+   },
+   {
+    "sig": "addCharacterAround(Transform newCharacter)",
+    "line": 233
+   },
+   {
+    "sig": "removeCharacterAround(Transform newCharacter)",
+    "line": 302
+   },
+   {
+    "sig": "clearCharactersAround()",
+    "line": 384
+   },
+   {
+    "sig": "getCharactersAround()",
+    "line": 518
+   },
+   {
+    "sig": "characterDetectedByAIAround()",
+    "line": 523
+   },
+   {
+    "sig": "checkIfPlayerDetectedByAIAround(GameObject mainPlayerGameObject)",
+    "line": 538
+   },
+   {
+    "sig": "getMinDistanceToPlayer(Transform playerTransform, bool ignoreIfPlayerIsCurrentTarget)",
+    "line": 563
+   }
+  ]
+ },
+ {
+  "type": "changeAIAttackModeByDistance",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\changeAIAttackModeByDistance.cs",
+  "methods": [
+   {
+    "sig": "initializeElements()",
+    "line": 65
+   },
+   {
+    "sig": "checkChangeAttackModeBasedOnDistanceToTarget()",
+    "line": 76
+   },
+   {
+    "sig": "resetAttackModeActiveState()",
+    "line": 203
+   },
+   {
+    "sig": "setChangeAttackModeBasedOnDistanceToTargetState(bool state)",
+    "line": 217
+   },
+   {
+    "sig": "setIgnoreChangeAttackModeBasedOnDistanceToTargetState(bool state)",
+    "line": 222
+   },
+   {
+    "sig": "setUseSprintBasedOnDistanceToTargetState(bool state)",
+    "line": 227
+   },
+   {
+    "sig": "setChangeAttackModeBasedOnDistanceToTargetStateFromEditor(bool state)",
+    "line": 232
+   },
+   {
+    "sig": "setUseSprintBasedOnDistanceToTargetStateFromEditor(bool state)",
+    "line": 239
+   }
+  ]
+ },
+ {
+  "type": "simpleAIAction",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\Custom AI Behavior\\simpleAIAction.cs",
+  "methods": [
+   {
+    "sig": "startAIAction()",
+    "line": 42
+   },
+   {
+    "sig": "endAIAction()",
+    "line": 59
+   },
+   {
+    "sig": "stopActionCoroutine()",
+    "line": 80
+   },
+   {
+    "sig": "activateCoroutine()",
+    "line": 87
+   },
+   {
+    "sig": "updateSystem()",
+    "line": 116
+   },
+   {
+    "sig": "resetStatesOnActionEnd()",
+    "line": 121
+   },
+   {
+    "sig": "setCustomTarget(Transform newTarget)",
+    "line": 126
+   }
+  ]
+ },
+ {
+  "type": "handleVehicleAIBehavior",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\Custom AI Behavior\\handleVehicleAIBehavior.cs",
+  "methods": [
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 142
+   },
+   {
+    "sig": "setGetOffFromVehicleOnDestinyReachedState(bool state)",
+    "line": 160
+   },
+   {
+    "sig": "setIgnoreCheckPartnerOnVehicleState(bool state)",
+    "line": 614
+   },
+   {
+    "sig": "setCheckAIPassengerStateEnabledState(bool state)",
+    "line": 619
+   },
+   {
+    "sig": "enterOnVehicle(GameObject newVehicleObject)",
+    "line": 624
+   },
+   {
+    "sig": "isCharacterOnVehicle()",
+    "line": 774
+   }
+  ]
+ }
+]

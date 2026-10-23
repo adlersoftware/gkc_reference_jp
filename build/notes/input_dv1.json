@@ -1,0 +1,500 @@
+[
+ {
+  "type": "lockedCameraSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\lockedCameraSystem.cs",
+  "methods": [
+   {
+    "sig": "setCameraTransform(GameObject cameraTransform)",
+    "line": 181
+   },
+   {
+    "sig": "findPlayerOnScene()",
+    "line": 221
+   },
+   {
+    "sig": "getPlayerGameObject(GameObject objectToCheck)",
+    "line": 226
+   },
+   {
+    "sig": "setLockedCameraToEditorCameraPosition(int lockedCameraListIndex, int cameraTransformListIndex)",
+    "line": 257
+   },
+   {
+    "sig": "setEditorCameraPositionToLockedCamera(int lockedCameraListIndex, int cameraTransformListIndex)",
+    "line": 320
+   },
+   {
+    "sig": "duplicateLockedCamera(int lockedCameraListIndex, int cameraTransformListIndex)",
+    "line": 563
+   },
+   {
+    "sig": "assignPlayerToStartOnLockedCamera(GameObject newPlayer)",
+    "line": 593
+   },
+   {
+    "sig": "addLookAtCustomMultipleTargetsList(Transform newTransform)",
+    "line": 611
+   },
+   {
+    "sig": "removeLookAtCustomMultipleTargetsList(Transform newTransform)",
+    "line": 616
+   },
+   {
+    "sig": "addOrRemoveLookAtCustomMultipleTargetsList(Transform newTransform, bool state)",
+    "line": 621
+   },
+   {
+    "sig": "addNewCameraTransformElememnt(int index)",
+    "line": 648
+   },
+   {
+    "sig": "removeNewCameraTransformElememnt(int lockedCameraListIndex, int cameraTransformListIndex, bool updateInspector)",
+    "line": 703
+   },
+   {
+    "sig": "removeAllCameraTransformElements(int index)",
+    "line": 719
+   },
+   {
+    "sig": "removeAllCameraZones()",
+    "line": 730
+   },
+   {
+    "sig": "addNewCameraZone()",
+    "line": 743
+   },
+   {
+    "sig": "removeCameraZone(int index, bool updateInspector)",
+    "line": 760
+   },
+   {
+    "sig": "addCameraTrigger(int lockedCameraListIndex, int cameraTransformListIndex)",
+    "line": 775
+   },
+   {
+    "sig": "removeCameraTrigger(int lockedCameraListIndex, int cameraTransformListIndex, int cameraTriggerIndex, bool updateInspector)",
+    "line": 809
+   },
+   {
+    "sig": "removeAllCameraTriggers(int lockedCameraListIndex, int cameraTransformListIndex)",
+    "line": 824
+   },
+   {
+    "sig": "selectCurrentTrigger(int lockedCameraListIndex, int cameraTransformListIndex, int cameraTriggerIndex)",
+    "line": 839
+   },
+   {
+    "sig": "addWaypoint(int lockedCameraListIndex, int cameraTransformListIndex)",
+    "line": 844
+   },
+   {
+    "sig": "removeWaypoint(int lockedCameraListIndex, int cameraTransformListIndex, int waypointIndex, bool updateInspector)",
+    "line": 893
+   },
+   {
+    "sig": "removeAllWaypoints(int lockedCameraListIndex, int cameraTransformListIndex)",
+    "line": 908
+   },
+   {
+    "sig": "setGizmosState(bool state)",
+    "line": 923
+   },
+   {
+    "sig": "setCameraParentListName(string name, int index)",
+    "line": 930
+   },
+   {
+    "sig": "addLockedCameraPivot(int lockedCameraListIndex, int cameraTransformListIndex)",
+    "line": 935
+   },
+   {
+    "sig": "addLockedCameraPivot2_5d(int lockedCameraListIndex, int cameraTransformListIndex)",
+    "line": 956
+   },
+   {
+    "sig": "addLockedCameraPivotTopDown(int lockedCameraListIndex, int cameraTransformListIndex)",
+    "line": 985
+   },
+   {
+    "sig": "setAllCamerasAsPointAndClickOrFree(bool state)",
+    "line": 1014
+   },
+   {
+    "sig": "setCanChangeCameraToFreeViewByInputInAllCameras(bool state)",
+    "line": 1025
+   },
+   {
+    "sig": "setAllCamerasAsTankControlsOrRegular(bool state)",
+    "line": 1036
+   },
+   {
+    "sig": "setAllCamerasAsRelativeMovementsOrRegular(bool state)",
+    "line": 1047
+   },
+   {
+    "sig": "setAllCamerasAsChangeRootMotionEnabledOrDisabled(bool state)",
+    "line": 1058
+   },
+   {
+    "sig": "setAllCamerasAsUseRootMotionEnabledOrDisabled(bool state)",
+    "line": 1069
+   },
+   {
+    "sig": "setAllCamerasAsUseClampAimDirectionEnabledOrDisabled(bool state)",
+    "line": 1080
+   },
+   {
+    "sig": "updateTriggers()",
+    "line": 1091
+   },
+   {
+    "sig": "changeViewToCameraInEditor(int lockedCameraListIndex, int cameraTransformListIndex)",
+    "line": 1117
+   }
+  ]
+ },
+ {
+  "type": "electronicDevice",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\electronicDevice.cs",
+  "methods": [
+   {
+    "sig": "activateDevice()",
+    "line": 106
+   },
+   {
+    "sig": "setDeviceState(bool state)",
+    "line": 177
+   },
+   {
+    "sig": "moveCamera(bool state)",
+    "line": 214
+   },
+   {
+    "sig": "setCurrentUser(GameObject newPlayer)",
+    "line": 225
+   },
+   {
+    "sig": "setPlayerManually(GameObject newPlayer)",
+    "line": 240
+   },
+   {
+    "sig": "checkTriggerInfo(Collider col, bool isEnter)",
+    "line": 262
+   },
+   {
+    "sig": "setUsingDeviceState(bool state)",
+    "line": 373
+   },
+   {
+    "sig": "getCurrentPlayer()",
+    "line": 378
+   },
+   {
+    "sig": "unlockObject()",
+    "line": 383
+   },
+   {
+    "sig": "lockObject()",
+    "line": 394
+   },
+   {
+    "sig": "removeDeviceFromListWithoutDisablingDevice()",
+    "line": 401
+   },
+   {
+    "sig": "clearDeviceList()",
+    "line": 413
+   },
+   {
+    "sig": "addDeviceToList()",
+    "line": 422
+   },
+   {
+    "sig": "removeDeviceFromList()",
+    "line": 431
+   },
+   {
+    "sig": "removeDeviceFromListOnAllPlayersOnSceneWithoutDisablingDevice()",
+    "line": 444
+   },
+   {
+    "sig": "removeDeviceFromListExternalCall()",
+    "line": 449
+   },
+   {
+    "sig": "stopUsindDevice()",
+    "line": 462
+   },
+   {
+    "sig": "stopUseDeviceToPlayer()",
+    "line": 469
+   },
+   {
+    "sig": "reloadDeviceStringActionOnPlayer()",
+    "line": 476
+   },
+   {
+    "sig": "setDeviceCanBeUsedState(bool state)",
+    "line": 485
+   },
+   {
+    "sig": "cancelUseElectronicDevice()",
+    "line": 490
+   },
+   {
+    "sig": "useDeviceObjectExternally(GameObject currentPlayer)",
+    "line": 497
+   },
+   {
+    "sig": "useDeviceObjectExternallyForCharacterInside()",
+    "line": 502
+   }
+  ]
+ },
+ {
+  "type": "doorSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\doorSystem.cs",
+  "methods": [
+   {
+    "sig": "setDoorState()",
+    "line": 269
+   },
+   {
+    "sig": "lockDoor()",
+    "line": 290
+   },
+   {
+    "sig": "unlockDoor()",
+    "line": 333
+   },
+   {
+    "sig": "isDisableDoorOpenCloseActionActive()",
+    "line": 379
+   },
+   {
+    "sig": "setEnableDisableDoorOpenCloseActionValue(bool state)",
+    "line": 384
+   },
+   {
+    "sig": "openOrCloseElevatorDoor()",
+    "line": 389
+   },
+   {
+    "sig": "changeDoorsStateByButton()",
+    "line": 399
+   },
+   {
+    "sig": "openDoorsIfClosed()",
+    "line": 421
+   },
+   {
+    "sig": "closeDoorsIfOpened()",
+    "line": 432
+   },
+   {
+    "sig": "openDoors()",
+    "line": 444
+   },
+   {
+    "sig": "closeDoors()",
+    "line": 502
+   },
+   {
+    "sig": "playSound(AudioElement clipSound)",
+    "line": 539
+   },
+   {
+    "sig": "setDeviceStringActionState(bool state)",
+    "line": 544
+   },
+   {
+    "sig": "doorsShooted(GameObject projectile)",
+    "line": 624
+   },
+   {
+    "sig": "checkIfTagCanOpen(string tagToCheck)",
+    "line": 645
+   },
+   {
+    "sig": "doorIsMoving()",
+    "line": 654
+   },
+   {
+    "sig": "playDoorAnimation(bool playForward)",
+    "line": 659
+   },
+   {
+    "sig": "isDoorOpened()",
+    "line": 683
+   },
+   {
+    "sig": "isDoorClosed()",
+    "line": 688
+   },
+   {
+    "sig": "isDoorOpening()",
+    "line": 693
+   },
+   {
+    "sig": "isDoorClosing()",
+    "line": 698
+   },
+   {
+    "sig": "setReducedVelocity(float newValue)",
+    "line": 703
+   },
+   {
+    "sig": "setNormalVelocity()",
+    "line": 708
+   }
+  ]
+ },
+ {
+  "type": "radioSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\Radio\\radioSystem.cs",
+  "methods": [
+   {
+    "sig": "playCurrentSong()",
+    "line": 192
+   },
+   {
+    "sig": "stopCurrentSong()",
+    "line": 209
+   },
+   {
+    "sig": "pauseCurrentSong()",
+    "line": 220
+   },
+   {
+    "sig": "setNextSong()",
+    "line": 229
+   },
+   {
+    "sig": "setPreviousSong()",
+    "line": 246
+   },
+   {
+    "sig": "setRandomSong()",
+    "line": 266
+   },
+   {
+    "sig": "setRandomSongIndex()",
+    "line": 273
+   },
+   {
+    "sig": "setRadioVolume()",
+    "line": 294
+   },
+   {
+    "sig": "setPlaySongsRandomlyState(bool state)",
+    "line": 336
+   },
+   {
+    "sig": "setRepeatListState(bool state)",
+    "line": 341
+   },
+   {
+    "sig": "setMovingSongLenghtSliderState(bool state)",
+    "line": 346
+   },
+   {
+    "sig": "setSongPart()",
+    "line": 353
+   },
+   {
+    "sig": "setRadioActiveState(bool state)",
+    "line": 362
+   },
+   {
+    "sig": "setOnlyRadioActiveState(bool state)",
+    "line": 387
+   },
+   {
+    "sig": "setPlayPauseButtonState(bool state)",
+    "line": 392
+   },
+   {
+    "sig": "selectSongOnList(GameObject songButtonPressed)",
+    "line": 399
+   },
+   {
+    "sig": "getSongsList()",
+    "line": 414
+   }
+  ]
+ },
+ {
+  "type": "deviceStringAction",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\deviceStringAction.cs",
+  "methods": [
+   {
+    "sig": "getRegularTransformForIcon()",
+    "line": 105
+   },
+   {
+    "sig": "useSeparatedTransformForEveryViewEnabled()",
+    "line": 114
+   },
+   {
+    "sig": "getTransformForIconThirdPerson()",
+    "line": 119
+   },
+   {
+    "sig": "getTransformForIconFirstPerson()",
+    "line": 124
+   },
+   {
+    "sig": "setIconEnabledState(bool state)",
+    "line": 129
+   },
+   {
+    "sig": "setShowIconState(bool state)",
+    "line": 134
+   },
+   {
+    "sig": "enableIcon()",
+    "line": 139
+   },
+   {
+    "sig": "disableIcon()",
+    "line": 144
+   },
+   {
+    "sig": "getDeviceAction()",
+    "line": 149
+   },
+   {
+    "sig": "setDeviceAction(string newDeviceAction)",
+    "line": 154
+   },
+   {
+    "sig": "changeActionName(bool state)",
+    "line": 161
+   },
+   {
+    "sig": "toggleActionName()",
+    "line": 172
+   },
+   {
+    "sig": "checkSetUsingDeviceState()",
+    "line": 177
+   },
+   {
+    "sig": "checkSetUsingDeviceState(bool state)",
+    "line": 182
+   },
+   {
+    "sig": "getDeviceName()",
+    "line": 189
+   },
+   {
+    "sig": "setNewDeviceName(string newName)",
+    "line": 194
+   },
+   {
+    "sig": "getTextFontSize()",
+    "line": 199
+   }
+  ]
+ }
+]

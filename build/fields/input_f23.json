@@ -1,0 +1,228 @@
+[
+ {
+  "type": "playerOptionsEditorSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\playerOptionsEditorSystem.cs",
+  "source": "Others/playerOptionsEditorSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "playerOptionsEditorEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "initializeOptionsOnlyWhenLoadingGame",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "saveCurrentPlayerOptionsToSaveFile",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "valuesInitialized",
+    "label": "",
+    "section": "Debug State"
+   }
+  ]
+ },
+ {
+  "type": "playerSkillsSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Skills System\\playerSkillsSystem.cs",
+  "source": "Skills System/playerSkillsSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "playerSkillsActive",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "initializeSkillsValuesAtStartActive",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "initializeSkillsOnlyWhenLoadingGame",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "saveCurrentPlayerSkillsToSaveFile",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "initializeValuesWhenNotLoadingFromTemplate",
+    "label": "",
+    "section": "Skill Settings Template"
+   },
+   {
+    "field": "mainSkillSettingsTemplate",
+    "label": "",
+    "section": "Skill Settings Template"
+   },
+   {
+    "field": "mainPlayerStatsSystem",
+    "label": "",
+    "section": "Components"
+   }
+  ]
+ },
+ {
+  "type": "playerSkillsUISystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Skills System\\playerSkillsUISystem.cs",
+  "source": "Skills System/playerSkillsUISystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "showLockedSkillName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "lockedSkillNameToShow",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "showLockedSkillDescription",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "lockedSkillDescriptionToShow",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useDoublePressToShowIncreaseSkillButtonEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "showDebugPrint",
+    "label": "",
+    "section": "Skill UI State Debug"
+   },
+   {
+    "field": "skillsMenuPanel",
+    "label": "",
+    "section": "Main Elements"
+   },
+   {
+    "field": "currentSkillCategoryNameText",
+    "label": "",
+    "section": "Main Elements"
+   },
+   {
+    "field": "currentSkillNameText",
+    "label": "",
+    "section": "Main Elements"
+   },
+   {
+    "field": "currentSkillDescriptionText",
+    "label": "",
+    "section": "Main Elements"
+   },
+   {
+    "field": "currentSkillLevelDescriptionText",
+    "label": "",
+    "section": "Main Elements"
+   },
+   {
+    "field": "currentSkillPointsText",
+    "label": "",
+    "section": "Main Elements"
+   },
+   {
+    "field": "requiredSkillPointsText",
+    "label": "",
+    "section": "Main Elements"
+   },
+   {
+    "field": "confirmUseSkillPointsPanel",
+    "label": "",
+    "section": "Main Elements"
+   },
+   {
+    "field": "playerExperienceManager",
+    "label": "",
+    "section": "Main Elements"
+   },
+   {
+    "field": "playerSkillsManager",
+    "label": "",
+    "section": "Main Elements"
+   },
+   {
+    "field": "categoryScrollBar",
+    "label": "",
+    "section": "Main Elements"
+   },
+   {
+    "field": "categoryListContent",
+    "label": "",
+    "section": "Main Elements"
+   },
+   {
+    "field": "categoryScrollRect",
+    "label": "",
+    "section": "Main Elements"
+   },
+   {
+    "field": "eventOnSkillMenuOpened",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "eventOnSkillMenuClosed",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "eventOnSkillPointsUsed",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "eventOnNotEnoughSkillPoints",
+    "label": "",
+    "section": "Event Settings"
+   }
+  ]
+ },
+ {
+  "type": "playerStateSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\playerStateSystem.cs",
+  "source": "Player/playerStateSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "playerStatesEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "activateStateOnStart",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "stateToActivateOnStart",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "showDebugPrint",
+    "label": "",
+    "section": "States Debug"
+   }
+  ]
+ }
+]

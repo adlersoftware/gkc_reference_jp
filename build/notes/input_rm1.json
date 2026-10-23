@@ -1,0 +1,852 @@
+[
+ {
+  "type": "grabbedObjectMeleeAttackSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Grab Objects\\grabbedObjectMeleeAttackSystem.cs",
+  "methods": [
+   {
+    "sig": "updateSurfacesSoundInfo()",
+    "line": 448
+   },
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 463
+   },
+   {
+    "sig": "isGrabbedObjectMeleeAttackEnabled()",
+    "line": 530
+   },
+   {
+    "sig": "isCanGrabMeleeObjectsEnabled()",
+    "line": 535
+   },
+   {
+    "sig": "getRightHandMountPoint()",
+    "line": 540
+   },
+   {
+    "sig": "getLeftHandMountPoint()",
+    "line": 545
+   },
+   {
+    "sig": "checkGrabbedMeleeWeaponLocalPositionRotationValues()",
+    "line": 550
+   },
+   {
+    "sig": "checkKeepMeleeWeaponLocalPositionRotationValues()",
+    "line": 563
+   },
+   {
+    "sig": "isUseCustomGrabbedWeaponReferencePositionActive()",
+    "line": 571
+   },
+   {
+    "sig": "isUseGrabbedWeaponReferenceValuesActive()",
+    "line": 580
+   },
+   {
+    "sig": "getGrabbedWeaponReferenceValuesPosition()",
+    "line": 589
+   },
+   {
+    "sig": "getGrabbedWeaponReferenceValuesEuler()",
+    "line": 598
+   },
+   {
+    "sig": "isUseReferenceToKeepObjectValuesActive()",
+    "line": 607
+   },
+   {
+    "sig": "getReferenceToKeepObjectValuesPosition()",
+    "line": 616
+   },
+   {
+    "sig": "getReferenceToKeepObjectValuesEuler()",
+    "line": 625
+   },
+   {
+    "sig": "getCustomGrabbedWeaponReferencePosition()",
+    "line": 634
+   },
+   {
+    "sig": "getCustomReferencePositionToKeepObject()",
+    "line": 643
+   },
+   {
+    "sig": "setNewGrabPhysicalObjectSystem(grabPhysicalObjectSystem newGrabPhysicalObjectSystem)",
+    "line": 652
+   },
+   {
+    "sig": "setCheckDrawKeepWeaponAnimationPauseState(bool state)",
+    "line": 661
+   },
+   {
+    "sig": "activateStartDrawAnimation()",
+    "line": 666
+   },
+   {
+    "sig": "activateEndDrawAnimation()",
+    "line": 687
+   },
+   {
+    "sig": "enableOrDisableWeaponMeshActiveState(bool state)",
+    "line": 711
+   },
+   {
+    "sig": "activateStartKeepAnimation()",
+    "line": 718
+   },
+   {
+    "sig": "removeDrawKeepWeaponAnimationInfo()",
+    "line": 740
+   },
+   {
+    "sig": "placeLastWeaponOnCharacterHand()",
+    "line": 747
+   },
+   {
+    "sig": "activateEndKeepAnimation()",
+    "line": 771
+   },
+   {
+    "sig": "setNewGrabPhysicalObjectMeleeAttackSystem(grabPhysicalObjectMeleeAttackSystem newGrabPhysicalObjectMeleeAttackSystem)",
+    "line": 792
+   },
+   {
+    "sig": "getLastTimeDrawMeleeWeapon()",
+    "line": 1044
+   },
+   {
+    "sig": "getMeleeAttackTypesAmount()",
+    "line": 1049
+   },
+   {
+    "sig": "setRemoveWeaponsFromManagerState(bool state)",
+    "line": 1056
+   },
+   {
+    "sig": "removeGrabPhysicalObjectMeleeAttackSystem()",
+    "line": 1061
+   },
+   {
+    "sig": "enableOrDisableMainMeleeUISystem(bool state)",
+    "line": 1214
+   },
+   {
+    "sig": "getGrabbedWeaponInfoByName(string weaponInfoName)",
+    "line": 1221
+   },
+   {
+    "sig": "checkUpdateCustomReferencePositionsToKeepMeshValues(grabPhysicalObjectMeleeAttackSystem newGrabPhysicalObjectMeleeAttackSystem)",
+    "line": 1232
+   },
+   {
+    "sig": "drawOrKeepMeleeWeapon()",
+    "line": 1252
+   },
+   {
+    "sig": "drawOrKeepMeleeWeaponWithoutCheckingInputActive()",
+    "line": 1259
+   },
+   {
+    "sig": "drawMeleeWeaponGrabbedCheckingAnimationDelay()",
+    "line": 1266
+   },
+   {
+    "sig": "checkToKeepWeapon()",
+    "line": 1273
+   },
+   {
+    "sig": "checkToKeepWeaponWithoutCheckingInputActive()",
+    "line": 1278
+   },
+   {
+    "sig": "checkIfDropThrownWeaponWhenUsingDevice()",
+    "line": 1283
+   },
+   {
+    "sig": "setAttackInputPausedForStaminaState(bool state)",
+    "line": 1290
+   },
+   {
+    "sig": "setThrowObjectInputPausedForStaminaState(bool state)",
+    "line": 1297
+   },
+   {
+    "sig": "canActivateAttack()",
+    "line": 1304
+   },
+   {
+    "sig": "resetCurrentAttackByIndex()",
+    "line": 1317
+   },
+   {
+    "sig": "activateGrabbedObjectMeleeAttackByIndex()",
+    "line": 1324
+   },
+   {
+    "sig": "activateNextAttackIgnoringWaitingTimes()",
+    "line": 1343
+   },
+   {
+    "sig": "checkResetAttackInputStack()",
+    "line": 1360
+   },
+   {
+    "sig": "resetAttackInputStack()",
+    "line": 1367
+   },
+   {
+    "sig": "activateGrabbedObjectMeleeAttack(string attackType)",
+    "line": 1384
+   },
+   {
+    "sig": "resetAttackIndex()",
+    "line": 1780
+   },
+   {
+    "sig": "setNextAttackIndex()",
+    "line": 1787
+   },
+   {
+    "sig": "stopActivateGrabbedObjectMeleeAttackCoroutine()",
+    "line": 1800
+   },
+   {
+    "sig": "stopActivateDamageTriggerCoroutine()",
+    "line": 1966
+   },
+   {
+    "sig": "stopActivateDamageDualWieldTriggerCoroutine()",
+    "line": 1973
+   },
+   {
+    "sig": "enableOrDisableDualWieldMeleeWeaponObject(bool state)",
+    "line": 1980
+   },
+   {
+    "sig": "resetActivateDamageTriggerCoroutine()",
+    "line": 1989
+   },
+   {
+    "sig": "getCharacterHumanBone(HumanBodyBones boneToFind)",
+    "line": 2475
+   },
+   {
+    "sig": "getCurrentGrabbedObjectTransform()",
+    "line": 2480
+   },
+   {
+    "sig": "getCurrentMeleeWeaponTypeName()",
+    "line": 2485
+   },
+   {
+    "sig": "getCurrentMeleeWeaponName()",
+    "line": 2494
+   },
+   {
+    "sig": "canWeaponsBeStolenFromCharacter()",
+    "line": 2503
+   },
+   {
+    "sig": "setCanWeaponsBeStolenFromCharacter(bool state)",
+    "line": 2508
+   },
+   {
+    "sig": "isSecondaryAbilityActiveOnCurrentWeapon()",
+    "line": 2513
+   },
+   {
+    "sig": "disableCurrentAttackInProcess()",
+    "line": 2522
+   },
+   {
+    "sig": "checkDurabilityOnAttackOnCurrentWeapon(bool ignoreDurability, float extraDurabilityMultiplier)",
+    "line": 2595
+   },
+   {
+    "sig": "repairObjectFully(string weaponName)",
+    "line": 2620
+   },
+   {
+    "sig": "checkDurabilityOnBlock()",
+    "line": 2626
+   },
+   {
+    "sig": "checkOnAttackBlocked()",
+    "line": 2647
+   },
+   {
+    "sig": "checkOnAttackBlockedPerfectly()",
+    "line": 2661
+   },
+   {
+    "sig": "setGetHealthFromPerfectBlocksActiveState(bool state)",
+    "line": 2689
+   },
+   {
+    "sig": "setHealthAmountFromPerfectBlocksValue(float newValue)",
+    "line": 2694
+   },
+   {
+    "sig": "checkIfBlockInputIsCurrentlyInUse()",
+    "line": 2720
+   },
+   {
+    "sig": "disableBlockStateInProcess()",
+    "line": 2736
+   },
+   {
+    "sig": "disableBlockActiveState()",
+    "line": 2745
+   },
+   {
+    "sig": "checkEventsOnBlockDamage(bool state)",
+    "line": 2750
+   },
+   {
+    "sig": "checkEventsToUpdateCharacterSurfaceOnBlockStateChange()",
+    "line": 2761
+   },
+   {
+    "sig": "checkIfBlockActive()",
+    "line": 2789
+   },
+   {
+    "sig": "setBlockActiveState(bool state)",
+    "line": 2813
+   },
+   {
+    "sig": "updateRegularBlockDamageProtectionValue()",
+    "line": 2887
+   },
+   {
+    "sig": "updateReducedBlockDamageProtectionValue()",
+    "line": 2892
+   },
+   {
+    "sig": "setBlockDamageProtectionValue(bool state)",
+    "line": 2897
+   },
+   {
+    "sig": "disableBlockInputPausedStateWithDuration(float pauseDuration)",
+    "line": 2989
+   },
+   {
+    "sig": "setBlockInputPausedState(bool state)",
+    "line": 3029
+   },
+   {
+    "sig": "setCanCancelBlockToStartAttackActiveState(bool state)",
+    "line": 3034
+   },
+   {
+    "sig": "setShieldProtectionValues(float blockDamageProtectionAmount, float reducedBlockDamageProtectionAmount, bool useMaxBlockRangeAngleValue, float maxBlockRangeAngleAmount)",
+    "line": 3047
+   },
+   {
+    "sig": "setShieldActiveState(bool state)",
+    "line": 3056
+   },
+   {
+    "sig": "getEmptyWeaponToUseOnlyShield()",
+    "line": 3135
+   },
+   {
+    "sig": "setShieldActiveFieldValueDirectly(bool state)",
+    "line": 3148
+   },
+   {
+    "sig": "drawOrSheatheShield(bool state)",
+    "line": 3174
+   },
+   {
+    "sig": "setUseRightHandMountPointForShieldActiveState(bool state)",
+    "line": 3202
+   },
+   {
+    "sig": "setShieldParentState(bool state)",
+    "line": 3207
+   },
+   {
+    "sig": "checkIfCarryingShieldActive()",
+    "line": 3230
+   },
+   {
+    "sig": "setShieldInfo(string newShieldName, GameObject newShieldGameObject, Transform newShieldHandMountPointTransformReference, Transform newShieldBackMountPointTransformReference, bool shieldCarriedOnRightArm, bool state)",
+    "line": 3239
+   },
+   {
+    "sig": "checkIfCanUseMeleeWeaponPrefabByName(string weaponName)",
+    "line": 3281
+   },
+   {
+    "sig": "getCurrentNumberOfWeaponsAvailable()",
+    "line": 3286
+   },
+   {
+    "sig": "dropMeleeWeaponsExternallyWithoutResult()",
+    "line": 3291
+   },
+   {
+    "sig": "dropMeleeWeaponsExternallyWithoutResultAndDestroyIt()",
+    "line": 3304
+   },
+   {
+    "sig": "dropMeleeWeaponsExternally()",
+    "line": 3323
+   },
+   {
+    "sig": "drawNextWeaponAvailable()",
+    "line": 3338
+   },
+   {
+    "sig": "drawRandomWeaponFromPrefabList(string previousWeaponName)",
+    "line": 3343
+   },
+   {
+    "sig": "resetStartWithWeaponCheckedOnCharacterSpawn()",
+    "line": 3348
+   },
+   {
+    "sig": "resumeState()",
+    "line": 3384
+   },
+   {
+    "sig": "checkEventsOnAttack(bool state)",
+    "line": 3435
+   },
+   {
+    "sig": "checkEventWhenKeepingOrDrawingMeleeWeapon(bool state)",
+    "line": 3446
+   },
+   {
+    "sig": "setRemoteEventOnCurrentMeleeWeapon(string remoteEventName)",
+    "line": 3464
+   },
+   {
+    "sig": "setRemoteEventsOnCurrentMeleeWeapon(List<string> remoteEventNameList, GameObject weaponObject)",
+    "line": 3480
+   },
+   {
+    "sig": "setDamageTypeAndReactionInfo(string newBuffObjectName)",
+    "line": 3500
+   },
+   {
+    "sig": "activateReturnProjectilesOnContact()",
+    "line": 3509
+   },
+   {
+    "sig": "setNewMeleeWeaponAttackInfoTemplate(string templateName)",
+    "line": 3520
+   },
+   {
+    "sig": "setNextMeleeWeaponAttackInfoTemplate()",
+    "line": 3533
+   },
+   {
+    "sig": "inputSetNextMeleeWeaponAttackInfoTemplate()",
+    "line": 3622
+   },
+   {
+    "sig": "checkGrabbedWeaponInfoStateAtStart(string weaponInfoName, bool checkIfWeaponThrown)",
+    "line": 3627
+   },
+   {
+    "sig": "checkGrabbedWeaponInfoStateAtEnd()",
+    "line": 3718
+   },
+   {
+    "sig": "checkLookAtTargetActiveState()",
+    "line": 3765
+   },
+   {
+    "sig": "checkLookAtTargetDeactivateState()",
+    "line": 3810
+   },
+   {
+    "sig": "setStrafeModeOnAISystemState(bool state)",
+    "line": 3823
+   },
+   {
+    "sig": "setStrafeModeState(bool state, int strafeID)",
+    "line": 3830
+   },
+   {
+    "sig": "setCurrentCrouchIDValue(int crouchID)",
+    "line": 3837
+   },
+   {
+    "sig": "isStrafeModeActive()",
+    "line": 3842
+   },
+   {
+    "sig": "getCurrentStrafeID()",
+    "line": 3847
+   },
+   {
+    "sig": "getCurrentCrouchID()",
+    "line": 3852
+   },
+   {
+    "sig": "isActionActive()",
+    "line": 3857
+   },
+   {
+    "sig": "setObjectThrownState(bool state)",
+    "line": 3862
+   },
+   {
+    "sig": "setGrabbedObjectClonnedColliderEnabledState(bool state)",
+    "line": 3893
+   },
+   {
+    "sig": "setDamageDetectedOnDualWieldTriggerById(int attackID)",
+    "line": 3902
+   },
+   {
+    "sig": "setDamageDetectedOnTriggerById(int attackID)",
+    "line": 3913
+   },
+   {
+    "sig": "setNoDamageDetectedOnDualWieldTriggerById(GameObject objectDeteted)",
+    "line": 3987
+   },
+   {
+    "sig": "setNoDamageDetectedOnTriggerById(GameObject objectDetected)",
+    "line": 3994
+   },
+   {
+    "sig": "setPressDownState()",
+    "line": 3999
+   },
+   {
+    "sig": "setPressUpState()",
+    "line": 4008
+   },
+   {
+    "sig": "inputSetPressDownState()",
+    "line": 4019
+   },
+   {
+    "sig": "inputSetPressUpState()",
+    "line": 4052
+   },
+   {
+    "sig": "inputActivateBlock()",
+    "line": 4086
+   },
+   {
+    "sig": "inputDeactivateBlock()",
+    "line": 4135
+   },
+   {
+    "sig": "inputSetNextExtraActionOnMeleeWeapon()",
+    "line": 4167
+   },
+   {
+    "sig": "enableExtraActionByName(string actionName)",
+    "line": 4231
+   },
+   {
+    "sig": "disableExtraActionByName(string actionName)",
+    "line": 4236
+   },
+   {
+    "sig": "enableOrDisableExtraActionByName(string actionName, bool state)",
+    "line": 4241
+   },
+   {
+    "sig": "inputActivateCurrentExtraActionOnMeleeWeapon()",
+    "line": 4258
+   },
+   {
+    "sig": "setThrowWeaponActionPausedState(bool state)",
+    "line": 4297
+   },
+   {
+    "sig": "inputThrowOrReturnObject()",
+    "line": 4306
+   },
+   {
+    "sig": "inputPressDownThrowObject()",
+    "line": 4313
+   },
+   {
+    "sig": "inputPressUpThrowObject()",
+    "line": 4320
+   },
+   {
+    "sig": "inputEnableOrDisableCuttingMode()",
+    "line": 4327
+   },
+   {
+    "sig": "inputActivateTeleport()",
+    "line": 4354
+   },
+   {
+    "sig": "enableOrDisableCuttingMode(bool state)",
+    "line": 4361
+   },
+   {
+    "sig": "checkObjectsDetectedOnCuttingMode()",
+    "line": 4380
+   },
+   {
+    "sig": "checkEventOnGrabDropObject(bool state)",
+    "line": 4450
+   },
+   {
+    "sig": "checkEventsIfObjectGrabbed()",
+    "line": 4463
+   },
+   {
+    "sig": "checKEventsHideShowInventoryQuickAccessSlots(bool state)",
+    "line": 4470
+   },
+   {
+    "sig": "setThrowObjectEnabledState(bool state)",
+    "line": 4481
+   },
+   {
+    "sig": "setReturnObjectEnabledState(bool state)",
+    "line": 4488
+   },
+   {
+    "sig": "setApplyDamageOnSurfaceDetectedOnReturnEnabledState(bool state)",
+    "line": 4495
+   },
+   {
+    "sig": "setApplyDamageOnObjectReturnPathEnabledState(bool state)",
+    "line": 4502
+   },
+   {
+    "sig": "setGeneralDamageMultiplierOnObjectReturnValue(float newValue)",
+    "line": 4509
+   },
+   {
+    "sig": "setGeneralDamageMultiplierOnReturnPathValue(float newValue)",
+    "line": 4516
+   },
+   {
+    "sig": "setGeneralDamageOnSurfaceDetectedOnThrowValue(float newValue)",
+    "line": 4523
+   },
+   {
+    "sig": "setCuttingModeEnabledState(bool state)",
+    "line": 4530
+   },
+   {
+    "sig": "setBlockModeEnabledState(bool state)",
+    "line": 4535
+   },
+   {
+    "sig": "setGeneralBlockProtectionMultiplierValue(float newValue)",
+    "line": 4540
+   },
+   {
+    "sig": "setUseStaminaOnAttackEnabledState(bool state)",
+    "line": 4545
+   },
+   {
+    "sig": "setGeneralStaminaUseMultiplierValue(float newValue)",
+    "line": 4550
+   },
+   {
+    "sig": "getGeneralStaminaUseMultiplier()",
+    "line": 4555
+   },
+   {
+    "sig": "setGeneralAttackDamageMultiplierValue(float newValue)",
+    "line": 4560
+   },
+   {
+    "sig": "generalAttackDamageMultiplierIncreaseStat(float extraValue)",
+    "line": 4565
+   },
+   {
+    "sig": "initializeGeneralAttackDamageMultiplierStatAmount(float newValue)",
+    "line": 4570
+   },
+   {
+    "sig": "getGeneralAttackDamageMultiplierValue()",
+    "line": 4575
+   },
+   {
+    "sig": "isObjectThrownTravellingToTarget()",
+    "line": 4580
+   },
+   {
+    "sig": "isAttackInProcess()",
+    "line": 4589
+   },
+   {
+    "sig": "isCuttingModeActive()",
+    "line": 4594
+   },
+   {
+    "sig": "checkIfActivateParryStateIfAttackInProcess()",
+    "line": 4599
+   },
+   {
+    "sig": "isBlockActive()",
+    "line": 4618
+   },
+   {
+    "sig": "canUseWeaponsInput()",
+    "line": 4623
+   },
+   {
+    "sig": "playerIsBusy()",
+    "line": 4636
+   },
+   {
+    "sig": "getLastTimeObjectReturn()",
+    "line": 4657
+   },
+   {
+    "sig": "getLastTimeObjectThrown()",
+    "line": 4666
+   },
+   {
+    "sig": "isCurrentWeaponThrown()",
+    "line": 4675
+   },
+   {
+    "sig": "setMeleeAttackInputPausedState(bool state)",
+    "line": 4680
+   },
+   {
+    "sig": "disableMeleeAttackInputPausedStateWithDuration(float pauseDuration)",
+    "line": 4687
+   },
+   {
+    "sig": "isCarryingObject()",
+    "line": 4701
+   },
+   {
+    "sig": "checkIfCurrentWeaponignoreUseIKOnHands()",
+    "line": 4706
+   },
+   {
+    "sig": "isCurrentWeaponIsCarriedOnRightHand()",
+    "line": 4715
+   },
+   {
+    "sig": "isAimingBowActive()",
+    "line": 4726
+   },
+   {
+    "sig": "setAimBowState(bool state)",
+    "line": 4731
+   },
+   {
+    "sig": "getCurrentGrabPhysicalObjectMeleeAttackSystem()",
+    "line": 4736
+   },
+   {
+    "sig": "checkSurfaceFoundOnAttack(bool surfaceLocated)",
+    "line": 4741
+   },
+   {
+    "sig": "checkSurfaceFoundOnAttackToProcess(string surfaceName, bool surfaceLocated, Vector3 attackPosition, Vector3 attackNormal, bool ignoreBounceEvent, bool ignoreSoundOnSurface)",
+    "line": 5118
+   },
+   {
+    "sig": "setMeleeAttackSoundPausedState(bool state)",
+    "line": 5202
+   },
+   {
+    "sig": "addEventOnDamageInfoList(string weaponTypeName)",
+    "line": 5207
+   },
+   {
+    "sig": "setIgnoreCutModeOnMeleeWeaponAttackState(bool state)",
+    "line": 5220
+   },
+   {
+    "sig": "setCheckDurabilityOnAttackEnabledState(bool state)",
+    "line": 5225
+   },
+   {
+    "sig": "setCheckDurabilityOnBlockEnabledState(bool state)",
+    "line": 5230
+   },
+   {
+    "sig": "setGeneralAttackDurabilityMultiplier(float newValue)",
+    "line": 5235
+   },
+   {
+    "sig": "setGeneralBlockDurabilityMultiplier(float newValue)",
+    "line": 5240
+   },
+   {
+    "sig": "setIgnoreUseDrawKeepWeaponAnimationState(bool state)",
+    "line": 5245
+   },
+   {
+    "sig": "setOriginalIgnoreUseDrawKeepWeaponAnimationState()",
+    "line": 5250
+   },
+   {
+    "sig": "setUseMatchTargetSystemOnAttackState(bool state)",
+    "line": 5255
+   },
+   {
+    "sig": "setOriginaloriginalUseMatchTargetSystemOnAttackState()",
+    "line": 5260
+   },
+   {
+    "sig": "enableOrDisableUseAttackInputStack(bool state)",
+    "line": 5265
+   },
+   {
+    "sig": "setPlaceTriggerInFrontOfCharacterOnAllAttacksState(bool state)",
+    "line": 5270
+   },
+   {
+    "sig": "setExtraTriggerMultiplierScaleOnAllMeleeAttacksActiveState(bool state, float value)",
+    "line": 5275
+   },
+   {
+    "sig": "setCheckDurabilityOnAttackEnabledStateFromEditor(bool state)",
+    "line": 5284
+   },
+   {
+    "sig": "setCheckDurabilityOnBlockEnabledStateFromEditor(bool state)",
+    "line": 5291
+   },
+   {
+    "sig": "setGeneralAttackDurabilityMultiplierFromEditor(float newValue)",
+    "line": 5298
+   },
+   {
+    "sig": "setGeneralBlockDurabilityMultiplierFromEditor(float newValue)",
+    "line": 5305
+   },
+   {
+    "sig": "setCustomIgnoreTagsForCharacterFromEditor()",
+    "line": 5312
+   },
+   {
+    "sig": "setUseMatchTargetSystemOnAttackStateFromEditor(bool state)",
+    "line": 5325
+   },
+   {
+    "sig": "setIgnoreCutModeOnMeleeWeaponAttackStateFromEditor(bool state)",
+    "line": 5332
+   },
+   {
+    "sig": "setIgnoreUseDrawKeepWeaponAnimationStateFromEditor(bool state)",
+    "line": 5339
+   },
+   {
+    "sig": "enableOrDisableUseAttackInputStackFromEditor(bool state)",
+    "line": 5346
+   },
+   {
+    "sig": "updateGrabbedWeaponReferenceValuesOnAllWeaponInfoList()",
+    "line": 5353
+   }
+  ]
+ }
+]

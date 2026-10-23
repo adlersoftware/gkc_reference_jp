@@ -1,0 +1,474 @@
+[
+ {
+  "type": "GKCRiderSocketSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\GKCRiderSocketSystem.cs",
+  "methods": [
+   {
+    "sig": "getMainRiderSystem()",
+    "line": 12
+   }
+  ]
+ },
+ {
+  "type": "WaypointCircuit",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\AI\\WaypointCircuit.cs",
+  "methods": [
+   {
+    "sig": "getClosestPosition(Vector3 position)",
+    "line": 48
+   },
+   {
+    "sig": "getProgressValue(Vector3 position)",
+    "line": 71
+   },
+   {
+    "sig": "GetRoutePoint(float dist)",
+    "line": 116
+   },
+   {
+    "sig": "GetRoutePosition(float dist)",
+    "line": 127
+   },
+   {
+    "sig": "addNewWayPoint()",
+    "line": 215
+   },
+   {
+    "sig": "addNewWayPointAtIndex(int index)",
+    "line": 237
+   },
+   {
+    "sig": "renameWaypoints()",
+    "line": 252
+   },
+   {
+    "sig": "resetWaypointsPositions()",
+    "line": 265
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 279
+   }
+  ]
+ },
+ {
+  "type": "WaypointProgressTracker",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\AI\\WaypointProgressTracker.cs",
+  "methods": [
+   {
+    "sig": "setWaypointActiveState(bool state)",
+    "line": 95
+   },
+   {
+    "sig": "activateTrackState()",
+    "line": 106
+   },
+   {
+    "sig": "stopTrackState()",
+    "line": 113
+   },
+   {
+    "sig": "resetTrackerState()",
+    "line": 163
+   }
+  ]
+ },
+ {
+  "type": "hoverBoardWayPoints",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\hoverBoardWayPoints.cs",
+  "methods": [
+   {
+    "sig": "addNewWayPoint()",
+    "line": 107
+   },
+   {
+    "sig": "removeWaypoint(int index)",
+    "line": 138
+   },
+   {
+    "sig": "addNewWayPointAtIndex(int index)",
+    "line": 149
+   },
+   {
+    "sig": "selectObjectByIndex(int index)",
+    "line": 182
+   },
+   {
+    "sig": "renameAllWaypoints()",
+    "line": 191
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 206
+   }
+  ]
+ },
+ {
+  "type": "launchTrayectory",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\launchTrayectory.cs",
+  "methods": [
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 114
+   },
+   {
+    "sig": "changeParableState(bool state)",
+    "line": 289
+   },
+   {
+    "sig": "setMainCameraTransform(Transform newCameraTransform)",
+    "line": 418
+   },
+   {
+    "sig": "setShowLineRendererEnabledState(bool state)",
+    "line": 423
+   }
+  ]
+ },
+ {
+  "type": "mainRiderSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\mainRiderSystem.cs",
+  "methods": [
+   {
+    "sig": "isVehicleOnlyForOnePlayerActive()",
+    "line": 15
+   },
+   {
+    "sig": "getVehicleCameraGameObject()",
+    "line": 20
+   },
+   {
+    "sig": "getVehicleGravityControl()",
+    "line": 25
+   },
+   {
+    "sig": "getVehicleGameObject()",
+    "line": 30
+   },
+   {
+    "sig": "setTriggerToDetect(Collider newCollider)",
+    "line": 35
+   },
+   {
+    "sig": "setPlayerVisibleInVehicleState(bool state)",
+    "line": 40
+   },
+   {
+    "sig": "setResetCameraRotationWhenGetOnState(bool state)",
+    "line": 45
+   },
+   {
+    "sig": "setEjectPlayerWhenDestroyedState(bool state)",
+    "line": 50
+   },
+   {
+    "sig": "getCustomVehicleTransform()",
+    "line": 55
+   },
+   {
+    "sig": "setEnteringOnVehicleFromDistanceState(bool state)",
+    "line": 60
+   },
+   {
+    "sig": "setCurrentPassenger(GameObject passenger)",
+    "line": 65
+   },
+   {
+    "sig": "getCurrentDriver()",
+    "line": 70
+   },
+   {
+    "sig": "isBeingDrivenActive()",
+    "line": 75
+   },
+   {
+    "sig": "getVehicleRadius()",
+    "line": 80
+   },
+   {
+    "sig": "checkIfDetectSurfaceBelongToVehicle(Collider surfaceFound)",
+    "line": 85
+   },
+   {
+    "sig": "getVehicleCollider()",
+    "line": 90
+   }
+  ]
+ },
+ {
+  "type": "remoteVehicleNavmeshOverride",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\AI\\remoteVehicleNavmeshOverride.cs",
+  "methods": [
+   {
+    "sig": "setVehicleNavMeshTargetPosition()",
+    "line": 27
+   },
+   {
+    "sig": "removeVehicleNavmeshTarget()",
+    "line": 42
+   }
+  ]
+ },
+ {
+  "type": "shipInterfaceInfo",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\shipInterfaceInfo.cs",
+  "methods": [
+   {
+    "sig": "enableOrDisableInterface(bool state)",
+    "line": 225
+   },
+   {
+    "sig": "shipCanLand(bool state)",
+    "line": 238
+   },
+   {
+    "sig": "shipEnginesState(bool state)",
+    "line": 247
+   }
+  ]
+ },
+ {
+  "type": "skidsManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\skidsManager.cs",
+  "methods": [
+   {
+    "sig": "AddSkidMark(Vector3 pos, Vector3 normal, float intensity, int lastIndex)",
+    "line": 149
+   },
+   {
+    "sig": "setSkidsEnabledState(bool state)",
+    "line": 205
+   }
+  ]
+ },
+ {
+  "type": "vehicleAINavMesh",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\AI\\vehicleAINavMesh.cs",
+  "methods": [
+   {
+    "sig": "enableOrDisableAIObject(bool state)",
+    "line": 360
+   },
+   {
+    "sig": "enableOrDisableAIObjectWithoutActivatingDrivingState(bool state)",
+    "line": 387
+   },
+   {
+    "sig": "setUsedByAIState(bool state)",
+    "line": 414
+   },
+   {
+    "sig": "setUsedByAIStateWithoutActivatingDrvingState(bool state)",
+    "line": 419
+   },
+   {
+    "sig": "enableOrDisablePatrolState(bool state)",
+    "line": 424
+   },
+   {
+    "sig": "SetTarget(Transform target)",
+    "line": 459
+   },
+   {
+    "sig": "setDrivingState(bool state)",
+    "line": 466
+   },
+   {
+    "sig": "setUsingTrackActive(bool state)",
+    "line": 479
+   },
+   {
+    "sig": "setVehicleAIActiveState(bool state)",
+    "line": 484
+   },
+   {
+    "sig": "setAutoBrakeOnRemoveTargetState(bool state)",
+    "line": 806
+   }
+  ]
+ },
+ {
+  "type": "vehicleDamageReceiver",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\vehicleDamageReceiver.cs",
+  "methods": [
+   {
+    "sig": "setDamage(float amount, Vector3 fromDirection, Vector3 damagePos, GameObject bulletOwner, GameObject projectile, bool damageConstant, bool searchClosestWeakSpot, bool damageCanBeBlocked)",
+    "line": 25
+   },
+   {
+    "sig": "setHeal(float amount)",
+    "line": 36
+   },
+   {
+    "sig": "getMaxHealthAmount()",
+    "line": 46
+   },
+   {
+    "sig": "getAuxHealthAmount()",
+    "line": 51
+   },
+   {
+    "sig": "addAuxHealthAmount(float amount)",
+    "line": 56
+   },
+   {
+    "sig": "getCurrentFuelAmount()",
+    "line": 62
+   },
+   {
+    "sig": "getMaxFuelAmount()",
+    "line": 67
+   },
+   {
+    "sig": "getFuel(float amount)",
+    "line": 72
+   },
+   {
+    "sig": "removeFuel(float amount)",
+    "line": 77
+   },
+   {
+    "sig": "destroyVehicle()",
+    "line": 83
+   },
+   {
+    "sig": "getDecalImpactIndex()",
+    "line": 89
+   },
+   {
+    "sig": "getEnergy(float amount)",
+    "line": 95
+   },
+   {
+    "sig": "removeEnergy(float amount)",
+    "line": 100
+   },
+   {
+    "sig": "getCurrentEnergyAmount()",
+    "line": 105
+   },
+   {
+    "sig": "getMaxEnergyAmount()",
+    "line": 110
+   },
+   {
+    "sig": "getAuxEnergyAmount()",
+    "line": 115
+   },
+   {
+    "sig": "addAuxEnergyAmount(float amount)",
+    "line": 120
+   },
+   {
+    "sig": "isVehicleDestroyed()",
+    "line": 125
+   },
+   {
+    "sig": "ignoreCollisionWithSolidVehicleColliderList(Collider colliderToIgnore, bool state)",
+    "line": 130
+   },
+   {
+    "sig": "setVehicle(GameObject vehicleGameObject, vehicleHUDManager currentVehicleHUDManager)",
+    "line": 136
+   },
+   {
+    "sig": "setDamageTargetOverTimeState(float damageOverTimeDelay, float damageOverTimeDuration, float damageOverTimeAmount, float damageOverTimeRate, bool damageOverTimeToDeath, int damageTypeID)",
+    "line": 144
+   },
+   {
+    "sig": "removeDamagetTargetOverTimeState()",
+    "line": 149
+   },
+   {
+    "sig": "getHUDManager()",
+    "line": 154
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 324
+   }
+  ]
+ },
+ {
+  "type": "vehicleInteractionPanelSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\vehicleInteractionPanelSystem.cs",
+  "methods": [
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 73
+   },
+   {
+    "sig": "setCurrentVehicleDetected(GameObject newVehicle)",
+    "line": 120
+   },
+   {
+    "sig": "inputEnterOnVehicleAsDriver()",
+    "line": 195
+   },
+   {
+    "sig": "inputEnterOnVehicleAsPassenger()",
+    "line": 237
+   }
+  ]
+ },
+ {
+  "type": "vehicleInterface",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\vehicleInterface.cs",
+  "methods": [
+   {
+    "sig": "setInterfaceCanBeEnabledState(bool state)",
+    "line": 122
+   },
+   {
+    "sig": "enableOrDisableInterface(bool state)",
+    "line": 127
+   },
+   {
+    "sig": "checkPressedUIElememt(GameObject uiElement)",
+    "line": 205
+   },
+   {
+    "sig": "setMoveInterfacePanelPressed(RectTransform panelToCheck)",
+    "line": 351
+   },
+   {
+    "sig": "setRotateInterfacePanelPressed(RectTransform panelToCheck)",
+    "line": 358
+   },
+   {
+    "sig": "checkInterfacePanelInfoPressed(RectTransform panelToCheck)",
+    "line": 365
+   },
+   {
+    "sig": "resetInterfacePanelInfoPressed(RectTransform panelToCheck)",
+    "line": 390
+   },
+   {
+    "sig": "setInterfaceCanvasState(bool state)",
+    "line": 404
+   },
+   {
+    "sig": "addInterfaceElement()",
+    "line": 411
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 422
+   }
+  ]
+ },
+ {
+  "type": "vehicleLaser",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\vehicleLaser.cs",
+  "methods": [
+   {
+    "sig": "changeLaserState(bool state)",
+    "line": 141
+   },
+   {
+    "sig": "updateCustomRayPosition(Vector3 newPosition, Vector3 newDirection)",
+    "line": 165
+   }
+  ]
+ }
+]

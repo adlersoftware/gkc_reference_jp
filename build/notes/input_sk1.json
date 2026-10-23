@@ -1,0 +1,204 @@
+[
+ {
+  "type": "playerSkillsSystem",
+  "file": "Skills System/playerSkillsSystem.cs",
+  "abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Skills System\\playerSkillsSystem.cs",
+  "methods": [
+   {
+    "sig": "isLoadingGameActive()",
+    "line": 33
+   },
+   {
+    "sig": "initializeSkillsValues()",
+    "line": 39
+   },
+   {
+    "sig": "setIsLoadingGameState(bool state)",
+    "line": 125
+   },
+   {
+    "sig": "isLoadingGameState()",
+    "line": 130
+   },
+   {
+    "sig": "increasePlayerSkill(string skillName, float skillExtraValue)",
+    "line": 135
+   },
+   {
+    "sig": "getSkillValue(string skillName)",
+    "line": 161
+   },
+   {
+    "sig": "updateSkillValue(string skillName, float newValue)",
+    "line": 183
+   },
+   {
+    "sig": "enableOrDisableBoolPlayerSkill(string skillName, bool boolSkillValue)",
+    "line": 209
+   },
+   {
+    "sig": "getBoolSkillValue(string skillName)",
+    "line": 237
+   },
+   {
+    "sig": "updateBoolSkillValue(string skillName, bool boolSkillValue)",
+    "line": 259
+   },
+   {
+    "sig": "getSkillInfoByIndex(int categoryIndex, int skillIndex)",
+    "line": 285
+   },
+   {
+    "sig": "useSkillPoints(int categoryIndex, int skillIndex, int totalSkillPoints, bool ignoreSkillPoints)",
+    "line": 294
+   },
+   {
+    "sig": "getSkillByName(string skillName)",
+    "line": 407
+   },
+   {
+    "sig": "disableSkillByName(string skillName)",
+    "line": 429
+   },
+   {
+    "sig": "disableAllSkills()",
+    "line": 463
+   },
+   {
+    "sig": "unlockSkillSlotByName(string skillName)",
+    "line": 495
+   },
+   {
+    "sig": "getCategoryIndex(string categoryName)",
+    "line": 517
+   },
+   {
+    "sig": "getSkillIndex(string skillName)",
+    "line": 530
+   },
+   {
+    "sig": "getSkillIndex(string skillCategoryName, string skillName)",
+    "line": 552
+   },
+   {
+    "sig": "setPlayerSkillsActiveState(bool state)",
+    "line": 577
+   },
+   {
+    "sig": "saveSettingsToTemplate()",
+    "line": 582
+   },
+   {
+    "sig": "loadSettingsFromTemplate(bool loadingFromEditor)",
+    "line": 626
+   },
+   {
+    "sig": "setAllSkillsCompleteStateOnTemplate(bool state)",
+    "line": 672
+   },
+   {
+    "sig": "enableAllSkillsOnEditor()",
+    "line": 691
+   },
+   {
+    "sig": "disableAllSkillsOnEditor()",
+    "line": 700
+   },
+   {
+    "sig": "enableSkillsOnEditor(int categoryIndex)",
+    "line": 709
+   },
+   {
+    "sig": "disableSkillsOnEditor(int categoryIndex)",
+    "line": 714
+   },
+   {
+    "sig": "enableOrDisableSkillsOnEditor(bool state, int categoryIndex)",
+    "line": 719
+   },
+   {
+    "sig": "activateSkillsOnEditor(int categoryIndex)",
+    "line": 732
+   },
+   {
+    "sig": "deactivateSkillsOnEditor(int categoryIndex)",
+    "line": 737
+   },
+   {
+    "sig": "activateOrDeactivateSkillsOnEditor(bool state, int categoryIndex)",
+    "line": 742
+   },
+   {
+    "sig": "setPlayerSkillsActiveStateFromEditor(bool state)",
+    "line": 773
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 780
+   }
+  ]
+ },
+ {
+  "type": "playerSkillsUISystem",
+  "file": "Skills System/playerSkillsUISystem.cs",
+  "abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Skills System\\playerSkillsUISystem.cs",
+  "methods": [
+   {
+    "sig": "updateSkillSlots()",
+    "line": 60
+   },
+   {
+    "sig": "openOrCloseSkillsMenu(bool state)",
+    "line": 112
+   },
+   {
+    "sig": "checkSkillPressed(GameObject skillSlot)",
+    "line": 142
+   },
+   {
+    "sig": "updateCurrentSkillInfo()",
+    "line": 216
+   },
+   {
+    "sig": "confirmUseSkillPointsOnCurrentSkillSlot()",
+    "line": 311
+   },
+   {
+    "sig": "cancelUseSkillPointsOnCurrentSkillSlot()",
+    "line": 380
+   },
+   {
+    "sig": "unlockSkillSlot(int skillSlotIndex)",
+    "line": 387
+   },
+   {
+    "sig": "checkSkillCategoryPressed(GameObject categorySlot)",
+    "line": 408
+   },
+   {
+    "sig": "resetScroll(Scrollbar scrollBarToReset)",
+    "line": 437
+   },
+   {
+    "sig": "resetScrollRectTransfrom(RectTransform listContent, ScrollRect scrollRectToReset)",
+    "line": 450
+   },
+   {
+    "sig": "assignSkillsToSlots()",
+    "line": 465
+   },
+   {
+    "sig": "assignSkillsNamesToSlots(int listIndex)",
+    "line": 492
+   },
+   {
+    "sig": "activateAllSkills(int listIndex)",
+    "line": 510
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 528
+   }
+  ]
+ }
+]

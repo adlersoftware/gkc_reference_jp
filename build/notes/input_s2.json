@@ -1,0 +1,274 @@
+[
+ {
+  "type": "saveDialogInfo",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Save System\\Custom Class To Save\\saveDialogInfo.cs",
+  "methods": [
+   {
+    "sig": "saveGameContent(int currentSaveNumber, int playerID, string currentSaveDataPath, bool showDebugInfo, bool savingGameToChangeScene)",
+    "line": 32
+   },
+   {
+    "sig": "loadGameContent(int saveNumberToLoad, int playerID, string currentSaveDataPath, bool showDebugInfo)",
+    "line": 160
+   },
+   {
+    "sig": "getPersistanceList(int playerID, bool showDebugInfo)",
+    "line": 258
+   }
+  ]
+ },
+ {
+  "type": "saveElementsOnSceneInfo",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Save System\\Custom Class To Save\\saveElementsOnSceneInfo.cs",
+  "methods": [
+   {
+    "sig": "saveGameContent(int currentSaveNumber, int playerID, string currentSaveDataPath, bool showDebugInfo, bool savingGameToChangeScene)",
+    "line": 39
+   },
+   {
+    "sig": "loadGameContent(int saveNumberToLoad, int playerID, string currentSaveDataPath, bool showDebugInfo)",
+    "line": 164
+   },
+   {
+    "sig": "getPersistanceList(int playerID, bool showDebugInfo)",
+    "line": 270
+   },
+   {
+    "sig": "setStatsSearchingByInfo(int currentElementScene, int currentElementID, elementOnScene currentElementOnScene)",
+    "line": 538
+   }
+  ]
+ },
+ {
+  "type": "saveInventoryBankInfo",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Save System\\Custom Class To Save\\saveInventoryBankInfo.cs",
+  "methods": [
+   {
+    "sig": "saveGameContent(int currentSaveNumber, int playerID, string currentSaveDataPath, bool showDebugInfo, bool savingGameToChangeScene)",
+    "line": 32
+   },
+   {
+    "sig": "loadGameContent(int saveNumberToLoad, int playerID, string currentSaveDataPath, bool showDebugInfo)",
+    "line": 125
+   },
+   {
+    "sig": "getPersistanceList(int playerID, bool showDebugInfo)",
+    "line": 216
+   },
+   {
+    "sig": "saveGameContentFromEditor(int currentSaveNumber, int playerID, string currentSaveDataPath, bool showDebugInfo)",
+    "line": 287
+   },
+   {
+    "sig": "getPersistanceVendorListElement(int playerID, bool showDebugInfo)",
+    "line": 370
+   }
+  ]
+ },
+ {
+  "type": "saveMeleeWeaponsInfo",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Save System\\Custom Class To Save\\saveMeleeWeaponsInfo.cs",
+  "methods": [
+   {
+    "sig": "saveGameContent(int currentSaveNumber, int playerID, string currentSaveDataPath, bool showDebugInfo, bool savingGameToChangeScene)",
+    "line": 32
+   },
+   {
+    "sig": "loadGameContent(int saveNumberToLoad, int playerID, string currentSaveDataPath, bool showDebugInfo)",
+    "line": 131
+   }
+  ]
+ },
+ {
+  "type": "saveMissionsInfo",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Save System\\Custom Class To Save\\saveMissionsInfo.cs",
+  "methods": [
+   {
+    "sig": "saveGameContent(int currentSaveNumber, int playerID, string currentSaveDataPath, bool showDebugInfo, bool savingGameToChangeScene)",
+    "line": 31
+   },
+   {
+    "sig": "loadGameContent(int saveNumberToLoad, int playerID, string currentSaveDataPath, bool showDebugInfo)",
+    "line": 140
+   },
+   {
+    "sig": "getPersistanceList(int playerID, bool showDebugInfo)",
+    "line": 229
+   },
+   {
+    "sig": "debugMissionInfo(persistanceMissionInfo missinInfo)",
+    "line": 381
+   }
+  ]
+ },
+ {
+  "type": "savePlayerBlendshapesInfo",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Save System\\Custom Class To Save\\savePlayerBlendshapesInfo.cs",
+  "methods": [
+   {
+    "sig": "saveGameContent(int currentSaveNumber, int playerID, string currentSaveDataPath, bool showDebugInfo, bool savingGameToChangeScene)",
+    "line": 36
+   },
+   {
+    "sig": "loadGameContent(int saveNumberToLoad, int playerID, string currentSaveDataPath, bool showDebugInfo)",
+    "line": 143
+   },
+   {
+    "sig": "getPersistanceList(int playerID, bool showDebugInfo)",
+    "line": 268
+   }
+  ]
+ },
+ {
+  "type": "savePlayerInventoryInfo",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Save System\\Custom Class To Save\\savePlayerInventoryInfo.cs",
+  "methods": [
+   {
+    "sig": "saveGameContent(int currentSaveNumber, int playerID, string currentSaveDataPath, bool showDebugInfo, bool savingGameToChangeScene)",
+    "line": 51
+   },
+   {
+    "sig": "loadGameContent(int saveNumberToLoad, int playerID, string currentSaveDataPath, bool showDebugInfo)",
+    "line": 170
+   },
+   {
+    "sig": "getPersistanceList(int playerID, bool showDebugInfo)",
+    "line": 410
+   },
+   {
+    "sig": "saveGameContentFromEditor(int currentSaveNumber, int playerID, string currentSaveDataPath, bool showDebugInfo)",
+    "line": 569
+   },
+   {
+    "sig": "getPersistanceInventoryListElement(int playerID, bool showDebugInfo)",
+    "line": 660
+   }
+  ]
+ },
+ {
+  "type": "savePlayerOptionsInfo",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Save System\\Custom Class To Save\\savePlayerOptionsInfo.cs",
+  "methods": [
+   {
+    "sig": "saveGameContent(int currentSaveNumber, int playerID, string currentSaveDataPath, bool showDebugInfo, bool savingGameToChangeScene)",
+    "line": 29
+   },
+   {
+    "sig": "loadGameContent(int saveNumberToLoad, int playerID, string currentSaveDataPath, bool showDebugInfo)",
+    "line": 138
+   },
+   {
+    "sig": "getPersistanceList(int playerID, bool showDebugInfo)",
+    "line": 226
+   }
+  ]
+ },
+ {
+  "type": "savePlayerWeaponsInfo",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Save System\\Custom Class To Save\\savePlayerWeaponsInfo.cs",
+  "methods": [
+   {
+    "sig": "saveGameContent(int currentSaveNumber, int playerID, string currentSaveDataPath, bool showDebugInfo, bool savingGameToChangeScene)",
+    "line": 30
+   },
+   {
+    "sig": "loadGameContent(int saveNumberToLoad, int playerID, string currentSaveDataPath, bool showDebugInfo)",
+    "line": 122
+   },
+   {
+    "sig": "getPersistanceList(int playerID, bool showDebugInfo)",
+    "line": 195
+   }
+  ]
+ },
+ {
+  "type": "saveSkillsInfo",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Save System\\Custom Class To Save\\saveSkillsInfo.cs",
+  "methods": [
+   {
+    "sig": "saveGameContent(int currentSaveNumber, int playerID, string currentSaveDataPath, bool showDebugInfo, bool savingGameToChangeScene)",
+    "line": 32
+   },
+   {
+    "sig": "loadGameContent(int saveNumberToLoad, int playerID, string currentSaveDataPath, bool showDebugInfo)",
+    "line": 131
+   },
+   {
+    "sig": "getPersistanceList(int playerID, bool showDebugInfo)",
+    "line": 207
+   }
+  ]
+ },
+ {
+  "type": "saveStatsInfo",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Save System\\Custom Class To Save\\saveStatsInfo.cs",
+  "methods": [
+   {
+    "sig": "saveGameContent(int currentSaveNumber, int playerID, string currentSaveDataPath, bool showDebugInfo, bool savingGameToChangeScene)",
+    "line": 32
+   },
+   {
+    "sig": "loadGameContent(int saveNumberToLoad, int playerID, string currentSaveDataPath, bool showDebugInfo)",
+    "line": 131
+   },
+   {
+    "sig": "getPersistanceList(int playerID, bool showDebugInfo)",
+    "line": 209
+   }
+  ]
+ },
+ {
+  "type": "saveTravelStationInfo",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Save System\\Custom Class To Save\\saveTravelStationInfo.cs",
+  "methods": [
+   {
+    "sig": "saveGameContent(int currentSaveNumber, int playerID, string currentSaveDataPath, bool showDebugInfo, bool savingGameToChangeScene)",
+    "line": 30
+   },
+   {
+    "sig": "loadGameContent(int saveNumberToLoad, int playerID, string currentSaveDataPath, bool showDebugInfo)",
+    "line": 116
+   }
+  ]
+ },
+ {
+  "type": "saveVendorInfo",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Save System\\Custom Class To Save\\saveVendorInfo.cs",
+  "methods": [
+   {
+    "sig": "saveGameContent(int currentSaveNumber, int playerID, string currentSaveDataPath, bool showDebugInfo, bool savingGameToChangeScene)",
+    "line": 30
+   },
+   {
+    "sig": "loadGameContent(int saveNumberToLoad, int playerID, string currentSaveDataPath, bool showDebugInfo)",
+    "line": 135
+   },
+   {
+    "sig": "getPersistanceList(int playerID, bool showDebugInfo)",
+    "line": 237
+   },
+   {
+    "sig": "saveGameContentFromEditor(int currentSaveNumber, int playerID, string currentSaveDataPath, bool showDebugInfo)",
+    "line": 305
+   },
+   {
+    "sig": "getPersistanceVendorListElement(int playerID, bool showDebugInfo)",
+    "line": 386
+   }
+  ]
+ },
+ {
+  "type": "elementsOnSceneData",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Save System\\Elements On Scene\\elementsOnSceneData.cs",
+  "methods": [
+   {
+    "sig": "getElementScenePrefabById(int prefabID)",
+    "line": 11
+   },
+   {
+    "sig": "getElementScenePrefabIDByName(string prefabName)",
+    "line": 33
+   }
+  ]
+ }
+]

@@ -1,0 +1,698 @@
+[
+ {
+  "type": "actionSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Action System\\actionSystem.cs",
+  "source": "Action System/actionSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "useMinDistanceToActivateAction",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "minDistanceToActivateAction",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useMinAngleToActivateAction",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "minAngleToActivateAction",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "checkOppositeAngle",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "canStopPreviousAction",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "canForceToPlayCustomAction",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "mainTrigger",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "animationUsedOnUpperBody",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "disableRegularActionActiveState",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "disableRegularActionActiveStateOnEnd",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "setPlayerParentDuringActionActive",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "playerParentDuringAction",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "disableIgnorePlayerListChange",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "enableAnimatorLayerOnAction",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "animatorLayerToEnableName",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "changeCameraViewToThirdPersonOnAction",
+    "label": "",
+    "section": "First Person/FBA Settings"
+   },
+   {
+    "field": "changeCameraViewToThirdPersonOnActionOnFullBodyAwareness",
+    "label": "",
+    "section": "First Person/FBA Settings"
+   },
+   {
+    "field": "keepCameraRotationToHeadOnFullBodyAwareness",
+    "label": "",
+    "section": "First Person/FBA Settings"
+   },
+   {
+    "field": "actionsCanBeUsedOnFirstPerson",
+    "label": "",
+    "section": "First Person/FBA Settings"
+   },
+   {
+    "field": "ignoreChangeToThirdPerson",
+    "label": "",
+    "section": "First Person/FBA Settings"
+   },
+   {
+    "field": "currentActionInfoIndex",
+    "label": "",
+    "section": "Action State"
+   },
+   {
+    "field": "activateCustomActionAfterActionComplete",
+    "label": "",
+    "section": "Activate New Action After Action Complete"
+   },
+   {
+    "field": "customActionToActiveAfterActionComplete",
+    "label": "",
+    "section": "Activate New Action After Action Complete"
+   },
+   {
+    "field": "addActionToListStoredToPlay",
+    "label": "",
+    "section": "Store Action On List To Play"
+   },
+   {
+    "field": "playActionAutomaticallyIfStoredAtEnd",
+    "label": "",
+    "section": "Store Action On List To Play"
+   },
+   {
+    "field": "clearAddActionToListStoredToPlay",
+    "label": "",
+    "section": "Store Action On List To Play"
+   },
+   {
+    "field": "useEventsOnPlayerInsideOutside",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "eventOnPlayerInside",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "eventOnPlayerOutside",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "useEventsOnStartEndAction",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "eventOnStartAction",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "eventOnEndAction",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "useEventAfterResumePlayer",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "eventAfterResumePlayer",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "sendCurrentPlayerOnEvent",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "eventToSendCurrentPlayer",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "useEventBeforeStartAction",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "eventBeforeStartAction",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "useEventsToEnableDisableActionObject",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "eventToEnableActionObject",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "eventToDisableActionObject",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "showGizmo",
+    "label": "",
+    "section": "Gizmo And Debug Settings"
+   },
+   {
+    "field": "showAllGizmo",
+    "label": "",
+    "section": "Gizmo And Debug Settings"
+   },
+   {
+    "field": "showDebugPrint",
+    "label": "",
+    "section": "Gizmo And Debug Settings"
+   },
+   {
+    "field": "activateAnimationReplace",
+    "label": "",
+    "section": "Replace Action Animation Settings"
+   },
+   {
+    "field": "mainAnimator",
+    "label": "",
+    "section": "Replace Action Animation Settings"
+   },
+   {
+    "field": "animationLayerName",
+    "label": "",
+    "section": "Replace Action Animation Settings"
+   },
+   {
+    "field": "actionNameToReplace",
+    "label": "",
+    "section": "Replace Action Animation Settings"
+   },
+   {
+    "field": "newAnimationClip",
+    "label": "",
+    "section": "Replace Action Animation Settings"
+   },
+   {
+    "field": "newAnimationSpeed",
+    "label": "",
+    "section": "Replace Action Animation Settings"
+   },
+   {
+    "field": "newAnimationIsMirror",
+    "label": "",
+    "section": "Replace Action Animation Settings"
+   }
+  ]
+ },
+ {
+  "type": "buildPlayer",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Character Builder\\buildPlayer.cs",
+  "source": "Player/Character Builder/buildPlayer.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "placeNewCharacterOnSceneCenterEnabled",
+    "label": "",
+    "section": "Place New Character Settings"
+   },
+   {
+    "field": "layerToPlaceNPC",
+    "label": "",
+    "section": "Place New Character Settings"
+   },
+   {
+    "field": "mainChestMountPointName",
+    "label": "",
+    "section": "Place New Character Settings"
+   },
+   {
+    "field": "buildPlayerType",
+    "label": "",
+    "section": "Build Settings"
+   },
+   {
+    "field": "hasWeaponsEnabled",
+    "label": "",
+    "section": "Build Settings"
+   },
+   {
+    "field": "clearOldWeakSpotListOnCreateNewCharacterEnabled",
+    "label": "",
+    "section": "Build Settings"
+   },
+   {
+    "field": "assignNewModelManually",
+    "label": "",
+    "section": "Build Player Manually"
+   },
+   {
+    "field": "explanation",
+    "label": "",
+    "section": "Build Player Manually"
+   },
+   {
+    "field": "newCharacterModel",
+    "label": "",
+    "section": "Build Player Manually"
+   },
+   {
+    "field": "head",
+    "label": "",
+    "section": "Build Player Manually"
+   },
+   {
+    "field": "neck",
+    "label": "",
+    "section": "Build Player Manually"
+   },
+   {
+    "field": "chest",
+    "label": "",
+    "section": "Build Player Manually"
+   },
+   {
+    "field": "spine",
+    "label": "",
+    "section": "Build Player Manually"
+   },
+   {
+    "field": "rightLowerArm",
+    "label": "",
+    "section": "Build Player Manually"
+   },
+   {
+    "field": "leftLowerArm",
+    "label": "",
+    "section": "Build Player Manually"
+   },
+   {
+    "field": "rightHand",
+    "label": "",
+    "section": "Build Player Manually"
+   },
+   {
+    "field": "leftHand",
+    "label": "",
+    "section": "Build Player Manually"
+   },
+   {
+    "field": "rightLowerLeg",
+    "label": "",
+    "section": "Build Player Manually"
+   },
+   {
+    "field": "leftLowerLeg",
+    "label": "",
+    "section": "Build Player Manually"
+   },
+   {
+    "field": "rightFoot",
+    "label": "",
+    "section": "Build Player Manually"
+   },
+   {
+    "field": "leftFoot",
+    "label": "",
+    "section": "Build Player Manually"
+   },
+   {
+    "field": "rightToes",
+    "label": "",
+    "section": "Build Player Manually"
+   },
+   {
+    "field": "leftToes",
+    "label": "",
+    "section": "Build Player Manually"
+   },
+   {
+    "field": "applyCharacterSettingsOnManualBuild",
+    "label": "",
+    "section": "Build Player Manually"
+   },
+   {
+    "field": "setNewSpineAndChestBonesManually",
+    "label": "",
+    "section": "Update Spine and Chest Bones"
+   },
+   {
+    "field": "chest",
+    "label": "",
+    "section": "Update Spine and Chest Bones"
+   },
+   {
+    "field": "spine",
+    "label": "",
+    "section": "Update Spine and Chest Bones"
+   },
+   {
+    "field": "objectSearcherName",
+    "label": "Setting To Search",
+    "section": "Settings Searcher"
+   },
+   {
+    "field": "newCharacterSettingsTemplate",
+    "label": "",
+    "section": "Save/Load Settings List To File"
+   },
+   {
+    "field": "characterTemplateID",
+    "label": "",
+    "section": "Create New Character Template Data"
+   },
+   {
+    "field": "characterTemplateDataPath",
+    "label": "",
+    "section": "Create New Character Template Data"
+   },
+   {
+    "field": "characterTemplateName",
+    "label": "",
+    "section": "Create New Character Template Data"
+   },
+   {
+    "field": "eventOnCreatePlayer",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "eventToSendNewPlayerModel",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "player",
+    "label": "",
+    "section": "Character Elements"
+   },
+   {
+    "field": "grabPhysicalObject",
+    "label": "",
+    "section": "Character Elements"
+   },
+   {
+    "field": "currentCharacterModel",
+    "label": "",
+    "section": "Character Elements"
+   },
+   {
+    "field": "currentArrayElement",
+    "label": "",
+    "section": "Character Elements"
+   },
+   {
+    "field": "currentArrayElement",
+    "label": "",
+    "section": "Character Elements"
+   }
+  ]
+ },
+ {
+  "type": "cameraWaypointSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Camera\\Cutscene\\cameraWaypointSystem.cs",
+  "source": "Camera/Cutscene/cameraWaypointSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "cameraWaypointEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "currentCameraTransform",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "waitTimeBetweenPoints",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "movementSpeed",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "rotationSpeed",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "searchPlayerOnSceneIfNotAssigned",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "ignoreWaypointOnFreeCamera",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "ignoreWaypointOnLockedCamera",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "ignoreWaypointOnFBA",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "pausePlayerCameraEnabled",
+    "label": "",
+    "section": "Camera State Settings"
+   },
+   {
+    "field": "resetCameraPositionOnEnd",
+    "label": "",
+    "section": "Camera State Settings"
+   },
+   {
+    "field": "resetCameraPositionSpeed",
+    "label": "",
+    "section": "Camera State Settings"
+   },
+   {
+    "field": "useMainCameraTransform",
+    "label": "",
+    "section": "Camera State Settings"
+   },
+   {
+    "field": "setThisTransformAsCameraParent",
+    "label": "",
+    "section": "Camera State Settings"
+   },
+   {
+    "field": "useEventOnEnd",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "eventOnEnd",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "useEventToStopCutScene",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "eventToStopCutscene",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "useBezierCurve",
+    "label": "",
+    "section": "Bezier Path Settings"
+   },
+   {
+    "field": "spline",
+    "label": "",
+    "section": "Bezier Path Settings"
+   },
+   {
+    "field": "bezierDuration",
+    "label": "",
+    "section": "Bezier Path Settings"
+   },
+   {
+    "field": "snapCameraToFirstSplinePoint",
+    "label": "",
+    "section": "Bezier Path Settings"
+   },
+   {
+    "field": "useExternalProgress",
+    "label": "",
+    "section": "Bezier Path Settings"
+   },
+   {
+    "field": "showGizmo",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "gizmoLabelColor",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "gizmoRadius",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "useHandleForWaypoints",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "handleRadius",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "handleGizmoColor",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "showWaypointHandles",
+    "label": "",
+    "section": "Gizmo Options"
+   }
+  ]
+ },
+ {
+  "type": "characterFactionManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\Faction\\characterFactionManager.cs",
+  "source": "AI/Faction/characterFactionManager.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "factionManager",
+    "label": "",
+    "section": "Main Components"
+   },
+   {
+    "field": "characterTransform",
+    "label": "",
+    "section": "Main Components"
+   },
+   {
+    "field": "ignoreCharacterFactionEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "removeAsTargetIfIgnoreCharacterFactionIsActivated",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "checkForFriendlyFactionAttackers",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "changeFactionRelationWithFriendlyAttackers",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "mainManagerName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useEventsOnIgnoreCharacterFactionStateChange",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "eventOnIgnoreCharacterFactionEnabled",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "eventOnIgnoreCharacterFactionDisabled",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "factionManagerAssigned",
+    "label": "",
+    "section": "Detected Enemy List (Debug)"
+   }
+  ]
+ }
+]

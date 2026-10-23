@@ -1,0 +1,142 @@
+[
+ {
+  "type": "playerInfoPanelOnScreenSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Panel Info System\\playerInfoPanelOnScreenSystem.cs",
+  "methods": [
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 96
+   },
+   {
+    "sig": "calculatePanelPosition()",
+    "line": 138
+   },
+   {
+    "sig": "getNewPanelInfo(infoPanelOnScreenSystem newInfoPanelOnScreenSystem)",
+    "line": 186
+   },
+   {
+    "sig": "disablePanelInfo(Transform newObjectToFollow)",
+    "line": 325
+   },
+   {
+    "sig": "enableOrDisablePanel(bool state)",
+    "line": 366
+   },
+   {
+    "sig": "fadePanel(infoPanel newInfoPanel, bool fadingPanel)",
+    "line": 373
+   }
+  ]
+ },
+ {
+  "type": "infoPanelOnScreenSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Panel Info System\\infoPanelOnScreenSystem.cs",
+  "methods": [
+   {
+    "sig": "checkTriggerInfo(Collider col, bool isEnter)",
+    "line": 102
+   },
+   {
+    "sig": "disablePanelText()",
+    "line": 145
+   },
+   {
+    "sig": "enableOrdisablePanelInfoFromPlayer(GameObject playerToCheck, bool enablePanel)",
+    "line": 158
+   },
+   {
+    "sig": "disablePanelInfoFromAllPlayersRemotely()",
+    "line": 181
+   }
+  ]
+ },
+ {
+  "type": "sliderInfoSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Panel Info System\\sliderInfoSystem.cs",
+  "methods": [
+   {
+    "sig": "activateSliderByName(string sliderName)",
+    "line": 12
+   },
+   {
+    "sig": "deactivateSliderByName(string sliderName)",
+    "line": 44
+   }
+  ]
+ },
+ {
+  "type": "decalTypeInformation",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Decal\\decalTypeInformation.cs",
+  "methods": [
+   {
+    "sig": "getImpactListInfo()",
+    "line": 24
+   },
+   {
+    "sig": "checkGetDecalManager()",
+    "line": 40
+   },
+   {
+    "sig": "getDecalImpactIndex()",
+    "line": 64
+   },
+   {
+    "sig": "setNewDecalType(string decalName)",
+    "line": 73
+   },
+   {
+    "sig": "isParentScorchOnThisObjectEnabled()",
+    "line": 96
+   },
+   {
+    "sig": "setDecalSurfaceActiveState(bool state)",
+    "line": 101
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 106
+   }
+  ]
+ },
+ {
+  "type": "decalManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Decal\\decalManager.cs",
+  "methods": [
+   {
+    "sig": "getComponentInstance()",
+    "line": 47
+   },
+   {
+    "sig": "surfaceUseNoise(int surfaceIndex)",
+    "line": 532
+   }
+  ]
+ },
+ {
+  "type": "GKC_PlayerPrefabSpawner",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Online System\\GKC_PlayerPrefabSpawner.cs",
+  "methods": [
+   {
+    "sig": "setPositionToSpawn(Vector3 newValue)",
+    "line": 65
+   },
+   {
+    "sig": "setRotationToSpawn(Vector3 newValue)",
+    "line": 70
+   },
+   {
+    "sig": "checkPlayerPrefabSpawnOnAwake()",
+    "line": 75
+   },
+   {
+    "sig": "checkPlayerPrefabSpawn()",
+    "line": 151
+   },
+   {
+    "sig": "setIsMainPlayerState(bool state)",
+    "line": 217
+   }
+  ]
+ }
+]

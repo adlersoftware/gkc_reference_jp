@@ -1,0 +1,468 @@
+[
+ {
+  "type": "otherPowers",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Powers\\otherPowers.cs",
+  "methods": [
+   {
+    "sig": "setShootZoneParent(Transform newParent, Vector3 newPosition)",
+    "line": 337
+   },
+   {
+    "sig": "setCustomShootZoneParentActiveState(bool state, Transform newParent)",
+    "line": 356
+   },
+   {
+    "sig": "setTouchingMenuPanelState(bool state)",
+    "line": 686
+   },
+   {
+    "sig": "disableFreeFireModeAfterStopFiring()",
+    "line": 691
+   },
+   {
+    "sig": "resetPowerFiringAndAimingIfPlayerDisabled()",
+    "line": 714
+   },
+   {
+    "sig": "playerIsBusy()",
+    "line": 734
+   },
+   {
+    "sig": "useAimMode()",
+    "line": 764
+   },
+   {
+    "sig": "aimOrKeepPower()",
+    "line": 818
+   },
+   {
+    "sig": "aimOrKeepPowerInThirdPerson(bool state)",
+    "line": 841
+   },
+   {
+    "sig": "aimOrKeepPowerInFirstPerson(bool state)",
+    "line": 852
+   },
+   {
+    "sig": "isAimingPower()",
+    "line": 859
+   },
+   {
+    "sig": "isAimingPowerInFirstPerson()",
+    "line": 864
+   },
+   {
+    "sig": "isAimingPowerInThirdPerson()",
+    "line": 869
+   },
+   {
+    "sig": "keepPower()",
+    "line": 874
+   },
+   {
+    "sig": "setAimOrKeepPowerState(bool firstPersonState, bool thirdPersonState)",
+    "line": 881
+   },
+   {
+    "sig": "updateProjectileInfoValuesOnAllPowers()",
+    "line": 1046
+   },
+   {
+    "sig": "enableMuzzleFlashLight()",
+    "line": 1068
+   },
+   {
+    "sig": "usePowerBar(float amount)",
+    "line": 1095
+   },
+   {
+    "sig": "isThereEnergy()",
+    "line": 1110
+   },
+   {
+    "sig": "updateSlider(float value)",
+    "line": 1119
+   },
+   {
+    "sig": "getEnergy(float amount)",
+    "line": 1146
+   },
+   {
+    "sig": "removeEnergy(float amount)",
+    "line": 1162
+   },
+   {
+    "sig": "getCurrentEnergyAmount()",
+    "line": 1177
+   },
+   {
+    "sig": "getMaxEnergyAmount()",
+    "line": 1182
+   },
+   {
+    "sig": "getAuxEnergyAmount()",
+    "line": 1187
+   },
+   {
+    "sig": "addAuxEnergyAmount(float amount)",
+    "line": 1192
+   },
+   {
+    "sig": "getEnergyAmountToLimit()",
+    "line": 1197
+   },
+   {
+    "sig": "increaseMaxPowerAmount(float newAmount)",
+    "line": 1202
+   },
+   {
+    "sig": "setPowerAmountOnMaxValue()",
+    "line": 1209
+   },
+   {
+    "sig": "updateSliderMaxValue(float newMaxValue)",
+    "line": 1214
+   },
+   {
+    "sig": "initializePowerAmount(float newValue)",
+    "line": 1221
+   },
+   {
+    "sig": "initializeMaxPowerAmount(float newValue)",
+    "line": 1226
+   },
+   {
+    "sig": "initializeRegenerateSpeed(float newValue)",
+    "line": 1231
+   },
+   {
+    "sig": "increaseRegenerateSpeed(float newValue)",
+    "line": 1236
+   },
+   {
+    "sig": "updateEnergyAmountWithoutUpdatingStatManager(int statId, float amount)",
+    "line": 1241
+   },
+   {
+    "sig": "updateMaxEnergyAmountWithoutUpdatingStatManager(int statId, float amount)",
+    "line": 1250
+   },
+   {
+    "sig": "updateRegenerateSpeedAmountWithoutUpdatingStatManager(int statId, float amount)",
+    "line": 1257
+   },
+   {
+    "sig": "setGeneralAttackDamageMultiplierValue(float newValue)",
+    "line": 1262
+   },
+   {
+    "sig": "generalAttackDamageMultiplierIncreaseStat(float extraValue)",
+    "line": 1267
+   },
+   {
+    "sig": "initializeGeneralAttackDamageMultiplierStatAmount(float newValue)",
+    "line": 1274
+   },
+   {
+    "sig": "getGeneralAttackDamageMultiplierValue()",
+    "line": 1279
+   },
+   {
+    "sig": "chooseNextPower()",
+    "line": 1299
+   },
+   {
+    "sig": "choosePreviousPower()",
+    "line": 1342
+   },
+   {
+    "sig": "checkParableTrayectory(bool parableState)",
+    "line": 1415
+   },
+   {
+    "sig": "changePowerState(Powers powerToCheck, int numberKey, bool value, int index)",
+    "line": 1439
+   },
+   {
+    "sig": "setPower(Powers power)",
+    "line": 1520
+   },
+   {
+    "sig": "resetLastAmountOfFiredProjectiles()",
+    "line": 1540
+   },
+   {
+    "sig": "getLastAmountOfFiredProjectiles()",
+    "line": 1545
+   },
+   {
+    "sig": "shootPower(bool state)",
+    "line": 1550
+   },
+   {
+    "sig": "powerShoot(bool shootAtKeyDown)",
+    "line": 1572
+   },
+   {
+    "sig": "canPlayerMove()",
+    "line": 1825
+   },
+   {
+    "sig": "isActionActiveInPlayer()",
+    "line": 1830
+   },
+   {
+    "sig": "checkPowerAbility(bool keyDown)",
+    "line": 1835
+   },
+   {
+    "sig": "activateSecondaryAction()",
+    "line": 1850
+   },
+   {
+    "sig": "launchCurrentProjectile(Rigidbody projectileRigdibody, Vector3 cameraDirection)",
+    "line": 1857
+   },
+   {
+    "sig": "setProjectileSpread()",
+    "line": 1918
+   },
+   {
+    "sig": "checkAutoShootOnTag()",
+    "line": 1932
+   },
+   {
+    "sig": "setSeekerProjectileInfo()",
+    "line": 1985
+   },
+   {
+    "sig": "createShootParticles()",
+    "line": 1995
+   },
+   {
+    "sig": "setLastTimeFired()",
+    "line": 2006
+   },
+   {
+    "sig": "getLastTimeFired()",
+    "line": 2013
+   },
+   {
+    "sig": "death(bool state)",
+    "line": 2019
+   },
+   {
+    "sig": "activateAimMode()",
+    "line": 2034
+   },
+   {
+    "sig": "deactivateAimMode()",
+    "line": 2107
+   },
+   {
+    "sig": "enableOrDisableIKOnPowersDuringAction(bool state)",
+    "line": 2168
+   },
+   {
+    "sig": "setActionActiveState(bool state)",
+    "line": 2193
+   },
+   {
+    "sig": "fireHomingProjectiles()",
+    "line": 2198
+   },
+   {
+    "sig": "activatePowerHandRecoil()",
+    "line": 2270
+   },
+   {
+    "sig": "enableOrDisablePowerCursor(bool state)",
+    "line": 2277
+   },
+   {
+    "sig": "checkCustomReticle()",
+    "line": 2297
+   },
+   {
+    "sig": "changePlayerMode(bool state)",
+    "line": 2316
+   },
+   {
+    "sig": "changeCameraToThirdOrFirstView(bool isFirstPersonActive)",
+    "line": 2323
+   },
+   {
+    "sig": "setAimModeSide(bool state)",
+    "line": 2359
+   },
+   {
+    "sig": "isUsingPowers()",
+    "line": 2381
+   },
+   {
+    "sig": "setUsingPowersState(bool state)",
+    "line": 2386
+   },
+   {
+    "sig": "checkPowerShake()",
+    "line": 2393
+   },
+   {
+    "sig": "setPowersModeState(bool state)",
+    "line": 2412
+   },
+   {
+    "sig": "enableOrDisablePowersInfoPanel(bool state)",
+    "line": 2425
+   },
+   {
+    "sig": "checkEventsOnStateChange(bool state)",
+    "line": 2434
+   },
+   {
+    "sig": "checkEventsOnAimStateChange(bool state)",
+    "line": 2445
+   },
+   {
+    "sig": "checkIfChangePlayerMode()",
+    "line": 2456
+   },
+   {
+    "sig": "checkIfChangePlayerModeAccordingToViewType()",
+    "line": 2463
+   },
+   {
+    "sig": "isPowersModeActive()",
+    "line": 2472
+   },
+   {
+    "sig": "isFirstPersonActive()",
+    "line": 2477
+   },
+   {
+    "sig": "disableFreeFireModeState()",
+    "line": 2482
+   },
+   {
+    "sig": "setOtherPowersInputPausedState(bool state)",
+    "line": 2507
+   },
+   {
+    "sig": "setBurstModeState(bool state)",
+    "line": 2518
+   },
+   {
+    "sig": "setBurstAmount(int newAmount)",
+    "line": 2523
+   },
+   {
+    "sig": "isShootingBurst()",
+    "line": 2528
+   },
+   {
+    "sig": "inputNextOrPreviousPowerByButton(bool setNextPower)",
+    "line": 2534
+   },
+   {
+    "sig": "inputNextOrPreviousPowerByMouse(bool setNextPower)",
+    "line": 2558
+   },
+   {
+    "sig": "inputHoldOrReleaseShootPower(bool holdingButton)",
+    "line": 2583
+   },
+   {
+    "sig": "inputHoldShootPower()",
+    "line": 2672
+   },
+   {
+    "sig": "inputSetAimPowerState(bool state)",
+    "line": 2731
+   },
+   {
+    "sig": "inputAimPower()",
+    "line": 2748
+   },
+   {
+    "sig": "inputActivateSecondaryAction()",
+    "line": 2766
+   },
+   {
+    "sig": "setRunEnabledState(bool state)",
+    "line": 2782
+   },
+   {
+    "sig": "setShootEnabledState(bool state)",
+    "line": 2787
+   },
+   {
+    "sig": "setCurrentPowerByName(string powerName)",
+    "line": 2792
+   },
+   {
+    "sig": "shootPowerExternally()",
+    "line": 2807
+   },
+   {
+    "sig": "shootPowerExternally(string powerName)",
+    "line": 2818
+   },
+   {
+    "sig": "shootPowerExternallyAndResetLastShoot(string powerName)",
+    "line": 2825
+   },
+   {
+    "sig": "resetLastShoot()",
+    "line": 2832
+   },
+   {
+    "sig": "enableRegularPowerListElement(string powerName)",
+    "line": 2837
+   },
+   {
+    "sig": "disableRegularPowerListElement(string powerName)",
+    "line": 2864
+   },
+   {
+    "sig": "updateAmountPowersEnabled()",
+    "line": 2883
+   },
+   {
+    "sig": "getNumberOfPowersAvailable()",
+    "line": 2896
+   },
+   {
+    "sig": "setFirstPowerAvailable()",
+    "line": 2909
+   },
+   {
+    "sig": "setSelectedPowerIconState(bool state)",
+    "line": 2932
+   },
+   {
+    "sig": "getCurrentPower()",
+    "line": 2939
+   },
+   {
+    "sig": "getPowerIndexByNumberKey(int numberKeyToSearch)",
+    "line": 2944
+   },
+   {
+    "sig": "enableOrDisableAllPowers(bool state)",
+    "line": 2955
+   },
+   {
+    "sig": "setUsedByAIState(bool state)",
+    "line": 2964
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 2969
+   },
+   {
+    "sig": "getImpactListInfo()",
+    "line": 2974
+   }
+  ]
+ }
+]

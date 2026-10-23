@@ -1,0 +1,640 @@
+[
+ {
+  "type": "playerAbilitiesSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Abilities System\\playerAbilitiesSystem.cs",
+  "methods": [
+   {
+    "sig": "getCanMove()",
+    "line": 106
+   },
+   {
+    "sig": "setNextAbility()",
+    "line": 113
+   },
+   {
+    "sig": "setPreviousAbility()",
+    "line": 161
+   },
+   {
+    "sig": "setCurrentAbilityByName(string abilityName)",
+    "line": 209
+   },
+   {
+    "sig": "removeCurrentAbilityInfo()",
+    "line": 268
+   },
+   {
+    "sig": "disableAbilityGroupByName(List<string> abilityNameList)",
+    "line": 274
+   },
+   {
+    "sig": "enableAbilityGroupByName(List<string> abilityNameList)",
+    "line": 279
+   },
+   {
+    "sig": "enableOrDisableAbilityGroupByName(List<string> abilityNameList, bool state)",
+    "line": 284
+   },
+   {
+    "sig": "enableAbilityByName(string abilityName)",
+    "line": 295
+   },
+   {
+    "sig": "disableAbilityByName(string abilityName)",
+    "line": 324
+   },
+   {
+    "sig": "disableAllAbilites()",
+    "line": 391
+   },
+   {
+    "sig": "deactivateAllAbilites()",
+    "line": 424
+   },
+   {
+    "sig": "deactivateAllCurrentlyActiveAbilities()",
+    "line": 429
+   },
+   {
+    "sig": "deactivateAbilityByName(string abilityName)",
+    "line": 472
+   },
+   {
+    "sig": "setPauseCheckUsingDeviceOnAbilityInputState(bool state)",
+    "line": 503
+   },
+   {
+    "sig": "togglePauseCheckUsingDeviceOnAbilityInputState()",
+    "line": 508
+   },
+   {
+    "sig": "activateCustomAction(string actionName)",
+    "line": 513
+   },
+   {
+    "sig": "playerIsBusy()",
+    "line": 518
+   },
+   {
+    "sig": "isActionActive()",
+    "line": 557
+   },
+   {
+    "sig": "isPlayerCurrentlyBusy()",
+    "line": 566
+   },
+   {
+    "sig": "checkIfAbilityCanBeActivated()",
+    "line": 580
+   },
+   {
+    "sig": "getNumberOfAbilitiesAvailable()",
+    "line": 591
+   },
+   {
+    "sig": "getNumberOfAbilitiesCanBeShownOnWheelSelection()",
+    "line": 606
+   },
+   {
+    "sig": "getCurrentAbilityIndex()",
+    "line": 621
+   },
+   {
+    "sig": "getCurrentAbilityIndexValue()",
+    "line": 634
+   },
+   {
+    "sig": "getCurrentAbilityName()",
+    "line": 639
+   },
+   {
+    "sig": "checkIfAbilitiesAvailable()",
+    "line": 644
+   },
+   {
+    "sig": "getAbilityByName(string abilityName)",
+    "line": 657
+   },
+   {
+    "sig": "isAbilityInputInUse()",
+    "line": 673
+   },
+   {
+    "sig": "isAbilitiesModeActive()",
+    "line": 678
+   },
+   {
+    "sig": "setAbilitesModeActiveState(bool state)",
+    "line": 683
+   },
+   {
+    "sig": "usePowerBar(float powerAmount)",
+    "line": 688
+   },
+   {
+    "sig": "isThereEnergyAvailable()",
+    "line": 693
+   },
+   {
+    "sig": "checkIfAbilityNeedsEnergy()",
+    "line": 698
+   },
+   {
+    "sig": "checkAbilityUseEnergy()",
+    "line": 721
+   },
+   {
+    "sig": "checkAbilityUseEnergyInUpdate(bool useEnergyOnAbility, bool useEnergyWithRate, float energyAmountUsed)",
+    "line": 732
+   },
+   {
+    "sig": "cancelPressAbility()",
+    "line": 749
+   },
+   {
+    "sig": "checkIfAbilitiesOnUseOrCooldown(string abilityName)",
+    "line": 754
+   },
+   {
+    "sig": "setInputPausedState(bool state)",
+    "line": 773
+   },
+   {
+    "sig": "inputSelectAndPressDownNewAbility(string abilityName)",
+    "line": 779
+   },
+   {
+    "sig": "inputSelectAndPressDownNewAbilityTemporally(string abilityName, bool abilityIsTemporallyActivated, bool ignoreCheckMenusState)",
+    "line": 794
+   },
+   {
+    "sig": "inputSelectAndPressDownNewSeparatedAbility(string abilityName)",
+    "line": 822
+   },
+   {
+    "sig": "inputSelectAndPressHoldNewSeparatedAbility()",
+    "line": 845
+   },
+   {
+    "sig": "inputSelectAndPressUpNewSeparatedAbility()",
+    "line": 858
+   },
+   {
+    "sig": "checkPreviousAbilityActive()",
+    "line": 873
+   },
+   {
+    "sig": "setSelectingAbilityActiveState(bool state)",
+    "line": 882
+   },
+   {
+    "sig": "inputPressDownUseCurrentAbility()",
+    "line": 889
+   },
+   {
+    "sig": "pressDownUseCurrentAbility()",
+    "line": 904
+   },
+   {
+    "sig": "confirmPressDownUseCurrentAbility()",
+    "line": 973
+   },
+   {
+    "sig": "inputPressHoldUseCurrentAbility()",
+    "line": 1020
+   },
+   {
+    "sig": "pressHoldUseCurrentAbility()",
+    "line": 1033
+   },
+   {
+    "sig": "inputPressUpUseCurrentAbility()",
+    "line": 1084
+   },
+   {
+    "sig": "pressUpUseCurrentAbility()",
+    "line": 1099
+   },
+   {
+    "sig": "confirmPressUpUseCurrentAbility()",
+    "line": 1159
+   },
+   {
+    "sig": "inputSetNextAbility()",
+    "line": 1200
+   },
+   {
+    "sig": "inputSetPreviousAbility()",
+    "line": 1213
+   },
+   {
+    "sig": "setAbilitiesSystemEnabledState(bool state)",
+    "line": 1226
+   },
+   {
+    "sig": "isAbilitiesSystemEnabled()",
+    "line": 1231
+   },
+   {
+    "sig": "enableOrDisableAllAbilities(bool state)",
+    "line": 1236
+   },
+   {
+    "sig": "setAbilitiesSystemEnabledStateFromEditor(bool state)",
+    "line": 1251
+   },
+   {
+    "sig": "enableOrDisableAllAbilitiesFromEditor(bool state)",
+    "line": 1258
+   },
+   {
+    "sig": "enableOrDisableAllAbilitiesCanBeShownOnWheelFromEditor(bool state)",
+    "line": 1269
+   },
+   {
+    "sig": "setAbilitesModeActiveStateFromEditor(bool state)",
+    "line": 1280
+   }
+  ]
+ },
+ {
+  "type": "playerAbilitiesUISystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Abilities System\\playerAbilitiesUISystem.cs",
+  "methods": [
+   {
+    "sig": "enableOrDisableDpadPanel(bool state)",
+    "line": 341
+   },
+   {
+    "sig": "enableOrDisableExtraElementsOnAbilitiesUI(bool state)",
+    "line": 354
+   },
+   {
+    "sig": "isUseWheelMenuActive()",
+    "line": 371
+   },
+   {
+    "sig": "updateCurrentAbilityInputText()",
+    "line": 631
+   },
+   {
+    "sig": "setTouchingMenuPanelState(bool state)",
+    "line": 638
+   },
+   {
+    "sig": "updateCurrentSelectedAbilityUIByName(string abilityName)",
+    "line": 645
+   },
+   {
+    "sig": "selectAbilityByName(string abilityName)",
+    "line": 666
+   },
+   {
+    "sig": "selectAbility(abilitySlotInfo slotInfo)",
+    "line": 677
+   },
+   {
+    "sig": "changeSlotSize(abilitySlotInfo slotInfo, bool setRegularSize, float sizeMultiplier, bool smoothSizeChange)",
+    "line": 704
+   },
+   {
+    "sig": "selectAbilitySlots(bool state)",
+    "line": 739
+   },
+   {
+    "sig": "setPauseCheckUsingDeviceOnAbilityInputState(bool state)",
+    "line": 824
+   },
+   {
+    "sig": "togglePauseCheckUsingDeviceOnAbilityInputState()",
+    "line": 829
+   },
+   {
+    "sig": "canBeOpened()",
+    "line": 834
+   },
+   {
+    "sig": "udpateSlotsInfo()",
+    "line": 887
+   },
+   {
+    "sig": "updateSlotsInfo()",
+    "line": 892
+   },
+   {
+    "sig": "checkIfAssignActivatedAbilitiesToFreeDpadSlots(string currentAbilityName, int abilityIndexToCheck, bool addingAbilityToWheel)",
+    "line": 999
+   },
+   {
+    "sig": "updateDpadIconsOnWheelMenu()",
+    "line": 1132
+   },
+   {
+    "sig": "getDpadIconInfoListIndexByAbilityIndex(int abilityIndex)",
+    "line": 1206
+   },
+   {
+    "sig": "getDpadIconInfoListIndexByAbilityName(string abilityName)",
+    "line": 1217
+   },
+   {
+    "sig": "setDpadIconsInfo()",
+    "line": 1228
+   },
+   {
+    "sig": "checkEventsOnAbilitiesAssignedOnDpad(bool state)",
+    "line": 1300
+   },
+   {
+    "sig": "getAbilitySlotInfoList()",
+    "line": 1316
+   },
+   {
+    "sig": "getAbilityIndexByName(string abilityName)",
+    "line": 1321
+   },
+   {
+    "sig": "setCurrentAbilityIconAssignedByName(string abilityName)",
+    "line": 1335
+   },
+   {
+    "sig": "setDpadIconInfo(dpadIconInfo newDpadIconInfo, int currentAbilityIndex)",
+    "line": 1346
+   },
+   {
+    "sig": "updateDpadIconsOnAbilitiesDeactivated()",
+    "line": 1393
+   },
+   {
+    "sig": "playSound(AudioElement sound)",
+    "line": 1414
+   },
+   {
+    "sig": "setUsedByAIState(bool state)",
+    "line": 1421
+   },
+   {
+    "sig": "setUseDpadPanelState(bool state)",
+    "line": 1426
+   },
+   {
+    "sig": "updateEnergySlider()",
+    "line": 1431
+   },
+   {
+    "sig": "activateAbilityCoolDown(string abilityName)",
+    "line": 1439
+   },
+   {
+    "sig": "activateAbilityLimit(string abilityName)",
+    "line": 1497
+   },
+   {
+    "sig": "stopActivateAbilityLimit(dpadIconInfo currentDpadIconInfo)",
+    "line": 1518
+   },
+   {
+    "sig": "setInputPausedState(bool state)",
+    "line": 1556
+   },
+   {
+    "sig": "toggleInputPausedState()",
+    "line": 1561
+   },
+   {
+    "sig": "setNumberOfAbilitySlotsValue(int newAmount)",
+    "line": 1575
+   },
+   {
+    "sig": "updateNumberOfAbilitySlotsWithAbilitiesAmount()",
+    "line": 1580
+   },
+   {
+    "sig": "inputOpenOrCloseAbilityWheel(bool openAbilityWheel)",
+    "line": 1595
+   },
+   {
+    "sig": "inputStartToPressAbilityWheelPanel()",
+    "line": 1653
+   },
+   {
+    "sig": "inputStopToPressAbilityWheelPanel()",
+    "line": 1682
+   },
+   {
+    "sig": "inputUseDpadDirectionPressDown(int dpadIndex)",
+    "line": 1711
+   },
+   {
+    "sig": "inputUseDpadDirectionPressHold()",
+    "line": 1823
+   },
+   {
+    "sig": "inputUseDpadDirectionPressUp()",
+    "line": 1850
+   },
+   {
+    "sig": "resetCurrentAbilityPressedIndexByName(string abilityName)",
+    "line": 1899
+   },
+   {
+    "sig": "inputTouchPressDown(int dpadIndex)",
+    "line": 1914
+   },
+   {
+    "sig": "inputTouchPressUp()",
+    "line": 1943
+   },
+   {
+    "sig": "isSelectingAbilityActive()",
+    "line": 1968
+   },
+   {
+    "sig": "setOpenMenuEnabled(bool state)",
+    "line": 1973
+   },
+   {
+    "sig": "setUseDpadPanelStateFromEditor(bool state)",
+    "line": 1979
+   },
+   {
+    "sig": "setOpenMenuEnabledFromEditor(bool state)",
+    "line": 1986
+   }
+  ]
+ },
+ {
+  "type": "abilityInfo",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Abilities System\\abilityInfo.cs",
+  "methods": [
+   {
+    "sig": "disableAbilityCurrentActiveFromPressState()",
+    "line": 185
+   },
+   {
+    "sig": "enableOrDisableAbilityExternally(bool state)",
+    "line": 191
+   },
+   {
+    "sig": "setAbilityEnabledState(bool state)",
+    "line": 200
+   },
+   {
+    "sig": "isAbilityEnabled()",
+    "line": 205
+   },
+   {
+    "sig": "enableAbilityExternally()",
+    "line": 210
+   },
+   {
+    "sig": "disableAbilityExternally()",
+    "line": 217
+   },
+   {
+    "sig": "setAbilityVisibleOnWheelSelectionState(bool state)",
+    "line": 229
+   },
+   {
+    "sig": "setAbilityCanBeShownOnWheelSelectionState(bool state)",
+    "line": 234
+   },
+   {
+    "sig": "updateAbilityState()",
+    "line": 239
+   },
+   {
+    "sig": "enableAbility()",
+    "line": 244
+   },
+   {
+    "sig": "disableAbility()",
+    "line": 249
+   },
+   {
+    "sig": "deactivateAbility()",
+    "line": 254
+   },
+   {
+    "sig": "activateSecondaryActionOnAbility()",
+    "line": 259
+   },
+   {
+    "sig": "checkIfUseAnimationWithActionSystemOnPressDown()",
+    "line": 264
+   },
+   {
+    "sig": "checkIfUseAnimationWithActionSystemOnPressUp()",
+    "line": 273
+   },
+   {
+    "sig": "checkEventOnSetCurrentAbility()",
+    "line": 282
+   },
+   {
+    "sig": "checkUseEventOnUseAbility()",
+    "line": 289
+   },
+   {
+    "sig": "checkEventToDeactivateAbility()",
+    "line": 296
+   },
+   {
+    "sig": "useAbilityPressDown()",
+    "line": 301
+   },
+   {
+    "sig": "useAbilityPressHold()",
+    "line": 306
+   },
+   {
+    "sig": "useAbilityPressUp()",
+    "line": 311
+   },
+   {
+    "sig": "activateCoolDown()",
+    "line": 316
+   },
+   {
+    "sig": "stopActivateCoolDown()",
+    "line": 329
+   },
+   {
+    "sig": "activateTimeLimit()",
+    "line": 364
+   },
+   {
+    "sig": "stopActivateTimeLimit()",
+    "line": 375
+   },
+   {
+    "sig": "activateUpdateAbility()",
+    "line": 421
+   },
+   {
+    "sig": "stopActivateUpdateAbility()",
+    "line": 434
+   },
+   {
+    "sig": "setCoolDownDurationValue(float newValue)",
+    "line": 454
+   },
+   {
+    "sig": "getCoolDownDurationValue()",
+    "line": 459
+   },
+   {
+    "sig": "setTimeLimitValue(float newValue)",
+    "line": 464
+   },
+   {
+    "sig": "getTimeLimitValue()",
+    "line": 469
+   },
+   {
+    "sig": "setUseCoolDownValue(bool state)",
+    "line": 474
+   },
+   {
+    "sig": "setUseTimeLimitValue(bool state)",
+    "line": 479
+   },
+   {
+    "sig": "setUseEnergyOnAbilityValue(bool state)",
+    "line": 484
+   },
+   {
+    "sig": "setEnergyAmountUsedValue(float newValue)",
+    "line": 489
+   },
+   {
+    "sig": "setUseInputOnPressDownState(bool state)",
+    "line": 494
+   },
+   {
+    "sig": "setUseInputOnPressHoldState(bool state)",
+    "line": 499
+   },
+   {
+    "sig": "setUseInputOnPressUpState(bool state)",
+    "line": 504
+   },
+   {
+    "sig": "isCoolDownInProcess()",
+    "line": 509
+   },
+   {
+    "sig": "isTimeLimitInProcess()",
+    "line": 514
+   },
+   {
+    "sig": "enableOrDisableAbilityFromEditor(bool state)",
+    "line": 520
+   },
+   {
+    "sig": "enableOrDisableAllAbilitiesCanBeShownOnWheelFromEditor(bool state)",
+    "line": 527
+   }
+  ]
+ }
+]

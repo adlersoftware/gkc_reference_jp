@@ -1,0 +1,227 @@
+[
+  {
+    "type": "playerExperienceSystem",
+    "summary": "プレイヤーの経験値・レベル・スキルポイントを管理し、レベルアップ時のパネル表示、ステータス加算とスキル解放、経験値倍率、経験値メニューUIを扱うコンポーネント。",
+    "methods": {
+      "checkEventOnSystemDisabled()": "`useEventIfSystemDisabled`が有効な時だけ`eventIfSystemDisabled`を発火する。",
+      "checkIncreasePlayerLevel()": "現在レベル経験値が必要量以上ならレベルを上げ、ステータス加算とスキル解放を行って`true`を返す。",
+      "getExperienceAmount(int newExperienceAmount)": "システムが無効なら何もせず、有効な時は位置指定なしの経験値取得処理を呼び出すだけ。",
+      "getExperienceAmount(int newExperienceAmount, Transform objectTransform, bool useTransformAsExpTextPosition, string extraExperienceText)": "経験値に倍率を掛けて加算し、連続レベルアップを判定して、`objectTransform`位置に取得テキストを出す。",
+      "updateExperienceInfo()": "スライダーの最大値を次レベル必要経験値、値を現在経験値に設定し、レベル表示も更新する。",
+      "showLevelUpPanel()": "既存の表示コルーチンを止めてから、レベルアップパネルを一定時間表示するコルーチンを開始する。",
+      "stopShowLevelUpPanelCoroutine()": "レベルアップパネル表示用コルーチンが存在すれば停止するだけ。",
+      "showExperienceSlider()": "既存のコルーチンを止め、経験値スライダーを一定時間後に隠すコルーチンを開始する。",
+      "stopShowExperienceSliderCoroutine()": "経験値スライダーの自動非表示コルーチンが存在すれば停止するだけ。",
+      "openOrCloseExperienceMenu(bool state)": "メニュー使用可否を確認し、経験値メニューの開閉とポーズ状態、スライダーの親と表示を切り替える。",
+      "enableOrDisableHUD(bool state)": "`hideExperienceSliderAfterTime`が無効な時だけ、経験値スライダーの表示を`state`に合わせる。",
+      "openOrCLoseObjectiveMenuFromTouch()": "経験値メニューの開閉状態を反転して`openOrCloseExperienceMenu`を呼ぶだけ。",
+      "inputOpenOrCloseObjectiveMenu()": "`experienceMenuActive`の時、メニュー入力が停止中でなければ経験値メニューを開閉する。",
+      "updateStatsInfo()": "`statUIInfoList`の各項目に、数値または真偽値のステータスを前後テキスト付きで表示する。",
+      "initializeCurrentLevelExperienceAmount(float newValue)": "現在レベル経験値を`newValue`の整数値に設定し、コンポーネントを更新する。",
+      "initializeTotalExperienceAmount(float newValue)": "累計経験値`totalExperienceAmount`を`newValue`の整数値に設定して更新する。",
+      "initializeTotalExperiencePointsAmount(float newValue)": "スキルポイント`totalExperiencePoints`を`newValue`の整数値に設定して更新する。",
+      "initializeCurrentLevelAmount(float newValue)": "現在レベルを`newValue`の整数値に設定し、コンポーネントを更新する。",
+      "increaseTotalExperiencePointsAmount(float extraValue)": "スキルポイントに`extraValue`の整数値を加算するだけ。",
+      "increaseTotalExperienceAmount(float extraValue)": "累計経験値に、`extraValue`へ経験値倍率を掛けた整数値を加算する。",
+      "initializeCurrentLevelExperienceToNextLevelAmount(float newValue)": "次レベルまでの必要経験値を`newValue`の整数値に設定して更新する。",
+      "updateCurrentLevelAmountWithoutUpdatingStatManager(int statId, float amount)": "StatManager更新用のコールバックで、`statId`を無視して現在レベルだけを設定する。",
+      "updateTotalExperiencePointsAmountWithoutUpdatingStatManager(int statId, float amount)": "`statId`を無視し、スキルポイントだけを`amount`の整数値に設定する。",
+      "updateTotalExperienceAmountWithoutUpdatingStatManager(int statId, float amount)": "`statId`を無視し、累計経験値だけを`amount`の整数値に設定する。",
+      "updateCurrentLevelExperienceToNextLevelAmountWithoutUpdatingStatManager(int statId, float amount)": "`statId`を無視し、次レベル必要経験値だけを`amount`の整数値に設定する。",
+      "updateCurrentLevelExperienceAmountWithoutUpdatingStatManager(int statId, float amount)": "`statId`を無視し、現在レベル経験値だけを`amount`の整数値に設定する。",
+      "getCurrentLevel()": "現在レベルを返すだけ。",
+      "getSkillPointsAmount()": "スキルポイントとして扱う`totalExperiencePoints`を返すだけ。",
+      "useSkillPoints(int amountToUse)": "スキルポイントを`amountToUse`分減らし、0未満なら0に戻してStatManagerと表示を更新する。",
+      "getSkillPoints(int amountToUse)": "スキルポイントを`amountToUse`分加算し、StatManagerの値を更新する。",
+      "setExperienceMultiplier(float experienceMultiplierAmount, float experienceMultiplierDuration)": "倍率コルーチンを止め、指定倍率を指定秒数だけ適用するコルーチンを開始する。",
+      "stopSetExperienceMultiplier()": "経験値倍率のコルーチンが存在すれば停止するだけ。",
+      "enableOrDisableStatsMenuPanel(bool state)": "ステータスメニューパネルの表示を`state`に合わせるだけ。",
+      "setExperienceSystemEnabledState(bool state)": "経験値システムの有効フラグ`experienceSystemEnabled`を設定するだけ。",
+      "setHideExperienceSliderAfterTimeState(bool state)": "スライダーを時間で隠す設定`hideExperienceSliderAfterTime`を切り替えるだけ。"
+    }
+  },
+  {
+    "type": "objectExperienceSystem",
+    "summary": "オブジェクトから攻撃したキャラクターへ経験値・金額・インベントリアイテム・レシピなどの報酬を渡し、一度だけ付与する設定も持つコンポーネント。",
+    "methods": {
+      "sendExperienceToPlayerManually()": "`setPlayerManually`が有効な時、設定済みプレイヤー`playerToConfigure`へ報酬処理を呼ぶだけ。",
+      "sendExperienceToPlayer(GameObject playerToUse)": "`setPlayerManually`なら`playerToConfigure`を、そうでなければ引数のプレイヤーを報酬処理へ渡す。",
+      "sendExperienceToAttacker(GameObject attackerGameObject)": "一度だけ設定を尊重し、乗り物なら運転手を対象に経験値・金額・アイテム等の報酬を与え、`rewardObtained`を立てる。"
+    }
+  },
+  {
+    "type": "footStepManager",
+    "summary": "足音の種類（地形テクスチャやサーフェス名）ごとに効果音・足跡・パーティクル・ノイズを再生し、足音状態リストで音量や状態遷移を制御するマネージャー。",
+    "methods": {
+      "changeFootStespType(bool state)": "レイキャスト方式なら強制的に無効化し、左右の足オブジェクトの表示と`usingAnimator`を`state`に合わせる。",
+      "GetMainTexture(Vector3 playerPos)": "地形のアルファマップから、`playerPos`の位置で最も比重の大きいテクスチャのインデックスを返す。",
+      "getSound(Vector3 pos, GameObject ground, footStep.footType footSide)": "地面に合う足音を選んで足跡・パーティクル・ノイズを出し、音を返す。見つからなければ`null`。",
+      "placeFootPrint(footStep.footType footSide, int footStepIndex)": "足の位置からレイキャストし、地面に合った足跡を生成する。`footStepIndex`で状態別の足跡を選ぶ。",
+      "createFootPrint(GameObject foot, Vector3 position, Quaternion rotation, Vector3 normal, Transform currentSurfaceParent)": "足跡をプールか生成で出現させ、`normal`に合わせて向きを直し、親設定・フェード・最大数削除を行う。",
+      "createParticles(footStep.footType footSide, int footStepIndex)": "対応する足の位置にパーティクルを生成し、状態別の設定があればそれを優先して使う。",
+      "enableOrDisableFootSteps(bool state)": "左右の足コライダーの有効状態を`state`に設定するだけ。",
+      "enableOrDisableFootStepsWithDelay(bool state, float delayAmount)": "左右の`footStep`に、`delayAmount`秒後の有効/無効切り替えを依頼する。",
+      "enableOrDisableFootStepsComponents(bool state)": "左右の`footStep`コンポーネントの有効状態を`state`に設定するだけ。",
+      "setRightFootStep(GameObject rigth)": "右足オブジェクト`rightFoot`を設定するだけ。",
+      "setLeftFootStep(GameObject left)": "左足オブジェクト`leftFoot`を設定するだけ。",
+      "setDefaultGroundFootStepState()": "既定の地面足音状態名`defaultGroundFootStepState`で`setFootStepState`を呼ぶだけ。",
+      "setFootStepState(string stateName)": "名前一致の状態をカレントにし、左右の音量範囲を更新して、設定があれば遅延遷移も予約する。",
+      "setNewFootStepStateAfterDelay(string newState, float delayAmount)": "既存の遅延コルーチンを止め、`delayAmount`秒後に`newState`へ切り替えるコルーチンを開始する。",
+      "stopSetNewFootStepStateAfterDelayCoroutine()": "足音状態の遅延切り替えコルーチンが存在すれば停止するだけ。",
+      "isDelayToNewStateActive()": "足音状態の遅延切り替えが実行中かどうかを返すだけ。",
+      "setUseNoiseMeshState(bool state)": "ノイズメッシュを使うかどうかの`useNoiseMesh`を設定するだけ。",
+      "setNoiseOnStep(Vector3 footPosition)": "現在の足音状態がノイズ有効なら、その半径でノイズ信号を送り、必要ならノイズメッシュも生成する。",
+      "setDefaultFeelVolumeRange()": "左右の`footStep`の音量範囲を`feetVolumeRangeClamps`に戻すだけ。",
+      "removeSound(int footStepIndex, int soundIndex)": "音削除の処理はコメントアウトされたままで、`updateComponent`を呼ぶだけ。",
+      "setWallRunningState(bool wallRunningActiveValue, bool wallRunningOnRightSideValue)": "壁走り中かどうかと右側かどうかのフラグを設定するだけ。",
+      "setFootStepPausedState(bool state)": "足音を止めるフラグ`footStepPaused`を設定するだけ。",
+      "updateComponent()": "`GKC_Utils.updateComponent`で自身のインスペクタ表示を更新するだけ。"
+    }
+  },
+  {
+    "type": "noiseSystem",
+    "summary": "オブジェクトが発する騒音を周囲へ通知するコンポーネントで、表面のデカール設定から可否を判定し、ノイズ信号やノイズメッシュを発生させる。",
+    "methods": {
+      "activateNoise()": "表面のデカール設定で可否を判定し、ノイズ信号とノイズメッシュを出して追加半径などをリセットする。",
+      "OnCollisionEnter(Collision col)": "`usedOnRigidbody`なら衝突相手と速度から追加ノイズ値を設定し、`activateNoise`を呼ぶ。",
+      "activateNoiseExternally()": "`useNoise`が有効な時だけ`activateNoise`を呼び出す。",
+      "setUseNoiseState(bool state)": "`useNoise`フラグを設定するだけ。",
+      "setimpactObject(GameObject newObject)": "`impactObject`を差し替えるだけ。"
+    }
+  },
+  {
+    "type": "footStep",
+    "summary": "片足ごとの足音コンポーネントで、設定した音量範囲のランダム音量で足音を再生し、有効状態の切り替えや遅延切り替えを提供する。",
+    "methods": {
+      "setStepVolumeRange(Vector2 newVolumeRange)": "再生音量の範囲`volumeRange`を設定するだけ。",
+      "setOriginalStepVolume()": "音量範囲を`mainFootStepManager`の既定値`feetVolumeRangeClamps`に戻すだけ。",
+      "enableOrDisableFootStep(bool state)": "足音の有効フラグ`footStepEnabled`を設定するだけ。",
+      "setFooStepStateWithDelay(bool state, float delayAmount)": "既存の遅延コルーチンを止め、`delayAmount`秒後に`state`へ切り替えるコルーチンを開始する。"
+    }
+  },
+  {
+    "type": "customNoiseSystem",
+    "summary": "名前付きのノイズ状態リストを持ち、指定した状態の半径やデシベルでノイズ検知・ノイズメッシュ・イベントを発生させるコンポーネント。",
+    "methods": {
+      "setNoiseState(string stateName)": "名前が一致して有効なノイズ状態をカレントに設定し、その場で`activateNoise`を呼ぶ。",
+      "activateNoise()": "カレントのノイズ状態が有効なら、ノイズ検知の送信とノイズメッシュ生成、設定時のイベント発火を行う。"
+    }
+  },
+  {
+    "type": "noiseMeshSystem",
+    "summary": "シングルトンとしてノイズの広がりを表すメッシュを生成し、指定倍率まで拡大させてから破棄するマネージャー。",
+    "methods": {
+      "getComponentInstance()": "未初期化なら自身をシングルトンに設定し、別インスタンスが既にあれば自身を破棄する。",
+      "addNoiseMesh(float scaleMultiplier, Vector3 noisePosition, float noiseExpandSpeed)": "`scaleMultiplier`まで`noiseExpandSpeed`で広がるノイズメッシュを`noisePosition`に生成する。"
+    }
+  },
+  {
+    "type": "footStepSurfaceSystem",
+    "summary": "オブジェクトの表面名を保持するだけの小さなコンポーネントで、足音マネージャーがサーフェス別の音を選ぶために参照する。",
+    "methods": {
+      "getSurfaceName()": "`surfaceName`を返すだけ。"
+    }
+  },
+  {
+    "type": "playerTutorialSystem",
+    "summary": "チュートリアルのパネル送り・動画再生・入力停止をまとめて行い、カーソルやカメラ、ポーズ状態をチュートリアル表示に合わせて切り替える管理コンポーネント。",
+    "methods": {
+      "stopCheckTutorialOpenedState()": "チュートリアル開閉の監視コルーチンが存在すれば停止するだけ。",
+      "checkTutorialOpenedState()": "既存の監視を止め、開閉状態を短い間隔で更新し続けるコルーチンを開始する。",
+      "activatingTutorialByNameFromEditor()": "エディタからの起動であることを示す`activatingTutorialByNameFromEditorState`を立てるだけ。",
+      "activateTutorialByName(string tutorialName)": "名前が一致するチュートリアルを選び、一度だけ再生の設定を確認して最初のパネルを開く。",
+      "checkOpenOrCloseTutorial(bool state)": "メニューでポーズ中なら即座に開閉し、そうでなければ入力を止めて遅延付きで開くコルーチンを開始する。",
+      "stopCheckOpenOrCloseTutorial()": "チュートリアル開閉用のコルーチンが存在すれば停止するだけ。",
+      "setNextPanelOnTutorial()": "現在パネルを隠して次を表示し、動画があれば再生、末尾ならチュートリアルを閉じる。",
+      "setPreviousPanelOnTutorial()": "現在パネルを隠して`currentTutorialPanelIndex`を1つ戻し、戻したパネルも非表示にする。",
+      "openOrCloseTutorial(bool opened)": "開閉状態に応じてパネル表示、入力停止、カーソル・カメラ・ポーズ状態、タイムスケールを切り替える。",
+      "resumePlayerInput()": "再開コルーチンを止め、タイムスケール0なら即座に、そうでなければ0.5秒後にプレイヤー入力を再開する。",
+      "stopResumePlayerInputCoroutine()": "プレイヤー入力の再開コルーチンが存在すれば停止するだけ。",
+      "playTutorialVideo(tutorialInfo newTutorialInfo)": "既存の動画コルーチンを止め、`newTutorialInfo`の動画を再生するコルーチンを開始する。",
+      "stopTutorialVideoCoroutine()": "再生中の動画と音声を止め、動画コルーチンが存在すれば停止する。",
+      "closeTutorial()": "現在パネルとチュートリアル全体を非表示にし、動画があれば止めて`currentVideoIndex`を0に戻す。",
+      "callNextTutorialPanel()": "チュートリアル表示中かつアクションボタン送りの設定なら`setNextPanelOnTutorial`を呼ぶ。",
+      "resetAllTutorials()": "全チュートリアルのパネルを非表示にし、各チュートリアルの先頭パネルだけを表示状態に戻す。",
+      "setTutorialsEnabledState(bool state)": "チュートリアルの有効フラグ`tutorialsEnabled`を設定するだけ。",
+      "setTutorialUISystem(tutorialUISystem newTutorialUISystem)": "`mainTutorialUISystem`を設定してコンポーネントを更新するだけ。",
+      "instantiateTutorialPanelPrefab()": "UIシステムが未設定なら、チュートリアルパネルのプレハブを生成してプレイヤー側システムを検索させる。",
+      "setTutorialsEnabledStateFromEditor(bool state)": "有効状態を設定したうえでコンポーネントを更新するだけ。",
+      "updateComponent()": "`GKC_Utils.updateComponent`とシーン更新でインスペクタ表示を更新するだけ。"
+    }
+  },
+  {
+    "type": "tutorialUISystem",
+    "summary": "チュートリアルのパネル・動画プレイヤー・音声・`tutorialInfo`リストを保持し、プレイヤー側チュートリアルシステムに参照を渡すUIコンポーネント。",
+    "methods": {
+      "getTutorialsPanel()": "`tutorialsPanel`を返すだけ。",
+      "getVideoAudioSource()": "動画用の`videoAudioSource`を返すだけ。",
+      "getMainVideoPlayerPanel()": "`mainVideoPlayerPanel`を返すだけ。",
+      "getTutorialInfoList()": "`tutorialInfoList`を返すだけ。",
+      "activateTutorialByName(string tutorialName)": "プレイヤー側システムにエディタ起動のフラグを立ててから、名前を指定してチュートリアルを起動する。",
+      "searchPlayerTutorialSystem()": "未設定ならシーンから`playerTutorialSystem`を探し、見つかれば自身をUIシステムとして登録する。",
+      "updateComponent()": "`GKC_Utils.updateComponent`でインスペクタ表示を更新するだけ。"
+    }
+  },
+  {
+    "type": "tutorialActivatorSystem",
+    "summary": "名前を指定してチュートリアルを起動する小さなコンポーネントで、有効フラグと名前に付ける接尾辞を持つ。",
+    "methods": {
+      "activateTutorial(GameObject newPlayer)": "有効時、`tutorialName`と`extraString`を繋いだ名前で起動を依頼する（`newPlayer`は未使用）。",
+      "setTutorialEnabledState(bool state)": "`tutorialEnabled`フラグを設定するだけ。"
+    }
+  },
+  {
+    "type": "tutorialInfo",
+    "summary": "1つのチュートリアル定義で、名前・パネル一覧・表示設定・音声や動画の情報・一度だけ再生するフラグを持つシリアライズクラス。",
+    "methods": {
+      "InitializeAudioElements()": "`soundOnTutorialOpen`があれば、チュートリアルを開く時の`AudioElement`のクリップに設定する。"
+    }
+  },
+  {
+    "type": "hideCharacterFixedPlaceSystem",
+    "summary": "固定の隠れ場所で、プレイヤーの隠れ/表示に応じてAI可視状態・FOV・コライダー・状態アイコン・UI・イベントを切り替えるシステム。",
+    "methods": {
+      "enableOrDisableHideState()": "検知中は何もせず、隠れ状態を反転してAI可視・FOV・コライダー・状態アイコン・イベント・UIを切り替える。",
+      "setCharacterState()": "状態アイコンを使う設定の時、隠れていれば非表示用、そうでなければ表示用のアイコン名を設定する。",
+      "callUnityEvents()": "既存のイベントコルーチンを止め、隠れ/表示それぞれの遅延後に該当イベントを発火するコルーチンを開始する。",
+      "resetCameraInputValues()": "マウスや移動の入力値、カメラとピボットの回転・位置を初期値にリセットする。",
+      "changeResetCameraTransfrom()": "カメラ回転と位置のリセット可否フラグを反転し、それぞれの最終実行時刻を0にする。",
+      "setCurrentPlayer(GameObject player)": "対象プレイヤーを設定して各コンポーネント参照を取得し、この隠れ場所をプレイヤー管理側に登録する。",
+      "checkIfDetected()": "プレイヤー未設定なら取得し、隠れていない時に敵から検知されているかを判定してデバイス使用可否を切り替える。",
+      "showUnableToHideMessage()": "メッセージ表示設定とプレイヤーがある時、隠れられない旨のメッセージを表示する。",
+      "inputResetCameraTransform()": "隠れ中かつカメラ移動中でなければ`changeResetCameraTransfrom`を呼ぶ。",
+      "inputSetIncreaseZoomStateByButton(bool state)": "隠れ中・カメラ停止中・ズーム有効時のみ、拡大フラグ`increaseZoom`を`state`に合わせる。",
+      "inputSetDecreaseZoomStateByButton(bool state)": "隠れ中・カメラ停止中・ズーム有効時のみ、縮小フラグ`decreaseZoom`を`state`に合わせる。",
+      "inputSetZoomValueByMouseWheel(bool state)": "隠れ中・カメラ停止中・ズーム有効時のみ、ホイール使用時刻を更新し、`state`に応じて拡大/縮小フラグを立てる。"
+    }
+  },
+  {
+    "type": "hideCharacterFixedPlaceSystemPlayerManagement",
+    "summary": "プレイヤー側で現在の固定隠れ場所とフリー隠れゾーンを保持し、隠れ中のカメラ入力要求を委譲する管理コンポーネント。",
+    "methods": {
+      "setPlayerHidingState(bool state)": "`playerHiding`を設定し、状態変化イベントを使う設定なら対応するイベントを発火する。",
+      "setCurrentFixedHideSystem(hideCharacterFixedPlaceSystem newFixedHideSystem)": "`currentFixedHideSystem`を設定するだけ。",
+      "setPlayerHidingOnFreeZoneState(bool state)": "フリー隠れゾーン内かどうかのフラグを設定するだけ。",
+      "setCurrentHideFromEnemiesSystem(hideFromEnemiesSystem newHideFromEnemiesSystem)": "`currentHideFromEnemiesSystem`を設定するだけ。",
+      "removeCurrentHideFromEnemiesSystem()": "フリー隠れゾーン中なら、現在の敵隠れシステムから自身のキャラクターを除外する。",
+      "hideInputResetCameraTransform()": "隠れ中かつ固定隠れ場所がある時のみ、そのカメラ入力リセットを呼ぶ。",
+      "hideInputSetIncreaseZoomStateByButton(bool state)": "隠れ中かつ固定隠れ場所がある時のみ、拡大入力を委譲する。",
+      "hideInputSetDecreaseZoomStateByButton(bool state)": "隠れ中かつ固定隠れ場所がある時のみ、縮小入力を委譲する。",
+      "hideInputSetZoomValueByMouseWheel(bool state)": "隠れ中かつ固定隠れ場所がある時のみ、マウスホイール入力を委譲する。",
+      "checkEventsOnStateChange(bool state)": "イベント使用時のみ、`state`に応じて有効/無効のイベントを発火する。"
+    }
+  },
+  {
+    "type": "hideFromEnemiesSystem",
+    "summary": "フリー隠れゾーンのトリガー内にいるキャラクターを管理し、AI可視状態・状態アイコン・敵のターゲットを切り替えるコンポーネント。",
+    "methods": {
+      "setCharacterState(string stateName, int characterIndex)": "状態アイコンを使う設定の時のみ、指定インデックスのキャラクターのアイコン名を設定する。",
+      "OnTriggerEnter(Collider col)": "トリガー進入時に`checkTriggerInfo`を進入として呼ぶだけ。",
+      "OnTriggerExit(Collider col)": "トリガー退出時に`checkTriggerInfo`を退出として呼ぶだけ。",
+      "addCharacterFromHiddenZone(GameObject newCharacter)": "`newCharacter`がnullでなければ、隠れゾーンへ追加する。",
+      "removeCharacterFromHiddenZone(GameObject newCharacter)": "`newCharacter`がnullでなければ、隠れゾーンから除外する。",
+      "checkTriggerInfo(Collider col, bool isEnter)": "コライダーがnullでなければ、そのオブジェクトを進入/退出として隠れゾーンの処理に渡す。",
+      "isCharacterHiddenOnZone(GameObject characterToCheck)": "隠れ中リストに対象キャラクターがいるかどうかを返す。"
+    }
+  }
+]

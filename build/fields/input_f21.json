@@ -1,0 +1,861 @@
+[
+ {
+  "type": "playerController",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\playerController.cs",
+  "source": "Player/playerController.cs",
+  "part": 2,
+  "total_parts": 3,
+  "fields": [
+   {
+    "field": "lockedPlayerMovement",
+    "label": "",
+    "section": "Locked Camera Settings"
+   },
+   {
+    "field": "tankModeRotationSpeed",
+    "label": "",
+    "section": "Locked Camera Settings"
+   },
+   {
+    "field": "canMoveWhileAimLockedCamera",
+    "label": "",
+    "section": "Locked Camera Settings"
+   },
+   {
+    "field": "crouchVerticalInput2_5dEnabled",
+    "label": "",
+    "section": "Locked Camera Settings"
+   },
+   {
+    "field": "useSmoothPlayerRotationAxisOn2_5dEnabled",
+    "label": "",
+    "section": "Locked Camera Settings"
+   },
+   {
+    "field": "gravityMultiplier",
+    "label": "",
+    "section": "Gravity Settings"
+   },
+   {
+    "field": "gravityForce",
+    "label": "",
+    "section": "Gravity Settings"
+   },
+   {
+    "field": "useMaxFallSpeed",
+    "label": "",
+    "section": "Gravity Settings"
+   },
+   {
+    "field": "maxFallSpeed",
+    "label": "",
+    "section": "Gravity Settings"
+   },
+   {
+    "field": "zeroFrictionMaterial",
+    "label": "",
+    "section": "Physics Settings"
+   },
+   {
+    "field": "highFrictionMaterial",
+    "label": "",
+    "section": "Physics Settings"
+   },
+   {
+    "field": "jumpPower",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "enabledRegularJump",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "holdJumpSlowDownFallEnabled",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "slowDownGravityMultiplier",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "jumpMassMultiplier",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "readyToJumpTime",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "ignoreAnimatorGroundStateOnJumpCheck",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "addJumpForceWhileButtonPressed",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "addJumpForceDuration",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "jumpForceAmontWhileButtonPressed",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "minWaitToAddJumpForceAfterButtonPressed",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "useJumpForceOnAirJumpEnabled",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "keepLastMovementInputOnJump",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "keepLastMovementInputOnJumpDuration",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "allowRegularAirInputControlOnAirAfterJumpDuration",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "useDelayOnGroundJump",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "delayOnGroundJump",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "useDelayOnGroundJumpOnlyIfNotMoving",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "ignoreDelayOnGroundJumpOnFBA",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "useEventOnDelayOnGroundJump",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "eventOnDelayOnGroundJump",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "stopCrouchOnJumpEnabled",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "useEventOnJump",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "eventOnJump",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "useEventOnGroundJump",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "eventOnGroundJump",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "useEventOnLandFromJumpInput",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "eventOnLandFromJumpInput",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "useEventOnLand",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "eventOnLand",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "checkObstacleAbovePlayerOnJumpEnabled",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "checkObstacleAbovePlayerOnJumpRaycastDistance",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "checkObstacleAbovePlayerOnJumpLayermask",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "useEventOnAirborne",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "eventOnAirborne",
+    "label": "",
+    "section": "Jump Settings"
+   },
+   {
+    "field": "enabledDoubleJump",
+    "label": "",
+    "section": "Double Jump Settings"
+   },
+   {
+    "field": "maxNumberJumpsInAir",
+    "label": "",
+    "section": "Double Jump Settings"
+   },
+   {
+    "field": "useNewDoubleJumpPower",
+    "label": "",
+    "section": "Double Jump Settings"
+   },
+   {
+    "field": "doubleJumpPower",
+    "label": "",
+    "section": "Double Jump Settings"
+   },
+   {
+    "field": "removeVerticalSpeedOnDoubleJump",
+    "label": "",
+    "section": "Double Jump Settings"
+   },
+   {
+    "field": "readyToDoubleJumpTime",
+    "label": "",
+    "section": "Double Jump Settings"
+   },
+   {
+    "field": "useEventOnDoubleJump",
+    "label": "",
+    "section": "Double Jump Settings"
+   },
+   {
+    "field": "eventOnDoubleJump",
+    "label": "",
+    "section": "Double Jump Settings"
+   },
+   {
+    "field": "fallDamageEnabled",
+    "label": "",
+    "section": "Fall Damage Settings"
+   },
+   {
+    "field": "maxTimeInAirBeforeGettingDamage",
+    "label": "",
+    "section": "Fall Damage Settings"
+   },
+   {
+    "field": "fallingDamageMultiplier",
+    "label": "",
+    "section": "Fall Damage Settings"
+   },
+   {
+    "field": "minPlayerVelocityToApplyDamageThirdPerson",
+    "label": "",
+    "section": "Fall Damage Settings"
+   },
+   {
+    "field": "minPlayerVelocityToApplyDamageFirstPerson",
+    "label": "",
+    "section": "Fall Damage Settings"
+   },
+   {
+    "field": "ignoreShieldOnFallDamage",
+    "label": "",
+    "section": "Fall Damage Settings"
+   },
+   {
+    "field": "damageTypeIDOnFallDamage",
+    "label": "",
+    "section": "Fall Damage Settings"
+   },
+   {
+    "field": "applyFallDamageEnabled",
+    "label": "",
+    "section": "Fall Damage Settings"
+   },
+   {
+    "field": "callEventOnFallDamage",
+    "label": "",
+    "section": "Fall Damage Settings"
+   },
+   {
+    "field": "minTimeOnAirToUseEvent",
+    "label": "",
+    "section": "Fall Damage Settings"
+   },
+   {
+    "field": "callEventOnlyIfPlayerAlive",
+    "label": "",
+    "section": "Fall Damage Settings"
+   },
+   {
+    "field": "eventOnFallDamage",
+    "label": "",
+    "section": "Fall Damage Settings"
+   },
+   {
+    "field": "activateRagdollOnFallState",
+    "label": "",
+    "section": "Ragdoll On Air Settings"
+   },
+   {
+    "field": "minWaitTimeToActivateRagdollOnFall",
+    "label": "",
+    "section": "Ragdoll On Air Settings"
+   },
+   {
+    "field": "minSpeedToActivateRagdollOnFall",
+    "label": "",
+    "section": "Ragdoll On Air Settings"
+   },
+   {
+    "field": "pushRagdollMultiplierOnFall",
+    "label": "",
+    "section": "Ragdoll On Air Settings"
+   },
+   {
+    "field": "eventToActivateRagdollOnFall",
+    "label": "",
+    "section": "Ragdoll On Air Settings"
+   },
+   {
+    "field": "useLandMark",
+    "label": "",
+    "section": "Land Mark Settings"
+   },
+   {
+    "field": "maxLandDistance",
+    "label": "",
+    "section": "Land Mark Settings"
+   },
+   {
+    "field": "minDistanceShowLandMark",
+    "label": "",
+    "section": "Land Mark Settings"
+   },
+   {
+    "field": "landMark",
+    "label": "",
+    "section": "Land Mark Settings"
+   },
+   {
+    "field": "landMark1",
+    "label": "",
+    "section": "Land Mark Settings"
+   },
+   {
+    "field": "landMark2",
+    "label": "",
+    "section": "Land Mark Settings"
+   },
+   {
+    "field": "canUseSphereMode",
+    "label": "",
+    "section": "Player Modes Settings"
+   },
+   {
+    "field": "canGetOnVehicles",
+    "label": "",
+    "section": "Vehicle Settings"
+   },
+   {
+    "field": "canDrive",
+    "label": "",
+    "section": "Vehicle Settings"
+   },
+   {
+    "field": "updateHeadbobState",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "useExtraColliderList",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "capsuleHeightOnCrouch",
+    "label": "",
+    "section": "Crouch Settings"
+   },
+   {
+    "field": "getUpIfJumpOnCrouchInThirdPerson",
+    "label": "",
+    "section": "Crouch Settings"
+   },
+   {
+    "field": "getUpIfJumpOnCrouchInFirstPerson",
+    "label": "",
+    "section": "Crouch Settings"
+   },
+   {
+    "field": "useAutoCrouch",
+    "label": "",
+    "section": "Crouch Settings"
+   },
+   {
+    "field": "layerToCrouch",
+    "label": "",
+    "section": "Crouch Settings"
+   },
+   {
+    "field": "raycastDistanceToAutoCrouch",
+    "label": "",
+    "section": "Crouch Settings"
+   },
+   {
+    "field": "autoCrouchRayPosition",
+    "label": "",
+    "section": "Crouch Settings"
+   },
+   {
+    "field": "secondRaycastOffset",
+    "label": "",
+    "section": "Crouch Settings"
+   },
+   {
+    "field": "canCrouchWhenUsingWeaponsOnThirdPerson",
+    "label": "",
+    "section": "Crouch Settings"
+   },
+   {
+    "field": "useCustomLayerToCheckIfPlayerCanGetUpFromCrouch",
+    "label": "",
+    "section": "Crouch Settings"
+   },
+   {
+    "field": "customLayerToCheckIfPlayerCanGetUpFromCrouch",
+    "label": "",
+    "section": "Crouch Settings"
+   },
+   {
+    "field": "useObstacleDetectionToAvoidMovement",
+    "label": "",
+    "section": "Obstacle Detection To Avoid Movement Settings"
+   },
+   {
+    "field": "obstacleDetectionToAvoidMovementRaycastDistance",
+    "label": "",
+    "section": "Obstacle Detection To Avoid Movement Settings"
+   },
+   {
+    "field": "obstacleDetectionRaycastDistanceRightAndLeft",
+    "label": "",
+    "section": "Obstacle Detection To Avoid Movement Settings"
+   },
+   {
+    "field": "obstacleDetectionRaycastHeightOffset",
+    "label": "",
+    "section": "Obstacle Detection To Avoid Movement Settings"
+   },
+   {
+    "field": "obstacleDetectionToAvoidMovementLayermask",
+    "label": "",
+    "section": "Obstacle Detection To Avoid Movement Settings"
+   },
+   {
+    "field": "useEventsOnWalk",
+    "label": "",
+    "section": "Events On Walk/Run Settings"
+   },
+   {
+    "field": "eventOnWalkStart",
+    "label": "",
+    "section": "Events On Walk/Run Settings"
+   },
+   {
+    "field": "eventOnWalkEnd",
+    "label": "",
+    "section": "Events On Walk/Run Settings"
+   },
+   {
+    "field": "useEventsOnRun",
+    "label": "",
+    "section": "Events On Walk/Run Settings"
+   },
+   {
+    "field": "eventOnRunStart",
+    "label": "",
+    "section": "Events On Walk/Run Settings"
+   },
+   {
+    "field": "eventOnRunEnd",
+    "label": "",
+    "section": "Events On Walk/Run Settings"
+   },
+   {
+    "field": "FBAWalkMovementSpeed",
+    "label": "",
+    "section": "Full Body Awareness Settings"
+   },
+   {
+    "field": "FBARunMovementSpeed",
+    "label": "",
+    "section": "Full Body Awareness Settings"
+   },
+   {
+    "field": "FBASprintMovementSpeed",
+    "label": "",
+    "section": "Full Body Awareness Settings"
+   },
+   {
+    "field": "FBACrouchMovementSpeed",
+    "label": "",
+    "section": "Full Body Awareness Settings"
+   },
+   {
+    "field": "FBACrouchRunMovementSpeed",
+    "label": "",
+    "section": "Full Body Awareness Settings"
+   },
+   {
+    "field": "FBAWalkStrafeMovementSpeed",
+    "label": "",
+    "section": "Full Body Awareness Settings"
+   },
+   {
+    "field": "FBARunStrafeMovementSpeed",
+    "label": "",
+    "section": "Full Body Awareness Settings"
+   },
+   {
+    "field": "useFBACustomMoveSpeedMultiplier",
+    "label": "",
+    "section": "Full Body Awareness Settings"
+   },
+   {
+    "field": "FBACustomMoveSpeedMultiplier",
+    "label": "",
+    "section": "Full Body Awareness Settings"
+   },
+   {
+    "field": "ignoreFBACustomMoveSpeedMultiplierOnActionActive",
+    "label": "",
+    "section": "Full Body Awareness Settings"
+   },
+   {
+    "field": "forwardAnimatorName",
+    "label": "",
+    "section": "Animator Fields Settings"
+   },
+   {
+    "field": "turnAnimatorName",
+    "label": "",
+    "section": "Animator Fields Settings"
+   },
+   {
+    "field": "horizontalAnimatorName",
+    "label": "",
+    "section": "Animator Fields Settings"
+   },
+   {
+    "field": "verticalAnimatorName",
+    "label": "",
+    "section": "Animator Fields Settings"
+   },
+   {
+    "field": "horizontalStrafeAnimatorName",
+    "label": "",
+    "section": "Animator Fields Settings"
+   },
+   {
+    "field": "verticalStrafeAnimatorName",
+    "label": "",
+    "section": "Animator Fields Settings"
+   },
+   {
+    "field": "onGroundAnimatorName",
+    "label": "",
+    "section": "Animator Fields Settings"
+   },
+   {
+    "field": "crouchAnimatorName",
+    "label": "",
+    "section": "Animator Fields Settings"
+   },
+   {
+    "field": "movingAnimatorName",
+    "label": "",
+    "section": "Animator Fields Settings"
+   },
+   {
+    "field": "jumpAnimatorName",
+    "label": "",
+    "section": "Animator Fields Settings"
+   },
+   {
+    "field": "jumpLegAnimatorName",
+    "label": "",
+    "section": "Animator Fields Settings"
+   },
+   {
+    "field": "strafeModeActiveAnimatorName",
+    "label": "",
+    "section": "Animator Fields Settings"
+   },
+   {
+    "field": "movementInputActiveAnimatorName",
+    "label": "",
+    "section": "Animator Fields Settings"
+   },
+   {
+    "field": "movementRelativeToCameraAnimatorName",
+    "label": "",
+    "section": "Animator Fields Settings"
+   },
+   {
+    "field": "movementIDAnimatorName",
+    "label": "",
+    "section": "Animator Fields Settings"
+   },
+   {
+    "field": "playerModeIDAnimatorName",
+    "label": "",
+    "section": "Animator Fields Settings"
+   },
+   {
+    "field": "movementSpeedAnimatorName",
+    "label": "",
+    "section": "Animator Fields Settings"
+   },
+   {
+    "field": "lastTimeInputPressedAnimatorName",
+    "label": "",
+    "section": "Animator Fields Settings"
+   },
+   {
+    "field": "carryingWeaponAnimatorName",
+    "label": "",
+    "section": "Animator Fields Settings"
+   },
+   {
+    "field": "aimingModeActiveAnimatorName",
+    "label": "",
+    "section": "Animator Fields Settings"
+   },
+   {
+    "field": "playerStatusIDAnimatorName",
+    "label": "",
+    "section": "Animator Fields Settings"
+   },
+   {
+    "field": "idleIDAnimatorName",
+    "label": "",
+    "section": "Animator Fields Settings"
+   },
+   {
+    "field": "strafeIDAnimatorName",
+    "label": "",
+    "section": "Animator Fields Settings"
+   },
+   {
+    "field": "crouchIDAnimatorName",
+    "label": "",
+    "section": "Animator Fields Settings"
+   },
+   {
+    "field": "airIDAnimatorName",
+    "label": "",
+    "section": "Animator Fields Settings"
+   },
+   {
+    "field": "airSpeedAnimatorName",
+    "label": "",
+    "section": "Animator Fields Settings"
+   },
+   {
+    "field": "quickTurnRightDirectionName",
+    "label": "",
+    "section": "Animator Fields Settings"
+   },
+   {
+    "field": "quickTurnLeftDirectionName",
+    "label": "",
+    "section": "Animator Fields Settings"
+   },
+   {
+    "field": "quickTurnDirectionIDSpeedName",
+    "label": "",
+    "section": "Animator Fields Settings"
+   },
+   {
+    "field": "shieldActiveAnimatorName",
+    "label": "",
+    "section": "Animator Fields Settings"
+   },
+   {
+    "field": "inputAmountName",
+    "label": "",
+    "section": "Animator Fields Settings"
+   },
+   {
+    "field": "useStrafeLandingName",
+    "label": "",
+    "section": "Animator Fields Settings"
+   },
+   {
+    "field": "weaponIDAnimatorName",
+    "label": "",
+    "section": "Animator Fields Settings"
+   },
+   {
+    "field": "rightArmdIDAnimatorName",
+    "label": "",
+    "section": "Animator Fields Settings"
+   },
+   {
+    "field": "leftArmIDAnimatorName",
+    "label": "",
+    "section": "Animator Fields Settings"
+   },
+   {
+    "field": "timeOnAirAnimatorName",
+    "label": "",
+    "section": "Animator Fields Settings"
+   },
+   {
+    "field": "animatorFBAActiveName",
+    "label": "",
+    "section": "Animator Fields Settings"
+   },
+   {
+    "field": "playerCameraGameObject",
+    "label": "",
+    "section": "Characters Elements"
+   },
+   {
+    "field": "playerCameraTransform",
+    "label": "",
+    "section": "Characters Elements"
+   },
+   {
+    "field": "playerCameraManager",
+    "label": "",
+    "section": "Characters Elements"
+   },
+   {
+    "field": "headBobManager",
+    "label": "",
+    "section": "Characters Elements"
+   },
+   {
+    "field": "playerInput",
+    "label": "",
+    "section": "Characters Elements"
+   },
+   {
+    "field": "playerTransform",
+    "label": "",
+    "section": "Characters Elements"
+   },
+   {
+    "field": "weaponsManager",
+    "label": "",
+    "section": "Characters Elements"
+   },
+   {
+    "field": "healthManager",
+    "label": "",
+    "section": "Characters Elements"
+   },
+   {
+    "field": "IKSystemManager",
+    "label": "",
+    "section": "Characters Elements"
+   },
+   {
+    "field": "mainCameraTransform",
+    "label": "",
+    "section": "Characters Elements"
+   },
+   {
+    "field": "animator",
+    "label": "",
+    "section": "Characters Elements"
+   },
+   {
+    "field": "stepManager",
+    "label": "",
+    "section": "Characters Elements"
+   },
+   {
+    "field": "mainRigidbody",
+    "label": "",
+    "section": "Characters Elements"
+   },
+   {
+    "field": "gravityManager",
+    "label": "",
+    "section": "Characters Elements"
+   },
+   {
+    "field": "characterStateIconManager",
+    "label": "",
+    "section": "Characters Elements"
+   },
+   {
+    "field": "capsule",
+    "label": "",
+    "section": "Characters Elements"
+   },
+   {
+    "field": "mainCollider",
+    "label": "",
+    "section": "Characters Elements"
+   },
+   {
+    "field": "AIElements",
+    "label": "",
+    "section": "Characters Elements"
+   },
+   {
+    "field": "mainPlayerActionSystem",
+    "label": "",
+    "section": "Characters Elements"
+   }
+  ]
+ }
+]

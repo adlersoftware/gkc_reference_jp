@@ -1,0 +1,528 @@
+[
+ {
+  "type": "playerActionSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Action System\\playerActionSystem.cs",
+  "methods": [
+   {
+    "sig": "getCurrentActionDuration()",
+    "line": 426
+   },
+   {
+    "sig": "setReadInputValuesForActionSystemActiveState(bool state)",
+    "line": 451
+   },
+   {
+    "sig": "getInputValuesForActionSystem()",
+    "line": 456
+   },
+   {
+    "sig": "updateAnimatorParemeters()",
+    "line": 487
+   },
+   {
+    "sig": "setPlayerActionActive(actionSystem newActionSystem)",
+    "line": 501
+   },
+   {
+    "sig": "checkConditionsToPlayAnimation()",
+    "line": 640
+   },
+   {
+    "sig": "setPlayerActionDeactivate(actionSystem newActionSystem)",
+    "line": 657
+   },
+   {
+    "sig": "setPlayerActionDeactivate()",
+    "line": 676
+   },
+   {
+    "sig": "playAnimation()",
+    "line": 688
+   },
+   {
+    "sig": "stopPlayAnimationCoroutine()",
+    "line": 739
+   },
+   {
+    "sig": "activateAnimation()",
+    "line": 746
+   },
+   {
+    "sig": "checkSetActionState()",
+    "line": 1224
+   },
+   {
+    "sig": "isRotatingTowardFacingDirection()",
+    "line": 1240
+   },
+   {
+    "sig": "isPlayerWalkingToDirectionActive()",
+    "line": 1245
+   },
+   {
+    "sig": "isActionActive()",
+    "line": 1250
+   },
+   {
+    "sig": "isPlayerMovingOn3dWorld()",
+    "line": 1255
+   },
+   {
+    "sig": "isUsePositionToAdjustPlayerActive()",
+    "line": 1260
+   },
+   {
+    "sig": "setWaitToPlayAnimationAfterAdjustPositionActiveState(bool state)",
+    "line": 1265
+   },
+   {
+    "sig": "stopSetPlayerWalkState()",
+    "line": 1270
+   },
+   {
+    "sig": "setPlayerWalkState(bool playAnimationAtEnd)",
+    "line": 1281
+   },
+   {
+    "sig": "OnAnimatorMove()",
+    "line": 1547
+   },
+   {
+    "sig": "matchTarget(Vector3 matchPosition, Quaternion matchRotation, AvatarTarget target, MatchTargetWeightMask weightMask, float normalisedStartTime, float normalisedEndTime)",
+    "line": 1701
+   },
+   {
+    "sig": "forcePlayCurrentAnimation(int newCurrentActionInfoIndex)",
+    "line": 1716
+   },
+   {
+    "sig": "playCurrentAnimation()",
+    "line": 1725
+   },
+   {
+    "sig": "canPlayAnimation()",
+    "line": 1774
+   },
+   {
+    "sig": "stopCheckActionEventInfoList()",
+    "line": 1879
+   },
+   {
+    "sig": "checkActionEventInfoList()",
+    "line": 1887
+   },
+   {
+    "sig": "stopCheckKillOrEnterOnRagdollState()",
+    "line": 2026
+   },
+   {
+    "sig": "checkKillOrEnterOnRagdollState()",
+    "line": 2033
+   },
+   {
+    "sig": "stopCheckSetObjectParent()",
+    "line": 2110
+   },
+   {
+    "sig": "checkSetObjectParent()",
+    "line": 2117
+   },
+   {
+    "sig": "setActionMovementInputActiveState(bool state)",
+    "line": 2196
+   },
+   {
+    "sig": "setLastHorizontalDirectionValue(int newValue)",
+    "line": 2201
+   },
+   {
+    "sig": "setLastVerticalDirectionValue(int newValue)",
+    "line": 2206
+   },
+   {
+    "sig": "updateLastDirectionValues()",
+    "line": 2211
+   },
+   {
+    "sig": "forceActivateCustomAction(string actionName)",
+    "line": 2230
+   },
+   {
+    "sig": "setActivateCustomActionsPausedState(bool state)",
+    "line": 2237
+   },
+   {
+    "sig": "activateCustomActionByCategoryName(string categoryName)",
+    "line": 2242
+   },
+   {
+    "sig": "activateCustomAction(string actionName)",
+    "line": 2273
+   },
+   {
+    "sig": "checkCustomActionToActivate(int currentCategoryIndex, int currentActionIndex)",
+    "line": 2445
+   },
+   {
+    "sig": "stopCustomActionIfCurrentlyActive(string actionName)",
+    "line": 2566
+   },
+   {
+    "sig": "stopCustomAction(string actionName)",
+    "line": 2575
+   },
+   {
+    "sig": "pausePlayer()",
+    "line": 2680
+   },
+   {
+    "sig": "clearActionSystemListStoredToPlay()",
+    "line": 3162
+   },
+   {
+    "sig": "stopAllActions()",
+    "line": 3167
+   },
+   {
+    "sig": "resetAllActionStates()",
+    "line": 3202
+   },
+   {
+    "sig": "checkIfPauseInputListDuringActionActive(bool state)",
+    "line": 3251
+   },
+   {
+    "sig": "checkInputListToPauseDuringAction(List<inputToPauseOnActionIfo> inputList, bool state)",
+    "line": 3266
+   },
+   {
+    "sig": "updateCurrentInputList()",
+    "line": 3286
+   },
+   {
+    "sig": "setIgnoreInputChangeActiveState(bool state)",
+    "line": 3301
+   },
+   {
+    "sig": "resumePlayer()",
+    "line": 3306
+   },
+   {
+    "sig": "removeActionFoundWaitingToPlayerResume()",
+    "line": 3818
+   },
+   {
+    "sig": "checkDestroyAction()",
+    "line": 3824
+   },
+   {
+    "sig": "checkRemoveAction()",
+    "line": 3841
+   },
+   {
+    "sig": "checkIfEventOnStopAction()",
+    "line": 3884
+   },
+   {
+    "sig": "enableCustomActionByName(string actionName)",
+    "line": 3940
+   },
+   {
+    "sig": "disableCustomActionByName(string actionName)",
+    "line": 3945
+   },
+   {
+    "sig": "enableOrDisableCustomActionByName(string actionName, bool state)",
+    "line": 3950
+   },
+   {
+    "sig": "setCustomActionTransform(string actionName, Transform newTransform)",
+    "line": 3968
+   },
+   {
+    "sig": "getCurrentActionName()",
+    "line": 4019
+   },
+   {
+    "sig": "getCurrentActionCategoryActive()",
+    "line": 4024
+   },
+   {
+    "sig": "getCurrentActionSystem()",
+    "line": 4029
+   },
+   {
+    "sig": "setNewActionIDExternally(int newID)",
+    "line": 4034
+   },
+   {
+    "sig": "setActionActiveExternally(bool state)",
+    "line": 4039
+   },
+   {
+    "sig": "setCurrentCustomActionCategoryID(int newValue)",
+    "line": 4044
+   },
+   {
+    "sig": "checkChangeOfView(bool isFirstPerson)",
+    "line": 4049
+   },
+   {
+    "sig": "inputPlayCurrentAnimation()",
+    "line": 4059
+   },
+   {
+    "sig": "inputPlayCurrentAnimationWithoutCheckingIfExistsOnaDeviceList()",
+    "line": 4076
+   },
+   {
+    "sig": "inputCheckIfResumePlayerOnJump()",
+    "line": 4092
+   },
+   {
+    "sig": "getSharedActionSystem()",
+    "line": 4105
+   },
+   {
+    "sig": "getSharedActionButtonActivator()",
+    "line": 4110
+   },
+   {
+    "sig": "getSharedActionSystemRemoteActivator()",
+    "line": 4115
+   },
+   {
+    "sig": "isSharedActionActive()",
+    "line": 4120
+   },
+   {
+    "sig": "isPlayerAlive()",
+    "line": 4129
+   },
+   {
+    "sig": "addNewActionFromEditor(actionSystem newActionSystem, string newActionCategoryName, string actionSystemName, bool updateActionListActive, string actionCategory)",
+    "line": 4163
+   },
+   {
+    "sig": "setNewInfoOnAction(string newActionCategoryName, string originalActionSystemName, string actionSystemName, float newDuration, float newSpeed)",
+    "line": 4194
+   },
+   {
+    "sig": "updateActionList(bool updatingListIngame)",
+    "line": 4224
+   },
+   {
+    "sig": "checkActions()",
+    "line": 4269
+   },
+   {
+    "sig": "checkActionSystemAlreadyExists(string actionName)",
+    "line": 4308
+   },
+   {
+    "sig": "movePlayerToPositionTarget(Transform targetTransform)",
+    "line": 4317
+   },
+   {
+    "sig": "stopMovePlayerToPositionTargetCoroutine()",
+    "line": 4324
+   },
+   {
+    "sig": "checkIfSpawnActionSystem(customActionStateInfo customActionStateInfoToCheck)",
+    "line": 4375
+   }
+  ]
+ },
+ {
+  "type": "actionSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Action System\\actionSystem.cs",
+  "methods": [
+   {
+    "sig": "setPlayerParentDuringActionActiveValues(bool state, Transform newParent)",
+    "line": 124
+   },
+   {
+    "sig": "setUseMovingPlayerToPositionTargetValues(bool state, float newSpeed, float newDelay)",
+    "line": 131
+   },
+   {
+    "sig": "activateCustomAction(GameObject playerDetected)",
+    "line": 145
+   },
+   {
+    "sig": "setIgnorePlayerListValue(bool state)",
+    "line": 154
+   },
+   {
+    "sig": "setPlayerActionActive(GameObject playerDetected)",
+    "line": 159
+   },
+   {
+    "sig": "setPlayerActionDeactivate(GameObject playerDetected)",
+    "line": 193
+   },
+   {
+    "sig": "checkSendCurrentPlayerOnEvent(GameObject currentPlayer)",
+    "line": 221
+   },
+   {
+    "sig": "checkEventBeforeStartAction()",
+    "line": 228
+   },
+   {
+    "sig": "setCustomActionTransform(Transform newTransform)",
+    "line": 235
+   },
+   {
+    "sig": "getCurrentactionInfo()",
+    "line": 240
+   },
+   {
+    "sig": "increaseCurrentActionInfoIndex()",
+    "line": 245
+   },
+   {
+    "sig": "decreaseCurrentActionInfoIndex()",
+    "line": 254
+   },
+   {
+    "sig": "setCurrentActionInfoIndex(int newIndex)",
+    "line": 263
+   },
+   {
+    "sig": "resetCurrentActionInfoIndex()",
+    "line": 276
+   },
+   {
+    "sig": "getCurrentActionInfoIndex()",
+    "line": 281
+   },
+   {
+    "sig": "destroyAction()",
+    "line": 286
+   },
+   {
+    "sig": "checkEventOnStartAction()",
+    "line": 297
+   },
+   {
+    "sig": "checkEventOnEndAction()",
+    "line": 304
+   },
+   {
+    "sig": "checkEventAfterResumePlayer()",
+    "line": 311
+   },
+   {
+    "sig": "checkEventOnEnableActionObject()",
+    "line": 318
+   },
+   {
+    "sig": "checkEventOnDisableActionObject()",
+    "line": 329
+   },
+   {
+    "sig": "clearPlayerList()",
+    "line": 336
+   },
+   {
+    "sig": "removePlayerFromList(GameObject playerToRemove)",
+    "line": 341
+   },
+   {
+    "sig": "disableAction()",
+    "line": 348
+   },
+   {
+    "sig": "setObjectToSetParentInfo(Transform currentObject, Vector3 position, Vector3 rotation, Transform originalParent)",
+    "line": 377
+   },
+   {
+    "sig": "checkResetObjectPositionAndParentAfterAction()",
+    "line": 386
+   },
+   {
+    "sig": "inputPlayCurrentAnimation()",
+    "line": 397
+   },
+   {
+    "sig": "inputPlayCurrentAnimationWithoutCheckingIfExistsOnaDeviceList()",
+    "line": 402
+   },
+   {
+    "sig": "addNewAction()",
+    "line": 441
+   },
+   {
+    "sig": "addNewActionFromEditor(string actionSystemName, float actionSystemDuration, float actionSystemSpeed, bool useActionSystemID, int actionSystemID, string actionSystemAnimationName)",
+    "line": 452
+   },
+   {
+    "sig": "addNewEvent(int actionInfoIndex)",
+    "line": 470
+   },
+   {
+    "sig": "addNewEventFirstPerson(int actionInfoIndex)",
+    "line": 481
+   },
+   {
+    "sig": "duplicateThirdPersonEventsOnFirstPerson(int actionInfoIndex)",
+    "line": 492
+   },
+   {
+    "sig": "replaceAnimationAction()",
+    "line": 507
+   },
+   {
+    "sig": "getChildAnimatorState(string stateName, UnityEditor.Animations.AnimatorStateMachine stateMachine)",
+    "line": 628
+   },
+   {
+    "sig": "enableOrDisableAutoUseActionOnTriggerByAI(bool state)",
+    "line": 653
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 684
+   }
+  ]
+ },
+ {
+  "type": "customActionSystemTrigger",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Action System\\customActionSystemTrigger.cs",
+  "methods": [
+   {
+    "sig": "setPlayerOnEnter(GameObject newPlayer)",
+    "line": 44
+   },
+   {
+    "sig": "setPlayerOnExit(GameObject newPlayer)",
+    "line": 51
+   },
+   {
+    "sig": "activateCustomAction(GameObject newPlayer)",
+    "line": 58
+   }
+  ]
+ },
+ {
+  "type": "characterActionSystemChecker",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Action System\\characterActionSystemChecker.cs",
+  "methods": [
+   {
+    "sig": "checkToPlayActionAutomatically()",
+    "line": 28
+   }
+  ]
+ },
+ {
+  "type": "activateActionOnCharactersOnScene",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Action System\\activateActionOnCharactersOnScene.cs",
+  "methods": [
+   {
+    "sig": "activateActionOnCharacters(string actionName)",
+    "line": 21
+   }
+  ]
+ }
+]

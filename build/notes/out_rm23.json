@@ -1,0 +1,30 @@
+[
+ {
+  "type": "brainwashAIProjectile",
+  "summary": "`projectileSystem`を継承した弾で、命中したキャラクターを指定陣営・タグ・名前へ洗脳し、プレイヤーをパートナーに設定できる。",
+  "methods": {
+   "checkObjectDetected(Collider col)": "命中効果が有効なら着弾音を再生して弾を停止し、対象キャラクターを指定陣営へ洗脳した後`disableBullet`で消す。"
+  }
+ },
+ {
+  "type": "gravityWallRunTriggerSystem",
+  "summary": "`tagToCheck`のプレイヤーがトリガーに出入りすると、その`gravityWallRunSystem`の壁走りやアニメ速度を外部から切り替える。",
+  "methods": {
+   "checkTriggerInfo(Collider col, bool isEnter)": "`isEnter`が真なら対象プレイヤーの壁走りを開始し、偽なら停止・アニメ速度復元・強制歩行解除を行う。"
+  }
+ },
+ {
+  "type": "nanoBlade",
+  "summary": "`projectileSystem`を継承した投擲弾で、命中したオブジェクトや最寄りのラグドールボーンに弾を固定し、ダメージと衝撃力を与える。",
+  "methods": {
+   "checkObjectDetected(Collider col)": "命中時に軌跡を消して弾をキネマティック化し、対象か最寄りラグドールボーンへ親子付けして即死またはダメージと力を与える。"
+  }
+ },
+ {
+  "type": "slowObjectsColor",
+  "summary": "`slowObject`から開始され、対象の速度を低下させながらレンダラーを`slowColor`へ補間し、時間経過で元の色と速度に戻して自己破棄する。",
+  "methods": {
+   "startSlowObject(bool useSlowObjectColorValue, Color newSlowColor, float newSlowValue, float newSlowDownDuration, slowObject newSlowObjectComponent)": "各パラメータを保存し、`slowObject`のカスタム速度を反映して低下メッセージを送り、対象レンダラーの元色を記録する。"
+  }
+ }
+]

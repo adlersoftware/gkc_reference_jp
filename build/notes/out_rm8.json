@@ -1,0 +1,258 @@
+[
+ {
+  "type": "hitCombat",
+  "summary": "近接攻撃の当たり判定コンポーネント。手足のトリガーで相手を検出し、ダメージ・押し出し・力を適用する。",
+  "methods": {
+   "checkTriggerInfo(Collider col, bool isEnter)": "有効時のみ`isEnter`が真なら、接触したオブジェクトを`checkObjectDetected`へ渡す。",
+   "checkObjectDetection(GameObject objectDetected, bool isTrigger)": "除外リスト・タグ・レイヤー・自分自身・トリガー設定を判定し、攻撃対象になり得るかを返す。",
+   "checkObjectDetected(GameObject objectDetected, bool isTrigger)": "検出対象をリストへ登録し、デカール・ダメージ・押し出し・力を順に適用、検出イベントも発火する。",
+   "checkDamageToApplyOnObject(GameObject objectToDamage)": "`activateDamage`でダメージを与え、送信設定に応じてメッセージ送信や最終攻撃フラグを更新する。",
+   "checkPushCharactersOnObject(GameObject objectToDamage)": "押し出しが有効なら、対象キャラへプレイヤー前方ベクトルで押し出しメッセージを送る。",
+   "setCustomForceDirection(Vector3 newValue)": "次回攻撃で力を加える方向を設定するだけ。",
+   "setCustomForceAmount(float newValue)": "次回攻撃で使う力の量`customForceAmount`を設定するだけ。",
+   "setCustomForceMode(ForceMode newForceMode)": "`customForceMode`を設定し、カスタム`ForceMode`を有効化する。",
+   "removeCustomForceMode()": "カスタム`ForceMode`の有効フラグを下ろすだけ。",
+   "setIgnoreForcesToApplyOnAttackActiveState(bool state)": "攻撃時に力を適用しないフラグを設定するだけ。",
+   "setCustomForceToVehiclesMultiplier(float newValue)": "乗り物へ加える力の倍率を設定するだけ。",
+   "setAddForceMultiplierValue(float newValue)": "通常攻撃で加える力の倍率`addForceMultiplier`を設定するだけ。",
+   "checkForceToApplyOnObject(GameObject objectToDamage)": "対象の`Rigidbody`へ方向と量から求めた力を加え、乗り物には専用倍率を掛ける。",
+   "checkDecalsToApplyOnObject(GameObject objectToDamage)": "本体はコメントのみで何もせず、デカール適用処理は未実装。",
+   "getLastSurfaceDetected()": "直前に検出したサーフェスの`GameObject`を返すだけ。",
+   "setLastSurfaceDetected(GameObject newSurface)": "直前検出サーフェスとして設定するだけ。",
+   "getOwner(GameObject ownerObject)": "`currentPlayer`を設定し、メインコライダーを取得して所有者との衝突を無視する。",
+   "getMainCollider()": "メインコライダーを取得して返す。",
+   "setMainColliderEnabledState(bool state)": "メインコライダーが存在すれば、その`enabled`を指定状態に切り替える。",
+   "reloadMainColliderEnabled()": "メインコライダーを一度無効化してから再度有効化する。",
+   "setCurrentState(bool value)": "有効フラグを設定し、押し出し・ダメージ・力の各フラグをリセットして検出リストを空にする。",
+   "setIgnoreDetectedObjectsOnListState(bool state)": "検出済みリストを無視するフラグを設定するだけ。",
+   "setConfigureDamageAsConstant(bool state)": "ダメージを一定値として扱うフラグを設定するだけ。",
+   "setUseCastAllDamageDetectionState(bool state)": "真なら球/ボックス範囲を即座に全検出して処理し、フラグを戻す。",
+   "setNewHitDamage(float newValue)": "1回の攻撃の基本ダメージ`hitDamage`を設定するだけ。",
+   "setIgnoreShieldState(bool state)": "シールドを無視するフラグを設定するだけ。",
+   "setCurrentExtraDamageValue(float extraDamageValue)": "ダメージ倍率を設定し、0以下なら1に補正する。",
+   "activePushCharacterOnce()": "次の1回だけキャラを押し出すフラグを立てるだけ。",
+   "deactivatePushCHaracterOnce()": "1回限りの押し出しフラグを下ろすだけ。",
+   "setUsePushCharacterState(bool state)": "常時キャラ押し出しの有効フラグを設定するだけ。",
+   "setCurrentAttackInfoIndex(int combatTypeIndex, int attackIndex)": "現在のコンバット種別と攻撃のインデックスを設定するだけ。",
+   "getDamageAppliedInLastAttackState()": "直前の攻撃でダメージが入ったかどうかを返すだけ。",
+   "setDetectSurfaceStateActive(bool state)": "サーフェス検出イベントの発火待ちフラグを設定するだけ。",
+   "isDetectSurfaceStateActive()": "サーフェス検出イベント待ちかどうかを返すだけ。",
+   "activateDamage(GameObject objectToDamage)": "`applyDamage.checkCanBeDamaged`を呼び出し、ダメージ適用の可否を返す。",
+   "getLastDamageApplied()": "直近攻撃のダメージ量（基本値×倍率）を返す。",
+   "setCustomDamageCanBeBlockedState(bool state)": "ダメージがブロック可能かを設定し、デバッグ時のみログを出す。",
+   "setTriggerId(int newValue)": "トリガーIDを設定するだけ。",
+   "setTriggerIdOnEditor(int newValue)": "トリガーIDを設定してから、エディタ用にコンポーネントを更新する。",
+   "setCheckTriggerSurfacesState(bool state)": "トリガー同士の接触も検出するかを設定するだけ。",
+   "setCustomObjectToSendMessage(GameObject newObject)": "メッセージ送信先のカスタムオブジェクトを設定するだけ。",
+   "setCustomLayerMask(LayerMask newLayerMask)": "検出に使う`LayerMask`を設定するだけ。",
+   "setCustomTagsToIgnore(List<string> newTagList)": "無視タグ一覧を設定し、nullならタグ無視を無効化してリストを空にする。",
+   "setSendMessageOnDamageDetectedState(bool state)": "ダメージ検出時のメッセージ送信フラグを設定するだけ。",
+   "setCanActivateReactionSystemTemporallyState(bool state)": "リアクションシステムの一時有効化フラグを設定するだけ。",
+   "setNewDamageReactionID(int newValue)": "ダメージリアクションIDを設定するだけ。",
+   "setNewDamageTypeID(int newValue)": "ダメージ種別IDを設定するだけ。",
+   "setNewSphereColliderTriggerRadius(float newValue)": "球コライダーがあれば、その半径を新しい値に変更する。",
+   "setNewBoxColliderTriggerSize(Vector3 newValue)": "ボックスコライダーがあれば、そのサイズを新しい値に変更する。",
+   "addOrRemoveObjectToIgnore(GameObject newObject, bool state)": "対象を無視リストへ追加/削除し、リストが空かどうかで無視有効フラグを更新する。",
+   "updateComponent()": "`GKC_Utils.updateComponent`でこのコンポーネントを更新し、シーンをダーティにする。"
+  }
+ },
+ {
+  "type": "powersListManager",
+  "summary": "パワーのホイール選択とスロット編集を行うUI管理コンポーネント。割当・アイコン表示・ポーズメニュー連携を担当する。",
+  "methods": {
+   "setTouchingMenuPanelState(bool state)": "タッチ状態を保持し、ダブルタップ判定で編集メニューを開き、タッチ無効化除外も設定する。",
+   "updateCurrentSelectedPowerSlotIcon(otherPowers.Powers currentPowerOnPowersManager)": "選択中パワーのスロットだけアイコンを点灯し、名前表示と`setCurrentPowerByName`を更新する。",
+   "enableOrDisablePowerSlot(string powerName, bool state)": "同名スロットを有効/無効化し、有効パワー数`numberOfEnabledPowers`を増減する。",
+   "editPowersSlots()": "編集メニューの開閉を切り替え、ホイール・リスト・ポーズメニューの状態をまとめて更新する。",
+   "selectPower(powerSlotInfo slotInfo)": "指定スロットのパワーを`powersManager`へ設定し、選択アイコンを切り替える。",
+   "changeSlotSize(powerSlotInfo slotInfo, bool setRegularSize, float sizeMultiplier, bool smoothSizeChange)": "既存のサイズ補間コルーチンを止め、スロット拡大/縮小のコルーチンを開始する。",
+   "selectPowersSlots()": "パワーホイールの開閉を切り替え、ポーズ・時間停止・閉じる際のパワー確定を扱う。",
+   "closePowerListManagerMenus()": "編集と選択をいったん開いた状態にしてから閉じ、両メニューを確実に閉じる。",
+   "canBeOpened()": "ポーズ中・デバイス使用中・メニュー表示中などでないかを確認し、開けるかを返す。",
+   "checkDuplicatedSlot(string powerName)": "同じ名前のパワーが既にホイール上にあるかどうかを返す。",
+   "isEditingPowers()": "パワー編集メニューが開いているかを返すだけ。",
+   "getPowerByNumberKeyIndex(int numberKeyToSearch)": "有効かつ指定番号キーを持つパワーのインデックスを返し、無ければ-1を返す。",
+   "updateSlotsInfo(bool isEditingPowers)": "スロット数・角度・アイコン・番号を再構成し、表示できるパワーが無ければホイールを閉じる。",
+   "assignPowerToSlot(otherPowers.Powers currentPowerToAssign, powerSlotInfo powerSlotToUse, bool slotWithPowerAssigned)": "パワーをスロットへ割り当て、番号・アイコン・選択表示・割当フラグを更新する。",
+   "playSound(AudioElement sound)": "`AudioPlayer.PlayOneShot`で指定サウンドを再生するだけ。",
+   "inputEditPowerSlots()": "パワー管理が有効で他メニューが閉じていれば、編集メニューを開閉する。",
+   "inputOpenOrClosePowersWheel(bool openPowersWheel)": "有効時は`openPowersWheel`の値に関わらず、ホイール開閉をトグルする。",
+   "setUsedByAIState(bool state)": "AIが使用中かどうかのフラグを設定するだけ。",
+   "setPowerListManagerEnabledState(bool state)": "パワーリスト管理自体の有効フラグを設定するだけ。",
+   "setPowerListManagerEnabledStateFromEditor(bool state)": "有効フラグを設定してから、エディタ用にコンポーネントを更新する。"
+  }
+ },
+ {
+  "type": "gravityWallRunSystem",
+  "summary": "壁走りシステム。ランボタン長押しで重力方向を壁面へ回し、マテリアル・速度・イベントを切り替える。",
+  "methods": {
+   "stopUpdateCoroutine()": "実行中のメインコルーチンを停止し、稼働フラグを下ろす。",
+   "checkIfActivateWallWalk()": "走行状態とランボタン長押し時間を監視し、条件を満たすと壁走りを開始または停止する。",
+   "activateWallWalk()": "壁走り用にトレイルとマテリアルを切り替え、速度を落として開始イベントを発火する。",
+   "stopWallWalk()": "マテリアルと速度を戻し、元の法線方向へ重力を回転させて終了イベントを発火する。",
+   "setAnimSpeedMultiplierOnWallRunValue(float newValue)": "壁走り中のアニメ速度倍率を設定するだけ。",
+   "setOriginalAnimSpeedMultiplierOnWallRunValue()": "保存しておいた元のアニメ速度倍率へ戻す。",
+   "isWallWalkActive()": "壁走り中かどうかを返すだけ。",
+   "setWalkWallEnabledState(bool state)": "有効化時は監視コルーチンを開始し、無効化時は停止と後始末を行う。",
+   "toggleWalkWallEnabledState()": "壁走りの有効フラグを反転させて設定し直す。",
+   "disableWalkWallState()": "壁走り中なら停止し、有効フラグも下ろして監視を止める。",
+   "setForceWalkWallActiveExternallyState(bool state)": "外部から強制発動させるフラグを設定するだけ。",
+   "enableOrDisableWalkWallExternally(bool state, bool activateRunAction)": "有効フラグを切り替え、必要なら走行入力の開始や強制停止も行う。",
+   "setMeshesInfo()": "ラグドールの各部位へトレイルを生成して無効化し、描画情報を保存して更新する。",
+   "getMaterialList()": "未取得なら、各レンダラーのマテリアルをリストへ収集する。",
+   "clearRendererList()": "レンダラーリストを空にするだけ。",
+   "storePlayerRenderer()": "設定されたオブジェクトとその子からレンダラーを集めてリストへ保存する。",
+   "addplayerGameObjectListFromEditor(GameObject newObject)": "重複が無ければオブジェクトをリストへ追加し、コンポーネントを更新する。",
+   "storePlayerRendererFromEditor()": "レンダラーを収集してから、エディタ用にコンポーネントを更新する。",
+   "updateComponent()": "`GKC_Utils.updateComponent`で更新し、シーンをダーティにする。"
+  }
+ },
+ {
+  "type": "timeBullet",
+  "summary": "バレットタイム（時間スローの）管理。`Time.timeScale`を書き換え、持続時間や音のピッチも扱う。",
+  "methods": {
+   "activateTime()": "バレットタイムをトグルし、有効なら設定速度、解除なら1へ戻して時間スケールを更新する。",
+   "updateTimeBulletTime(float newValue)": "時間値`timeBulletTime`を保持するだけで、実際の適用はしない。",
+   "updateTimeScaleValue()": "`Time.timeScale`と`fixedDeltaTime`を現在の時間値に反映する。",
+   "disableTimeBullet()": "バレットタイム中なら解除し、再開用フラグ`previouslyActivated`を立てる。",
+   "disableTimeBulletTotally()": "バレットタイムを解除し、再開用フラグも下ろして完全に終了させる。",
+   "reActivateTime()": "再開フラグが立っていれば、少し待ってから再度トグルするコルーチンを開始する。",
+   "changeAudioPitch()": "`restoreAudioPitch`が有効なら、全`AudioSource`のピッチを1へ戻す。",
+   "activateTimeBulletXSeconds(float timeBulletDuration, float timeScale)": "指定時間だけバレットタイムにするコルーチンを開始し、既存のものは停止する。",
+   "setCustomTimeBulletDuration(float timeScale)": "引数名と異なり、カスタム継続時間`customTimeBulletDuration`を設定する。",
+   "activateTimeBulletXSeconds(float timeBulletDuration)": "カスタム継続時間でバレットタイムを一時的に有効化するコルーチンを開始する。",
+   "setBulletTimeState(bool state, float timeScale)": "時間が停止していない場合のみ、状態と時間スケールを設定する。",
+   "setNewTimeBulletTimeSpeedValue(float newValue)": "バレットタイムの速度値を設定するだけ。",
+   "setOriginalTimeBulletTimeSpeed()": "開始時に保存した元の速度値へ戻す。",
+   "setTimeValues(bool state, float timeScale)": "有効時のみ再開コルーチンを止め、状態・時間値・音のピッチをまとめて更新する。",
+   "inputActivateBulletTime()": "機能有効かつ入力許可時のみ`activateTime`を呼ぶ。",
+   "setTimeBulletByInputEnabledState(bool state)": "入力による発動許可フラグを設定するだけ。",
+   "isTimeBulletActivated()": "バレットタイム中かどうかを返すだけ。",
+   "setTimeBulletByInputEnabledStateFromEditor(bool state)": "入力許可フラグを設定してから、エディタ用にコンポーネントを更新する。"
+  }
+ },
+ {
+  "type": "pushObjectsPower",
+  "summary": "周囲のオブジェクトを中心から押し出すパワー。範囲内の`Rigidbody`へ力を加え、ダメージや遠隔イベントも任意で行う。",
+  "methods": {
+   "stopUpdateCoroutine()": "更新コルーチンが動作中なら停止し、稼働フラグを下ろす。",
+   "activatePowerWithUpdate()": "毎フレーム探索の設定なら更新コルーチンを開始し、そうでなければ1回だけ発動する。",
+   "deactivatePowerWithUpdate()": "毎フレーム探索の設定かつ有効なら、更新コルーチンを停止する。",
+   "activatePower()": "中心の周囲のコライダーを取得し、対象ごとに力を計算して弾き飛ばす。",
+   "checkObjectToApplyForce(GameObject currentObject)": "タグや前方判定を通過した対象へメッセージ・ダメージ・力を与え、乗り物リストや遠隔イベントも処理する。",
+   "setPowerEnabledState(bool state)": "有効フラグを設定し、初期化とリストのクリア、更新コルーチンの開始/停止を行う。",
+   "setPowerEnabledStateOneFrame()": "1フレームだけ有効化して発動し、すぐ無効に戻す。",
+   "cleanGameObjectFoundList()": "検出済みオブジェクトのリストを空にするだけ。",
+   "checkRemoteEvent(GameObject objectToCheck)": "遠隔イベント設定が有効なら、対象の`remoteEventSystem`へ登録済みの名前を送る。",
+   "setUseRemoteEventOnObjectsFoundState(bool state)": "検出対象へ遠隔イベントを送るかどうかのフラグを設定するだけ。",
+   "setUseMessageToPushCharactersFoundState(bool state)": "検出したキャラへ押し出しメッセージを送るかどうかのフラグを設定するだけ。",
+   "setUseOfPowerPausedState(bool state)": "パワー使用を一時停止するフラグを設定するだけ。",
+   "setNewPushCenterDistance(float newValue)": "中心から探索する距離`pushCenterDistance`を設定するだけ。"
+  }
+ },
+ {
+  "type": "launchedObjects",
+  "summary": "発射されたオブジェクトに付与され、衝突相手へ速度由来のダメージや遠隔イベントを与えるコンポーネント。",
+  "methods": {
+   "setOnTriggerInfoCheckState(bool state, LayerMask newLayermask)": "トリガー接触チェックの有効フラグと、対象レイヤーの`LayerMask`を設定する。",
+   "setUseCustomDamageAmountValues(bool state, float amount)": "固定ダメージを使うかどうかと、そのダメージ量を設定する。",
+   "setCurrentPlayer(GameObject player)": "攻撃者となるプレイヤーを設定するだけ。",
+   "setCurrentPlayerAndCollider(GameObject player, Collider playerCollider)": "プレイヤーとそのコライダーを設定し、以後の衝突無視に備える。",
+   "setIgnoreShieldState(bool state)": "シールドを無視するフラグを設定するだけ。",
+   "setCanActivateReactionSystemTemporally(bool state)": "リアクションの一時有効化フラグを設定するだけ。",
+   "setCamageReactionID(int newValue)": "ダメージリアクションIDを設定するだけ。",
+   "setCheckCollisionsEnabledState(bool state)": "衝突判定そのものの有効フラグを設定するだけ。"
+  }
+ },
+ {
+  "type": "slowObject",
+  "summary": "オブジェクトを一定時間スローモーションにする状態。色変更コンポーネントを付与し、開始/終了イベントを持つ。",
+  "methods": {
+   "getObjectToCallFunction()": "速度低下を通知する対象オブジェクトを返す。",
+   "isUseCustomSlowSpeedEnabled()": "カスタム速度を使うかどうかを返すだけ。",
+   "getCustomSlowSpeed()": "カスタム速度値を返すだけ。",
+   "checkChildsObjectsToIgnore(Transform obj)": "指定`Transform`が無視メッシュ一覧またはその子に含まれるかを返す。",
+   "useMeshesToIgnoreEnabled()": "メッシュ無視の設定が有効かどうかを返すだけ。",
+   "checkEventOnReducedSpeed()": "速度低下時の`UnityEvent`を発火するだけ。",
+   "checkEventOnRegularSpeed()": "通常速度へ戻った時の`UnityEvent`を発火するだけ。"
+  }
+ },
+ {
+  "type": "gravityBootsSystem",
+  "summary": "重力ブーツ。壁面など任意の表面に吸着して歩けるよう、法線方向へ重力と向きを回転させる。",
+  "methods": {
+   "stopUpdateCoroutine()": "監視コルーチンを停止し、稼働フラグを下ろす。",
+   "stopGravityBoots()": "重力ブーツを終了し、元の法線へ戻して周回移動の設定を無効化する。",
+   "areGravityBootsActive()": "重力ブーツが発動中かどうかを返すだけ。",
+   "setGravityBootsEnabledState(bool state)": "有効化時は監視開始と周回設定の反映、無効化時は停止を行い、開始/終了イベントを発火する。",
+   "toggleGravityBootsEnabledState()": "重力ブーツの有効フラグを反転させて設定し直す。",
+   "disableGravityBootsState()": "発動中なら停止し、有効フラグも下ろす。"
+  }
+ },
+ {
+  "type": "joinObjectsPower",
+  "summary": "2つのオブジェクトを互いに引き寄せるパワー。距離に応じた力を加え、衝突すると解除する。",
+  "methods": {
+   "stopUpdateCoroutine()": "実行中の更新コルーチンを停止するだけ。",
+   "addForce(Vector3 direction, Rigidbody rigidbodyAffected, ForceMode forceModeToUsse, bool isVehicle)": "乗り物なら倍率を掛け、設定に応じた`ForceMode`で`Rigidbody`に力を加える。",
+   "activatePower()": "レイキャストで2つの対象を取得し、衝突監視と重力停止を設定して引き寄せを開始する。",
+   "removeObjectsjoin()": "追加した衝突監視と発射物コンポーネントを破棄し、重力やパーティクルを元に戻す。"
+  }
+ },
+ {
+  "type": "blackHoleProjectile",
+  "summary": "黒穴として機能する特殊弾。範囲内の`Rigidbody`を引き込み、終了時に爆発させて放出する。",
+  "methods": {
+   "dropBlackHoleObjects()": "吸い込んだ`Rigidbody`の重力を戻して爆発力を加え、黒穴のパーティクルを消す。",
+   "stopBlackHole()": "弾を停止させるフラグを立てるだけ。",
+   "activateProjectileAbility()": "他の黒穴を破棄し、重力の有効化・コライダー拡大・トレイル変更を行う。"
+  }
+ },
+ {
+  "type": "powersAndAbilitiesSystem",
+  "summary": "パワー名と有効/無効イベントを対応付ける汎用システム。名前を指定してイベントを呼び出す。",
+  "methods": {
+   "disableGeneralPower(string powerName)": "名前が一致するパワーの無効化イベントを発火して終了する。",
+   "enableGeneralPower(string powerName)": "名前が一致するパワーの有効化イベントを発火して終了する。",
+   "updateComponent()": "`GKC_Utils.updateComponent`でこのコンポーネントを更新するだけ。"
+  }
+ },
+ {
+  "type": "changeGlobalGravityPower",
+  "summary": "カメラ前方の面の法線に合わせて、レベル全体の重力方向を変えるパワー。",
+  "methods": {
+   "activatePower()": "カメラ前方の静的コライダーに当たると、その法線方向へ`Physics.gravity`を変更する。",
+   "activateSecondaryPower()": "重力変更に加え、設定に応じてキャラ・乗り物の向きやNPCの押し出しも行う。"
+  }
+ },
+ {
+  "type": "deviceToControlAtDistance",
+  "summary": "遠隔操作パワー用に、実際に操作するデバイスを指定する小さなコンポーネント。",
+  "methods": {
+   "isDeviceToControlEnabled()": "遠隔操作対象の有効フラグを返すだけ。",
+   "getDeviceToControlGameObject()": "操作対象を返し、未設定なら自身を設定して返す。"
+  }
+ },
+ {
+  "type": "removeGravityFromCharactersProjectile",
+  "summary": "着弾地点の範囲内のキャラから、重力を一時的に外す弾。",
+  "methods": {
+   "checkObjectDetected(Collider col)": "当たると範囲エフェクトを有効化し、弾を停止して効果音とパーティクルを出し消滅させる。",
+   "applyEffect(GameObject objectToAffect)": "対象の`remoteEventSystem`を探し、重力除去の遠隔イベントを送る。"
+  }
+ },
+ {
+  "type": "changeObjectsPositionPower",
+  "summary": "狙ったオブジェクトとプレイヤーの位置を入れ替えるパワー。",
+  "methods": {
+   "activatePower()": "カメラ前方の対象とプレイヤーの位置を交換し、地面へ再配置する。"
+  }
+ },
+ {
+  "type": "useDevicesAtDistancePower",
+  "summary": "離れた場所からデバイスやスイッチ、拾得物を使用するパワー。",
+  "methods": {
+   "activatePower()": "前方のトリガーが対象タグなら、`electronicDevice`等として遠隔使用を開始する。"
+  }
+ }
+]

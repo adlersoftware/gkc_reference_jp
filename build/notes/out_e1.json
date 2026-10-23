@@ -1,0 +1,144 @@
+[
+  {
+    "type": "changePlayerStateOnTriggerSystem",
+    "summary": "トリガーや関数呼び出しを起点に、対象プレイヤーのモード・カメラ・武器・重力・移動などの状態をまとめて変更するコンポーネント。プレイヤーは手動指定またはシーン検索で取得する。",
+    "methods": {
+      "findPlayerOnScene()": "`searchPlayerOnSceneIfNotAssigned`が有効な時だけ、シーン内のメインプレイヤーを検索して`setCurrentPlayer`に渡す。",
+      "setCurrentPlayer(GameObject player)": "`currentPlayer`に引数の`player`をそのまま代入するだけの薄いセッター。",
+      "changePlayerState()": "設定済みの状態変更を`currentPlayer`へ一括適用し、`playerSendEvent`と`eventOnTrigger`を呼び、必要なら自身を無効化する。"
+    }
+  },
+  {
+    "type": "eventInfoSystem",
+    "summary": "複数の`UnityEvent`とリモートイベントを、要素ごとの遅延（累積待ち、または同時カウント）付きで順に実行する。実行はコルーチンで行い、途中停止もできる。",
+    "methods": {
+      "stopCheckActionEventInfoList()": "実行中のコルーチンを停止し、処理中だった場合は`eventOnStopCoroutineIfActive`を呼んでから`eventInProcess`を偽にする。",
+      "activateActionEventInfoList()": "無効時は何もせず、遅延ありならコルーチンを開始、なしなら全要素の`eventToUse`とリモートイベントを即時実行する。",
+      "addNewEvent()": "`eventInfoList`に新しい`eventInfo`を追加し、`updateComponent`でシーン更新をかけるエディタ用関数。",
+      "setEventInfoEnabledState(bool state)": "`eventInfoEnabled`を設定するだけの薄いセッター。",
+      "updateComponent()": "`GKC_Utils.updateComponent`と`updateDirtyScene`を呼んでシーン更新をマークするだけ。"
+    }
+  },
+  {
+    "type": "eventObjectFoundOnCaptureSystem",
+    "summary": "オブジェクトを捕獲・発見した時に`UnityEvent`を1回（設定次第で複数回）呼ぶ小規模コンポーネント。検出オブジェクトを引数で渡すイベントも選べる。",
+    "methods": {
+      "callEventOnCapture()": "有効かつ未発動なら`eventToCallOnCapture`を呼び、`callEventMultipleTimes`でなければ発動済みフラグを立てる。",
+      "callEventOnCaptureWithGameObject(GameObject newObject)": "`useEventToSendObject`時、オブジェクトが非nullで未発動なら`eventToSendObject`に渡して呼び、必要なら発動済みにする。",
+      "setEventEnabledState(bool state)": "`eventEnabled`を設定するだけの薄いセッター。"
+    }
+  },
+  {
+    "type": "eventTriggerSystem",
+    "summary": "トリガーの進入/退出を判定し、タグ・レイヤー・対象オブジェクトの条件と要素ごとの遅延を経て、`SendMessage`/`BroadcastMessage`/`UnityEvent`/リモートイベントを実行する。オブジェクト追跡により最初の進入と最後の退出でのみ発火させる。",
+    "methods": {
+      "activateEventIfObjectActiveSelf()": "`gameObject`が階層上アクティブな時だけ`activateEvent`を呼ぶ条件付きラッパー。",
+      "activateEvent()": "未発動（または毎回許可時）に`eventTriggered`を立てて親を解除し、遅延なしなら即時、ありならコルーチンで発火する。",
+      "stopEventCoroutineIfActive()": "`coroutineActive`が真なら実行中のイベントコルーチンを停止し、そのフラグを偽にする。",
+      "stopEventCoroutine()": "`eventCoroutine`がnullでなければ`StopCoroutine`で止めるだけで、`coroutineActive`は変更しない。",
+      "stopAllEventsAndDisableTriggerSystem()": "コルーチンを止め、`eventTriggered`を真・`callFunctionEveryTimeTriggered`を偽にして以後の発火を抑止する（コンポーネント自体は無効化しない）。",
+      "activateEventAtOnce()": "遅延を待たず、`enter`/`exit`の選択を反映した対象リストの全要素を`callElementFromList`で即実行する。",
+      "callElementFromList(eventInfo currentEventInfo)": "1件の`eventInfo`設定に従い、`SendMessage`/`BroadcastMessage`/`UnityEvent`/リモートイベントを呼び分ける。",
+      "getObjectToCall(GameObject defaultObjectToCall)": "`useSameObjectToCall`なら自身か`sameObjectToCall`を返し、そうでなければ引数のオブジェクトを返す。",
+      "checkTriggerEventEnterType(GameObject objectToCheck)": "`checkTriggerEventType`に`triggerType.enter`を渡すだけのラッパー。",
+      "checkTriggerEventExitType(GameObject objectToCheck)": "`checkTriggerEventType`に`triggerType.exit`を渡すだけのラッパー。",
+      "checkTriggerEventType(GameObject objectToCheck, triggerType trigger)": "未発動か毎回許可の時に種別・対象・タグ・`justCallOnTrigger`を判定し、`objectDetected`を入れて`activateEvent`を呼ぶ。",
+      "getLastObjectDetected()": "最後に検出した`objectDetected`を返すだけのゲッター。",
+      "checkTag(GameObject objectToCheck)": "`useTagToTrigger`時、タグリストまたは単一タグと一致するかを判定して返す。",
+      "checkIfObjectCanTrigger(GameObject objectToCheck)": "対象オブジェクト一致・タグ一致・`justCallOnTrigger`のいずれかなら真を返す判定関数。",
+      "checkTriggerEventTypeByFunction()": "ボタン起因でなく未発動（または毎回許可）なら、種別判定をせず`activateEvent`を呼ぶ。",
+      "resetEventTriggered()": "`eventTriggered`を偽に戻すだけのセッター。",
+      "setEventAsTriggered()": "`eventTriggered`を真にするだけのセッター。",
+      "setObjectOnTriggerEnterExternally(GameObject newObject)": "引数オブジェクトの`Collider`を取得し、あれば`OnTriggerEnter`を直接呼んで進入扱いにする。",
+      "setLoopEventAtTheEndEnabledState(bool state)": "`loopEventAtTheEndEnabled`を設定するだけの薄いセッター。",
+      "addNewEvent()": "`eventList`に新しい`eventInfo`を追加し、`updateComponent`で更新するエディタ用関数。",
+      "InsertEventAtIndex(int index)": "`eventList`の`index+1`の位置に新しい`eventInfo`を挿入し、`updateComponent`を呼ぶ。",
+      "setSimpleFunctionByTag(string functionName, GameObject objectTocall, string tag)": "イベントを1件追加して対象オブジェクトと関数名を設定し、`useTagToTrigger`と`tagNeededToTrigger`を上書きする。",
+      "setUseLayerMaskState(bool state)": "`useLayerMask`を設定し、`updateComponent`を呼ぶ。",
+      "setLayerMaskValue(LayerMask newLayer)": "`layerMask`を設定し、`updateComponent`を呼ぶ。",
+      "setUseTagToTriggerState(bool state)": "`useTagToTrigger`を設定し、`updateComponent`を呼ぶ。",
+      "setUseTagListState(bool state)": "`useTagList`を設定し、`updateComponent`を呼ぶ。",
+      "setTagList(List<string> newList)": "`tagList`を引数のリストで置き換え、`updateComponent`を呼ぶ。",
+      "addElementToTagList(string newElement)": "未登録の場合のみ`tagList`に追加し、`updateComponent`を呼ぶ。",
+      "removeElementToTagList(string newElement)": "登録済みの場合のみ`tagList`から削除し、`updateComponent`を呼ぶ。"
+    }
+  },
+  {
+    "type": "randomEventSystem",
+    "summary": "名前指定か乱数で選んだ要素の`UnityEvent`を、全体有効フラグと確率判定を経て発火する。順番に発火するためのインデックスも保持する。",
+    "methods": {
+      "callEventInOrderByIndex(int newValue)": "`currentEventIndexInOrder`に値を代入してから`callEventInOrder`を呼ぶ。",
+      "callEventInOrder()": "現在のインデックスのイベントを発火し、インデックスを進めて末尾に達したら0へ戻す。",
+      "setEventIndexInOrderValue(int newValue)": "値を設定し、リスト数以上なら0に戻す。",
+      "resetEventIndexInOrder()": "`currentEventIndexInOrder`を0にするだけ。",
+      "callRandomEventIgnoringProbabilityByName(string eventName)": "確率判定を無視する内部フラグを立てて名前指定の発火を行い、終了後にフラグを戻す。",
+      "callRandomEventByName(string eventName)": "無視フラグや全体無効時は何もせず、名前が一致する要素を探して`activateEvent`を呼ぶ。",
+      "callRandomEvent()": "無視フラグや全体無効時は何もせず、乱数（`useSameIndexValue`なら固定値）で要素を選び`activateEvent`を呼ぶ。",
+      "setRandomEventsEnabledState(bool state)": "`randomEventsEnabled`を設定するだけの薄いセッター。",
+      "setIgnoreRandomEventActiveState(bool state)": "`ignoreRandomEventActive`を設定するだけの薄いセッター。"
+    }
+  },
+  {
+    "type": "remoteAnimatorEventTriggerSystem",
+    "summary": "`remoteEventSystem.eventInfo`と同じ形式のリストを自前で持ち、名前一致で`UnityEvent`を呼ぶ簡易版。イベント名ごとの有効/無効の切り替えもできる。",
+    "methods": {
+      "callRemoteEvent(string eventName)": "無効時は何もせず、名前一致の有効要素で`useRegularEvent`なら`UnityEvent`を呼び、必要なら無効化して抜ける。",
+      "setEnabledEventState(string eventName)": "`setEnabledOrDisabledEventState(true, eventName)`を呼ぶだけのラッパー。",
+      "setDisabledEventState(string eventName)": "`setEnabledOrDisabledEventState(false, eventName)`を呼ぶだけのラッパー。",
+      "setEnabledOrDisabledEventState(bool state, string eventName)": "名前が一致する最初の要素の`eventEnabled`を設定して抜ける。"
+    }
+  },
+  {
+    "type": "remoteEventActivator",
+    "summary": "指定したオブジェクト（自分で指定、またはシーン内のプレイヤー）の`remoteEventSystem`に対し、名前と任意の引数（float/bool/GameObject/Transform）付きでリモートイベントを送る。",
+    "methods": {
+      "callRemoteEvent(GameObject objectToCall)": "`currentObjectToCall`に対象を入れてから`callEvent`を呼ぶ。",
+      "setObjectToCall(GameObject objectToCall)": "`currentObjectToCall`を設定するだけの薄いセッター。",
+      "callEvent()": "手動指定時は対象（未指定ならプレイヤー検索）を決め、その`remoteEventSystem`へ引数種別に応じたリモートイベントを送る。",
+      "findPlayerOnScene()": "`searchPlayerOnSceneIfNotAssigned`が真なら、シーンのメインプレイヤーを`objectToAssign`に入れる。"
+    }
+  },
+  {
+    "type": "remoteEventSearcher",
+    "summary": "名前で設定を選び、シーン全体または半径内から`remoteEventSystem`を持つオブジェクトを探して、ID/名前条件に合うものへリモートイベントを一斉送信する。",
+    "methods": {
+      "activateRemoteEventSearcher(string remoteEventSearcherName)": "名前一致の設定を探し、シーン全検索または半径内のオブジェクトへ、ID/名前条件を満たす場合のみリモートイベントを送る。"
+    }
+  },
+  {
+    "type": "remoteEventSocket",
+    "summary": "`remoteEventSystem`への参照を保持し、ソケット無効時はnullを返す中継コンポーネント。",
+    "methods": {
+      "getMainRemoteEventSystem()": "ソケットが無効ならnull、有効なら`mainRemoteEventSystem`を返す。",
+      "isRemoteEventSocketEnabled()": "`remoteEventSocketEnabled`を返すだけのゲッター。"
+    }
+  },
+  {
+    "type": "remoteEventSystem",
+    "summary": "名前付きのリモートイベントを、引数なし/float/bool/GameObject/Transform/stringの`UnityEvent`に割り当てて発火する仕組み。イベント単位の有効・無視・発動後無効化と全体の有効状態を管理する。",
+    "methods": {
+      "callRemoveEvent(string eventName)": "名前は削除だが中身は`callRemoteEvent`を呼ぶだけで、指定名のイベントを通常発火する。",
+      "callRemoteEvent(string eventName)": "有効時、名前が一致する有効かつ無視でない要素を探し、`useRegularEvent`なら`UnityEvent`を呼び、必要なら無効化する。",
+      "callRemoteEventWithAmount(string eventName, float amount)": "名前一致かつ`useAmountOnEvent`の要素の`eventToActiveAmount`に`amount`を渡して呼ぶ。",
+      "callRemoteEventWithBool(string eventName, bool state)": "名前一致かつ`useBoolOnEvent`の要素の`eventToActiveBool`に`state`を渡して呼ぶ。",
+      "callRemoteEventWithGameObject(string eventName, GameObject objectToSend)": "名前一致かつ`useGameObjectOnEvent`の要素の`eventToActiveGameObject`に`objectToSend`を渡して呼ぶ。",
+      "callRemoteEventWithTransform(string eventName, Transform transformToSend)": "名前一致かつ`useTransformOnEvent`の要素の`eventToActiveTransform`に`transformToSend`を渡して呼ぶ。",
+      "callRemoteEventWithString(string eventName, string strintParameter)": "名前一致かつ`useStringOnEvent`の要素の`eventToActivateString`に文字列を渡して呼ぶ。",
+      "setEnabledEventState(string eventName)": "`setEnabledOrDisabledEventState(true, eventName)`を呼ぶだけのラッパー。",
+      "setDisabledEventState(string eventName)": "`setEnabledOrDisabledEventState(false, eventName)`を呼ぶだけのラッパー。",
+      "setEnabledOrDisabledEventState(bool state, string eventName)": "名前が一致する最初の要素の`eventEnabled`を設定して抜ける。",
+      "setIgnoreEventActiveState(string eventName)": "`setIgnoreEventState(true, eventName)`を呼ぶだけのラッパー。",
+      "setIgnoreEventDeactiveState(string eventName)": "`setIgnoreEventState(false, eventName)`を呼ぶだけのラッパー。",
+      "setIgnoreEventState(bool state, string eventName)": "`FindIndex`で名前一致の要素を探し、見つかれば`ignoreEventActive`を設定する。",
+      "setRemoteEventsEnabledState(bool state)": "`remoteEventsEnabled`を設定するだけの薄いセッター。",
+      "getRemoteEventSystemName()": "`remoteEventSystemName`を返すゲッター。",
+      "getRemoteEventSystemID()": "`remoteEventSystemID`を返すゲッター。",
+      "clearObjectsSearcResultList()": "検索結果と検索名を空にし、`searchObjectsActive`と各要素の`pauseVisibleOnEditor`を偽にして更新する。",
+      "showObjectsBySearchName()": "`objectSearcherName`を小文字化し、名前が部分一致/一致する要素名を重複なく`objectSearchResultList`に集める。",
+      "setEnabledEventStateFromEditor(string eventName)": "有効化を適用した後に`updateComponent`を呼ぶエディタ用ラッパー。",
+      "setDisabledEventStateFromEditor(string eventName)": "無効化を適用した後に`updateComponent`を呼ぶエディタ用ラッパー。",
+      "setRemoteEventsEnabledStateFromEditor(bool state)": "全体の有効状態を設定してから`updateComponent`を呼ぶエディタ用関数。",
+      "updateComponent()": "`GKC_Utils.updateComponent`と`updateDirtyScene`を呼んでシーン更新をマークする。"
+    }
+  }
+]

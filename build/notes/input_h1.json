@@ -1,0 +1,500 @@
+[
+ {
+  "type": "healthManagement",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Health\\healthManagement.cs",
+  "methods": [
+   {
+    "sig": "setDamageWithHealthManagement(float damageAmount, Vector3 fromDirection, Vector3 damagePos, GameObject attacker, GameObject projectile, bool damageConstant, bool searchClosestWeakSpot, bool ignoreShield, bool ignoreDamageInScreen, bool damageCanBeBlocked, bool canActivateReactionSystemTemporally, int damageReactionID, int damageTypeID)",
+    "line": 36
+   },
+   {
+    "sig": "getCurrentHealthAmount()",
+    "line": 45
+   },
+   {
+    "sig": "isUseShieldActive()",
+    "line": 50
+   },
+   {
+    "sig": "getCurrentShieldAmount()",
+    "line": 55
+   },
+   {
+    "sig": "checkIfDeadWithHealthManagement()",
+    "line": 60
+   },
+   {
+    "sig": "checkIfMaxHealthWithHealthManagement()",
+    "line": 65
+   },
+   {
+    "sig": "setDamageTargetOverTimeStateWithHealthManagement(float damageOverTimeDelay, float damageOverTimeDuration, float damageOverTimeAmount, float damageOverTimeRate, bool damageOverTimeToDeath, int damageTypeID)",
+    "line": 70
+   },
+   {
+    "sig": "setDamageOrHealthTargetWithDelayWithHealthManagement(float waitAmount, float valueAmount, int damageTypeID)",
+    "line": 76
+   },
+   {
+    "sig": "removeDamagetTargetOverTimeStateWithHealthManagement()",
+    "line": 81
+   },
+   {
+    "sig": "sedateCharacterithHealthManagement(Vector3 position, float sedateDelay, bool useWeakSpotToReduceDelay, bool sedateUntilReceiveDamage, float sedateDuration)",
+    "line": 86
+   },
+   {
+    "sig": "setHealWithHealthManagement(float healAmount)",
+    "line": 91
+   },
+   {
+    "sig": "setShieldWithHealthManagement(float shieldAmount)",
+    "line": 96
+   },
+   {
+    "sig": "getCurrentHealthAmountWithHealthManagement()",
+    "line": 101
+   },
+   {
+    "sig": "getMaxHealthAmountWithHealthManagement()",
+    "line": 106
+   },
+   {
+    "sig": "getAuxHealthAmountWithHealthManagement()",
+    "line": 111
+   },
+   {
+    "sig": "addAuxHealthAmountWithHealthManagement(float amount)",
+    "line": 116
+   },
+   {
+    "sig": "getHealthAmountToPickWithHealthManagement(float amount)",
+    "line": 121
+   },
+   {
+    "sig": "killCharacterWithHealthManagement(GameObject projectile, Vector3 direction, Vector3 position, GameObject attacker, bool damageConstant)",
+    "line": 126
+   },
+   {
+    "sig": "killCharacterWithHealthManagement()",
+    "line": 131
+   },
+   {
+    "sig": "getPlaceToShootWithHealthManagement()",
+    "line": 136
+   },
+   {
+    "sig": "getPlaceToShootGameObjectWithHealthManagement()",
+    "line": 141
+   },
+   {
+    "sig": "isCharacterWithHealthManagement()",
+    "line": 146
+   },
+   {
+    "sig": "isVehicleWithHealthManagement()",
+    "line": 151
+   },
+   {
+    "sig": "getCharacterWeakSpotListWithHealthManagement()",
+    "line": 156
+   },
+   {
+    "sig": "isCharacterInRagdollState()",
+    "line": 161
+   },
+   {
+    "sig": "getCharacterRootMotionTransform()",
+    "line": 166
+   },
+   {
+    "sig": "getCharacterOrVehicleWithHealthManagement()",
+    "line": 171
+   },
+   {
+    "sig": "setFuelWithHealthManagement(float fuelAmount)",
+    "line": 176
+   },
+   {
+    "sig": "removeFuelWithHealthManagement(float fuelAmount)",
+    "line": 181
+   },
+   {
+    "sig": "getCurrentFuelAmountWithHealthManagement()",
+    "line": 186
+   },
+   {
+    "sig": "checkIfMaxFuelWithHealthManagement()",
+    "line": 191
+   },
+   {
+    "sig": "getCharacterWithHealthManagement()",
+    "line": 196
+   },
+   {
+    "sig": "getVehicleWithHealthManagement()",
+    "line": 201
+   },
+   {
+    "sig": "getVehicleHUDManagerWithHealthManagement()",
+    "line": 206
+   },
+   {
+    "sig": "getVehicleDriverWithHealthManagement()",
+    "line": 211
+   },
+   {
+    "sig": "isVehicleBeingDrivenWithHealthManagement()",
+    "line": 216
+   },
+   {
+    "sig": "checkIfDetectSurfaceBelongToVehicleWithHealthManagement(Collider surfaceFound)",
+    "line": 221
+   },
+   {
+    "sig": "checkIfWeakSpotListContainsTransformWithHealthManagement(Transform transformToCheck)",
+    "line": 226
+   },
+   {
+    "sig": "setEnergyWithHealthManagement(float energyAmount)",
+    "line": 231
+   },
+   {
+    "sig": "removeEnergyWithHealthManagement(float energyAmount)",
+    "line": 236
+   },
+   {
+    "sig": "getCurrentEnergyAmountWithHealthManagement()",
+    "line": 241
+   },
+   {
+    "sig": "checkIfMaxEnergyWithHealthManagement()",
+    "line": 246
+   },
+   {
+    "sig": "isUseImpactSurfaceActiveWithHealthManagement()",
+    "line": 251
+   },
+   {
+    "sig": "getDecalImpactIndexWithHealthManagement()",
+    "line": 256
+   },
+   {
+    "sig": "changePlaceToShootPosition(bool state)",
+    "line": 261
+   },
+   {
+    "sig": "setPlaceToShootPositionOffset(float newValue)",
+    "line": 266
+   },
+   {
+    "sig": "setPlaceToShootLocalPosition(Vector3 newValue)",
+    "line": 271
+   },
+   {
+    "sig": "isDead()",
+    "line": 276
+   },
+   {
+    "sig": "setBlockDamageActiveState(bool state)",
+    "line": 281
+   },
+   {
+    "sig": "isBlockDamageActiveState()",
+    "line": 286
+   },
+   {
+    "sig": "setBlockDamageProtectionAmount(float newValue)",
+    "line": 292
+   },
+   {
+    "sig": "setBlockDamageRangleAngleState(bool useMaxBlockRangeAngleValue, float maxBlockRangeAngleValue)",
+    "line": 297
+   },
+   {
+    "sig": "setHitReactionBlockIDValue(int newBlockID)",
+    "line": 302
+   },
+   {
+    "sig": "updateSliderOffset(float value)",
+    "line": 307
+   },
+   {
+    "sig": "updateOriginalSliderOffset()",
+    "line": 312
+   },
+   {
+    "sig": "setIgnoreParryActiveState(bool state)",
+    "line": 317
+   },
+   {
+    "sig": "characterHasWeakSpotListWithHealthManagement()",
+    "line": 322
+   },
+   {
+    "sig": "checkIfDamagePositionIsCloseEnoughToWeakSpotByNameWithHealthManagement(Vector3 collisionPosition, List<string> weakSpotNameList, float maxDistanceToWeakSpot)",
+    "line": 327
+   },
+   {
+    "sig": "getClosestWeakSpotPositionToPositionWithHealthManagement(Vector3 positionToCheck, List<string> weakListNameToCheck, bool checkWeakListName, float maxDistanceToBodyPart)",
+    "line": 332
+   },
+   {
+    "sig": "checkHealthAmountOnSpot(float damageAmount)",
+    "line": 337
+   },
+   {
+    "sig": "setUseHealthAmountOnSpotState(bool state)",
+    "line": 364
+   },
+   {
+    "sig": "setIgnoreUseHealthAmountOnSpot(bool state)",
+    "line": 369
+   },
+   {
+    "sig": "killCharacterIfCurrentlyDrivingVehicle()",
+    "line": 374
+   },
+   {
+    "sig": "explodeVehicleIfCharacterCurrentlyDriving()",
+    "line": 379
+   },
+   {
+    "sig": "setPlayerMenuActiveState(bool state)",
+    "line": 384
+   },
+   {
+    "sig": "setDamageReactionPausedState(bool state)",
+    "line": 389
+   },
+   {
+    "sig": "getDamageReceiverColliderList()",
+    "line": 394
+   },
+   {
+    "sig": "setIgnoreWeakSpotsActiveState(bool state)",
+    "line": 400
+   },
+   {
+    "sig": "checkIfDamageReceiverBelongsToThisCharacter(GameObject objectToCheck)",
+    "line": 405
+   },
+   {
+    "sig": "getUseCustomCharacterRadiusValue()",
+    "line": 411
+   }
+  ]
+ },
+ {
+  "type": "shieldSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Health\\shieldSystem.cs",
+  "methods": [
+   {
+    "sig": "startShieldComponents()",
+    "line": 107
+   },
+   {
+    "sig": "disableShield()",
+    "line": 148
+   },
+   {
+    "sig": "updateSliderState()",
+    "line": 153
+   },
+   {
+    "sig": "updateShieldSlider(float value)",
+    "line": 179
+   },
+   {
+    "sig": "updateShieldSliderMaxValue(float newMaxValue)",
+    "line": 227
+   },
+   {
+    "sig": "checkHideSliderParent()",
+    "line": 251
+   },
+   {
+    "sig": "getShield(float amount)",
+    "line": 306
+   },
+   {
+    "sig": "setDeadState(bool state)",
+    "line": 333
+   },
+   {
+    "sig": "receiveDamage(float damageAmount, GameObject attacker)",
+    "line": 338
+   },
+   {
+    "sig": "getShieldAmountToLimit()",
+    "line": 369
+   },
+   {
+    "sig": "addAuxShieldAmount(float amount)",
+    "line": 374
+   },
+   {
+    "sig": "increaseMaxShieldAmount(float newAmount)",
+    "line": 379
+   },
+   {
+    "sig": "setShieldAmountOnMaxValue()",
+    "line": 386
+   },
+   {
+    "sig": "increaseRegenerateShieldSpeed(float newAmount)",
+    "line": 391
+   },
+   {
+    "sig": "initializeShieldAmount(float newValue)",
+    "line": 396
+   },
+   {
+    "sig": "initializeMaxShieldAmount(float newValue)",
+    "line": 401
+   },
+   {
+    "sig": "initializeRegenerateShieldSpeed(float newValue)",
+    "line": 406
+   },
+   {
+    "sig": "increaseMaxShieldAmountByMultiplier(float amountMultiplier)",
+    "line": 411
+   },
+   {
+    "sig": "updateShieldAmountWithoutUpdatingStatManager(int statId, float amount)",
+    "line": 424
+   },
+   {
+    "sig": "updateMaxShieldAmountWithoutUpdatingStatManager(int statId, float amount)",
+    "line": 433
+   },
+   {
+    "sig": "updateRegenerateShieldSpeedAmountWithoutUpdatingStatManager(int statId, float amount)",
+    "line": 440
+   },
+   {
+    "sig": "setUseShieldState(bool state)",
+    "line": 445
+   },
+   {
+    "sig": "setShowShieldBarPanelEnabledState(bool state)",
+    "line": 458
+   },
+   {
+    "sig": "setOriginalUseShieldState()",
+    "line": 463
+   },
+   {
+    "sig": "checkEventsForShieldState()",
+    "line": 468
+   },
+   {
+    "sig": "getCurrentShieldAmount()",
+    "line": 481
+   },
+   {
+    "sig": "setShowShieldBarPanelEnabledStateFromEditor(bool state)",
+    "line": 486
+   },
+   {
+    "sig": "setUseShieldStateFromEditor(bool state)",
+    "line": 493
+   }
+  ]
+ },
+ {
+  "type": "healthBarManagementSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Health\\healthBarManagementSystem.cs",
+  "methods": [
+   {
+    "sig": "getComponentInstance()",
+    "line": 38
+   },
+   {
+    "sig": "addNewPlayer(playerHealthBarManagementSystem newPlayer)",
+    "line": 68
+   },
+   {
+    "sig": "disableHealhtBars()",
+    "line": 99
+   },
+   {
+    "sig": "enableHealhtBars()",
+    "line": 108
+   },
+   {
+    "sig": "enableOrDisableHealhtBars(bool state)",
+    "line": 117
+   },
+   {
+    "sig": "addNewTargetSlider(GameObject sliderOwner, GameObject sliderPrefab, Vector3 sliderOffset, float healthAmount, float shieldAmount, string ownerName, Color textColor, Color sliderColor, bool healthBarSliderActiveOnStart, bool useHealthSlideInfoOnScreen, bool useCircleHealthSlider)",
+    "line": 128
+   },
+   {
+    "sig": "removeTargetSlider(int objectID)",
+    "line": 167
+   },
+   {
+    "sig": "removeElementFromObjectiveListCalledByPlayer(int objectId, GameObject currentPlayer)",
+    "line": 185
+   },
+   {
+    "sig": "udpateSliderInfo(int objectID, string newName, Color textColor, Color backgroundColor)",
+    "line": 207
+   },
+   {
+    "sig": "updateSliderAmount(int objectID, float value)",
+    "line": 218
+   },
+   {
+    "sig": "setSliderAmount(int objectID, float sliderValue)",
+    "line": 229
+   },
+   {
+    "sig": "updateShieldSliderAmount(int objectID, float value)",
+    "line": 238
+   },
+   {
+    "sig": "setShieldSliderAmount(int objectID, float sliderValue)",
+    "line": 249
+   },
+   {
+    "sig": "updateSliderMaxValue(int objectID, float maxSliderValue)",
+    "line": 258
+   },
+   {
+    "sig": "updateShieldSliderMaxValue(int objectID, float maxSliderValue)",
+    "line": 269
+   },
+   {
+    "sig": "updateSliderOffset(int objectID, float value)",
+    "line": 280
+   },
+   {
+    "sig": "setSliderInfo(int objectID, string newName, Color textColor, Color backgroundColor)",
+    "line": 287
+   },
+   {
+    "sig": "setSliderVisibleStateForPlayer(int objectID, GameObject player, bool state)",
+    "line": 296
+   },
+   {
+    "sig": "setSliderLocatedState(int objectID, bool state)",
+    "line": 309
+   },
+   {
+    "sig": "setSliderLocatedStateForPlayer(int objectID, GameObject player, bool state)",
+    "line": 320
+   },
+   {
+    "sig": "setSliderVisibleState(int objectID, bool state)",
+    "line": 333
+   },
+   {
+    "sig": "pauseOrResumeShowHealthSliders(bool state)",
+    "line": 344
+   }
+  ]
+ }
+]

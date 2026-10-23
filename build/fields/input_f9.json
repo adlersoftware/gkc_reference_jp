@@ -1,0 +1,666 @@
+[
+ {
+  "type": "grabbedObjectMeleeAttackSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Grab Objects\\grabbedObjectMeleeAttackSystem.cs",
+  "source": "Grab Objects/grabbedObjectMeleeAttackSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "grabbedObjectMeleeAttackEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "canGrabMeleeObjectsEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "generalAttackDamageMultiplier",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "playerOnGroundToActivateAttack",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "disableGrabObjectsInputWhenCarryingMeleeWeapon",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useThrowReturnMeleeWeaponSystemEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "placeTriggerInFrontOfCharacterOnAllAttacks",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "drawMeleeWeaponIfAttackInputPressedEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useQuickDrawIfAttackInputPressed",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "minWaitTimeToUseSingleAttackType",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useAttackInputStack",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "maxAmountOfAttackInputStack",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useAttackTypes",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "checkSurfaceInfoEnabled",
+    "label": "",
+    "section": "Surface Info List Settings"
+   },
+   {
+    "field": "surfaceInfoOnMeleeAttackNameForNotFound",
+    "label": "",
+    "section": "Surface Info List Settings"
+   },
+   {
+    "field": "surfaceInfoOnMeleeAttackNameForSwingOnAir",
+    "label": "",
+    "section": "Surface Info List Settings"
+   },
+   {
+    "field": "useCustomLayerToDetectSurfaces",
+    "label": "",
+    "section": "Damage Detection Settings"
+   },
+   {
+    "field": "customLayerToDetectSurfaces",
+    "label": "",
+    "section": "Damage Detection Settings"
+   },
+   {
+    "field": "useCustomIgnoreTags",
+    "label": "",
+    "section": "Damage Detection Settings"
+   },
+   {
+    "field": "checkSurfacesWithCapsuleRaycastEnabled",
+    "label": "",
+    "section": "Damage Detection Settings"
+   },
+   {
+    "field": "ignoreGetHealthFromDamagingObjects",
+    "label": "",
+    "section": "Damage Detection Settings"
+   },
+   {
+    "field": "ignoreGetHealthFromDamagingObjectsOnWeaponInfo",
+    "label": "",
+    "section": "Damage Detection Settings"
+   },
+   {
+    "field": "ignoreCutModeOnMeleeWeaponAttack",
+    "label": "",
+    "section": "Damage Detection Settings"
+   },
+   {
+    "field": "checkTriggerSurfacesOnMeleeAttacks",
+    "label": "",
+    "section": "Damage Detection Settings"
+   },
+   {
+    "field": "blockModeEnabled",
+    "label": "",
+    "section": "Block Mode Settings"
+   },
+   {
+    "field": "generalBlockProtectionMultiplier",
+    "label": "",
+    "section": "Block Mode Settings"
+   },
+   {
+    "field": "cancelBlockReactionStateName",
+    "label": "",
+    "section": "Block Mode Settings"
+   },
+   {
+    "field": "ignoreDeflectProjectilesOnAttackOnAllWeapons",
+    "label": "",
+    "section": "Block Mode Settings"
+   },
+   {
+    "field": "ignoreDeflectProjectilesOnBlockOnAllWeapons",
+    "label": "",
+    "section": "Block Mode Settings"
+   },
+   {
+    "field": "shieldCanBeUsedWithoutMeleeWeapon",
+    "label": "",
+    "section": "Shield Settings"
+   },
+   {
+    "field": "rightHandMountPoint",
+    "label": "",
+    "section": "Shield Settings"
+   },
+   {
+    "field": "leftHandMountPoint",
+    "label": "",
+    "section": "Shield Settings"
+   },
+   {
+    "field": "shieldRightHandMountPoint",
+    "label": "",
+    "section": "Shield Settings"
+   },
+   {
+    "field": "shieldLeftHandMountPoint",
+    "label": "",
+    "section": "Shield Settings"
+   },
+   {
+    "field": "shieldBackMountPoint",
+    "label": "",
+    "section": "Shield Settings"
+   },
+   {
+    "field": "eventToActivateMeleeModeWhenUsingShieldWithoutMeleeWeapon",
+    "label": "",
+    "section": "Shield Settings"
+   },
+   {
+    "field": "eventToUpdateCharacterSurfaceOnBlockOn",
+    "label": "",
+    "section": "Block Events Settings"
+   },
+   {
+    "field": "eventToUpdateCharacterSurfaceOnBlockOff",
+    "label": "",
+    "section": "Block Events Settings"
+   },
+   {
+    "field": "useStaminaOnAttackEnabled",
+    "label": "",
+    "section": "Stamina Settings"
+   },
+   {
+    "field": "attackStaminaStateName",
+    "label": "",
+    "section": "Stamina Settings"
+   },
+   {
+    "field": "generalStaminaUseMultiplier",
+    "label": "",
+    "section": "Stamina Settings"
+   },
+   {
+    "field": "cuttingModeEnabled",
+    "label": "",
+    "section": "Cutting Mode Settings"
+   },
+   {
+    "field": "eventOnCuttingModeStart",
+    "label": "",
+    "section": "Cutting Mode Settings"
+   },
+   {
+    "field": "eventOnCuttingModeEnd",
+    "label": "",
+    "section": "Cutting Mode Settings"
+   },
+   {
+    "field": "useMatchTargetSystemOnAttack",
+    "label": "",
+    "section": "Match Target Settings"
+   },
+   {
+    "field": "ignoreAttackSettingToMatchTarget",
+    "label": "",
+    "section": "Match Target Settings"
+   },
+   {
+    "field": "mainMatchPlayerToTargetSystem",
+    "label": "",
+    "section": "Match Target Settings"
+   },
+   {
+    "field": "mainMeleeCombatAxesInputName",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "mainMeleeCombatBlockInputName",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "ignoreUseDrawKeepWeaponAnimation",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "weaponsCanBeStolenFromCharacter",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "checkDurabilityOnAttackEnabled",
+    "label": "",
+    "section": "Weapon Durability Settings"
+   },
+   {
+    "field": "checkDurabilityOnBlockEnabled",
+    "label": "",
+    "section": "Weapon Durability Settings"
+   },
+   {
+    "field": "generalAttackDurabilityMultiplier",
+    "label": "",
+    "section": "Weapon Durability Settings"
+   },
+   {
+    "field": "generalBlockDurabilityMultiplier",
+    "label": "",
+    "section": "Weapon Durability Settings"
+   },
+   {
+    "field": "useEventOnDurabilityEmptyOnMeleeWeapon",
+    "label": "",
+    "section": "Weapon Durability Settings"
+   },
+   {
+    "field": "eventOnDurabilityEmptyOnMeleeWeapon",
+    "label": "",
+    "section": "Weapon Durability Settings"
+   },
+   {
+    "field": "useEventOnDurabilityEmptyOnBlock",
+    "label": "",
+    "section": "Weapon Durability Settings"
+   },
+   {
+    "field": "eventOnDurabilityEmptyOnBlock",
+    "label": "",
+    "section": "Weapon Durability Settings"
+   },
+   {
+    "field": "showExtraActionIconTexture",
+    "label": "",
+    "section": "Weapon Extra Action Settings"
+   },
+   {
+    "field": "extraActionIconGameObject",
+    "label": "",
+    "section": "Weapon Extra Action Settings"
+   },
+   {
+    "field": "extraActionRawImage",
+    "label": "",
+    "section": "Weapon Extra Action Settings"
+   },
+   {
+    "field": "showDebugPrint",
+    "label": "",
+    "section": "Debug"
+   },
+   {
+    "field": "showDebugDraw",
+    "label": "",
+    "section": "Debug"
+   },
+   {
+    "field": "grabbedObjectMeleeAttackActive",
+    "label": "",
+    "section": "Debug"
+   },
+   {
+    "field": "carryingObject",
+    "label": "",
+    "section": "Debug"
+   },
+   {
+    "field": "attackInProcess",
+    "label": "",
+    "section": "Debug"
+   },
+   {
+    "field": "currentAttackIndex",
+    "label": "",
+    "section": "Debug"
+   },
+   {
+    "field": "blockActive",
+    "label": "",
+    "section": "Debug"
+   },
+   {
+    "field": "blockActivePreviously",
+    "label": "",
+    "section": "Debug"
+   },
+   {
+    "field": "reducedBlockDamageProtectionActive",
+    "label": "",
+    "section": "Debug"
+   },
+   {
+    "field": "canCancelBlockToStartAttackActive",
+    "label": "",
+    "section": "Debug"
+   },
+   {
+    "field": "blockInputPaused",
+    "label": "",
+    "section": "Debug"
+   },
+   {
+    "field": "shieldActive",
+    "label": "",
+    "section": "Debug"
+   },
+   {
+    "field": "carryingShield",
+    "label": "",
+    "section": "Debug"
+   },
+   {
+    "field": "currentShieldName",
+    "label": "",
+    "section": "Debug"
+   },
+   {
+    "field": "currentShieldGameObject",
+    "label": "",
+    "section": "Debug"
+   },
+   {
+    "field": "currentShieldHandMountPointTransformReference",
+    "label": "",
+    "section": "Debug"
+   },
+   {
+    "field": "currentShieldBackMountPointTransformReference",
+    "label": "",
+    "section": "Debug"
+   },
+   {
+    "field": "currentHitCombat",
+    "label": "",
+    "section": "Debug"
+   },
+   {
+    "field": "dualWieldHitCombat",
+    "label": "",
+    "section": "Debug"
+   },
+   {
+    "field": "mainDualWieldMeleeWeaponObjectSystem",
+    "label": "",
+    "section": "Debug"
+   },
+   {
+    "field": "objectThrown",
+    "label": "",
+    "section": "Debug"
+   },
+   {
+    "field": "cuttingModeActive",
+    "label": "",
+    "section": "Debug"
+   },
+   {
+    "field": "attackInputPausedForStamina",
+    "label": "",
+    "section": "Debug"
+   },
+   {
+    "field": "damageTriggerInProcess",
+    "label": "",
+    "section": "Debug"
+   },
+   {
+    "field": "meleeAttackInputPaused",
+    "label": "",
+    "section": "Debug"
+   },
+   {
+    "field": "isDualWieldWeapon",
+    "label": "",
+    "section": "Debug"
+   },
+   {
+    "field": "throwWeaponActionPaused",
+    "label": "",
+    "section": "Debug"
+   },
+   {
+    "field": "useEventsOnAttack",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "eventOnAttackStart",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "eventOnAttackEnd",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "useEventsOnBlockDamage",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "eventOnBlockActivate",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "eventOnBlockDeactivate",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "useEventsOnGrabDropObject",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "eventOnGrabObject",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "eventOnDropObject",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "useEventsOnAttackCantBeBlocked",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "eventOnAttackCantBeBlocked",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "hideInventoryQuickAccessSlotsWhenCarryingMeleeWeapon",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "eventOnHideInventoryQuickAccessSlots",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "eventOnShowInventoryQuickAccessSlots",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "useEventToActivateParryStateIfAttackInProcess",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "eventToActivateParryStateIfAttackInProcess",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "useEventOnAttackBlockedPerfectly",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "eventOnAttackBlockedPerfectly",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "currentGrabbedObjectTransform",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "mainCameraTransform",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "handPositionReference",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "mainAudioSource",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "parentToPlaceTriggerInFrontOfCharacter",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "parentToPlaceTriggerInFrontOfCharacterFBA",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "mainRemoteEventSystem",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "playerControllerGameObject",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "mainPlayerController",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "mainGrabObjects",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "mainHealth",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "mainSliceSystem",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "mainAnimator",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "mainFindObjectivesSystem",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "mainMeleeWeaponsGrabbedManager",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "playerInput",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "mainMeleeCombatThrowReturnWeaponSystem",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "mainStaminaSystem",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "mainMeleeUISystem",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "currentArryElement",
+    "label": "",
+    "section": "Weapon Durability Settings"
+   },
+   {
+    "field": "currentArryElement",
+    "label": "",
+    "section": "Weapon Durability Settings"
+   },
+   {
+    "field": "currentArryElement",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "currentArryElement",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "currentArryElement",
+    "label": "",
+    "section": "Main Settings"
+   }
+  ]
+ }
+]

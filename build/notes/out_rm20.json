@@ -1,0 +1,179 @@
+[
+ {
+  "type": "moveObject",
+  "summary": "`originalPosition`を基準に、`direction`・`speed`・`moveAmount`でコサイン波の往復移動をFixedUpdateで行うデモ用コンポーネント。`useLocalPosition`でローカル座標とワールド座標を切り替える。公開メソッドは移動の有効/無効の切り替えのみ。",
+  "methods": {
+   "enableMovement()": "`movementEnabled`をtrueにする`setMovementEnabledState`を呼ぶだけ。",
+   "disableMovement()": "`movementEnabled`をfalseにする`setMovementEnabledState`を呼ぶだけ。",
+   "setMovementEnabledState(bool state)": "往復移動の実行を制御する`movementEnabled`に`state`を代入するだけ。",
+   "changeMovementEnabledState()": "`movementEnabled`を現在値の反転に切り替える。"
+  }
+ },
+ {
+  "type": "simpleTurretRobot",
+  "summary": "機銃と主砲の`Animation`を`CrossFade`で正転/逆転させ、ウェポンの展開と収納を演出するデモ用コンポーネント。`pressButton`で`activated`を反転して両アニメの再生方向を切り替える。",
+  "methods": {
+   "pressButton()": "`activated`を反転し、trueなら`activateWeapon`、falseなら`deactivateWeapon`を呼ぶ。",
+   "stopAnimations()": "機銃と主砲の2つの`Animation`を`Stop`するだけ。",
+   "activateWeapon()": "両アニメの`speed`を1に戻し、`CrossFade`で`activateMachineGun`と`activateCannon`を再生する。",
+   "deactivateWeapon()": "両アニメの`speed`を-1にし、停止中は末尾の`time`から、再生中は`CrossFade`で逆再生する。"
+  }
+ },
+ {
+  "type": "checkCollisionToApplyDamage",
+  "summary": "衝突した相手へ、体力へのダメージ・キル・押し出しを設定に応じて行うデモ用コンポーネント。`damageEnabled`がfalseの間は衝突処理の冒頭でreturnし、何もしない。",
+  "methods": {
+   "setDamageEnabledState(bool state)": "`damageEnabled`に`state`を代入し、衝突時のダメージ処理の有無を切り替える。",
+   "disableDamage()": "`damageEnabled`をfalseにして衝突時のダメージ処理を止めるだけ。",
+   "enableDamage()": "`damageEnabled`をtrueにして衝突時のダメージ処理を再開するだけ。"
+  }
+ },
+ {
+  "type": "damageCharacterOnCollision",
+  "summary": "衝突相手のRigidbodyに力を加え、設定に応じて`applyDamage`経由でダメージやキル、押し出しを行うデモ用コンポーネント。`damageEnabled`がfalseの間は衝突処理を早期returnする。",
+  "methods": {
+   "setDamageEnabledState(bool state)": "`damageEnabled`に`state`を代入し、衝突時のダメージ適用の有無を切り替える。",
+   "disableDamage()": "`damageEnabled`をfalseにしてダメージ適用を止めるだけ。",
+   "enableDamage()": "`damageEnabled`をtrueにしてダメージ適用を再開するだけ。"
+  }
+ },
+ {
+  "type": "setLaserRefractions",
+  "summary": "UIスライダーの値から、プレイヤーの`Shield`能力(`playerShieldSystem`)のレーザー屈折上限を変更するデモ用コンポーネント。変更値は同時にテキストへ表示する。",
+  "methods": {
+   "getSliderValue(Slider info)": "スライダー値をintにして`setLaserRefractionLimit`へ渡し、同じ値を`textValue`に表示する。",
+   "setCurrentPlayer(GameObject newPlayer)": "プレイヤーを`objectToChange`に保持し、`Shield`能力の`playerShieldSystem`を取得しておく。"
+  }
+ },
+ {
+  "type": "simpleObject",
+  "summary": "`working`がtrueの間、Updateで`mainAnimation`の`animationName`を再生し、再生終了ごとに速度の符号を反転して往復させるデモ用コンポーネント。",
+  "methods": {
+   "activate()": "`working`をtrueにするだけ。",
+   "changeState()": "`working`を現在値の反転に切り替えるだけ。"
+  }
+ },
+ {
+  "type": "openStructure",
+  "summary": "`objectsToFade`のアルファを徐々に変化させ、透明シェーダーとColliderの有効/無効で構造物の出入りを可能にするデモ用コンポーネント。",
+  "methods": {
+   "changeStructureState()": "`option`の符号を反転して`activate`をtrueにし、Updateのフェード処理を開始する。"
+  }
+ },
+ {
+  "type": "setText",
+  "summary": "`Text`/`TextMesh`の文字列を看板メッシュに反映し、プレイヤーがトリガー内にいる間だけ`MeshRenderer`を表示するデモ用コンポーネント。",
+  "methods": {
+   "getmainMeshRendererComponent()": "`mainMeshRenderer`がnullの時だけ`GetComponent<MeshRenderer>()`で取得して保持する。"
+  }
+ },
+ {
+  "type": "travelStationUISystem",
+  "summary": "トラベルステーションのメニューUIを管理し、発見済みステーションのパネル生成・選択・メニュー開閉・移動先シーンのチェックポイント保存を行う。物理ステーションに触れた際は発見パネルを表示する。",
+  "methods": {
+   "initializeTravelStationValues()": "`travelStationUIActive`がfalseの時だけ警告用の無効イベントを実行してreturnし、trueなら何もしない。",
+   "checkEventOnSystemDisabled()": "`useEventIfSystemDisabled`がtrueの時、`eventIfSystemDisabled`をInvokeするだけ。",
+   "checkPressedButton(GameObject buttonToCheck)": "前回パネルの押下アイコンを消し、一致するパネルのアイコンを表示して`currentTravelStationPanelInfo`に保持する。",
+   "confirmTravelToStationSelected()": "選択パネルの移動先が現在地と違う場合のみ、そのシーン番号とレベルIDでチェックポイントを保存し`activateAutoLoad`で移動する。",
+   "setCurrentTravelStationSystem(travelStationSystem newTravelStationSystem, bool settingPhysicalStation)": "対象の情報リストを取得し、物理ステーション時は未発見なら発見リストへ追加、`zoneFound`を設定し、新規発見なら発見パネルを表示する。",
+   "openOrCloseTravelStationMenu(bool state)": "メニュー使用可否を確認して`menuOpened`を更新し、ポーズメニュー・パネル表示・プレイヤー操作を切り替え、開く時はリスト生成と初期選択を行う。",
+   "setTravelStationInfoList()": "既存パネルを破棄し、未設定なら`travelStationSystem`を検索して設定、発見済み分のパネルを生成し名前と番号を入れる。",
+   "openOrCloseTravelStationMenuFromTouch()": "閉じている時のみ使用可否を確認し、`menuOpened`を反転してメニューを開閉し、タッチ用のポーズ状態を設定する。",
+   "checkOpenOrCloseTravelStationMenuByButton()": "同名のポーズメニューが開いている時は何もせず、そうでなければ`oopenOrCloseTravelStationMenuByButton`を呼ぶ。",
+   "oopenOrCloseTravelStationMenuByButton()": "デバイス使用中なら`useDevice`とステーションの使用状態設定を、そうでなければタッチ用の開閉を呼ぶ。",
+   "showTravelStationFound(string travelStationName)": "表示設定が無ければreturnし、実行中のコルーチンを止め、指定秒数だけ発見パネルに名前を出すコルーチンを開始する。"
+  }
+ },
+ {
+  "type": "levelManagerIngame",
+  "summary": "シーン遷移用のレベルマネージャで、`sceneNumberToLoad`と`levelManagerIDToLoad`の組み合わせで移動先シーンとプレイヤーの出現位置を指定する。`activateChangeOfLevel`でチェックポイントを保存してシーンを読み込む。",
+  "methods": {
+   "setCurrentPlayer(GameObject newPlayer)": "`currentPlayer`に`newPlayer`を代入するだけ。",
+   "setCurrentPlayerAndActivateChangeOfLevel(GameObject newPlayer)": "`currentPlayer`に`newPlayer`を代入してから`activateChangeOfLevel`を呼ぶ。",
+   "activateChangeOfLevel()": "プレイヤーを解決して`saveGameCheckpoint`で移動先IDとシーン番号を保存し、`changeSceneEnabled`なら`activateAutoLoad`で読み込む。",
+   "setChangeSceneEnabledState(bool state)": "`changeSceneEnabled`に`state`を代入するだけ。",
+   "openNextSceneOnEditor()": "`sceneFolderPath`と`sceneToChangeName`の`.unity`が存在する時だけエディタで開き、無ければ警告を出す。"
+  }
+ },
+ {
+  "type": "travelStationSystem",
+  "summary": "シーン内の移動拠点コンポーネントで、移動先ステーションのリスト(`travelStationInfo`)と自身のシーン番号・レベルIDを保持する。プレイヤーが触れるとUI側へ自身を登録し、メニュー開閉を仲介する。",
+  "methods": {
+   "setCurrentPlayer(GameObject player)": "プレイヤーを保持し、その`travelStationUISystem`へ自分を物理ステーションとして登録させる。",
+   "activateTravelStation()": "`usingTravelStation`を反転し、その値でUI側の`openOrCloseTravelStationMenu`を呼ぶ。",
+   "setUsingTravelStationSystemState(bool state)": "`usingTravelStation`に`state`を代入するだけ。",
+   "getTravelStationInfoList()": "移動先リスト`travelStationInfoList`をそのまま返すだけ。"
+  }
+ },
+ {
+  "type": "GKC_PoolingElement",
+  "summary": "プール対象オブジェクトに付ける基底コンポーネントで、生成位置/回転、生成・破棄時のイベント、プーリング管理の有効/無効切り替えを提供する。状態確認用メソッドは派生クラスでの上書きを前提とした空実装。",
+  "methods": {
+   "setPositionToSpawn(Vector3 newValue)": "生成位置`currentPositionToSpawn`に`newValue`を代入するだけ。",
+   "setRotationToSpawn(Quaternion newValue)": "生成回転`currentRotationToSpawn`に`newValue`を代入するだけ。",
+   "spawnPoolObject()": "`usePoolingEnabled`がtrueの時だけ生成イベントと生成後フックを実行する(実際の`Spawn`呼び出しはコメントアウト)。",
+   "despawnPoolObject()": "`usePoolingEnabled`がtrueの時だけ、破棄前フックと破棄イベントを実行して`GKC_PoolingSystem.Despawn`で返却する。",
+   "checkObjectStateBeforeDespawn()": "本体が空で何もしない(派生クラスでの上書き用)。",
+   "checkObjectStateAfterSpawn()": "本体が空で何もしない(派生クラスでの上書き用)。",
+   "checkEventOnSpawn()": "`useEventOnSpawn`がtrueの時、`eventOnSpawn`をInvokeするだけ。",
+   "checkEventOnDespawn()": "`useEventOnDespawn`がtrueの時、`eventOnDespawn`をInvokeするだけ。",
+   "setUsePoolingEnabledState(bool state)": "`usePoolingEnabled`に`state`を代入するだけ。",
+   "checkEventsOnEnableOrDisablePoolingManagementOnObject(bool state)": "プーリング有効フラグを設定し、有効/無効それぞれのイベントを実行、非再生中は`updateComponent`でシーンを更新する。",
+   "setUsePoolingEnabledStateFromEditor(bool state)": "フラグを設定して`updateComponent`でコンポーネントとシーンを更新する(エディタ用)。",
+   "checkEventsOnEnableOrDisablePoolingManagementOnObjectFromEditor(bool state)": "イベント付きの有効/無効切り替えをそのまま呼ぶだけ。"
+  }
+ },
+ {
+  "type": "GKC_PoolingAIManager",
+  "summary": "シーン内の`GKC_PoolingElementAI`を収集してリスト管理し、全AIのプーリング管理を一括で有効/無効にするコンポーネント。収集や切り替えの後はシーン更新を通知する。",
+  "methods": {
+   "getAllGKC_PoolingElementAIOnLevel()": "リストをクリアし、設定に応じて非アクティブも含む/含まない全`GKC_PoolingElementAI`を収集してシーンを更新する。",
+   "clearGKC_PoolingElementAIList()": "`GKC_PoolingElementAIList`をClearしてシーンを更新するだけ。",
+   "enableAllGKC_PoolingElementAIOnLevel()": "`enableOrDisableAllGKC_PoolingElementAIOnLevel(true)`を呼ぶだけ。",
+   "disableAllGKC_PoolingElementAIOnLevel()": "`enableOrDisableAllGKC_PoolingElementAIOnLevel(false)`を呼ぶだけ。",
+   "enableOrDisableAllGKC_PoolingElementAIOnLevel(bool state)": "リスト内の各AI要素へ`state`でのプーリング管理の有効/無効と対応イベントを適用し、シーンを更新する。",
+   "updateComponent()": "`GKC_Utils.updateComponent`と`updateDirtyScene`でコンポーネントとシーンの更新を通知するだけ。"
+  }
+ },
+ {
+  "type": "GKC_SimplePoolPreloadSystem",
+  "summary": "`poolObjectPreloadInfoList`に登録したプレハブを、`Start`時に`GKC_PoolingSystem.Preload`で指定個数だけ事前生成するプリロード用コンポーネント。",
+  "methods": {
+   "preloadObjects()": "リスト内でプレハブが設定された各項目を、`objectAmount`個ずつ`GKC_PoolingSystem.Preload`で事前生成する。"
+  }
+ },
+ {
+  "type": "GKCConditionInfo",
+  "summary": "トリガーに進入したプレイヤーを対象に条件判定を行う基底コンポーネントで、完了/未完了イベントとコルーチンによる毎フレーム判定、トリガー出入りのイベントを提供する。実際の条件内容は派生クラスで実装する。",
+  "methods": {
+   "findPlayerOnScene()": "`searchPlayerOnSceneIfNotAssigned`がtrueなら、シーンのメインプレイヤーを`setCurrentPlayer`に渡す。",
+   "checkIfPlayerAssigned()": "割当済みならtrue、未割当なら`findPlayerOnScene`で検索し、見つからなければ警告を出してfalseを返す。",
+   "setCurrentPlayer(GameObject newPlayer)": "`currentPlayer`を更新し、nullでなければ割当済みフラグをtrueにする。",
+   "checkIfConditionComplete()": "本体が空で何もしない(派生クラスで条件判定を実装する)。",
+   "checkIfConditionCompleteAndReturnResult()": "本体が空で、常にfalseを返す(派生クラスでの上書き用)。",
+   "setConditionResult(bool state)": "デバッグ出力後、結果に応じて完了/未完了イベントを実行し、対応する設定が有効なら更新コルーチンを停止する。",
+   "checkTriggerInfo(Collider col, bool isEnter)": "有効かつ非ポーズ時、レイヤー一致を確認し、進入なら相手をプレイヤーとして条件システムへ登録して判定、退出なら解除して退出イベントを実行する。",
+   "setCheckConditionPausedState(bool state)": "`checkConditionPaused`に`state`を代入するだけ。",
+   "stopUpdateCoroutine()": "実行中の`conditionCoroutine`をStopCoroutineし、更新中フラグをfalseにするだけ。",
+   "checkFunctionOnTriggerExit()": "コルーチン判定モードの時だけ`stopUpdateCoroutine`を呼ぶ。",
+   "checkConditionOnUpdateState()": "本体が空で何もしない(`updateCoroutine`から毎FixedUpdate呼ばれる上書き用)。"
+  }
+ },
+ {
+  "type": "GKCConditionSystem",
+  "summary": "プレイヤー側に置かれ、トリガーで登録された`GKCConditionInfo`の判定呼び出しを代行するコンポーネント。`conditionSystemEnabled`がfalseの間は登録も判定も行わない。",
+  "methods": {
+   "setCurrentGKCConditionInfo(GKCConditionInfo newGKCConditionInfo)": "`conditionSystemEnabled`がtrueの時のみ`currentGKCConditionInfo`に新しい条件を保持する。",
+   "checkIfConditionComplete()": "有効かつ条件が設定されていれば、その`GKCConditionInfo.checkIfConditionComplete`を呼ぶ。",
+   "refreshConditionSystemCheckStatus()": "`checkIfConditionComplete`を呼ぶだけ。"
+  }
+ },
+ {
+  "type": "simpleFireWeaponsConditionSystem",
+  "summary": "`IKWeaponSystem`の状態(エイム中、一人称/三人称、フルボディアウェアネス、現在武器)から条件結果を判定し、完了/未完了イベントを実行する。`conditionResultCompleteIfAnyConditionTrue`でカメラ/エイム系条件のANDとORを切り替える。",
+  "methods": {
+   "checkIfConditionComplete()": "`conditionCheckEnabled`がfalseならreturnし、内部計算した条件結果を`setConditionResult`へ渡す。",
+   "setConditionResult(bool state)": "デバッグ出力後、`state`に応じて完了または未完了のイベントをInvokeするだけ。"
+  }
+ }
+]

@@ -1,0 +1,748 @@
+[
+ {
+  "type": "tagLayerSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\tagLayerSystem.cs",
+  "methods": [
+   {
+    "sig": "addTag(string tagToAdd)",
+    "line": 21
+   },
+   {
+    "sig": "removeTag(string tagToRemove)",
+    "line": 63
+   },
+   {
+    "sig": "addTagList(List<string> tagListToAdd)",
+    "line": 93
+   },
+   {
+    "sig": "addCurrentTagList()",
+    "line": 102
+   },
+   {
+    "sig": "getTagList()",
+    "line": 109
+   },
+   {
+    "sig": "addLayer(string layerToAdd)",
+    "line": 126
+   },
+   {
+    "sig": "removeLayer(string layerToRemove)",
+    "line": 179
+   },
+   {
+    "sig": "addLayerList(List<string> layerListToAdd)",
+    "line": 208
+   },
+   {
+    "sig": "addCurrentLayerList()",
+    "line": 239
+   },
+   {
+    "sig": "getLayerList()",
+    "line": 246
+   },
+   {
+    "sig": "updateEditor()",
+    "line": 265
+   }
+  ]
+ },
+ {
+  "type": "GKCUIManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\GKCUIManager.cs",
+  "methods": [
+   {
+    "sig": "enableAllUIElement()",
+    "line": 20
+   },
+   {
+    "sig": "disableAllUIElement()",
+    "line": 25
+   },
+   {
+    "sig": "enableOrDisableAllUIElement(bool state)",
+    "line": 30
+   },
+   {
+    "sig": "enableUIElement(string objectName)",
+    "line": 37
+   },
+   {
+    "sig": "disableUIElement(string objectName)",
+    "line": 42
+   },
+   {
+    "sig": "enableOrDisableUIElement(string objectName, bool state)",
+    "line": 47
+   },
+   {
+    "sig": "clearObjectsSearcResultList()",
+    "line": 76
+   },
+   {
+    "sig": "showObjectsBySearchName()",
+    "line": 85
+   },
+   {
+    "sig": "selectObjectByName(string objectName)",
+    "line": 135
+   },
+   {
+    "sig": "selectObjectByIndex(int index)",
+    "line": 144
+   }
+  ]
+ },
+ {
+  "type": "railMechanism",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\railMechanism.cs",
+  "methods": [
+   {
+    "sig": "checkToDropObjectOnRail()",
+    "line": 159
+   },
+   {
+    "sig": "engaged()",
+    "line": 169
+   },
+   {
+    "sig": "resetPosition(Transform targetTransform, float resetMovementSpeed, bool enganeAfterCoroutine)",
+    "line": 179
+   },
+   {
+    "sig": "stopResetCoroutine()",
+    "line": 186
+   },
+   {
+    "sig": "setUsingRailState(bool state)",
+    "line": 224
+   },
+   {
+    "sig": "getDisplaceRailSpeed()",
+    "line": 244
+   },
+   {
+    "sig": "engageRailAutomatically()",
+    "line": 249
+   },
+   {
+    "sig": "setReducedVelocity(float newMultiplierValue)",
+    "line": 260
+   },
+   {
+    "sig": "setNormalVelocity()",
+    "line": 268
+   },
+   {
+    "sig": "setMechanismCanBeEngagedState(bool state)",
+    "line": 274
+   }
+  ]
+ },
+ {
+  "type": "rotateObjectWithRegularUpdate",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\rotateObjectWithRegularUpdate.cs",
+  "methods": [
+   {
+    "sig": "enableOrDisableRotation()",
+    "line": 40
+   },
+   {
+    "sig": "increaseRotationSpeedTenPercentage()",
+    "line": 45
+   },
+   {
+    "sig": "setRotationEnabledState(bool state)",
+    "line": 50
+   },
+   {
+    "sig": "disableRotation()",
+    "line": 57
+   },
+   {
+    "sig": "enableRotation()",
+    "line": 62
+   },
+   {
+    "sig": "resetRotation()",
+    "line": 67
+   },
+   {
+    "sig": "stopRotation()",
+    "line": 74
+   },
+   {
+    "sig": "setRandomDirectionToCurrent()",
+    "line": 96
+   },
+   {
+    "sig": "setNewRotationSpeed(float newValue)",
+    "line": 107
+   },
+   {
+    "sig": "setEnabledState(bool state)",
+    "line": 112
+   }
+  ]
+ },
+ {
+  "type": "rotateObjects",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\rotateObjects.cs",
+  "methods": [
+   {
+    "sig": "enableOrDisableRotation()",
+    "line": 38
+   },
+   {
+    "sig": "increaseRotationSpeedTenPercentage()",
+    "line": 43
+   },
+   {
+    "sig": "setRotationEnabledState(bool state)",
+    "line": 48
+   },
+   {
+    "sig": "disableRotation()",
+    "line": 55
+   },
+   {
+    "sig": "enableRotation()",
+    "line": 60
+   },
+   {
+    "sig": "resetRotation()",
+    "line": 65
+   },
+   {
+    "sig": "stopRotation()",
+    "line": 72
+   },
+   {
+    "sig": "setRandomDirectionToCurrent()",
+    "line": 94
+   },
+   {
+    "sig": "setNewRotationSpeed(float newValue)",
+    "line": 105
+   },
+   {
+    "sig": "setEnabledState(bool state)",
+    "line": 110
+   }
+  ]
+ },
+ {
+  "type": "simpleSpawnObjectManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\simpleSpawnObjectManager.cs",
+  "methods": [
+   {
+    "sig": "setCurrentSpawnCategoryByName(string elementListName)",
+    "line": 39
+   },
+   {
+    "sig": "activateSpawnObjectByName(string objectName)",
+    "line": 65
+   },
+   {
+    "sig": "setSpawnObjectEnabledStateByName(string objectName)",
+    "line": 104
+   },
+   {
+    "sig": "setSpawnObjectDisabledStateByName(string objectName)",
+    "line": 109
+   },
+   {
+    "sig": "setSpawnObjectEnabledStateByName(bool state, string objectName)",
+    "line": 114
+   },
+   {
+    "sig": "setSpawnManagerEnabledState(bool state)",
+    "line": 137
+   },
+   {
+    "sig": "enableRemoteEventState(string remoteEventName)",
+    "line": 142
+   },
+   {
+    "sig": "disableRemoteEventState(string remoteEventName)",
+    "line": 147
+   },
+   {
+    "sig": "enableAllRemoteEventStates(string spawnInfoNameToSearch)",
+    "line": 210
+   },
+   {
+    "sig": "disableAllRemoteEventStates(string spawnInfoNameToSearch)",
+    "line": 215
+   }
+  ]
+ },
+ {
+  "type": "spiderControllerInterface",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\spiderControllerInterface.cs",
+  "methods": [
+   {
+    "sig": "setGroundcheck(bool b)",
+    "line": 7
+   },
+   {
+    "sig": "walk(Vector3 direction)",
+    "line": 12
+   },
+   {
+    "sig": "run(Vector3 direction)",
+    "line": 17
+   },
+   {
+    "sig": "turn(Vector3 goalForward)",
+    "line": 22
+   },
+   {
+    "sig": "getGroundNormal()",
+    "line": 27
+   },
+   {
+    "sig": "getCamTargetPosition()",
+    "line": 32
+   },
+   {
+    "sig": "getCamTargetRotation()",
+    "line": 37
+   },
+   {
+    "sig": "setTargetPosition(Vector3 pos)",
+    "line": 42
+   },
+   {
+    "sig": "setTargetRotation(Quaternion rot)",
+    "line": 47
+   },
+   {
+    "sig": "getCameraTarget()",
+    "line": 52
+   }
+  ]
+ },
+ {
+  "type": "FloatingObject",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\FloatingObject.cs",
+  "methods": [
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 106
+   },
+   {
+    "sig": "setWaterVolumeState(waterSurfaceSystem newWaterSurfaceSystem, bool state)",
+    "line": 190
+   },
+   {
+    "sig": "setNewGravityForce(Vector3 newValues)",
+    "line": 255
+   },
+   {
+    "sig": "updateMaxBuoyancyForce()",
+    "line": 319
+   },
+   {
+    "sig": "setApplyBuoyancyActiveState(bool state)",
+    "line": 358
+   },
+   {
+    "sig": "checkObjectStateOnWater()",
+    "line": 363
+   },
+   {
+    "sig": "checkObjectStateOnWaterEnterOrExit(bool state)",
+    "line": 368
+   },
+   {
+    "sig": "getMainCollider()",
+    "line": 373
+   }
+  ]
+ },
+ {
+  "type": "checkCollisionType",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\checkCollisionType.cs",
+  "methods": [
+   {
+    "sig": "checkOnCollision(Collision col, bool isEnter)",
+    "line": 114
+   },
+   {
+    "sig": "checkTrigger(Collider col, bool isEnter)",
+    "line": 203
+   },
+   {
+    "sig": "checkTriggerOnState(Collider col)",
+    "line": 267
+   },
+   {
+    "sig": "checkTriggerWithGameObject(GameObject obj, bool isEnter)",
+    "line": 304
+   },
+   {
+    "sig": "callEvent(UnityEvent eventToCall)",
+    "line": 358
+   },
+   {
+    "sig": "callEventWithObject(eventParameters.eventToCallWithGameObject eventToCall, GameObject objectToSend)",
+    "line": 363
+   },
+   {
+    "sig": "setCheckCollisionsEnabledState(bool state)",
+    "line": 368
+   },
+   {
+    "sig": "checkSendOnCollisionEnterInfoEvent(Collision collision)",
+    "line": 373
+   }
+  ]
+ },
+ {
+  "type": "dissolveObject",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\dissolveObject.cs",
+  "methods": [
+   {
+    "sig": "stopDissolveCoroutine()",
+    "line": 71
+   },
+   {
+    "sig": "activateDissolve(GameObject newOjectToDissolve)",
+    "line": 115
+   },
+   {
+    "sig": "destroyObject()",
+    "line": 173
+   },
+   {
+    "sig": "storeRenderElements()",
+    "line": 210
+   },
+   {
+    "sig": "setDissolveObjectEnabledState(bool state)",
+    "line": 275
+   },
+   {
+    "sig": "setIgnoreDissolveObjectEnabledState(bool state)",
+    "line": 280
+   },
+   {
+    "sig": "cancelDissolve()",
+    "line": 285
+   },
+   {
+    "sig": "setDissolveObjectEnabledStateFromEditor(bool state)",
+    "line": 298
+   }
+  ]
+ },
+ {
+  "type": "ignoreCollisionHelper",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\ignoreCollisionHelper.cs",
+  "methods": [
+   {
+    "sig": "setCollisionCheckEnabledState(bool state)",
+    "line": 94
+   },
+   {
+    "sig": "reactivateIgnoredCollisionsStored()",
+    "line": 99
+   },
+   {
+    "sig": "clearObjectsIgnoredList()",
+    "line": 113
+   },
+   {
+    "sig": "enableComponentTemporaryAndReactivateCollisionsStoredWithDelay(float duration)",
+    "line": 120
+   },
+   {
+    "sig": "enableComponentTemporary(float duration)",
+    "line": 127
+   },
+   {
+    "sig": "disableComponentTemporary(float duration)",
+    "line": 132
+   },
+   {
+    "sig": "enableOrDisableComponentTemporary(bool state, float duration)",
+    "line": 137
+   },
+   {
+    "sig": "reactivateCollisionsStoredWithDelay(float duration)",
+    "line": 168
+   }
+  ]
+ },
+ {
+  "type": "placeObjectInCameraEditorPositionSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\placeObjectInCameraEditorPositionSystem.cs",
+  "methods": [
+   {
+    "sig": "moveObjects()",
+    "line": 33
+   },
+   {
+    "sig": "snapToGrounSurface()",
+    "line": 45
+   },
+   {
+    "sig": "rotateObject(int direction)",
+    "line": 129
+   },
+   {
+    "sig": "resetObjectRotation()",
+    "line": 138
+   },
+   {
+    "sig": "addObjectToList(GameObject newObject)",
+    "line": 147
+   },
+   {
+    "sig": "setDefaultLayermask()",
+    "line": 160
+   },
+   {
+    "sig": "selectObject()",
+    "line": 169
+   },
+   {
+    "sig": "setOffsetFromRendererBound()",
+    "line": 176
+   }
+  ]
+ },
+ {
+  "type": "followObjectPositionSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\followObjectPositionSystem.cs",
+  "methods": [
+   {
+    "sig": "setFollowObjectActiveState(bool state)",
+    "line": 75
+   },
+   {
+    "sig": "setEnabledState(bool state)",
+    "line": 80
+   },
+   {
+    "sig": "enabledStateAndUpdatePositionOnce()",
+    "line": 85
+   },
+   {
+    "sig": "updatePositionOnce()",
+    "line": 92
+   },
+   {
+    "sig": "setObjectToFollow(Transform newObject)",
+    "line": 107
+   },
+   {
+    "sig": "setObjectToFollowFromEditor(Transform newObject)",
+    "line": 112
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 119
+   }
+  ]
+ },
+ {
+  "type": "objectOnWater",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\objectOnWater.cs",
+  "methods": [
+   {
+    "sig": "updateExternalForces(Vector3 newValues, bool externalForcesActiveValue)",
+    "line": 7
+   },
+   {
+    "sig": "isObjectOnWaterActive()",
+    "line": 12
+   },
+   {
+    "sig": "updateExternalRotationForces(float rotationAmount, Vector3 rotationAxis, Vector3 externalRotationForcePoint)",
+    "line": 19
+   },
+   {
+    "sig": "getDensity()",
+    "line": 24
+   },
+   {
+    "sig": "setNewDensity(float newValue)",
+    "line": 30
+   },
+   {
+    "sig": "addOrRemoveDensity(float newValue)",
+    "line": 35
+   },
+   {
+    "sig": "setOriginalDensity()",
+    "line": 40
+   }
+  ]
+ },
+ {
+  "type": "setRigidbodyStateSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\setRigidbodyStateSystem.cs",
+  "methods": [
+   {
+    "sig": "searchRigidbodiesInRadius()",
+    "line": 49
+   },
+   {
+    "sig": "setKinematicState(bool state)",
+    "line": 82
+   },
+   {
+    "sig": "addForce(Transform forceDirection)",
+    "line": 97
+   },
+   {
+    "sig": "addExplosiveForce(Transform explosionCenter)",
+    "line": 114
+   },
+   {
+    "sig": "addExplosiveForceUsingObjectsMass(Transform explosionCenter)",
+    "line": 131
+   },
+   {
+    "sig": "addForceToThis(Transform forceDirection)",
+    "line": 148
+   },
+   {
+    "sig": "checkRemoteEventsOnRigidbodyList()",
+    "line": 173
+   }
+  ]
+ },
+ {
+  "type": "simpleAnimationSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\simpleAnimationSystem.cs",
+  "methods": [
+   {
+    "sig": "playForwardAnimation()",
+    "line": 109
+   },
+   {
+    "sig": "playBackwardAnimation()",
+    "line": 122
+   },
+   {
+    "sig": "playForwardNewAnimation(string newName)",
+    "line": 139
+   },
+   {
+    "sig": "playBackwardNewAnimation(string newName)",
+    "line": 146
+   },
+   {
+    "sig": "playAnimationForwardIfAlreadyInProcess()",
+    "line": 153
+   },
+   {
+    "sig": "playAnimationBackwardIfAlreadyInProcess()",
+    "line": 160
+   },
+   {
+    "sig": "rewindAnimation()",
+    "line": 167
+   }
+  ]
+ },
+ {
+  "type": "simpleEventSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\simpleEventSystem.cs",
+  "methods": [
+   {
+    "sig": "activateDevice()",
+    "line": 50
+   },
+   {
+    "sig": "callEvent()",
+    "line": 83
+   },
+   {
+    "sig": "setActivatedStateAndCallEvents(bool state)",
+    "line": 102
+   },
+   {
+    "sig": "setActivatedState(bool state)",
+    "line": 123
+   },
+   {
+    "sig": "callEventsForCurrentActivatedState()",
+    "line": 128
+   },
+   {
+    "sig": "setEventEnabledState(bool state)",
+    "line": 147
+   },
+   {
+    "sig": "setDelayToEventValue(float newValue)",
+    "line": 156
+   }
+  ]
+ },
+ {
+  "type": "addForceToObjectSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\addForceToObjectSystem.cs",
+  "methods": [
+   {
+    "sig": "setPauseUpdateForcesState(bool state)",
+    "line": 125
+   },
+   {
+    "sig": "setWindDetectedStateOnAllObjects(bool state)",
+    "line": 130
+   },
+   {
+    "sig": "addNewObject(GameObject newObject)",
+    "line": 147
+   },
+   {
+    "sig": "removeObject(GameObject objectToRemove)",
+    "line": 240
+   },
+   {
+    "sig": "removeAllObjects()",
+    "line": 304
+   },
+   {
+    "sig": "setWindForceValue(float newValue)",
+    "line": 321
+   }
+  ]
+ },
+ {
+  "type": "showMessageOnHUDSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\showMessageOnHUDSystem.cs",
+  "methods": [
+   {
+    "sig": "setMessagePanelNameManually(string messageName)",
+    "line": 36
+   },
+   {
+    "sig": "showMessagePanelManually(string messageContent)",
+    "line": 41
+   },
+   {
+    "sig": "showCustomMessagePanel(string messageContent)",
+    "line": 63
+   },
+   {
+    "sig": "showMessagePanel(string messageName)",
+    "line": 86
+   },
+   {
+    "sig": "hideMessagePanel(string messageName)",
+    "line": 100
+   },
+   {
+    "sig": "showObjectMessage(int messageIndex)",
+    "line": 120
+   }
+  ]
+ }
+]

@@ -1,0 +1,536 @@
+[
+ {
+  "type": "staminaSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Abilities System\\staminaSystem.cs",
+  "methods": [
+   {
+    "sig": "anyStaminaStateInUse()",
+    "line": 191
+   },
+   {
+    "sig": "activeStaminaStateWithCustomAmount(string staminaName, float customAmountToUse, float newDelayAfterUse)",
+    "line": 202
+   },
+   {
+    "sig": "activeStaminaState(string staminaName)",
+    "line": 251
+   },
+   {
+    "sig": "useStaminaStateByName(string staminaName)",
+    "line": 315
+   },
+   {
+    "sig": "setStaminaStateAsPaused(string staminaName)",
+    "line": 324
+   },
+   {
+    "sig": "setStaminaStateAsNotPaused(string staminaName)",
+    "line": 329
+   },
+   {
+    "sig": "setStaminaPausedState(bool state, string staminaName)",
+    "line": 334
+   },
+   {
+    "sig": "useAllRemainStamina()",
+    "line": 355
+   },
+   {
+    "sig": "useStaminaAmountExternally(float amount)",
+    "line": 364
+   },
+   {
+    "sig": "setCustomRefillStaminaDelayAfterUseValue(float newValue)",
+    "line": 385
+   },
+   {
+    "sig": "disableStaminaState(string staminaName)",
+    "line": 449
+   },
+   {
+    "sig": "disableCurrentStaminaState()",
+    "line": 481
+   },
+   {
+    "sig": "refillStamina(float refillDelay)",
+    "line": 499
+   },
+   {
+    "sig": "stopRefillCoroutine()",
+    "line": 506
+   },
+   {
+    "sig": "getStamina(float amount)",
+    "line": 556
+   },
+   {
+    "sig": "refillFullStamina()",
+    "line": 577
+   },
+   {
+    "sig": "setStaminaSliderAlphaValue(float value)",
+    "line": 615
+   },
+   {
+    "sig": "increaseTotalStaminaAmount(float extraValue)",
+    "line": 622
+   },
+   {
+    "sig": "getCurrentStaminaAmount()",
+    "line": 637
+   },
+   {
+    "sig": "getOriginalStaminaAmount()",
+    "line": 642
+   },
+   {
+    "sig": "initializeStaminaAmount(float newValue)",
+    "line": 647
+   },
+   {
+    "sig": "updateStaminaAmountWithoutUpdatingStatManager(int statId, float amount)",
+    "line": 652
+   },
+   {
+    "sig": "updateRefillStaminaRateAmountWithoutUpdatingStatManager(int statId, float amount)",
+    "line": 657
+   },
+   {
+    "sig": "increaseTotalRefillStaminaRate(float extraValue)",
+    "line": 662
+   },
+   {
+    "sig": "initializeRefillStaminaRate(float newValue)",
+    "line": 667
+   },
+   {
+    "sig": "setStaminaUsePausedState(bool state)",
+    "line": 672
+   },
+   {
+    "sig": "setStaminaRefilledOrEmptyOnStateList(bool state)",
+    "line": 677
+   },
+   {
+    "sig": "getStaminaAmountToLimit()",
+    "line": 692
+   },
+   {
+    "sig": "addAuxStaminaAmount(float amount)",
+    "line": 697
+   },
+   {
+    "sig": "setUseStaminaEnabledState(bool state)",
+    "line": 702
+   },
+   {
+    "sig": "setShowStaminaUIEnabledState(bool state)",
+    "line": 707
+   },
+   {
+    "sig": "setShowStaminaUIEnabledStateOnEditor(bool state)",
+    "line": 722
+   },
+   {
+    "sig": "setUseStaminaEnabledStateFromEditor(bool state)",
+    "line": 729
+   }
+  ]
+ },
+ {
+  "type": "grapplingHookSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Abilities System\\Custom Abilities\\Grappling Hook System\\grapplingHookSystem.cs",
+  "methods": [
+   {
+    "sig": "stopGrapplingHookCoroutine()",
+    "line": 390
+   },
+   {
+    "sig": "stopCheckinGrapplingHookCameraStateAfterDeactivateCoroutine()",
+    "line": 435
+   },
+   {
+    "sig": "TransformDirectionHorizontal(Transform t, Vector3 v)",
+    "line": 471
+   },
+   {
+    "sig": "ToHorizontal(Vector3 v)",
+    "line": 476
+   },
+   {
+    "sig": "applyHookForces()",
+    "line": 697
+   },
+   {
+    "sig": "applyAttractionForces()",
+    "line": 813
+   },
+   {
+    "sig": "checkIfObjectIsMoving()",
+    "line": 901
+   },
+   {
+    "sig": "removeHook()",
+    "line": 934
+   },
+   {
+    "sig": "setGrapplingHookTarget(Transform newTarget)",
+    "line": 1014
+   },
+   {
+    "sig": "setGrapplingHookEnabledState(bool state)",
+    "line": 1019
+   },
+   {
+    "sig": "checkThrowGrapplingHook()",
+    "line": 1049
+   },
+   {
+    "sig": "removeGrapplingHook()",
+    "line": 1239
+   },
+   {
+    "sig": "checkRemoveGrapplingHook()",
+    "line": 1250
+   },
+   {
+    "sig": "checkEventsOnGrapplingHook(bool state)",
+    "line": 1262
+   },
+   {
+    "sig": "checkExternalControllerBehaviorToPause(string behaviorName)",
+    "line": 1273
+   },
+   {
+    "sig": "pauseOrResumePlayerState(bool state)",
+    "line": 1294
+   },
+   {
+    "sig": "setIgnoreApplySpeedOnHookStopTemporallyState(bool state)",
+    "line": 1518
+   },
+   {
+    "sig": "inputThrowGrapplingHook()",
+    "line": 1706
+   },
+   {
+    "sig": "inputRemoveGrapplingHook()",
+    "line": 1936
+   },
+   {
+    "sig": "inputIncreaseOrDecreaseMovementSpeed(bool state)",
+    "line": 1941
+   },
+   {
+    "sig": "inputThrowGrapplingHookIfTargetLocated()",
+    "line": 1966
+   },
+   {
+    "sig": "inputSetManualPullActiveState(bool state)",
+    "line": 1979
+   },
+   {
+    "sig": "inputSetManualExtendActiveState(bool state)",
+    "line": 1994
+   },
+   {
+    "sig": "inputToggleManualPullActiveState()",
+    "line": 2009
+   },
+   {
+    "sig": "inputUseJumpOnSwing()",
+    "line": 2014
+   },
+   {
+    "sig": "inputSetSwingHoldInputActive(bool state)",
+    "line": 2041
+   },
+   {
+    "sig": "setAttractObjectsEnabled(bool state)",
+    "line": 2127
+   },
+   {
+    "sig": "setUseSwingForcesActiveState(bool state)",
+    "line": 2132
+   },
+   {
+    "sig": "setCurrentPlayerActionSystemCustomActionCategoryID(bool state)",
+    "line": 2137
+   }
+  ]
+ },
+ {
+  "type": "dashSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Abilities System\\dashSystem.cs",
+  "methods": [
+   {
+    "sig": "checkDoubleTapDash()",
+    "line": 252
+   },
+   {
+    "sig": "enableDashState()",
+    "line": 271
+   },
+   {
+    "sig": "setOverrideStrafeModeActiveStateResult(bool state)",
+    "line": 535
+   },
+   {
+    "sig": "disableDashState()",
+    "line": 540
+   },
+   {
+    "sig": "setDashEnabledState(bool state)",
+    "line": 556
+   },
+   {
+    "sig": "inputActivateDashState()",
+    "line": 561
+   },
+   {
+    "sig": "activateDashStateWithoutGroundCheck()",
+    "line": 568
+   },
+   {
+    "sig": "setCheckGroundPausedState(bool state)",
+    "line": 577
+   },
+   {
+    "sig": "activateDashStateWithCustomDirection(Vector3 dashDirection)",
+    "line": 582
+   },
+   {
+    "sig": "canUseDash()",
+    "line": 592
+   },
+   {
+    "sig": "setUseDashOnFirstPersonState(bool state)",
+    "line": 623
+   },
+   {
+    "sig": "setUseDashOnThirdPersonState(bool state)",
+    "line": 628
+   },
+   {
+    "sig": "setDashOnThirdPersonInTransitionState(bool state)",
+    "line": 633
+   },
+   {
+    "sig": "checkIfActionToUseOnDashIsOnCategoryList()",
+    "line": 642
+   },
+   {
+    "sig": "setDashOnThirdPersonPausedState(bool state)",
+    "line": 651
+   },
+   {
+    "sig": "setDashInfoOnThirdPersonPausedState(bool state, string dashInfoName)",
+    "line": 656
+   },
+   {
+    "sig": "pauseDashInfoOnThirdPerson(string dashInfoName)",
+    "line": 667
+   },
+   {
+    "sig": "resumeDashInfoOnThirdPerson(string dashInfoName)",
+    "line": 672
+   },
+   {
+    "sig": "setDashInfoOnThirdPersonPausedByStaminaState(bool state, string dashInfoName)",
+    "line": 677
+   },
+   {
+    "sig": "pauseByStaminaDashInfoOnThirdPerson(string dashInfoName)",
+    "line": 688
+   },
+   {
+    "sig": "resumeByStaminaDashInfoOnThirdPerson(string dashInfoName)",
+    "line": 693
+   },
+   {
+    "sig": "getCurrentDashID()",
+    "line": 698
+   },
+   {
+    "sig": "setCurrentDashID(int newValue)",
+    "line": 703
+   },
+   {
+    "sig": "setUseDashOnFirstPersonStateFromEditor(bool state)",
+    "line": 727
+   },
+   {
+    "sig": "setUseDashOnThirdPersonStateFromEditor(bool state)",
+    "line": 734
+   }
+  ]
+ },
+ {
+  "type": "oxygenSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Abilities System\\oxygenSystem.cs",
+  "methods": [
+   {
+    "sig": "activateOxygenState(string oxygenStateName)",
+    "line": 283
+   },
+   {
+    "sig": "disableOxygenState(string oxygenStateName)",
+    "line": 290
+   },
+   {
+    "sig": "activeOxygenState()",
+    "line": 297
+   },
+   {
+    "sig": "disableOxygenState()",
+    "line": 324
+   },
+   {
+    "sig": "refillOxygen(float refillDelay)",
+    "line": 353
+   },
+   {
+    "sig": "stopRefillCoroutine()",
+    "line": 360
+   },
+   {
+    "sig": "refillOxygenDirectly()",
+    "line": 402
+   },
+   {
+    "sig": "increaseTotalOxygenAmount(float extraValue)",
+    "line": 417
+   },
+   {
+    "sig": "initializeOxygenAmount(float newValue)",
+    "line": 426
+   },
+   {
+    "sig": "initializeOxygenUseRate(float newValue)",
+    "line": 431
+   },
+   {
+    "sig": "increaseOxygenUseRate(float newValue)",
+    "line": 436
+   },
+   {
+    "sig": "updateOxygenAmountWithoutUpdatingStatManager(int statId, float amount)",
+    "line": 441
+   },
+   {
+    "sig": "updateOxygenUseRateAmountWithoutUpdatingStatManager(int statId, float amount)",
+    "line": 450
+   },
+   {
+    "sig": "getOxygen(float amount)",
+    "line": 455
+   },
+   {
+    "sig": "getOxygenAmountToLimit()",
+    "line": 496
+   },
+   {
+    "sig": "addAuxOxygenAmount(float amount)",
+    "line": 501
+   },
+   {
+    "sig": "disableOxygenOnDeath()",
+    "line": 506
+   },
+   {
+    "sig": "setFirstPersonActiveState(bool state)",
+    "line": 521
+   },
+   {
+    "sig": "setOxygenSystemEnabledState(bool state)",
+    "line": 526
+   },
+   {
+    "sig": "setOxygenSystemEnabledStateFromEditor(bool state)",
+    "line": 531
+   }
+  ]
+ },
+ {
+  "type": "magicSpellActionSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Abilities System\\magicSpellActionSystem.cs",
+  "methods": [
+   {
+    "sig": "enableOrDisableMagicSystem(bool state)",
+    "line": 111
+   },
+   {
+    "sig": "useMagicSpell(string magicTypeName)",
+    "line": 137
+   },
+   {
+    "sig": "enableMagicByName(string magicName)",
+    "line": 290
+   },
+   {
+    "sig": "disableMagicByName(string magicName)",
+    "line": 295
+   },
+   {
+    "sig": "enableOrDisableMagicByName(string magicName, bool state)",
+    "line": 300
+   },
+   {
+    "sig": "setNextAttackIndex()",
+    "line": 309
+   },
+   {
+    "sig": "setPreviousAttackIndex()",
+    "line": 322
+   },
+   {
+    "sig": "stopActivateMagicSpellAction()",
+    "line": 335
+   },
+   {
+    "sig": "stopActivateMagicSpellEvent()",
+    "line": 377
+   },
+   {
+    "sig": "resumeState()",
+    "line": 391
+   },
+   {
+    "sig": "checkEventsOnAttack(bool state)",
+    "line": 398
+   },
+   {
+    "sig": "checkMagicStateAtStart()",
+    "line": 409
+   },
+   {
+    "sig": "checkMagicStateAtEnd()",
+    "line": 443
+   },
+   {
+    "sig": "checkLookAtTargetActiveState()",
+    "line": 468
+   },
+   {
+    "sig": "checkLookAtTargetDeactivateState()",
+    "line": 487
+   },
+   {
+    "sig": "canUseInput()",
+    "line": 494
+   },
+   {
+    "sig": "playerIsBusy()",
+    "line": 503
+   },
+   {
+    "sig": "checkEventsOnEnableDisableMagicSystem(bool state)",
+    "line": 524
+   },
+   {
+    "sig": "inputSetNextOrPreviousAttackIndex(bool useNextAttack)",
+    "line": 535
+   }
+  ]
+ }
+]

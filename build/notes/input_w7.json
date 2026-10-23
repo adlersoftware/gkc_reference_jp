@@ -1,0 +1,1006 @@
+[
+ {
+  "type": "IKWeaponInfo",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\IKWeaponInfo.cs",
+  "methods": [
+   {
+    "sig": "InitializeAudioElements()",
+    "line": 272
+   }
+  ]
+ },
+ {
+  "type": "addGrenadeToThrowAwayFromCharacter",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\addGrenadeToThrowAwayFromCharacter.cs",
+  "methods": [
+   {
+    "sig": "addGrenadeToCharacterSystem(GameObject playerToCheck)",
+    "line": 29
+   },
+   {
+    "sig": "removeGrenadeToCharacterSystem()",
+    "line": 44
+   },
+   {
+    "sig": "confirmThrowAwayGrenade()",
+    "line": 123
+   }
+  ]
+ },
+ {
+  "type": "arrowManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\arrowManager.cs",
+  "methods": [
+   {
+    "sig": "enableOrDisableArrowInfoPanel(bool state)",
+    "line": 50
+   },
+   {
+    "sig": "checkIfArrowsFoundOnInventory()",
+    "line": 61
+   },
+   {
+    "sig": "useArrowFromInventory(int amountToUse)",
+    "line": 77
+   },
+   {
+    "sig": "updateArrowAmountText()",
+    "line": 88
+   },
+   {
+    "sig": "setCurrentArrowInventoryObjectName(string newName)",
+    "line": 105
+   },
+   {
+    "sig": "setArrowTypeIcon(Texture newIcon, bool useInfiniteArrows)",
+    "line": 110
+   }
+  ]
+ },
+ {
+  "type": "arrowProjectile",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\Projectiles\\arrowProjectile.cs",
+  "methods": [
+   {
+    "sig": "checkObjectDetected(GameObject objectToDamage)",
+    "line": 104
+   },
+   {
+    "sig": "resetProjectile()",
+    "line": 233
+   },
+   {
+    "sig": "setNewArrowDownForce(float newValue)",
+    "line": 244
+   },
+   {
+    "sig": "setArrowSurfaceTypeInfoList(List<bowSystem.arrowSurfaceTypeInfo> newArrowSurfaceTypeInfoList)",
+    "line": 249
+   },
+   {
+    "sig": "disableCheckSurfaceTypeDetected()",
+    "line": 256
+   }
+  ]
+ },
+ {
+  "type": "attachmentInfo",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\Attachments\\attachmentInfo.cs",
+  "methods": [
+   {
+    "sig": "InitializeAudioElements()",
+    "line": 40
+   }
+  ]
+ },
+ {
+  "type": "attrackObjectsSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\New Weapon Behaviors\\attrackObjectsSystem.cs",
+  "methods": [
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 103
+   },
+   {
+    "sig": "setAttractionEnabledState(bool state)",
+    "line": 156
+   },
+   {
+    "sig": "checkGrabObject()",
+    "line": 165
+   },
+   {
+    "sig": "inputGrabObjects()",
+    "line": 195
+   },
+   {
+    "sig": "inputHoldToLaunchObject()",
+    "line": 200
+   },
+   {
+    "sig": "inputReleaseToLaunchObject()",
+    "line": 213
+   },
+   {
+    "sig": "grabCloseObjects()",
+    "line": 232
+   },
+   {
+    "sig": "dropObjects()",
+    "line": 347
+   },
+   {
+    "sig": "addForceToLaunchObjects()",
+    "line": 378
+   },
+   {
+    "sig": "dropObject(grabbedObject currentGrabbedObject, Vector3 launchDirection)",
+    "line": 391
+   },
+   {
+    "sig": "checkIfDropObject(GameObject objectToCheck)",
+    "line": 478
+   }
+  ]
+ },
+ {
+  "type": "audioClipBip",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\Projectiles\\audioClipBip.cs",
+  "methods": [
+   {
+    "sig": "increasePlayTime(float extraTime)",
+    "line": 102
+   },
+   {
+    "sig": "disableBip()",
+    "line": 119
+   }
+  ]
+ },
+ {
+  "type": "bowHolderSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\bowHolderSystem.cs",
+  "methods": [
+   {
+    "sig": "checkEventOnLoadArrow()",
+    "line": 48
+   },
+   {
+    "sig": "checkEventOnFireArrow()",
+    "line": 57
+   },
+   {
+    "sig": "checkEventOnStartAim()",
+    "line": 66
+   },
+   {
+    "sig": "checkEventOnEndAim()",
+    "line": 75
+   },
+   {
+    "sig": "checkEventOnCancelBowAction()",
+    "line": 84
+   },
+   {
+    "sig": "checkEventOnMaxPullBowMultiplierStart()",
+    "line": 93
+   },
+   {
+    "sig": "checkEventOnMaxPullBowMultiplierEnd()",
+    "line": 102
+   },
+   {
+    "sig": "getBowWeaponID()",
+    "line": 111
+   }
+  ]
+ },
+ {
+  "type": "dissolveProjectile",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\Projectiles\\dissolveProjectile.cs",
+  "methods": [
+   {
+    "sig": "dissolveObject(GameObject objectToDissolve)",
+    "line": 63
+   },
+   {
+    "sig": "checkObjectDetected(Collider col)",
+    "line": 69
+   },
+   {
+    "sig": "destroyObject()",
+    "line": 153
+   }
+  ]
+ },
+ {
+  "type": "dragObjectSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\New Weapon Behaviors\\dragObjectSystem.cs",
+  "methods": [
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 79
+   },
+   {
+    "sig": "dragObject()",
+    "line": 99
+   },
+   {
+    "sig": "setCurrentPlayer(GameObject newPlayer)",
+    "line": 144
+   },
+   {
+    "sig": "grabObject()",
+    "line": 151
+   },
+   {
+    "sig": "dropObject()",
+    "line": 166
+   },
+   {
+    "sig": "setObstacleFoundState(bool state)",
+    "line": 179
+   },
+   {
+    "sig": "translateObjectToGrabPosition()",
+    "line": 186
+   },
+   {
+    "sig": "stopTranslateObjectToGrabPosition()",
+    "line": 193
+   }
+  ]
+ },
+ {
+  "type": "dynamicReticleSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\dynamicReticleSystem.cs",
+  "methods": [
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 51
+   },
+   {
+    "sig": "enableOrDisableReticleByName(string reticleName, bool state)",
+    "line": 159
+   },
+   {
+    "sig": "isReticleActive()",
+    "line": 230
+   }
+  ]
+ },
+ {
+  "type": "fakeProjectileTrailSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\fakeProjectileTrailSystem.cs",
+  "methods": [
+   {
+    "sig": "instantiateFakeProjectileTrail(Vector3 newTargetPosition)",
+    "line": 79
+   },
+   {
+    "sig": "setSpeedMultiplier(float newValue)",
+    "line": 115
+   },
+   {
+    "sig": "stopTrailMovement()",
+    "line": 120
+   },
+   {
+    "sig": "setDestroyTrailAfterTimeState(bool state)",
+    "line": 125
+   },
+   {
+    "sig": "changeDestroyForSetActiveFunction(bool state)",
+    "line": 130
+   },
+   {
+    "sig": "resetFakeProjectileTrail()",
+    "line": 135
+   }
+  ]
+ },
+ {
+  "type": "flamethrowerWeapon",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\New Weapon Behaviors\\flamethrowerWeapon.cs",
+  "methods": [
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 87
+   },
+   {
+    "sig": "enableWeapon()",
+    "line": 174
+   },
+   {
+    "sig": "disableWeapon()",
+    "line": 179
+   },
+   {
+    "sig": "setWeaponState(bool state)",
+    "line": 186
+   },
+   {
+    "sig": "stopUpdateCoroutineIfActive()",
+    "line": 247
+   }
+  ]
+ },
+ {
+  "type": "flashlight",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\New Weapon Behaviors\\flashlight.cs",
+  "methods": [
+   {
+    "sig": "checkIfEnoughBattery()",
+    "line": 177
+   },
+   {
+    "sig": "changeFlashLightState()",
+    "line": 192
+   },
+   {
+    "sig": "setFlashlightState(bool state)",
+    "line": 201
+   },
+   {
+    "sig": "turnOn()",
+    "line": 224
+   },
+   {
+    "sig": "turnOff()",
+    "line": 239
+   },
+   {
+    "sig": "playSound(bool state)",
+    "line": 246
+   },
+   {
+    "sig": "changeLightIntensity(bool state)",
+    "line": 259
+   },
+   {
+    "sig": "setHighIntensity()",
+    "line": 272
+   },
+   {
+    "sig": "setOriginalIntensity()",
+    "line": 285
+   },
+   {
+    "sig": "enableOrDisableFlashlightMeshes(bool state)",
+    "line": 290
+   },
+   {
+    "sig": "setFlashLightInputPausedState(bool state)",
+    "line": 305
+   },
+   {
+    "sig": "enableOrDisableFlashlightIndicator(bool state)",
+    "line": 310
+   }
+  ]
+ },
+ {
+  "type": "healerWeapon",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\New Weapon Behaviors\\healerWeapon.cs",
+  "methods": [
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 87
+   },
+   {
+    "sig": "changeMode()",
+    "line": 288
+   },
+   {
+    "sig": "checkTarget(GameObject target)",
+    "line": 295
+   },
+   {
+    "sig": "downButtonAction()",
+    "line": 325
+   },
+   {
+    "sig": "upButtonAction()",
+    "line": 336
+   },
+   {
+    "sig": "setCanHealState(bool state)",
+    "line": 362
+   },
+   {
+    "sig": "setCanDamageState(bool state)",
+    "line": 376
+   },
+   {
+    "sig": "setCanRefillEnergyState(bool state)",
+    "line": 389
+   },
+   {
+    "sig": "setCanRefillFuelState(bool state)",
+    "line": 403
+   },
+   {
+    "sig": "setCanGatherHealthState(bool state)",
+    "line": 417
+   },
+   {
+    "sig": "setCanGatherEnergyState(bool state)",
+    "line": 422
+   },
+   {
+    "sig": "setCanGatherFuelState(bool state)",
+    "line": 427
+   },
+   {
+    "sig": "setHealModeActiveState(bool state)",
+    "line": 432
+   }
+  ]
+ },
+ {
+  "type": "laserAttachment",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\Attachments\\laserAttachment.cs",
+  "methods": [
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 91
+   },
+   {
+    "sig": "setLaserEnabledState(bool state)",
+    "line": 296
+   }
+  ]
+ },
+ {
+  "type": "laserDotOnScreenSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\Attachments\\laserDotOnScreenSystem.cs",
+  "methods": [
+   {
+    "sig": "updateLaserDotPosition(Vector3 hitPoint)",
+    "line": 47
+   },
+   {
+    "sig": "setLasetDotIconActiveState(bool state)",
+    "line": 86
+   }
+  ]
+ },
+ {
+  "type": "laserMine",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\Projectiles\\laserMine.cs",
+  "methods": [
+   {
+    "sig": "increaseNumberOfContacts()",
+    "line": 19
+   },
+   {
+    "sig": "checkObjectDetected(Collider col)",
+    "line": 32
+   }
+  ]
+ },
+ {
+  "type": "plasmaCutterProjectile",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\Projectiles\\plasmaCutterProjectile.cs",
+  "methods": [
+   {
+    "sig": "checkObjectDetected(Collider col)",
+    "line": 106
+   },
+   {
+    "sig": "processObject(GameObject objectToCheck, Collider objectCollider, Vector3 slicePosition)",
+    "line": 135
+   },
+   {
+    "sig": "sliceCurrentObject(GameObject objectToCheck, Collider objectCollider, Material crossSectionMaterial, Vector3 slicePosition)",
+    "line": 238
+   },
+   {
+    "sig": "checkForceToApplyOnObject(GameObject objectToDamage)",
+    "line": 543
+   },
+   {
+    "sig": "setShatterObjectActiveState(bool state)",
+    "line": 587
+   },
+   {
+    "sig": "shatterObject(GameObject objectToCheck, Material crossSectionMaterial)",
+    "line": 592
+   },
+   {
+    "sig": "randomShatter(Material crossSectionMaterial)",
+    "line": 613
+   },
+   {
+    "sig": "randomShatterSingle(GameObject objectToShatter, Material crossSectionMaterial)",
+    "line": 639
+   }
+  ]
+ },
+ {
+  "type": "plasmaCutterSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\New Weapon Behaviors\\plasmaCutterSystem.cs",
+  "methods": [
+   {
+    "sig": "firePlasmaCutter()",
+    "line": 42
+   },
+   {
+    "sig": "rotateRotorToRight()",
+    "line": 47
+   },
+   {
+    "sig": "rotateRotorToLeft()",
+    "line": 52
+   },
+   {
+    "sig": "changeRotorRotation()",
+    "line": 57
+   },
+   {
+    "sig": "stopChangeRotorRotation()",
+    "line": 88
+   }
+  ]
+ },
+ {
+  "type": "projectileImpactSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\projectileImpactSystem.cs",
+  "methods": [
+   {
+    "sig": "activateImpactElements(Vector3 newPosition, AudioElement impactSoundEffect)",
+    "line": 11
+   },
+   {
+    "sig": "changeDestroyForSetActiveFunction(bool state)",
+    "line": 39
+   },
+   {
+    "sig": "setSendObjectToPoolSystemToDisableState(bool state)",
+    "line": 44
+   }
+  ]
+ },
+ {
+  "type": "projectileInfo",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\Projectiles\\projectileInfo.cs",
+  "methods": [
+   {
+    "sig": "InitializeAudioElements()",
+    "line": 167
+   }
+  ]
+ },
+ {
+  "type": "projectilesOnCharacterBodyManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\projectilesOnCharacterBodyManager.cs",
+  "methods": [
+   {
+    "sig": "addProjectileToCharacterBody(GameObject newProjectileObject)",
+    "line": 24
+   },
+   {
+    "sig": "stopRemoveProjectilesCoroutine()",
+    "line": 46
+   }
+  ]
+ },
+ {
+  "type": "simpleChainSaw",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\New Weapon Behaviors\\simpleChainSaw.cs",
+  "methods": [
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 82
+   },
+   {
+    "sig": "activateChainSaw()",
+    "line": 147
+   },
+   {
+    "sig": "deactivateChainSaw()",
+    "line": 152
+   },
+   {
+    "sig": "rotatePivotToRight()",
+    "line": 182
+   },
+   {
+    "sig": "rotatePivotToLeft()",
+    "line": 189
+   },
+   {
+    "sig": "changePivotRotation()",
+    "line": 220
+   },
+   {
+    "sig": "stopChangePivotRotation()",
+    "line": 251
+   }
+  ]
+ },
+ {
+  "type": "simpleSniperSightSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\simpleSniperSightSystem.cs",
+  "methods": [
+   {
+    "sig": "enableOrDisableSniperSight(bool state)",
+    "line": 60
+   },
+   {
+    "sig": "disableSniperSight()",
+    "line": 161
+   },
+   {
+    "sig": "disableSniperSightIfActive()",
+    "line": 166
+   },
+   {
+    "sig": "enableSniperSightIfActivePreviously()",
+    "line": 175
+   }
+  ]
+ },
+ {
+  "type": "sliceObject",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\New Weapon Behaviors\\sliceObject.cs",
+  "methods": [
+   {
+    "sig": "processObject(GameObject obj, Collider objectCollider, Vector3 slicePosition)",
+    "line": 186
+   },
+   {
+    "sig": "toggleSliceActiveState()",
+    "line": 340
+   },
+   {
+    "sig": "setSliceActiveState(bool state)",
+    "line": 345
+   },
+   {
+    "sig": "checkObjectDetected(Collider col)",
+    "line": 368
+   },
+   {
+    "sig": "sliceCurrentObject(GameObject obj, Collider objectCollider, Material crossSectionMaterial, Vector3 slicePosition)",
+    "line": 388
+   },
+   {
+    "sig": "stopDisableSliceActiveWithDelay()",
+    "line": 619
+   },
+   {
+    "sig": "disableSliceActiveWithDelay()",
+    "line": 626
+   },
+   {
+    "sig": "disableIgnoreCollisionList()",
+    "line": 652
+   },
+   {
+    "sig": "checkForceToApplyOnObject(GameObject objectToDamage)",
+    "line": 663
+   }
+  ]
+ },
+ {
+  "type": "spearProjectile",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\Projectiles\\spearProjectile.cs",
+  "methods": [
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 54
+   },
+   {
+    "sig": "checkObjectDetected(Collider col)",
+    "line": 132
+   }
+  ]
+ },
+ {
+  "type": "taserProjectile",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\Projectiles\\taserProjectile.cs",
+  "methods": [
+   {
+    "sig": "checkObjectDetected(Collider col)",
+    "line": 33
+   },
+   {
+    "sig": "destroyObject()",
+    "line": 89
+   }
+  ]
+ },
+ {
+  "type": "throwGrenadeSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\throwGrenadeSystem.cs",
+  "methods": [
+   {
+    "sig": "checkGrenadesInfo()",
+    "line": 53
+   },
+   {
+    "sig": "inputStartThrowGrenade()",
+    "line": 66
+   },
+   {
+    "sig": "inputConfirmThrowGrenade()",
+    "line": 100
+   },
+   {
+    "sig": "updateGrenadeAmountText()",
+    "line": 121
+   }
+  ]
+ },
+ {
+  "type": "vacuumGun",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\New Weapon Behaviors\\vacuumGun.cs",
+  "methods": [
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 117
+   },
+   {
+    "sig": "setVacuumEnabledState(bool state)",
+    "line": 397
+   },
+   {
+    "sig": "enableVacuum()",
+    "line": 408
+   },
+   {
+    "sig": "disableVacuum()",
+    "line": 413
+   },
+   {
+    "sig": "enableOrDisableVacuum(bool state)",
+    "line": 418
+   },
+   {
+    "sig": "setExpelEnabledState(bool state)",
+    "line": 456
+   },
+   {
+    "sig": "enableOrDisableExpel(bool state)",
+    "line": 467
+   }
+  ]
+ },
+ {
+  "type": "weaponAmmoUsingPlayerStat",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\weaponAmmoUsingPlayerStat.cs",
+  "methods": [
+   {
+    "sig": "useWeaponAmmo()",
+    "line": 12
+   }
+  ]
+ },
+ {
+  "type": "weaponInfo",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\weaponInfo.cs",
+  "methods": [
+   {
+    "sig": "InitializeAudioElements()",
+    "line": 543
+   }
+  ]
+ },
+ {
+  "type": "weaponLaser",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\New Weapon Behaviors\\weaponLaser.cs",
+  "methods": [
+   {
+    "sig": "damageTarget(GameObject objectToDamage, Vector3 laserDirection, Vector3 hitPoint)",
+    "line": 265
+   },
+   {
+    "sig": "setLaserInfo(laserDevice.laserType type, GameObject laser, Vector3 pos)",
+    "line": 355
+   },
+   {
+    "sig": "removeLaserInfo()",
+    "line": 380
+   },
+   {
+    "sig": "enableWeaponLaser()",
+    "line": 385
+   },
+   {
+    "sig": "disableWeaponLaser()",
+    "line": 390
+   },
+   {
+    "sig": "setWeaponLaserState(bool state)",
+    "line": 395
+   }
+  ]
+ },
+ {
+  "type": "weaponListManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\weaponListManager.cs",
+  "methods": [
+   {
+    "sig": "setTouchingMenuPanelState(bool state)",
+    "line": 321
+   },
+   {
+    "sig": "selectWeapon(weaponSlotInfo slotInfo)",
+    "line": 328
+   },
+   {
+    "sig": "changeSlotSize(weaponSlotInfo slotInfo, bool setRegularSize, float sizeMultiplier, bool smoothSizeChange)",
+    "line": 421
+   },
+   {
+    "sig": "selectWeaponsSlots(bool state)",
+    "line": 449
+   },
+   {
+    "sig": "canBeOpened()",
+    "line": 523
+   },
+   {
+    "sig": "udpateSlotsInfo()",
+    "line": 552
+   },
+   {
+    "sig": "updateSlotsInfo()",
+    "line": 557
+   },
+   {
+    "sig": "playSound(AudioElement sound)",
+    "line": 637
+   },
+   {
+    "sig": "inputOpenOrCloseWeaponsWheel(bool openWeaponsWheel)",
+    "line": 644
+   },
+   {
+    "sig": "setSelectingWeaponState(bool state)",
+    "line": 654
+   },
+   {
+    "sig": "setRightOrLeftWeapon(bool state)",
+    "line": 659
+   },
+   {
+    "sig": "setUsedByAIState(bool state)",
+    "line": 691
+   },
+   {
+    "sig": "setWeaponListManagerEnabledState(bool state)",
+    "line": 696
+   },
+   {
+    "sig": "setWeaponListManagerEnabledStateFromEditor(bool state)",
+    "line": 701
+   }
+  ]
+ },
+ {
+  "type": "weaponObjectInfo",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\weaponObjectInfo.cs",
+  "methods": [
+   {
+    "sig": "getWeaponName()",
+    "line": 8
+   },
+   {
+    "sig": "isMeleeWeapon()",
+    "line": 16
+   },
+   {
+    "sig": "isFireWeapon()",
+    "line": 24
+   },
+   {
+    "sig": "getAmmoText()",
+    "line": 30
+   },
+   {
+    "sig": "getProjectilesInWeaponMagazine()",
+    "line": 36
+   },
+   {
+    "sig": "getWeaponAmmoName()",
+    "line": 42
+   },
+   {
+    "sig": "setWeaponRemainAmmoAmount(int newRemainAmmoAmount)",
+    "line": 48
+   },
+   {
+    "sig": "isWeaponUseRemainAmmoFromInventoryActive()",
+    "line": 53
+   }
+  ]
+ },
+ {
+  "type": "weaponPartstToRemoveOnPickupCreation",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\weaponPartstToRemoveOnPickupCreation.cs",
+  "methods": [
+   {
+    "sig": "removeWeaponObjects()",
+    "line": 12
+   }
+  ]
+ },
+ {
+  "type": "weaponShellSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\weaponShellSystem.cs",
+  "methods": [
+   {
+    "sig": "setExtraColliderToIgnore(Collider extraCollider)",
+    "line": 55
+   },
+   {
+    "sig": "setShellValues(Vector3 forceDirection, Collider playerCollider, AudioElement clipToUse)",
+    "line": 62
+   }
+  ]
+ },
+ {
+  "type": "weaponTransformInfoSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\weaponTransformInfoSystem.cs",
+  "methods": [
+   {
+    "sig": "getMainWeaponPositionChildsThirdPerson()",
+    "line": 34
+   },
+   {
+    "sig": "setCurrentOffsetParentOnThirdPersonWithOffsetValue(Vector3 newOffset)",
+    "line": 55
+   },
+   {
+    "sig": "setCurrentOffsetParentOnThirdPerson()",
+    "line": 74
+   },
+   {
+    "sig": "getMainWeaponPositionChildsFirstPerson()",
+    "line": 105
+   },
+   {
+    "sig": "setCurrentOffsetParentOnFirstPerson()",
+    "line": 126
+   },
+   {
+    "sig": "adjustDrawKeepPositionToWeaponPosition()",
+    "line": 139
+   },
+   {
+    "sig": "copyTransformValuesToBuffer()",
+    "line": 165
+   },
+   {
+    "sig": "getListIndex(string listName)",
+    "line": 208
+   },
+   {
+    "sig": "pasteTransformValuesToBuffer()",
+    "line": 219
+   },
+   {
+    "sig": "cleanPositionsOnScriptable()",
+    "line": 268
+   },
+   {
+    "sig": "addNewList()",
+    "line": 277
+   },
+   {
+    "sig": "addNewEmptyList()",
+    "line": 314
+   },
+   {
+    "sig": "removeElementFromWeaponsTransformInfoList(List<Transform> objectTransformInfoList, int index)",
+    "line": 323
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 335
+   }
+  ]
+ }
+]

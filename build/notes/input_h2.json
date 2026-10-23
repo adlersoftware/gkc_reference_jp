@@ -1,0 +1,530 @@
+[
+ {
+  "type": "playerHealthBarManagementSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Health\\playerHealthBarManagementSystem.cs",
+  "methods": [
+   {
+    "sig": "setCurrentHealthSliderState(bool state)",
+    "line": 505
+   },
+   {
+    "sig": "disableHealhtBars()",
+    "line": 538
+   },
+   {
+    "sig": "enableHealhtBars()",
+    "line": 543
+   },
+   {
+    "sig": "enableOrDisableHealhtBars(bool state)",
+    "line": 548
+   },
+   {
+    "sig": "addNewTargetSlider(GameObject sliderOwner, GameObject sliderPrefab, Vector3 sliderOffset, float healthAmount, float shieldAmount, string ownerName, Color textColor, Color sliderColor, int objectID, bool healthBarSliderActiveOnStart, bool useHealthSlideInfoOnScreenValue, bool useCircleHealthSlider)",
+    "line": 577
+   },
+   {
+    "sig": "removeTargetSlider(int objectID)",
+    "line": 707
+   },
+   {
+    "sig": "removeElementFromListByPlayer(int objectID)",
+    "line": 732
+   },
+   {
+    "sig": "udpateSliderInfo(int objectID, string newName, Color textColor, Color backgroundColor)",
+    "line": 766
+   },
+   {
+    "sig": "updateSliderAmount(int objectID, float value)",
+    "line": 797
+   },
+   {
+    "sig": "setSliderAmount(int objectID, float sliderValue)",
+    "line": 837
+   },
+   {
+    "sig": "updateShieldSliderAmount(int objectID, float value)",
+    "line": 842
+   },
+   {
+    "sig": "setShieldSliderAmount(int objectID, float sliderValue)",
+    "line": 865
+   },
+   {
+    "sig": "updateSliderMaxValue(int objectID, float newMaxValue)",
+    "line": 870
+   },
+   {
+    "sig": "updateShieldSliderMaxValue(int objectID, float newMaxValue)",
+    "line": 909
+   },
+   {
+    "sig": "updateSliderOffset(int objectID, float value)",
+    "line": 932
+   },
+   {
+    "sig": "setSliderInfo(int objectID, string newName, Color textColor, Color backgroundColor)",
+    "line": 947
+   },
+   {
+    "sig": "setSliderVisibleState(int objectID, bool state)",
+    "line": 952
+   },
+   {
+    "sig": "setSliderLocatedState(int objectID, bool state)",
+    "line": 967
+   },
+   {
+    "sig": "pauseOrResumeShowHealthSliders(bool state)",
+    "line": 982
+   },
+   {
+    "sig": "pauseOrResumeShowHealthSlidersFromEditor(bool state)",
+    "line": 993
+   },
+   {
+    "sig": "getPlayerGameObject()",
+    "line": 1000
+   },
+   {
+    "sig": "setShowSlidersActiveState(bool state)",
+    "line": 1005
+   },
+   {
+    "sig": "setShowSlidersActiveStateFromEditor(bool state)",
+    "line": 1010
+   }
+  ]
+ },
+ {
+  "type": "characterDamageReceiver",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Health\\characterDamageReceiver.cs",
+  "methods": [
+   {
+    "sig": "setDamage(float amount, Vector3 fromDirection, Vector3 damagePos, GameObject bulletOwner, GameObject projectile, bool damageConstant, bool searchClosestWeakSpot, bool ignoreDamageInScreen, bool damageCanBeBlocked, bool canActivateReactionSystemTemporally, int damageReactionID, int damageTypeID)",
+    "line": 33
+   },
+   {
+    "sig": "setHeal(float amount)",
+    "line": 46
+   },
+   {
+    "sig": "getMaxHealthAmount()",
+    "line": 56
+   },
+   {
+    "sig": "getAuxHealthAmount()",
+    "line": 61
+   },
+   {
+    "sig": "addAuxHealthAmount(float amount)",
+    "line": 66
+   },
+   {
+    "sig": "getHealthAmountToLimit()",
+    "line": 71
+   },
+   {
+    "sig": "isApplyForceOnThisObjectIfDetectedActive()",
+    "line": 76
+   },
+   {
+    "sig": "compareObjectTag(string tagToCompare)",
+    "line": 81
+   },
+   {
+    "sig": "killCharacter(GameObject projectile, Vector3 direction, Vector3 position, GameObject attacker, bool damageConstant)",
+    "line": 91
+   },
+   {
+    "sig": "getDecalImpactIndex()",
+    "line": 97
+   },
+   {
+    "sig": "isCharacterDead()",
+    "line": 102
+   },
+   {
+    "sig": "setCharacter(GameObject characterGameObject, health currentHealth)",
+    "line": 108
+   },
+   {
+    "sig": "setDamageMultiplierValue(float newValue)",
+    "line": 121
+   },
+   {
+    "sig": "setDamageTargetOverTimeState(float damageOverTimeDelay, float damageOverTimeDuration, float damageOverTimeAmount, float damageOverTimeRate, bool damageOverTimeToDeath, int damageTypeID)",
+    "line": 130
+   },
+   {
+    "sig": "removeDamagetTargetOverTimeState()",
+    "line": 135
+   },
+   {
+    "sig": "sedateCharacter(Vector3 position, float sedateDelay, bool useWeakSpotToReduceDelay, bool sedateUntilReceiveDamage, float sedateDuration)",
+    "line": 140
+   },
+   {
+    "sig": "getHealthManager()",
+    "line": 145
+   },
+   {
+    "sig": "getShieldAmountToLimit()",
+    "line": 163
+   },
+   {
+    "sig": "addAuxShieldAmount(float amount)",
+    "line": 168
+   },
+   {
+    "sig": "setShield(float amount)",
+    "line": 173
+   },
+   {
+    "sig": "characterIsOnRagdollState()",
+    "line": 178
+   },
+   {
+    "sig": "getTransformToAttachWeaponsByClosestPosition(Vector3 positionToCheck)",
+    "line": 183
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 359
+   }
+  ]
+ },
+ {
+  "type": "damageHitReactionSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Health\\damageHitReactionSystem.cs",
+  "methods": [
+   {
+    "sig": "checkDamageReceived(float damageReceived, Vector3 damagePosition, GameObject objectBlocked)",
+    "line": 78
+   },
+   {
+    "sig": "checkDamageReceivedTemporally(float damageReceived, Vector3 damagePosition, GameObject objectBlocked)",
+    "line": 91
+   },
+   {
+    "sig": "checkDamageBlocked(float damageReceived, float originalDamageAmountReceived, Vector3 damagePosition, bool damageBlocked, GameObject objectBlocked)",
+    "line": 104
+   },
+   {
+    "sig": "checkDamageReceivedUnblockable(float damageReceived, Vector3 damagePosition, GameObject objectBlocked)",
+    "line": 117
+   },
+   {
+    "sig": "checkReactionToTriggerExternally(float damageReceived, Vector3 damagePosition, GameObject objectBlocked)",
+    "line": 130
+   },
+   {
+    "sig": "activateDamageReactionByID(float damageReceived, Vector3 damagePosition, GameObject objectBlocked, int damageReactionID)",
+    "line": 143
+   },
+   {
+    "sig": "checkDamageStateTemporally(float damageReceived, bool damageBlockedByShieldSystem)",
+    "line": 501
+   },
+   {
+    "sig": "setHitReactionActiveState(bool state)",
+    "line": 541
+   },
+   {
+    "sig": "getHitReactionActiveState()",
+    "line": 546
+   },
+   {
+    "sig": "setHitReactionBlockIDValue(int newBlockID)",
+    "line": 551
+   },
+   {
+    "sig": "setPerfectBlockDuration()",
+    "line": 597
+   },
+   {
+    "sig": "setCurrentReactionCategory(string newCategory)",
+    "line": 626
+   },
+   {
+    "sig": "setNewProbabilityToActivateReactionMultiplierValue(float newValue)",
+    "line": 631
+   },
+   {
+    "sig": "setHitReactionsEnabledState(bool state)",
+    "line": 640
+   },
+   {
+    "sig": "setDamageReactionPausedState(bool state)",
+    "line": 645
+   },
+   {
+    "sig": "isDamageReactionPaused()",
+    "line": 650
+   },
+   {
+    "sig": "setIgnoreParryActiveState(bool state)",
+    "line": 655
+   },
+   {
+    "sig": "setHitReactionsEnabledStateFromEditor(bool state)",
+    "line": 660
+   }
+  ]
+ },
+ {
+  "type": "applyEffectOnArea",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Health\\applyEffectOnArea.cs",
+  "methods": [
+   {
+    "sig": "checkEffectToDetectedObjects()",
+    "line": 151
+   },
+   {
+    "sig": "applyEffect(GameObject objectToAffect)",
+    "line": 164
+   },
+   {
+    "sig": "checkApplyEffectOnExit(GameObject objectToAffect)",
+    "line": 171
+   },
+   {
+    "sig": "applyEffectOnStats()",
+    "line": 176
+   },
+   {
+    "sig": "setObjectToCheckManually(GameObject objectToCheck)",
+    "line": 185
+   },
+   {
+    "sig": "checkObjectsWithOverlap()",
+    "line": 208
+   },
+   {
+    "sig": "checkTriggerInfo(Collider col, bool isEnter)",
+    "line": 226
+   },
+   {
+    "sig": "toggleEffectActive()",
+    "line": 381
+   },
+   {
+    "sig": "setEffectActiveState(bool state)",
+    "line": 386
+   },
+   {
+    "sig": "removeDetectedObject(GameObject objectToRemove)",
+    "line": 425
+   },
+   {
+    "sig": "setEffectActiveStateWithDuration()",
+    "line": 454
+   }
+  ]
+ },
+ {
+  "type": "setHealthCustomWeakSpotID",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Health\\setHealthCustomWeakSpotID.cs",
+  "methods": [
+   {
+    "sig": "setHealthCustomWeakSpotIDByName(string newName)",
+    "line": 29
+   },
+   {
+    "sig": "enableOrDisableCustomStateInfo(bool state, string newName)",
+    "line": 72
+   },
+   {
+    "sig": "enableCustomStateInfo(string newName)",
+    "line": 83
+   },
+   {
+    "sig": "disableCustomStateInfo(string newName)",
+    "line": 88
+   },
+   {
+    "sig": "setHealthCustomWeakSpotEnabledState(bool state)",
+    "line": 93
+   },
+   {
+    "sig": "setHealthCustomWeakSpotIgnoreActiveState(bool state)",
+    "line": 98
+   },
+   {
+    "sig": "setHealthCustomWeakSpotEnabledStateFromEditor(bool state)",
+    "line": 104
+   },
+   {
+    "sig": "enableCustomStateInfoFromEditor(string newName)",
+    "line": 111
+   },
+   {
+    "sig": "disableCustomStateInfoFromEditor(string newName)",
+    "line": 118
+   }
+  ]
+ },
+ {
+  "type": "playerDamageOnScreenInfoSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Health\\playerDamageOnScreenInfoSystem.cs",
+  "methods": [
+   {
+    "sig": "addNewTarget(damageOnScreenInfoSystem.targetInfo newTarget)",
+    "line": 249
+   },
+   {
+    "sig": "setDamageInfo(int targetIndex, float amount, bool isDamage, Vector3 direction, float healthAmount, float criticalDamageProbability)",
+    "line": 344
+   },
+   {
+    "sig": "createCriticalDamageText(damageOnScreenInfoSystem.targetInfo currentTargetInfoToCheck, Vector3 movementDirection)",
+    "line": 433
+   },
+   {
+    "sig": "removeElementFromList(int objectID)",
+    "line": 459
+   },
+   {
+    "sig": "removeElementFromListByPlayer(int objectID)",
+    "line": 480
+   },
+   {
+    "sig": "getRandomDirection()",
+    "line": 578
+   },
+   {
+    "sig": "setShowDamageActiveState(bool state)",
+    "line": 583
+   },
+   {
+    "sig": "setIgnoreShowDamageInfoActiveState(bool state)",
+    "line": 588
+   }
+  ]
+ },
+ {
+  "type": "damageScreenSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Health\\damageScreenSystem.cs",
+  "methods": [
+   {
+    "sig": "checkHealthState()",
+    "line": 239
+   },
+   {
+    "sig": "setDamageDirectionWithDamageScreen(GameObject enemy)",
+    "line": 258
+   },
+   {
+    "sig": "setDamageDirectionWithoutDamageScreen(GameObject enemy)",
+    "line": 263
+   },
+   {
+    "sig": "setDamageDir(GameObject enemy, bool showDamageImageValue)",
+    "line": 269
+   },
+   {
+    "sig": "setUsedByAIState(bool state)",
+    "line": 325
+   },
+   {
+    "sig": "setDamageScreenEnabledState(bool state)",
+    "line": 330
+   },
+   {
+    "sig": "updateScreenValues()",
+    "line": 335
+   },
+   {
+    "sig": "setDamageScreenEnabledStateFromEditor(bool state)",
+    "line": 341
+   }
+  ]
+ },
+ {
+  "type": "damageOnScreenInfoSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Health\\damageOnScreenInfoSystem.cs",
+  "methods": [
+   {
+    "sig": "getComponentInstance()",
+    "line": 38
+   },
+   {
+    "sig": "addNewPlayer(playerDamageOnScreenInfoSystem newPlayer)",
+    "line": 61
+   },
+   {
+    "sig": "addNewTarget(Transform newTarget, bool removeDamageInScreenOnDeathValue, Vector3 iconOffset)",
+    "line": 84
+   },
+   {
+    "sig": "setDamageInfo(int objectId, float amount, bool isDamage, Vector3 direction, float healhtAmount, float criticalDamageProbability)",
+    "line": 112
+   },
+   {
+    "sig": "removeElementFromList(int objectId)",
+    "line": 130
+   },
+   {
+    "sig": "removeElementFromTargetListCalledByPlayer(int objectId, GameObject currentPlayer)",
+    "line": 148
+   }
+  ]
+ },
+ {
+  "type": "damageInScreen",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Health\\damageInScreen.cs",
+  "methods": [
+   {
+    "sig": "showScreenInfo(float amount, bool damage, Vector3 direction, float healthAmount, float criticalDamageProbability)",
+    "line": 43
+   },
+   {
+    "sig": "pauseOrPlayDamageInScreen(bool state)",
+    "line": 55
+   },
+   {
+    "sig": "setShowScreenInfoEnabledState(bool state)",
+    "line": 60
+   },
+   {
+    "sig": "setShowScreenInfoEnabledStateFromEditor(bool state)",
+    "line": 65
+   },
+   {
+    "sig": "initializeDamageInScreenComponent()",
+    "line": 72
+   }
+  ]
+ },
+ {
+  "type": "externalDamageProperties",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Health\\externalDamageProperties.cs",
+  "methods": [
+   {
+    "sig": "setDamageOwner(GameObject newOwner)",
+    "line": 11
+   }
+  ]
+ },
+ {
+  "type": "destroyableObject",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Health\\destroyableObject.cs",
+  "methods": [
+   {
+    "sig": "destroyObject()",
+    "line": 214
+   }
+  ]
+ },
+ {
+  "type": "damageOrHealTrigger",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Health\\damageOrHealTrigger.cs",
+  "methods": [
+   {
+    "sig": "isInTagToAffectList(GameObject objectToCheck)",
+    "line": 255
+   }
+  ]
+ }
+]

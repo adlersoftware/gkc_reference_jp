@@ -1,0 +1,177 @@
+[
+ {
+  "type": "craftingPlacementSystem",
+  "summary": "カメラからのレイキャストで設置位置を決め、プレビュー生成・回転・設置確定・ステーション接続を扱う。設置中はコルーチンで毎フレーム位置を更新する。",
+  "methods": {
+   "stopUpdateCoroutine()": "実行中の`updateCoroutine`を`StopCoroutine`で止めるだけ。",
+   "confirmToPlaceObject()": "選択中オブジェクトを1個消費してプレビュー位置に生成し、設置イベント通知と表面への親子付けを行い、プレビューを破棄する。",
+   "setCurrentObjectToPlaceMesh(GameObject newObject)": "`newObject`を複製して配置プレビューに設定し、位置オフセット・配置レイヤー・回転可否・境界を取得する。",
+   "setOriginalPlacementActivePausedState()": "`Start`で保存した元の`placementActivePaused`状態を復元するだけ。",
+   "setPlacementActivePausedState(bool state)": "同じ値なら何もせず、解除時は配置中なら配置モードを終了してから`placementActivePaused`を更新する。",
+   "isPlacementActivePaused()": "`placementActivePaused`を返すだけ。",
+   "setPlacementActiveState(bool state)": "配置モードの開始/終了に伴い、イベント・入力一時停止・全ソケットのライン表示・接続選択状態をまとめて更新する。",
+   "checkInputListToPauseDuringAction(bool state)": "登録入力リストをtrueで状態保存して無効化し、falseで有効だった入力だけ復帰させる。",
+   "inputRotateObjectToRightOrLeft(bool state)": "配置中のみ`currentObjectRighRotation`を±90度して270度で折り返し、プレビューをY軸回転する。",
+   "inputRotateObjectToUpOrDown(bool state)": "配置中のみ`currentObjectForwardRotation`を±90度して270度で折り返し、プレビューをX軸回転する。",
+   "inputConfirmToPlaceObject()": "取り戻し待ちなら前回のオブジェクトをプレビューに再設定し、そうでなければ`confirmToPlaceObject`を実行する。",
+   "inputConfirmToTakeObjectBackToInventory()": "注視先の設置オブジェクトを検出し、回収可否を確認してインベントリへ戻し、最後に戻した名前を記録する。",
+   "setIgnoreDisablePlacementActiveOnCancelInputActionActiveState(bool state)": "`ignoreDisablePlacementActiveOnCancelInputActionActive`を設定するだけ。",
+   "setTogglePlacementActiveOnCancelInputActionActiveState(bool state)": "`togglePlacementActiveOnCancelInputActionActive`を設定するだけ。",
+   "inputCancelPlaceObject()": "プレビューがあれば破棄して戻り、なければ無視/トグル設定に従い`mainCraftingSystem`の配置モードを終了する。",
+   "inputConfirmToAttachObjectToSurfaceDetected()": "取り戻し中でなければ表面取付フラグを一時的に立てて`inputConfirmToPlaceObject`を呼ぶ。",
+   "inputCheckConnectStationInput()": "レイキャストで2つのステーションを選び、接続可否を判定してソケット割当・相互リスト登録・状態チェックを行う。",
+   "inputCheckRemoveStationInput()": "接続操作中ならライン非表示と選択解除のみ、そうでなければ注視先ステーションの接続を解除する。",
+   "inputSelectNextObjectForPlacement()": "有効かつ配置中なら`selectNextOrPreviousObjectForPlacement(true)`を呼ぶだけ。",
+   "inputSelectPreviousObjectForPlacement()": "有効かつ配置中なら`selectNextOrPreviousObjectForPlacement(false)`を呼ぶだけ。"
+  }
+ },
+ {
+  "type": "craftingStationSystem",
+  "summary": "入出力`craftingSocket`・接続先ステーション一覧・エネルギー供給元を保持する基底クラス。状態変化フックは`virtual`の空実装で、派生クラスが上書きする。",
+  "methods": {
+   "setInputSocket(craftingSocket newSocket)": "入力ソケットが有効なら`inputSocket`を設定し、接続イベントと`checkStateOnSetInput`を実行する。",
+   "removeInputSocket()": "入力有効時のみ`inputSocket`をnullにして状態チェックと削除イベントを実行する。",
+   "setOutputSocket(craftingSocket newSocket)": "`inputSockedEnabled`時のみ`outputSocket`を設定し、接続イベントと状態チェックを実行する。",
+   "removeOutputSocket()": "`inputSockedEnabled`時のみ出力をnullにし、状態チェックと削除イベントを実行する。",
+   "sendEnergyValue(float newAmount)": "本体が空で何もしない。",
+   "setInfiniteEnergyState(bool state)": "`useInfiniteEnergy`を設定するだけ。",
+   "checkStateOnSetInput()": "本体が空で何もしない。",
+   "checkStateOnSetOuput()": "本体が空で何もしない。",
+   "checkStateOnRemoveInput()": "本体が空で何もしない。",
+   "checkStateOnRemoveOuput()": "本体が空で何もしない。",
+   "setCurrentEnergyStationSystem(energyStationSystem newEnergyStationSystem)": "エネルギー供給元を設定して`energyStationAssigned`を更新し、状態変化チェックを呼ぶ。",
+   "checkEnergyStationOnStateChange()": "本体が空で何もしない。",
+   "checkStateOnTakeObjectBack()": "出力・入力ソケットの接続先に解除チェックを伝播し、自身の入力・出力解除チェックも実行する。",
+   "getStationName()": "`stationName`を返すだけ。",
+   "addCraftingStationSystem(craftingStationSystem newCraftingStationSystem)": "`craftingStationSystemConnectedList`に未登録なら追加するだけ。",
+   "removeCraftingStationSystem(craftingStationSystem newCraftingStationSystem)": "`craftingStationSystemConnectedList`に含まれていれば取り除くだけ。",
+   "clearCraftingStationSystemList()": "`craftingStationSystemConnectedList`を空にするだけ。"
+  }
+ },
+ {
+  "type": "energyStationSystem",
+  "summary": "`craftingStationSystem`を継承したエネルギー供給ステーション。時間経過でエネルギーを消費・再充填し、出力接続先へ現在量と無限エネルギー状態を伝える。",
+  "methods": {
+   "stopUpdateCoroutine()": "実行中の`updateCoroutine`を`StopCoroutine`で止めるだけ。",
+   "getCurrentEnergyAmount()": "`currentEnergyAmount`を返すだけ。",
+   "getEnergyName()": "`energyName`を返すだけ。",
+   "setEnergyActiveState(bool state)": "`energyActive`を設定し、trueで更新コルーチン停止、falseで開始して補充・使用中フラグを下ろす。",
+   "refillAllEnergy()": "`setCurrentEnergyAmount`で最大量まで補充するだけ。",
+   "removeAllEnergy()": "`setCurrentEnergyAmount`で0にするだけ。",
+   "setCurrentEnergyAmount(float newAmount)": "現在量を設定し、`checkEnergyAmountState`で上限・下限をクランプして空/補充イベントを発火する。",
+   "addOrRemoveToCurrentEnergyAmount(float newAmount)": "現在量に`newAmount`を加算し、上限・下限クランプと空/補充イベント判定を行う。",
+   "setEnergyInUseState(bool state)": "`energyInUse`を設定するだけ。",
+   "checkEventOnEmptyEnergy()": "出力ソケット必須設定で未接続なら中断し、`useEventsOnEmptyEnergy`なら空イベントを発火する。",
+   "checkEventOnRefilledEnergy()": "出力ソケット必須設定で未接続なら中断し、`useEventsOnRefilledEnergy`なら補充イベントを発火する。"
+  }
+ },
+ {
+  "type": "materialsZoneSystem",
+  "summary": "採取可能な素材量を素材ごとに持つゾーン。採取で残量が減り、空になると無効化と任意の遅延再補充を行い、外部要素からの採取も処理する。",
+  "methods": {
+   "setMaterialsZoneExtractionInProcessState(bool state)": "採取中ステーション数を増減してフラグを更新し、採取開始時に満杯なら残量を数えて`materialsZoneFull`を解除する。",
+   "getRemainMaterialsAmount()": "`materialZoneInfoList`の素材量を合計して`remainMaterialsAmount`に格納し返す。",
+   "setMaterialsZoneFullState(bool state)": "フラグを設定し、trueなら全素材を最大量に戻して有効化し、補充イベントを発火する。",
+   "isMaterialsZoneEnabled()": "`materialsZoneEnabled`を返すだけ。",
+   "setMaterialsZoneEmptyState(bool state)": "素材が残っていれば空状態を解除し、完全に空なら空イベント発火・無効化・遅延再補充コルーチン開始を行う。",
+   "isMaterialsZoneEmpty()": "`materialsZoneEmpty`を返すだけ。",
+   "isCanBeExtractedByExternalElementsEnabled()": "`canBeExtractedByExternalElementsEnabled`を返すだけ。",
+   "getMaterialZoneID()": "`materialZoneID`を返すだけ。",
+   "stopRefillMaterialsZoneCoroutine()": "再補充コルーチンを停止し`refillInProcess`をfalseにするだけ。",
+   "checkMaterialZoneToExtractExternally()": "空でなければ各素材を採取量分減らして在庫オブジェクトを生成・散布し、全素材が尽きたら空状態にする。"
+  }
+ },
+ {
+  "type": "materialExtractionStationSystem",
+  "summary": "`craftingStationSystem`を継承した採取ステーション。周囲の`materialsZoneSystem`を探して一定間隔で素材を在庫バンクかスポーンで取り出し、エネルギー消費と供給元を扱う。",
+  "methods": {
+   "toggleExtraction()": "`setExtractionActiveState(!stationActive)`を呼ぶだけ。",
+   "setExtractionActiveState(bool state)": "開始時はエネルギー確認後に周囲ゾーンを探索し、停止時はコルーチン停止と各ゾーンの採取中フラグ解除を行う。",
+   "stopUpdateCoroutine()": "実行中の`updateCoroutine`を`StopCoroutine`で止めるだけ。",
+   "addEnergy(float newValue)": "エネルギー制なら量を加算して上限でクランプし、満タンなら補充イベント、未満なら充電イベントを発火する。",
+   "refullEnergy()": "`addEnergy`に最大量を渡して満タンにするだけ。",
+   "removeEnergySource()": "エネルギー供給バンクを外し、現在量を無限設定なら1、通常は0にする。",
+   "getCurrentEnergyAmount()": "`currentEnergyAmount`を返すだけ。",
+   "getMaxEnergyAmount()": "`maxEnergyAmount`を返すだけ。",
+   "setEnergySource(inventoryBankSystem newBank)": "`inventoryBankEnergySource`を設定して`energySourceLocated`を更新するだけ。",
+   "canExtractMaterial(string materialName)": "カスタム素材限定なら`customMaterialListToExtract`に含まれるかを返し、限定なしならtrueを返す。"
+  }
+ },
+ {
+  "type": "craftedObjectPlacedHelper",
+  "summary": "設置済みオブジェクトに付く補助コンポーネント。設置/回収イベント、設置状態、回収可否、ステーション接続解除の伝播を提供する。",
+  "methods": {
+   "getObjectName()": "`objectName`を返すだけ。",
+   "getObject()": "`mainGameObject`を返すだけ。",
+   "checkEventsOnStateChange(bool state)": "イベント有効時のみ、trueで設置イベント、falseで回収イベントを発火する。",
+   "checkStateOnTakeObjectBack()": "`mainGameObject`に`craftingStationSystem`があれば、その回収時状態チェックを呼ぶ。",
+   "checkEventsOnStateChangeWithPlayer(bool state, GameObject currentPlayer)": "プレイヤー付きイベント有効時のみ、設置/回収イベントに`currentPlayer`を渡して発火する。",
+   "setObjectPlacedState(bool state)": "`objectPlaced`を設定するだけ。",
+   "isObjectPlaced()": "`objectPlaced`を返すだけ。",
+   "setObjectCanBeTakenBackToInventoryEnabledState(bool state)": "`objectCanBeTakenBackToInventoryEnabled`を設定するだけ。",
+   "isObjectCanBeTakenBackToInventoryEnabled()": "`objectCanBeTakenBackToInventoryEnabled`を返すだけ。"
+  }
+ },
+ {
+  "type": "craftingSocket",
+  "summary": "ステーションの入出力を表すソケット。接続先ステーションと、`LineRenderer`による接続線の表示・端点更新を管理する。",
+  "methods": {
+   "assignCraftingStationSystem(craftingStationSystem newCraftingStationSystem)": "接続先ステーションを設定し、`checkIfSocketAssigned`で割当状態を更新する。",
+   "removeCraftingStationSystem()": "`currentCraftingStationSystemAssigned`をnullにするだけ。",
+   "checkIfSocketAssigned()": "接続先がnullかどうかで`socketAssigned`を更新するだけ。",
+   "enableOrDisableLineRenderer(bool state)": "`mainLineRenderer`があり状態が異なる場合のみ`enabled`を設定するだけ。",
+   "enableLineRendererIfSocketAssigned()": "ソケット割当済みなら`LineRenderer`を有効にするだけ。",
+   "updateLinerenderPositions()": "`currentTargetTransform`があれば、その位置を終点としてラインを更新する。",
+   "setLineRendererTargetPosition(Vector3 targetPosition)": "ラインの始点を自身の位置、終点を指定座標に設定するだけ。",
+   "setLineRendererTargetPosition(Transform targetTransform)": "`currentTargetTransform`を保存し、ラインの始点を自身、終点を対象位置に設定する。"
+  }
+ },
+ {
+  "type": "simpleBreakObject",
+  "summary": "破壊可能オブジェクト。爆発ダメージ・破片生成・フェード・死亡処理・イベントをまとめて実行し、`fixBrokenObject`で破壊前の状態に戻せる。",
+  "methods": {
+   "fixBrokenObject()": "非表示にしたコライダー/メッシュや対象を復帰させ、`isKinematic`を戻して`broken`をfalseにする。",
+   "activateBreakObject()": "本体を無効化して爆発・破片生成・死亡処理・破壊イベントを実行し、`broken`を立ててフェードを開始する。",
+   "setCanBreakStatePaused(bool state)": "`canBreakStatePaused`を設定するだけ。",
+   "setObjectOwner(GameObject newObject)": "`objectOwner`を設定するだけ。",
+   "waitToBreak()": "`explosionDelay`が正なら待機してから、0なら即座に`activateBreakObject`を実行する。",
+   "setExplosionValues(float force, float radius)": "`explosionForce`と`damageRadius`を設定するだけ。"
+  }
+ },
+ {
+  "type": "craftingWorkbenchSystem",
+  "summary": "作業台。プレイヤーの`craftingSystem`に自身を現在の作業台として登録し、クラフト画面の開放/終了と在庫バンクへの格納を扱う。",
+  "methods": {
+   "activateWorkbench(GameObject currentPlayer)": "`currentPlayer`の`craftingSystem`に自身を作業台として登録し、作業台経由のクラフト画面を開く。",
+   "deactivateWorkBench(GameObject currentPlayer)": "`currentPlayer`の作業台登録を解除し、作業台経由のクラフト画面を閉じる。",
+   "addInventoryObjectByName(string objectName, int amountToMove)": "`mainInventoryBankSystem`にオブジェクト名と数量を渡して追加するだけ。",
+   "checkEventToStopUsingWorkbenchOnDamageReceived()": "`eventToStopUsingWorkbenchOnDamageReceived`を発火するだけ。",
+   "getWorkbenchID()": "`workbenchID`を返すだけ。"
+  }
+ },
+ {
+  "type": "processStationSystem",
+  "summary": "`craftingStationSystem`を継承した加工ステーション。素材バンクの素材をブループリントの加工情報に従って加工品バンクへ変換し、エネルギーを消費する。",
+  "methods": {
+   "toggleProcessStation()": "`setStationActiveState(!stationActive)`を呼ぶだけ。",
+   "setStationActiveState(bool state)": "稼働状態を切り替え、エネルギー供給判定とブループリント取得を行い、稼働中のみ更新コルーチンを動かす。",
+   "stopUpdateCoroutine()": "実行中の`updateCoroutine`を`StopCoroutine`で止めるだけ。",
+   "getProcessMaterialInfoByName(string objectName)": "ブループリントから名前一致かつ加工名リストに含まれる加工情報を探して返し、なければnullを返す。"
+  }
+ },
+ {
+  "type": "materialExtractionStationUISystem",
+  "summary": "採取ステーションのUI。ゾーン数・各ゾーン残量・エネルギー量のテキストを更新し、稼働中はコルーチンで追従する。",
+  "methods": {
+   "setExtractionActiveState(bool state)": "稼働状態を切り替えて更新コルーチンを停止し、開始時は再開、停止時はエネルギー表示を更新する。",
+   "stopUpdateCoroutine()": "実行中の`updateCoroutine`を`StopCoroutine`で止めるだけ。"
+  }
+ },
+ {
+  "type": "craftingZoneSystem",
+  "summary": "トリガーゾーン。タグ一致のプレイヤーが出入りした際に、配置モードの一時停止状態を切り替える。",
+  "methods": {
+   "checkTriggerInfo(Collider col, bool isEnter)": "タグ一致時のみ、入場でゾーン設定を反転した一時停止状態にし、退場で保存済みの元状態に戻す。"
+  }
+ }
+]

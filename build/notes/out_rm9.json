@@ -1,0 +1,274 @@
+[
+  {
+    "type": "tagLayerSystem",
+    "summary": "Unityエディタ専用（`#if UNITY_EDITOR`）で、ProjectSettings/TagManagerのタグとレイヤーを追加・削除し、一覧を再取得する補助コンポーネント。",
+    "methods": {
+      "addTag(string tagToAdd)": "TagManagerに未登録なら`tagToAdd`をタグに追加し、`tagList`を再取得してエディタを更新する。",
+      "removeTag(string tagToRemove)": "`tagToRemove`と同名のタグをTagManagerから削除し、`tagList`を再取得してエディタを更新する。",
+      "addTagList(List<string> tagListToAdd)": "`tagListToAdd`の各要素を`addTag`で追加した後、エディタを更新する。",
+      "addCurrentTagList()": "`tagList`を`temporalTagList`に複製し、`addTagList`でまとめて追加する。",
+      "getTagList()": "`tagList`を空にしてTagManagerのタグ名を全件詰め直し、エディタを更新する。",
+      "addLayer(string layerToAdd)": "8番目以降の空きレイヤー枠に`layerToAdd`を書き込み、`layerList`を再取得して更新する。",
+      "removeLayer(string layerToRemove)": "`layerToRemove`と同名のレイヤーをTagManagerから削除し、`layerList`を再取得して更新する。",
+      "addLayerList(List<string> layerListToAdd)": "8番目以降の枠へ`layerListToAdd`を順番に上書きし、`layerList`を再取得して更新する。",
+      "addCurrentLayerList()": "`layerList`を`temporalLayerList`に複製し、`addLayerList`でまとめて書き込む。",
+      "getLayerList()": "`layerList`を空にし、8番目以降のレイヤー名を詰め直してエディタを更新する。",
+      "updateEditor()": "`GKC_Utils.updateComponent`でこのコンポーネントのインスペクタ表示を更新するだけ。"
+    }
+  },
+  {
+    "type": "GKCUIManager",
+    "summary": "名前付きUI要素のリストをまとめて、または個別に有効/無効化し、名前検索やエディタ上での選択も行うUI管理コンポーネント。",
+    "methods": {
+      "enableAllUIElement()": "`UIElementInfoList`の全UI要素を有効化する。",
+      "disableAllUIElement()": "`UIElementInfoList`の全UI要素を無効化する。",
+      "enableOrDisableAllUIElement(bool state)": "各要素名を指定して`enableOrDisableUIElement`を`state`で呼び出す。",
+      "enableUIElement(string objectName)": "`objectName`のUI要素を有効化する。",
+      "disableUIElement(string objectName)": "`objectName`のUI要素を無効化する。",
+      "enableOrDisableUIElement(string objectName, bool state)": "`objectName`の要素を`state`にしてGameObjectを切り替え、対応イベントを発火して保存する。",
+      "clearObjectsSearcResultList()": "検索結果リストを空にし、検索名と`searchObjectsActive`をリセットする。",
+      "showObjectsBySearchName()": "検索名を小文字化し、名前と追加タグの部分一致を`objectSearchResultList`に詰める。",
+      "selectObjectByName(string objectName)": "`objectName`に一致する要素のインデックスを`selectObjectByIndex`に渡す。",
+      "selectObjectByIndex(int index)": "`index`番の要素の`UIGameObject`をエディタ上で選択状態にする。"
+    }
+  },
+  {
+    "type": "railMechanism",
+    "summary": "レール上のオブジェクトを最終位置や停止位置へ補間移動させ、接続イベントやレール使用状態を管理するコンポーネント。",
+    "methods": {
+      "checkToDropObjectOnRail()": "`objectOnRail`の`grabbedObjectState`があれば、保持者からオブジェクトをドロップさせる。",
+      "engaged()": "接続イベントを発火し、`activated`をtrueにしてタグを`Untagged`にする。",
+      "resetPosition(Transform targetTransform, float resetMovementSpeed, bool enganeAfterCoroutine)": "リセットを止め、`targetTransform`まで`resetMovementSpeed`で移動するコルーチンを開始する。",
+      "stopResetCoroutine()": "実行中の`resetCoroutine`があれば停止するだけ。",
+      "setUsingRailState(bool state)": "`usingRail`を更新し、離脱時は初期位置へ戻し、状態に応じて使用/ドロップイベントを発火する。",
+      "getDisplaceRailSpeed()": "`displaceRailSpeed`を返すだけ。",
+      "engageRailAutomatically()": "オブジェクトをドロップさせ、最終位置へ移動した後に自動で`engaged`にする。",
+      "setReducedVelocity(float newMultiplierValue)": "`multiplierValue`を`newMultiplierValue`にし、初期位置へ戻すリセットを開始する。",
+      "setNormalVelocity()": "`multiplierValue`を初期値`originalMultiplierValue`に戻すだけ。",
+      "setMechanismCanBeEngagedState(bool state)": "`mechanismCanBeEngaged`を`state`にするだけ。"
+    }
+  },
+  {
+    "type": "rotateObjectWithRegularUpdate",
+    "summary": "`Update`で毎フレーム`mainTransform`を`speed`と`direccion`に従って回転させ、停止や回転リセットも提供するコンポーネント。",
+    "methods": {
+      "enableOrDisableRotation()": "`rotationEnabled`を反転するだけ。",
+      "increaseRotationSpeedTenPercentage()": "`speed`を現在値の1.1倍に増やすだけ。",
+      "setRotationEnabledState(bool state)": "回転リセットのコルーチンを止めてから`rotationEnabled`を`state`にする。",
+      "disableRotation()": "`setRotationEnabledState(false)`を呼ぶだけ。",
+      "enableRotation()": "`setRotationEnabledState(true)`を呼ぶだけ。",
+      "resetRotation()": "回転コルーチンを止め、向きを`Quaternion.identity`へ補間するコルーチンを開始する。",
+      "stopRotation()": "実行中の`rotationCoroutine`があれば停止するだけ。",
+      "setRandomDirectionToCurrent()": "`direccion`にランダムで+1か-1を掛けて回転方向を反転または維持する。",
+      "setNewRotationSpeed(float newValue)": "`speed`を`newValue`にするだけ。",
+      "setEnabledState(bool state)": "コンポーネントの`enabled`を`state`にするだけ。"
+    }
+  },
+  {
+    "type": "rotateObjects",
+    "summary": "`FixedUpdate`で`mainTransform`を`speed`と`direccion`に従って回転させ、停止や回転リセットも提供する物理更新版コンポーネント。",
+    "methods": {
+      "enableOrDisableRotation()": "`rotationEnabled`を反転するだけ。",
+      "increaseRotationSpeedTenPercentage()": "`speed`を現在値の1.1倍に増やすだけ。",
+      "setRotationEnabledState(bool state)": "回転リセットのコルーチンを止めてから`rotationEnabled`を`state`にする。",
+      "disableRotation()": "`setRotationEnabledState(false)`を呼ぶだけ。",
+      "enableRotation()": "`setRotationEnabledState(true)`を呼ぶだけ。",
+      "resetRotation()": "回転コルーチンを止め、向きを`Quaternion.identity`へ補間するコルーチンを開始する。",
+      "stopRotation()": "実行中の`rotationCoroutine`があれば停止するだけ。",
+      "setRandomDirectionToCurrent()": "`direccion`にランダムで+1か-1を掛けて回転方向を反転または維持する。",
+      "setNewRotationSpeed(float newValue)": "`speed`を`newValue`にするだけ。",
+      "setEnabledState(bool state)": "コンポーネントの`enabled`を`state`にするだけ。"
+    }
+  },
+  {
+    "type": "simpleSpawnObjectManager",
+    "summary": "カテゴリ別のスポーン情報リストを持ち、名前指定でオブジェクトを出現させたり、有効状態やリモートイベントを切り替える管理コンポーネント。",
+    "methods": {
+      "setCurrentSpawnCategoryByName(string elementListName)": "`elementListName`のカテゴリを選択し、無ければ`defaultSpawnCategory`で選び直す。",
+      "activateSpawnObjectByName(string objectName)": "現在カテゴリ内で`objectName`を探し、有効ならその設定でオブジェクトをスポーンさせる。",
+      "setSpawnObjectEnabledStateByName(string objectName)": "`objectName`の`spawnObjectEnabled`をtrueにする。",
+      "setSpawnObjectDisabledStateByName(string objectName)": "`objectName`の`spawnObjectEnabled`をfalseにする。",
+      "setSpawnObjectEnabledStateByName(bool state, string objectName)": "カテゴリを確保した上で`objectName`の`spawnObjectEnabled`を`state`にする。",
+      "setSpawnManagerEnabledState(bool state)": "`spawnManagerEnabled`を`state`にするだけ。",
+      "enableRemoteEventState(string remoteEventName)": "`spawnName;eventName`形式の名前を分解し、該当オブジェクトのリモートイベントを有効にする。",
+      "disableRemoteEventState(string remoteEventName)": "`spawnName;eventName`形式の名前を分解し、該当オブジェクトのリモートイベントを無効にする。",
+      "enableAllRemoteEventStates(string spawnInfoNameToSearch)": "`spawnInfoNameToSearch`の`customSpawnObject`の全リモートイベントを有効にする。",
+      "disableAllRemoteEventStates(string spawnInfoNameToSearch)": "`spawnInfoNameToSearch`の`customSpawnObject`の全リモートイベントを無効にする。"
+    }
+  },
+  {
+    "type": "spiderControllerInterface",
+    "summary": "クモ型コントローラ（spider controller）とカメラ制御のやり取りを定義する、中身が空の`virtual`メソッドのみの基底クラス。",
+    "methods": {
+      "setGroundcheck(bool b)": "本体が空で何もしない（派生クラスでの上書き前提）。",
+      "walk(Vector3 direction)": "本体が空で何もしない。",
+      "run(Vector3 direction)": "本体が空で何もしない。",
+      "turn(Vector3 goalForward)": "本体が空で何もしない。",
+      "getGroundNormal()": "常に`Vector3.zero`を返すだけで、上書き用の`virtual`メソッド。",
+      "getCamTargetPosition()": "常に`Vector3.zero`を返すだけ。",
+      "getCamTargetRotation()": "常に`Quaternion.identity`を返すだけ。",
+      "setTargetPosition(Vector3 pos)": "本体が空で何もしない。",
+      "setTargetRotation(Quaternion rot)": "本体が空で何もしない。",
+      "getCameraTarget()": "常に`null`を返すだけ。"
+    }
+  },
+  {
+    "type": "FloatingObject",
+    "summary": "水面（`waterSurfaceSystem`）上でRigidbodyにボクセル単位の浮力を加え、水中の抵抗や外部力を処理する浮遊オブジェクト。",
+    "methods": {
+      "stopUpdateCoroutine()": "実行中の`updateCoroutine`があれば停止するだけ。",
+      "setWaterVolumeState(waterSurfaceSystem newWaterSurfaceSystem, bool state)": "`state`で水面判定を切り替え、有効化時は水面設定と密度・ボクセルを初期化して浮力コルーチンを開始する。",
+      "setNewGravityForce(Vector3 newValues)": "`gravityForce`を`newValues`にするだけ。",
+      "updateMaxBuoyancyForce()": "`mass / density`と水面の密度・重力から`maxBuoyancyForce`を再計算する。",
+      "setApplyBuoyancyActiveState(bool state)": "`applyBuoyancyActive`を`state`にするだけ。",
+      "checkObjectStateOnWater()": "本体が空の`virtual`メソッドで、更新ごとに派生先から呼ばれる。",
+      "checkObjectStateOnWaterEnterOrExit(bool state)": "本体が空の`virtual`メソッドで、入水・出水時に呼ばれる。",
+      "getMainCollider()": "`mainCollider`を返すだけ。"
+    }
+  },
+  {
+    "type": "checkCollisionType",
+    "summary": "衝突・トリガーの開始/終了/滞在を設定フラグで振り分け、UnityEventやSendMessageで外部へ通知する検出コンポーネント。",
+    "methods": {
+      "checkOnCollision(Collision col, bool isEnter)": "`isEnter`で衝突開始/終了を選び、条件が揃えばイベント送信と`active`の更新を行う。",
+      "checkTrigger(Collider col, bool isEnter)": "`isEnter`に応じてトリガー開始/終了のイベントとSendMessageを実行し、`active`をtrueにする。",
+      "checkTriggerOnState(Collider col)": "`OnTriggerStay`用に滞在中のイベントとSendMessageを実行し、`active`をtrueにする。",
+      "checkTriggerWithGameObject(GameObject obj, bool isEnter)": "`Collider`の代わりにGameObjectを受け取ってトリガーの開始/終了処理を行う。",
+      "callEvent(UnityEvent eventToCall)": "`eventToCall.Invoke()`を呼ぶだけ。",
+      "callEventWithObject(eventParameters.eventToCallWithGameObject eventToCall, GameObject objectToSend)": "`objectToSend`を引数に`eventToCall.Invoke`を呼ぶだけ。",
+      "setCheckCollisionsEnabledState(bool state)": "`checkCollisionsEnabled`を`state`にするだけ。",
+      "checkSendOnCollisionEnterInfoEvent(Collision collision)": "`sendOnCollisionEnterInfoEvent`が有効なら衝突情報イベントを発火する。"
+    }
+  },
+  {
+    "type": "dissolveObject",
+    "summary": "対象オブジェクトのマテリアルを溶かしシェーダーで徐々に消し、時間経過後に破棄するまでの演出を管理するコンポーネント。",
+    "methods": {
+      "stopDissolveCoroutine()": "`dissolveCoroutine`があれば停止するだけ。",
+      "activateDissolve(GameObject newOjectToDissolve)": "対象の種別（キャラ/乗り物/通常）を判定し、アウトラインを解除して溶解コルーチンを開始する。",
+      "destroyObject()": "`gameObjectList`や対象種別に応じてオブジェクトを即時に破棄する。",
+      "storeRenderElements()": "対象のRendererとマテリアルを集め、溶解用シェーダーとテクスチャ・色を適用して記録する。",
+      "setDissolveObjectEnabledState(bool state)": "`dissolveObjectEnabled`を`state`にするだけ。",
+      "setIgnoreDissolveObjectEnabledState(bool state)": "`ignoreDissolveObjectEnabled`を`state`にするだけ。",
+      "cancelDissolve()": "`objectToDissolveFound`をfalseにし、時間経過後なら元のシェーダーへ戻してコルーチンを止める。",
+      "setDissolveObjectEnabledStateFromEditor(bool state)": "状態を設定した上で`updateComponent`によりインスペクタを更新する。"
+    }
+  },
+  {
+    "type": "ignoreCollisionHelper",
+    "summary": "指定レイヤーやタグのオブジェクトとの衝突を`Physics.IgnoreCollision`で無視し、その記録と復帰・一時的な有効化を扱う補助コンポーネント。",
+    "methods": {
+      "setCollisionCheckEnabledState(bool state)": "`collisionCheckEnabled`を`state`にするだけ。",
+      "reactivateIgnoredCollisionsStored()": "保存した`objectsIgnoredList`の各コライダーとの衝突無視を解除し、リストを空にする。",
+      "clearObjectsIgnoredList()": "`objectsIgnoredList`を空にし、`objectsStored`をfalseにするだけ。",
+      "enableComponentTemporaryAndReactivateCollisionsStoredWithDelay(float duration)": "`duration`秒だけ衝突チェックを有効にし、同じ時間の後に衝突無視を解除する。",
+      "enableComponentTemporary(float duration)": "`duration`秒間だけ`collisionCheckEnabled`をtrueにする。",
+      "disableComponentTemporary(float duration)": "コルーチンを止めて`collisionCheckEnabled`をfalseにし、`duration`は使われない。",
+      "enableOrDisableComponentTemporary(bool state, float duration)": "`state`で即時に切り替え、trueなら`duration`秒後に自動で無効化する。",
+      "reactivateCollisionsStoredWithDelay(float duration)": "`duration`秒待ってから保存済みの衝突無視を解除するコルーチンを開始する。"
+    }
+  },
+  {
+    "type": "placeObjectInCameraEditorPositionSystem",
+    "summary": "エディタカメラからのレイキャストでオブジェクトを面上に配置し、回転・整列・接地スナップを操作する編集用コンポーネント。",
+    "methods": {
+      "moveObjects()": "エディタカメラの位置と前方へレイキャストし、`objectsToMoveList`を当たった面へ移動する。",
+      "snapToGrounSurface()": "自身（または`customObjectToSnap`）の上から下向きにレイを飛ばし、オブジェクトを地面へ吸着させる。",
+      "rotateObject(int direction)": "各オブジェクトをY軸回りに`direction * rotationAmount`度回転させる。",
+      "resetObjectRotation()": "各オブジェクトの回転を`Quaternion.identity`に戻す。",
+      "addObjectToList(GameObject newObject)": "`newObject`がnullでなく未登録なら`objectsToMoveList`に追加する。",
+      "setDefaultLayermask()": "`layerToPlaceElements`にDefaultとTerrainのレイヤーを追加する。",
+      "selectObject()": "`objectToSelect`がnullでなければエディタ上で選択状態にする。",
+      "setOffsetFromRendererBound()": "`positionOffset.y`が0のとき、Rendererの高さ半分を縦オフセットに設定する。"
+    }
+  },
+  {
+    "type": "followObjectPositionSystem",
+    "summary": "`FixedUpdate`で`objectToFollow`の位置と回転を自身（または`mainTransform`）へ同期する追従コンポーネント。",
+    "methods": {
+      "setFollowObjectActiveState(bool state)": "`followObjectActive`を`state`にするだけ。",
+      "setEnabledState(bool state)": "コンポーネントの`enabled`を`state`にするだけ。",
+      "enabledStateAndUpdatePositionOnce()": "コンポーネントを有効化し、`updatePositionOnce`で一度だけ位置を合わせる。",
+      "updatePositionOnce()": "`objectToFollow`があれば、追従フラグに従って位置と回転を一度だけコピーする。",
+      "setObjectToFollow(Transform newObject)": "`objectToFollow`を`newObject`にするだけ。",
+      "setObjectToFollowFromEditor(Transform newObject)": "追従対象を設定した上で`updateComponent`によりシーンを更新する。",
+      "updateComponent()": "`GKC_Utils.updateComponent`と`updateDirtyScene`でインスペクタとシーンを更新する。"
+    }
+  },
+  {
+    "type": "objectOnWater",
+    "summary": "`FloatingObject`が継承する水面オブジェクト用の基底クラスで、中身が空の`virtual`メソッドのみを定義する。",
+    "methods": {
+      "updateExternalForces(Vector3 newValues, bool externalForcesActiveValue)": "本体が空で何もしない（派生クラスでの上書き前提）。",
+      "isObjectOnWaterActive()": "常にfalseを返すだけ。",
+      "updateExternalRotationForces(float rotationAmount, Vector3 rotationAxis, Vector3 externalRotationForcePoint)": "本体が空で何もしない。",
+      "getDensity()": "常に-1を返すだけ。",
+      "setNewDensity(float newValue)": "本体が空で何もしない。",
+      "addOrRemoveDensity(float newValue)": "本体が空で何もしない。",
+      "setOriginalDensity()": "本体が空で何もしない。"
+    }
+  },
+  {
+    "type": "setRigidbodyStateSystem",
+    "summary": "リストまたは半径検索で集めたRigidbodyをまとめて非キネマティックにし、指定方向の力や爆発力、リモートイベントを適用するコンポーネント。",
+    "methods": {
+      "searchRigidbodiesInRadius()": "半径検索が有効なら中心から`radiusToSearch`の球内の剛体を`rigidbodyList`に重複なく追加する。",
+      "setKinematicState(bool state)": "`rigidbodyList`の各剛体の`isKinematic`を、引数の値に関係なくfalseにする。",
+      "addForce(Transform forceDirection)": "各剛体を非キネマティックにし、`forceDirection.up * forceAmount`の力を加える。",
+      "addExplosiveForce(Transform explosionCenter)": "各剛体に`explosionCenter`から`forceAmount`の爆発力を加える。",
+      "addExplosiveForceUsingObjectsMass(Transform explosionCenter)": "各剛体に質量を掛けた`forceAmount`の爆発力を加える。",
+      "addForceToThis(Transform forceDirection)": "自身の剛体（必要なら追加）に`forceDirection.up * forceAmount`の力を加える。",
+      "checkRemoteEventsOnRigidbodyList()": "フラグ有効時、各剛体の`remoteEventSystem`に`removeEventNameList`のイベントを送る。"
+    }
+  },
+  {
+    "type": "simpleAnimationSystem",
+    "summary": "レガシー`Animation`の指定クリップを前後どちらかへ再生し、開始・終了イベントを発火する簡易アニメーション制御コンポーネント。",
+    "methods": {
+      "playForwardAnimation()": "`playAnimation`をtrueにし、速度を`forwardSpeed`にして前方向再生のイベントを呼ぶ。",
+      "playBackwardAnimation()": "速度を`-backwardSpeed`にし、未再生なら終端から逆再生を始めてイベントを呼ぶ。",
+      "playForwardNewAnimation(string newName)": "`animationName`を`newName`に差し替えてから`playForwardAnimation`を呼ぶ。",
+      "playBackwardNewAnimation(string newName)": "`animationName`を`newName`に差し替えてから`playBackwardAnimation`を呼ぶ。",
+      "playAnimationForwardIfAlreadyInProcess()": "`playingAnimation`がtrueのときだけ`playForwardAnimation`を呼ぶ。",
+      "playAnimationBackwardIfAlreadyInProcess()": "`playingAnimation`がtrueのときだけ`playBackwardAnimation`を呼ぶ。",
+      "rewindAnimation()": "逆再生を開始し、再生中フラグを戻して`playAnimation`をtrueにする。"
+    }
+  },
+  {
+    "type": "simpleEventSystem",
+    "summary": "有効/無効の2種類（または通常1種類）のUnityEventを持ち、遅延付きの発火と状態保持を行う汎用イベントコンポーネント。",
+    "methods": {
+      "activateDevice()": "`eventEnabled`なら、遅延設定に応じて`callEvent`を遅延実行または即時実行する。",
+      "callEvent()": "有効/無効イベント使用時は`activated`を反転して対応イベントを、そうでなければ通常イベントを発火する。",
+      "setActivatedStateAndCallEvents(bool state)": "`activated`を`state`にして、その状態に対応するイベントを発火する。",
+      "setActivatedState(bool state)": "`activated`を`state`にするだけ。",
+      "callEventsForCurrentActivatedState()": "現在の`activated`に応じた有効/無効イベントを発火する。",
+      "setEventEnabledState(bool state)": "`eventEnabled`を`state`にするだけ。",
+      "setDelayToEventValue(float newValue)": "`delayToEvent`を`newValue`にするだけ。"
+    }
+  },
+  {
+    "type": "addForceToObjectSystem",
+    "summary": "登録したRigidbodyへ毎フレーム風の力を加え、プレイヤー・乗り物・通常オブジェクトで強さを変えつつ風の状態も同期するコンポーネント。",
+    "methods": {
+      "setPauseUpdateForcesState(bool state)": "`pauseUpdateForces`を`state`にするだけ。",
+      "setWindDetectedStateOnAllObjects(bool state)": "風方向の毎更新が有効なら、対象各オブジェクトの風検出状態を`state`にする。",
+      "addNewObject(GameObject newObject)": "レイヤーなどの条件を満たす剛体を、乗り物やプレイヤーの判定込みで`rigidbodyInfoList`に登録する。",
+      "removeObject(GameObject objectToRemove)": "一致する登録を外し、プレイヤーや風の外部力状態を解除してリストから削除する。",
+      "removeAllObjects()": "null要素を除去しつつ全登録を`removeObject`で解除し、リストを空にする。",
+      "setWindForceValue(float newValue)": "`windForce`を`newValue`にするだけ。"
+    }
+  },
+  {
+    "type": "showMessageOnHUDSystem",
+    "summary": "HUD上のメッセージパネルを名前やインデックスで表示・非表示し、表示時間や入力アクション名の置換、ローカライズも扱うコンポーネント。",
+    "methods": {
+      "setMessagePanelNameManually(string messageName)": "`currentPanelNameManually`を`messageName`にするだけ。",
+      "showMessagePanelManually(string messageContent)": "手動指定名のパネルを探し、表示中でなければ`messageContent`をカスタム文言として表示する。",
+      "showCustomMessagePanel(string messageContent)": "`panelForCustomMessageName`のパネルに`messageContent`をカスタム文言として表示する。",
+      "showMessagePanel(string messageName)": "`messageName`のパネルが未表示（または再表示可）なら`showObjectMessage`で表示する。",
+      "hideMessagePanel(string messageName)": "該当パネルのコルーチンを止め、GameObjectを非表示にして`showingMessage`をfalseにする。",
+      "showObjectMessage(int messageIndex)": "既存のコルーチンを止め、`messageIndex`番のパネル表示コルーチンを開始する。"
+    }
+  }
+]

@@ -1,0 +1,496 @@
+[
+ {
+  "type": "vehicleWeaponSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\vehicleWeaponSystem.cs",
+  "methods": [
+   {
+    "sig": "checkIfEnableWeaponCursor()",
+    "line": 745
+   },
+   {
+    "sig": "checkIfDisableWeaponCursor()",
+    "line": 758
+   },
+   {
+    "sig": "launchCurrentProjectile(Vector3 cameraDirection)",
+    "line": 785
+   },
+   {
+    "sig": "shootWeapon(bool shootAtKeyDown)",
+    "line": 897
+   },
+   {
+    "sig": "setVehicleWeaponCameraDirection()",
+    "line": 1277
+   },
+   {
+    "sig": "autoReload()",
+    "line": 1295
+   },
+   {
+    "sig": "changeWeaponLaserState(bool state)",
+    "line": 1307
+   },
+   {
+    "sig": "createShells()",
+    "line": 1321
+   },
+   {
+    "sig": "testWeaponShake(int weaponIndex)",
+    "line": 1364
+   },
+   {
+    "sig": "checkShotShake()",
+    "line": 1385
+   },
+   {
+    "sig": "getAmmo(string ammoName, int amount)",
+    "line": 1552
+   },
+   {
+    "sig": "addAuxRemainAmmo(vehicleWeapons weaponToCheck, int amount)",
+    "line": 1577
+   },
+   {
+    "sig": "chooseNextWeapon()",
+    "line": 1585
+   },
+   {
+    "sig": "choosePreviousWeapon()",
+    "line": 1627
+   },
+   {
+    "sig": "checkCurrentWeaponCustomReticle()",
+    "line": 1699
+   },
+   {
+    "sig": "checkParableTrayectory(bool parableState)",
+    "line": 1724
+   },
+   {
+    "sig": "isWeaponsEnabled()",
+    "line": 1751
+   },
+   {
+    "sig": "setVehicleHUDInfoManager(playerHUDManager newPlayerHUDManager)",
+    "line": 1756
+   },
+   {
+    "sig": "setCurrentDriver(GameObject newDriver)",
+    "line": 1761
+   },
+   {
+    "sig": "setGKCSimpleRiderSystem(GKCSimpleRiderSystem newGKCSimpleRiderSystem)",
+    "line": 1766
+   },
+   {
+    "sig": "checkIfDetectSurfaceBelongToVehicle(Collider colliderToCheck)",
+    "line": 1774
+   },
+   {
+    "sig": "changeWeaponState(bool state)",
+    "line": 1790
+   },
+   {
+    "sig": "getCameraInfo(Transform camera, bool useRotationInput)",
+    "line": 1873
+   },
+   {
+    "sig": "getWeaponCursorElements()",
+    "line": 1882
+   },
+   {
+    "sig": "setSeekerProjectileInfo(Vector3 shootPosition)",
+    "line": 1929
+   },
+   {
+    "sig": "setProjectileSpread()",
+    "line": 1935
+   },
+   {
+    "sig": "checkAutoShootOnTag()",
+    "line": 1954
+   },
+   {
+    "sig": "checkIfWeaponIsAvailable(string weaponName)",
+    "line": 2007
+   },
+   {
+    "sig": "canIncreaseRemainAmmo(vehicleWeapons weaponToCheck)",
+    "line": 2018
+   },
+   {
+    "sig": "hasMaximumAmmoAmount(vehicleWeapons weaponToCheck)",
+    "line": 2027
+   },
+   {
+    "sig": "hasAmmoLimit(string weaponName)",
+    "line": 2042
+   },
+   {
+    "sig": "ammoAmountToMaximumLimit(vehicleWeapons weaponToCheck)",
+    "line": 2053
+   },
+   {
+    "sig": "hasMaximumAmmoAmount(string weaponName)",
+    "line": 2058
+   },
+   {
+    "sig": "getCurrentWeaponName()",
+    "line": 2069
+   },
+   {
+    "sig": "getCurrentWeaponClipSize()",
+    "line": 2078
+   },
+   {
+    "sig": "getCurrentWeaponRemainAmmo()",
+    "line": 2087
+   },
+   {
+    "sig": "enableMuzzleFlashLight()",
+    "line": 2267
+   },
+   {
+    "sig": "setWeaponsPausedState(bool state)",
+    "line": 2293
+   },
+   {
+    "sig": "setWeaponsEnabedStateAndWeaponMeshes(bool state)",
+    "line": 2298
+   },
+   {
+    "sig": "setWeaponsEnabledState(bool state)",
+    "line": 2307
+   },
+   {
+    "sig": "setMainVehicleWeaponsGameObjectParent(Transform newParent)",
+    "line": 2316
+   },
+   {
+    "sig": "inputShootWeapon()",
+    "line": 2324
+   },
+   {
+    "sig": "inputHoldOrReleaseShootWeapon(bool holdingButton)",
+    "line": 2338
+   },
+   {
+    "sig": "inputNextOrPreviousWeapon(bool setNextWeapon)",
+    "line": 2361
+   },
+   {
+    "sig": "setVehicleWeaponsComponents()",
+    "line": 2377
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 2397
+   },
+   {
+    "sig": "getImpactListInfo()",
+    "line": 2402
+   }
+  ]
+ },
+ {
+  "type": "GKCSimpleRiderSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\GKCSimpleRiderSystem.cs",
+  "methods": [
+   {
+    "sig": "setPlayerToStartGameOnThisVehicle(GameObject newPlayer)",
+    "line": 243
+   },
+   {
+    "sig": "setDriverExternally(GameObject currentDriver)",
+    "line": 252
+   },
+   {
+    "sig": "setPassengerExternally(GameObject currentDriver)",
+    "line": 287
+   },
+   {
+    "sig": "stopDriveVehicleExternally()",
+    "line": 326
+   },
+   {
+    "sig": "activateDevice()",
+    "line": 343
+   },
+   {
+    "sig": "setRiderState(bool state)",
+    "line": 364
+   },
+   {
+    "sig": "startOrStopObjectToOverride(bool state)",
+    "line": 404
+   },
+   {
+    "sig": "startOrStopVehicle(bool state)",
+    "line": 617
+   },
+   {
+    "sig": "stopEnterExitActionSystemOnPassengerCoroutine(Coroutine passengerCoroutine)",
+    "line": 746
+   },
+   {
+    "sig": "enableOrDisablePlayerVisibleInVehicle(bool state, IKDrivingSystem.passengerComponents newPassengerComponents)",
+    "line": 1352
+   },
+   {
+    "sig": "getGetOffPosition(IKDrivingSystem.IKDrivingInformation passengerInfo)",
+    "line": 1363
+   },
+   {
+    "sig": "removePassengerInfo(IKDrivingSystem.IKDrivingInformation passengerInfo)",
+    "line": 1372
+   },
+   {
+    "sig": "getPassengerGetOffPosition(GameObject currentPassenger)",
+    "line": 1427
+   },
+   {
+    "sig": "setPassengerGravityState(IKDrivingSystem.passengerComponents currentPassengerComponents)",
+    "line": 1636
+   },
+   {
+    "sig": "setChangeDriverGravityWhenGetsOffState(bool state)",
+    "line": 1666
+   },
+   {
+    "sig": "setCurrentNormal(Vector3 newValue)",
+    "line": 1671
+   },
+   {
+    "sig": "getHUDBars(playerHUDManager newVehicleHUDInfo, playerHUDManager.vehicleHUDElements hudElements, bool drivingState)",
+    "line": 1686
+   },
+   {
+    "sig": "setWeaponState(bool state)",
+    "line": 1730
+   },
+   {
+    "sig": "setVehicleWeaponsComponents()",
+    "line": 1771
+   },
+   {
+    "sig": "getAmmo(string ammoName, int amount)",
+    "line": 1784
+   },
+   {
+    "sig": "setDestroyedState(bool state)",
+    "line": 1791
+   },
+   {
+    "sig": "setWeaponName(string name, int ammoPerClip, int clipSize)",
+    "line": 1797
+   },
+   {
+    "sig": "useAmmo(int clipSize, int remainAmmo)",
+    "line": 1809
+   },
+   {
+    "sig": "reactivateCollidersIfPossible()",
+    "line": 1822
+   },
+   {
+    "sig": "getIKVehiclePassengerInfo(GameObject passenger)",
+    "line": 1835
+   },
+   {
+    "sig": "setPassengerInfo(IKDrivingSystem.IKDrivingInformation passengerInfo, GameObject passenger)",
+    "line": 1848
+   },
+   {
+    "sig": "getRiderGameObject(GameObject newRiderGameObject)",
+    "line": 1869
+   },
+   {
+    "sig": "setPassengerComponents(GameObject currentPassenger)",
+    "line": 1874
+   },
+   {
+    "sig": "checkDriverHeadMeshOnCameraViewChange(bool isFirstPersonCamera)",
+    "line": 1960
+   },
+   {
+    "sig": "findPlayerOnScene()",
+    "line": 1969
+   },
+   {
+    "sig": "killCharacterOnVehicle()",
+    "line": 1980
+   },
+   {
+    "sig": "ejectCharacterFromVehicle()",
+    "line": 1995
+   },
+   {
+    "sig": "getOffFromVehicle()",
+    "line": 2006
+   },
+   {
+    "sig": "getVehicleName()",
+    "line": 2021
+   },
+   {
+    "sig": "isVehicleFull()",
+    "line": 2026
+   },
+   {
+    "sig": "getDriverSeatPassengerIndex()",
+    "line": 2035
+   },
+   {
+    "sig": "getClosestSeatToPassengerIndex(GameObject currentPassenger)",
+    "line": 2048
+   },
+   {
+    "sig": "setPauseDriverGetOffInputActionState(bool state)",
+    "line": 2164
+   },
+   {
+    "sig": "inputGetOffFromVehicle()",
+    "line": 2175
+   }
+  ]
+ },
+ {
+  "type": "playerHUDManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\playerHUDManager.cs",
+  "methods": [
+   {
+    "sig": "setControlList(inputActionManager manager)",
+    "line": 83
+   },
+   {
+    "sig": "setTouchingMenuPanelState(bool state)",
+    "line": 128
+   },
+   {
+    "sig": "isFingerPressingTouchPanel()",
+    "line": 133
+   },
+   {
+    "sig": "openOrCloseControlsMenu(bool state)",
+    "line": 138
+   },
+   {
+    "sig": "setCurrentVehicleHUD(GameObject vehicle)",
+    "line": 145
+   },
+   {
+    "sig": "closeControlsMenu()",
+    "line": 156
+   },
+   {
+    "sig": "destroyCurrentVehicle()",
+    "line": 163
+   },
+   {
+    "sig": "damageCurrentVehicle(float damageAmount)",
+    "line": 172
+   },
+   {
+    "sig": "takeEnergyCurrentVehicle(float energyAmount)",
+    "line": 181
+   },
+   {
+    "sig": "takeFuelCurrentVehicle(float fuelAmount)",
+    "line": 190
+   },
+   {
+    "sig": "giveHealthCurrentVehicle(float healthAmount)",
+    "line": 199
+   },
+   {
+    "sig": "giveEnergyCurrentVehicle(float energyAmount)",
+    "line": 208
+   },
+   {
+    "sig": "giveFuelCurrentVehicle(float fuelAmount)",
+    "line": 217
+   },
+   {
+    "sig": "setInfiniteHealthCurrentVehicleState(bool state)",
+    "line": 226
+   },
+   {
+    "sig": "setInfiniteEnergyCurrentVehicleState(bool state)",
+    "line": 235
+   },
+   {
+    "sig": "setInfiniteFuelCurrentVehicleState(bool state)",
+    "line": 244
+   },
+   {
+    "sig": "setInfiniteStatCurrentVehicleState(bool state)",
+    "line": 253
+   },
+   {
+    "sig": "getHudElements()",
+    "line": 262
+   },
+   {
+    "sig": "getVehicleCursor()",
+    "line": 267
+   },
+   {
+    "sig": "setFreeInteractionDeviceCursorActiveState(bool state)",
+    "line": 272
+   },
+   {
+    "sig": "enableOrDisableHUD(bool state)",
+    "line": 279
+   },
+   {
+    "sig": "enableOrDisablePlayerBars(bool state)",
+    "line": 284
+   },
+   {
+    "sig": "enableOrDisablePlayerMode(bool state)",
+    "line": 289
+   },
+   {
+    "sig": "enableOrDisableHUDFromEditor(bool state)",
+    "line": 294
+   },
+   {
+    "sig": "enableOrDisablePlayerBarsFromEditor(bool state)",
+    "line": 299
+   },
+   {
+    "sig": "enableOrDisablePlayerModeFromEditor(bool state)",
+    "line": 304
+   },
+   {
+    "sig": "enableOrDisableVehicleHUD(bool state)",
+    "line": 309
+   },
+   {
+    "sig": "enableHUDElement(string elementName)",
+    "line": 316
+   },
+   {
+    "sig": "disableHUDElement(string elementName)",
+    "line": 321
+   },
+   {
+    "sig": "enableHUDElementFromEditor(string elementName)",
+    "line": 326
+   },
+   {
+    "sig": "disableHUDElementFromEditor(string elementName)",
+    "line": 331
+   },
+   {
+    "sig": "enableOrDisableHUDElement(string elementName, bool state, bool usedFromEditor)",
+    "line": 336
+   },
+   {
+    "sig": "isHUDElementEnabled(string elementName)",
+    "line": 357
+   }
+  ]
+ }
+]

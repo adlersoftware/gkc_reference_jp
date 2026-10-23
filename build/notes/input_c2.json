@@ -1,0 +1,696 @@
+[
+ {
+  "type": "playerCamera",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Camera\\Player Camera\\playerCamera.cs",
+  "methods": [
+   {
+    "sig": "isCameraShaking()",
+    "line": 7410
+   },
+   {
+    "sig": "accelerateShake(bool value)",
+    "line": 7416
+   },
+   {
+    "sig": "changeCameraToThirdOrFirstView(bool state)",
+    "line": 7423
+   },
+   {
+    "sig": "setCameraOnThirdPersonOrFBAView(bool state)",
+    "line": 7436
+   },
+   {
+    "sig": "changeCameraToThirdOrFirstView()",
+    "line": 7449
+   },
+   {
+    "sig": "changeCameraView()",
+    "line": 7465
+   },
+   {
+    "sig": "checkIfDropObjectIfNotPhysical(bool disableAimState)",
+    "line": 7530
+   },
+   {
+    "sig": "changeTypeView()",
+    "line": 7537
+   },
+   {
+    "sig": "setAimModeSide(bool state)",
+    "line": 7557
+   },
+   {
+    "sig": "activateFirstPersonCamera()",
+    "line": 7584
+   },
+   {
+    "sig": "deactivateFirstPersonCamera()",
+    "line": 7601
+   },
+   {
+    "sig": "activateFirstPersonCameraEditor()",
+    "line": 7626
+   },
+   {
+    "sig": "deactivateFirstPersonCameraEditor()",
+    "line": 7635
+   },
+   {
+    "sig": "activeFullBodyAwarenessEditor()",
+    "line": 7644
+   },
+   {
+    "sig": "deactiveFullBodyAwarenessEditor()",
+    "line": 7657
+   },
+   {
+    "sig": "updatePlayerStatesToView()",
+    "line": 7672
+   },
+   {
+    "sig": "isChangeCameraViewEnabled()",
+    "line": 7756
+   },
+   {
+    "sig": "isPausePlayerCameraViewChangeActive()",
+    "line": 7761
+   },
+   {
+    "sig": "enableOrDisableAllChangeCameraEnabledView(bool state)",
+    "line": 7766
+   },
+   {
+    "sig": "setOriginalAllChangeCameraViewEnabledState()",
+    "line": 7773
+   },
+   {
+    "sig": "enableOrDisableChangeCameraView(bool state)",
+    "line": 7780
+   },
+   {
+    "sig": "setOriginalchangeCameraViewEnabledValue()",
+    "line": 7785
+   },
+   {
+    "sig": "setPausePlayerCameraViewChangeState(bool state)",
+    "line": 7790
+   },
+   {
+    "sig": "checkCharacterStateIconForViewChange()",
+    "line": 7795
+   },
+   {
+    "sig": "changeCameraRotationState(bool state)",
+    "line": 7803
+   },
+   {
+    "sig": "pauseOrPlayCamera(bool state)",
+    "line": 7808
+   },
+   {
+    "sig": "cameraCanBeUsedActive()",
+    "line": 7817
+   },
+   {
+    "sig": "setCameraRotationInputEnabled(bool state)",
+    "line": 7822
+   },
+   {
+    "sig": "enableCameraRotationInput()",
+    "line": 7827
+   },
+   {
+    "sig": "disableCameraRotationInput()",
+    "line": 7832
+   },
+   {
+    "sig": "setCameraActionsInputEnabledState(bool state)",
+    "line": 7837
+   },
+   {
+    "sig": "enableCameraActionsInput()",
+    "line": 7842
+   },
+   {
+    "sig": "disableCameraActionsInput()",
+    "line": 7847
+   },
+   {
+    "sig": "calibrateAccelerometer()",
+    "line": 7853
+   },
+   {
+    "sig": "setUseAcelerometerState(bool state)",
+    "line": 7887
+   },
+   {
+    "sig": "isCameraRotating()",
+    "line": 7892
+   },
+   {
+    "sig": "checkIfCameraRotatingWithTolerance(float movingTolerance)",
+    "line": 7897
+   },
+   {
+    "sig": "isPlayerAiming()",
+    "line": 7906
+   },
+   {
+    "sig": "setLastTimeMoved()",
+    "line": 7911
+   },
+   {
+    "sig": "setLastTimeCameraRotated()",
+    "line": 7921
+   },
+   {
+    "sig": "playOrPauseHeadBob(bool state)",
+    "line": 7926
+   },
+   {
+    "sig": "stopAllHeadbobMovements()",
+    "line": 7931
+   },
+   {
+    "sig": "pauseHeadBodWithDelay(float delayAmount)",
+    "line": 7936
+   },
+   {
+    "sig": "getHeadBobManager()",
+    "line": 7941
+   },
+   {
+    "sig": "setFirstOrThirdHeadBobView(bool state)",
+    "line": 7946
+   },
+   {
+    "sig": "setHeadbobState(string headBobStateName)",
+    "line": 7951
+   },
+   {
+    "sig": "setDefaultHeadbobState()",
+    "line": 7956
+   },
+   {
+    "sig": "isCameraPlacedInFirstPerson()",
+    "line": 7966
+   },
+   {
+    "sig": "isFullBodyAwarenessActive()",
+    "line": 7982
+   },
+   {
+    "sig": "setFullBodyAwarenessActiveState(bool state)",
+    "line": 7987
+   },
+   {
+    "sig": "updateFBAPivotCameraTransformValuesToMainPivotCameraTransform()",
+    "line": 8029
+   },
+   {
+    "sig": "removeLeanRotationFromPivotCameraTransform()",
+    "line": 8038
+   },
+   {
+    "sig": "updateFBAPivotCameraTransformToPivotCameraTransform()",
+    "line": 8043
+   },
+   {
+    "sig": "setFBAPivotCameraTransformParent(Transform newParent)",
+    "line": 8052
+   },
+   {
+    "sig": "isCameraTypeFree()",
+    "line": 8078
+   },
+   {
+    "sig": "setLookAngleValue(Vector2 newValue)",
+    "line": 8083
+   },
+   {
+    "sig": "resetMainCameraTransformLocalPosition()",
+    "line": 8088
+   },
+   {
+    "sig": "resetPivotCameraTransformLocalPosition()",
+    "line": 8093
+   },
+   {
+    "sig": "setPlayerCameraTransformRotation(Quaternion newRotation)",
+    "line": 8098
+   },
+   {
+    "sig": "resetCurrentCameraStateAtOnce()",
+    "line": 8103
+   },
+   {
+    "sig": "configureCurrentLerpState(Vector3 pivotOffset, Vector3 cameraOffset)",
+    "line": 8108
+   },
+   {
+    "sig": "configureCameraAndPivotPositionAtOnce()",
+    "line": 8114
+   },
+   {
+    "sig": "setCurrentCameraUpRotationValue(float newRotation)",
+    "line": 8120
+   },
+   {
+    "sig": "Rotate(Vector3 currentLookPost)",
+    "line": 8135
+   },
+   {
+    "sig": "setResetVerticalCameraRotationActiveState(bool state)",
+    "line": 8140
+   },
+   {
+    "sig": "setPlayerNavMeshEnabledState(bool state)",
+    "line": 8145
+   },
+   {
+    "sig": "startOverride()",
+    "line": 8150
+   },
+   {
+    "sig": "stopOverride()",
+    "line": 8155
+   },
+   {
+    "sig": "overrideTurretControlState(bool state)",
+    "line": 8160
+   },
+   {
+    "sig": "setUsedByAIState(bool state)",
+    "line": 8169
+   },
+   {
+    "sig": "enableOrDisablePlayerCameraGameObject(bool state)",
+    "line": 8174
+   },
+   {
+    "sig": "enableOrDisableMainCamera(bool state)",
+    "line": 8181
+   },
+   {
+    "sig": "enableAICamera()",
+    "line": 8186
+   },
+   {
+    "sig": "disableAICamera()",
+    "line": 8191
+   },
+   {
+    "sig": "enableOrDisableAICamera(bool state)",
+    "line": 8196
+   },
+   {
+    "sig": "setUseSmoothCameraTransitionBetweenCharactersState(bool state)",
+    "line": 8258
+   },
+   {
+    "sig": "enableOrDisableCameraAudioListener(bool state)",
+    "line": 8263
+   },
+   {
+    "sig": "getScreenCenter()",
+    "line": 8272
+   },
+   {
+    "sig": "adjustCameraToPreviousCharacter()",
+    "line": 8299
+   },
+   {
+    "sig": "setPreviousCharacterControl(GameObject newPpreviousCharacterControl, Vector3 cameraPosition, Quaternion cameraRotation, bool previousCharacterControlInFirstPersonViewValue)",
+    "line": 8331
+   },
+   {
+    "sig": "adjustCameraToPreviousCharacterSmoothly()",
+    "line": 8339
+   },
+   {
+    "sig": "setOverrideCameraPosition(bool state)",
+    "line": 8404
+   },
+   {
+    "sig": "setExtraRotationToCamera()",
+    "line": 8427
+   },
+   {
+    "sig": "setZeroGravityModeOnState(bool state)",
+    "line": 8496
+   },
+   {
+    "sig": "setfreeFloatingModeOnState(bool state)",
+    "line": 8501
+   },
+   {
+    "sig": "setForwardRotationValue(float value)",
+    "line": 8506
+   },
+   {
+    "sig": "getIconPosition(Vector3 worldObjectPosition)",
+    "line": 8511
+   },
+   {
+    "sig": "setLockedCameraRotationActiveToLeft(bool holdingButton)",
+    "line": 8519
+   },
+   {
+    "sig": "setLockedCameraRotationActiveToRight(bool holdingButton)",
+    "line": 8543
+   },
+   {
+    "sig": "stopRotateLockedCameraFixedRotationAmount()",
+    "line": 8567
+   },
+   {
+    "sig": "setLockedMainCameraTransformRotationSmoothly(Vector3 targetRotationEuler, float rotationSpeed)",
+    "line": 8614
+   },
+   {
+    "sig": "setLockedMainCameraTransformRotationSmoothlyToCurrentLockedCameraView(float rotationSpeed)",
+    "line": 8623
+   },
+   {
+    "sig": "setFollowPlayerRotationDirectionEnabledOnLockedCameraPausedState(bool state)",
+    "line": 8634
+   },
+   {
+    "sig": "setCanActivateLookAtTargetEnabledState(bool state)",
+    "line": 8639
+   },
+   {
+    "sig": "setMoveCameraPositionWithMouseWheelActiveState(bool state)",
+    "line": 8644
+   },
+   {
+    "sig": "setOriginalMoveCameraPositionWithMouseWheelActiveState()",
+    "line": 8649
+   },
+   {
+    "sig": "moveCameraCloserOrFartherFromPlayer(bool movingDirection)",
+    "line": 8657
+   },
+   {
+    "sig": "disableStrafeModeActivateFromNoTargetsFoundActive()",
+    "line": 8786
+   },
+   {
+    "sig": "playerIsBusy()",
+    "line": 8791
+   },
+   {
+    "sig": "isUsingRegularGravity()",
+    "line": 8808
+   },
+   {
+    "sig": "setCheckToKeepAfterAimingFromShootingState(bool state)",
+    "line": 8817
+   },
+   {
+    "sig": "setAimingFromShootingState(bool state)",
+    "line": 8824
+   },
+   {
+    "sig": "isTemporalCameraViewToLockedCameraActive()",
+    "line": 8829
+   },
+   {
+    "sig": "inputChangeCameraView()",
+    "line": 8835
+   },
+   {
+    "sig": "inputToogleCameraRotationInputState()",
+    "line": 8903
+   },
+   {
+    "sig": "inputMoveCamerAway()",
+    "line": 8912
+   },
+   {
+    "sig": "inputLookAtTarget()",
+    "line": 8927
+   },
+   {
+    "sig": "activateShowCameraCursorWhenNotAimingState()",
+    "line": 9022
+   },
+   {
+    "sig": "inputCheckActivateStrafeModeIfNoTargetsToLookFound()",
+    "line": 9036
+   },
+   {
+    "sig": "inputZoom()",
+    "line": 9065
+   },
+   {
+    "sig": "inputMoveSetRotateToLeftState(bool keyDown)",
+    "line": 9094
+   },
+   {
+    "sig": "inputMoveSetRotateToRightState(bool keyDown)",
+    "line": 9113
+   },
+   {
+    "sig": "inputResetCameraRotation()",
+    "line": 9132
+   },
+   {
+    "sig": "inputRotateLockedCameraToRight(bool holdingButton)",
+    "line": 9141
+   },
+   {
+    "sig": "inputRotateLockedCameraToLeft(bool holdingButton)",
+    "line": 9156
+   },
+   {
+    "sig": "inputToggleLockedCameraRotation()",
+    "line": 9171
+   },
+   {
+    "sig": "inputMoveCameraCloserOrFartherFromPlayer(bool movingDirection)",
+    "line": 9184
+   },
+   {
+    "sig": "inputEnableOrDisableRightLean(bool state)",
+    "line": 9193
+   },
+   {
+    "sig": "inputToggleRightLean()",
+    "line": 9206
+   },
+   {
+    "sig": "inputEnableOrDisableLeftLean(bool state)",
+    "line": 9227
+   },
+   {
+    "sig": "inputToggleLeftLean()",
+    "line": 9240
+   },
+   {
+    "sig": "inputSetExtraCameraRotation()",
+    "line": 9261
+   },
+   {
+    "sig": "inputMoveLockedCameraZoomOn()",
+    "line": 9278
+   },
+   {
+    "sig": "inputMoveLockedCameraZoomOff()",
+    "line": 9287
+   },
+   {
+    "sig": "inputMoveLockedCameraZoom(bool moveForward)",
+    "line": 9296
+   },
+   {
+    "sig": "enableOrDisableRightLean(bool state)",
+    "line": 9315
+   },
+   {
+    "sig": "enableOrDisableLeftLean(bool state)",
+    "line": 9336
+   },
+   {
+    "sig": "isLeanActive()",
+    "line": 9357
+   },
+   {
+    "sig": "enableOrDisableLeanInput(bool state)",
+    "line": 9383
+   },
+   {
+    "sig": "disableLean()",
+    "line": 9388
+   },
+   {
+    "sig": "setLeanState()",
+    "line": 9397
+   },
+   {
+    "sig": "removeMainCameraPivotFromLeanPivot()",
+    "line": 9409
+   },
+   {
+    "sig": "updateCurrentMousWheelCameraState(int newIndex)",
+    "line": 9418
+   },
+   {
+    "sig": "updateCurrentMouseWheelCameraStateByDistance()",
+    "line": 9448
+   },
+   {
+    "sig": "resetCameraRotation()",
+    "line": 9464
+   },
+   {
+    "sig": "setFullBodyAwarenessEnabled(bool state)",
+    "line": 9485
+   },
+   {
+    "sig": "setVehicleCameraMovementCoroutine(Coroutine cameraMovement)",
+    "line": 9490
+   },
+   {
+    "sig": "getVehicleCameraMovementCoroutine()",
+    "line": 9495
+   },
+   {
+    "sig": "getCameraList()",
+    "line": 9500
+   },
+   {
+    "sig": "updateCameraList()",
+    "line": 9505
+   },
+   {
+    "sig": "getMainCanvasSizeDelta()",
+    "line": 9517
+   },
+   {
+    "sig": "isUsingScreenSpaceCamera()",
+    "line": 9522
+   },
+   {
+    "sig": "setFirstOrThirdPersonInEditor(bool state)",
+    "line": 9527
+   },
+   {
+    "sig": "setThirdPersonInEditor()",
+    "line": 9536
+   },
+   {
+    "sig": "setFirstPersonInEditor()",
+    "line": 9541
+   },
+   {
+    "sig": "toggleViewOnEditor()",
+    "line": 9546
+   },
+   {
+    "sig": "setCameraPositionOffsetActiveState(bool state, Vector3 newOffset, float newSpeed)",
+    "line": 9551
+   },
+   {
+    "sig": "setCameraNoiseState(string cameraNoiseName)",
+    "line": 9570
+   },
+   {
+    "sig": "disableCameraNoiseState()",
+    "line": 9585
+   },
+   {
+    "sig": "setResetCameraRotationAfterTimeState(bool state)",
+    "line": 9590
+   },
+   {
+    "sig": "setUseSmoothCameraFollowState(bool state)",
+    "line": 9595
+   },
+   {
+    "sig": "setOriginalUseSmoothCameraFollowState()",
+    "line": 9600
+   },
+   {
+    "sig": "activateUseSmoothCameraFollowStateDuration(float duration)",
+    "line": 9607
+   },
+   {
+    "sig": "setMovingInsideVehicleState(bool state)",
+    "line": 9647
+   },
+   {
+    "sig": "setUsingGenericModelActiveState(bool state)",
+    "line": 9668
+   },
+   {
+    "sig": "isMovingInsideVehicle()",
+    "line": 9734
+   },
+   {
+    "sig": "takeCapture()",
+    "line": 9740
+   },
+   {
+    "sig": "addNewLockedCameraSystemToLevel()",
+    "line": 9747
+   },
+   {
+    "sig": "addNewLockedCameraLimitSystemToLevel()",
+    "line": 9755
+   },
+   {
+    "sig": "addNewLockedCameraPrefabTypeLevel(int cameraIndex)",
+    "line": 9763
+   },
+   {
+    "sig": "setTemporalLockedCameraPrefabNameToPlaceOnSceneFromEditor(string newLockedCameraPrefabName)",
+    "line": 9775
+   },
+   {
+    "sig": "setTemporalLockedCameraPrefabToPlaceOnSceneFromEditor()",
+    "line": 9782
+   },
+   {
+    "sig": "setFullBodyAwarenessEnabledFromEditor(bool state)",
+    "line": 9803
+   },
+   {
+    "sig": "setReverseVerticalAccelerometerStateFromEditor(bool state)",
+    "line": 9809
+   },
+   {
+    "sig": "setReverseHorizontalAccelerometerStateFromEditor(bool state)",
+    "line": 9816
+   },
+   {
+    "sig": "updateCameraStateValuesOnEditor(int stateIndex)",
+    "line": 9821
+   },
+   {
+    "sig": "setMoveCameraPositionWithMouseWheelActiveStateFromEditor(bool state)",
+    "line": 9828
+   },
+   {
+    "sig": "enableOrDisableChangeCameraViewFromEditor(bool state)",
+    "line": 9835
+   },
+   {
+    "sig": "setCanActivateLookAtTargetEnabledStateFromEditor(bool state)",
+    "line": 9842
+   },
+   {
+    "sig": "setResetCameraRotationAfterTimeStateFromEditor(bool state)",
+    "line": 9849
+   },
+   {
+    "sig": "setZoomEnabledStateFromEditor(bool state)",
+    "line": 9856
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 9863
+   }
+  ]
+ }
+]

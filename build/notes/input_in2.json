@@ -1,0 +1,472 @@
+[
+ {
+  "type": "inputManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Input\\inputManager.cs",
+  "methods": [
+   {
+    "sig": "getComponentInstance()",
+    "line": 203
+   },
+   {
+    "sig": "getComponentInstanceOnApplicationPlaying()",
+    "line": 220
+   },
+   {
+    "sig": "checkInputManagerElementsOnStart()",
+    "line": 247
+   },
+   {
+    "sig": "updatePlayerInputManagerList()",
+    "line": 572
+   },
+   {
+    "sig": "setMainPlayerInfo(playerInputManager newPlayerInputManager, menuPause newMenuPause)",
+    "line": 626
+   },
+   {
+    "sig": "isUsingGamepad()",
+    "line": 646
+   },
+   {
+    "sig": "isUsingKeyBoard()",
+    "line": 651
+   },
+   {
+    "sig": "isUsingTouchControls()",
+    "line": 656
+   },
+   {
+    "sig": "isUsingTouchControlsOnGameManager()",
+    "line": 661
+   },
+   {
+    "sig": "isGameManagerPaused()",
+    "line": 666
+   },
+   {
+    "sig": "isAllowKeyboardAndGamepad()",
+    "line": 671
+   },
+   {
+    "sig": "isAllowGamepadInTouchDevice()",
+    "line": 676
+   },
+   {
+    "sig": "setEditInputMenuOpenedState(bool state)",
+    "line": 681
+   },
+   {
+    "sig": "openInputMenu()",
+    "line": 689
+   },
+   {
+    "sig": "reloadInputMenu()",
+    "line": 711
+   },
+   {
+    "sig": "setKeyNamesInActionsList()",
+    "line": 718
+   },
+   {
+    "sig": "updateCurrentInputPanel(int index)",
+    "line": 750
+   },
+   {
+    "sig": "resetScroll(Scrollbar scrollBarToReset)",
+    "line": 795
+   },
+   {
+    "sig": "resetPanelSlotsRectTransform(Transform panelTransform, ScrollRect panelScrollRect)",
+    "line": 808
+   },
+   {
+    "sig": "setNextInputPanel()",
+    "line": 825
+   },
+   {
+    "sig": "setPreviousInputPanel()",
+    "line": 854
+   },
+   {
+    "sig": "destroyRebindMenusAndActionsPanels()",
+    "line": 883
+   },
+   {
+    "sig": "instantiateRebindMenusAndActionsPanels(bool updateComponentActive)",
+    "line": 900
+   },
+   {
+    "sig": "saveButtonsInput()",
+    "line": 1103
+   },
+   {
+    "sig": "getDataPath(string fileNameToUse)",
+    "line": 1178
+   },
+   {
+    "sig": "loadButtonsInput()",
+    "line": 1203
+   },
+   {
+    "sig": "saveButtonsInputFromInspector(string fileNameToUse)",
+    "line": 1341
+   },
+   {
+    "sig": "loadButtonsInputFromInspector(string fileNameToUse)",
+    "line": 1392
+   },
+   {
+    "sig": "getGameManagerSettings()",
+    "line": 1431
+   },
+   {
+    "sig": "setCurrentInputToDefault()",
+    "line": 1446
+   },
+   {
+    "sig": "loadButtonsInspectorFromSaveFile()",
+    "line": 1455
+   },
+   {
+    "sig": "saveCurrentInputAsDefault()",
+    "line": 1474
+   },
+   {
+    "sig": "saveButtonsInputToSaveFile()",
+    "line": 1483
+   },
+   {
+    "sig": "showCustomInputFileList()",
+    "line": 1502
+   },
+   {
+    "sig": "changeKeyValue(string keyButton, int multiAxesIndex, int axesIndex)",
+    "line": 1559
+   },
+   {
+    "sig": "changeGamepadKeyValue(string keyButton, int multiAxesIndex, int axesIndex)",
+    "line": 1571
+   },
+   {
+    "sig": "getButtonKey(string actionName)",
+    "line": 1581
+   },
+   {
+    "sig": "startEditingInput(GameObject button)",
+    "line": 1608
+   },
+   {
+    "sig": "isEditingInput()",
+    "line": 1630
+   },
+   {
+    "sig": "cancelEditingInput()",
+    "line": 1636
+   },
+   {
+    "sig": "checkIfSaveInputAfterRebind()",
+    "line": 1659
+   },
+   {
+    "sig": "getValidKeyCodes()",
+    "line": 1668
+   },
+   {
+    "sig": "getKeyPressed(buttonType type, bool canBeUsedOnGamePaused)",
+    "line": 1673
+   },
+   {
+    "sig": "checkJoystickButton(string joystickString, buttonType type)",
+    "line": 1705
+   },
+   {
+    "sig": "checkPlayerInputButtonFromMultiAxesList(int multiAxesIndex, int axesIndex, buttonType type, int controllerNumber, bool canBeUsedOnPausedGame, bool useOnlyKeyboard)",
+    "line": 1731
+   },
+   {
+    "sig": "getKeyboardButtonFromMultiAxesList(int multiAxesIndex, int axesIndex, buttonType type, bool canBeUsedOnPausedGame)",
+    "line": 1784
+   },
+   {
+    "sig": "isKeyboardButtonPressed(int controllerNumber, string multiAxesName, string axesName)",
+    "line": 1911
+   },
+   {
+    "sig": "getTouchButtonFromMultiAxesList(int multiAxesIndex, int axesIndex, buttonType type)",
+    "line": 1976
+   },
+   {
+    "sig": "getJoystickButtonFromMultiAxesList(int multiAxesIndex, int axesIndex, buttonType type, int controllerNumber, bool canBeUsedOnPausedGame)",
+    "line": 2120
+   },
+   {
+    "sig": "getAxisValue(int numberPlayer, int keyPressed, int multiAxesIndex, int axesIndex, buttonType type)",
+    "line": 2372
+   },
+   {
+    "sig": "setGamepadLeftTriggersInfo(int numberPlayer, bool left, int multiAxesIndex, int axesIndex)",
+    "line": 2779
+   },
+   {
+    "sig": "setGamepadRightTriggersInfo(int numberPlayer, bool right, int multiAxesIndex, int axesIndex)",
+    "line": 2784
+   },
+   {
+    "sig": "setGamepadLeftTriggersInfoDown(int numberPlayer, bool left, int multiAxesIndex, int axesIndex)",
+    "line": 2789
+   },
+   {
+    "sig": "setGamepadRightTriggersInfoDown(int numberPlayer, bool right, int multiAxesIndex, int axesIndex)",
+    "line": 2794
+   },
+   {
+    "sig": "getGamePadLeftTriggersInfo(int numberPlayer, int multiAxesIndex, int axesIndex)",
+    "line": 2799
+   },
+   {
+    "sig": "getGamePadRightTriggersInfo(int numberPlayer, int multiAxesIndex, int axesIndex)",
+    "line": 2804
+   },
+   {
+    "sig": "getGamePadLeftTriggersInfoDown(int numberPlayer, int multiAxesIndex, int axesIndex)",
+    "line": 2809
+   },
+   {
+    "sig": "getGamePadRightTriggersInfoDown(int numberPlayer, int multiAxesIndex, int axesIndex)",
+    "line": 2814
+   },
+   {
+    "sig": "getGamePadDPadXInfoPositive(int numberPlayer, int multiAxesIndex, int axesIndex)",
+    "line": 2821
+   },
+   {
+    "sig": "setGamepadDPadXInfoPositive(int numberPlayer, bool DPad, int multiAxesIndex, int axesIndex)",
+    "line": 2826
+   },
+   {
+    "sig": "getGamePadDPadXInfoPositiveDown(int numberPlayer, int multiAxesIndex, int axesIndex)",
+    "line": 2831
+   },
+   {
+    "sig": "setGamepadDPadXInfoPositiveDown(int numberPlayer, bool DPad, int multiAxesIndex, int axesIndex)",
+    "line": 2836
+   },
+   {
+    "sig": "getGamePadDPadXInfoNegative(int numberPlayer, int multiAxesIndex, int axesIndex)",
+    "line": 2841
+   },
+   {
+    "sig": "setGamepadDPadXInfoNegative(int numberPlayer, bool DPad, int multiAxesIndex, int axesIndex)",
+    "line": 2846
+   },
+   {
+    "sig": "getGamePadDPadXInfoNegativeDown(int numberPlayer, int multiAxesIndex, int axesIndex)",
+    "line": 2851
+   },
+   {
+    "sig": "setGamepadDPadXInfoNegativeDown(int numberPlayer, bool DPad, int multiAxesIndex, int axesIndex)",
+    "line": 2856
+   },
+   {
+    "sig": "getGamePadDPadYInfoPositive(int numberPlayer, int multiAxesIndex, int axesIndex)",
+    "line": 2863
+   },
+   {
+    "sig": "setGamepadDPadYInfoPositive(int numberPlayer, bool DPad, int multiAxesIndex, int axesIndex)",
+    "line": 2868
+   },
+   {
+    "sig": "getGamePadDPadYInfoPositiveDown(int numberPlayer, int multiAxesIndex, int axesIndex)",
+    "line": 2873
+   },
+   {
+    "sig": "setGamepadDPadYInfoPositiveDown(int numberPlayer, bool DPad, int multiAxesIndex, int axesIndex)",
+    "line": 2878
+   },
+   {
+    "sig": "getGamePadDPadYInfoNegative(int numberPlayer, int multiAxesIndex, int axesIndex)",
+    "line": 2883
+   },
+   {
+    "sig": "setGamepadDPadYInfoNegative(int numberPlayer, bool DPad, int multiAxesIndex, int axesIndex)",
+    "line": 2888
+   },
+   {
+    "sig": "getGamePadDPadYInfoNegativeDown(int numberPlayer, int multiAxesIndex, int axesIndex)",
+    "line": 2893
+   },
+   {
+    "sig": "setGamepadDPadYInfoNegativeDown(int numberPlayer, bool DPad, int multiAxesIndex, int axesIndex)",
+    "line": 2898
+   },
+   {
+    "sig": "setRegister()",
+    "line": 2904
+   },
+   {
+    "sig": "setKeyboardControls(bool state)",
+    "line": 2970
+   },
+   {
+    "sig": "setKeyboardControlsFromEditor(bool state)",
+    "line": 2983
+   },
+   {
+    "sig": "setUseTouchControlsState(bool state)",
+    "line": 2998
+   },
+   {
+    "sig": "updateInputInspector()",
+    "line": 3003
+   },
+   {
+    "sig": "isInTouchButtonToDisableList(GameObject touchButtonGameObject)",
+    "line": 3014
+   },
+   {
+    "sig": "setGamePadList()",
+    "line": 3023
+   },
+   {
+    "sig": "setPauseState(bool state)",
+    "line": 3127
+   },
+   {
+    "sig": "enableTouchButtonByName(string touchButtonName)",
+    "line": 3132
+   },
+   {
+    "sig": "disableTouchButtonByName(string touchButtonName)",
+    "line": 3137
+   },
+   {
+    "sig": "enableOrDisableTouchButtonByName(bool state, string touchButtonName)",
+    "line": 3142
+   },
+   {
+    "sig": "isTouchPlatform()",
+    "line": 3155
+   },
+   {
+    "sig": "increaseCurrentNumberOfTouchButtonsPressed()",
+    "line": 3162
+   },
+   {
+    "sig": "decreaseCurrentNumberOfTouchButtonsPressed()",
+    "line": 3169
+   },
+   {
+    "sig": "getCurrentNumberOfTouchButtonsPressed()",
+    "line": 3180
+   },
+   {
+    "sig": "checkButtonPressedOnGamepadOrKeyboard(bool checkKeyboard)",
+    "line": 3185
+   },
+   {
+    "sig": "enableMultiAxesInputByName(string multiAxesName)",
+    "line": 3217
+   },
+   {
+    "sig": "disableMultiAxesInputByName(string multiAxesName)",
+    "line": 3222
+   },
+   {
+    "sig": "enableOrDisableMultiAxesInputByName(bool state, string multiAxesName)",
+    "line": 3227
+   },
+   {
+    "sig": "addNewAxe(int axeListIndex)",
+    "line": 3239
+   },
+   {
+    "sig": "addNewAxesList()",
+    "line": 3250
+   },
+   {
+    "sig": "removeAxesList(int multiAxesIndex)",
+    "line": 3260
+   },
+   {
+    "sig": "getAxesListIndexByName(string axesName)",
+    "line": 3274
+   },
+   {
+    "sig": "removeAxesElement(int multiAxesIndex, int axesIndex)",
+    "line": 3285
+   },
+   {
+    "sig": "removeTouchPanel(int touchPanelIndex)",
+    "line": 3297
+   },
+   {
+    "sig": "removeTouchButton(int touchPanelIndex, int touchButtonIndex)",
+    "line": 3351
+   },
+   {
+    "sig": "getTouchButtonList()",
+    "line": 3406
+   },
+   {
+    "sig": "setNewTouchButtonListByPlayerInputManager(playerInputManager currentPlayerInputManager)",
+    "line": 3459
+   },
+   {
+    "sig": "setTouchButtonVisibleState(bool state)",
+    "line": 3466
+   },
+   {
+    "sig": "resetButtonStateOnTouchButtonList()",
+    "line": 3481
+   },
+   {
+    "sig": "checkNullElementsOnPlayerInputManagerList()",
+    "line": 3490
+   },
+   {
+    "sig": "toggleTouchButtonsVisibleState()",
+    "line": 3505
+   },
+   {
+    "sig": "getTouchButtonListString()",
+    "line": 3512
+   },
+   {
+    "sig": "selectMainTouchButtonPanelOnEditor()",
+    "line": 3523
+   },
+   {
+    "sig": "updateTouchButtonListString()",
+    "line": 3530
+   },
+   {
+    "sig": "updateTouchButtonList()",
+    "line": 3562
+   },
+   {
+    "sig": "getTouchPanelIndexByName(string touchPanelName)",
+    "line": 3610
+   },
+   {
+    "sig": "getTouchButtonIndexByName(string touchPanelName, string touchButtonName)",
+    "line": 3622
+   },
+   {
+    "sig": "showCurrentInputActionList(bool showOnlyKeys, bool showOnlyJoystick)",
+    "line": 3640
+   },
+   {
+    "sig": "showCurrentInputActionListByKeyFilter()",
+    "line": 3719
+   },
+   {
+    "sig": "showCurrentInputActionListByJoystickFilter()",
+    "line": 3732
+   },
+   {
+    "sig": "clearInputActionListText()",
+    "line": 3745
+   }
+  ]
+ }
+]

@@ -1,0 +1,1074 @@
+[
+ {
+  "type": "customCharacterControllerBase",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Generic Model Controller\\customCharacterControllerBase.cs",
+  "methods": [
+   {
+    "sig": "updateCharacterControllerState()",
+    "line": 226
+   },
+   {
+    "sig": "updateCanMoveState(bool state)",
+    "line": 231
+   },
+   {
+    "sig": "setRagdollCurrentlyActiveState(bool state)",
+    "line": 236
+   },
+   {
+    "sig": "updateCharacterControllerAnimator()",
+    "line": 241
+   },
+   {
+    "sig": "updateMovementInputValues(Vector3 newValues)",
+    "line": 246
+   },
+   {
+    "sig": "updateHorizontalVerticalInputValues(Vector2 newValues)",
+    "line": 251
+   },
+   {
+    "sig": "activateJumpAnimatorState()",
+    "line": 257
+   },
+   {
+    "sig": "updateForwardAmountInputValue(float newValue)",
+    "line": 262
+   },
+   {
+    "sig": "updateTurnAmountInputValue(float newValue)",
+    "line": 267
+   },
+   {
+    "sig": "updateOnGroundValue(bool state)",
+    "line": 272
+   },
+   {
+    "sig": "updatePlayerUsingInputValue(bool state)",
+    "line": 277
+   },
+   {
+    "sig": "setForwardAmountMultiplierValue(float newValue)",
+    "line": 282
+   },
+   {
+    "sig": "resetAnimatorState()",
+    "line": 287
+   },
+   {
+    "sig": "setCharacterControllerActiveState(bool state)",
+    "line": 292
+   },
+   {
+    "sig": "enableOrDisableCharacterMeshesList(bool state)",
+    "line": 305
+   },
+   {
+    "sig": "setOriginalCharacterGameObjectTransformPosition(Vector3 newValue)",
+    "line": 316
+   },
+   {
+    "sig": "setPlayerControllerTransform(Transform newTransform)",
+    "line": 321
+   },
+   {
+    "sig": "setCharacterTransform(Transform newTransform)",
+    "line": 326
+   },
+   {
+    "sig": "checkEventsOnStateChange(bool state)",
+    "line": 331
+   },
+   {
+    "sig": "updateAnimatorFloatValue(int animatorIDValue, float floatValue)",
+    "line": 350
+   },
+   {
+    "sig": "updateAnimatorIntegerValue(int animatorIDValue, int intValue)",
+    "line": 355
+   },
+   {
+    "sig": "updateAnimatorBoolValue(int animatorIDValue, bool boolValue)",
+    "line": 360
+   },
+   {
+    "sig": "updateAnimatorFloatValueLerping(int animatorIDValue, float floatValue, float animatorLerpSpeed, float currentFixedUpdateDeltaTime)",
+    "line": 365
+   },
+   {
+    "sig": "setCapsuleColliderDirectionValue(float newValue)",
+    "line": 371
+   },
+   {
+    "sig": "setCapsuleColliderCenterValue(Vector3 newValue)",
+    "line": 376
+   },
+   {
+    "sig": "setCapsuleColliderRadiusValue(float newValue)",
+    "line": 381
+   },
+   {
+    "sig": "setCapsuleColliderHeightValue(float newValue)",
+    "line": 386
+   },
+   {
+    "sig": "setPlaceToShootOffsetValue(float newValue)",
+    "line": 391
+   },
+   {
+    "sig": "setCharactetPositionOffsetValue(Vector3 newValue)",
+    "line": 397
+   },
+   {
+    "sig": "setCharacterRotationOffsetValue(Vector3 newValue)",
+    "line": 402
+   },
+   {
+    "sig": "setUseRootMotionValue(bool state)",
+    "line": 408
+   },
+   {
+    "sig": "setNoRootWalkMovementSpeedValue(float newValue)",
+    "line": 413
+   },
+   {
+    "sig": "setNoRootRunMovementSpeedValue(float newValue)",
+    "line": 418
+   },
+   {
+    "sig": "setNoRootSprintMovementSpeedValue(float newValue)",
+    "line": 423
+   },
+   {
+    "sig": "setNoRootCrouchMovementSpeedValue(float newValue)",
+    "line": 428
+   },
+   {
+    "sig": "setNoRootWalkStrafeMovementSpeedValue(float newValue)",
+    "line": 433
+   },
+   {
+    "sig": "setNoRootRunStrafeMovementSpeedValue(float newValue)",
+    "line": 438
+   },
+   {
+    "sig": "setSetNewCameraStatesValue(bool state)",
+    "line": 444
+   },
+   {
+    "sig": "setNewCameraStateThirdPersonValue(string newValue)",
+    "line": 449
+   },
+   {
+    "sig": "setNewCameraStateFirstPersonValue(string newValue)",
+    "line": 454
+   },
+   {
+    "sig": "setCustomActionCategoryIDValue(float newValue)",
+    "line": 462
+   },
+   {
+    "sig": "setCharacterRadiusValue(float newValue)",
+    "line": 467
+   },
+   {
+    "sig": "setCombatTypeIDValue(float newValue)",
+    "line": 472
+   },
+   {
+    "sig": "setCustomRagdollInfoNameValue(string newValue)",
+    "line": 477
+   },
+   {
+    "sig": "setPlayerModeNameValue(string newValue)",
+    "line": 482
+   },
+   {
+    "sig": "setHealthBarOffsetValue(float newValue)",
+    "line": 487
+   },
+   {
+    "sig": "setHiddenFromAIAttacksValue(bool state)",
+    "line": 493
+   },
+   {
+    "sig": "setSetAIValuesValue(bool state)",
+    "line": 500
+   },
+   {
+    "sig": "setMaxRandomTimeBetweenAttacksValue(float newValue)",
+    "line": 505
+   },
+   {
+    "sig": "setMinRandomTimeBetweenAttacksValue(float newValue)",
+    "line": 510
+   },
+   {
+    "sig": "setNewMinDistanceToEnemyUsingCloseCombatValue(float newValue)",
+    "line": 515
+   },
+   {
+    "sig": "setNewMinDistanceToCloseCombatValue(float newValue)",
+    "line": 520
+   },
+   {
+    "sig": "setRaycastPositionOffsetValue(float newValue)",
+    "line": 525
+   }
+  ]
+ },
+ {
+  "type": "playerStatesManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\playerStatesManager.cs",
+  "methods": [
+   {
+    "sig": "checkUseRandomPlayerModeOnStart()",
+    "line": 137
+   },
+   {
+    "sig": "isUseRandomPlayerModeOnStartActive()",
+    "line": 160
+   },
+   {
+    "sig": "setDefaultPlayersModeAsCurrentOne()",
+    "line": 165
+   },
+   {
+    "sig": "checkEventOnSystemDisabled()",
+    "line": 172
+   },
+   {
+    "sig": "setInitialPlayerModeByNameFromEditor(string modeName)",
+    "line": 179
+   },
+   {
+    "sig": "enableOrDisablePlayerModeByNameFromEditor(string modeName, bool state)",
+    "line": 206
+   },
+   {
+    "sig": "enablePlayerModeByNameFromEditor(string modeName)",
+    "line": 217
+   },
+   {
+    "sig": "disablePlayerModeByNameFromEditor(string modeName)",
+    "line": 222
+   },
+   {
+    "sig": "openOrCloseControlMode(bool state)",
+    "line": 227
+   },
+   {
+    "sig": "openOrCLoseControlModeMenuFromTouch()",
+    "line": 267
+   },
+   {
+    "sig": "toogleCurrentControlMode(string controlModeNameToCheck)",
+    "line": 272
+   },
+   {
+    "sig": "setCurrentControlMode(string controlModeNameToCheck)",
+    "line": 281
+   },
+   {
+    "sig": "setNextPlayerControl()",
+    "line": 313
+   },
+   {
+    "sig": "setNextPlayerMode()",
+    "line": 342
+   },
+   {
+    "sig": "setModeIndex()",
+    "line": 390
+   },
+   {
+    "sig": "setIgnoreSetPlayerModeByNameActiveState(bool state)",
+    "line": 427
+   },
+   {
+    "sig": "setPlayerModeByNameCheckingCharacterIsNotBusy(string modeName)",
+    "line": 432
+   },
+   {
+    "sig": "setPlayerModeByName(string modeName)",
+    "line": 439
+   },
+   {
+    "sig": "updateCurrentPlayerMode()",
+    "line": 462
+   },
+   {
+    "sig": "updateCurrentPlayerModeByName(string playerModeToCheck)",
+    "line": 467
+   },
+   {
+    "sig": "getCurrentPlayersModeName()",
+    "line": 474
+   },
+   {
+    "sig": "checkPlayerStates(bool disableWeaponsValue, bool disableAimModeValue, bool disableGrabModeValue, bool disableScannerModeValue, bool resetAnimatorStateValue, bool disableGravityPowerValue, bool disablePowersValue, bool disablePlayerModesValue)",
+    "line": 480
+   },
+   {
+    "sig": "checkPlayerStates()",
+    "line": 526
+   },
+   {
+    "sig": "disableWeapons()",
+    "line": 554
+   },
+   {
+    "sig": "disableAimMode()",
+    "line": 563
+   },
+   {
+    "sig": "disableGrabMode()",
+    "line": 572
+   },
+   {
+    "sig": "disableScannerMode()",
+    "line": 583
+   },
+   {
+    "sig": "resetAnimatorState()",
+    "line": 592
+   },
+   {
+    "sig": "disableGravityPower()",
+    "line": 605
+   },
+   {
+    "sig": "disablePowers()",
+    "line": 612
+   },
+   {
+    "sig": "disablePlayerModes()",
+    "line": 623
+   },
+   {
+    "sig": "setDefaultControlState()",
+    "line": 630
+   },
+   {
+    "sig": "setAllControllerComponentsState(bool state)",
+    "line": 637
+   },
+   {
+    "sig": "getAudioSourceElement(string name)",
+    "line": 716
+   },
+   {
+    "sig": "disableVehicleDrivenRemotely()",
+    "line": 727
+   },
+   {
+    "sig": "setPlayerStateByName(string stateName)",
+    "line": 740
+   },
+   {
+    "sig": "inputChangeMode()",
+    "line": 756
+   },
+   {
+    "sig": "inputChangePlayerControlMode()",
+    "line": 808
+   },
+   {
+    "sig": "inputSetNextPlayerControl()",
+    "line": 823
+   },
+   {
+    "sig": "setOpenPlayerModeMenuEnabledState(bool state)",
+    "line": 834
+   },
+   {
+    "sig": "setChangeModeByInputEnabledState(bool state)",
+    "line": 839
+   },
+   {
+    "sig": "setOriginalChangeModeByInputEnabledState()",
+    "line": 844
+   },
+   {
+    "sig": "setInitialPlayersModeOnStart(string newModeName)",
+    "line": 849
+   },
+   {
+    "sig": "setFirstPersonEditor()",
+    "line": 856
+   },
+   {
+    "sig": "setThirdPersonEditor()",
+    "line": 913
+   },
+   {
+    "sig": "setInitialPlayersMode(string newModeName)",
+    "line": 973
+   },
+   {
+    "sig": "setOpenPlayerModeMenuEnabledStateFromEditor(bool state)",
+    "line": 981
+   },
+   {
+    "sig": "setChangeModeByInputEnabledStateFromEditor(bool state)",
+    "line": 988
+   }
+  ]
+ },
+ {
+  "type": "freeClimbSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Extra Movements\\freeClimbSystem.cs",
+  "methods": [
+   {
+    "sig": "updateClimbContactCount(int newValue)",
+    "line": 1035
+   },
+   {
+    "sig": "updateContactNormal(Vector3 newValue)",
+    "line": 1040
+   },
+   {
+    "sig": "updateLastClimbNormal(Vector3 newValue)",
+    "line": 1045
+   },
+   {
+    "sig": "isSlidingDownActive()",
+    "line": 1173
+   },
+   {
+    "sig": "isPlayerMoving()",
+    "line": 1178
+   },
+   {
+    "sig": "getCurrentClimbTurboSpeed()",
+    "line": 1183
+   },
+   {
+    "sig": "isTurboActive()",
+    "line": 1188
+   },
+   {
+    "sig": "isPauseTurboActive()",
+    "line": 1193
+   },
+   {
+    "sig": "getCurrentNormal()",
+    "line": 1198
+   },
+   {
+    "sig": "setClimbImpulseForce(Vector3 forceAmount, bool useCameraDirection)",
+    "line": 1612
+   },
+   {
+    "sig": "stopClimbFromDamageReceived()",
+    "line": 1758
+   },
+   {
+    "sig": "setJumpActive(Vector3 newImpulseOnJumpAmount)",
+    "line": 1786
+   },
+   {
+    "sig": "setMovementInputDisabledOnSurfaceState(bool state)",
+    "line": 1818
+   },
+   {
+    "sig": "setCheckIfDetectClimbActiveState(bool state)",
+    "line": 1823
+   },
+   {
+    "sig": "setClimbActiveState(bool state)",
+    "line": 1906
+   },
+   {
+    "sig": "setClimbEnabledState(bool state)",
+    "line": 2217
+   },
+   {
+    "sig": "setClimbCheckCanBeUsedState(bool state)",
+    "line": 2226
+   },
+   {
+    "sig": "setClimbEnabledState()",
+    "line": 2231
+   },
+   {
+    "sig": "setOriginalClimbEnabledState()",
+    "line": 2236
+   },
+   {
+    "sig": "enableCheckIfDetectClimbActiveStateExternally()",
+    "line": 2255
+   },
+   {
+    "sig": "disableCheckIfDetectClimbActiveStateExternally()",
+    "line": 2264
+   },
+   {
+    "sig": "checkEventsOnStateChange(bool state)",
+    "line": 2298
+   },
+   {
+    "sig": "setClimbPausedState(bool state)",
+    "line": 2319
+   },
+   {
+    "sig": "rotateCharacterOnJump()",
+    "line": 2330
+   },
+   {
+    "sig": "rotateCharacterOnJumpCoroutine()",
+    "line": 2344
+   },
+   {
+    "sig": "resetPlayerRotation()",
+    "line": 2412
+   },
+   {
+    "sig": "resetCameraRotation()",
+    "line": 2465
+   },
+   {
+    "sig": "setActivateClimbStateOnNextSurfaceDetectedActiveState(bool state)",
+    "line": 2657
+   },
+   {
+    "sig": "stopCheckIfSurfaceDetectedInFrontCoroutine()",
+    "line": 2678
+   },
+   {
+    "sig": "activateGrabSurface()",
+    "line": 2741
+   },
+   {
+    "sig": "inputSetSlideDownState(bool state)",
+    "line": 3179
+   },
+   {
+    "sig": "inputGrabSurface()",
+    "line": 3210
+   },
+   {
+    "sig": "inpuSetIncreaseClimbSpeedState(bool state)",
+    "line": 3258
+   },
+   {
+    "sig": "setClimbEnabledStateFromEditor(bool state)",
+    "line": 3324
+   }
+  ]
+ },
+ {
+  "type": "upperBodyRotationSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\upperBodyRotationSystem.cs",
+  "methods": [
+   {
+    "sig": "calculateCharacterRotationValues()",
+    "line": 195
+   },
+   {
+    "sig": "setCurrentBodyRotation(float bodyRotation)",
+    "line": 569
+   },
+   {
+    "sig": "enableOrDisableIKUpperBody(bool value)",
+    "line": 576
+   },
+   {
+    "sig": "isIKUpperBodyActive()",
+    "line": 623
+   },
+   {
+    "sig": "checkShakeUpperBodyRotationCoroutine(float extraAngleValue, float speedValue)",
+    "line": 628
+   },
+   {
+    "sig": "stopShakeUpperBodyRotation()",
+    "line": 639
+   },
+   {
+    "sig": "setCurrentWeaponRotationPoint(Transform newWeaponRotationPoint, weaponRotationPointInfo newRotationPointInfo, int newRotationDirection)",
+    "line": 667
+   },
+   {
+    "sig": "setUsingWeaponRotationPointState(bool state)",
+    "line": 676
+   },
+   {
+    "sig": "setUsingDualWeaponState(bool state)",
+    "line": 681
+   },
+   {
+    "sig": "setCurrentRightWeaponRotationPoint(Transform newWeaponRotationPoint, weaponRotationPointInfo newRotationPointInfo, int newRotationDirection)",
+    "line": 686
+   },
+   {
+    "sig": "setCurrentLeftWeaponRotationPoint(Transform newWeaponRotationPoint, weaponRotationPointInfo newRotationPointInfo, int newRotationDirection)",
+    "line": 695
+   },
+   {
+    "sig": "setTemporalObjectToFollow(Transform newObject)",
+    "line": 704
+   },
+   {
+    "sig": "setHorizontalBendingMultiplierValue(float newValue)",
+    "line": 711
+   },
+   {
+    "sig": "setOriginalHorizontalBendingMultiplier()",
+    "line": 716
+   },
+   {
+    "sig": "setVerticalBendingMultiplierValue(float newValue)",
+    "line": 721
+   },
+   {
+    "sig": "setOriginalVerticalBendingMultiplier()",
+    "line": 726
+   },
+   {
+    "sig": "setFollowFullRotationPointDirectionState(bool state)",
+    "line": 731
+   },
+   {
+    "sig": "setUseFollowFullRotationClampState(bool state)",
+    "line": 736
+   },
+   {
+    "sig": "setNewFollowFullRotationClampX(Vector2 newFollowFullRotationClampXValues)",
+    "line": 741
+   },
+   {
+    "sig": "setNewFollowFullRotationClampY(Vector2 newFollowFullRotationClampYValues)",
+    "line": 746
+   },
+   {
+    "sig": "setNewFollowFullRotationClampZ(Vector2 newFollowFullRotationClampZValues)",
+    "line": 751
+   },
+   {
+    "sig": "setExtraHorizontalRotationEnabledState(bool state)",
+    "line": 756
+   },
+   {
+    "sig": "setHorizontalMaxAngleDifference(float newValue)",
+    "line": 761
+   },
+   {
+    "sig": "setVerticalMaxAngleDifference(float newValue)",
+    "line": 766
+   },
+   {
+    "sig": "setOriginalHorizontalMaxAngleDifference()",
+    "line": 771
+   },
+   {
+    "sig": "setOriginalVerticalMaxAngleDifference()",
+    "line": 776
+   },
+   {
+    "sig": "setFullBodyAwarenessActiveState(bool state)",
+    "line": 781
+   },
+   {
+    "sig": "getChestTransform()",
+    "line": 794
+   },
+   {
+    "sig": "setNewChestUpVectorValueOnRuntime(Vector3 newValue)",
+    "line": 799
+   },
+   {
+    "sig": "setNewChestUpVectorValue(Vector3 newValue)",
+    "line": 805
+   },
+   {
+    "sig": "setSpineTransform(Transform newTransform)",
+    "line": 812
+   },
+   {
+    "sig": "setChestTransform(Transform newTransform)",
+    "line": 819
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 826
+   }
+  ]
+ },
+ {
+  "type": "buildPlayer",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Character Builder\\buildPlayer.cs",
+  "methods": [
+   {
+    "sig": "setNewCharacterModelToReplaceInRuntime(GameObject newObject)",
+    "line": 144
+   },
+   {
+    "sig": "buildCharacterInRuntime()",
+    "line": 155
+   },
+   {
+    "sig": "checkElementsBeforeReplacingCharacterModelInRuntime()",
+    "line": 184
+   },
+   {
+    "sig": "checkElementsAfterReplacingCharacterModelInRuntime()",
+    "line": 193
+   },
+   {
+    "sig": "buildCharacterByButton()",
+    "line": 212
+   },
+   {
+    "sig": "setCheckUnpackCharacterPrefabActiveState(bool state)",
+    "line": 225
+   },
+   {
+    "sig": "setCharacterSettingsStatus(bool characterHasBeenPreInstantiatedOnEditorValue, bool characterIsAI, bool configuredAsEnemy, bool configuredAsNeutral, string newTemplateNameToApply, bool useTemplateListValue)",
+    "line": 292
+   },
+   {
+    "sig": "setCharacterVariables(bool characterIsPlayerType, bool hasWeapons, bool characterIsInstantiated, GameObject newModel)",
+    "line": 308
+   },
+   {
+    "sig": "setCharacterBones(Transform newHead, Transform newNeck, Transform newChest, Transform newSpine, Transform newHips, Transform newRightLowerArm, Transform newLeftLowerArm, Transform newRightHand, Transform newLeftHand, Transform newRightLowerLeg, Transform newLeftLowerLeg, Transform newRightFoot, Transform newLeftFoot, Transform newRightToes, Transform newLeftToes)",
+    "line": 317
+   },
+   {
+    "sig": "getCharacterBones()",
+    "line": 356
+   },
+   {
+    "sig": "checkAllBonesFound()",
+    "line": 414
+   },
+   {
+    "sig": "buildCharacter()",
+    "line": 440
+   },
+   {
+    "sig": "setNewSpineAndChestBones()",
+    "line": 699
+   },
+   {
+    "sig": "setCustomChestUpVectorValue(Vector3 newValue)",
+    "line": 730
+   },
+   {
+    "sig": "getPlayerGameObject()",
+    "line": 870
+   },
+   {
+    "sig": "setCharacterValuesAndAdjustSettingsExternally(bool characterHasBeenPreInstantiatedOnEditorValue, bool characterIsAI, bool configuredAsEnemy, bool configuredAsNeutral, string newTemplateNameToApply, bool useTemplateListValue, bool characterIsPlayerType, bool hasWeapons, bool characterIsInstantiated)",
+    "line": 875
+   },
+   {
+    "sig": "adjustSettings()",
+    "line": 899
+   },
+   {
+    "sig": "setCharacterIsEnemyAndNeutralAIValueExternally(bool isEnemyAIValue, bool isNeutralAIValue)",
+    "line": 1006
+   },
+   {
+    "sig": "adjustSettingsFromList(List<settingsInfo> settingsList)",
+    "line": 1031
+   },
+   {
+    "sig": "adjustSettingsFromEditor()",
+    "line": 1108
+   },
+   {
+    "sig": "adjustSingleSettingsFromEditor(int currentIndex)",
+    "line": 1146
+   },
+   {
+    "sig": "setTemporalSettingsInfoList()",
+    "line": 1191
+   },
+   {
+    "sig": "clearTemporalSettingsInfoList()",
+    "line": 1215
+   },
+   {
+    "sig": "saveSettingsListToFile()",
+    "line": 1268
+   },
+   {
+    "sig": "loadSettingsListFromFile()",
+    "line": 1319
+   },
+   {
+    "sig": "createSettingsListTemplate()",
+    "line": 1373
+   },
+   {
+    "sig": "setTemplateFromListAsCurrentToApply(int templateIndex)",
+    "line": 1378
+   },
+   {
+    "sig": "setTemplateFromListAsCurrentToApplyOnCharacterCreatorEditor(int templateIndex)",
+    "line": 1389
+   },
+   {
+    "sig": "setTemplateFromListAsCurrentToApplyByName(string templateName)",
+    "line": 1394
+   },
+   {
+    "sig": "clearObjectsSearcResultList()",
+    "line": 1404
+   },
+   {
+    "sig": "showObjectsBySearchName()",
+    "line": 1417
+   }
+  ]
+ },
+ {
+  "type": "slideSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Extra Movements\\slideSystem.cs",
+  "methods": [
+   {
+    "sig": "setSlideImpulseForce(Vector3 forceAmount, bool useCameraDirection)",
+    "line": 548
+   },
+   {
+    "sig": "setJumpActive(Vector3 newImpulseOnJumpAmount)",
+    "line": 571
+   },
+   {
+    "sig": "setCheckIfDetectSlideActiveState(bool state, bool slideActivatedBySlideZoneValue)",
+    "line": 593
+   },
+   {
+    "sig": "setSlideActiveState(bool state)",
+    "line": 660
+   },
+   {
+    "sig": "setSlideEnabledState(bool state)",
+    "line": 903
+   },
+   {
+    "sig": "setSlideCanBeUsedState(bool state)",
+    "line": 912
+   },
+   {
+    "sig": "setSliderEnabledState()",
+    "line": 917
+   },
+   {
+    "sig": "setOriginalSliderEnabledState()",
+    "line": 922
+   },
+   {
+    "sig": "setCurrentSlideTransform(Transform newTransform)",
+    "line": 931
+   },
+   {
+    "sig": "setSlideSpeedMultiplier(float newValue)",
+    "line": 942
+   },
+   {
+    "sig": "setManualSlideCanBeEnabledState(bool state)",
+    "line": 947
+   },
+   {
+    "sig": "enableCheckIfDetectSlideActiveStateExternally()",
+    "line": 952
+   },
+   {
+    "sig": "disableCheckIfDetectSlideActiveStateExternally()",
+    "line": 967
+   },
+   {
+    "sig": "checkEventsOnStateChange(bool state)",
+    "line": 983
+   },
+   {
+    "sig": "checkEventsOnRunOnSlideStateChange(bool state)",
+    "line": 1004
+   },
+   {
+    "sig": "setAdhereToSurfacesActiveState(bool state)",
+    "line": 1015
+   },
+   {
+    "sig": "setResetGravityDirectionOnSlideExitEnabledState(bool state)",
+    "line": 1034
+   },
+   {
+    "sig": "setOriginalResetGravityDirectionOnSlideExitEnabled()",
+    "line": 1039
+   },
+   {
+    "sig": "setCanUseRunPausedState(bool state)",
+    "line": 1075
+   },
+   {
+    "sig": "setSlideEnabledStateFromEditor(bool state)",
+    "line": 1093
+   },
+   {
+    "sig": "setManualSlideCanBeEnabledStateFromEditor(bool state)",
+    "line": 1100
+   }
+  ]
+ },
+ {
+  "type": "climbRopeSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Extra Movements\\climbRopeSystem.cs",
+  "methods": [
+   {
+    "sig": "setImpulseForce(Vector3 forceAmount, bool useCameraDirection)",
+    "line": 393
+   },
+   {
+    "sig": "setJumpActive(Vector3 newImpulseOnJumpAmount)",
+    "line": 418
+   },
+   {
+    "sig": "setMovementSystemActivestate(bool state)",
+    "line": 501
+   },
+   {
+    "sig": "setMovementEnabledState(bool state)",
+    "line": 729
+   },
+   {
+    "sig": "enableOrDisableTurbo(bool state)",
+    "line": 738
+   },
+   {
+    "sig": "setCanUseTurboPausedState(bool state)",
+    "line": 763
+   },
+   {
+    "sig": "inputChangeTurboState(bool state)",
+    "line": 777
+   },
+   {
+    "sig": "setTransformElements(Transform newBottomTransform, Transform newTopTransform)",
+    "line": 784
+   },
+   {
+    "sig": "setSetPlayerAsChildStateState(bool state, Transform newPlayerParentTransform)",
+    "line": 791
+   },
+   {
+    "sig": "setCurrentClimbRopeTriggerSystem(climbRopeTriggerSystem newClimbRopeTriggerSystem)",
+    "line": 798
+   },
+   {
+    "sig": "adjustPlayerToMovementOnStart(Vector3 initialPosition, Vector3 movementDirection)",
+    "line": 818
+   },
+   {
+    "sig": "resetPlayerRotation()",
+    "line": 920
+   },
+   {
+    "sig": "rotateCharacterOnJump()",
+    "line": 992
+   },
+   {
+    "sig": "rotateCharacterOnJumpCoroutine()",
+    "line": 1006
+   },
+   {
+    "sig": "addClimbRopeTriggerMatchSystem(climbRopeTriggerMatchSystem newClimbRopeTriggerMatchSystem)",
+    "line": 1054
+   },
+   {
+    "sig": "removeClimbRopeTriggerMatchSystem(climbRopeTriggerMatchSystem newClimbRopeTriggerMatchSystem)",
+    "line": 1061
+   },
+   {
+    "sig": "setNewClimbActionID(int newValue)",
+    "line": 1081
+   },
+   {
+    "sig": "setOriginalClimbActionID()",
+    "line": 1086
+   }
+  ]
+ },
+ {
+  "type": "externalControllerBehavior",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Extra Movements\\externalControllerBehavior.cs",
+  "methods": [
+   {
+    "sig": "updateControllerBehavior()",
+    "line": 37
+   },
+   {
+    "sig": "isCharacterOnGround()",
+    "line": 42
+   },
+   {
+    "sig": "isBehaviorActive()",
+    "line": 48
+   },
+   {
+    "sig": "setExternalForceActiveState(bool state)",
+    "line": 54
+   },
+   {
+    "sig": "setExternalForceEnabledState(bool state)",
+    "line": 59
+   },
+   {
+    "sig": "updateExternalForceActiveState(Vector3 forceDirection, float forceAmount)",
+    "line": 64
+   },
+   {
+    "sig": "checkIfActivateExternalForce()",
+    "line": 69
+   },
+   {
+    "sig": "setJumpActiveForExternalForce()",
+    "line": 74
+   },
+   {
+    "sig": "setExtraImpulseForce(Vector3 forceAmount, bool useCameraDirection)",
+    "line": 79
+   },
+   {
+    "sig": "disableExternalControllerState()",
+    "line": 84
+   },
+   {
+    "sig": "checkIfResumeExternalControllerState()",
+    "line": 89
+   },
+   {
+    "sig": "checkIfCanEnableBehavior(string behaviorName)",
+    "line": 94
+   },
+   {
+    "sig": "setBehaviorCurrentlyActiveState(bool state)",
+    "line": 111
+   },
+   {
+    "sig": "isBehaviorCurrentlyActive()",
+    "line": 116
+   },
+   {
+    "sig": "setCurrentPlayerActionSystemCustomActionCategoryID()",
+    "line": 121
+   },
+   {
+    "sig": "checkPauseStateDuringExternalForceOrBehavior()",
+    "line": 126
+   },
+   {
+    "sig": "checkResumeStateAfterExternalForceOrBehavior()",
+    "line": 131
+   },
+   {
+    "sig": "checkChangeCameraViewStateOnExternalControllerBehavior()",
+    "line": 136
+   }
+  ]
+ }
+]

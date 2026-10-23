@@ -1,0 +1,245 @@
+[
+  {
+    "type": "camera2_5dSplineZoneOptions",
+    "summary": "2.5D スプラインマップのゾーン用オプションで、ゾーン進入時にプレイヤーの `playerCamera` を取得してロックカメラの回転追従を制御する小規模コンポーネント。",
+    "methods": {
+      "setCurrentPlayerAndActivateCameraState(GameObject newPlayer)": "プレイヤーを設定したうえで、ゾーン用のカメラ状態設定を適用するだけ。",
+      "setCurrentPlayer(GameObject newPlayer)": "`currentPlayer` を更新して `playerCamera` を取得する。null なら警告を出して中断。",
+      "setCameraStateOnPlayer()": "ゾーン機能有効時、回転追従の一時停止と指定 Transform への回転補間を `playerCamera` に指示する。"
+    }
+  },
+  {
+    "type": "camera2_5dZoneLimitSystem",
+    "summary": "2.5D ゾーンのカメラ移動範囲（幅・高さ・奥行き）をプレイヤーカメラに適用するコンポーネント。プレイヤーでなければ搭乗中の車両のドライバーからカメラを探す。",
+    "methods": {
+      "setCameraLimitOnPlayer()": "`currentPlayer` がいれば `playerCamera.setCameraLimit` に範囲値を渡し、必要ならカメラ前方位置も設定する。",
+      "setCameraLimitOnPlayer(GameObject newPlayer)": "プレイヤーを設定してから、保存済みの範囲設定をカメラに適用する。",
+      "setCurrentPlayer(GameObject newPlayer)": "null なら警告。`playerComponentsManager` から各マネージャを取得し、プレイヤーでなければ車両ドライバーに切り替える。",
+      "setConfigurationToPlayer()": "`setCameraLimitOnPlayer` を呼ぶだけ。"
+    }
+  },
+  {
+    "type": "cameraEffect",
+    "summary": "カメラエフェクトの基底クラス。`renderEffect` を仮想メソッドとして持つだけで、実際の描画は派生クラスが実装する。",
+    "methods": {
+      "renderEffect(RenderTexture source, RenderTexture destination, Camera mainCamera)": "本体が空で何もしない。"
+    }
+  },
+  {
+    "type": "cameraEffectSystem",
+    "summary": "登録したカメラエフェクトを名前やインデックスで切り替える管理コンポーネント。`OnRenderImage` から現在のエフェクトへ画像を渡し、切替時に対応する UnityEvent を発火する。",
+    "methods": {
+      "extraRenderImage(RenderTexture source, RenderTexture destination, Camera currentCamera)": "追加カメラ用の描画入口で、有効時のみ現在のエフェクトの `renderEffect` に画像とカメラを渡す。",
+      "setCameraEffectByName(string cameraStateName)": "名前が一致する要素のインデックスを `currentCameraEffectIndex` に入れ、エフェクトを有効化する。",
+      "setMainCameraEffectByName(string cameraStateName)": "名前で探した要素だけ `activeAsMainCameraEffect` を true、他を false にして有効化する。",
+      "disableMainCameraEffectActiveState(string cameraStateName)": "名前で探した要素の `activeAsMainCameraEffect` を false にし、エフェクトを無効化する。",
+      "setIfCurrentCameraEffectRemainActive(bool state)": "true ならメインカメラエフェクトの有無を確認し、false なら有効時に無効化する。",
+      "checkIfMainCameraEffectsAreActive()": "`activeAsMainCameraEffect` が立つ最初の要素を現在のエフェクトとして有効化する。",
+      "canUseCameraEffect()": "`cameraEffectEnabled` と `cameraEffectChangeDisabled`（開始時設定済みか）から切替可否を返す。",
+      "enableOrDisableCameraEffectActive()": "現在の有効状態を反転して `setCameraEffectActiveState` を呼ぶだけ。",
+      "setCameraEffectActiveState(bool state)": "使用可否を確認し、有効フラグと `enabled`、`currentCameraEffect` を更新して有効/無効イベントと追加カメラを切り替える。",
+      "setCurrentCameraEffect(cameraEffect newCameraEffect)": "`currentCameraEffect` を差し替えるだけ。",
+      "setNextCameraEffect()": "現在の無効イベントを発火し、インデックスを次（末尾なら0）へ進めて有効イベントを発火、必要なら有効化する。",
+      "setPreviousCameraEffect()": "現在の無効イベントを発火し、インデックスを前（先頭なら末尾）へ戻して有効イベントを発火する。",
+      "inputSetNextCameraEffect()": "`setNextCameraEffect` を呼ぶだけ。",
+      "inputSetPreviousCameraEffect()": "`setPreviousCameraEffect` を呼ぶだけ。",
+      "inputEnableOrDisableCameraEffectActive()": "`enableOrDisableCameraEffectActive` を呼ぶだけ。"
+    }
+  },
+  {
+    "type": "cameraPerspectiveSystem",
+    "summary": "プレイヤーが目標物をカメラ内に収めると「撮影成功」と判定するシステム。距離・角度・画面内判定を行い、撮影音、オブジェクトの有効化、イベント、近接音を扱う。",
+    "methods": {
+      "stopUpdateCoroutine()": "実行中の `updateCoroutine` を停止するだけ。",
+      "checkCurrentPlayerPosition(Transform playerPosition, Transform cameraTransform, Camera deviceCamera)": "距離と角度、対象物の画面内判定がすべて成立すれば撮影成功として効果音・オブジェクト切替・イベントを実行し、更新を止める。",
+      "playSound()": "`useCaptureSound` が有効なら、ピッチを整えて撮影音を一度再生する。",
+      "checkTriggerInfo(Collider col, bool isEnter)": "レイヤー一致時、進入ならプレイヤーと `smartphoneDevice` を登録して近接音コルーチンを開始し、退出なら解除して停止する。"
+    }
+  },
+  {
+    "type": "cameraStateInfo",
+    "summary": "カメラ状態1つ分の設定値（位置オフセット、FOV、リーン、頭部追従など）を保持するシリアライズ可能クラス。別の状態から値をコピーまたは補間代入する。",
+    "methods": {
+      "assignCameraStateValues(cameraStateInfo from, float lerpSpeed)": "`from` の値を取り込み、`lerpSpeed` が0より大きければ位置オフセットと `yLimits` を補間、0なら即時コピーする。"
+    }
+  },
+  {
+    "type": "dynamicSplitScreenSystem",
+    "summary": "2人のプレイヤーが離れたときに画面を動的に分割するシステム。距離に応じてスプリッタ、2台目のカメラ、カリングマスクを制御する。",
+    "methods": {
+      "setDynamicSplitScreenActiveState(bool state, GameObject newPlayer1, GameObject newPlayer2, bool creatingCharactersOnEditor)": "有効フラグと `enabled` を設定し両プレイヤーのカメラを取得、2台目カメラの `cullingMask` を状態で切り替え、エディタ生成時は更新する。",
+      "setDynamicSplitScreenActiveState(bool state)": "`dynamicSplitScreenActive` と `enabled` を設定するだけ。"
+    }
+  },
+  {
+    "type": "externalCameraShakeSystem",
+    "summary": "距離やアクション名を条件に、周囲のプレイヤーの `headBob` へ外部シェイクを要求するコンポーネント。シェイク名は外部シェイクリスト管理マネージャから取得する。",
+    "methods": {
+      "getExternalShakeList()": "シェイクリスト管理マネージャを検索または生成し、登録されているシェイク名を `nameList` に複製して更新する。",
+      "setCurrentPlayer(GameObject player)": "null なら無視し、`currentPlayer` を設定して未取得なら `headBob` を取得する。",
+      "setCurrentPlayerAndActivateCameraShake(GameObject player)": "プレイヤーを設定してから `setCameraShake` でシェイクを発生させる。",
+      "setCameraShake()": "有効時、イベント設定を控え、手動設定ならプレイヤーを割り当てて `externalShakeName` のシェイクを起こす。",
+      "setCameraShakeByAction(string actionName)": "`shakeTriggeredByActionList` からアクション名が一致する要素を探し、その `shakeName` とイベント設定でシェイクする。",
+      "setCameraShakeByName(string shakeName)": "手動設定なら `currentPlayer` に、そうでなければ範囲内のコライダーにシェイク信号を送る。",
+      "setExternalShakeSignal(GameObject objectToCall, string shakeName)": "距離条件を満たすか確認して減衰率を算出し、対象の `headBob` にイベントとシェイク名を渡す。",
+      "updateComponent()": "コンポーネントとダーティシーンを更新するだけ。"
+    }
+  },
+  {
+    "type": "externalShakeListManager",
+    "summary": "シーン内で共有する外部シェイク定義リストを保持するシングルトン的なマネージャ。全 `headBob` へリストや現在のシェイク状態を配布する。",
+    "methods": {
+      "getComponentInstance()": "初期化済みなら何もせず、重複インスタンスなら自身を破棄し、そうでなければ静的インスタンスに登録する。",
+      "setShakeInManagerList(externalShakeInfoListElement element, int index)": "指定インデックスの要素を差し替えるだけ。",
+      "udpateAllHeadbobShakeList()": "シーン内の全 `headBob` に現在のシェイクリストを反映させる。",
+      "setExternalShakeStateByIndex(int index, bool isFirstPerson)": "指定シェイクの一人称/三人称用ダメージシェイクを、全 `headBob` に設定する。"
+    }
+  },
+  {
+    "type": "pauseOrResumePlayerControllerAndCameraSystem",
+    "summary": "カットシーンなどでプレイヤーの入力・移動・カメラ・HUDをまとめて停止/再開するシステム。カメラの親変更、タイムスケール、遅延再開も扱う。",
+    "methods": {
+      "getCurrentPlayer(GameObject player)": "停止中は何もせず、`playerComponentsManager` からコントローラ・カメラ・ヘッドボブ等の各マネージャを取得する。",
+      "pauseOrPlayPlayerComponents(bool state)": "入力・頭部追従・ヘッドボブ・カメラを停止し、HUDやカーソル、イベント、カメラの親、タイムスケール、AIもまとめて切り替える。",
+      "setTimeScale(float newValue)": "`Time.timeScale` を設定し、`ignoreChangeFixedDeltaTime` が無効なら0以外のとき `fixedDeltaTime` も更新する。",
+      "checkCharacterMesh(bool state)": "`activatePlayerMeshModel` 有効かつ一人称のときキャラクターメッシュを切り替え、デバイス使用中なら重力中心も切り替える。",
+      "resetCameraPositionIfCharacterPaused()": "プレイヤー停止中のみ `resetCameraPosition` を呼ぶ。",
+      "resetCameraPositionIfCharacterPausedWithoutTransition()": "停止中でカメラ移動済みなら、向きを反映してカメラを元の親・位置へ即時戻し再開する。",
+      "resetCameraPosition()": "カメラ移動済みなら、既存のリセット処理を止めてリセット用コルーチンを開始する。",
+      "setCameraDirection()": "`setCameraDirectionAtEnd` 有効時、カメラとピボットを指定 Transform の向きに合わせ `lookAngleValue` を更新する。",
+      "resumePlayerAfterTimeDelay()": "既存の再開予約を止め、`delayToResumePlayer` 後に再開するコルーチンを開始する。",
+      "stopResumePlayerAfterTimeDelay()": "再開用コルーチンを停止するだけ。",
+      "findPlayerOnScene()": "`searchPlayerOnSceneIfNotAssigned` が有効なとき、シーンのメインプレイヤーを取得して割り当てる。"
+    }
+  },
+  {
+    "type": "photoModeSystem",
+    "summary": "フォトモード用のフリーカメラ。プレイヤーカメラをピボットに付け替えて自由移動・回転させ、タイムスケール停止や撮影イベントを扱う。",
+    "methods": {
+      "stopUpdateCoroutine()": "`mainUpdateCoroutine` を停止するだけ。",
+      "setPhotoModeActiveState(bool state)": "フォトモードを切り替え、タイムスケールやキャラクター停止、カメラの親と位置の保存復元、イベント発火を行う。",
+      "enableOrDisablePhotoMode()": "現在の状態を反転して `setPhotoModeActiveState` を呼ぶだけ。",
+      "takePhoto()": "`eventOnTakePhoto` を発火するだけ。",
+      "resetCameraPosition()": "既存のリセット処理を止め、カメラ位置を戻すコルーチンを開始する。",
+      "setCameraDirection()": "プレイヤーカメラの向きをピボットの回転に合わせ、`lookAngleValue` を更新する。",
+      "inputTakePhoto()": "フォトモード中のみ `takePhoto` を呼ぶ。",
+      "inputToogleCameraRotation()": "フォトモード中のみ `cameraRotationActive` を反転させる。",
+      "inputEnableOrDisablePhotoMode()": "`enableOrDisablePhotoMode` を呼ぶだけ。",
+      "inputSetTurboMode(bool state)": "フォトモード中かつターボ許可時のみ `turboActive` を設定する。",
+      "inputMoveCameraUp()": "`movingCameraUp` を true にするだけ。",
+      "inputMoveCameraDown()": "`movingCameraDown` を true にするだけ。",
+      "inputRotategCameraToRight()": "`rotatingCameraToRight` を true にするだけ。",
+      "inputRotateCameraToLeft()": "`rotatingCameraToLeft` を true にするだけ。"
+    }
+  },
+  {
+    "type": "pixelCameraEffect",
+    "summary": "画面をブロック状にピクセル化するポストエフェクト。`BlockCount` とカメラのアスペクト比からブロック数を算出してシェーダに渡し、ブリットする。",
+    "methods": {
+      "setMaterial()": "`mainMaterial` が未生成なら `mainShader` から生成し、`HideAndDontSave` にするだけ。"
+    }
+  },
+  {
+    "type": "playerCullingSystem",
+    "summary": "プレイヤーのレンダラーを対象に、マテリアルの透明度を補間してカリング（フェード）するシステム。対象レンダラーと元シェーダをリストで保持する。",
+    "methods": {
+      "setPauseCullingState(bool state)": "`pauseCullingState` を設定するだけ。",
+      "getMaterialList()": "マテリアルリストが空なら、保持しているレンダラーからマテリアルと元シェーダを収集する。",
+      "clearRendererList()": "レンダラーと元シェーダのリストを空にするだけ。",
+      "setNewPlayerGameObject(GameObject newObject)": "`playerGameObjectList` を空にして新しいオブジェクト1つだけを追加する。",
+      "storePlayerRenderer()": "レンダラーリストを消してから、対象オブジェクトと子オブジェクトの `Renderer` を収集する。",
+      "storePlayerRendererFromEditor()": "`storePlayerRenderer` を実行してからコンポーネントを更新する。",
+      "clearRendererListFromEditor()": "レンダラーリストを消してからコンポーネントを更新する。",
+      "setCullingSystemEnabledState(bool state)": "`cullingSystemEnabled` を設定するだけ。",
+      "setCullingSystemEnabledStateFromEditor(bool state)": "有効状態を設定してからコンポーネントを更新する。",
+      "updateComponent()": "コンポーネントとダーティシーンを更新するだけ。"
+    }
+  },
+  {
+    "type": "remoteEventOnCameraCaptureSystem",
+    "summary": "撮影時のレイキャストで見つかったオブジェクトの `eventObjectFoundOnCaptureSystem` を呼び出す中継コンポーネント。カプセルキャストにも対応する。",
+    "methods": {
+      "checkCapture()": "有効ならカメラ前方へレイキャスト（カプセル時は複数）し、当たった各オブジェクトの撮影イベントを呼ぶ。",
+      "setNewCameraTransform(Transform newCamera)": "`cameraTransform` を差し替えるだけ。"
+    }
+  },
+  {
+    "type": "setCameraFOVValue",
+    "summary": "メインカメラの FOV を増減・設定し、クランプ範囲内に収める小規模コンポーネント。カメラ未設定時はプレイヤーカメラやシーンから取得する。",
+    "methods": {
+      "enableOrDisableCameraFOVChange(bool state)": "`cameraFOVChangeEnabled` を設定するだけ。",
+      "increaseFov()": "FOV 変更が有効なら、FOV を `changeFOVAmount` だけ増やしてからクランプする。",
+      "decreaseFOV()": "FOV 変更が有効なら、FOV を `changeFOVAmount` だけ減らしてからクランプする。",
+      "setCameraFOV(float newValue)": "カメラの有無を確認して FOV を `newValue` に設定し、`FOVClampValue` でクランプする。",
+      "setFOVClampValueX(float newValue)": "`FOVClampValue.x` を設定するだけ。",
+      "setFOVClampValueY(float newValue)": "`FOVClampValue.y` を設定するだけ。"
+    }
+  },
+  {
+    "type": "setTransparentSurfaces",
+    "summary": "プレイヤーとカメラの間にあるサーフェスを検出し、マネージャ経由で一時的に透明化するコンポーネント。プレイヤーIDごとに透明化対象を管理する。",
+    "methods": {
+      "checkSurfacesToRemove()": "検出リスト内のサーフェスから、自プレイヤーIDの登録をマネージャ経由で外す。",
+      "changeSurfacesToTransparentOrRegularTemporaly(bool state)": "検出済みかつ自プレイヤーIDが登録されたサーフェスだけを、一時的な透明/通常状態に切り替える。",
+      "setCheckSurfaceActiveState(bool state)": "有効時のみ有効フラグを更新し、停止時は登録解除、開始/停止に応じてイベントを発火する。",
+      "setLockedCameraActiveState(bool state)": "`lockedCameraActive` を設定するだけ。",
+      "setCheckSurfaceEnabledState(bool state)": "`checkSurfaceEnabled` を設定するだけ。",
+      "setCheckSurfaceEnabledStateFromEditor(bool state)": "`checkSurfaceEnabled` を設定してからコンポーネントを更新する。"
+    }
+  },
+  {
+    "type": "setTransparentSurfacesSystem",
+    "summary": "透明化対象サーフェスを共有するシングルトン的なマネージャ。シェーダの差し替えとアルファ値のコルーチン補間で、透明/通常を切り替える。",
+    "methods": {
+      "getComponentInstance()": "初期化済みなら何もせず、重複インスタンスなら自身を破棄し、そうでなければ静的インスタンスに登録する。",
+      "addNewSurface(GameObject newSurface, Shader customShader)": "子レンダラーのマテリアルを収集して元シェーダとアルファを保存し、透明シェーダに差し替えて登録・透明化する。",
+      "listContainsSurface(GameObject surfaceToCheck)": "有効時のみ、`surfaceGameObjectList` に対象が含まれるかどうかを返す。",
+      "setSurfaceToRegular(int surfaceIndex, bool removeSurfaceAtEnd)": "対象を通常へ戻すフラグを立て、全マテリアルのアルファを元へ補間し、`removeSurfaceAtEnd` なら完了後にリストから外す。",
+      "checkSurfaceToSetTransparentAgain(GameObject surfaceToCheck)": "通常へ戻す途中（一時的でない）なら、そのサーフェスを再度透明化する。",
+      "setSurfaceTransparent(surfaceInfo currentSurfaceToCheck)": "透明化フラグを立て、全マテリアルのアルファを `alphaTransparency` へ補間する。",
+      "setAlphaValue(surfaceInfo currentSurfaceToCheck, int surfaceIndex, Material currentMaterial, bool changingToTransparent, Shader originalShader, float originalAlphaColor, bool removeSurfaceAtEnd)": "既存の補間コルーチンを止め、指定マテリアルのアルファ（または `_TransparentAmount`）を補間するコルーチンを開始する。",
+      "checkSurfacesToRemove()": "プレイヤー数が0になったサーフェスを通常へ戻し、リストから削除する。",
+      "changeSurfacesToTransparentOrRegularTemporaly(int playerID, int surfaceIndex, bool setTransparentSurface)": "指定プレイヤーIDが登録されていれば、そのサーフェスを一時的に透明化または通常化する。",
+      "addPlayerIDToSurface(int playerID, GameObject surfaceToCheck)": "一致するサーフェスに未登録ならプレイヤーIDを追加し、検出人数を増やす。",
+      "removePlayerIDToSurface(int playerID, int surfaceIndex)": "登録済みならプレイヤーIDを外し、検出人数を減らす。"
+    }
+  },
+  {
+    "type": "simpleMoveCameraToPosition",
+    "summary": "メインカメラを指定オブジェクトの子にして、位置と回転を補間移動させるコンポーネント。移動終了で元の親へ戻す。",
+    "methods": {
+      "moveCamera(bool state)": "有効ならカメラを `cameraPosition` の子にして補間移動を開始し、無効なら元の親へ戻す。",
+      "setCurrentPlayer(GameObject player)": "プレイヤーから `playerCamera` を取得し、そのメインカメラを保持する。",
+      "stopMovement()": "移動用コルーチンを停止するだけ。"
+    }
+  },
+  {
+    "type": "simpleShowHideMouseCursor",
+    "summary": "`menuPause` 経由でマウスカーソルとゲームパッドカーソルの表示を切り替える小規模コンポーネント。",
+    "methods": {
+      "showMouseCursor()": "`showOrHideMouseCursor(true)` を呼ぶだけ。",
+      "hideMouseCursor()": "`showOrHideMouseCursor(false)` を呼ぶだけ。",
+      "showOrHideMouseCursor(bool state)": "有効時、状態が変わるときだけ `menuPause` のカーソル・デバイス・サブメニュー状態を切り替える。"
+    }
+  },
+  {
+    "type": "solidCameraEffect",
+    "summary": "テクスチャを画面全体に敷くソリッド系のポストエフェクト。ブロック数・色・テクスチャをシェーダに渡してブリットする。",
+    "methods": {
+      "setMaterial()": "`mainMaterial` が未生成なら `mainShader` から生成し、`HideAndDontSave` にするだけ。"
+    }
+  },
+  {
+    "type": "vehicleCameraShake",
+    "summary": "車両のメインカメラにヘッドボブ/シェイク状態を適用するコンポーネント。状態名ごとの回転揺れを補間し、外部シェイクは継続時間後に停止する。",
+    "methods": {
+      "startShake(string shakeName)": "名前が現在と異なれば一致する `bobStates` を選択して他を非選択にし、揺れを有効化して更新コルーチンを開始する。",
+      "stopUpdateCoroutine()": "`updateCoroutine` を停止するだけ。",
+      "stopShake()": "揺れを止めてカメラ回転を戻すコルーチンを開始し、状態名をクリアして更新も停止する。",
+      "getCurrentCameraTransform(Transform currentCameraTransform)": "`mainCamera` を設定し、null でないかで割り当て済みフラグを更新するだけ。",
+      "setExternalShakeState(externalShakeInfo shakeInfo)": "外部シェイク状態を開始し、回転量・補間・速度・継続時間を `shakeInfo` から設定する。",
+      "setExternalShakeDuration()": "`externalShake` を立て、継続時間後に揺れを止めるコルーチンを開始する。",
+      "setVehicleActiveState(bool state)": "`vehicleActive` を設定するだけ。"
+    }
+  }
+]

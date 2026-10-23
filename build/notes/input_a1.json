@@ -1,0 +1,808 @@
+[
+ {
+  "type": "findObjectivesSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\findObjectivesSystem.cs",
+  "methods": [
+   {
+    "sig": "checkWanderState()",
+    "line": 944
+   },
+   {
+    "sig": "clampPositionTo2_5dMode(Vector3 newPosition)",
+    "line": 1100
+   },
+   {
+    "sig": "disableWanderValues()",
+    "line": 1117
+   },
+   {
+    "sig": "checkIfInterruptWanderState()",
+    "line": 1132
+   },
+   {
+    "sig": "disableWanderState()",
+    "line": 1146
+   },
+   {
+    "sig": "setWanderEnabledState(bool state)",
+    "line": 1155
+   },
+   {
+    "sig": "setOriginalWanderEnabled()",
+    "line": 1160
+   },
+   {
+    "sig": "checkIfUseEventsOnInterruptWanderState()",
+    "line": 1165
+   },
+   {
+    "sig": "setWanderStatePaused(bool state)",
+    "line": 1172
+   },
+   {
+    "sig": "setWanderingInfoState(string nameToSearch)",
+    "line": 1179
+   },
+   {
+    "sig": "setMoveInXAxisOn2_5dModeState(bool state)",
+    "line": 1196
+   },
+   {
+    "sig": "enableOrDisable2_5ModeOnAIWithPivotPositionValues(bool state, Vector3 newLockedCameraPivotPosition, bool moveInXAxisOn2_5dModeState)",
+    "line": 1201
+   },
+   {
+    "sig": "enableOrDisable2_5ModeOnAI(bool state)",
+    "line": 1218
+   },
+   {
+    "sig": "isLocked2_5dModeActive()",
+    "line": 1258
+   },
+   {
+    "sig": "isTurnBasedCombatActionActive()",
+    "line": 1263
+   },
+   {
+    "sig": "setTurnBasedCombatActionActiveState(bool state)",
+    "line": 1268
+   },
+   {
+    "sig": "setPossibleTargetForTurnBasedCombatSystem(GameObject newTarget)",
+    "line": 1283
+   },
+   {
+    "sig": "setPossibleTargetForTurnBasedCombatSystemAsCustomTargetToLook()",
+    "line": 1288
+   },
+   {
+    "sig": "setIsCurrentCharacterTurn(bool state)",
+    "line": 1295
+   },
+   {
+    "sig": "setAIOnPlayerTeamState(bool state)",
+    "line": 1302
+   },
+   {
+    "sig": "setCurrentCharacterTurnTarget(GameObject newTarget)",
+    "line": 1309
+   },
+   {
+    "sig": "isAIOnGround()",
+    "line": 1316
+   },
+   {
+    "sig": "activateJumpExternally(float jumpDistance)",
+    "line": 1321
+   },
+   {
+    "sig": "setJumpPower(float newValue)",
+    "line": 1326
+   },
+   {
+    "sig": "setOriginalJumpPower()",
+    "line": 1331
+   },
+   {
+    "sig": "checkTargetToAttack()",
+    "line": 1336
+   },
+   {
+    "sig": "setStrafeModeActive(bool state)",
+    "line": 1630
+   },
+   {
+    "sig": "updateStrafeModeActiveState()",
+    "line": 1635
+   },
+   {
+    "sig": "disableStrafeModeIfActive()",
+    "line": 1640
+   },
+   {
+    "sig": "setignoreRandomWalkInFrontDirectionEnabledState(bool state)",
+    "line": 1655
+   },
+   {
+    "sig": "setRandomWalkPositionState(float newRandomWalkRadius)",
+    "line": 1660
+   },
+   {
+    "sig": "checkCurrentThreat()",
+    "line": 1754
+   },
+   {
+    "sig": "checkTargetToRunAway()",
+    "line": 1959
+   },
+   {
+    "sig": "checkIfTargetVisible(float raycastDistance)",
+    "line": 1996
+   },
+   {
+    "sig": "checkIfMinimumAngleToAttack()",
+    "line": 2059
+   },
+   {
+    "sig": "resetCheckThreatValues()",
+    "line": 2084
+   },
+   {
+    "sig": "checkPauseOrResumePatrolStateDuringActionActive(bool state)",
+    "line": 2108
+   },
+   {
+    "sig": "setLookingAtTargetPositionState(bool state)",
+    "line": 2155
+   },
+   {
+    "sig": "isLookingAtTargetPosition()",
+    "line": 2160
+   },
+   {
+    "sig": "addLookDirectionToTargetOffset(float newValue)",
+    "line": 2191
+   },
+   {
+    "sig": "lookAtCurrentPlaceToShoot()",
+    "line": 2198
+   },
+   {
+    "sig": "setCustomTargetToLook(GameObject newTarget)",
+    "line": 2203
+   },
+   {
+    "sig": "setIgnoreLookAtDirectionActiveState(bool state)",
+    "line": 2210
+   },
+   {
+    "sig": "setRayCastPositionOffsetValue(float offsetValue)",
+    "line": 2259
+   },
+   {
+    "sig": "setOriginalRayCastPositionOffsetValue()",
+    "line": 2264
+   },
+   {
+    "sig": "setLookAtTargetSpeedValue(float newValue)",
+    "line": 2269
+   },
+   {
+    "sig": "checkCharacterFaction(GameObject character, bool damageReceived, bool ignoreAddVehicleDriverAsEnemy)",
+    "line": 2274
+   },
+   {
+    "sig": "checkSuspect(GameObject currentSuspect)",
+    "line": 2366
+   },
+   {
+    "sig": "cancelCheckSuspect(GameObject currentSuspect)",
+    "line": 2420
+   },
+   {
+    "sig": "checkShootOrigin(GameObject attacker)",
+    "line": 2468
+   },
+   {
+    "sig": "addNotEnemy(GameObject notEnemy)",
+    "line": 2672
+   },
+   {
+    "sig": "updateCurrentTargetSelectedInfo()",
+    "line": 3033
+   },
+   {
+    "sig": "removeTargetInfo()",
+    "line": 3040
+   },
+   {
+    "sig": "stopResumeRegularActivityCoroutine()",
+    "line": 3106
+   },
+   {
+    "sig": "checkResumeRegularActivity()",
+    "line": 3113
+   },
+   {
+    "sig": "resumeRegularActivity()",
+    "line": 3129
+   },
+   {
+    "sig": "stopEnableViewTriggerCoroutine()",
+    "line": 3156
+   },
+   {
+    "sig": "enableViewTrigger()",
+    "line": 3163
+   },
+   {
+    "sig": "checkIfResumeAfterNoEnemiesFound()",
+    "line": 3183
+   },
+   {
+    "sig": "checkIfResumeAfterCheckingNoise()",
+    "line": 3200
+   },
+   {
+    "sig": "checkIfResumeAfterRemovingPartner()",
+    "line": 3239
+   },
+   {
+    "sig": "resetCheckingNoiseState()",
+    "line": 3268
+   },
+   {
+    "sig": "setIgnoreVisionRangeActiveState(bool state)",
+    "line": 3277
+   },
+   {
+    "sig": "setAvoidEnemiesState(bool state)",
+    "line": 3282
+   },
+   {
+    "sig": "setRunningAwayState(bool state)",
+    "line": 3287
+   },
+   {
+    "sig": "checkIfTargetIsPhysicallyVisible(GameObject targetToCheck, bool checkingSuspect)",
+    "line": 3292
+   },
+   {
+    "sig": "setAttackMode(bool attackTargetDirectlyValue, bool targetCurrentlyVisible)",
+    "line": 3415
+   },
+   {
+    "sig": "checkIfAIDetectsTargetOnRangeOutOfViewWithProbability(int probablityAmount)",
+    "line": 3616
+   },
+   {
+    "sig": "targetAdquired()",
+    "line": 3635
+   },
+   {
+    "sig": "alertAIFactionFromTargetToAttack(GameObject newTarget)",
+    "line": 3709
+   },
+   {
+    "sig": "alertAIFactionToSearchAndAttackPlayer()",
+    "line": 3714
+   },
+   {
+    "sig": "alertAIFactionToSearchAndAttackPlayerOnDeath()",
+    "line": 3719
+   },
+   {
+    "sig": "setBehaviorStatesPausedState(bool state)",
+    "line": 3726
+   },
+   {
+    "sig": "setWaitToActivateAttackActiveState(bool state)",
+    "line": 3735
+   },
+   {
+    "sig": "setBehaviorAttackEnabledState(bool state)",
+    "line": 3746
+   },
+   {
+    "sig": "isIgnoreWaitToAttackWithOtherAIAroundEnabled()",
+    "line": 3753
+   },
+   {
+    "sig": "setUseRandomWalkEnabledState(bool state)",
+    "line": 3758
+   },
+   {
+    "sig": "setOriginalUseRandomWalkEnabledState()",
+    "line": 3765
+   },
+   {
+    "sig": "setIgnoreRandomWalkActiveState(bool state)",
+    "line": 3772
+   },
+   {
+    "sig": "updatePowersBehavior()",
+    "line": 3780
+   },
+   {
+    "sig": "updatePowersAttack()",
+    "line": 3785
+   },
+   {
+    "sig": "updatePowersInsideMinRange()",
+    "line": 3790
+   },
+   {
+    "sig": "updateFireWeaponsBehavior()",
+    "line": 3797
+   },
+   {
+    "sig": "updateFireWeaponsAttack()",
+    "line": 3802
+   },
+   {
+    "sig": "updateFireWeaponsInsideMinRange()",
+    "line": 3807
+   },
+   {
+    "sig": "updateCloseCombatBehavior()",
+    "line": 3816
+   },
+   {
+    "sig": "updateCloseCombatAttack()",
+    "line": 3821
+   },
+   {
+    "sig": "updateCloseCombatInsideMinRange()",
+    "line": 3826
+   },
+   {
+    "sig": "updateMeleeBehavior()",
+    "line": 3833
+   },
+   {
+    "sig": "updateMeleeAttack()",
+    "line": 3838
+   },
+   {
+    "sig": "updateMeleeInsideMinRange()",
+    "line": 3843
+   },
+   {
+    "sig": "resetBehaviorStates()",
+    "line": 3849
+   },
+   {
+    "sig": "setAIPausedState(bool state)",
+    "line": 3868
+   },
+   {
+    "sig": "pauseAction(bool state)",
+    "line": 3873
+   },
+   {
+    "sig": "setAIStateToAlive()",
+    "line": 3934
+   },
+   {
+    "sig": "isAIPaused()",
+    "line": 3963
+   },
+   {
+    "sig": "setTargetDetectionActiveOnPausedAIState(bool state)",
+    "line": 3968
+   },
+   {
+    "sig": "checkObject(GameObject objectToCheck)",
+    "line": 3973
+   },
+   {
+    "sig": "setObjectOutOfRange(GameObject objectToCheck)",
+    "line": 3982
+   },
+   {
+    "sig": "setRemovePartnerAfterDelayState(bool state)",
+    "line": 3991
+   },
+   {
+    "sig": "setDelayToRemoveCurrentPartnerValue(float newValue)",
+    "line": 3996
+   },
+   {
+    "sig": "addPlayerAsPartner(GameObject objectToCheck)",
+    "line": 4001
+   },
+   {
+    "sig": "removeCurrentPartner()",
+    "line": 4008
+   },
+   {
+    "sig": "isPartnerFound()",
+    "line": 4015
+   },
+   {
+    "sig": "canCheckSuspect(int suspectLayer)",
+    "line": 4038
+   },
+   {
+    "sig": "checkTriggerInfo(Collider col, bool isEnter)",
+    "line": 4047
+   },
+   {
+    "sig": "setRemovePartnerPausedState(bool state)",
+    "line": 4179
+   },
+   {
+    "sig": "removePartner()",
+    "line": 4186
+   },
+   {
+    "sig": "sendRemoteEventToPartner(string remoteEventName)",
+    "line": 4220
+   },
+   {
+    "sig": "checkNoisePosition(Vector3 noisePosition, float noiseDecibels, bool forceNoiseDetection, int noiseID)",
+    "line": 4227
+   },
+   {
+    "sig": "resetAttackState()",
+    "line": 4408
+   },
+   {
+    "sig": "setNewFireWeaponMinDistanceValues(float minDistanceToDrawValue, float minDistanceToAimValue, float minDistanceToShootValue)",
+    "line": 4427
+   },
+   {
+    "sig": "setExtraMinDistanceState(bool state, float extraDistance)",
+    "line": 4434
+   },
+   {
+    "sig": "setNewMinDistanceToCloseCombat(float newValue)",
+    "line": 4471
+   },
+   {
+    "sig": "setNewMinDistanceToEnemyUsingCloseCombat(float newValue)",
+    "line": 4478
+   },
+   {
+    "sig": "setNewMinDistanceToMelee(float newValue)",
+    "line": 4483
+   },
+   {
+    "sig": "setMinDistanceToEnemyUsingMelee(float newValue)",
+    "line": 4490
+   },
+   {
+    "sig": "checkCharactersAroundAI()",
+    "line": 4495
+   },
+   {
+    "sig": "isSearchingWeapon()",
+    "line": 4504
+   },
+   {
+    "sig": "setSearchigWeaponState(bool state)",
+    "line": 4509
+   },
+   {
+    "sig": "setSearchingObjectState(bool state)",
+    "line": 4514
+   },
+   {
+    "sig": "isSearchingObject()",
+    "line": 4519
+   },
+   {
+    "sig": "getDistanceToTarget()",
+    "line": 4524
+   },
+   {
+    "sig": "getCurrentTargetToAttack()",
+    "line": 4533
+   },
+   {
+    "sig": "getAIGameObject()",
+    "line": 4538
+   },
+   {
+    "sig": "isOnSpotted()",
+    "line": 4543
+   },
+   {
+    "sig": "getRemainingPathDistanceToTarget()",
+    "line": 4548
+   },
+   {
+    "sig": "getCurrentDistanceToTarget()",
+    "line": 4559
+   },
+   {
+    "sig": "updateCurrentPathDistanceToTargetValue()",
+    "line": 4564
+   },
+   {
+    "sig": "checkEventOnSpottedStateChange()",
+    "line": 4577
+   },
+   {
+    "sig": "searchEnemiesAround()",
+    "line": 4592
+   },
+   {
+    "sig": "resetAITargets()",
+    "line": 4607
+   },
+   {
+    "sig": "clearFullEnemiesList()",
+    "line": 4620
+   },
+   {
+    "sig": "removeCharacterAsTargetOnSameFaction()",
+    "line": 4625
+   },
+   {
+    "sig": "sendSignalToRemoveCharacterAsTarget(GameObject objectToRemove)",
+    "line": 4630
+   },
+   {
+    "sig": "checkAIBehaviorStateOnCharacterSpawn()",
+    "line": 4643
+   },
+   {
+    "sig": "checkAIBehaviorStateOnCharacterDespawn()",
+    "line": 4654
+   },
+   {
+    "sig": "checkAIStateToResetIfModelSwapped()",
+    "line": 4665
+   },
+   {
+    "sig": "forceFovTriggerToDetectAnythingAround()",
+    "line": 4682
+   },
+   {
+    "sig": "updateWeaponsAvailableValue()",
+    "line": 4689
+   },
+   {
+    "sig": "setNewMinDistanceToEnemyUsingWeapons(float newValue)",
+    "line": 4696
+   },
+   {
+    "sig": "setOriginalMinDistanceToEnemyUsingWeapons()",
+    "line": 4707
+   },
+   {
+    "sig": "getOriginalMinDistanceToEnemyUsingWeapons()",
+    "line": 4712
+   },
+   {
+    "sig": "getCurrentCharacterToAttackRadius()",
+    "line": 4717
+   },
+   {
+    "sig": "setWeaponsAttackMode()",
+    "line": 4743
+   },
+   {
+    "sig": "setPowersAttackMode()",
+    "line": 4756
+   },
+   {
+    "sig": "setCloseCombatAttackMode()",
+    "line": 4769
+   },
+   {
+    "sig": "setMeleeAttackMode()",
+    "line": 4782
+   },
+   {
+    "sig": "setMeleeAttackModeAtDistanceState(bool state)",
+    "line": 4795
+   },
+   {
+    "sig": "disableAttackMode()",
+    "line": 4810
+   },
+   {
+    "sig": "stopAnDisableAttackMode()",
+    "line": 4817
+   },
+   {
+    "sig": "dropWeapon()",
+    "line": 4826
+   },
+   {
+    "sig": "checkNoWeaponsAvailableState()",
+    "line": 4837
+   },
+   {
+    "sig": "setIgnoreCheckPartnerOnVehicleState(bool state)",
+    "line": 4844
+   },
+   {
+    "sig": "checkPartnerState()",
+    "line": 4849
+   },
+   {
+    "sig": "updateAIPassengerBehaviorState()",
+    "line": 4863
+   },
+   {
+    "sig": "getOffFromVehicle()",
+    "line": 4876
+   },
+   {
+    "sig": "removeStateOnVehicle()",
+    "line": 4883
+   },
+   {
+    "sig": "setAICharacterOnVehicle(GameObject newVehicle)",
+    "line": 4890
+   },
+   {
+    "sig": "setCheckTargetsOnTriggerPausedState(bool state)",
+    "line": 4897
+   },
+   {
+    "sig": "setPauseTargetDetectionOnTriggerDuration(float newDuration)",
+    "line": 4902
+   },
+   {
+    "sig": "takeObject(GameObject newObject)",
+    "line": 4909
+   },
+   {
+    "sig": "placeAIOnNewPosition(Vector3 newPosition)",
+    "line": 4949
+   },
+   {
+    "sig": "setAINewRotation(Vector3 newRotation)",
+    "line": 4954
+   },
+   {
+    "sig": "resetAIToOriginalPosition()",
+    "line": 4959
+   },
+   {
+    "sig": "getCanReachCurrentTargetValue()",
+    "line": 4968
+   },
+   {
+    "sig": "isAttackTargetDirectlyActive()",
+    "line": 4973
+   },
+   {
+    "sig": "getCurrentPartner()",
+    "line": 4978
+   },
+   {
+    "sig": "setUseAbilitiesBehaviorState(bool state)",
+    "line": 4983
+   },
+   {
+    "sig": "stopCurrentAbilityAttackInProcess()",
+    "line": 4992
+   },
+   {
+    "sig": "isAIBehaviorAttackInProcess()",
+    "line": 4999
+   },
+   {
+    "sig": "setDrawOrHolsterWeaponState(bool state)",
+    "line": 5008
+   },
+   {
+    "sig": "stopCurrentAttackInProcess()",
+    "line": 5015
+   },
+   {
+    "sig": "changeCurrentAttackMode(string newModeName)",
+    "line": 5022
+   },
+   {
+    "sig": "isAttackAlwaysOnPlace()",
+    "line": 5029
+   },
+   {
+    "sig": "getAINavMesh()",
+    "line": 5034
+   },
+   {
+    "sig": "getPlayerControllerManager()",
+    "line": 5039
+   },
+   {
+    "sig": "setAttackAlwaysOnPlace(bool state)",
+    "line": 5044
+   },
+   {
+    "sig": "toggleAttackAlwaysOnPlace()",
+    "line": 5049
+   },
+   {
+    "sig": "setIgnoreAttackTargetsIfFollowingPartnerState(bool state)",
+    "line": 5054
+   },
+   {
+    "sig": "isActionActive()",
+    "line": 5063
+   },
+   {
+    "sig": "getCurrentEnemyPosition()",
+    "line": 5068
+   },
+   {
+    "sig": "getVerticalDistanceToCurrentEnemyPosition()",
+    "line": 5073
+   },
+   {
+    "sig": "setCheckForExtraCollidersOnOwnerIfDetectedState(bool state)",
+    "line": 5082
+   },
+   {
+    "sig": "setCheckForExtraCollidersOnOwnerIfDetectedStateFromEditor(bool state)",
+    "line": 5088
+   },
+   {
+    "sig": "setExtraFieldOfViewRadiusOnSpotFromEditor(float newValue)",
+    "line": 5095
+   },
+   {
+    "sig": "setAvoidEnemiesStateFromEditor(bool state)",
+    "line": 5102
+   },
+   {
+    "sig": "setVisonRangeValueFromEditor(float newValue)",
+    "line": 5109
+   },
+   {
+    "sig": "setUseVisionRangeValueFromEditor(bool state)",
+    "line": 5116
+   },
+   {
+    "sig": "setCanHearNoiseStateFromEditor(bool state)",
+    "line": 5123
+   },
+   {
+    "sig": "setWanderEnabledStateFromEditor(bool state)",
+    "line": 5130
+   },
+   {
+    "sig": "setFollowPartnerOnTriggerFromEditor(bool state)",
+    "line": 5137
+   },
+   {
+    "sig": "setFollowPartnerOnTriggerState(bool state)",
+    "line": 5146
+   },
+   {
+    "sig": "setUseNoiseReactionInfoState(bool state)",
+    "line": 5151
+   },
+   {
+    "sig": "setMainNoiseReactionData(noiseReactionData newNoiseReactionData)",
+    "line": 5156
+   },
+   {
+    "sig": "setUseNoiseReactionInfoStateFromEditor(bool state)",
+    "line": 5161
+   },
+   {
+    "sig": "setMainNoiseReactionDataFromEditor(noiseReactionData newNoiseReactionData)",
+    "line": 5168
+   },
+   {
+    "sig": "setUseAbilitiesBehaviorStateFromEditor(bool state)",
+    "line": 5175
+   },
+   {
+    "sig": "setBehaviorAttackEnabledStateFromEditor(bool state)",
+    "line": 5182
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 5201
+   }
+  ]
+ }
+]

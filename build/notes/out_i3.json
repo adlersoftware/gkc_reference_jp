@@ -1,0 +1,195 @@
+[
+  {
+    "type": "carryPhysicallyObjectFromInventory",
+    "summary": "`objectOnInventory` を継承し、インベントリから取り出したオブジェクトをプレイヤーに物理的に持たせる処理を担当する。掴む／落とす瞬間のインタラクションパネル表示の切り替えも行う。",
+    "methods": {
+      "setCurrentPlayer(GameObject newPlayer)": "`currentPlayer` に `newPlayer` を代入するだけ。",
+      "checkObjectStateOnGrab()": "フラグが有効なら、`deviceStringAction` のアイコンを隠し、プレイヤーの `usingDevicesSystem` を更新する。",
+      "checkObjectStateOnDrop()": "フラグが有効なら、`deviceStringAction` のアイコンを表示し直し、プレイヤーの `usingDevicesSystem` を更新する。"
+    }
+  },
+  {
+    "type": "currencySystem",
+    "summary": "所持金 `currentMoneyAmount` を保持し、加算・使用・所持金パネル表示・`playerStatsSystem` への反映をまとめて行う通貨管理コンポーネント。金額変化時には文字列付きイベントも発火する。",
+    "methods": {
+      "increaseTotalMoneyAmount(float extraValue, float customMoneyChangeSpeedValue)": "`customMoneyChangeSpeed` に速度を設定してから、単一引数の `increaseTotalMoneyAmount` を呼び出すだけ。",
+      "increaseTotalMoneyAmount(float extraValue)": "`extraValue` を所持金に加算し、受取イベントを発火して `statName` のステータスを更新し、設定に応じて所持金パネルを表示する。",
+      "initializeMoneyAmount(float newValue)": "`currentMoneyAmount` を `newValue` の整数値にして金額テキストを更新する。",
+      "updateMoneyAmountWithoutUpdatingStatManager(int statId, float amount)": "ステータスは触らずに金額を `amount` に置き換え、テキストのみ更新する。`statId` は未使用。",
+      "useMoney(float amountToUse)": "所持金が `amountToUse` 以上なら差し引いてステータスを更新し true を返し、不足なら false を返す。",
+      "getCurrentMoneyAmount()": "`currentMoneyAmount` を `float` にキャストして返すだけ。",
+      "canSpendMoneyAmount(float amountToSpend)": "所持金が `amountToSpend` 以上かどうかを判定して返すだけ。",
+      "showTotalMoneyAmountPanel()": "実行中の表示コルーチンを止めてから、所持金パネル表示コルーチンを新たに開始する。",
+      "stopShowTotalMoneyAmountPanelCoroutine()": "`showTotalMoneyCoroutine` が null でなければ停止するだけ。"
+    }
+  },
+  {
+    "type": "getInventoryObjectSystem",
+    "summary": "シーン上に置かれ、プレイヤーへ指定のインベントリオブジェクト（または複数リスト）を付与する取得ポイント。付与は `applyDamage.giveInventoryObjectToCharacter` に委譲する。",
+    "methods": {
+      "removeCurrentPlayer(GameObject player)": "`currentPlayer` が `player` と一致する場合のみ `null` に戻す。",
+      "getCurrentPlayer(GameObject player)": "`currentPlayer` に `player` を代入するだけ（名前と違い設定用）。",
+      "giveObjectToPlayer()": "設定名の品（または `inventoryElementInfoList` の各品）をプレイヤーに付与し、`objectObtained` を true にする。"
+    }
+  },
+  {
+    "type": "getObjectFromInventorySystem",
+    "summary": "プレイヤーのインベントリに対象オブジェクトが何個あるかを確認し、使用（消費）やイベント発火を行うコンポーネント。判定には `extraInventoryObjectAmount` を加味した残量を使う。",
+    "methods": {
+      "addExtraInventoryObjectAmount(int extraAmount)": "`extraInventoryObjectAmount` に `extraAmount` を加算し、負値にならないよう 0 で下限を切る。",
+      "checkIfObjectFoundOnInventory()": "残量（無限なら 1、追加分を加算）が 0 より大きいかで found／not found イベントを発火する。",
+      "useInventoryObject(int amountToUse)": "残量が `amountToUse` 以上なら在庫からその分を削除して使用可能イベントを、不足なら不可イベントを発火する。",
+      "useInventoryObjectAndGetResult(int amountToUse)": "`useInventoryObject` と同じ判定と在庫消費を行い、成否を `bool` で返す。",
+      "setCurrentPlayer(GameObject newPlayer)": "プレイヤーの `playerComponentsManager` から `mainInventoryManager` を取得して保持する。",
+      "setNewInventoryObjectName(string newName)": "`inventoryObjectName` を `newName` に差し替えるだけ。"
+    }
+  },
+  {
+    "type": "inventoryBankManager",
+    "summary": "インベントリの「銀行（倉庫）」側の在庫リストを管理するコンポーネント。起動時に `inventoryListManager` から在庫を複製し、名前指定で追加・数量取得・削除とエディタ用ヘルパーを提供する。",
+    "methods": {
+      "setNewInventoryListManagerList(List<inventoryListElement> newList)": "`inventoryListManagerList` を `newList` で置き換えるだけ。",
+      "setInventoryFromInventoryListManager()": "`mainInventoryManager` のカテゴリ／要素インデックスから `inventoryInfo` を複製し、在庫リストに追加する。",
+      "getBankInventoryList()": "`bankInventoryList` をそのまま返すだけ。",
+      "addInventoryObjectByName(string objectName, int amountToAdd)": "同名要素があれば数量を加算し、無ければ `mainInventoryManager` から情報を複製して `amountToAdd` で新規追加する。",
+      "getInventoryObjectAmountByName(string inventoryObjectName)": "同名オブジェクトの合計数量を返し、1 つも無ければ -1 を返す。",
+      "removeObjectAmountFromInventory(string objectName, int amountToRemove)": "同名要素の数量を減算し、0 以下になった要素はリストから削除する。",
+      "getInventoryListManagerList()": "エディタ用にカテゴリ名と要素名の配列を作り直し、`updateComponent` を呼ぶ。",
+      "setInventoryObjectListNames()": "各要素の `Name` を `inventoryObjectName` で上書きし、`updateComponent` を呼ぶ。",
+      "addNewInventoryObjectToInventoryListManagerList()": "名前が「New Object」の `inventoryListElement` を追加して `updateComponent` を呼ぶ。",
+      "saveCurrentInventoryListToFile()": "`gameManager` を検索して「Inventory Bank」としてセーブし、`updateComponent` を呼ぶ。",
+      "updateComponent()": "`GKC_Utils.updateComponent` と `updateDirtyScene` でインスペクタとシーンを更新する。"
+    }
+  },
+  {
+    "type": "inventoryCaptureManager",
+    "summary": "`UNITY_EDITOR` 時のみ有効なエディタ用 `EditorWindow`。インベントリアイテムのアイコン用キャプチャを撮影して PNG 保存し、`inventoryListManager` に設定する。",
+    "methods": {
+      "init()": "画面解像度からウィンドウ寸法を決め、`inventoryListManager` とカメラ・配置用トランスフォームを取得してキャプチャツールを開状態にする。",
+      "OnDisable()": "補助メッシュを破棄し、カメラの背景色と FOV を元に戻して無効化し、ツールの開状態を false にする。",
+      "getCapture()": "カメラを RenderTexture に描画して PNG を保存し、カメラ設定を戻して取り込み待ちフラグを立てる。",
+      "closeWindow()": "補助メッシュを破棄してからウィンドウを閉じるだけ。",
+      "destroyAuxObjects()": "`DestroyImmediate` で `currentInventoryObjectMesh` を削除するだけ。",
+      "setCurrentInventoryObjectInfo(inventoryInfo info, string savePath)": "情報と保存先を保持し、`inventoryGameObject` を複製して配置し、レイヤーが一致しているかも確認する。"
+    }
+  },
+  {
+    "type": "inventoryCaptureManagerTransparent",
+    "summary": "`UNITY_EDITOR` 時のみ有効な、背景透過アイコン生成用コンポーネント。白背景と黒背景の 2 枚からアルファを算出して透過 PNG を書き出す。",
+    "methods": {
+      "takeCapture()": "`EditorApplication.isPlaying` を true にして再生を開始するだけ（撮影は再生中のコルーチンが行う）。"
+    }
+  },
+  {
+    "type": "inventoryInfo",
+    "summary": "インベントリ 1 オブジェクト分のデータを保持するシリアライズ可能クラス。名前・アイコン・数量・使用可否・武器情報・重量などをまとめ、コピー用コンストラクタも持つ。",
+    "methods": {
+      "InitializeAudioElements()": "`soundOnUseObject` が null でなければ `onUseObjectAudioElement.clip` に割り当てる。",
+      "setNewName(string newName)": "`Name` を `newName` に置き換えるだけ。",
+      "resetInventoryInfo()": "全項目を空スロット用の既定値（`amount` 0、各種可否 false など）に戻し、`menuIconElement` の表示もクリアする。",
+      "copyInventoryObject(inventoryInfo objectToStore, inventoryInfo objectToCopy)": "`objectToCopy` の各設定値・状態・アイコンを `objectToStore` に複製し、`objectToStore` を返す。"
+    }
+  },
+  {
+    "type": "inventoryMenuPanelsSystem",
+    "summary": "インベントリ内の複数パネルを名前で切り替えるステート管理コンポーネント。選択中のパネルだけを有効にし、位置・スケール調整やイベント発火を行う。",
+    "methods": {
+      "setInventoryPanelByName(string panelName)": "指定名以外のパネルを無効化し、一致パネルを有効化して `currentState` とイベントを更新する。"
+    }
+  },
+  {
+    "type": "inventoryObject",
+    "summary": "シーン上のインベントリアイテム（`inventoryInfo` を保持）から、`objectOnInventory` の新挙動系メソッドを呼び出すラッパー。実処理はすべて `mainObjectOnInventory` に委譲する。",
+    "methods": {
+      "useObjectOnNewBehavior(GameObject currentPlayer, int amountToUse)": "`mainObjectOnInventory` の使用処理に `currentPlayer` と `amountToUse` を渡す。",
+      "useObjectOnNewBehaviorWithExternalCharacter(GameObject currentPlayer, GameObject currentExternalCharacterForInventoryUsage, int amountToUse)": "使用処理を外部キャラクター対応版に 3 引数でそのまま委譲する。",
+      "combineObjectsOnNewBehavior(GameObject currentPlayer, inventoryInfo inventoryInfoToUse)": "`mainObjectOnInventory` の結合処理に `currentPlayer` と `inventoryInfoToUse` を渡す。",
+      "carryPhysicalObjectFromInventory(GameObject currentPlayer)": "`mainObjectOnInventory` の物理保持処理に `currentPlayer` を渡すだけ。",
+      "eventOnPickObjectNewBehaviour(GameObject currentPlayer)": "`mainObjectOnInventory.eventOnPickObject` を呼ぶだけ。",
+      "eventOnDropObjectNewBehaviour(GameObject currentPlayer)": "`mainObjectOnInventory.eventOnDropObject` を呼ぶだけ。",
+      "setObjectEquippedStateOnInventoryOnNewBehavior(GameObject currentPlayer, bool state)": "装備状態の設定を `mainObjectOnInventory` に委譲し、その戻り値を返す（null 時は false）。",
+      "getCustomMessageOnNotAbleToEquip()": "`mainObjectOnInventory` から装備不可メッセージを取得して返し、null 時は空文字を返す。"
+    }
+  },
+  {
+    "type": "inventoryObjectToEquipInfo",
+    "summary": "装備対象オブジェクト用の基底 `MonoBehaviour`。3 メソッドとも virtual で、既定実装は false を返すか何もしないだけ。",
+    "methods": {
+      "setObjectEquippedState(bool state)": "何もせず `false` を返すだけの仮想メソッドで、実装は継承先に委ねる。",
+      "isObjectEquipped()": "`false` を返すだけの仮想メソッド。",
+      "updateObjectState()": "本体が空で何もしない仮想メソッド。"
+    }
+  },
+  {
+    "type": "inventoryPrefabCreationSystem",
+    "summary": "`createInventoryPrefabObject` だけを持つ基底 `MonoBehaviour`。本体は空で、継承先でインベントリ用プレハブ生成を実装するための土台。",
+    "methods": {
+      "createInventoryPrefabObject()": "本体が空で何もしない。"
+    }
+  },
+  {
+    "type": "inventorySlotOptionsButtons",
+    "summary": "インベントリスロットのオプション（使用・装備・破棄など）ボタンの表示を一括制御する UI コンポーネント。有効ボタン数に合わせてパネルの高さも再計算する。",
+    "methods": {
+      "setButtonsState(bool useState, bool equipState, bool unEquipState, bool dropState, bool combineState, bool examineState, bool holdState, bool discardState, bool setOnQuickSlotsState, bool repairState)": "各 `*ButtonEnabled` の無効分を false にして 10 個のボタン表示を切り替え、パネル高さも更新する。"
+    }
+  },
+  {
+    "type": "inventoryWeightManager",
+    "summary": "プレイヤーの所持重量と重量上限を管理するコンポーネント。インベントリ全体の重量を集計して UI とイベントに反映し、オブジェクトを運べるかも判定する。",
+    "methods": {
+      "updateCurrentInventoryObjectWeight()": "重量有効時、選択中オブジェクトの単重と合計重量を計算してパネルに表示し、対象が無ければパネルを隠す。",
+      "disableCurrentInventoryObjectWeight()": "`currentInventoryObjectWeightPanel` が表示中なら非表示にするだけ。",
+      "updateInventoryWeight()": "重量有効時、実行中の更新コルーチンを止めて再集計コルーチンを開始する。",
+      "checkIfCanCarryObjectWeight(inventoryInfo inventoryInfoToCheck)": "重量上限までの空きから運べる数量を `int` で返し、機能無効時は -1 を返す。",
+      "checkIfCanCarrySingleObjectWeight(inventoryInfo inventoryInfoToCheck)": "単体重量が `maxObjectWeightToPick` を超える場合だけ false を返す（機能無効時は true）。",
+      "initializeInventoryWeightLimitAmount(float newValue)": "`inventoryWeightLimit` を `newValue` にするだけ。",
+      "increaseInventoryWeightLimitAmount(float newValue)": "上限に `newValue` を加算し、`updateInventoryWeight` で再集計する。",
+      "updateInventoryWeightLimitAmountWithoutUpdatingStatManager(int statId, float amount)": "ステータスを更新せず上限を `amount` にするだけ。`statId` は未使用。",
+      "increaseInventoryBagWeight(float newValue)": "重量有効時、上限を加算したうえで `playerStatsManager` の重量上限ステータスを更新する。",
+      "setUseInventoryWeightEnabledState(bool state)": "`useInventoryWeightEnabled` を `state` にするだけ。",
+      "setUseInventoryWeightEnabledStateFromEditor(bool state)": "有効フラグを設定したうえで `updateComponent` を呼ぶ。",
+      "updateComponent()": "`GKC_Utils.updateComponent` と `updateDirtyScene` でインスペクタとシーンを更新する。"
+    }
+  },
+  {
+    "type": "playerInventoryCategoriesListManager",
+    "summary": "インベントリのカテゴリ一覧パネルと、カテゴリ選択によるスロット表示の絞り込みを管理する UI コンポーネント。複数カテゴリの同時選択にも対応する。",
+    "methods": {
+      "selectInventoryCategoryList(List<string> categoryNameList)": "複数選択が無効なら有効化し、`categoryNameList` の各カテゴリを `selectInventoryCategory` で順に選択する。",
+      "selectInventoryCategory(string categoryName)": "カテゴリの選択状態・アイコン色・表示スロットを更新し、スクロールをリセットしてスロットオプションを閉じる。",
+      "enableOrDisableCategoryListPanel()": "`categoryListPanelActive` を反転して `updateInventoryListPanelPosition` を呼ぶだけ。",
+      "enableCategoryListPanel()": "フラグを true にしてパネル位置を更新するだけ。",
+      "disableCategoryListPanel()": "フラグを false にしてパネル位置を更新するだけ。",
+      "updateInventoryListPanelPosition()": "開閉イベントを発火し、パネルの active と `inventoryListPanel` の位置・サイズを開閉状態に合わせる。",
+      "enableAllCategories()": "`hideSlotOnMenu` でない全スロットのボタンを有効化し、スロットオプションを閉じる。",
+      "enableSelectingMultipleCategories()": "フラグを false にしてから反転メソッドを呼び、結果として複数選択を有効にする。",
+      "disableSelectingMultipleCategories()": "フラグを true にしてから反転メソッドを呼び、結果として複数選択を無効にする。",
+      "enableOrDisableSelectingMultipleCategories()": "`selectingMultipleCategories` を反転し、結合アイコンの色とカテゴリ名リストを更新する。",
+      "disableAllCategoriesIcons()": "全カテゴリの `categorySelected` を false にし、下線アイコンとアイコン色を未選択状態へ戻す。",
+      "resetScroll()": "`inventorySlotsScrollbar.value` を 0 から 1 にするコルーチンを開始してスクロール位置をリセットする。"
+    }
+  },
+  {
+    "type": "simpleInventoryContentManager",
+    "summary": "インベントリ内容を簡易リスト `simpleInventoryInfoList` として保持し、武器・弾薬の数量同期やセーブ用リスト生成を行うコンポーネント。",
+    "methods": {
+      "setCurrentWeaponObject(string weaponName)": "リストを更新したうえで、`weaponName` に一致する要素を現在武器に設定する。",
+      "updateCurrentWeaponRemainMagazine(int amount)": "現在武器が設定済みなら、その `projectilesInMagazine` を `amount` にする。",
+      "updateSimpleInventoryObjectInfo(string objectName, int amount)": "同名要素が見つかれば `amount` を代入するだけ。",
+      "updateCurrentSimpleInventoryList()": "数量が 0 より大きい品から `simpleInventoryInfoList` を作り直し、武器の弾倉数も反映して現在武器を設定する。",
+      "getCurrentInventoryList()": "数量が 0 より大きい品から、セーブ用の `inventoryListManagerList` を作り直す。",
+      "setCurrentAmmoValues(List<int> ammoAmountList)": "リストの各値を各武器の弾薬に上書き設定し、最後に簡易リストを更新する。",
+      "setCurrentAmmoValuesOnWeapon(int weaponIndex, int currentAmmoAmountToSet)": "指定武器に対応する弾薬の在庫を新しい値で置き換え、武器と UI の弾薬表示を更新する。",
+      "addAmmoToWeapon(int weaponIndex, int ammoAmountToAdd)": "内部フラグを加算モードにして `setCurrentAmmoValuesOnWeapon` を呼び、弾薬を追加する。"
+    }
+  },
+  {
+    "type": "weaponOnInventory",
+    "summary": "`objectOnInventory` を継承した武器用の挙動。ピックアップ時に残弾を武器へ引き継ぎ、ドロップ時に弾倉数を保存する。",
+    "methods": {
+      "getRemainingAmmoValue()": "`remainingAmmo` を返すだけ。",
+      "getWeaponPickup()": "`mainWeaponPickup` を返すだけ。"
+    }
+  }
+]

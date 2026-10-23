@@ -1,0 +1,955 @@
+[
+ {
+  "type": "pickUpsScreenInfo",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\PickUps\\pickUpsScreenInfo.cs",
+  "source": "PickUps/pickUpsScreenInfo.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "pickUpScreenInfoEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "durationTimerPerText",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "verticalDistance",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "horizontalOffset",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "adjustTextSizeDelta",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "textSizeDeltaOffsetMultiplier",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useIconsEnabled",
+    "label": "",
+    "section": "Icon Settings"
+   },
+   {
+    "field": "iconHeight",
+    "label": "",
+    "section": "Icon Settings"
+   },
+   {
+    "field": "verticalIconOffset",
+    "label": "",
+    "section": "Icon Settings"
+   },
+   {
+    "field": "horizontalIconOffset",
+    "label": "",
+    "section": "Icon Settings"
+   },
+   {
+    "field": "usedByAI",
+    "label": "",
+    "section": "Others Settings"
+   },
+   {
+    "field": "textToAddFromEditor",
+    "label": "",
+    "section": "Debug"
+   },
+   {
+    "field": "pickupsInfoParent",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "originalIcon",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "originalText",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "originalTextRectTransform",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "mainPlayerController",
+    "label": "",
+    "section": "Components"
+   }
+  ]
+ },
+ {
+  "type": "playerCamera",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Camera\\Player Camera\\playerCamera.cs",
+  "source": "Camera/Player Camera/playerCamera.cs",
+  "part": 1,
+  "total_parts": 2,
+  "fields": [
+   {
+    "field": "playerCameraTransform",
+    "label": "",
+    "section": "Camera Components"
+   },
+   {
+    "field": "mainCamera",
+    "label": "",
+    "section": "Camera Components"
+   },
+   {
+    "field": "mainCameraTransform",
+    "label": "",
+    "section": "Camera Components"
+   },
+   {
+    "field": "pivotCameraTransform",
+    "label": "",
+    "section": "Camera Components"
+   },
+   {
+    "field": "pivotLeanTransform",
+    "label": "",
+    "section": "Camera Components"
+   },
+   {
+    "field": "pivotLeanChildTransform",
+    "label": "",
+    "section": "Camera Components"
+   },
+   {
+    "field": "mainCameraParent",
+    "label": "",
+    "section": "Camera Components"
+   },
+   {
+    "field": "cameraRotationInputEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "thirdPersonVerticalRotationSpeed",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "thirdPersonHorizontalRotationSpeed",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "firstPersonVerticalRotationSpeed",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "firstPersonHorizontalRotationSpeed",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "maxCheckDist",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "smoothBetweenState",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "movementLerpSpeed",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "pivotCameraMovementLerpSpeed",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "extraCameraCollisionDistance",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "cameraCollisionAlwaysActive",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "usePivotCameraCollisionEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "pivotCameraCollisionHeightOffset",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "defaultNearClipPlane",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "ignoreExternalFovChangesEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "fullBodyAwarenessEnabled",
+    "label": "",
+    "section": "Full Body Awareness Settings"
+   },
+   {
+    "field": "changeCameraViewEnabled",
+    "label": "",
+    "section": "Change View Settings"
+   },
+   {
+    "field": "aimSide",
+    "label": "",
+    "section": "Change View Settings"
+   },
+   {
+    "field": "changeCameraSideActive",
+    "label": "",
+    "section": "Change View Settings"
+   },
+   {
+    "field": "toogleCameraViewToThirdFirstAndLockedEnabled",
+    "label": "",
+    "section": "Change View Settings"
+   },
+   {
+    "field": "regularMovementOnBulletTime",
+    "label": "",
+    "section": "Camera Bullet Time Settings"
+   },
+   {
+    "field": "useUnscaledTimeOnBulletTime",
+    "label": "",
+    "section": "Camera Bullet Time Settings"
+   },
+   {
+    "field": "useSmoothCameraFollow",
+    "label": "",
+    "section": "Follow Position Settings"
+   },
+   {
+    "field": "smoothCameraFollowSpeed",
+    "label": "",
+    "section": "Follow Position Settings"
+   },
+   {
+    "field": "smoothCameraFollowSpeedOnAim",
+    "label": "",
+    "section": "Follow Position Settings"
+   },
+   {
+    "field": "smoothCameraFollowMaxDistance",
+    "label": "",
+    "section": "Follow Position Settings"
+   },
+   {
+    "field": "smoothCameraFollowMaxDistanceSpeed",
+    "label": "",
+    "section": "Follow Position Settings"
+   },
+   {
+    "field": "smoothReturnSpeed",
+    "label": "",
+    "section": "Follow Position Settings"
+   },
+   {
+    "field": "checkCameraDistanceOnSmoothReturnEnabled",
+    "label": "",
+    "section": "Follow Position Settings"
+   },
+   {
+    "field": "smoothGoSpeed",
+    "label": "",
+    "section": "Follow Position Settings"
+   },
+   {
+    "field": "checkCameraDistanceOnSmoothGoEnabled",
+    "label": "",
+    "section": "Follow Position Settings"
+   },
+   {
+    "field": "useSmoothCameraRotation",
+    "label": "",
+    "section": "Smooth Camera Rotation Settings"
+   },
+   {
+    "field": "useSmoothCameraRotationThirdPerson",
+    "label": "",
+    "section": "Smooth Camera Rotation Settings"
+   },
+   {
+    "field": "smoothCameraRotationSpeedVerticalThirdPerson",
+    "label": "",
+    "section": "Smooth Camera Rotation Settings"
+   },
+   {
+    "field": "smoothCameraRotationSpeedHorizontalThirdPerson",
+    "label": "",
+    "section": "Smooth Camera Rotation Settings"
+   },
+   {
+    "field": "useSmoothCameraRotationFirstPerson",
+    "label": "",
+    "section": "Smooth Camera Rotation Settings"
+   },
+   {
+    "field": "smoothCameraRotationSpeedVerticalFirstPerson",
+    "label": "",
+    "section": "Smooth Camera Rotation Settings"
+   },
+   {
+    "field": "smoothCameraRotationSpeedHorizontalFirstPerson",
+    "label": "",
+    "section": "Smooth Camera Rotation Settings"
+   },
+   {
+    "field": "zoomSpeed",
+    "label": "",
+    "section": "Zoom Settings"
+   },
+   {
+    "field": "fovChangeSpeed",
+    "label": "",
+    "section": "Zoom Settings"
+   },
+   {
+    "field": "thirdPersonVerticalRotationSpeedZoomIn",
+    "label": "",
+    "section": "Zoom Settings"
+   },
+   {
+    "field": "thirdPersonHorizontalRotationSpeedZoomIn",
+    "label": "",
+    "section": "Zoom Settings"
+   },
+   {
+    "field": "firstPersonVerticalRotationSpeedZoomIn",
+    "label": "",
+    "section": "Zoom Settings"
+   },
+   {
+    "field": "firstPersonHorizontalRotationSpeedZoomIn",
+    "label": "",
+    "section": "Zoom Settings"
+   },
+   {
+    "field": "moveCameraPositionWithMouseWheelActive",
+    "label": "",
+    "section": "Mouse Wheel Settings"
+   },
+   {
+    "field": "moveCameraPositionForwardWithMouseWheelSpeed",
+    "label": "",
+    "section": "Mouse Wheel Settings"
+   },
+   {
+    "field": "moveCameraPositionBackwardWithMouseWheelSpeed",
+    "label": "",
+    "section": "Mouse Wheel Settings"
+   },
+   {
+    "field": "reverseMouseWheelDirectionEnabled",
+    "label": "",
+    "section": "Mouse Wheel Settings"
+   },
+   {
+    "field": "maxExtraDistanceOnThirdPerson",
+    "label": "",
+    "section": "Mouse Wheel Settings"
+   },
+   {
+    "field": "useCameraMouseWheelStates",
+    "label": "",
+    "section": "Mouse Wheel Settings"
+   },
+   {
+    "field": "minDistanceToChangeToFirstPerson",
+    "label": "",
+    "section": "Mouse Wheel Settings"
+   },
+   {
+    "field": "useCameraLimit",
+    "label": "",
+    "section": "2.5d Camera Settings"
+   },
+   {
+    "field": "useWidthLimit",
+    "label": "",
+    "section": "2.5d Camera Settings"
+   },
+   {
+    "field": "widthLimitRight",
+    "label": "",
+    "section": "2.5d Camera Settings"
+   },
+   {
+    "field": "widthLimitLeft",
+    "label": "",
+    "section": "2.5d Camera Settings"
+   },
+   {
+    "field": "useHeightLimit",
+    "label": "",
+    "section": "2.5d Camera Settings"
+   },
+   {
+    "field": "heightLimitUpper",
+    "label": "",
+    "section": "2.5d Camera Settings"
+   },
+   {
+    "field": "heightLimitLower",
+    "label": "",
+    "section": "2.5d Camera Settings"
+   },
+   {
+    "field": "useDepthLimit",
+    "label": "",
+    "section": "2.5d Camera Settings"
+   },
+   {
+    "field": "depthLimitFront",
+    "label": "",
+    "section": "2.5d Camera Settings"
+   },
+   {
+    "field": "depthLimitBackward",
+    "label": "",
+    "section": "2.5d Camera Settings"
+   },
+   {
+    "field": "currentCameraLimitPosition",
+    "label": "",
+    "section": "2.5d Camera Settings"
+   },
+   {
+    "field": "clampAimDirections",
+    "label": "",
+    "section": "2.5d Camera Settings"
+   },
+   {
+    "field": "numberOfAimDirections",
+    "label": "",
+    "section": "2.5d Camera Settings"
+   },
+   {
+    "field": "minDistanceToCenterClampAim",
+    "label": "",
+    "section": "2.5d Camera Settings"
+   },
+   {
+    "field": "canRotateForwardOnZeroGravityModeOn",
+    "label": "",
+    "section": "Zero Gravity Camera Settings"
+   },
+   {
+    "field": "rotateForwardOnZeroGravitySpeed",
+    "label": "",
+    "section": "Zero Gravity Camera Settings"
+   },
+   {
+    "field": "resetCameraRotationAfterTime",
+    "label": "",
+    "section": "Reset Camera Rotation Settings"
+   },
+   {
+    "field": "timeToResetCameraRotation",
+    "label": "",
+    "section": "Reset Camera Rotation Settings"
+   },
+   {
+    "field": "resetCameraRotationSpeed",
+    "label": "",
+    "section": "Reset Camera Rotation Settings"
+   },
+   {
+    "field": "setExtraCameraRotationEnabled",
+    "label": "",
+    "section": "Set Extra Camera Rotation Settings"
+   },
+   {
+    "field": "extraCameraRotationAmount",
+    "label": "",
+    "section": "Set Extra Camera Rotation Settings"
+   },
+   {
+    "field": "extraCameraRotationSpeed",
+    "label": "",
+    "section": "Set Extra Camera Rotation Settings"
+   },
+   {
+    "field": "useCameraForwardDirection",
+    "label": "",
+    "section": "Set Extra Camera Rotation Settings"
+   },
+   {
+    "field": "currentStateName",
+    "label": "",
+    "section": "Player Camera States"
+   },
+   {
+    "field": "defaultThirdPersonStateName",
+    "label": "",
+    "section": "Player Camera States"
+   },
+   {
+    "field": "defaultFirstPersonStateName",
+    "label": "",
+    "section": "Player Camera States"
+   },
+   {
+    "field": "defaultFullBodyAwarenessStateName",
+    "label": "",
+    "section": "Player Camera States"
+   },
+   {
+    "field": "defaultFullBodyAwarenessCrouchStateName",
+    "label": "",
+    "section": "Player Camera States"
+   },
+   {
+    "field": "defaultFullBodyAwarenessAimStateName",
+    "label": "",
+    "section": "Player Camera States"
+   },
+   {
+    "field": "defaultFullBodyAwarenessCrouchAimStateName",
+    "label": "",
+    "section": "Player Camera States"
+   },
+   {
+    "field": "defaultFullBodyAwarenessDualAimStateName",
+    "label": "",
+    "section": "Player Camera States"
+   },
+   {
+    "field": "defaultFullBodyAwarenessCrouchDualAimStateName",
+    "label": "",
+    "section": "Player Camera States"
+   },
+   {
+    "field": "defaultThirdPersonAimRightStateName",
+    "label": "",
+    "section": "Player Camera States"
+   },
+   {
+    "field": "defaultThirdPersonAimLeftStateName",
+    "label": "",
+    "section": "Player Camera States"
+   },
+   {
+    "field": "defaultThirdPersonAimRightCrouchStateName",
+    "label": "",
+    "section": "Player Camera States"
+   },
+   {
+    "field": "defaultThirdPersonAimLeftCrouchStateName",
+    "label": "",
+    "section": "Player Camera States"
+   },
+   {
+    "field": "defaultThirdPersonCrouchStateName",
+    "label": "",
+    "section": "Player Camera States"
+   },
+   {
+    "field": "defaultFirstPersonCrouchStateName",
+    "label": "",
+    "section": "Player Camera States"
+   },
+   {
+    "field": "defaultMoveCameraAwayStateName",
+    "label": "",
+    "section": "Player Camera States"
+   },
+   {
+    "field": "defaultLockedCameraStateName",
+    "label": "",
+    "section": "Player Camera States"
+   },
+   {
+    "field": "defaultAICameraStateName",
+    "label": "",
+    "section": "Player Camera States"
+   },
+   {
+    "field": "defaultVehiclePassengerStateName",
+    "label": "",
+    "section": "Player Camera States"
+   },
+   {
+    "field": "useEventsOnCameraStateChange",
+    "label": "",
+    "section": "Player Camera States Events Settings"
+   },
+   {
+    "field": "lockedCameraSystemPrefab",
+    "label": "",
+    "section": "Locked Camera Elements"
+   },
+   {
+    "field": "lockedCameraLimitSystemPrefab",
+    "label": "",
+    "section": "Locked Camera Elements"
+   },
+   {
+    "field": "usedByAI",
+    "label": "",
+    "section": "AI Settings"
+   },
+   {
+    "field": "customOriginalLockedCameraPivotPosition",
+    "label": "",
+    "section": "2.5d Locked Settings On AI"
+   },
+   {
+    "field": "useCustomOriginalLockedCameraPivotPositionTransform",
+    "label": "",
+    "section": "2.5d Locked Settings On AI"
+   },
+   {
+    "field": "customOriginalLockedCameraPivotPositionTransform",
+    "label": "",
+    "section": "2.5d Locked Settings On AI"
+   },
+   {
+    "field": "layer",
+    "label": "Collision Layer",
+    "section": "Main Settings"
+   },
+   {
+    "field": "zoomEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "moveAwayCameraEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "enableMoveAwayInAir",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "enableShakeCamera",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useAcelerometer",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "reverseVerticalAccelerometer",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "reverseHorizontalAccelerometer",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "lockedCameraElementsParent",
+    "label": "",
+    "section": "Locked Camera Elements"
+   },
+   {
+    "field": "lockedMainCameraTransform",
+    "label": "",
+    "section": "Locked Camera Elements"
+   },
+   {
+    "field": "lockedCameraAxis",
+    "label": "",
+    "section": "Locked Camera Elements"
+   },
+   {
+    "field": "lockedCameraPosition",
+    "label": "",
+    "section": "Locked Camera Elements"
+   },
+   {
+    "field": "lockedCameraPivot",
+    "label": "",
+    "section": "Locked Camera Elements"
+   },
+   {
+    "field": "lookCameraParent",
+    "label": "",
+    "section": "Locked Camera Elements"
+   },
+   {
+    "field": "lookCameraPivot",
+    "label": "",
+    "section": "Locked Camera Elements"
+   },
+   {
+    "field": "lookCameraDirection",
+    "label": "",
+    "section": "Locked Camera Elements"
+   },
+   {
+    "field": "clampAimDirectionTransform",
+    "label": "",
+    "section": "Locked Camera Elements"
+   },
+   {
+    "field": "lookDirectionTransform",
+    "label": "",
+    "section": "Locked Camera Elements"
+   },
+   {
+    "field": "auxLockedCameraAxis",
+    "label": "",
+    "section": "Locked Camera Elements"
+   },
+   {
+    "field": "setTransparentSurfacesManager",
+    "label": "",
+    "section": "Locked Camera Elements"
+   },
+   {
+    "field": "playerControllerGameObject",
+    "label": "",
+    "section": "Player Camera Elements"
+   },
+   {
+    "field": "playerInput",
+    "label": "",
+    "section": "Player Camera Elements"
+   },
+   {
+    "field": "playerControllerManager",
+    "label": "",
+    "section": "Player Camera Elements"
+   },
+   {
+    "field": "powersManager",
+    "label": "",
+    "section": "Player Camera Elements"
+   },
+   {
+    "field": "gravityManager",
+    "label": "",
+    "section": "Player Camera Elements"
+   },
+   {
+    "field": "headBobManager",
+    "label": "",
+    "section": "Player Camera Elements"
+   },
+   {
+    "field": "grabObjectsManager",
+    "label": "",
+    "section": "Player Camera Elements"
+   },
+   {
+    "field": "scannerManager",
+    "label": "",
+    "section": "Player Camera Elements"
+   },
+   {
+    "field": "weaponsManager",
+    "label": "",
+    "section": "Player Camera Elements"
+   },
+   {
+    "field": "playerNavMeshManager",
+    "label": "",
+    "section": "Player Camera Elements"
+   },
+   {
+    "field": "characterStateIconManager",
+    "label": "",
+    "section": "Player Camera Elements"
+   },
+   {
+    "field": "mainCollider",
+    "label": "",
+    "section": "Player Camera Elements"
+   },
+   {
+    "field": "mainCameraCaptureSystem",
+    "label": "",
+    "section": "Player Camera Elements"
+   },
+   {
+    "field": "targetToFollow",
+    "label": "",
+    "section": "Player Camera Elements"
+   },
+   {
+    "field": "hipsTransform",
+    "label": "",
+    "section": "Player Camera Elements"
+   },
+   {
+    "field": "updateReticleActiveState",
+    "label": "",
+    "section": "Use Camera Reticle Settings"
+   },
+   {
+    "field": "useCameraReticleThirdPerson",
+    "label": "",
+    "section": "Use Camera Reticle Settings"
+   },
+   {
+    "field": "useCameraReticleFirstPerson",
+    "label": "",
+    "section": "Use Camera Reticle Settings"
+   },
+   {
+    "field": "cameraReticleGameObject",
+    "label": "",
+    "section": "Use Camera Reticle Settings"
+   },
+   {
+    "field": "mainCameraReticleGameObject",
+    "label": "",
+    "section": "Use Camera Reticle Settings"
+   },
+   {
+    "field": "mainCustomReticleParent",
+    "label": "",
+    "section": "Use Camera Reticle Settings"
+   },
+   {
+    "field": "adjustCameraToPreviousCharacterDirectionActive",
+    "label": "",
+    "section": "Adjust Camera To Previous Character View Settings"
+   },
+   {
+    "field": "useSmoothCameraTransitionBetweenCharacters",
+    "label": "",
+    "section": "Adjust Camera To Previous Character View Settings"
+   },
+   {
+    "field": "smoothCameraTransitionBetweenCharactersSpeed",
+    "label": "",
+    "section": "Adjust Camera To Previous Character View Settings"
+   },
+   {
+    "field": "setNewCharacterAlwaysInPreviousCharacterView",
+    "label": "",
+    "section": "Adjust Camera To Previous Character View Settings"
+   },
+   {
+    "field": "setNewCharacterAlwaysInThirdPerson",
+    "label": "",
+    "section": "Adjust Camera To Previous Character View Settings"
+   },
+   {
+    "field": "setNewCharacterAlwaysInFirstPerson",
+    "label": "",
+    "section": "Adjust Camera To Previous Character View Settings"
+   },
+   {
+    "field": "useMultipleTargetFov",
+    "label": "",
+    "section": "Local Multiplayer Single Camera Settings"
+   },
+   {
+    "field": "multipleTargetsMinFov",
+    "label": "",
+    "section": "Local Multiplayer Single Camera Settings"
+   },
+   {
+    "field": "multipleTargetsMaxFov",
+    "label": "",
+    "section": "Local Multiplayer Single Camera Settings"
+   },
+   {
+    "field": "multipleTargetsFovSpeed",
+    "label": "",
+    "section": "Local Multiplayer Single Camera Settings"
+   },
+   {
+    "field": "useMultipleTargetsYPosition",
+    "label": "",
+    "section": "Local Multiplayer Single Camera Settings"
+   },
+   {
+    "field": "multipleTargetsYPositionSpeed",
+    "label": "",
+    "section": "Local Multiplayer Single Camera Settings"
+   },
+   {
+    "field": "multipleTargetsMaxHeight",
+    "label": "",
+    "section": "Local Multiplayer Single Camera Settings"
+   },
+   {
+    "field": "multipleTargetsHeightMultiplier",
+    "label": "",
+    "section": "Local Multiplayer Single Camera Settings"
+   },
+   {
+    "field": "maxMultipleTargetHeight",
+    "label": "",
+    "section": "Local Multiplayer Single Camera Settings"
+   },
+   {
+    "field": "minMultipleTargetHeight",
+    "label": "",
+    "section": "Local Multiplayer Single Camera Settings"
+   },
+   {
+    "field": "showCameraGizmo",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoRadius",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoLabelColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "linesColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "showDebugPrint",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "lookAtTargetEnabled",
+    "label": "",
+    "section": "Look At Target Settings"
+   }
+  ]
+ }
+]

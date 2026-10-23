@@ -1,0 +1,861 @@
+[
+ {
+  "type": "playerController",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\playerController.cs",
+  "source": "Player/playerController.cs",
+  "part": 1,
+  "total_parts": 3,
+  "fields": [
+   {
+    "field": "airSpeed",
+    "label": "",
+    "section": "Movement Settings"
+   },
+   {
+    "field": "airControl",
+    "label": "",
+    "section": "Movement Settings"
+   },
+   {
+    "field": "ignorePlayerExtraRotationOnAirEnabled",
+    "label": "",
+    "section": "Movement Settings"
+   },
+   {
+    "field": "stationaryTurnSpeed",
+    "label": "",
+    "section": "Movement Settings"
+   },
+   {
+    "field": "movingTurnSpeed",
+    "label": "",
+    "section": "Movement Settings"
+   },
+   {
+    "field": "useTurnSpeedOnAim",
+    "label": "",
+    "section": "Movement Settings"
+   },
+   {
+    "field": "autoTurnSpeed",
+    "label": "",
+    "section": "Movement Settings"
+   },
+   {
+    "field": "aimTurnSpeed",
+    "label": "",
+    "section": "Movement Settings"
+   },
+   {
+    "field": "thresholdAngleDifference",
+    "label": "",
+    "section": "Movement Settings"
+   },
+   {
+    "field": "regularMovementOnBulletTime",
+    "label": "",
+    "section": "Movement Settings"
+   },
+   {
+    "field": "useMoveInpuptMagnitedeToForwardAmount",
+    "label": "",
+    "section": "Movement Settings"
+   },
+   {
+    "field": "setCustomCapsuleCenter",
+    "label": "",
+    "section": "Main Capsule Settings"
+   },
+   {
+    "field": "customCapsuleCenter",
+    "label": "",
+    "section": "Main Capsule Settings"
+   },
+   {
+    "field": "customCapsuleCenterOnCrouch",
+    "label": "",
+    "section": "Main Capsule Settings"
+   },
+   {
+    "field": "baseLayerIndex",
+    "label": "",
+    "section": "Animator Settings"
+   },
+   {
+    "field": "inputHorizontalLerpSpeed",
+    "label": "",
+    "section": "Animator Settings"
+   },
+   {
+    "field": "inputVerticalLerpSpeed",
+    "label": "",
+    "section": "Animator Settings"
+   },
+   {
+    "field": "inputStrafeHorizontalLerpSpeed",
+    "label": "",
+    "section": "Animator Settings"
+   },
+   {
+    "field": "inputStrafeVerticalLerpSpeed",
+    "label": "",
+    "section": "Animator Settings"
+   },
+   {
+    "field": "animatorForwardInputLerpSpeed",
+    "label": "",
+    "section": "Animator Settings"
+   },
+   {
+    "field": "animatorTurnInputLerpSpeed",
+    "label": "",
+    "section": "Animator Settings"
+   },
+   {
+    "field": "moveSpeedMultiplier",
+    "label": "",
+    "section": "Animator Settings"
+   },
+   {
+    "field": "animSpeedMultiplier",
+    "label": "",
+    "section": "Animator Settings"
+   },
+   {
+    "field": "minTimeToSetIdleOnStrafe",
+    "label": "",
+    "section": "Animator Settings"
+   },
+   {
+    "field": "overrideAnimationSpeedActive",
+    "label": "",
+    "section": "Animator Settings"
+   },
+   {
+    "field": "characterRadius",
+    "label": "",
+    "section": "Animator Settings"
+   },
+   {
+    "field": "currentIdleID",
+    "label": "",
+    "section": "Animator ID State"
+   },
+   {
+    "field": "currentStrafeID",
+    "label": "",
+    "section": "Animator ID State"
+   },
+   {
+    "field": "currentAirID",
+    "label": "",
+    "section": "Animator ID State"
+   },
+   {
+    "field": "currentCrouchID",
+    "label": "",
+    "section": "Animator ID State"
+   },
+   {
+    "field": "currentUseStrafeLanding",
+    "label": "",
+    "section": "Animator ID State"
+   },
+   {
+    "field": "inputTankControlsHorizontalLerpSpeed",
+    "label": "",
+    "section": "Tank Controls Animator Settings"
+   },
+   {
+    "field": "inputTankControlsVerticalLerpSpeed",
+    "label": "",
+    "section": "Tank Controls Animator Settings"
+   },
+   {
+    "field": "inputTankControlsHorizontalStrafeLerpSpeed",
+    "label": "",
+    "section": "Tank Controls Animator Settings"
+   },
+   {
+    "field": "inputTankControlsVerticalStrafeLerpSpeed",
+    "label": "",
+    "section": "Tank Controls Animator Settings"
+   },
+   {
+    "field": "playerStatusID",
+    "label": "",
+    "section": "Player Status ID Settings"
+   },
+   {
+    "field": "playerStatusIDLerpSpeed",
+    "label": "",
+    "section": "Player Status ID Settings"
+   },
+   {
+    "field": "layer",
+    "label": "",
+    "section": "Ground Detection Settings"
+   },
+   {
+    "field": "rayDistance",
+    "label": "",
+    "section": "Ground Detection Settings"
+   },
+   {
+    "field": "updateFootStepStateActive",
+    "label": "",
+    "section": "Ground Detection Settings"
+   },
+   {
+    "field": "checkIfSurfaceBelowIsTerrainEnabled",
+    "label": "",
+    "section": "Ground Detection Settings"
+   },
+   {
+    "field": "useSphereRaycastForGroundDetection",
+    "label": "",
+    "section": "Ground Detection Settings"
+   },
+   {
+    "field": "sphereCastRadius",
+    "label": "",
+    "section": "Ground Detection Settings"
+   },
+   {
+    "field": "maxDistanceSphereCast",
+    "label": "",
+    "section": "Ground Detection Settings"
+   },
+   {
+    "field": "sphereCastOffset",
+    "label": "",
+    "section": "Ground Detection Settings"
+   },
+   {
+    "field": "maxExtraRaycastDistanceToGroundDetection",
+    "label": "",
+    "section": "Ground Detection Settings"
+   },
+   {
+    "field": "useNewGroundAdherenceEnabled",
+    "label": "",
+    "section": "Ground Adherence Settings"
+   },
+   {
+    "field": "groundRaycastDistance",
+    "label": "",
+    "section": "Ground Adherence Settings"
+   },
+   {
+    "field": "groundLerpSpeed",
+    "label": "",
+    "section": "Ground Adherence Settings"
+   },
+   {
+    "field": "maxStepHeight",
+    "label": "",
+    "section": "Ground Adherence Settings"
+   },
+   {
+    "field": "maxSlopeAngle",
+    "label": "",
+    "section": "Ground Adherence Settings"
+   },
+   {
+    "field": "raycastDistanceOnSphereCastOnIdle",
+    "label": "",
+    "section": "Ground Adherence Settings"
+   },
+   {
+    "field": "heightDiffRaycastRadius",
+    "label": "",
+    "section": "Ground Adherence Settings"
+   },
+   {
+    "field": "raycastPositionRange",
+    "label": "",
+    "section": "Ground Adherence Settings"
+   },
+   {
+    "field": "minAngleToUsedInputNormalized",
+    "label": "",
+    "section": "Ground Adherence Settings"
+   },
+   {
+    "field": "durationToWalkToStep",
+    "label": "",
+    "section": "Ground Adherence Settings"
+   },
+   {
+    "field": "checkStepRaycastHeight",
+    "label": "",
+    "section": "Ground Adherence Settings"
+   },
+   {
+    "field": "checkStepRaycastDistance",
+    "label": "",
+    "section": "Ground Adherence Settings"
+   },
+   {
+    "field": "useMaxWalkSurfaceAngle",
+    "label": "",
+    "section": "Ground Adherence Settings"
+   },
+   {
+    "field": "maxWalkSurfaceAngle",
+    "label": "",
+    "section": "Ground Adherence Settings"
+   },
+   {
+    "field": "useMaxDistanceToCheckSurfaceAngle",
+    "label": "",
+    "section": "Ground Adherence Settings"
+   },
+   {
+    "field": "maxDistanceToCheckSurfaceAngle",
+    "label": "",
+    "section": "Ground Adherence Settings"
+   },
+   {
+    "field": "regularGroundAdherence",
+    "label": "",
+    "section": "Ground Adherence Settings"
+   },
+   {
+    "field": "slopesGroundAdherenceUp",
+    "label": "",
+    "section": "Ground Adherence Settings"
+   },
+   {
+    "field": "slopesGroundAdherenceDown",
+    "label": "",
+    "section": "Ground Adherence Settings"
+   },
+   {
+    "field": "maxRayDistanceRange",
+    "label": "",
+    "section": "Ground Adherence Settings"
+   },
+   {
+    "field": "maxSlopeRayDistance",
+    "label": "",
+    "section": "Ground Adherence Settings"
+   },
+   {
+    "field": "maxStairsRayDistance",
+    "label": "",
+    "section": "Ground Adherence Settings"
+   },
+   {
+    "field": "useMaxWalkSurfaceAngle",
+    "label": "",
+    "section": "Ground Adherence Settings"
+   },
+   {
+    "field": "maxWalkSurfaceAngle",
+    "label": "",
+    "section": "Ground Adherence Settings"
+   },
+   {
+    "field": "useMaxDistanceToCheckSurfaceAngle",
+    "label": "",
+    "section": "Ground Adherence Settings"
+   },
+   {
+    "field": "maxDistanceToCheckSurfaceAngle",
+    "label": "",
+    "section": "Ground Adherence Settings"
+   },
+   {
+    "field": "useMaxSlopeInclination",
+    "label": "",
+    "section": "Ground Adherence Settings"
+   },
+   {
+    "field": "maxSlopeInclination",
+    "label": "",
+    "section": "Ground Adherence Settings"
+   },
+   {
+    "field": "minSlopeInclination",
+    "label": "",
+    "section": "Ground Adherence Settings"
+   },
+   {
+    "field": "stairsMinValue",
+    "label": "",
+    "section": "Stairs Settings"
+   },
+   {
+    "field": "stairsMaxValue",
+    "label": "",
+    "section": "Stairs Settings"
+   },
+   {
+    "field": "stairsGroundAdherence",
+    "label": "",
+    "section": "Stairs Settings"
+   },
+   {
+    "field": "checkStairsWithInclination",
+    "label": "",
+    "section": "Stairs Settings"
+   },
+   {
+    "field": "minStairInclination",
+    "label": "",
+    "section": "Stairs Settings"
+   },
+   {
+    "field": "maxStairInclination",
+    "label": "",
+    "section": "Stairs Settings"
+   },
+   {
+    "field": "checkForStairAdherenceSystem",
+    "label": "",
+    "section": "Stairs Settings"
+   },
+   {
+    "field": "currentStairAdherenceSystemMinValue",
+    "label": "",
+    "section": "Current Stairs Adherence (DEBUG)"
+   },
+   {
+    "field": "currentStairAdherenceSystemMaxValue",
+    "label": "",
+    "section": "Current Stairs Adherence (DEBUG)"
+   },
+   {
+    "field": "currentStairAdherenceSystemAdherenceValue",
+    "label": "",
+    "section": "Current Stairs Adherence (DEBUG)"
+   },
+   {
+    "field": "walkSpeed",
+    "label": "",
+    "section": "Walk/Run/Sprint Settings"
+   },
+   {
+    "field": "increaseWalkSpeedEnabled",
+    "label": "",
+    "section": "Walk/Run/Sprint Settings"
+   },
+   {
+    "field": "increaseWalkSpeedValue",
+    "label": "",
+    "section": "Walk/Run/Sprint Settings"
+   },
+   {
+    "field": "holdButtonToKeepIncreasedWalkSpeed",
+    "label": "",
+    "section": "Walk/Run/Sprint Settings"
+   },
+   {
+    "field": "walkRunTip",
+    "label": "",
+    "section": "Walk/Run/Sprint Settings"
+   },
+   {
+    "field": "sprintEnabled",
+    "label": "",
+    "section": "Sprint Settings"
+   },
+   {
+    "field": "changeCameraFovOnSprint",
+    "label": "",
+    "section": "Sprint Settings"
+   },
+   {
+    "field": "shakeCameraOnSprintThirdPerson",
+    "label": "",
+    "section": "Sprint Settings"
+   },
+   {
+    "field": "sprintThirdPersonCameraShakeName",
+    "label": "",
+    "section": "Sprint Settings"
+   },
+   {
+    "field": "useSecondarySprintValues",
+    "label": "",
+    "section": "Sprint Settings"
+   },
+   {
+    "field": "sprintVelocity",
+    "label": "",
+    "section": "Sprint Settings"
+   },
+   {
+    "field": "sprintJumpPower",
+    "label": "",
+    "section": "Sprint Settings"
+   },
+   {
+    "field": "sprintAirSpeed",
+    "label": "",
+    "section": "Sprint Settings"
+   },
+   {
+    "field": "sprintAirControl",
+    "label": "",
+    "section": "Sprint Settings"
+   },
+   {
+    "field": "runOnCrouchEnabled",
+    "label": "",
+    "section": "Sprint Settings"
+   },
+   {
+    "field": "useRootMotionActive",
+    "label": "",
+    "section": "Root Motion Settings"
+   },
+   {
+    "field": "noRootLerpSpeed",
+    "label": "",
+    "section": "Root Motion Settings"
+   },
+   {
+    "field": "noRootWalkMovementSpeed",
+    "label": "",
+    "section": "Root Motion Settings"
+   },
+   {
+    "field": "noRootRunMovementSpeed",
+    "label": "",
+    "section": "Root Motion Settings"
+   },
+   {
+    "field": "noRootSprintMovementSpeed",
+    "label": "",
+    "section": "Root Motion Settings"
+   },
+   {
+    "field": "noRootCrouchMovementSpeed",
+    "label": "",
+    "section": "Root Motion Settings"
+   },
+   {
+    "field": "noRootCrouchRunMovementSpeed",
+    "label": "",
+    "section": "Root Motion Settings"
+   },
+   {
+    "field": "noRootWalkStrafeMovementSpeed",
+    "label": "",
+    "section": "Root Motion Settings"
+   },
+   {
+    "field": "noRootRunStrafeMovementSpeed",
+    "label": "",
+    "section": "Root Motion Settings"
+   },
+   {
+    "field": "noRootDelayToMoveOnLand",
+    "label": "",
+    "section": "Root Motion Settings"
+   },
+   {
+    "field": "disableRootMotionTemporalyOnLandThirdPerson",
+    "label": "",
+    "section": "Root Motion Settings"
+   },
+   {
+    "field": "durationDisableRootMotionTemporalyOnLandThirdPerson",
+    "label": "",
+    "section": "Root Motion Settings"
+   },
+   {
+    "field": "waitToDisableRootMotionTemporalyOnLandThirdPerson",
+    "label": "",
+    "section": "Root Motion Settings"
+   },
+   {
+    "field": "useRootMotionOnFullBodyAwareness",
+    "label": "",
+    "section": "Root Motion Settings"
+   },
+   {
+    "field": "playerID",
+    "label": "",
+    "section": "Player ID Settings"
+   },
+   {
+    "field": "playerIsNonLocalAvatar",
+    "label": "",
+    "section": "Player ID Settings"
+   },
+   {
+    "field": "playerNonLocalAvatarID",
+    "label": "",
+    "section": "Player ID Settings"
+   },
+   {
+    "field": "usedByAI",
+    "label": "",
+    "section": "AI Settings"
+   },
+   {
+    "field": "noAnimatorSpeed",
+    "label": "",
+    "section": "First Person No Animator Settings"
+   },
+   {
+    "field": "noAnimatorWalkMovementSpeed",
+    "label": "",
+    "section": "First Person No Animator Settings"
+   },
+   {
+    "field": "noAnimatorRunMovementSpeed",
+    "label": "",
+    "section": "First Person No Animator Settings"
+   },
+   {
+    "field": "noAnimatorCrouchMovementSpeed",
+    "label": "",
+    "section": "First Person No Animator Settings"
+   },
+   {
+    "field": "noAnimatorRunCrouchMovementSpeed",
+    "label": "",
+    "section": "First Person No Animator Settings"
+   },
+   {
+    "field": "noAnimatorStrafeMovementSpeed",
+    "label": "",
+    "section": "First Person No Animator Settings"
+   },
+   {
+    "field": "noAnimatorCanRun",
+    "label": "",
+    "section": "First Person No Animator Settings"
+   },
+   {
+    "field": "noAnimatorWalkBackwardMovementSpeed",
+    "label": "",
+    "section": "First Person No Animator Settings"
+   },
+   {
+    "field": "noAnimatorRunBackwardMovementSpeed",
+    "label": "",
+    "section": "First Person No Animator Settings"
+   },
+   {
+    "field": "noAnimatorCrouchBackwardMovementSpeed",
+    "label": "",
+    "section": "First Person No Animator Settings"
+   },
+   {
+    "field": "noAnimatorRunCrouchBackwardMovementSpeed",
+    "label": "",
+    "section": "First Person No Animator Settings"
+   },
+   {
+    "field": "noAnimatorStrafeBackwardMovementSpeed",
+    "label": "",
+    "section": "First Person No Animator Settings"
+   },
+   {
+    "field": "noAnimatorCanRunBackwards",
+    "label": "",
+    "section": "First Person No Animator Settings"
+   },
+   {
+    "field": "noAnimatorAirSpeed",
+    "label": "",
+    "section": "First Person No Animator Settings"
+   },
+   {
+    "field": "maxVelocityChange",
+    "label": "",
+    "section": "First Person No Animator Settings"
+   },
+   {
+    "field": "noAnimatorMovementSpeedMultiplier",
+    "label": "",
+    "section": "First Person No Animator Settings"
+   },
+   {
+    "field": "noAnimatorSlopesGroundAdherenceUp",
+    "label": "",
+    "section": "Ground Adherence Settings"
+   },
+   {
+    "field": "noAnimatorSlopesGroundAdherenceDown",
+    "label": "",
+    "section": "Ground Adherence Settings"
+   },
+   {
+    "field": "noAnimatorStairsGroundAdherence",
+    "label": "",
+    "section": "Ground Adherence Settings"
+   },
+   {
+    "field": "useEventOnSprint",
+    "label": "",
+    "section": "Sprint Settings"
+   },
+   {
+    "field": "eventOnStartSprint",
+    "label": "",
+    "section": "Sprint Settings"
+   },
+   {
+    "field": "eventOnStopSprint",
+    "label": "",
+    "section": "Sprint Settings"
+   },
+   {
+    "field": "lookAlwaysInCameraDirection",
+    "label": "",
+    "section": "Look In Camera Direction Settings"
+   },
+   {
+    "field": "lookInCameraDirectionIfLookingAtTarget",
+    "label": "",
+    "section": "Look In Camera Direction Settings"
+   },
+   {
+    "field": "lookOnlyIfMoving",
+    "label": "",
+    "section": "Look In Camera Direction Settings"
+   },
+   {
+    "field": "disableLookAlwaysInCameraDirectionIfIncreaseWalkSpeedActive",
+    "label": "",
+    "section": "Look In Camera Direction Settings"
+   },
+   {
+    "field": "lookInCameraDirectionOnCrouchState",
+    "label": "",
+    "section": "Look In Camera Direction Settings"
+   },
+   {
+    "field": "defaultStrafeWalkSpeed",
+    "label": "",
+    "section": "Look In Camera Direction Settings"
+   },
+   {
+    "field": "defaultStrafeRunSpeed",
+    "label": "",
+    "section": "Look In Camera Direction Settings"
+   },
+   {
+    "field": "rotateDirectlyTowardCameraOnStrafe",
+    "label": "",
+    "section": "Look In Camera Direction Settings"
+   },
+   {
+    "field": "strafeLerpSpeed",
+    "label": "",
+    "section": "Look In Camera Direction Settings"
+   },
+   {
+    "field": "ignoreStrafeStateOnAirEnabled",
+    "label": "",
+    "section": "Look In Camera Direction Settings"
+   },
+   {
+    "field": "updateUseStrafeLandingEnabled",
+    "label": "",
+    "section": "Look In Camera Direction Settings"
+   },
+   {
+    "field": "checkQuickMovementTurn180DegreesOnRun",
+    "label": "",
+    "section": "Quick Movement Turn Settings"
+   },
+   {
+    "field": "minDelayToActivateQuickMovementTurn180OnRun",
+    "label": "",
+    "section": "Quick Movement Turn Settings"
+   },
+   {
+    "field": "quickTurnMovementDurationWalking",
+    "label": "",
+    "section": "Quick Movement Turn Settings"
+   },
+   {
+    "field": "quickTurnMovementDurationRunning",
+    "label": "",
+    "section": "Quick Movement Turn Settings"
+   },
+   {
+    "field": "quickTurnMovementDurationSprinting",
+    "label": "",
+    "section": "Quick Movement Turn Settings"
+   },
+   {
+    "field": "quickTurnMovementRotationSpeed",
+    "label": "",
+    "section": "Quick Movement Turn Settings"
+   },
+   {
+    "field": "characterMeshGameObject",
+    "label": "",
+    "section": "Character Mesh Settings"
+   },
+   {
+    "field": "head",
+    "label": "",
+    "section": "Character Mesh Settings"
+   },
+   {
+    "field": "characterMeshesListToDisableOnEvent",
+    "label": "",
+    "section": "Character Mesh Settings"
+   },
+   {
+    "field": "checkCharacterMeshIfGeneratedOnStart",
+    "label": "",
+    "section": "Character Mesh Settings"
+   },
+   {
+    "field": "objectToCheckCharacterIfGeneratedOnStart",
+    "label": "",
+    "section": "Character Mesh Settings"
+   },
+   {
+    "field": "useEventsOnEnableDisableCharacterMeshes",
+    "label": "",
+    "section": "Character Mesh Settings"
+   },
+   {
+    "field": "eventOnEnableCharacterMeshes",
+    "label": "",
+    "section": "Character Mesh Settings"
+   },
+   {
+    "field": "eventOnDisableCharacterMeshes",
+    "label": "",
+    "section": "Character Mesh Settings"
+   },
+   {
+    "field": "eventOnEnableCharacterMeshesOnEditor",
+    "label": "",
+    "section": "Character Mesh Settings"
+   },
+   {
+    "field": "eventOnDisableCharacterMeshesOnEditor",
+    "label": "",
+    "section": "Character Mesh Settings"
+   },
+   {
+    "field": "canMoveWhileAimFirstPerson",
+    "label": "",
+    "section": "Move While Aim Settings"
+   },
+   {
+    "field": "canMoveWhileAimThirdPerson",
+    "label": "",
+    "section": "Move While Aim Settings"
+   },
+   {
+    "field": "canMoveWhileFreeFireOnThirdPerson",
+    "label": "",
+    "section": "Move While Aim Settings"
+   }
+  ]
+ }
+]

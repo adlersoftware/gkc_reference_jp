@@ -1,0 +1,710 @@
+{
+"dialogInfo": {
+"type": "dialogInfo",
+"file": "Dialog System/completeDialogInfo.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Dialog System\\completeDialogInfo.cs",
+"methods": [
+{
+"sig": "InitializeAudioElements()",
+"line": 126
+}
+]
+},
+"simpleDialogInfo": {
+"type": "simpleDialogInfo",
+"file": "Dialog System/completeDialogInfo.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Dialog System\\completeDialogInfo.cs",
+"methods": [
+{
+"sig": "InitializeAudioElements()",
+"line": 222
+}
+]
+},
+"dialogContentSystem": {
+"type": "dialogContentSystem",
+"file": "Dialog System/dialogContentSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Dialog System\\dialogContentSystem.cs",
+"methods": [
+{
+"sig": "setCurrentPlayer(GameObject newPlayer)",
+"line": 72
+},
+{
+"sig": "activateDialog()",
+"line": 77
+},
+{
+"sig": "setDialogInProcessState(bool state)",
+"line": 125
+},
+{
+"sig": "activateEventOnDialogStopped()",
+"line": 134
+},
+{
+"sig": "setNextCompleteDialogIndex()",
+"line": 143
+},
+{
+"sig": "setPrevioustCompleteDialogIndex()",
+"line": 152
+},
+{
+"sig": "setCompleteDialogIndex(int newIndex)",
+"line": 161
+},
+{
+"sig": "setPlayingExternalDialogState(bool state)",
+"line": 170
+},
+{
+"sig": "checkIfPlayDialogOnTriggerEnter()",
+"line": 175
+},
+{
+"sig": "disableDialogCharacterAnimatorState(float delayAmount)",
+"line": 193
+},
+{
+"sig": "stopDisableDialogCharacterAnimatorStateCoroutine()",
+"line": 204
+},
+{
+"sig": "setDialogAnimatorState(bool state)",
+"line": 218
+},
+{
+"sig": "enableAnimatorLayerWeight(string animatorLayerName)",
+"line": 229
+},
+{
+"sig": "checkEventsOnDialog(bool state)",
+"line": 236
+},
+{
+"sig": "checkIfPauseOrResumeAI(bool state)",
+"line": 247
+},
+{
+"sig": "checkIfAIFollowPlayerAfterDialogEnd(bool state)",
+"line": 288
+},
+{
+"sig": "setDialogAnswerConditionCheckResult(bool state)",
+"line": 311
+},
+{
+"sig": "setNextDialogWithConditionCheckResult(bool state)",
+"line": 326
+},
+{
+"sig": "getCompleteDialogInfoTemplateByLanguageName(string languageName)",
+"line": 341
+},
+{
+"sig": "getDialogContentID()",
+"line": 353
+},
+{
+"sig": "getDialogContentScene()",
+"line": 358
+},
+{
+"sig": "getCurrentDialogIndex()",
+"line": 363
+},
+{
+"sig": "addNewDialog()",
+"line": 369
+},
+{
+"sig": "addNewLine(int dialogIndex)",
+"line": 380
+},
+{
+"sig": "addNewAnswer(int dialogIndex, int lineIndex)",
+"line": 391
+},
+{
+"sig": "assignIDToDialog(int newID)",
+"line": 402
+},
+{
+"sig": "assignDialogContentScene(int newScene)",
+"line": 409
+},
+{
+"sig": "setDialogOwnerGameObject(GameObject newOwner)",
+"line": 416
+},
+{
+"sig": "addDialogToCharacterManually()",
+"line": 448
+},
+{
+"sig": "addDialogContentToTemplate()",
+"line": 460
+},
+{
+"sig": "updateComponent()",
+"line": 516
+}
+]
+},
+"dialogManager": {
+"type": "dialogManager",
+"file": "Dialog System/dialogManager.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Dialog System\\dialogManager.cs",
+"methods": [
+{
+"sig": "getComponentInstance()",
+"line": 48
+},
+{
+"sig": "getAllDialogContentSystemOnLevel()",
+"line": 72
+},
+{
+"sig": "getAllDialogContentOnLevelAndAssignInfo()",
+"line": 85
+},
+{
+"sig": "clearDialogContentList()",
+"line": 105
+},
+{
+"sig": "getDialogContentSystem(int dialogContentID, int dialogContentScene)",
+"line": 112
+},
+{
+"sig": "instantiateDialogContentSystem()",
+"line": 131
+},
+{
+"sig": "instantiateExternalDialogSystem()",
+"line": 136
+},
+{
+"sig": "instantateObjectOnLevel(GameObject objectToInstantiate)",
+"line": 141
+},
+{
+"sig": "getLastObjectInstantiated()",
+"line": 170
+},
+{
+"sig": "addDialogContentToCharacter(Transform newDialogContentParent, GameObject newDialogContentOwner)",
+"line": 175
+},
+{
+"sig": "updateComponent()",
+"line": 188
+}
+]
+},
+"dialogSystem": {
+"type": "dialogSystem",
+"file": "Dialog System/dialogSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Dialog System\\dialogSystem.cs",
+"methods": [
+{
+"sig": "setNewDialogContent(dialogContentSystem newDialogContent)",
+"line": 227
+},
+{
+"sig": "playDialogWithoutPausingPlayer()",
+"line": 351
+},
+{
+"sig": "inputPlayNextDialogWioutPausingPlayer()",
+"line": 364
+},
+{
+"sig": "playDialogWithoutPausingPlayerOneByOne()",
+"line": 434
+},
+{
+"sig": "playNextDialogWithoutPausingPlayer()",
+"line": 451
+},
+{
+"sig": "playNextDialogWithoutPausingPlayerShowingDialogLinePartByPart()",
+"line": 471
+},
+{
+"sig": "stopPlayNextDialogWithoutPausingPlayerShowingDialogLinePartByPartCoroutine()",
+"line": 492
+},
+{
+"sig": "stopPlayDialogWithoutPausingPlayerCoroutine()",
+"line": 612
+},
+{
+"sig": "setNextDialog()",
+"line": 750
+},
+{
+"sig": "setNextDialogWithConditionCheckResult(bool state)",
+"line": 821
+},
+{
+"sig": "closeDialogIfActive()",
+"line": 842
+},
+{
+"sig": "closeDialog()",
+"line": 849
+},
+{
+"sig": "setDialogContentAnswer(Button buttonToCheck)",
+"line": 928
+},
+{
+"sig": "setDialogAnswerConditionCheckResult(bool state)",
+"line": 1007
+},
+{
+"sig": "checkDialogEvents()",
+"line": 1030
+},
+{
+"sig": "updateDialogContent()",
+"line": 1047
+},
+{
+"sig": "disableDialogCharacterAnimatorState(float delayAmount)",
+"line": 1517
+},
+{
+"sig": "stopDisableDialogCharacterAnimatorStateCoroutine()",
+"line": 1528
+},
+{
+"sig": "setDialogAnimatorState(bool state)",
+"line": 1542
+}
+]
+},
+"externalDialogTriggerSystem": {
+"type": "externalDialogTriggerSystem",
+"file": "Dialog System/externalDialogTriggerSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Dialog System\\externalDialogTriggerSystem.cs",
+"methods": [
+{
+"sig": "activateDialogByCharacter(GameObject newCharacter)",
+"line": 33
+},
+{
+"sig": "activateDialog()",
+"line": 49
+},
+{
+"sig": "activateDialogToPlayer(GameObject playerToCheck)",
+"line": 68
+},
+{
+"sig": "findPlayerOnScene()",
+"line": 108
+}
+]
+},
+"changePlayerStateOnTriggerSystem": {
+"type": "changePlayerStateOnTriggerSystem",
+"file": "Event System/changePlayerStateOnTriggerSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Event System\\changePlayerStateOnTriggerSystem.cs",
+"methods": [
+{
+"sig": "findPlayerOnScene()",
+"line": 328
+},
+{
+"sig": "setCurrentPlayer(GameObject player)",
+"line": 335
+},
+{
+"sig": "changePlayerState()",
+"line": 340
+}
+]
+},
+"eventInfoSystem": {
+"type": "eventInfoSystem",
+"file": "Event System/eventInfoSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Event System\\eventInfoSystem.cs",
+"methods": [
+{
+"sig": "stopCheckActionEventInfoList()",
+"line": 31
+},
+{
+"sig": "activateActionEventInfoList()",
+"line": 46
+},
+{
+"sig": "addNewEvent()",
+"line": 157
+},
+{
+"sig": "setEventInfoEnabledState(bool state)",
+"line": 166
+},
+{
+"sig": "updateComponent()",
+"line": 171
+}
+]
+},
+"eventObjectFoundOnCaptureSystem": {
+"type": "eventObjectFoundOnCaptureSystem",
+"file": "Event System/eventObjectFoundOnCaptureSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Event System\\eventObjectFoundOnCaptureSystem.cs",
+"methods": [
+{
+"sig": "callEventOnCapture()",
+"line": 32
+},
+{
+"sig": "callEventOnCaptureWithGameObject(GameObject newObject)",
+"line": 47
+},
+{
+"sig": "setEventEnabledState(bool state)",
+"line": 70
+}
+]
+},
+"eventTriggerSystem": {
+"type": "eventTriggerSystem",
+"file": "Event System/eventTriggerSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Event System\\eventTriggerSystem.cs",
+"methods": [
+{
+"sig": "activateEventIfObjectActiveSelf()",
+"line": 74
+},
+{
+"sig": "activateEvent()",
+"line": 81
+},
+{
+"sig": "stopEventCoroutineIfActive()",
+"line": 102
+},
+{
+"sig": "stopEventCoroutine()",
+"line": 111
+},
+{
+"sig": "stopAllEventsAndDisableTriggerSystem()",
+"line": 118
+},
+{
+"sig": "activateEventAtOnce()",
+"line": 182
+},
+{
+"sig": "callElementFromList(eventInfo currentEventInfo)",
+"line": 207
+},
+{
+"sig": "getObjectToCall(GameObject defaultObjectToCall)",
+"line": 333
+},
+{
+"sig": "checkTriggerEventEnterType(GameObject objectToCheck)",
+"line": 348
+},
+{
+"sig": "checkTriggerEventExitType(GameObject objectToCheck)",
+"line": 353
+},
+{
+"sig": "checkTriggerEventType(GameObject objectToCheck, triggerType trigger)",
+"line": 358
+},
+{
+"sig": "getLastObjectDetected()",
+"line": 401
+},
+{
+"sig": "checkTag(GameObject objectToCheck)",
+"line": 406
+},
+{
+"sig": "checkIfObjectCanTrigger(GameObject objectToCheck)",
+"line": 423
+},
+{
+"sig": "checkTriggerEventTypeByFunction()",
+"line": 442
+},
+{
+"sig": "resetEventTriggered()",
+"line": 449
+},
+{
+"sig": "setEventAsTriggered()",
+"line": 454
+},
+{
+"sig": "setObjectOnTriggerEnterExternally(GameObject newObject)",
+"line": 459
+},
+{
+"sig": "setLoopEventAtTheEndEnabledState(bool state)",
+"line": 468
+},
+{
+"sig": "addNewEvent()",
+"line": 526
+},
+{
+"sig": "InsertEventAtIndex(int index)",
+"line": 535
+},
+{
+"sig": "setSimpleFunctionByTag(string functionName, GameObject objectTocall, string tag)",
+"line": 544
+},
+{
+"sig": "setUseLayerMaskState(bool state)",
+"line": 559
+},
+{
+"sig": "setLayerMaskValue(LayerMask newLayer)",
+"line": 565
+},
+{
+"sig": "setUseTagToTriggerState(bool state)",
+"line": 572
+},
+{
+"sig": "setUseTagListState(bool state)",
+"line": 579
+},
+{
+"sig": "setTagList(List<string> newList)",
+"line": 586
+},
+{
+"sig": "addElementToTagList(string newElement)",
+"line": 593
+},
+{
+"sig": "removeElementToTagList(string newElement)",
+"line": 602
+}
+]
+},
+"randomEventSystem": {
+"type": "randomEventSystem",
+"file": "Event System/randomEventSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Event System\\randomEventSystem.cs",
+"methods": [
+{
+"sig": "callEventInOrderByIndex(int newValue)",
+"line": 39
+},
+{
+"sig": "callEventInOrder()",
+"line": 46
+},
+{
+"sig": "setEventIndexInOrderValue(int newValue)",
+"line": 57
+},
+{
+"sig": "resetEventIndexInOrder()",
+"line": 66
+},
+{
+"sig": "callRandomEventIgnoringProbabilityByName(string eventName)",
+"line": 71
+},
+{
+"sig": "callRandomEventByName(string eventName)",
+"line": 80
+},
+{
+"sig": "callRandomEvent()",
+"line": 97
+},
+{
+"sig": "setRandomEventsEnabledState(bool state)",
+"line": 161
+},
+{
+"sig": "setIgnoreRandomEventActiveState(bool state)",
+"line": 166
+}
+]
+},
+"remoteAnimatorEventTriggerSystem": {
+"type": "remoteAnimatorEventTriggerSystem",
+"file": "Event System/remoteAnimatorEventTriggerSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Event System\\remoteAnimatorEventTriggerSystem.cs",
+"methods": [
+{
+"sig": "callRemoteEvent(string eventName)",
+"line": 27
+},
+{
+"sig": "setEnabledEventState(string eventName)",
+"line": 58
+},
+{
+"sig": "setDisabledEventState(string eventName)",
+"line": 63
+},
+{
+"sig": "setEnabledOrDisabledEventState(bool state, string eventName)",
+"line": 68
+}
+]
+},
+"remoteEventActivator": {
+"type": "remoteEventActivator",
+"file": "Event System/remoteEventActivator.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Event System\\remoteEventActivator.cs",
+"methods": [
+{
+"sig": "callRemoteEvent(GameObject objectToCall)",
+"line": 69
+},
+{
+"sig": "setObjectToCall(GameObject objectToCall)",
+"line": 76
+},
+{
+"sig": "callEvent()",
+"line": 81
+},
+{
+"sig": "findPlayerOnScene()",
+"line": 150
+}
+]
+},
+"remoteEventSearcher": {
+"type": "remoteEventSearcher",
+"file": "Event System/remoteEventSearcher.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Event System\\remoteEventSearcher.cs",
+"methods": [
+{
+"sig": "activateRemoteEventSearcher(string remoteEventSearcherName)",
+"line": 36
+}
+]
+},
+"remoteEventSocket": {
+"type": "remoteEventSocket",
+"file": "Event System/remoteEventSocket.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Event System\\remoteEventSocket.cs",
+"methods": [
+{
+"sig": "getMainRemoteEventSystem()",
+"line": 19
+},
+{
+"sig": "isRemoteEventSocketEnabled()",
+"line": 28
+}
+]
+},
+"remoteEventSystem": {
+"type": "remoteEventSystem",
+"file": "Event System/remoteEventSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Event System\\remoteEventSystem.cs",
+"methods": [
+{
+"sig": "callRemoveEvent(string eventName)",
+"line": 59
+},
+{
+"sig": "callRemoteEvent(string eventName)",
+"line": 64
+},
+{
+"sig": "callRemoteEventWithAmount(string eventName, float amount)",
+"line": 97
+},
+{
+"sig": "callRemoteEventWithBool(string eventName, bool state)",
+"line": 130
+},
+{
+"sig": "callRemoteEventWithGameObject(string eventName, GameObject objectToSend)",
+"line": 163
+},
+{
+"sig": "callRemoteEventWithTransform(string eventName, Transform transformToSend)",
+"line": 196
+},
+{
+"sig": "callRemoteEventWithString(string eventName, string strintParameter)",
+"line": 229
+},
+{
+"sig": "setEnabledEventState(string eventName)",
+"line": 263
+},
+{
+"sig": "setDisabledEventState(string eventName)",
+"line": 268
+},
+{
+"sig": "setEnabledOrDisabledEventState(bool state, string eventName)",
+"line": 273
+},
+{
+"sig": "setIgnoreEventActiveState(string eventName)",
+"line": 291
+},
+{
+"sig": "setIgnoreEventDeactiveState(string eventName)",
+"line": 296
+},
+{
+"sig": "setIgnoreEventState(bool state, string eventName)",
+"line": 301
+},
+{
+"sig": "setRemoteEventsEnabledState(bool state)",
+"line": 310
+},
+{
+"sig": "getRemoteEventSystemName()",
+"line": 315
+},
+{
+"sig": "getRemoteEventSystemID()",
+"line": 320
+},
+{
+"sig": "clearObjectsSearcResultList()",
+"line": 326
+},
+{
+"sig": "showObjectsBySearchName()",
+"line": 345
+},
+{
+"sig": "setEnabledEventStateFromEditor(string eventName)",
+"line": 378
+},
+{
+"sig": "setDisabledEventStateFromEditor(string eventName)",
+"line": 385
+},
+{
+"sig": "setRemoteEventsEnabledStateFromEditor(bool state)",
+"line": 392
+},
+{
+"sig": "updateComponent()",
+"line": 399
+}
+]
+}
+}

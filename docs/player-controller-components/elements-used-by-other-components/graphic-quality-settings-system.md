@@ -1,0 +1,1 @@
+# Graphic Quality Settings System

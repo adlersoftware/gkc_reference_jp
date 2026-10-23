@@ -1,0 +1,262 @@
+[
+ {
+  "type": "sharedActionSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Action System\\Shared Action System\\sharedActionSystem.cs",
+  "methods": [
+   {
+    "sig": "setExternalCharacter(GameObject newCharacter)",
+    "line": 128
+   },
+   {
+    "sig": "setFirstCharacter(GameObject newCharacter)",
+    "line": 133
+   },
+   {
+    "sig": "setSecondCharacter(GameObject newCharacter)",
+    "line": 138
+   },
+   {
+    "sig": "isLastSharedActionFound()",
+    "line": 143
+   },
+   {
+    "sig": "isSharedActionEnabled()",
+    "line": 148
+   },
+   {
+    "sig": "isSharedActionActive()",
+    "line": 153
+   },
+   {
+    "sig": "activateRandomSharedActionByName(string actionName)",
+    "line": 158
+   },
+   {
+    "sig": "activateSharedActionByName(string actionName)",
+    "line": 189
+   },
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 741
+   },
+   {
+    "sig": "stopSharedActionDueToCharactersUnableToFinish()",
+    "line": 1044
+   },
+   {
+    "sig": "setSharedActionEnabledState(bool state)",
+    "line": 1354
+   },
+   {
+    "sig": "setSharedActionEnabledStateFromEditor(bool state)",
+    "line": 1416
+   }
+  ]
+ },
+ {
+  "type": "sharedActionButtonActivator",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Action System\\Shared Action System\\sharedActionButtonActivator.cs",
+  "methods": [
+   {
+    "sig": "setuseRandomSharedActionNameState(bool state)",
+    "line": 81
+   },
+   {
+    "sig": "enableActivatorAndSetSharedActioName(string newName)",
+    "line": 86
+   },
+   {
+    "sig": "setSharedActionName(string newName)",
+    "line": 93
+   },
+   {
+    "sig": "setSharedActionNameAndEnableWithDuration(string newName)",
+    "line": 116
+   },
+   {
+    "sig": "setExternalCharacter(GameObject newCharacter)",
+    "line": 147
+   },
+   {
+    "sig": "activateRandomSharedActionByName()",
+    "line": 152
+   },
+   {
+    "sig": "activateSharedActionByName()",
+    "line": 163
+   },
+   {
+    "sig": "enableActivator()",
+    "line": 209
+   },
+   {
+    "sig": "disableActivator()",
+    "line": 214
+   },
+   {
+    "sig": "enableOrDisableaActivator(bool state)",
+    "line": 219
+   },
+   {
+    "sig": "enableActivatorWithDuration(float newDuration)",
+    "line": 230
+   },
+   {
+    "sig": "disableActivatorWithDuration()",
+    "line": 235
+   },
+   {
+    "sig": "enableOrDisableActivatorWithDuration(bool state, float newDuration)",
+    "line": 242
+   },
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 286
+   },
+   {
+    "sig": "setButtonActivatorEnabledState(bool state)",
+    "line": 310
+   },
+   {
+    "sig": "setButtonActivatorEnabledStateFromEditor(bool state)",
+    "line": 315
+   }
+  ]
+ },
+ {
+  "type": "sharedActionZone",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Action System\\Shared Action System\\sharedActionZone.cs",
+  "methods": [
+   {
+    "sig": "storeInitialPosition()",
+    "line": 100
+   },
+   {
+    "sig": "getInitialPosition()",
+    "line": 123
+   },
+   {
+    "sig": "getInitialEuler()",
+    "line": 128
+   },
+   {
+    "sig": "setSharedActionZoneEnabledState(bool state)",
+    "line": 133
+   },
+   {
+    "sig": "isSharedActionZoneEnabled()",
+    "line": 138
+   },
+   {
+    "sig": "setDisableSharedActionZoneAfterUseState(bool state)",
+    "line": 143
+   },
+   {
+    "sig": "getSharedActionName()",
+    "line": 148
+   },
+   {
+    "sig": "isUseSharedActionContentActive()",
+    "line": 153
+   },
+   {
+    "sig": "getSharedActionContent()",
+    "line": 158
+   },
+   {
+    "sig": "getSetPlayerAsFirstCharacter()",
+    "line": 163
+   },
+   {
+    "sig": "getSetAIAsFirstCharacterIfSignalOwner()",
+    "line": 168
+   },
+   {
+    "sig": "getMaxDistanceToUseSharedActionZone()",
+    "line": 173
+   },
+   {
+    "sig": "spawnSharedActionObjectOnSceneFromEditor()",
+    "line": 200
+   },
+   {
+    "sig": "getSharedActionManagerrOnScene()",
+    "line": 207
+   }
+  ]
+ },
+ {
+  "type": "sharedActionSystemRemoteActivator",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Action System\\Shared Action System\\sharedActionSystemRemoteActivator.cs",
+  "methods": [
+   {
+    "sig": "setCustomSharedActionNameToUse(string newName)",
+    "line": 104
+   },
+   {
+    "sig": "removeCustomSharedActionName()",
+    "line": 111
+   },
+   {
+    "sig": "checkSharedActionSystemByExternalDetection(string actionName)",
+    "line": 116
+   },
+   {
+    "sig": "activateSharedActionByName()",
+    "line": 276
+   },
+   {
+    "sig": "setSetAllSharedActionsActivatorResultAsNotActivatedState(bool state)",
+    "line": 315
+   },
+   {
+    "sig": "setRemoteActivatorEnabledState(bool state)",
+    "line": 320
+   },
+   {
+    "sig": "checkSharedActionSystemByExternalDetectionFromEditor()",
+    "line": 326
+   },
+   {
+    "sig": "setSetAllSharedActionsActivatorResultAsNotActivatedStateFromEditor(bool state)",
+    "line": 331
+   },
+   {
+    "sig": "activateSharedActionByNameFromEditor()",
+    "line": 338
+   }
+  ]
+ },
+ {
+  "type": "sharedActionZoneManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Action System\\Shared Action System\\sharedActionZoneManager.cs",
+  "methods": [
+   {
+    "sig": "isSharedActionZonesEnabled()",
+    "line": 20
+   },
+   {
+    "sig": "getSharedActionZoneList()",
+    "line": 25
+   },
+   {
+    "sig": "setSharedActionZonesEnabledState(bool state)",
+    "line": 30
+   },
+   {
+    "sig": "getAllSharedActionZonesOnScene()",
+    "line": 35
+   }
+  ]
+ },
+ {
+  "type": "sharedActionZoneTrigger",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Action System\\Shared Action System\\sharedActionZoneTrigger.cs",
+  "methods": [
+   {
+    "sig": "checkTriggerInfo(Collider col, bool isEnter)",
+    "line": 66
+   }
+  ]
+ }
+]

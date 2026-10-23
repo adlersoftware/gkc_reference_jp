@@ -1,0 +1,180 @@
+[
+ {
+  "type": "characterFactionManager",
+  "summary": "キャラクターの所属factionを管理するコンポーネント。factionSystemへの登録、味方/敵/中立の判定、検出済み敵リストの保持を行い、判定処理はほぼfactionSystemへ委譲する。",
+  "methods": {
+   "changeCharacterToFaction(string factionToChange)": "`factionSystem`を再取得し、一致するfactionのindexと`factionName`を設定する。",
+   "isCharacterFriendly(string characterToCheckFacionName)": "`factionSystem.isCharacterFriendly`へ委譲して関係を返すだけ。未接続時はfalse。",
+   "isCharacterEnemy(string characterToCheckFacionName)": "`factionSystem.isCharacterEnemy`へ委譲して敵かどうかを返すだけ。未接続時はfalse。",
+   "isAttackerEnemy(string characterToCheckFacionName)": "味方の攻撃も敵とみなす設定を渡し、`factionSystem.isAttackerEnemy`へ委譲するだけ。",
+   "isCharacterNeutral(string characterToCheckFacionName)": "`factionSystem.isCharacterNeutral`へ委譲し、中立かを返すだけ。未接続時はfalse。",
+   "getFactionName()": "`factionName`を返すだけ。",
+   "checkIfCharacterBelongsToFaction(string factionName, GameObject character)": "対象キャラのfaction名が一致するかを`factionSystem`経由で返すだけ。",
+   "removeCharacterAsTargetOnSameFaction(GameObject characterGameObject)": "同factionのAIから対象を外すよう、`factionSystem`へ自身のindexとともに委譲する。",
+   "sendSignalToRemoveCharacterAsTargetOnSameFaction(GameObject targetToRemove)": "対象解除の`sendSignalToRemoveCharacterAsTarget`をtransformへ送るだけ。",
+   "checkCharactersAround()": "`checkCharactersAroundAI`メッセージを送り、周囲のキャラを再検出させる。",
+   "alertFaction(GameObject target)": "`characterTransform`へ`enemyAlert`メッセージを送り、対象を敵として味方AIへ警告する。",
+   "getFactionStringList()": "`factionStringList`を返すだけ。",
+   "addDetectedEnemyFromFaction(GameObject enemy)": "重複しない場合のみ`currentDetectedEnemyList`へ敵を追加するだけ。",
+   "removeDetectedEnemyFromFaction(GameObject enemy)": "`currentDetectedEnemyList`に含まれていれば削除するだけ。",
+   "clearDetectedEnemyFromFaction()": "`currentDetectedEnemyList`を空にするだけ。",
+   "isCharacterDetectedAsEnemyByOtherFaction(GameObject characterToCheck)": "他factionの検出済み敵リストに対象が含まれるかを`factionSystem`へ問い合わせて返す。",
+   "addCharacterFromFaction()": "`factionSystem`へ自身を登録し、`characterTransform`未設定ならtransformを代入する。",
+   "removeCharacterDeadFromFaction()": "検出済み敵リストを消去し、死亡キャラとして`factionSystem`の登録リストから外す。",
+   "alertFactionOnSpotted(float alertCloseFactionRadius, GameObject target, Vector3 alertPosition)": "指定半径内にいる同factionのキャラへ目標を警告するよう`factionSystem`へ委譲する。",
+   "getCharacterTransform()": "`characterTransform`を返すだけ。",
+   "getFactionManager()": "未接続時に`factionSystem`をInstance・自動生成・Findの順で探して接続フラグを更新する。",
+   "setNeutralRelationWithFactionByName(string otherFactionName)": "関係を中立に変更し、新関係で味方になった相手をAIの敵リストから除去する。",
+   "setEnemyRelationWithFactionByName(string otherFactionName)": "関係を敵に変更し、`removeEnemiesFromNewFriendFaction`で対象リストを整理する。",
+   "setFriendRelationWithFactionByName(string otherFactionName)": "関係を味方に変更し、味方になった相手をAIの敵リストから除去する。",
+   "changeCharacterToFactionAndCleanTargetListIngame(string factionToChange)": "factionを変更して自身を登録し直し、敵AIの対象リストから自身を除去する。",
+   "changeFactionRelation(string otherFactionName, factionSystem.relationInfo.relationType relationType)": "`factionSystem.changeFactionRelation`へ自身のindexとともに関係変更を委譲するだけ。",
+   "isIgnoreCharacterFactionEnabled()": "`ignoreCharacterFactionEnabled`を返すだけ。",
+   "setIgnoreCharacterFactionEnabledState(bool state)": "faction無視フラグを設定し、有効化時は設定次第で敵の対象から外し、対応イベントを発火する。",
+   "isRemoveAsTargetIfIgnoreCharacterFactionIsActivated()": "`removeAsTargetIfIgnoreCharacterFactionIsActivated`の値を返すだけ。",
+   "toggleIngoreCharacterFactionEnabled()": "faction無視フラグを現在値の反転で設定関数へ渡す。",
+   "getFactionListFromEditor()": "エディタ用に`factionSystem`を補ってfaction名リストを再取得し、コンポーネントを更新する。",
+   "changeCharacterToFactionFromEditor(string factionToChange)": "エディタ用にfactionリストを取得したうえでfactionを変更し、コンポーネントを更新する。",
+   "getFactionList()": "`factionList`の名前を`factionStringList`へ詰め直し、コンポーネントを更新する。",
+   "updateComponent()": "コンポーネントとシーンをダーティにして保存対象にするだけ。"
+  }
+ },
+ {
+  "type": "friendListManager",
+  "summary": "プレイヤーの仲間リストと命令メニューを管理するコンポーネント。仲間の追加/削除、個別・全体命令の送信、メニュー開閉、全滅時のチーム蘇生を担当する。",
+  "methods": {
+   "checkEventOnSystemDisabled()": "システム無効イベントが有効なら`eventIfSystemDisabled`を発火するだけ。",
+   "openOrCloseFriendMenu(bool state)": "可否とポーズ状態を確認して`menuOpened`を更新し、UI・ポーズ・操作を切り替え、運転中は車両カメラも止める。",
+   "openOrCLoseFriendMenuFromTouch()": "現在の`menuOpened`を反転して`openOrCloseFriendMenu`を呼ぶ。",
+   "closeFriendMenuIfOpen()": "メニューが開いている場合のみ閉じる。",
+   "closeFriendMenu()": "閉じる要求を`openOrCloseFriendMenu(false)`へ渡すだけ。",
+   "addFriend(GameObject friend)": "未登録ならリスト要素を生成して名前とTransformを設定し、`friendsList`へ追加して追加イベントを発火する。",
+   "setFriendListName()": "各仲間要素の名前テキストを「連番.- 名前」に更新するだけ。",
+   "checkIfContains(Transform friend)": "`friendsList`内に同じTransformの仲間がいるかを返す。",
+   "setIndividualOrder(Button pressedButton)": "押されたボタンのテキストを命令名として、その仲間だけに個別命令を実行する。",
+   "setGeneralOrderByName(string orderName)": "指定した命令名を全仲間へまとめて適用する。",
+   "setGeneralOrder(Button pressedButton)": "押されたボタンのテキストを命令名として全体命令を実行する。",
+   "callToFriends()": "`callToFriendsOrderName`(既定Follow)を全体命令として実行する。",
+   "findFriendsInRadius(float radius)": "プレイヤー周囲のコライダーからAIを探し、自身のコライダーを進入扱いで通知して発見させる。",
+   "setCurrentStateText(int index, string state)": "指定インデックスの仲間の状態テキストを「State: 状態」に更新する。",
+   "removeFriend(Transform friend)": "一致する仲間のUI要素を破棄してリストから削除し、削除イベントを発火する。",
+   "removeAllFriends()": "全仲間のUI要素を破棄して`friendsList`を空にする。",
+   "getAllFriendList()": "仲間のGameObjectリストを返し、リストが空ならnullを返す。",
+   "getClosestByDistanceFriend()": "プレイヤー位置から最も近い仲間のTransformを返し、該当が無ければnullを返す。",
+   "anyFriendOnList()": "`friendsList`が空でないかを返すだけ。",
+   "setUsedByAIState(bool state)": "`usedByAI`フラグを設定するだけ。",
+   "inputOpenOrCloseFriendListMenu()": "メニューが有効で他メニューが開いていなければ、開閉状態を反転して切り替える。",
+   "setFriendManagerEnabledState(bool state)": "`friendManagerEnabled`フラグを設定するだけ。",
+   "resurrectFullTeam()": "有効時、リスト全員を`applyDamage.resurrectCharacter`で蘇生させる。",
+   "resurrectFullTeamAndPlayer()": "全仲間を蘇生したうえで、プレイヤー自身も`resurrectCharacter`で蘇生する。",
+   "setOpenMenuEnabled(bool state)": "`openMenuEnabled`フラグを設定するだけ。",
+   "setFriendManagerEnabledStateFromEditor(bool state)": "`friendManagerEnabled`を設定してからコンポーネントを更新する。",
+   "setOpenMenuEnabledFromEditor(bool state)": "`openMenuEnabled`を設定してからコンポーネントを更新する。"
+  }
+ },
+ {
+  "type": "factionSystem",
+  "summary": "ゲーム全体のfaction定義と関係(味方/敵/中立)を保持するシングルトン。登録キャラクターのリストを使い、関係判定・変更、警告、対象解除を各キャラへ配信する。",
+  "methods": {
+   "getComponentInstance()": "初期化済みなら戻り、別インスタンスが存在すれば自身を破棄し、そうでなければ静的`Instance`に自身を設定する。",
+   "addCharacterToList(characterFactionManager character)": "`characterFactionManagerList`へ追加するだけ。",
+   "removeCharacterToList(characterFactionManager character)": "`characterFactionManagerList`から削除するだけ。",
+   "isCharacterFriendly(int ownFactionIndex, string characterToCheckFactionName)": "同名factionならtrue、関係がfriendならtrue、関係未定義ならfalseを返す。",
+   "isCharacterEnemy(int ownFactionIndex, string characterToCheckFacionName)": "同名factionはfalse、関係がenemyならtrue、関係未定義ならtrueを返す。",
+   "isAttackerEnemy(int ownFactionIndex, string characterToCheckFacionName, bool checkForFriendlyFactionAttackers, bool changeFactionRelationWithFriendlyAttackers)": "同名で同士討ち設定があれば敵、関係が敵ならtrue、味方でも攻撃時敵化設定なら関係を敵へ変えてtrueを返す。",
+   "isCharacterNeutral(int ownFactionIndex, string characterToCheckFacionName)": "同名factionはfalse、関係がneutralならtrue、関係未定義ならtrueを返す。",
+   "changeFactionRelation(int ownFactionIndex, string otherFactionName, relationInfo.relationType relationType)": "自分以外のfactionとの関係を書き換え、同factionの全キャラへ`checkCharactersAround`を送る。",
+   "removeEnemiesFromNewFriendFaction(int ownFactionIndex)": "同factionの全キャラについて、新たに味方になった相手を敵リストから除去させる。",
+   "removeEnemiesFromCharacter(int ownFactionIndex, Transform characterTransform)": "指定したTransformのキャラだけ、同様に敵リストから相手を除去させる。",
+   "removeCharacterAsTargetFromEnemies(int ownFactionIndex, GameObject characterToRemove)": "対象を敵とみなす全AIへ`removeTargetFromAICharacter`で対象解除を依頼する。",
+   "checkIfCharacterBelongsToFaction(string factionName, GameObject character)": "キャラの`characterFactionManager.factionName`が指定名と一致するかを返す。",
+   "isCharacterDetectedAsEnemyByOtherFaction(GameObject characterToCheck)": "全キャラの`currentDetectedEnemyList`を走査し、対象が検出済みかを返す。",
+   "alertFactionOnSpotted(int ownFactionIndex, float alertCloseFactionRadius, GameObject target, Vector3 alertPosition)": "同factionかつ指定位置から半径内のキャラへ`alertFaction`を送り、目標を警告する。",
+   "removeCharacterAsTargetOnSameFaction(GameObject characterToCheck, int ownFactionIndex)": "同factionまたは非敵の全キャラへ、対象解除シグナルを送る。",
+   "addFaction()": "既定名「New Faction」のfactionを`factionList`へ追加し、コンポーネントを更新する。",
+   "removeFaction(int factionIndexToRemove)": "指定インデックスのfactionを`factionList`から削除し、コンポーネントを更新する。",
+   "updateFactionsList()": "faction名を再取得し、消えた関係を削除、新規factionとの関係を追加してindexを更新する。",
+   "getFactionIndex(string factionName)": "名前が一致するfactionのインデックスを返し、存在しなければ-1を返す。",
+   "checkIfFactionExists(string factionName)": "`factionList`に指定名のfactionがあるかを返す。",
+   "checkIfFactionExistsInStringList(string factionName)": "`factionStringList`に指定名があるかを返す。",
+   "factionContainsRelation(int factionIndex, string factionWithRelation)": "自身または関係リストに指定faction名があるかを返す。",
+   "setAllRelationsAsFriendOrEnemyOnFaction(int factionIndex, int relationTypeIndex)": "0=friend、1=enemy、2=neutralで指定factionの全関係を一括設定し更新する。",
+   "getFactionStringList()": "`factionList`から`factionStringList`を作り直すだけ。",
+   "updateFactionListNames()": "`factionStringList`を更新してコンポーネントを更新する。",
+   "updateComponent()": "コンポーネントとシーンをダーティにするだけ。"
+  }
+ },
+ {
+  "type": "manageAITarget",
+  "summary": "タレットの視界トリガー情報から敵factionを判定し、最も近い敵を目標として取得する。視界半径の拡大、factionへの警告、イベント発火、ハッキング結果の反映までを担う。",
+  "methods": {
+   "resetCheckThreatValues()": "射撃位置・容疑目標・脅威判定フラグとタイマーを初期化し、状態アイコンも消す。",
+   "checkCharacterFaction(GameObject character, bool damageReceived)": "既知の敵かfactionが敵(被弾時は攻撃者判定)ならtrue。faction無視はfalse、車両は運転者で判定。",
+   "checkShootOrigin(GameObject attacker)": "未発見時に攻撃者を敵として登録し、factionの検出済み敵へ追加して`hasBeenAttacked`を立てる。",
+   "checkIfTargetIsPhysicallyVisible(GameObject targetToCheck, bool checkingSuspect)": "射撃位置から対象へレイを飛ばし、遮蔽物が無ければtrueを返す。車両時は対象車両の部位判定を用いる。",
+   "targetAdquired()": "`onSpotted`を立て、視界半径を拡大し`viewTrigger`を無効化、factionへ検出登録と警告・イベントを行う。",
+   "shootTarget()": "本体はコメントのみで、何も処理しない。",
+   "pauseAI(bool state)": "`paused`フラグを設定するだけ。",
+   "checkPossibleTarget(GameObject objectToCheck)": "対象のColliderを取得し、進入扱いで`checkTriggerInfo`を呼ぶ。",
+   "checkTriggerInfo(Collider col, bool isEnter)": "対象レイヤーなら進入時に敵/非敵へ登録し、退出時に敵/非敵から解除する。進入時は`paused`なら無視する。",
+   "canCheckSuspect(int suspectLayer)": "`layerToCheckTargets`に対象レイヤーが含まれるかを返す。",
+   "setCorrectlyHackedState()": "成功として`setHackResult(true)`を呼ぶだけ。",
+   "setIncorrectlyHackedState()": "失敗として`setHackResult(false)`を呼ぶだけ。",
+   "setHackResult(bool state)": "`hacking`を下ろし、成功時はfactionをfriendへ変えて敵リストを消去、失敗時は`hackFailed`を立てる。",
+   "activateHack()": "`hacking`をtrueにするだけ。",
+   "checkCharactersAroundAI()": "`notEnemies`の全オブジェクトを敵として再検出させる。",
+   "setCharacterStateIcon(string stateName)": "`characterStateIconManager`へ状態アイコンの表示を依頼する。",
+   "disableCharacterStateIcon()": "`characterStateIconManager`へ状態アイコンの非表示を依頼する。",
+   "setAIStateToDead()": "`enabled`をfalseにしてAIを停止するだけ。",
+   "checkEventsOnSpotted(bool state)": "イベント有効時、trueで発見イベント、falseで対象消失イベントを発火する。"
+  }
+ },
+ {
+  "type": "AITurret",
+  "summary": "タレットの武器選択・発砲・旋回と、プレイヤーによる遠隔操作、死亡時の分解処理を担う。目標判定はmanageAITargetに委ね、選択武器の有効化と付随イベントを切り替える。",
+  "methods": {
+   "chooseNextWeapon()": "武器インデックスを進め(末尾付近で0に戻る)、その武器を選んで発砲可能状態にする。",
+   "choosePreviousWeapon()": "武器インデックスを戻し(先頭では末尾へ)、その武器を選んで発砲可能状態にする。",
+   "enableOrDisableWeapons(bool state)": "`weaponsActive`を設定し、有効なら武器を起動、無効なら停止する。",
+   "setOnSpottedState(bool state)": "trueで武器を起動、falseで頭部を初期回転へ戻すコルーチンを開始して武器を停止する。",
+   "setDeathState()": "武器を止めて`dead`を立て、描画パーツへRigidbodyとColliderを付け、設定時は爆発力を加える。",
+   "setRandomWeapon()": "ランダムな武器インデックスを選び`setWeapon`を呼ぶ。",
+   "setWeapon(int weaponNumber)": "指定インデックスの武器名で`setCurrentTurretWeapon`を呼ぶ。",
+   "startOverride()": "`overrideTurretControlState(true)`を呼ぶだけ。",
+   "stopOverride()": "`overrideTurretControlState(false)`を呼ぶだけ。",
+   "overrideTurretControlState(bool state)": "操作権を切り替え、`manageAITarget.pauseAI`を同期し、旋回速度・射撃状態・武器のカメラ参照を更新する。",
+   "disableOverrideAfterDelay(float delayDuration)": "実行中ならコルーチンを開始し直し、指定秒数の実時間後に`stopOverride`で操作を戻す。",
+   "stopDisableOverrideAfterDelayCoroutine()": "保持している遅延解除コルーチンを停止するだけ。",
+   "setNewCurrentCameraTransformDirection(Transform newTransform)": "`currentCameraTransformDirection`を設定するだけ。",
+   "setNewTurretAttacker(GameObject newAttacker)": "`turretAttacker`を設定するだけ。",
+   "inputSetShootState(bool state)": "武器が有効で起動から0.6秒経過していれば`shootingWeapons`を設定する。",
+   "inputSetWeaponsState()": "現在の武器有効状態を反転して`enableOrDisableWeapons`を呼ぶ。",
+   "inputSetNextOrPreviousWeapon(bool state)": "trueで次の武器、falseで前の武器を選ぶ。"
+  }
+ },
+ {
+  "type": "fieldOfViewMeshSystem",
+  "summary": "AIの視界範囲を扇形メッシュとして可視化するコンポーネント。レイキャストで視界形状を生成し、状態に応じて表示の有無やメッシュ色を切り替える。",
+  "methods": {
+   "setActiveState(bool state)": "`fieldOfViewActive`のときだけ、表示状態が異なればGameObjectのアクティブを切り替える。",
+   "setMaterialColor(Color newColor)": "`mainMeshRenderer.material.color`を指定色にするだけ。",
+   "setRegularColor()": "`originalColor`を指定して`setMaterialColor`を呼ぶだけ。",
+   "setAlertColor()": "`alertColor`を指定して`setMaterialColor`を呼ぶだけ。"
+  }
+ },
+ {
+  "type": "enemyLaser",
+  "summary": "タレットなどが放つレーザーの描画とダメージ処理を行うコンポーネント。レイキャストの命中点にスパークと煙を出し、設定された所有者名義でダメージを与える。",
+  "methods": {
+   "setOwner(GameObject laserOwner)": "`owner`を設定するだけ。"
+  }
+ },
+ {
+  "type": "objectSignalForTargetToAI",
+  "summary": "このオブジェクトをAIの検出対象として通知するコンポーネント。ノイズシグナルを一定間隔または単発で送り、単一AIの追跡状態を監視する。",
+  "methods": {
+   "activateSignalWithRate()": "既存の監視コルーチンを止め、一定間隔でシグナルを送る`checkSignalCoroutine`を開始する。",
+   "checkToDetectAI()": "単一AI指定なら最寄りAIへノイズを送って参照を保存し、そうでなければ範囲内へノイズシグナルをまとめて送る。"
+  }
+ }
+]

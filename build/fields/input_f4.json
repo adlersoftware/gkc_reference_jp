@@ -1,0 +1,793 @@
+[
+ {
+  "type": "checkpointSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Checkpoint\\checkpointSystem.cs",
+  "source": "Checkpoint/checkpointSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "checkpointSystemEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "checkpointSceneID",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "checkPointPrefab",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "layerToPlaceNewCheckpoints",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "checkpointsPositionOffset",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "triggerScale",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "deathLoackCheckpointType",
+    "label": "",
+    "section": "Respawn Settings"
+   },
+   {
+    "field": "layerToRespawn",
+    "label": "",
+    "section": "Respawn Settings"
+   },
+   {
+    "field": "currentCheckpointElement",
+    "label": "",
+    "section": "Debug"
+   },
+   {
+    "field": "showGizmo",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "gizmoLabelColor",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "gizmoRadius",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "useHandleForVertex",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "handleRadius",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "handleGizmoColor",
+    "label": "",
+    "section": "Gizmo Options"
+   }
+  ]
+ },
+ {
+  "type": "chestSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\PickUps\\chestSystem.cs",
+  "source": "PickUps/chestSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "randomContent",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "refillChestAfterDelay",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "timeOpenedAfterEmpty",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "refilledTime",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "openAnimationName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useElectronicDeviceManager",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "setNewPickupTriggerRadius",
+    "label": "",
+    "section": "Pickups Trigger Settings"
+   },
+   {
+    "field": "newPickupTriggerRadius",
+    "label": "",
+    "section": "Pickups Trigger Settings"
+   },
+   {
+    "field": "enablePickupsTriggerAtStart",
+    "label": "",
+    "section": "Pickups Trigger Settings"
+   },
+   {
+    "field": "mainPickupManagerName",
+    "label": "",
+    "section": "Pickups Trigger Settings"
+   },
+   {
+    "field": "setIgnoreExaminePickupObject",
+    "label": "",
+    "section": "Pickups Trigger Settings"
+   },
+   {
+    "field": "setPickupsAsGetByTriggerTypeEnabled",
+    "label": "",
+    "section": "Pickups Trigger Settings"
+   },
+   {
+    "field": "isLocked",
+    "label": "",
+    "section": "Locked Settings"
+   },
+   {
+    "field": "openWhenUnlocked",
+    "label": "",
+    "section": "Locked Settings"
+   },
+   {
+    "field": "useEventOnOpenChest",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "eventOnOpenChest",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "useEventOnCloseChest",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "eventOnCloseChest",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "useEventToSendSpawnedObjects",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "eventToSendSpawnedObjects",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "eventToSendRemainTimeToRefill",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "chestAnim",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "mainCollider",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "mapObjectInformationManager",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "placeWhereInstantiatePickUps",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "placeOffset",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "space",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "amount",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "pickUpScale",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "showGizmo",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoLabelColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoRadius",
+    "label": "",
+    "section": "Gizmo Settings"
+   }
+  ]
+ },
+ {
+  "type": "closeCombatSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\closeCombatSystem.cs",
+  "source": "Combat System/closeCombatSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "combatSystemEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "combatTypeID",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "activateCloseCombatSystemAtStart",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useDelayToResetAttackIndex",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "delayToResetAttackIndex",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useAttackInputStack",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "maxAmountOfAttackInputStack",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "canUseAttacksWithoutCombatActiveEnabled",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "hideMeleeWeaponsOnExternalCombat",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "hideFireWeaponsOnExternalCombat",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "ignoreParryOnPerfectBlock",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "generalAttackDamageMultiplier",
+    "label": "",
+    "section": "Damage Settings"
+   },
+   {
+    "field": "layerMaskToDamage",
+    "label": "",
+    "section": "Damage Settings"
+   },
+   {
+    "field": "placeTriggerInFrontOfCharacterOnAllAttacks",
+    "label": "",
+    "section": "Damage Settings"
+   },
+   {
+    "field": "useCustomIgnoreTags",
+    "label": "",
+    "section": "Damage Settings"
+   },
+   {
+    "field": "addForceMultiplier",
+    "label": "",
+    "section": "Damage Settings"
+   },
+   {
+    "field": "setCanActivateReactionSystemTemporallyState",
+    "label": "",
+    "section": "Damage Settings"
+   },
+   {
+    "field": "canActivateReactionSystemTemporally",
+    "label": "",
+    "section": "Damage Settings"
+   },
+   {
+    "field": "ignoreGetHealthFromDamagingObjects",
+    "label": "",
+    "section": "Get Health From Attacks And Block Settings"
+   },
+   {
+    "field": "getHealthFromBlocks",
+    "label": "",
+    "section": "Get Health From Attacks And Block Settings"
+   },
+   {
+    "field": "healthAmountFromBlocks",
+    "label": "",
+    "section": "Get Health From Attacks And Block Settings"
+   },
+   {
+    "field": "getHealthFromPerfectBlocks",
+    "label": "",
+    "section": "Get Health From Attacks And Block Settings"
+   },
+   {
+    "field": "healthAmountFromPerfectBlocks",
+    "label": "",
+    "section": "Get Health From Attacks And Block Settings"
+   },
+   {
+    "field": "useStrafeMode",
+    "label": "",
+    "section": "Movement Settings"
+   },
+   {
+    "field": "strafeIDUsed",
+    "label": "",
+    "section": "Movement Settings"
+   },
+   {
+    "field": "setPreviousStrafeModeOnDisableMode",
+    "label": "",
+    "section": "Movement Settings"
+   },
+   {
+    "field": "activateStrafeModeOnLockOnTargetActive",
+    "label": "",
+    "section": "Movement Settings"
+   },
+   {
+    "field": "toggleStrafeModeIfRunningActive",
+    "label": "",
+    "section": "Movement Settings"
+   },
+   {
+    "field": "playerOnGroundToActivateAttack",
+    "label": "",
+    "section": "Movement Settings"
+   },
+   {
+    "field": "checkExternalControllerBehaviorActiveList",
+    "label": "",
+    "section": "Movement Settings"
+   },
+   {
+    "field": "setCombatIdleID",
+    "label": "",
+    "section": "Animation Settings"
+   },
+   {
+    "field": "combatIdleID",
+    "label": "",
+    "section": "Animation Settings"
+   },
+   {
+    "field": "setCombatIdleAfterFirstAttack",
+    "label": "",
+    "section": "Animation Settings"
+   },
+   {
+    "field": "setRegularIdleAfterAttackActive",
+    "label": "",
+    "section": "Animation Settings"
+   },
+   {
+    "field": "minWaitToSetRegularIdAfterAttackActive",
+    "label": "",
+    "section": "Animation Settings"
+   },
+   {
+    "field": "keepCombatIdleOnFBAActiveEnabled",
+    "label": "",
+    "section": "Animation Settings"
+   },
+   {
+    "field": "useAnimationPercentageDuration",
+    "label": "",
+    "section": "Animation Settings"
+   },
+   {
+    "field": "useAnimationPercentageOver100",
+    "label": "",
+    "section": "Animation Settings"
+   },
+   {
+    "field": "useMatchTargetSystemOnAttack",
+    "label": "",
+    "section": "Match Attack Position Settings"
+   },
+   {
+    "field": "ignoreAttackSettingToMatchTarget",
+    "label": "",
+    "section": "Match Attack Position Settings"
+   },
+   {
+    "field": "mainMatchPlayerToTargetSystem",
+    "label": "",
+    "section": "Match Attack Position Settings"
+   },
+   {
+    "field": "useMainMatchPositionOffset",
+    "label": "",
+    "section": "Match Attack Position Settings"
+   },
+   {
+    "field": "mainMatchPositionOffset",
+    "label": "",
+    "section": "Match Attack Position Settings"
+   },
+   {
+    "field": "blockEnabled",
+    "label": "",
+    "section": "Block Settings"
+   },
+   {
+    "field": "generalBlockProtectionMultiplier",
+    "label": "",
+    "section": "Block Settings"
+   },
+   {
+    "field": "cancelBlockReactionStateName",
+    "label": "",
+    "section": "Block Settings"
+   },
+   {
+    "field": "mainMeleeCombatBlockInputName",
+    "label": "",
+    "section": "Block Settings"
+   },
+   {
+    "field": "blockActionName",
+    "label": "",
+    "section": "Block Settings"
+   },
+   {
+    "field": "blockID",
+    "label": "",
+    "section": "Block Settings"
+   },
+   {
+    "field": "blockActivePreviously",
+    "label": "",
+    "section": "Block Settings"
+   },
+   {
+    "field": "useMaxBlockRangeAngle",
+    "label": "",
+    "section": "Block Settings"
+   },
+   {
+    "field": "maxBlockRangeAngle",
+    "label": "",
+    "section": "Block Settings"
+   },
+   {
+    "field": "blockDamageProtectionAmount",
+    "label": "",
+    "section": "Block Settings"
+   },
+   {
+    "field": "reducedBlockDamageProtectionAmount",
+    "label": "",
+    "section": "Block Settings"
+   },
+   {
+    "field": "reducedBlockDamageProtectionActive",
+    "label": "",
+    "section": "Block Settings"
+   },
+   {
+    "field": "canCancelBlockToStartAttackActive",
+    "label": "",
+    "section": "Block Settings"
+   },
+   {
+    "field": "blockInputPaused",
+    "label": "",
+    "section": "Block Settings"
+   },
+   {
+    "field": "useEventsOnBlockDamage",
+    "label": "",
+    "section": "Block Settings"
+   },
+   {
+    "field": "eventOnBlockActivate",
+    "label": "",
+    "section": "Block Settings"
+   },
+   {
+    "field": "eventOnBlockDeactivate",
+    "label": "",
+    "section": "Block Settings"
+   },
+   {
+    "field": "useEventsOnAttackCantBeBlocked",
+    "label": "",
+    "section": "Block Settings"
+   },
+   {
+    "field": "eventOnAttackCantBeBlocked",
+    "label": "",
+    "section": "Block Settings"
+   },
+   {
+    "field": "checkSurfaceInfoEnabled",
+    "label": "",
+    "section": "Surface Settings"
+   },
+   {
+    "field": "surfaceInfoOnMeleeAttackNameForNotFound",
+    "label": "",
+    "section": "Surface Settings"
+   },
+   {
+    "field": "surfaceInfoOnMeleeAttackNameForSwingOnAir",
+    "label": "",
+    "section": "Surface Settings"
+   },
+   {
+    "field": "explanation",
+    "label": "",
+    "section": "Combat Limb List"
+   },
+   {
+    "field": "useStaminaOnAttackEnabled",
+    "label": "",
+    "section": "Stamina Settings"
+   },
+   {
+    "field": "attackStaminaStateName",
+    "label": "",
+    "section": "Stamina Settings"
+   },
+   {
+    "field": "generalStaminaUseMultiplier",
+    "label": "",
+    "section": "Stamina Settings"
+   },
+   {
+    "field": "mainStaminaSystem",
+    "label": "",
+    "section": "Stamina Settings"
+   },
+   {
+    "field": "useEventsOnStateChange",
+    "label": "",
+    "section": "Events Settings Close Combat"
+   },
+   {
+    "field": "evenOnStateEnabled",
+    "label": "",
+    "section": "Events Settings Close Combat"
+   },
+   {
+    "field": "eventOnStateDisabled",
+    "label": "",
+    "section": "Events Settings Close Combat"
+   },
+   {
+    "field": "useEventOnFBAViewChange",
+    "label": "",
+    "section": "Events Settings FBA"
+   },
+   {
+    "field": "eventOnEnableFBA",
+    "label": "",
+    "section": "Events Settings FBA"
+   },
+   {
+    "field": "eventOnDisableFBA",
+    "label": "",
+    "section": "Events Settings FBA"
+   },
+   {
+    "field": "showGizmo",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoRadius",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoLabelColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "showDebugPrint",
+    "label": "",
+    "section": "Current State"
+   },
+   {
+    "field": "playerControllerManager",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "animator",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "mainHealth",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "playerInput",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "hitCombatPrefab",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "mainAudioSource",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "mainHeadTrack",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "currentArryElement",
+    "label": "",
+    "section": "Debug"
+   },
+   {
+    "field": "currentArryElement",
+    "label": "",
+    "section": "Debug"
+   },
+   {
+    "field": "currentArryElement",
+    "label": "",
+    "section": "Combo List"
+   },
+   {
+    "field": "currentArryElement",
+    "label": "",
+    "section": "Match Attack Position Settings"
+   },
+   {
+    "field": "currentArryElement",
+    "label": "",
+    "section": "Match Attack Position Settings"
+   },
+   {
+    "field": "currentArryElement",
+    "label": "",
+    "section": "Match Attack Position Settings"
+   }
+  ]
+ },
+ {
+  "type": "closetSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\closetSystem.cs",
+  "source": "Devices/closetSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "openType",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useSounds",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "showGizmo",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "gizmoRadius",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "gizmoArrowLength",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "gizmoArrowLineLength",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "gizmoArrowAngle",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "gizmoArrowColor",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "gizmoLabelColor",
+    "label": "",
+    "section": "Gizmo Options"
+   }
+  ]
+ }
+]

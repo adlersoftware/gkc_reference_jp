@@ -1,0 +1,623 @@
+[
+ {
+  "type": "waypointPlatform",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\waypointPlatform.cs",
+  "source": "Devices/waypointPlatform.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "platformActive",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "playerTag",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "vehicleTag",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "repeatWaypoints",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "moveInCircles",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "stopIfPlayerOutside",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "waitTimeBetweenPoints",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "movementSpeed",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "movingForward",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useJustToMovePlatform",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "mirrorPlatformMovement",
+    "label": "",
+    "section": "Mirror Platform Options"
+   },
+   {
+    "field": "mirrorMovementDirection",
+    "label": "",
+    "section": "Mirror Platform Options"
+   },
+   {
+    "field": "platformToMirror",
+    "label": "",
+    "section": "Mirror Platform Options"
+   },
+   {
+    "field": "returnToTransformWhenPlayerExits",
+    "label": "",
+    "section": "Return To Transform Options"
+   },
+   {
+    "field": "transformToReturnWhenPlayerExits",
+    "label": "",
+    "section": "Return To Transform Options"
+   },
+   {
+    "field": "delayToReturnWhenPlayerExits",
+    "label": "",
+    "section": "Return To Transform Options"
+   },
+   {
+    "field": "returnMovementSpeed",
+    "label": "",
+    "section": "Return To Transform Options"
+   },
+   {
+    "field": "resetWaypointIndexOnReturn",
+    "label": "",
+    "section": "Return To Transform Options"
+   },
+   {
+    "field": "useEventOnWaypointReached",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "platformTransform",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "deviceStringActionManager",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "waypointsParent",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "showGizmo",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "showVertexHandles",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "gizmoLabelColor",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "gizmoRadius",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "useHandleForVertex",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "handleRadius",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "handleGizmoColor",
+    "label": "",
+    "section": "Gizmo Options"
+   }
+  ]
+ },
+ {
+  "type": "waypointPlayerPathSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\waypointPlayerPathSystem.cs",
+  "source": "Devices/waypointPlayerPathSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "inOrder",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "showOneByOne",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "triggerRadius",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "showOffScreenIcon",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "showMapWindowIcon",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "showDistance",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "pathActive",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "mainManagerName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "eventOnPathComplete",
+    "label": "",
+    "section": "Events To Call Settings"
+   },
+   {
+    "field": "eventOnPathIncomplete",
+    "label": "",
+    "section": "Events To Call Settings"
+   },
+   {
+    "field": "useTimer",
+    "label": "",
+    "section": "Events To Call Settings"
+   },
+   {
+    "field": "timerSpeed",
+    "label": "",
+    "section": "Events To Call Settings"
+   },
+   {
+    "field": "minutesToComplete",
+    "label": "",
+    "section": "Events To Call Settings"
+   },
+   {
+    "field": "secondsToComplete",
+    "label": "",
+    "section": "Events To Call Settings"
+   },
+   {
+    "field": "extraTimePerPoint",
+    "label": "",
+    "section": "Events To Call Settings"
+   },
+   {
+    "field": "pathCompleteAudioSound",
+    "label": "",
+    "section": "Events To Call Settings"
+   },
+   {
+    "field": "pathCompleteAudioElement",
+    "label": "",
+    "section": "Events To Call Settings"
+   },
+   {
+    "field": "pathUncompleteAudioSound",
+    "label": "",
+    "section": "Events To Call Settings"
+   },
+   {
+    "field": "pathUncompleteAudioElement",
+    "label": "",
+    "section": "Events To Call Settings"
+   },
+   {
+    "field": "secondTimerSound",
+    "label": "",
+    "section": "Events To Call Settings"
+   },
+   {
+    "field": "secondTimerAudioElement",
+    "label": "",
+    "section": "Events To Call Settings"
+   },
+   {
+    "field": "secondSoundTimerLowerThan",
+    "label": "",
+    "section": "Events To Call Settings"
+   },
+   {
+    "field": "pointReachedSound",
+    "label": "",
+    "section": "Events To Call Settings"
+   },
+   {
+    "field": "pointReachedAudioElement",
+    "label": "",
+    "section": "Events To Call Settings"
+   },
+   {
+    "field": "useLineRenderer",
+    "label": "",
+    "section": "Events To Call Settings"
+   },
+   {
+    "field": "lineRendererColor",
+    "label": "",
+    "section": "Events To Call Settings"
+   },
+   {
+    "field": "lineRendererWidth",
+    "label": "",
+    "section": "Events To Call Settings"
+   },
+   {
+    "field": "showGizmo",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "showInfoLabel",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "gizmoLabelColor",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "gizmoRadius",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "useRegularGizmoRadius",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "useHandleForVertex",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "handleRadius",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "handleGizmoColor",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "showDoPositionHandles",
+    "label": "",
+    "section": "Gizmo Options"
+   }
+  ]
+ },
+ {
+  "type": "weaponAttachmentSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\Attachments\\weaponAttachmentSystem.cs",
+  "source": "Weapons/Attachments/weaponAttachmentSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "editAttachmentsEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "canEditWeaponWithoutAttchments",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "canChangeAttachmentWithNumberKeys",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useOffsetPanels",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "thirdPersonCameraMovementSpeed",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "setPickedAttachments",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useSmoothTransitionFreeCamera",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useSmoothTransitionLockedCamera",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "UILinesScaleMultiplier",
+    "label": "",
+    "section": "UI Settings"
+   },
+   {
+    "field": "dualWeaponOffsetScale",
+    "label": "",
+    "section": "UI Settings"
+   },
+   {
+    "field": "disableHUDWhenEditingAttachments",
+    "label": "",
+    "section": "UI Settings"
+   },
+   {
+    "field": "showCurrentAttachmentHoverInfo",
+    "label": "",
+    "section": "UI Settings"
+   },
+   {
+    "field": "startEditWeaponSound",
+    "label": "",
+    "section": "Sound Settings"
+   },
+   {
+    "field": "startEditWeaponAudioElement",
+    "label": "",
+    "section": "Sound Settings"
+   },
+   {
+    "field": "stopEditWeaponSound",
+    "label": "",
+    "section": "Sound Settings"
+   },
+   {
+    "field": "stopEditWeaponAudioElement",
+    "label": "",
+    "section": "Sound Settings"
+   },
+   {
+    "field": "showDebugPrint",
+    "label": "",
+    "section": "Attachment State"
+   },
+   {
+    "field": "weaponSystem",
+    "label": "",
+    "section": "Element Settings"
+   },
+   {
+    "field": "IKWeaponManager",
+    "label": "",
+    "section": "Element Settings"
+   },
+   {
+    "field": "weaponsManager",
+    "label": "",
+    "section": "Element Settings"
+   },
+   {
+    "field": "attachmentInfoGameObject",
+    "label": "",
+    "section": "Element Settings"
+   },
+   {
+    "field": "attachmentSlotGameObject",
+    "label": "",
+    "section": "Element Settings"
+   },
+   {
+    "field": "weaponAttachmentsMenu",
+    "label": "",
+    "section": "Element Settings"
+   },
+   {
+    "field": "attachmentHoverInfoPanelGameObject",
+    "label": "",
+    "section": "Element Settings"
+   },
+   {
+    "field": "attachmentHoverInfoText",
+    "label": "",
+    "section": "Element Settings"
+   },
+   {
+    "field": "weaponsCamera",
+    "label": "",
+    "section": "Element Settings"
+   },
+   {
+    "field": "mainAudioSource",
+    "label": "",
+    "section": "Element Settings"
+   },
+   {
+    "field": "removeAttachmentSound",
+    "label": "",
+    "section": "Element Settings"
+   },
+   {
+    "field": "removeAttachmentAudioElement",
+    "label": "",
+    "section": "Element Settings"
+   },
+   {
+    "field": "showGizmo",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "showDualWeaponsGizmo",
+    "label": "",
+    "section": "Gizmo Options"
+   }
+  ]
+ },
+ {
+  "type": "weaponBuilder",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\weaponBuilder.cs",
+  "source": "Weapons/weaponBuilder.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "weaponName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "relativePathUsableWeaponPrefab",
+    "label": "",
+    "section": "Usable Weapon Prefab Settings"
+   },
+   {
+    "field": "usableWeaponPrefab",
+    "label": "",
+    "section": "Usable Weapon Prefab Settings"
+   },
+   {
+    "field": "layerToPlaceWeaponPrefab",
+    "label": "",
+    "section": "Usable Weapon Prefab Settings"
+   },
+   {
+    "field": "armsParent",
+    "label": "",
+    "section": "Arms Settings"
+   },
+   {
+    "field": "currentArmsModel",
+    "label": "",
+    "section": "Arms Settings"
+   },
+   {
+    "field": "replaceArmsModel",
+    "label": "",
+    "section": "Arms Settings"
+   },
+   {
+    "field": "newArmsModel",
+    "label": "",
+    "section": "Arms Settings"
+   },
+   {
+    "field": "buildWeaponExplanation",
+    "label": "",
+    "section": "Explanation"
+   },
+   {
+    "field": "showGizmo",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "showGizmoLabel",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoLabelColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoRadius",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "useHandle",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "mainPlayerWeaponsManager",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "weaponParent",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "mainIKWeaponSystem",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "mainPlayerWeaponSystem",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "weaponMeshParent",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "newWeaponMeshParent",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "weaponViewTransform",
+    "label": "",
+    "section": "Components"
+   }
+  ]
+ }
+]

@@ -1,0 +1,278 @@
+[
+ {
+  "type": "pickupType",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\PickUps\\Pickups Behaviour\\pickupType.cs",
+  "methods": [
+   {
+    "sig": "takePickupByButton()",
+    "line": 83
+   },
+   {
+    "sig": "takePickupByTrigger()",
+    "line": 92
+   },
+   {
+    "sig": "assignPickupObjectState()",
+    "line": 101
+   },
+   {
+    "sig": "checkIfCanBePicked()",
+    "line": 116
+   },
+   {
+    "sig": "confirmTakePickup()",
+    "line": 121
+   },
+   {
+    "sig": "showPickupTakenMessage(int amountToShow)",
+    "line": 126
+   },
+   {
+    "sig": "showPickupTakenMessage(string messageToUse)",
+    "line": 143
+   },
+   {
+    "sig": "checkIfUseInventoryObjectWhenPicked()",
+    "line": 150
+   },
+   {
+    "sig": "checkIfEnableAbilitiesOnTakePickup(GameObject currentPlayer)",
+    "line": 159
+   },
+   {
+    "sig": "checkIfActivateAbilitiesOnTakePickup(GameObject currentPlayer)",
+    "line": 166
+   },
+   {
+    "sig": "checkIfaddNewBlueprintsUnlockedList(GameObject currentPlayer)",
+    "line": 173
+   },
+   {
+    "sig": "setObjectTakenAsPickupMessage(string newMessage)",
+    "line": 180
+   },
+   {
+    "sig": "setObjectTakenAsInventoryMessage(string newMessage)",
+    "line": 185
+   },
+   {
+    "sig": "renameObject(string newName)",
+    "line": 190
+   }
+  ]
+ },
+ {
+  "type": "chestSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\PickUps\\chestSystem.cs",
+  "methods": [
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 106
+   },
+   {
+    "sig": "addNewObject(GameObject newObject)",
+    "line": 225
+   },
+   {
+    "sig": "setCurrentWaitToOpenChestValue(float newValue)",
+    "line": 266
+   },
+   {
+    "sig": "getRemainTimeToReopen()",
+    "line": 273
+   },
+   {
+    "sig": "checkEventToSendRemainTimeToRefillOnSaveState()",
+    "line": 288
+   },
+   {
+    "sig": "openOrCloseChest()",
+    "line": 293
+   },
+   {
+    "sig": "unlockChest()",
+    "line": 397
+   },
+   {
+    "sig": "setLockedState(bool state)",
+    "line": 402
+   },
+   {
+    "sig": "getManagerPickUpList()",
+    "line": 431
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 450
+   }
+  ]
+ },
+ {
+  "type": "dropPickUpSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\PickUps\\dropPickUpSystem.cs",
+  "methods": [
+   {
+    "sig": "setIgnoreCreateDropPickupObjectsActiveState(bool state)",
+    "line": 57
+   },
+   {
+    "sig": "createDropPickUpObjects()",
+    "line": 63
+   },
+   {
+    "sig": "setDropPickupsEnabledState(bool state)",
+    "line": 300
+   },
+   {
+    "sig": "getManagerPickUpList()",
+    "line": 306
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 327
+   },
+   {
+    "sig": "getOffset()",
+    "line": 334
+   },
+   {
+    "sig": "getMainInventoryManager()",
+    "line": 352
+   },
+   {
+    "sig": "setDropPickupsEnabledStateFromEditor(bool state)",
+    "line": 383
+   }
+  ]
+ },
+ {
+  "type": "explosiveBarrel",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\PickUps\\explosiveBarrel.cs",
+  "methods": [
+   {
+    "sig": "explodeBarrel()",
+    "line": 206
+   },
+   {
+    "sig": "canExplodeState(bool state)",
+    "line": 308
+   },
+   {
+    "sig": "setExplosiveBarrelOwner(GameObject newBarrelOwner)",
+    "line": 313
+   },
+   {
+    "sig": "getBarrelRigidbody()",
+    "line": 340
+   },
+   {
+    "sig": "setBarrelRigidbody(Rigidbody rigidbodyToUse)",
+    "line": 347
+   },
+   {
+    "sig": "waitToExplode()",
+    "line": 352
+   },
+   {
+    "sig": "setExplosionValues(float force, float radius)",
+    "line": 372
+   }
+  ]
+ },
+ {
+  "type": "crate",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\PickUps\\crate.cs",
+  "methods": [
+   {
+    "sig": "breakCrate()",
+    "line": 132
+   },
+   {
+    "sig": "crateCanBeBrokenState(bool state)",
+    "line": 212
+   },
+   {
+    "sig": "getCrateRigidbody()",
+    "line": 225
+   },
+   {
+    "sig": "setBarrelRigidbody(Rigidbody rigidbodyToUse)",
+    "line": 232
+   }
+  ]
+ },
+ {
+  "type": "weaponPickup",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\PickUps\\Pickups Behaviour\\weaponPickup.cs",
+  "methods": [
+   {
+    "sig": "setWeaponName(string newWeaponName)",
+    "line": 108
+   },
+   {
+    "sig": "getWeaponName()",
+    "line": 113
+   }
+  ]
+ },
+ {
+  "type": "weaponAttachmentPickup",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\PickUps\\Pickups Behaviour\\weaponAttachmentPickup.cs",
+  "methods": [
+   {
+    "sig": "setAttachmentName(string newName)",
+    "line": 53
+   }
+  ]
+ },
+ {
+  "type": "meleeWeaponPickup",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\PickUps\\Pickups Behaviour\\meleeWeaponPickup.cs",
+  "methods": [
+   {
+    "sig": "setMeleeWeaponName(string newWeaponName)",
+    "line": 71
+   }
+  ]
+ },
+ {
+  "type": "meleeWeaponConsumablePickup",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\PickUps\\Pickups Behaviour\\meleeWeaponConsumablePickup.cs",
+  "methods": [
+   {
+    "sig": "setWeaponConsumableName(string newWeaponConsumableName)",
+    "line": 71
+   }
+  ]
+ },
+ {
+  "type": "meleeShieldPickup",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\PickUps\\Pickups Behaviour\\meleeShieldPickup.cs",
+  "methods": [
+   {
+    "sig": "setMeleeShieldName(string newShieldName)",
+    "line": 88
+   }
+  ]
+ },
+ {
+  "type": "generalPickup",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\PickUps\\Pickups Behaviour\\generalPickup.cs",
+  "methods": [
+   {
+    "sig": "setConsumableName(string newConsumableName)",
+    "line": 93
+   }
+  ]
+ },
+ {
+  "type": "ammoPickup",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\PickUps\\Pickups Behaviour\\ammoPickup.cs",
+  "methods": [
+   {
+    "sig": "setAmmoName(string newAmmoName)",
+    "line": 156
+   }
+  ]
+ }
+]

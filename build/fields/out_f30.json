@@ -1,0 +1,80 @@
+[
+ {
+  "type": "vehicleBuilder",
+  "fields": {
+   "vehicleName": "ビルド時に車両名として各オブジェクトへ設定する文字列。",
+   "layerToPlaceVehicle": "配置位置を決めるレイキャストに使うレイヤー。",
+   "placeVehicleOffset": "配置位置を接地ポイントから上へ持ち上げる距離。",
+   "vehicle": "ビルド対象となる車両のルートオブジェクト。",
+   "vehicleCamera": "名前を設定する車両カメラのオブジェクト。",
+   "mainVehicleHUDManager": "車両名とパーツ情報を登録するHUD管理コンポーネント。",
+   "vehicleViewTransform": "エディタ視点を合わせる基準となるトランスフォーム。",
+   "buildVehicleExplanation": "ビルド手順の注意事項を表示する説明用テキスト。",
+   "showGizmo": "オンにすると車両パーツ位置に球ギズモを表示する。",
+   "showGizmoLabel": "オンにするとパーツ名ラベルをシーンビューに表示する。",
+   "gizmoLabelColor": "シーンビューに表示するラベルの文字色。",
+   "gizmoRadius": "パーツ位置に描く球ギズモの半径。",
+   "useHandle": "オンにするとパーツをシーンビューで移動・回転できる。"
+  }
+ },
+ {
+  "type": "vehicleCameraController",
+  "fields": {
+   "thirdPersonVerticalRotationSpeed": "三人称視点での上下方向のカメラ回転感度。",
+   "thirdPersonHorizontalRotationSpeed": "三人称視点での左右方向のカメラ回転感度。",
+   "firstPersonVerticalRotationSpeed": "一人称視点での上下方向のカメラ回転感度。",
+   "firstPersonHorizontalRotationSpeed": "一人称視点での左右方向のカメラ回転感度。",
+   "clipCastRadius": "カメラ衝突判定に使う球キャストの半径。",
+   "backClipSpeed": "遮蔽物から元の距離へ戻るときの補間速度。",
+   "maximumBoostDistance": "ブースト時にカメラを後方へ下げる最大距離。",
+   "cameraBoostSpeed": "ブースト時にカメラを前後へ動かす速さ。",
+   "cameraChangeEnabled": "オンにすると入力でカメラステートを切り替えられる。",
+   "smoothBetweenState": "ステート切替時のカメラ移動を補間する速さ。",
+   "layer": "カメラ衝突判定の球キャストに使うレイヤー。",
+   "smoothTransitionsInNewCameraFov": "オンにすると新しい画角への変更を滑らかに行う。",
+   "resetCameraRotationOnGetOff": "オンにすると降車時にカメラの回転を初期化する。",
+   "useSmoothCameraRotation": "オンにするとカメラの回転を補間して滑らかにする。",
+   "useSmoothCameraRotationThirdPerson": "三人称視点で回転の補間を個別に有効にする。",
+   "smoothCameraRotationSpeedVerticalThirdPerson": "三人称視点で上下回転を補間する速さ。",
+   "smoothCameraRotationSpeedHorizontalThirdPerson": "三人称視点で左右回転を補間する速さ。",
+   "useSmoothCameraRotationFirstPerson": "一人称視点で回転の補間を個別に有効にする。",
+   "smoothCameraRotationSpeedVerticalFirstPerson": "一人称視点で上下回転を補間する速さ。",
+   "smoothCameraRotationSpeedHorizontalFirstPerson": "一人称視点で左右回転を補間する速さ。",
+   "useSmoothCameraFollow": "オンにすると車両への追従位置を補間して滑らかにする。",
+   "smoothCameraFollowSpeed": "車両への追従位置を補間する速さ。",
+   "smoothCameraFollowMaxDistance": "追従速度を切り替える距離のしきい値。",
+   "smoothCameraFollowMaxDistanceSpeed": "しきい値超過時に追従速度へ掛ける倍率。",
+   "zoomEnabled": "オンにすると車両カメラのズーム入力を有効にする。",
+   "defaultStateName": "初期カメラステート名を保持する文字列。",
+   "currentStateName": "現在適用されているカメラステート名。",
+   "sendCurrentCameraTransformOnChangeState": "オンにするとステート変更時にカメラ位置をイベントで送る。",
+   "eventToSendCurrentCameraTransformOnChangeState": "ステート変更時に現在の`Transform`を通知するイベント。",
+   "useDamageShake": "オンにすると被ダメージ時にカメラの揺れを発生させる。",
+   "useDamageShakeInThirdPerson": "三人称視点で被ダメージ時の揺れを有効にする。",
+   "useDamageShakeInFirstPerson": "一人称視点で被ダメージ時の揺れを有効にする。",
+   "vehicle": "このカメラが追従する車両のオブジェクト。",
+   "vehicleTransformToFollow": "カメラが位置を追従する車両側のトランスフォーム。",
+   "IKDrivingManager": "搭乗時の一人称状態を設定する運転システム。",
+   "weaponManager": "現在のカメラ情報を受け取る車両武器システム。",
+   "hudManager": "カメラ方向の基準を受け取る車両HUD管理。",
+   "actionManager": "マウス軸とポーズ状態を取得する入力管理。",
+   "gravityControl": "カメラのピボットを渡す車両重力制御。",
+   "mainRigidbody": "車両速度の算出に使う`Rigidbody`。",
+   "shakingManager": "揺れの開始と停止を指示するカメラシェイク管理。",
+   "showGizmo": "オンにすると各カメラステートのギズモを描画する。",
+   "gizmoRadius": "ピボットとカメラ位置に描く球の半径。",
+   "labelGizmoColor": "シーンビューに出すステート名ラベルの文字色。",
+   "showCameraDirectionGizmo": "オンにするとカメラの向きを示す矢印を描画する。",
+   "gizmoArrowLength": "カメラ向き矢印の先端パーツの長さ。",
+   "gizmoArrowLineLength": "カメラ向き矢印の線分として描く長さ。",
+   "gizmoArrowAngle": "カメラ向き矢印の先端を開く角度。"
+  }
+ },
+ {
+  "type": "vehicleCameraShake",
+  "fields": {
+   "headBobEnabled": "オンにすると走行中の頭ぶれ揺れを有効にする。",
+   "externalForceStateName": "外部シェイクで使用する揺れステートの名前。"
+  }
+ }
+]

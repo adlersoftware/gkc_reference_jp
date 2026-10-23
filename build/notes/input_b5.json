@@ -1,0 +1,1230 @@
+[
+ {
+  "type": "playerComponentsManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\playerComponentsManager.cs",
+  "methods": [
+   {
+    "sig": "getPlayerExperienceSystem()",
+    "line": 225
+   },
+   {
+    "sig": "getCurrencySystem()",
+    "line": 230
+   },
+   {
+    "sig": "getVendorUISystem()",
+    "line": 235
+   },
+   {
+    "sig": "getPlayerHUDManager()",
+    "line": 240
+   },
+   {
+    "sig": "getMapSystem()",
+    "line": 245
+   },
+   {
+    "sig": "getInventoryManager()",
+    "line": 250
+   },
+   {
+    "sig": "getPauseManager()",
+    "line": 255
+   },
+   {
+    "sig": "getGameInfoHudManager()",
+    "line": 260
+   },
+   {
+    "sig": "getPlayerInputManager()",
+    "line": 265
+   },
+   {
+    "sig": "getObjectiveLogSystem()",
+    "line": 270
+   },
+   {
+    "sig": "getPlayerTutorialSystem()",
+    "line": 275
+   },
+   {
+    "sig": "getPlayerScreenObjectivesSystem()",
+    "line": 280
+   },
+   {
+    "sig": "getStaminaSystem()",
+    "line": 285
+   },
+   {
+    "sig": "getPlayerLadderSystem()",
+    "line": 290
+   },
+   {
+    "sig": "getOxygenSystem()",
+    "line": 295
+   },
+   {
+    "sig": "getObjectiveStationUISystem()",
+    "line": 300
+   },
+   {
+    "sig": "getPlayerStatsSystem()",
+    "line": 305
+   },
+   {
+    "sig": "getPlayerSkillsSystem()",
+    "line": 310
+   },
+   {
+    "sig": "getPickUpsScreenInfo()",
+    "line": 315
+   },
+   {
+    "sig": "getSaveGameSystem()",
+    "line": 320
+   },
+   {
+    "sig": "getPlayerWeaponsManager()",
+    "line": 325
+   },
+   {
+    "sig": "getPlayerController()",
+    "line": 330
+   },
+   {
+    "sig": "getPlayerCamera()",
+    "line": 335
+   },
+   {
+    "sig": "getUsingDevicesSystem()",
+    "line": 340
+   },
+   {
+    "sig": "getFootStepManager()",
+    "line": 345
+   },
+   {
+    "sig": "getHeadTrack()",
+    "line": 350
+   },
+   {
+    "sig": "getOtherPowers()",
+    "line": 355
+   },
+   {
+    "sig": "getHeadBob()",
+    "line": 360
+   },
+   {
+    "sig": "getGravitySystem()",
+    "line": 365
+   },
+   {
+    "sig": "getGrabObjects()",
+    "line": 370
+   },
+   {
+    "sig": "getIKSystem()",
+    "line": 375
+   },
+   {
+    "sig": "getPlayerStatesManager()",
+    "line": 380
+   },
+   {
+    "sig": "getFriendListManager()",
+    "line": 385
+   },
+   {
+    "sig": "getHealth()",
+    "line": 390
+   },
+   {
+    "sig": "getJetpackSystem()",
+    "line": 395
+   },
+   {
+    "sig": "getCharacterFactionManager()",
+    "line": 400
+   },
+   {
+    "sig": "getHideCharacterFixedPlaceSystemPlayerManagement()",
+    "line": 405
+   },
+   {
+    "sig": "getExamineObjectSystemPlayerManagement()",
+    "line": 410
+   },
+   {
+    "sig": "getPuzzleSystemPlayerManagement()",
+    "line": 415
+   },
+   {
+    "sig": "getPadlockSystemPlayerManagement()",
+    "line": 420
+   },
+   {
+    "sig": "getOverrideElementControlSystem()",
+    "line": 425
+   },
+   {
+    "sig": "getPlayerInfoPanelOnScreenSystem()",
+    "line": 430
+   },
+   {
+    "sig": "getInventoryWeightManager()",
+    "line": 435
+   },
+   {
+    "sig": "getTravelStationUISystem()",
+    "line": 440
+   },
+   {
+    "sig": "getInventoryBankUISystem()",
+    "line": 445
+   },
+   {
+    "sig": "getRagdollActivator()",
+    "line": 450
+   },
+   {
+    "sig": "getPlayerActionSystem()",
+    "line": 455
+   },
+   {
+    "sig": "getPlayerAbilitiesSystem()",
+    "line": 460
+   },
+   {
+    "sig": "getRemoteEventSystem()",
+    "line": 465
+   },
+   {
+    "sig": "getGrapplingHookTargetsSystem()",
+    "line": 470
+   },
+   {
+    "sig": "getSetTransparentSurfaces()",
+    "line": 475
+   },
+   {
+    "sig": "getPlayerOptionsEditorSystem()",
+    "line": 480
+   },
+   {
+    "sig": "getWeaponsAttachmentUIManager()",
+    "line": 485
+   },
+   {
+    "sig": "getGrabbedObjectMeleeAttackSystem()",
+    "line": 490
+   },
+   {
+    "sig": "getDamageHitReactionSystem()",
+    "line": 495
+   },
+   {
+    "sig": "getFlySystem()",
+    "line": 500
+   },
+   {
+    "sig": "getCharacterPropertiesSystem()",
+    "line": 505
+   },
+   {
+    "sig": "getMeleeWeaponsGrabbedManager()",
+    "line": 510
+   },
+   {
+    "sig": "getRemotePlayerNavmeshOverride()",
+    "line": 515
+   },
+   {
+    "sig": "getClimbLedgeSystem()",
+    "line": 520
+   },
+   {
+    "sig": "getDamageInScreen()",
+    "line": 525
+   },
+   {
+    "sig": "getDamageScreenSystem()",
+    "line": 530
+   },
+   {
+    "sig": "getMainDialogSystem()",
+    "line": 535
+   },
+   {
+    "sig": "getProjectilesOnCharacterBodyManager()",
+    "line": 540
+   },
+   {
+    "sig": "getParagliderSystem()",
+    "line": 545
+   },
+   {
+    "sig": "getGKCConditionSystem()",
+    "line": 550
+   },
+   {
+    "sig": "getCameraCaptureSystem()",
+    "line": 555
+   },
+   {
+    "sig": "getWallRunningExternalControllerBehavior()",
+    "line": 560
+   },
+   {
+    "sig": "getSwimExternalControllerBehavior()",
+    "line": 565
+   },
+   {
+    "sig": "getSlideExternalControllerBehavior()",
+    "line": 570
+   },
+   {
+    "sig": "getCustomCharacterControllerManager()",
+    "line": 575
+   },
+   {
+    "sig": "getBodyMountPointsSystem()",
+    "line": 580
+   },
+   {
+    "sig": "getWallSlideJumpExteralControllerBehavior()",
+    "line": 585
+   },
+   {
+    "sig": "getBuildPlayer()",
+    "line": 590
+   },
+   {
+    "sig": "getInventoryCharacterCustomizationSystem()",
+    "line": 595
+   },
+   {
+    "sig": "getRailExternalControllerBehavior()",
+    "line": 600
+   },
+   {
+    "sig": "getWalkOnBalanceExternaControllerBehavior()",
+    "line": 605
+   },
+   {
+    "sig": "getClimbRopeExternaControllerBehavior()",
+    "line": 610
+   },
+   {
+    "sig": "getPlayerNavMeshSystem()",
+    "line": 615
+   },
+   {
+    "sig": "getObjectToAttractWithGrapplingHook()",
+    "line": 620
+   },
+   {
+    "sig": "getOverrideInputManager()",
+    "line": 625
+   },
+   {
+    "sig": "getGravityWallRunSystem()",
+    "line": 630
+   },
+   {
+    "sig": "getFreeClimbExternalControllerBehavior()",
+    "line": 635
+   },
+   {
+    "sig": "getCloseCombatSystem()",
+    "line": 640
+   },
+   {
+    "sig": "getCraftingUISystem()",
+    "line": 645
+   },
+   {
+    "sig": "getCraftingSystem()",
+    "line": 650
+   },
+   {
+    "sig": "getObjectsStatsSystem()",
+    "line": 655
+   },
+   {
+    "sig": "getFindObjectivesSystem()",
+    "line": 660
+   },
+   {
+    "sig": "getSwitchCompanionSystem()",
+    "line": 665
+   },
+   {
+    "sig": "getCharacterToReceiveOrders()",
+    "line": 670
+   },
+   {
+    "sig": "getAIPatrolSystem()",
+    "line": 675
+   },
+   {
+    "sig": "getAIAroundManager()",
+    "line": 680
+   },
+   {
+    "sig": "getTurnBasedCombatTeamInfo()",
+    "line": 685
+   },
+   {
+    "sig": "getTurnBasedCombatActionsSystem()",
+    "line": 690
+   },
+   {
+    "sig": "getMatchPlayerToTargetSystem()",
+    "line": 695
+   },
+   {
+    "sig": "getVehiclePassengerUnderwater()",
+    "line": 700
+   },
+   {
+    "sig": "getCharacterModelListManager()",
+    "line": 705
+   }
+  ]
+ },
+ {
+  "type": "ragdollActivator",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\ragdollActivator.cs",
+  "methods": [
+   {
+    "sig": "setAdjustPositionToGroundSmoothlyActiveState(bool state)",
+    "line": 631
+   },
+   {
+    "sig": "deathDirection(Vector3 dir)",
+    "line": 780
+   },
+   {
+    "sig": "die(Vector3 pos)",
+    "line": 786
+   },
+   {
+    "sig": "setUseDeathSoundState(bool state)",
+    "line": 927
+   },
+   {
+    "sig": "checkLastCheckpoint()",
+    "line": 932
+   },
+   {
+    "sig": "setForceQuickGetUpOnCharacterState(bool state)",
+    "line": 958
+   },
+   {
+    "sig": "setActivateQuickGetUpInsteadOfRegularGetUpState(bool state)",
+    "line": 963
+   },
+   {
+    "sig": "setcheckToGetUpState()",
+    "line": 968
+   },
+   {
+    "sig": "getUp()",
+    "line": 1013
+   },
+   {
+    "sig": "quickGetUp()",
+    "line": 1107
+   },
+   {
+    "sig": "enableComponentsFromGettingUp(bool isFirstPersonActive)",
+    "line": 1216
+   },
+   {
+    "sig": "reactiveMainCollider()",
+    "line": 1269
+   },
+   {
+    "sig": "damageToFall()",
+    "line": 1277
+   },
+   {
+    "sig": "dropOrPickCamera(bool state)",
+    "line": 1339
+   },
+   {
+    "sig": "enableOrDisableRagdoll(bool value)",
+    "line": 1390
+   },
+   {
+    "sig": "setTransitionToRagdoll()",
+    "line": 1434
+   },
+   {
+    "sig": "setTransitionToAnimation()",
+    "line": 1500
+   },
+   {
+    "sig": "setOverrideNotUseGraviytOnRagdollActiveState(bool state)",
+    "line": 1567
+   },
+   {
+    "sig": "setOverrideUseGraviytOnRagdollActiveState(bool state)",
+    "line": 1572
+   },
+   {
+    "sig": "enableOrDisableRagdollTriggerState(bool state, string newLayer)",
+    "line": 1721
+   },
+   {
+    "sig": "enableRagdollTriggerState(string newLayer)",
+    "line": 1768
+   },
+   {
+    "sig": "disableRagdollTriggerStateIfActive()",
+    "line": 1772
+   },
+   {
+    "sig": "enableOrDisableRagdollPhysics(bool state)",
+    "line": 1779
+   },
+   {
+    "sig": "enableOrDisableRagdollGravityState(bool state)",
+    "line": 1784
+   },
+   {
+    "sig": "setVelocityToRagdollInDirection(Vector3 forceDirection)",
+    "line": 1805
+   },
+   {
+    "sig": "setApplyForceOnRagdollActiveState(bool state)",
+    "line": 1826
+   },
+   {
+    "sig": "getBodyColliderList()",
+    "line": 1831
+   },
+   {
+    "sig": "ignoreCollisionWithBodyColliderList(List<Collider> colliderList)",
+    "line": 1840
+   },
+   {
+    "sig": "setBodyColliderList()",
+    "line": 1857
+   },
+   {
+    "sig": "setBodyRigidbodyList()",
+    "line": 1866
+   },
+   {
+    "sig": "setBodyParts()",
+    "line": 1875
+   },
+   {
+    "sig": "getBodyRigidbodyList()",
+    "line": 1890
+   },
+   {
+    "sig": "setModelAndSkeletonParentInsideCharacter()",
+    "line": 1963
+   },
+   {
+    "sig": "setCharacterBodyParentOut()",
+    "line": 1974
+   },
+   {
+    "sig": "setCharacterBody(GameObject newCharacterBody, Animator currentAnimator)",
+    "line": 1979
+   },
+   {
+    "sig": "setCharacterBodyActiveState(bool state)",
+    "line": 2008
+   },
+   {
+    "sig": "setCustomForceOnMainHipsRigidbody(Vector3 forceDirection)",
+    "line": 2020
+   },
+   {
+    "sig": "resetLastTimeMoved()",
+    "line": 2027
+   },
+   {
+    "sig": "getBodyPartsList()",
+    "line": 2046
+   },
+   {
+    "sig": "getBodyPartsTransformList()",
+    "line": 2055
+   },
+   {
+    "sig": "pushCharacter(Vector3 direction)",
+    "line": 2068
+   },
+   {
+    "sig": "setForceRegularLayerState(bool state)",
+    "line": 2078
+   },
+   {
+    "sig": "pushCharacterWithoutForce()",
+    "line": 2085
+   },
+   {
+    "sig": "pushCharacterWithoutForceAfterDeath()",
+    "line": 2094
+   },
+   {
+    "sig": "pushCharacterWithoutForceXAmountOfTime(float newValue)",
+    "line": 2103
+   },
+   {
+    "sig": "pushFullCharacterCheckingIfCharaterBusy()",
+    "line": 2111
+   },
+   {
+    "sig": "pushFullCharacter(Vector3 direction)",
+    "line": 2122
+   },
+   {
+    "sig": "pushFullCharacterXAmountOfTime(float newValue, Vector3 direction)",
+    "line": 2129
+   },
+   {
+    "sig": "pushHipsRigidobdy(Vector3 direction)",
+    "line": 2137
+   },
+   {
+    "sig": "pushCharacterOnLastVelocity(float speedMultiplier)",
+    "line": 2144
+   },
+   {
+    "sig": "getRootMotion()",
+    "line": 2149
+   },
+   {
+    "sig": "getHipsRigidbody()",
+    "line": 2154
+   },
+   {
+    "sig": "sedateCharacter(float sedateDelay, bool sedateUntilReceiveDamage, float sedateDuration)",
+    "line": 2159
+   },
+   {
+    "sig": "stopSedateStateCoroutine()",
+    "line": 2184
+   },
+   {
+    "sig": "setImpactReceivedInfo(Vector3 impactVelocity, Collider impactCollider)",
+    "line": 2195
+   },
+   {
+    "sig": "checkDrawWeaponsWhenResurrect()",
+    "line": 2225
+   },
+   {
+    "sig": "setCheckGetUpPausedState(bool state)",
+    "line": 2233
+   },
+   {
+    "sig": "disabledCheckGetUpPaused()",
+    "line": 2242
+   },
+   {
+    "sig": "setIgnoreIfRagdollOnGroundToShowDeathMenuState(bool state)",
+    "line": 2247
+   },
+   {
+    "sig": "setIgnoreIfRagdollOnGroundToShowDeathMenuOnNextDeathState(bool state)",
+    "line": 2254
+   },
+   {
+    "sig": "setUsedByAIState(bool state)",
+    "line": 2262
+   },
+   {
+    "sig": "setDeathWithRagdollActiveState(bool state)",
+    "line": 2267
+   },
+   {
+    "sig": "setDeathAnimationID(int newValue)",
+    "line": 2276
+   },
+   {
+    "sig": "isRagdollActive()",
+    "line": 2281
+   },
+   {
+    "sig": "checkIfDisableRagdollActivatorComponent()",
+    "line": 2286
+   },
+   {
+    "sig": "setRagdollOnExternalParent(Transform newParent)",
+    "line": 2293
+   },
+   {
+    "sig": "setPauseAnimatorStatesToGetUpState(bool state)",
+    "line": 2298
+   },
+   {
+    "sig": "setExtraForceOnRagdollValue(float newValue)",
+    "line": 2303
+   },
+   {
+    "sig": "setStateToGetUpOnAirActive(bool state)",
+    "line": 2308
+   },
+   {
+    "sig": "addNewExtraRagdollInfo(GameObject newCharacterBody, string ragdollName, List<Transform> bonesList, List<Rigidbody> rigidbodyList, List<Collider> colliderList, Transform hipsTransform, float rotationYOffsetValue, bool addingRagdollOnEditorTime)",
+    "line": 2313
+   },
+   {
+    "sig": "setCurrentRagdollInfo(string ragdollName)",
+    "line": 2372
+   },
+   {
+    "sig": "setUseDeathSoundStateFromEditor(bool state)",
+    "line": 2423
+   },
+   {
+    "sig": "setDeathWithRagdollActiveStateFromEditor(bool state)",
+    "line": 2430
+   }
+  ]
+ },
+ {
+  "type": "usingDevicesSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\usingDevicesSystem.cs",
+  "methods": [
+   {
+    "sig": "removeSecondaryDeviceInfo()",
+    "line": 537
+   },
+   {
+    "sig": "enableOrDisableIconButton(bool state)",
+    "line": 544
+   },
+   {
+    "sig": "setUseMinDistanceToUseDevicesState(bool state)",
+    "line": 551
+   },
+   {
+    "sig": "getclosestDevice(bool activeDevicesIcons, bool checkForCameraDistance)",
+    "line": 559
+   },
+   {
+    "sig": "setCurrentDeviceStringManagerInfo(deviceInfo deviceToUseInfo)",
+    "line": 888
+   },
+   {
+    "sig": "checkIfSetNewShaderToDeviceFound(GameObject objectToCheck)",
+    "line": 977
+   },
+   {
+    "sig": "checkIfSetOriginalShaderToPreviousDeviceFound(GameObject objectToCheck)",
+    "line": 992
+   },
+   {
+    "sig": "isCurrentDeviceToUseFound(GameObject objectToCheck)",
+    "line": 1009
+   },
+   {
+    "sig": "setInteractionButtonName()",
+    "line": 1018
+   },
+   {
+    "sig": "checkTriggerInfo(Collider col, bool isEnter)",
+    "line": 1091
+   },
+   {
+    "sig": "addDeviceToListIfNotAlreadyIncluded(GameObject deviceToAdd)",
+    "line": 1187
+   },
+   {
+    "sig": "addDeviceToList(GameObject deviceToAdd)",
+    "line": 1194
+   },
+   {
+    "sig": "setIgnoreIfPlayerMenuActiveState(bool state)",
+    "line": 1279
+   },
+   {
+    "sig": "setIgnoreIfUsingDeviceActiveState(bool state)",
+    "line": 1284
+   },
+   {
+    "sig": "useDevice()",
+    "line": 1290
+   },
+   {
+    "sig": "useCurrentDevice(GameObject currentObjectToUse)",
+    "line": 1501
+   },
+   {
+    "sig": "setObjectToRemoveAferStopUse(GameObject objectToRemove)",
+    "line": 1510
+   },
+   {
+    "sig": "checkIfRemoveDeviceFromList()",
+    "line": 1515
+   },
+   {
+    "sig": "takePickupsAround()",
+    "line": 1529
+   },
+   {
+    "sig": "updateClosestDeviceList()",
+    "line": 1574
+   },
+   {
+    "sig": "enableOrDisableTouchButton(bool state)",
+    "line": 1579
+   },
+   {
+    "sig": "disableIcon()",
+    "line": 1593
+   },
+   {
+    "sig": "setIconButtonCanBeShownState(bool state)",
+    "line": 1604
+   },
+   {
+    "sig": "setIconButtonState(bool state)",
+    "line": 1619
+   },
+   {
+    "sig": "getCurrentIconButtonState()",
+    "line": 1646
+   },
+   {
+    "sig": "removeVehicleFromList()",
+    "line": 1651
+   },
+   {
+    "sig": "setDrivingState(bool state)",
+    "line": 1658
+   },
+   {
+    "sig": "setCurrentVehicle(GameObject vehicle)",
+    "line": 1666
+   },
+   {
+    "sig": "removeCurrentVehicle(GameObject vehicle)",
+    "line": 1671
+   },
+   {
+    "sig": "clearDeviceList()",
+    "line": 1687
+   },
+   {
+    "sig": "clearDeviceListButOne(GameObject objectToKeep)",
+    "line": 1704
+   },
+   {
+    "sig": "checkDeviceName()",
+    "line": 1736
+   },
+   {
+    "sig": "reloadDeviceStringActionOnPlayer(GameObject objectToCheck)",
+    "line": 1777
+   },
+   {
+    "sig": "existInDeviceList(GameObject objecToCheck)",
+    "line": 1784
+   },
+   {
+    "sig": "removeDeviceFromList(GameObject objectToRemove)",
+    "line": 1795
+   },
+   {
+    "sig": "removeDeviceFromListExternalCall(GameObject objectToRemove)",
+    "line": 1828
+   },
+   {
+    "sig": "removeDeviceFromListUsingParent(GameObject objectToRemove)",
+    "line": 1844
+   },
+   {
+    "sig": "isInTagsForDevicesList(GameObject objectToCheck)",
+    "line": 1853
+   },
+   {
+    "sig": "setExamineteDevicesCameraState(bool state, bool useBlurUIPanel)",
+    "line": 1862
+   },
+   {
+    "sig": "getExaminateDevicesCamera()",
+    "line": 1873
+   },
+   {
+    "sig": "isExaminingObject()",
+    "line": 1878
+   },
+   {
+    "sig": "anyDeviceDetected()",
+    "line": 1883
+   },
+   {
+    "sig": "getExamineObjectRenderTexturePanel()",
+    "line": 1888
+   },
+   {
+    "sig": "getExamineObjectBlurPanelParent()",
+    "line": 1893
+   },
+   {
+    "sig": "setKeyText(bool state)",
+    "line": 1898
+   },
+   {
+    "sig": "setActionAndNameText(string newActionText, string newObjectNameText)",
+    "line": 2019
+   },
+   {
+    "sig": "setExtraActionInfo(Texture newIcon, string newDescription)",
+    "line": 2079
+   },
+   {
+    "sig": "updateUIInfo()",
+    "line": 2156
+   },
+   {
+    "sig": "checkShowObjectMessage(string message, float waitTime)",
+    "line": 2161
+   },
+   {
+    "sig": "stopShowObjectMessage()",
+    "line": 2191
+   },
+   {
+    "sig": "getCurrentDeviceActionText()",
+    "line": 2202
+   },
+   {
+    "sig": "hasDeviceToUse()",
+    "line": 2207
+   },
+   {
+    "sig": "setUseDeviceButtonEnabledState(bool state)",
+    "line": 2212
+   },
+   {
+    "sig": "setUseDeviceButtonEnabledStateByCounter(bool state)",
+    "line": 2221
+   },
+   {
+    "sig": "setPauseUseDeviceButtonForDurationState(float pauseDuration)",
+    "line": 2240
+   },
+   {
+    "sig": "stopSetPauseUseDeviceButtonForDurationState()",
+    "line": 2247
+   },
+   {
+    "sig": "checkIfPickObjectsAround()",
+    "line": 2265
+   },
+   {
+    "sig": "checkIfStopUseDeviceIfDrivingVehicle()",
+    "line": 2284
+   },
+   {
+    "sig": "checkIfStopUseDevice()",
+    "line": 2293
+   },
+   {
+    "sig": "stopHoldInteractionButtonCoroutine()",
+    "line": 2372
+   },
+   {
+    "sig": "setPauseVehicleGetOffInputState(bool state)",
+    "line": 2389
+   },
+   {
+    "sig": "ispauseVehicleGetOffInputActive()",
+    "line": 2394
+   },
+   {
+    "sig": "inputActivateDeviceByInteractionNameText(Text interactionNameText)",
+    "line": 2400
+   },
+   {
+    "sig": "inputActivateDeviceByName(string interactionName)",
+    "line": 2453
+   },
+   {
+    "sig": "inputActivateDevice()",
+    "line": 2466
+   },
+   {
+    "sig": "inputHoldToPickObjectsAround()",
+    "line": 2497
+   },
+   {
+    "sig": "inputReleaseToPickObjectsAround()",
+    "line": 2508
+   },
+   {
+    "sig": "setUsedByAIState(bool state)",
+    "line": 2543
+   },
+   {
+    "sig": "setCanUseDevicesState(bool state)",
+    "line": 2548
+   },
+   {
+    "sig": "setUseDeviceFoundShaderState(bool state)",
+    "line": 2553
+   },
+   {
+    "sig": "setUseDeviceFoundShaderStateFromEditor(bool state)",
+    "line": 2558
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 2565
+   }
+  ]
+ },
+ {
+  "type": "IKSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Animator IK\\IKSystem.cs",
+  "methods": [
+   {
+    "sig": "isFullBodyAwarenessActive()",
+    "line": 930
+   },
+   {
+    "sig": "setFullBodyAwarenessActiveState(bool state)",
+    "line": 935
+   },
+   {
+    "sig": "setHeadLookState(bool state, float newHeadLookSpeed, Transform newHeadLookTarget)",
+    "line": 940
+   },
+   {
+    "sig": "getUsingHands()",
+    "line": 956
+   },
+   {
+    "sig": "isObjectGrabbed()",
+    "line": 961
+   },
+   {
+    "sig": "getHeadWeight()",
+    "line": 966
+   },
+   {
+    "sig": "isUsingWeapons()",
+    "line": 971
+   },
+   {
+    "sig": "changeArmState(float value)",
+    "line": 977
+   },
+   {
+    "sig": "disableArmsState()",
+    "line": 992
+   },
+   {
+    "sig": "changeArmSide(bool value)",
+    "line": 1000
+   },
+   {
+    "sig": "setDrivingState(bool state, IKDrivingSystem.IKDrivingInformation IKPositions)",
+    "line": 1026
+   },
+   {
+    "sig": "checkIfDeactivateIKIfNotAimingActive(IKWeaponInfo IKPositions)",
+    "line": 1057
+   },
+   {
+    "sig": "setIKWeaponState(bool state, IKWeaponInfo IKPositions, bool useHandToDrawWeapon, string weaponName)",
+    "line": 1086
+   },
+   {
+    "sig": "checkGrabbingHandsState(bool drawingWeapon, bool useGrabbingHandID, int grabbingHandID, bool isRightHand)",
+    "line": 1333
+   },
+   {
+    "sig": "setGrabbingHandState(int grabbingHandID, bool isRightHand)",
+    "line": 1346
+   },
+   {
+    "sig": "checkHandsInPosition(bool drawingWeapon)",
+    "line": 1363
+   },
+   {
+    "sig": "setGrabbingHandStateOnSingleHand(bool carryingWeapon, bool isRightHand, bool handInPosition)",
+    "line": 1420
+   },
+   {
+    "sig": "stopIKWeaponsActions()",
+    "line": 1453
+   },
+   {
+    "sig": "quickDrawWeaponState(IKWeaponInfo IKPositions)",
+    "line": 1484
+   },
+   {
+    "sig": "quickDrawWeaponStateDualWeapon(IKWeaponInfo IKPositions, bool isRigthWeapon)",
+    "line": 1565
+   },
+   {
+    "sig": "resetWeaponHandIKWeight()",
+    "line": 1611
+   },
+   {
+    "sig": "stopIKWeaponHandMovementCoroutine(IKWeaponsPosition IKWeaponPositionToCheck)",
+    "line": 1620
+   },
+   {
+    "sig": "quickKeepWeaponState()",
+    "line": 1627
+   },
+   {
+    "sig": "setDisableWeaponsState(bool state)",
+    "line": 1632
+   },
+   {
+    "sig": "setDisableSingleWeaponState(bool state)",
+    "line": 1639
+   },
+   {
+    "sig": "setDisableDualWeaponsState(bool state)",
+    "line": 1644
+   },
+   {
+    "sig": "disableIKWeight()",
+    "line": 1649
+   },
+   {
+    "sig": "setUsingWeaponsState(bool state)",
+    "line": 1655
+   },
+   {
+    "sig": "setUsingDualWeaponState(bool state)",
+    "line": 1660
+   },
+   {
+    "sig": "disableUsingDualWeaponState()",
+    "line": 1669
+   },
+   {
+    "sig": "setIKWeaponsRightHandSettings(IKWeaponInfo IKPositions)",
+    "line": 1676
+   },
+   {
+    "sig": "setIKWeaponsLeftHandSettings(IKWeaponInfo IKPositions)",
+    "line": 1681
+   },
+   {
+    "sig": "startRecoil(float recoilSpeed, float recoilAmount)",
+    "line": 1686
+   },
+   {
+    "sig": "setElbowsIKTargetValue(float leftValue, float rightValue)",
+    "line": 1722
+   },
+   {
+    "sig": "setIKHandTargetValue(IKWeaponsPosition IKWeaponPositionToCheck, float newTargetValue)",
+    "line": 1737
+   },
+   {
+    "sig": "ziplineState(bool state, zipline.IKZiplineInfo IKPositions)",
+    "line": 1744
+   },
+   {
+    "sig": "setGrabedObjectState(bool state, bool IKSystemEnabledToGrabState, List<grabObjects.handInfo> handInfo)",
+    "line": 1757
+   },
+   {
+    "sig": "setIKBodyInfoListOriginalPosition()",
+    "line": 1781
+   },
+   {
+    "sig": "setIKBodyPausedState(bool state)",
+    "line": 1794
+   },
+   {
+    "sig": "isIKBodyPaused()",
+    "line": 1799
+   },
+   {
+    "sig": "setIKBodyState(bool state, string IKBodyStateName)",
+    "line": 1804
+   },
+   {
+    "sig": "resetBodyRotation()",
+    "line": 1870
+   },
+   {
+    "sig": "getIKBodyCOM()",
+    "line": 1896
+   },
+   {
+    "sig": "getRightHandMountPoint()",
+    "line": 1901
+   },
+   {
+    "sig": "getLeftHandMountPoint()",
+    "line": 1906
+   },
+   {
+    "sig": "getRightLowerArmMountPoint()",
+    "line": 1911
+   },
+   {
+    "sig": "getLeftLowerArmMountPoint()",
+    "line": 1916
+   },
+   {
+    "sig": "setCurrentAimModeType(string newAimModeTypeName)",
+    "line": 1921
+   },
+   {
+    "sig": "stopAllMovementCoroutines()",
+    "line": 1932
+   },
+   {
+    "sig": "enableOrDisableIKSystemManagerState(bool state)",
+    "line": 1951
+   },
+   {
+    "sig": "disableAllIKStates()",
+    "line": 1962
+   },
+   {
+    "sig": "setTemporalOnAnimatorIKComponentActive(OnAnimatorIKComponent newTemporalOnAnimatorIKComponent)",
+    "line": 2001
+   },
+   {
+    "sig": "setTemporalOnAnimatorIKComponentDeactivate(OnAnimatorIKComponent newTemporalOnAnimatorIKComponent)",
+    "line": 2006
+   },
+   {
+    "sig": "setTemporalOnAnimatorIKComponentActiveIfNotInUse(OnAnimatorIKComponent newTemporalOnAnimatorIKComponent)",
+    "line": 2011
+   },
+   {
+    "sig": "removeThisTemporalOnAnimatorIKComponentIfIsCurrent(OnAnimatorIKComponent newTemporalOnAnimatorIKComponent)",
+    "line": 2018
+   },
+   {
+    "sig": "setTemporalOnAnimatorIKComponent(OnAnimatorIKComponent newTemporalOnAnimatorIKComponent, bool state)",
+    "line": 2025
+   },
+   {
+    "sig": "checkIfTemporalOnAnimatorIKComponentIfIsCurrent(OnAnimatorIKComponent newTemporalOnAnimatorIKComponent)",
+    "line": 2036
+   },
+   {
+    "sig": "setIsThirdPersonViewState(bool state)",
+    "line": 2041
+   },
+   {
+    "sig": "setFireWeaponsHeadWeight(float newValue)",
+    "line": 2046
+   }
+  ]
+ }
+]

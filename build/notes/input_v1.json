@@ -1,0 +1,396 @@
+[
+ {
+  "type": "vehicleHUDManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\vehicleHUDManager.cs",
+  "methods": [
+   {
+    "sig": "setUnlockCursorState(bool state)",
+    "line": 517
+   },
+   {
+    "sig": "disableUnlockedCursor()",
+    "line": 528
+   },
+   {
+    "sig": "setVehicleInteractionTriggerState(bool state)",
+    "line": 541
+   },
+   {
+    "sig": "isInteractionDisabledOnVehicle()",
+    "line": 552
+   },
+   {
+    "sig": "setIgnoreCanUseSelfDestructActiveState(bool state)",
+    "line": 557
+   },
+   {
+    "sig": "setIgnoreCanEjectFromVehicleActiveState(bool state)",
+    "line": 562
+   },
+   {
+    "sig": "activateSelfDestructionOnVehicleExternally(float newSelfDestructDelayTime)",
+    "line": 567
+   },
+   {
+    "sig": "activateSelfDestruction()",
+    "line": 582
+   },
+   {
+    "sig": "callEventOnGetOff()",
+    "line": 641
+   },
+   {
+    "sig": "callEventOnGetOn()",
+    "line": 650
+   },
+   {
+    "sig": "callEventOnDestroyed()",
+    "line": 659
+   },
+   {
+    "sig": "ejectFromVehicle()",
+    "line": 668
+   },
+   {
+    "sig": "ejectFromVehicleWithFreeFloatingMode()",
+    "line": 699
+   },
+   {
+    "sig": "changeIgnorePassengerCollidersState(bool state)",
+    "line": 706
+   },
+   {
+    "sig": "ignoreCollisionWithVehicleColliderList(List<Collider> colliderList, bool state)",
+    "line": 724
+   },
+   {
+    "sig": "ignoreCollisionWithVehicleColliderList(Collider colliderToIgnore, bool state)",
+    "line": 737
+   },
+   {
+    "sig": "ignoreCollisionWithSolidVehicleColliderList(Collider colliderToIgnore, bool state)",
+    "line": 746
+   },
+   {
+    "sig": "checkIgnorPassengersCollidersState()",
+    "line": 755
+   },
+   {
+    "sig": "setVehiceColliderWithMeshListLayer(string newLayerName)",
+    "line": 775
+   },
+   {
+    "sig": "setVehiceColliderListLayer(string newLayerName)",
+    "line": 786
+   },
+   {
+    "sig": "setVehicleOriginalListLayer()",
+    "line": 797
+   },
+   {
+    "sig": "getVehicleCollider()",
+    "line": 806
+   },
+   {
+    "sig": "manualStartOrStopVehicle(bool state, GameObject passenger)",
+    "line": 821
+   },
+   {
+    "sig": "setCurrentPassenger(GameObject passenger)",
+    "line": 850
+   },
+   {
+    "sig": "activateDevice()",
+    "line": 860
+   },
+   {
+    "sig": "setIgnoreSettingPassengerStateActiveState(bool state)",
+    "line": 993
+   },
+   {
+    "sig": "setPassengerState(bool passengerOnDriverSeat)",
+    "line": 998
+   },
+   {
+    "sig": "activateAutoBrakeOnGetOff()",
+    "line": 1040
+   },
+   {
+    "sig": "updatePassengersInVehicleCheckState()",
+    "line": 1045
+   },
+   {
+    "sig": "activaAIVehicle()",
+    "line": 1054
+   },
+   {
+    "sig": "setUsedByAIState(bool state)",
+    "line": 1070
+   },
+   {
+    "sig": "setUsedByAIStateWithoutActivatingDrvingState(bool state)",
+    "line": 1089
+   },
+   {
+    "sig": "currentVehicleVelocity()",
+    "line": 1098
+   },
+   {
+    "sig": "addObjectToIgnoreCollision(GameObject newObject)",
+    "line": 1107
+   },
+   {
+    "sig": "removeObjectToIgnoreCollision(GameObject newObject)",
+    "line": 1122
+   },
+   {
+    "sig": "checkOnCollisionEnterExternally(Collision collision)",
+    "line": 1145
+   },
+   {
+    "sig": "setNewVehicleGravityForce(float newVehicleGravityForce)",
+    "line": 1308
+   },
+   {
+    "sig": "setOriginalGravityForce()",
+    "line": 1315
+   },
+   {
+    "sig": "setReducedVehicleSpeed(float newValue)",
+    "line": 1322
+   },
+   {
+    "sig": "launchCharacterOnVehicleCollision(Vector3 collisionDirection, float collisionVelocity)",
+    "line": 1329
+   },
+   {
+    "sig": "checkIfDetectSurfaceBelongToVehicle(Collider surfaceFound)",
+    "line": 1369
+   },
+   {
+    "sig": "getHealth(float amount)",
+    "line": 1379
+   },
+   {
+    "sig": "updateHealthSlider(float value)",
+    "line": 1406
+   },
+   {
+    "sig": "getEnergy(float amount)",
+    "line": 1414
+   },
+   {
+    "sig": "removeEnergy(float amount)",
+    "line": 1432
+   },
+   {
+    "sig": "updateEnergySlider(float value)",
+    "line": 1448
+   },
+   {
+    "sig": "getFuel(float amount)",
+    "line": 1455
+   },
+   {
+    "sig": "updateFuelSlider(float value)",
+    "line": 1470
+   },
+   {
+    "sig": "setGasTankState(bool state)",
+    "line": 1477
+   },
+   {
+    "sig": "refillFuelTank()",
+    "line": 1484
+   },
+   {
+    "sig": "refillFuelTankByInventoryObject()",
+    "line": 1495
+   },
+   {
+    "sig": "getAmmo(string ammoName, int amount)",
+    "line": 1514
+   },
+   {
+    "sig": "getSpeed(float speed, float maxSpeed)",
+    "line": 1522
+   },
+   {
+    "sig": "manageBarInfo(string sliderType, bool regenerate, bool constantRegenerate, float regenerateSpeed, float regenerateTime, float regenerateAmount, Slider bar, float barAmount, float maxAmount, float lastTime)",
+    "line": 1530
+   },
+   {
+    "sig": "useBoost(bool moving)",
+    "line": 1569
+   },
+   {
+    "sig": "setVehicleUseFuelState(bool state)",
+    "line": 1602
+   },
+   {
+    "sig": "setPauseVehicleUseFuelState(bool state)",
+    "line": 1607
+   },
+   {
+    "sig": "useFuel()",
+    "line": 1612
+   },
+   {
+    "sig": "removeFuel(float amount)",
+    "line": 1653
+   },
+   {
+    "sig": "setRemainFuel(float newAmount)",
+    "line": 1679
+   },
+   {
+    "sig": "activateEventToSendCurrentFuelAmount()",
+    "line": 1686
+   },
+   {
+    "sig": "activateEventToSendCurrentHealthAmount()",
+    "line": 1693
+   },
+   {
+    "sig": "activateEventToSendCurrentBoostAmount()",
+    "line": 1700
+   },
+   {
+    "sig": "setRemainHealth(float newAmount)",
+    "line": 1705
+   },
+   {
+    "sig": "setRemainBoost(float newAmount)",
+    "line": 1710
+   },
+   {
+    "sig": "setHealthInfo()",
+    "line": 1715
+   },
+   {
+    "sig": "setBoostInfo()",
+    "line": 1723
+   },
+   {
+    "sig": "setFuelInfo()",
+    "line": 1731
+   },
+   {
+    "sig": "setWeaponName(string name, int ammoPerClip, int clipSize)",
+    "line": 1740
+   },
+   {
+    "sig": "useAmmo(int clipSize, int remainAmmo)",
+    "line": 1752
+   },
+   {
+    "sig": "setDamage(float amount, Vector3 fromDirection, Vector3 damagePos, GameObject bulletOwner, GameObject projectile, bool damageConstant, bool searchClosestWeakSpot, bool damageCanBeBlocked)",
+    "line": 1767
+   },
+   {
+    "sig": "setDamageTargetOverTimeState(float damageOverTimeDelay, float damageOverTimeDuration, float damageOverTimeAmount, float damageOverTimeRate, bool damageOverTimeToDeath, int damageTypeID)",
+    "line": 1905
+   },
+   {
+    "sig": "stopDamageOverTime()",
+    "line": 1931
+   },
+   {
+    "sig": "setDamageOrHealthTargetWithDelay(float waitAmount, float valueAmount, int damageTypeID)",
+    "line": 1938
+   },
+   {
+    "sig": "stopDamageOrHealthTargetWithDelay()",
+    "line": 1958
+   },
+   {
+    "sig": "getClosesWeakSpotIndex(Vector3 collisionPosition)",
+    "line": 1965
+   },
+   {
+    "sig": "fixDestroyedVehicle()",
+    "line": 1996
+   },
+   {
+    "sig": "destroyVehicleWithoutExplodeOrSeparateParts()",
+    "line": 2015
+   },
+   {
+    "sig": "destroyVehicleWithoutExplodeOrSeparatePartsAndDisableInteraction()",
+    "line": 2032
+   },
+   {
+    "sig": "destroyVehicle(Vector3 damagePosition)",
+    "line": 2055
+   },
+   {
+    "sig": "destroyVehicleAtOnce()",
+    "line": 2240
+   },
+   {
+    "sig": "getHUDBars(playerHUDManager newVehicleHUDInfo, playerHUDManager.vehicleHUDElements hudElements, bool drivingState)",
+    "line": 2336
+   },
+   {
+    "sig": "getCurrentHUDElements()",
+    "line": 2448
+   },
+   {
+    "sig": "getCurrentVehicleHUDInfo()",
+    "line": 2453
+   },
+   {
+    "sig": "setWeaponState(bool state)",
+    "line": 2458
+   },
+   {
+    "sig": "showVehicleHUDActive()",
+    "line": 2480
+   },
+   {
+    "sig": "isDisablePlayerHUDEnabled()",
+    "line": 2485
+   },
+   {
+    "sig": "useJumpPlatform(Vector3 direction)",
+    "line": 2491
+   },
+   {
+    "sig": "useJumpPlatformParable(Vector3 direction)",
+    "line": 2498
+   },
+   {
+    "sig": "useJumpPlatformWithKeyButton(bool state, float newJumpPower)",
+    "line": 2505
+   },
+   {
+    "sig": "debugLaunchCharacterOnVehicleCollision()",
+    "line": 2527
+   },
+   {
+    "sig": "setVehicleParts()",
+    "line": 2549
+   },
+   {
+    "sig": "setVehicleDamageReceivers()",
+    "line": 2576
+   },
+   {
+    "sig": "updateVehicleDamageReceivers()",
+    "line": 2592
+   },
+   {
+    "sig": "setColliderList()",
+    "line": 2599
+   },
+   {
+    "sig": "setColliderWithoutMeshesPartsToIgnore(List<Transform> newList)",
+    "line": 2628
+   },
+   {
+    "sig": "setVehicleRendererParts()",
+    "line": 2647
+   }
+  ]
+ }
+]

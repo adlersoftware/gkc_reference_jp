@@ -1,0 +1,404 @@
+[
+ {
+  "type": "moveObject",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Demo\\moveObject.cs",
+  "methods": [
+   {
+    "sig": "enableMovement()",
+    "line": 60
+   },
+   {
+    "sig": "disableMovement()",
+    "line": 65
+   },
+   {
+    "sig": "setMovementEnabledState(bool state)",
+    "line": 70
+   },
+   {
+    "sig": "changeMovementEnabledState()",
+    "line": 75
+   }
+  ]
+ },
+ {
+  "type": "simpleTurretRobot",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Demo\\simpleTurretRobot.cs",
+  "methods": [
+   {
+    "sig": "pressButton()",
+    "line": 19
+   },
+   {
+    "sig": "stopAnimations()",
+    "line": 30
+   },
+   {
+    "sig": "activateWeapon()",
+    "line": 36
+   },
+   {
+    "sig": "deactivateWeapon()",
+    "line": 47
+   }
+  ]
+ },
+ {
+  "type": "checkCollisionToApplyDamage",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Demo\\checkCollisionToApplyDamage.cs",
+  "methods": [
+   {
+    "sig": "setDamageEnabledState(bool state)",
+    "line": 261
+   },
+   {
+    "sig": "disableDamage()",
+    "line": 266
+   },
+   {
+    "sig": "enableDamage()",
+    "line": 271
+   }
+  ]
+ },
+ {
+  "type": "damageCharacterOnCollision",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Demo\\damageCharacterOnCollision.cs",
+  "methods": [
+   {
+    "sig": "setDamageEnabledState(bool state)",
+    "line": 202
+   },
+   {
+    "sig": "disableDamage()",
+    "line": 207
+   },
+   {
+    "sig": "enableDamage()",
+    "line": 212
+   }
+  ]
+ },
+ {
+  "type": "setLaserRefractions",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Demo\\setLaserRefractions.cs",
+  "methods": [
+   {
+    "sig": "getSliderValue(Slider info)",
+    "line": 15
+   },
+   {
+    "sig": "setCurrentPlayer(GameObject newPlayer)",
+    "line": 24
+   }
+  ]
+ },
+ {
+  "type": "simpleObject",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Demo\\simpleObject.cs",
+  "methods": [
+   {
+    "sig": "activate()",
+    "line": 32
+   },
+   {
+    "sig": "changeState()",
+    "line": 37
+   }
+  ]
+ },
+ {
+  "type": "openStructure",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Demo\\openStructure.cs",
+  "methods": [
+   {
+    "sig": "changeStructureState()",
+    "line": 34
+   }
+  ]
+ },
+ {
+  "type": "setText",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Demo\\setText.cs",
+  "methods": [
+   {
+    "sig": "getmainMeshRendererComponent()",
+    "line": 39
+   }
+  ]
+ },
+ {
+  "type": "travelStationUISystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Level Manager\\travelStationUISystem.cs",
+  "methods": [
+   {
+    "sig": "initializeTravelStationValues()",
+    "line": 70
+   },
+   {
+    "sig": "checkEventOnSystemDisabled()",
+    "line": 79
+   },
+   {
+    "sig": "checkPressedButton(GameObject buttonToCheck)",
+    "line": 86
+   },
+   {
+    "sig": "confirmTravelToStationSelected()",
+    "line": 105
+   },
+   {
+    "sig": "setCurrentTravelStationSystem(travelStationSystem newTravelStationSystem, bool settingPhysicalStation)",
+    "line": 124
+   },
+   {
+    "sig": "openOrCloseTravelStationMenu(bool state)",
+    "line": 179
+   },
+   {
+    "sig": "setTravelStationInfoList()",
+    "line": 220
+   },
+   {
+    "sig": "openOrCloseTravelStationMenuFromTouch()",
+    "line": 259
+   },
+   {
+    "sig": "checkOpenOrCloseTravelStationMenuByButton()",
+    "line": 272
+   },
+   {
+    "sig": "oopenOrCloseTravelStationMenuByButton()",
+    "line": 281
+   },
+   {
+    "sig": "showTravelStationFound(string travelStationName)",
+    "line": 296
+   }
+  ]
+ },
+ {
+  "type": "levelManagerIngame",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Level Manager\\levelManagerIngame.cs",
+  "methods": [
+   {
+    "sig": "setCurrentPlayer(GameObject newPlayer)",
+    "line": 63
+   },
+   {
+    "sig": "setCurrentPlayerAndActivateChangeOfLevel(GameObject newPlayer)",
+    "line": 68
+   },
+   {
+    "sig": "activateChangeOfLevel()",
+    "line": 75
+   },
+   {
+    "sig": "setChangeSceneEnabledState(bool state)",
+    "line": 135
+   },
+   {
+    "sig": "openNextSceneOnEditor()",
+    "line": 140
+   }
+  ]
+ },
+ {
+  "type": "travelStationSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Level Manager\\travelStationSystem.cs",
+  "methods": [
+   {
+    "sig": "setCurrentPlayer(GameObject player)",
+    "line": 37
+   },
+   {
+    "sig": "activateTravelStation()",
+    "line": 51
+   },
+   {
+    "sig": "setUsingTravelStationSystemState(bool state)",
+    "line": 58
+   },
+   {
+    "sig": "getTravelStationInfoList()",
+    "line": 63
+   }
+  ]
+ },
+ {
+  "type": "GKC_PoolingElement",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Pooling System\\GKC_PoolingElement.cs",
+  "methods": [
+   {
+    "sig": "setPositionToSpawn(Vector3 newValue)",
+    "line": 41
+   },
+   {
+    "sig": "setRotationToSpawn(Quaternion newValue)",
+    "line": 46
+   },
+   {
+    "sig": "spawnPoolObject()",
+    "line": 51
+   },
+   {
+    "sig": "despawnPoolObject()",
+    "line": 62
+   },
+   {
+    "sig": "checkObjectStateBeforeDespawn()",
+    "line": 73
+   },
+   {
+    "sig": "checkObjectStateAfterSpawn()",
+    "line": 78
+   },
+   {
+    "sig": "checkEventOnSpawn()",
+    "line": 83
+   },
+   {
+    "sig": "checkEventOnDespawn()",
+    "line": 90
+   },
+   {
+    "sig": "setUsePoolingEnabledState(bool state)",
+    "line": 97
+   },
+   {
+    "sig": "checkEventsOnEnableOrDisablePoolingManagementOnObject(bool state)",
+    "line": 102
+   },
+   {
+    "sig": "setUsePoolingEnabledStateFromEditor(bool state)",
+    "line": 118
+   },
+   {
+    "sig": "checkEventsOnEnableOrDisablePoolingManagementOnObjectFromEditor(bool state)",
+    "line": 125
+   }
+  ]
+ },
+ {
+  "type": "GKC_PoolingAIManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Pooling System\\GKC_PoolingAIManager.cs",
+  "methods": [
+   {
+    "sig": "getAllGKC_PoolingElementAIOnLevel()",
+    "line": 18
+   },
+   {
+    "sig": "clearGKC_PoolingElementAIList()",
+    "line": 37
+   },
+   {
+    "sig": "enableAllGKC_PoolingElementAIOnLevel()",
+    "line": 44
+   },
+   {
+    "sig": "disableAllGKC_PoolingElementAIOnLevel()",
+    "line": 49
+   },
+   {
+    "sig": "enableOrDisableAllGKC_PoolingElementAIOnLevel(bool state)",
+    "line": 54
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 63
+   }
+  ]
+ },
+ {
+  "type": "GKC_SimplePoolPreloadSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Pooling System\\GKC_SimplePoolPreloadSystem.cs",
+  "methods": [
+   {
+    "sig": "preloadObjects()",
+    "line": 25
+   }
+  ]
+ },
+ {
+  "type": "GKCConditionInfo",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Condition System\\GKCConditionInfo.cs",
+  "methods": [
+   {
+    "sig": "findPlayerOnScene()",
+    "line": 61
+   },
+   {
+    "sig": "checkIfPlayerAssigned()",
+    "line": 68
+   },
+   {
+    "sig": "setCurrentPlayer(GameObject newPlayer)",
+    "line": 89
+   },
+   {
+    "sig": "checkIfConditionComplete()",
+    "line": 100
+   },
+   {
+    "sig": "checkIfConditionCompleteAndReturnResult()",
+    "line": 105
+   },
+   {
+    "sig": "setConditionResult(bool state)",
+    "line": 111
+   },
+   {
+    "sig": "checkTriggerInfo(Collider col, bool isEnter)",
+    "line": 148
+   },
+   {
+    "sig": "setCheckConditionPausedState(bool state)",
+    "line": 200
+   },
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 205
+   },
+   {
+    "sig": "checkFunctionOnTriggerExit()",
+    "line": 214
+   },
+   {
+    "sig": "checkConditionOnUpdateState()",
+    "line": 237
+   }
+  ]
+ },
+ {
+  "type": "GKCConditionSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Condition System\\GKCConditionSystem.cs",
+  "methods": [
+   {
+    "sig": "setCurrentGKCConditionInfo(GKCConditionInfo newGKCConditionInfo)",
+    "line": 18
+   },
+   {
+    "sig": "checkIfConditionComplete()",
+    "line": 27
+   },
+   {
+    "sig": "refreshConditionSystemCheckStatus()",
+    "line": 38
+   }
+  ]
+ },
+ {
+  "type": "simpleFireWeaponsConditionSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Condition System\\simpleFireWeaponsConditionSystem.cs",
+  "methods": [
+   {
+    "sig": "checkIfConditionComplete()",
+    "line": 47
+   },
+   {
+    "sig": "setConditionResult(bool state)",
+    "line": 127
+   }
+  ]
+ }
+]

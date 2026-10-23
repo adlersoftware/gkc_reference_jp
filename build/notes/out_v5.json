@@ -1,0 +1,145 @@
+[
+  {
+    "type": "carController",
+    "summary": "車輪コライダーと`Rigidbody`で走行する四輪車両のコントローラ。車体のリーン、ギアとエンジン音、スキッド痕、ブースト、乗降時の揺れ、転倒時の自動復帰を扱う。",
+    "methods": {
+      "vehicleBounceMovement(float horizontalLeanAmount, float verticalLeanAmount)": "乗降時に車体を水平・垂直方向へ指定量傾けるコルーチンを開始する（無効時は何もしない）。",
+      "rotateVehicle()": "進行中の回転を止め、`currentNormal`に合わせて車体を起こし速度をゼロにするコルーチンを開始する。",
+      "useVehicleJumpPlatform(Vector3 direction)": "`direction`に質量を掛けた力を`ForceMode.Impulse`で加え、ジャンプ台の跳ね上げを与える。",
+      "useJumpPlatformParable(Vector3 direction)": "`direction`を`ForceMode.VelocityChange`で加え、質量非依存の跳ね上げを与える。",
+      "setJumpPower(float newJumpPower)": "`jumpPower`を`newJumpPower`で直接上書きするだけ。",
+      "setNewJumpPower(float newJumpPower)": "`jumpPower`を`newJumpPower`×100に変換して設定するだけ。",
+      "setOriginalJumpPower()": "`jumpPower`を保存済みの`originalJumpPower`に戻すだけ。",
+      "setMaxSpeed(float maxSpeedValue)": "最高前進速度`maxForwardSpeed`を`maxSpeedValue`にするだけ。",
+      "setMaxAcceleration(float maxAccelerationValue)": "エンジントルク`settings.engineTorque`を`maxAccelerationValue`にするだけ。",
+      "setMaxBrakePower(float maxBrakePower)": "ブレーキ力`settings.brake`を`maxBrakePower`にするだけ。",
+      "setMaxTurboPower(float maxTurboPower)": "ブースト倍率`maxBoostMultiplier`を`maxTurboPower`にするだけ。",
+      "setCanJumpState(bool state)": "ジャンプ可否`canJump`を`state`にするだけ。",
+      "setRotateVehicleUpwardState(bool state)": "転倒時の自動復帰を行う`rotateVehicleUpward`を`state`にするだけ。",
+      "setPreserveDirectionWhileInAirState(bool state)": "空中で進行方向を保持する`preserveDirectionWhileInAir`を`state`にするだけ。",
+      "setPauseAutoRotationActiveState(bool state)": "自動復帰回転を止める`pauseAutoRotationActiveState`を`state`にするだけ。"
+    }
+  },
+  {
+    "type": "boatController",
+    "summary": "水面オブジェクトの浮力と帆・風の状態で進むボート用コントローラ。帆と風検知の切替イベント、船体密度の増減、ジャンプ台連携を持つ。",
+    "methods": {
+      "checkEventOnWindStateChange(bool state)": "`state`に応じて風検知の有効／無効イベントを発火するだけ。",
+      "checkEventOnSailStateChange(bool state)": "`state`に応じて帆の有効／無効イベントを発火するだけ。",
+      "useVehicleJumpPlatform(Vector3 direction)": "`direction`に質量を掛けた力を`ForceMode.Impulse`で加え、ジャンプ台の跳ね上げを与える。",
+      "useJumpPlatformParable(Vector3 direction)": "`direction`を`ForceMode.VelocityChange`で加え、質量非依存の跳ね上げを与える。",
+      "setNewJumpPower(float newJumpPower)": "`jumpPower`を`newJumpPower`×100に変換して設定するだけ。",
+      "setOriginalJumpPower()": "`jumpPower`を保存済みの`originalJumpPower`に戻すだけ。",
+      "setCanJumpState(bool state)": "ジャンプ可否`canJump`を`state`にするだけ。",
+      "setSailActiveState(bool state)": "`sailActive`を更新し、帆の有効／無効イベントを発火する。",
+      "setWindCheckState(bool state)": "`checkWindState`を更新し、風検知の有効／無効イベントを発火する。",
+      "inputToggleWindCheckState()": "運転中なら風検知の有効状態を反転させる。",
+      "inputToggleSailActive()": "運転中なら帆の展開状態を反転させる。",
+      "inputIncreaseDensity()": "運転中かつ密度変更が有効なら、水面オブジェクトの密度を上限まで`densityChangeAmount`ずつ増やす。",
+      "inputDecreaseDensity()": "運転中かつ密度変更が有効なら、水面オブジェクトの密度を下限まで`densityChangeAmount`ずつ減らす。"
+    }
+  },
+  {
+    "type": "motorBikeController",
+    "summary": "二輪車用コントローラ。低速時の車体リーンと足の接地調整、スタンドアニメーション、エンジン音、スキッド／排気パーティクルを扱う。",
+    "methods": {
+      "checkDriverFootPosition()": "低速判定が切り替わった時、進行方向の傾きから接地する足を選び、レイキャスト位置へ足とシャシー傾きを合わせる。",
+      "playStandAnimation(bool playForward)": "`useStandAnimation`が有効なら、スタンドアニメを順再生／逆再生して再生する。",
+      "stopVehicleParticles()": "全車輪のスキッド粒子と通常・強排気の粒子を停止する。",
+      "useVehicleJumpPlatform(Vector3 direction)": "`direction`に質量を掛けた力を`ForceMode.Impulse`で加えて跳ね上げる。",
+      "useJumpPlatformParable(Vector3 direction)": "`direction`を`ForceMode.VelocityChange`で加え、質量非依存の跳ね上げを与える。",
+      "setNewJumpPower(float newJumpPower)": "`jumpPower`を`newJumpPower`×100に変換して設定するだけ。",
+      "setOriginalJumpPower()": "`jumpPower`を保存済みの`originalJumpPower`に戻すだけ。",
+      "setChassisRotation(Vector3 rotationAmount)": "進行中の回転を止め、シャシーを`rotationAmount`の角度へ補間するコルーチンを開始する。",
+      "stopSetChassisRotationCoroutine()": "シャシー回転コルーチンがあれば停止するだけ（角度は戻さない）。",
+      "adjustFeetToGround(bool adjustToGround)": "足位置コルーチンを止め、接地位置（`adjustToGround`がfalseなら元の位置）へ足を補間移動する。",
+      "stopAdjustHoldOnLedgeCoroutine()": "足位置調整コルーチンがあれば停止するだけ。",
+      "setCanJumpState(bool state)": "ジャンプ可否`canJump`を`state`にするだけ。"
+    }
+  },
+  {
+    "type": "airCraftController",
+    "summary": "航空機用コントローラ。ピッチ・ヨー・ロール入力、離着陸ギアと翼のアニメーション、エンジン／風／離着陸音、トレイルの表示を扱う。",
+    "methods": {
+      "resetInputValues()": "ピッチ・ヨー・ロール入力と速度系の値をゼロにリセットする。",
+      "enableOrDisableTrailsState(bool state)": "全トレイルの`time`を`trailsTime`（無効時0）へ補間するコルーチンで、呼び出し側が実行する。",
+      "playAnimation(bool forward, GameObject obj, string name)": "`useAnimations`が有効なら、`obj`の`Animation`で`name`を順再生／逆再生する。",
+      "setTurnOnStateSound()": "エンジン音と風切り音をループ再生し、始動音を一度鳴らす。",
+      "setTurnOffStateSound(bool previouslyTurnedOn)": "`previouslyTurnedOn`がtrueなら、エンジン音と風切り音を止めて停止音を鳴らす。",
+      "inputSetRotateToLeftState(bool state)": "運転中ならロール方向を1（左）に設定し、3D移動でなければ0に戻す。",
+      "inputSetRotateToRightState(bool state)": "運転中ならロール方向を-1（右）に設定し、3D移動でなければ0に戻す。",
+      "inputLandOrTakeOff()": "運転中かつエンジン始動中なら、離陸／着陸処理`landingOrTakeOffAirCraft`を呼ぶ。"
+    }
+  },
+  {
+    "type": "sphereController",
+    "summary": "球体を転がす物理ベースのビークルコントローラ。接地・スナップ判定、ジャンプ、壁登り、水中判定、ブーストを扱う。",
+    "methods": {
+      "preventSnapToGround()": "`stepsSinceLastJump`を-1にし、数ステップの間スナップ・トゥ・グラウンドを抑止する。",
+      "useVehicleJumpPlatform(Vector3 direction)": "`direction`に質量を掛けた力を`ForceMode.Impulse`で加えて跳ね上げる。",
+      "useJumpPlatformParable(Vector3 direction)": "`direction`を`ForceMode.VelocityChange`で加え、質量非依存の跳ね上げを与える。",
+      "setNewJumpPower(float newJumpPower)": "`jumpPower`を`newJumpPower`×100に変換して設定するだけ。",
+      "setOriginalJumpPower()": "`jumpPower`を保存済みの`originalJumpPower`に戻すだけ。",
+      "inputSetClimbState(bool state)": "運転中かつクライム有効・非水泳なら登り状態を設定し、重力を一時停止する。",
+      "inputToggleClimbState()": "運転中なら現在の登り状態を反転させる。"
+    }
+  },
+  {
+    "type": "hoverCraftController",
+    "summary": "ホバーエンジンの推力で浮上するホバークラフト用コントローラ。浮上用レイキャスト、ジャンプ入力の保持、ブースト、パーティクルを扱う。",
+    "methods": {
+      "useVehicleJumpPlatform(Vector3 direction)": "`jumpInputPressed`を0.5秒立て、`direction`×質量のImpulseを与える。",
+      "useJumpPlatformParable(Vector3 direction)": "`direction`を`ForceMode.VelocityChange`で加え、質量非依存の跳ね上げを与える。",
+      "setNewJumpPower(float newJumpPower)": "`jumpPower`を`newJumpPower`×100に変換して設定するだけ。",
+      "setOriginalJumpPower()": "`jumpPower`を保存済みの`originalJumpPower`に戻すだけ。",
+      "setCanJumpState(bool state)": "ジャンプ可否`canJump`を`state`にするだけ。"
+    }
+  },
+  {
+    "type": "hoverBoardController",
+    "summary": "ホバーボード用コントローラ。複数のホバーエンジン推力、車体安定化トルク、ジャンプ、ブースト、搭乗者アニメーション連携を扱う。",
+    "methods": {
+      "useVehicleJumpPlatform(Vector3 direction)": "`jumpInputPressed`を0.5秒立て、`direction`×質量のImpulseを与える。",
+      "useJumpPlatformParable(Vector3 direction)": "`direction`を`ForceMode.VelocityChange`で加え、質量非依存の跳ね上げを与える。",
+      "setNewJumpPower(float newJumpPower)": "`jumpPower`を`newJumpPower`で直接上書きするだけ（×100変換なし）。",
+      "setOriginalJumpPower()": "`jumpPower`を保存済みの`originalJumpPower`に戻すだけ。",
+      "setCanJumpState(bool state)": "ジャンプ可否`canJump`を`state`にするだけ。"
+    }
+  },
+  {
+    "type": "flyingController",
+    "summary": "上下・左右・ロールで飛ぶ飛行ビークルのコントローラ。高さ入力、ロール入力、エンジン音と排気／ブーストパーティクルを扱う。",
+    "methods": {
+      "stopVehicleParticles()": "通常・強排気の粒子を停止し、ブースト粒子のループを解除する。",
+      "inputIncreaseHeightState(bool state)": "運転中なら`heightInput`を1／0に設定し、ホバーボード経由ならジャンプ力を与えて離脱する。",
+      "inputDecreaseHeightState(bool state)": "運転中なら`heightInput`を-1／0に設定するだけ。",
+      "inputSetRotateToLeftState(bool state)": "運転中なら`rollDirection`を1にし、3D移動でなければ0へ戻す。",
+      "inputSetRotateToRightState(bool state)": "運転中なら`rollDirection`を-1にし、3D移動でなければ0へ戻す。"
+    }
+  },
+  {
+    "type": "hoverBoardAnimationSystem",
+    "summary": "ホバーボード搭乗中のプレイヤーの`Animator`と上半身IKを制御する補助コンポーネント。頭・腕・胴の向きをボードの動きに追従させる。",
+    "methods": {
+      "changeVehicleState(bool state)": "搭乗状態を反映し、Animatorと上半身IKの有効化・注視対象を切り替える。"
+    }
+  },
+  {
+    "type": "vehicleBuilder",
+    "summary": "エディタ上で車両メッシュの差し替え、設定イベントの実行、シーンへの配置を行うビルダー。パーツのインスタンス化とHUDマネージャへの登録をまとめて行う。",
+    "methods": {
+      "buildVehicle()": "パーツ調整、ビルド完了処理、テンポラリのリセット、設定イベント適用を順に実行し、シーンを更新する。",
+      "adjustVehicleParts()": "各有効パーツのメッシュを差し替え／削除し、有効・無効に応じたイベントを発火する。",
+      "adjustVehicleSettings()": "各設定項目のbool／floatイベントを、設定値で順に呼び出す。",
+      "adjustVehicleSettingsFromEditor()": "エディタから`adjustVehicleSettings`を呼ぶだけ。",
+      "completeVehicleBuild()": "HUDマネージャ・車両・カメラ・親オブジェクトの名前を設定し、パーツを登録して必要ならカメラ前へ配置する。",
+      "setVehicleName(string newValue)": "`vehicleName`を`newValue`にするだけ。",
+      "resetTemporalVehicleParts()": "各パーツのテンポラリメッシュ参照・生成フラグ・オフセットを初期化する。",
+      "removeTemporalVehicleParts()": "生成したテンポラリメッシュを破棄し、元のメッシュと追加パーツを再表示して設定を戻す。",
+      "getMeshParentTransformValues()": "各パーツのメッシュ親の初期ローカル位置・角度を記録する。",
+      "placeVehicleInCameraPosition()": "エディタカメラの前方へ`layerToPlaceVehicle`でレイキャストし、当たった地点の上に車両を移動する。",
+      "alignViewWithVehicleCameraPosition()": "`vehicleViewTransform`を`setEditorCameraPosition`に渡すだけ。",
+      "setEditorCameraPosition(Transform transformToUse)": "`GKC_Utils.alignViewToObject`で指定トランスフォームへエディタビューを向けるだけ。"
+    }
+  }
+]

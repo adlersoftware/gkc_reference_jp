@@ -1,0 +1,506 @@
+[
+ {
+  "type": "mapCreator",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Map\\mapCreator.cs",
+  "methods": [
+   {
+    "sig": "getComponentInstance()",
+    "line": 97
+   },
+   {
+    "sig": "updateMainMapSystemList()",
+    "line": 187
+   },
+   {
+    "sig": "getAndIncreaselastMapObjectInformationIDAssigned()",
+    "line": 200
+   },
+   {
+    "sig": "setlastMapObjectInformationIDAssignedValue(int newValue)",
+    "line": 207
+   },
+   {
+    "sig": "addMapObject(bool visibleInAllBuildings, bool visibleInAllFloors, bool calculateFloorAtStart, GameObject obj, string type, Vector3 offset, int ID, int mapPartIndex, int buildingIndex, float extraIconSizeOnMap, bool followCameraRotation, bool followObjectRotation, bool setCustomCompassSettings, bool useCompassIcon, GameObject compassIconPrefab, float verticalOffset)",
+    "line": 212
+   },
+   {
+    "sig": "removeMapObject(GameObject obj, bool isPathElement)",
+    "line": 224
+   },
+   {
+    "sig": "enableOrDisableSingleMapIconByID(int ID, bool value)",
+    "line": 233
+   },
+   {
+    "sig": "changeMapObjectIconFloor(GameObject objectToSearch, int newFloorIndex)",
+    "line": 242
+   },
+   {
+    "sig": "changeMapObjectIconFloorByPosition(GameObject objectToSearch)",
+    "line": 251
+   },
+   {
+    "sig": "setnewBuilingAndFloorIndexToMapObject(mapSystem.mapObjectInfo mapObjectInfoToModify, int newBuildingIndex, int newFloorIndex)",
+    "line": 260
+   },
+   {
+    "sig": "getBuldingIndexByName(string buildingName)",
+    "line": 269
+   },
+   {
+    "sig": "getAllBuildings()",
+    "line": 282
+   },
+   {
+    "sig": "changeCurrentFloor(GameObject currentTriggerFloor)",
+    "line": 295
+   },
+   {
+    "sig": "setCurrentFloorByFloorNumber(int buildingIndex, int floorNumber)",
+    "line": 333
+   },
+   {
+    "sig": "setCurrentFloorByFloorIndex(int buildingIndex, int floorIndex)",
+    "line": 357
+   },
+   {
+    "sig": "setFloorActiveState(int buildingIndex, int floorIndex, bool state)",
+    "line": 385
+   },
+   {
+    "sig": "enableOrDisableSingleMapIconByMapPartIndex(int mapPartBuildingIndex, int mapPartIndex, int mapPartFloorIndex, bool value)",
+    "line": 400
+   },
+   {
+    "sig": "enableOrDisabled2dMap(bool state, int buildingIndex)",
+    "line": 409
+   },
+   {
+    "sig": "setCurrentObjectToChangeBuildingInfo(GameObject newCharacter)",
+    "line": 422
+   },
+   {
+    "sig": "setCurrentMapPartIndex(int newValue)",
+    "line": 427
+   },
+   {
+    "sig": "getPlayerGameObject(GameObject newPlayerDetected)",
+    "line": 442
+   },
+   {
+    "sig": "changeCurrentBuilding(GameObject currentTriggerBuilding)",
+    "line": 447
+   },
+   {
+    "sig": "changeCurrentBuilding(int newCurrentBuildingIndex, GameObject newCharacter)",
+    "line": 472
+   },
+   {
+    "sig": "setCurrentBuildingByBuildingIndex(int buildingIndex)",
+    "line": 488
+   },
+   {
+    "sig": "setBuildingAndFloorInfoToObject(GameObject objectToCheck, Transform buildingParent, Transform floorParent)",
+    "line": 507
+   },
+   {
+    "sig": "addMapPart3dMeshToFloorParent(GameObject mapPart3dMesh, GameObject mapPartGameObject)",
+    "line": 537
+   },
+   {
+    "sig": "enableOrDisabled3dMap(bool state, int buildingIndex)",
+    "line": 587
+   },
+   {
+    "sig": "updateMapPart3dMeshPosition()",
+    "line": 610
+   },
+   {
+    "sig": "enableOrDisableMapPart3dMesh(bool state)",
+    "line": 634
+   },
+   {
+    "sig": "set3dMapPartMeshColor(Color newColor, bool setOriginalColor, int currentBuildingIndex, int currentFloorIndex, int currentMapPartIndex)",
+    "line": 657
+   },
+   {
+    "sig": "removeMapPart3dMesh()",
+    "line": 671
+   },
+   {
+    "sig": "generateMapPart3dMesh()",
+    "line": 694
+   },
+   {
+    "sig": "setGenerate3dMapPartMeshState()",
+    "line": 717
+   },
+   {
+    "sig": "setGenerate3dMapPartMeshStateFromEditor()",
+    "line": 732
+   },
+   {
+    "sig": "setGenerate3dMapPartMeshStateToFloor(bool value, int buildingIndex, int floorIndex)",
+    "line": 747
+   },
+   {
+    "sig": "setGenerate3dMapPartMeshStateToFloorFromEditor(bool value, int buildingIndex, int floorIndex)",
+    "line": 758
+   },
+   {
+    "sig": "addNewMapPart(Transform mapPartParent)",
+    "line": 775
+   },
+   {
+    "sig": "addNewMapPartFromMapCreator(int buildingIndex, int floorIndex)",
+    "line": 815
+   },
+   {
+    "sig": "removeMapPart(int buildingIndex, int floorIndex, int mapPartIndex)",
+    "line": 849
+   },
+   {
+    "sig": "removeMapPart(Transform mapPartParent, GameObject mapPartToDelete)",
+    "line": 867
+   },
+   {
+    "sig": "removeAllMapParts(int buildingIndex, int floorIndex)",
+    "line": 896
+   },
+   {
+    "sig": "duplicateMapPart(Transform mapPartParent, GameObject mapPartToDuplicate)",
+    "line": 913
+   },
+   {
+    "sig": "addNewFloor(int buildingIndex)",
+    "line": 947
+   },
+   {
+    "sig": "removeFloor(int buildingIndex, int floorIndex)",
+    "line": 986
+   },
+   {
+    "sig": "removeAllFloors(int buildingIndex)",
+    "line": 1011
+   },
+   {
+    "sig": "renameFloor(int buildingIndex, int floorIndex)",
+    "line": 1036
+   },
+   {
+    "sig": "addTriggerToChangeFloor(int buildingIndex, int floorIndex)",
+    "line": 1048
+   },
+   {
+    "sig": "removeTriggerToChangeFloor(int buildingIndex, int floorIndex, int triggerIndex)",
+    "line": 1095
+   },
+   {
+    "sig": "removeTriggerToChangeFloorList(int buildingIndex, int floorIndex)",
+    "line": 1118
+   },
+   {
+    "sig": "enableOrDisableAllFloorParts(bool state, int buildingIndex, int floorIndex)",
+    "line": 1141
+   },
+   {
+    "sig": "enableOrDisableFloorPart(bool state, int buildingIndex, int floorIndex, int mapPartIndex)",
+    "line": 1154
+   },
+   {
+    "sig": "renameBuilding(int index)",
+    "line": 1166
+   },
+   {
+    "sig": "addNewBuilding()",
+    "line": 1175
+   },
+   {
+    "sig": "removeBuilding(int buildingIndex)",
+    "line": 1203
+   },
+   {
+    "sig": "removeAllBuildings()",
+    "line": 1228
+   },
+   {
+    "sig": "enableOrDisableAllBuildings(bool state)",
+    "line": 1260
+   },
+   {
+    "sig": "enableOrDisableBuilding(bool state, int buildingIndex)",
+    "line": 1271
+   },
+   {
+    "sig": "addTriggerToChangeBuilding(int buildingIndex)",
+    "line": 1287
+   },
+   {
+    "sig": "removeTriggerToChangeBuilding(int buildingIndex, int triggerIndex)",
+    "line": 1331
+   },
+   {
+    "sig": "removeTriggerToChangeBuildingList(int buildingIndex)",
+    "line": 1352
+   },
+   {
+    "sig": "addTriggerToDynamicObject(int buildingIndex, int floorIndex)",
+    "line": 1373
+   },
+   {
+    "sig": "removeTriggerToDynamicObject(int buildingIndex, int triggerIndex)",
+    "line": 1419
+   },
+   {
+    "sig": "removeTriggerToDynamicObjectList(int buildingIndex)",
+    "line": 1440
+   },
+   {
+    "sig": "GetAllFloorParts(int buildingIndex, int floorIndex)",
+    "line": 1461
+   },
+   {
+    "sig": "calculateAllMapTileMesh()",
+    "line": 1500
+   },
+   {
+    "sig": "removeAllMapTileMesh()",
+    "line": 1519
+   },
+   {
+    "sig": "setMapObjectInformationID()",
+    "line": 1538
+   },
+   {
+    "sig": "getMapIconTypes()",
+    "line": 1567
+   },
+   {
+    "sig": "setMapIconTypes(int mapSystemIndex)",
+    "line": 1572
+   },
+   {
+    "sig": "updateMapIconTypesOnMapSystem()",
+    "line": 1583
+   },
+   {
+    "sig": "addCameraPositionOnMapMenu(int buildingIndex)",
+    "line": 1593
+   },
+   {
+    "sig": "addNewPlayer(mapSystem newMapSystem, GameObject newPlayer, bool callingFunctionOnEditor)",
+    "line": 1625
+   },
+   {
+    "sig": "selectChangeBuildingTrigger(int buildingIndex, int triggerIndex)",
+    "line": 1662
+   },
+   {
+    "sig": "selectDynamicObjectsTrigger(int buildingIndex, int triggerIndex)",
+    "line": 1667
+   },
+   {
+    "sig": "selectCurrentFloorTrigger(int buildingIndex, int floorIndex, int triggerIndex)",
+    "line": 1672
+   },
+   {
+    "sig": "selectCurrentMapPart(int buildingIndex, int floorIndex, int mapPartIndex)",
+    "line": 1677
+   },
+   {
+    "sig": "updateMapObjectInformationMapSystem()",
+    "line": 1682
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 1695
+   }
+  ]
+ },
+ {
+  "type": "mapUISystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Map\\mapUISystem.cs",
+  "methods": [
+   {
+    "sig": "setMapContentActiveState(bool state)",
+    "line": 170
+   },
+   {
+    "sig": "setMapMenuActiveState(bool state)",
+    "line": 177
+   },
+   {
+    "sig": "getMapMenuTransform()",
+    "line": 184
+   },
+   {
+    "sig": "removeMapObjectInfo()",
+    "line": 189
+   },
+   {
+    "sig": "setMapObjectInfoText(string mapObjectInfoFieldText, string mapObjectNameFieldText)",
+    "line": 195
+   },
+   {
+    "sig": "setCurrentFloorNumberText(string newText)",
+    "line": 201
+   },
+   {
+    "sig": "setCurrentMapZoneText(string newText)",
+    "line": 206
+   },
+   {
+    "sig": "setMapIndexWindowScrollerValue(int newValue)",
+    "line": 211
+   },
+   {
+    "sig": "setZoomScrollbarValue(float newValue)",
+    "line": 216
+   },
+   {
+    "sig": "enableOrDisableCompass(bool state)",
+    "line": 221
+   },
+   {
+    "sig": "getCompassElementsParent()",
+    "line": 228
+   },
+   {
+    "sig": "disableMainCompassDirections()",
+    "line": 233
+   },
+   {
+    "sig": "checkCurrentMapIconPressedParent()",
+    "line": 252
+   },
+   {
+    "sig": "currenMapIconPressedActiveState(bool state)",
+    "line": 261
+   },
+   {
+    "sig": "checkCurrentIconPressed(bool state, Transform mapIconTransform)",
+    "line": 268
+   },
+   {
+    "sig": "getMapCursorRectTransformPosition()",
+    "line": 278
+   },
+   {
+    "sig": "setMapCursorActiveState(bool state)",
+    "line": 283
+   },
+   {
+    "sig": "setMapCursorAsLastSibling()",
+    "line": 292
+   },
+   {
+    "sig": "setMapIndexWindowActiveState(bool state)",
+    "line": 297
+   },
+   {
+    "sig": "setRemoveMarkButtonImageColor(Color newColor)",
+    "line": 304
+   },
+   {
+    "sig": "setQuickTravelButtonImageColor(Color newColor)",
+    "line": 309
+   },
+   {
+    "sig": "getMapRender()",
+    "line": 314
+   },
+   {
+    "sig": "getMapWindow()",
+    "line": 319
+   },
+   {
+    "sig": "getPlayerMapIcon()",
+    "line": 324
+   },
+   {
+    "sig": "getPlayerIconChild()",
+    "line": 329
+   },
+   {
+    "sig": "getRemoveMarkButtonImage()",
+    "line": 334
+   },
+   {
+    "sig": "getQuickTravelButtonImage()",
+    "line": 339
+   },
+   {
+    "sig": "changeMapIndexWindowState()",
+    "line": 344
+   },
+   {
+    "sig": "enableOrDisableAllMapIconType(Slider iconSlider)",
+    "line": 349
+   },
+   {
+    "sig": "enableOrDisableMapIconType(Slider iconSlider)",
+    "line": 354
+   },
+   {
+    "sig": "zoomInEnabled()",
+    "line": 359
+   },
+   {
+    "sig": "zoomInDisabled()",
+    "line": 364
+   },
+   {
+    "sig": "zoomOutEnabled()",
+    "line": 369
+   },
+   {
+    "sig": "zoomOutDisabled()",
+    "line": 374
+   },
+   {
+    "sig": "checkNextFloor()",
+    "line": 379
+   },
+   {
+    "sig": "checkPrevoiusFloor()",
+    "line": 384
+   },
+   {
+    "sig": "placeMark()",
+    "line": 389
+   },
+   {
+    "sig": "removeMark()",
+    "line": 394
+   },
+   {
+    "sig": "activateQuickTravel()",
+    "line": 399
+   },
+   {
+    "sig": "set2dOr3ddMapView(bool state)",
+    "line": 404
+   },
+   {
+    "sig": "recenterCameraPosition()",
+    "line": 409
+   },
+   {
+    "sig": "setUsingScrollbarZoomState(bool state)",
+    "line": 414
+   },
+   {
+    "sig": "setZoomByScrollBar(Scrollbar mainZoomScrollbar)",
+    "line": 419
+   },
+   {
+    "sig": "checkNextBuilding()",
+    "line": 424
+   },
+   {
+    "sig": "checkPrevoiusBuilding()",
+    "line": 429
+   }
+  ]
+ }
+]

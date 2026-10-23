@@ -1,0 +1,343 @@
+[
+ {
+  "type": "gameLanguageSelector",
+  "summary": "ゲーム全体の現在言語を管理するシングルトンで、言語変更時に各ローカライズ管理とシーン内の要素表示をまとめて更新する。PlayerPrefsへの保存や起動時のシステム言語チェックも担う。",
+  "methods": {
+   "updateCurrentLanguageByPlayerPrefs()": "`Current Language`キーが保存されていればその値を読み、`setGameLanguage`で適用する。",
+   "setCurrentLanguagePlayerPrefsValue()": "`currentLanguage`が空でなければ`Current Language`キーへ保存するだけ。",
+   "getComponentInstance()": "自身を静的インスタンスに登録し、既に別インスタンスがあればこのオブジェクトを破棄する。",
+   "setGameLanguageByIndex(int languageIndex)": "`languageIndex`番目の言語名を取り出して`setGameLanguage`を呼ぶだけ。",
+   "setGameLanguage(string languageSelected)": "有効時のみ`GKC_Utils`の言語を変更し、全ローカライズと要素を更新してPlayerPrefsへ保存する。",
+   "updateAllLanguageElementCheckerOnScene()": "言語変更時の更新が有効なら、シーン内の全`languageElementChecker`へ現在言語を適用する。",
+   "addLanguage(string newName)": "一覧に未登録なら`newName`を言語リストへ追加するだけ。",
+   "removeLanguage(string newName)": "一覧に存在すれば`newName`を言語リストから削除するだけ。",
+   "setNewLanguageList(List<string> newNameList)": "言語リストをクリアし、`newNameList`の内容で置き換えるだけ。",
+   "updateLanguageDropDown()": "ドロップダウン各項目の表示を`UIElementsLocalizationManager`の翻訳値へ差し替えて再描画する。",
+   "assignNewLanguageDropDown(Dropdown newDropDown)": "`languageDropDown`の参照を差し替えるだけ。",
+   "checkIfLanguageDropDownAssignedAndUpdate(Dropdown newDropDown)": "未割り当てなら`newDropDown`を設定し、その後ドロップダウン表示を更新する。",
+   "getCurrentLanguageList()": "言語名リストの参照を返すだけ。",
+   "setCurrentLanguage(string newLanguage)": "`currentLanguage`を設定するだけ。",
+   "getCurrentLanguage()": "`currentLanguage`を返すだけ。",
+   "setCurrentLanguageFromEditor(string newLanguage)": "`currentLanguage`を設定したうえで`updateComponent`を呼ぶ。",
+   "updateComponent()": "コンポーネント更新とシーンのダーティ更新を行うだけ。"
+  }
+ },
+ {
+  "type": "languageLocalizationManager",
+  "summary": "各ローカライズ管理コンポーネントの基底クラスで、ファイルパスの解決や言語ファイルの存在確認、言語変更イベントを提供する。編集・辞書取得系は継承先で実装する仮想メソッド。",
+  "methods": {
+   "updateFileName()": "継承先で実装する仮想メソッドで、本体が空で何もしない。",
+   "updateLocalizationFileExternally()": "継承先で実装する仮想メソッドで、本体が空で何もしない。",
+   "checkEventsOnLanguageChange()": "`useEventsOnLanguageChange`が有効なら`eventOnLanguageChange`を発火する。",
+   "getDictionaryForEditor()": "エディタ用辞書を返す仮想メソッドで、常にnullを返すだけ。",
+   "updateLocalizationFileFromEditor()": "継承先で実装する仮想メソッドで、本体が空で何もしない。",
+   "GetLocalizedValueFromEditor(string key)": "エディタ用の値を返す仮想メソッドで、常に空文字を返すだけ。",
+   "addKey(string key, string value)": "継承先で実装する仮想メソッドで、本体が空で何もしない。",
+   "removeKey(string key)": "継承先で実装する仮想メソッドで、本体が空で何もしない。",
+   "addLanguage(string languageName)": "継承先で実装する仮想メソッドで、本体が空で何もしない。",
+   "addLanguageListToNewLocalizationFile()": "継承先で実装する仮想メソッドで、本体が空で何もしない。",
+   "getCurrentFilePath()": "エディタ上でローカルパス未使用なら`filePath`、それ以外は`filePathBuild`を返す。",
+   "isUseResourcesPathActive()": "`useResourcesPath`が有効か、タッチ端末ならtrueを返す。",
+   "checkIfLanguageFileExists()": "言語ファイルのパスを解決し、存在しなければ空ファイルを作成してパスをログ出力する。",
+   "updateComponent()": "コンポーネント更新とシーンのダーティ更新を行うだけ。"
+  }
+ },
+ {
+  "type": "localizationFileLoader",
+  "summary": "CSV形式のローカライズファイルを読み書きするローダーで、言語列を辞書化し、キーや言語の追加削除をエディタ上で行う。",
+  "methods": {
+   "loadFile(string filePath, bool useResourcesPath)": "`useResourcesPath`なら`Resources`、それ以外はファイルからCSVを読んで`mainFileText`へ格納する。",
+   "GetDictionaryValues(string attributeID)": "先頭行から`attributeID`を含む列を探し、キーとその列の値の辞書を返す。列が無ければnull。",
+   "addKey(string filePath, string key, string value, string languageName)": "エディタ専用で、対象言語の列に`key`が既にあれば値を差し替え、無ければ空欄付きで行を追加して保存する。",
+   "removeKey(string fileName, string filePath, string key, bool useResourcesPath)": "エディタ専用で、キーを含む行を削除してファイルを保存し、アセットを再読込する。",
+   "addLanguage(string filePath, string languageName)": "エディタ専用で、ヘッダに無ければ空欄を伴う言語列を追加し、`GKC_Utils.addLanguage`も呼ぶ。",
+   "addLanguageListToNewLocalizationFile(string filePath)": "エディタ専用で、ファイル内容が空なら`key`と全言語名からなるヘッダ行を書き込む。"
+  }
+ },
+ {
+  "type": "languageElementChecker",
+  "summary": "UI要素などに言語ごとのテキストを持たせ、言語変更時に表示を切り替えるための基底コンポーネント。",
+  "methods": {
+   "updateLanguageOnElement()": "`GKC_Utils.getCurrentLanguage`で現在言語を取得し、引数付きの版へ渡すだけ。",
+   "updateLanguageOnElement(string currentLanguage)": "継承先で実装する仮想メソッドで、本体が空で何もしない。"
+  }
+ },
+ {
+  "type": "simpleGameLanguageSelector",
+  "summary": "メインの`gameLanguageSelector`を探して言語設定を委譲する簡易セレクタで、変更時にドロップダウン更新と独自イベントを行う。",
+  "methods": {
+   "setGameLanguageByIndex(int languageIndex)": "メインの`gameLanguageSelector`へインデックスで言語を設定し、ドロップダウン更新とイベントを行う。",
+   "setGameLanguage(string languageSelected)": "同じくメインの選択コンポーネントへ言語名を渡し、ドロップダウン更新とイベント発火を行う。"
+  }
+ },
+ {
+  "type": "UIElementsLocalizationManager",
+  "summary": "UI要素用のローカライズファイルを読み込み、キーから翻訳値を返す静的マネージャー。",
+  "methods": {
+   "checkFilePathValues()": "UI用ローカライズのファイル名・形式・有効可否・Resourcesパス可否・現在パスを静的フィールドへ複製する。"
+  }
+ },
+ {
+  "type": "interactionObjectsLocalizationManager",
+  "summary": "インタラクト対象（装置名など）用のローカライズを読み込み、キーから翻訳値を返す静的マネージャー。",
+  "methods": {
+   "checkFilePathValues()": "インタラクト対象用ローカライズのファイル名・形式・有効可否・Resourcesパス可否・現在パスを静的フィールドへ複製する。"
+  }
+ },
+ {
+  "type": "inventoryLocalizationManager",
+  "summary": "インベントリ用のローカライズを読み込み、キーから翻訳値を返す静的マネージャー。",
+  "methods": {
+   "checkFilePathValues()": "インベントリ用ローカライズのファイル名・形式・有効可否・Resourcesパス可否・現在パスを静的フィールドへ複製する。"
+  }
+ },
+ {
+  "type": "searcherLocalizationToolEditor",
+  "summary": "ローカライズのキーを検索し、削除や新規追加を行えるエディタウィンドウ。",
+  "methods": {
+   "OnGUI()": "検索欄を描画し、入力文字を含むキーや値を一覧表示して、行ごとに削除・追加ボタンを提供する。"
+  }
+ },
+ {
+  "type": "addKeyLocalizationToolEditor",
+  "summary": "指定言語へ新しいキーと値を追加するエディタウィンドウ。",
+  "methods": {
+   "OnGUI()": "キーと値の入力欄を描画し、Addで`addKey`を実行してアセット再読込後にウィンドウを閉じる。"
+  }
+ },
+ {
+  "type": "addLanguageLocalizationToolEditor",
+  "summary": "ローカライズファイルへ新しい言語列を追加するエディタウィンドウ。",
+  "methods": {
+   "OnGUI()": "言語名の入力欄を描画し、Addで`addLanguage`を実行してアセットを再読込する。"
+  }
+ },
+ {
+  "type": "missionLocalizationManager",
+  "summary": "ミッション用のローカライズを読み込み、キーから翻訳値を返す静的マネージャー。",
+  "methods": {
+   "checkFilePathValues()": "ミッション用ローカライズのファイル名・形式・有効可否・Resourcesパス可否・現在パスを静的フィールドへ複製する。"
+  }
+ },
+ {
+  "type": "pointAndClickLocalizationManager",
+  "summary": "ポイント＆クリック用のローカライズを読み込み、キーから翻訳値を返す静的マネージャー。",
+  "methods": {
+   "checkFilePathValues()": "ポイント＆クリック用ローカライズのファイル名・形式・有効可否・パスを静的フィールドへ複製する。"
+  }
+ },
+ {
+  "type": "skillsLocalizationManager",
+  "summary": "スキル用のローカライズを読み込み、キーから翻訳値を返す静的マネージャー。",
+  "methods": {
+   "checkFilePathValues()": "スキル用ローカライズのファイル名・形式・有効可否・Resourcesパス可否・現在パスを静的フィールドへ複製する。"
+  }
+ },
+ {
+  "type": "headTrack",
+  "summary": "アニメータのLookAtを使い、プレイヤーの頭と体を注視対象やカメラ方向へ向けるコンポーネント。対象リストから最近傍を選び、重みを補間してIKを更新する。",
+  "methods": {
+   "setSmoothHeadTrackDisableState(bool state)": "`useSmoothHeadTrackDisable`を設定するだけ。",
+   "setExternalHeadTrackPauseActiveState(bool state)": "`externalHeadTrackPauseActive`を設定するだけ。",
+   "setHeadTrackSmoothPauseState(bool state)": "外部ポーズとスムーズ停止のフラグを同時に設定するだけ。",
+   "updateHeadTrack()": "`animator`へ現在の頭・体の重みと注視位置を設定してLookAtを反映する。",
+   "setPauseCanLookStateWithDuration(float newDuration)": "指定時間だけ`ignorePlayerCanLookTemporallyActive`を立てるコルーチンを開始する。",
+   "playerCanLook()": "エイム状態やFBA、頭IKの重みなどから頭トラック可能かを判定して返す。",
+   "setFullBodyAwarenessActiveState(bool state)": "FBAフラグを設定し、解除時は対象がいれば注視を再開させる。",
+   "getLookPosition()": "頭位置から対象の可視性と範囲を判定し、最近傍対象やカメラ方向への注視点を補間して返す。",
+   "setCanUseHeadTrackOnLockedCameraActiveState(bool state)": "`canUseHeadTrackOnLockedCameraActive`を設定するだけ。",
+   "isTargetOnHeadRange(Vector3 direction)": "`direction`の水平・垂直角度が現在の視野範囲内ならtrueを返す。",
+   "lerpWeights(float headWeightTarget, float bodyWeightTarget)": "頭と体の重みを目標値へ`weightChangeSpeed`で補間する。",
+   "getClosestTarget()": "注視対象リストを掃除し、一定間隔で最も近い対象をカレントに選ぶ。",
+   "checkHeadTrackTarget(headTrackTarget target)": "無視リストに無ければ対象をリストへ追加し、ポーズを解除して注視を有効化する。",
+   "removeHeadTrackTarget(headTrackTarget target)": "対象をリストから外し、空になれば注視対象なしの状態にする。",
+   "setHeadTransform(Transform headTransform)": "頭ボーン参照`head`を差し替えるだけ。",
+   "searchHead()": "`animator`からHeadボーンを取得して`head`に設定し、コンポーネントを更新する。",
+   "setCameraBodyWeightValue(float newValue)": "`cameraBodyWeightTarget`を設定するだけ。",
+   "setOriginalCameraBodyWeightValue()": "`cameraBodyWeightTarget`を保存済みの初期値へ戻すだけ。",
+   "getHeadTrackTargetTransform()": "`headTrackTargeTransform`を返すだけ。",
+   "getHeadTrackTargetParent()": "`headTrackTargetParent`を返すだけ。",
+   "getOriginalHeadTrackTargetPosition()": "`originalHeadTrackTargetTransformPosition`を返すだけ。",
+   "setHeadTrackEnabledState(bool state)": "`headTrackEnabled`を設定するだけ。",
+   "setOriginalHeadTrackEnabledState()": "`headTrackEnabled`を保存済みの初期値へ戻すだけ。",
+   "isHeadTrackEnabled()": "`headTrackEnabled`を返すだけ。",
+   "setHeadTrackActiveWhileAimingState(bool state)": "`headTrackActiveWhileAiming`を設定するだけ。",
+   "setHeadWeight(float newValue)": "頭の重み`headWeight`を設定するだけ。",
+   "setBodyWeight(float newValue)": "体の重み`bodyWeight`を設定するだけ。",
+   "setLookInOppositeDirectionOutOfRangeValue(bool state)": "`lookInOppositeDirectionOutOfRange`を設定するだけ。",
+   "setOriginalLookInOppositeDirectionOutOfRangeValue()": "`lookInOppositeDirectionOutOfRange`を保存済みの初期値へ戻すだけ。",
+   "setNewCameraTargetToLook(Transform newCameraTargetToLook)": "`newCameraTargetToLook`がnullでなければ`cameraTargetToLook`を差し替える。",
+   "setNewCameraTargetToLookAndAdjustDirectionToPrevious(Transform newCameraTargetToLook)": "新ターゲットに旧ターゲットの位置と回転を引き継がせてから`cameraTargetToLook`を差し替える。",
+   "setCustomHeadTrackToLookInfoByName(string nameToSearch)": "一覧から`nameToSearch`に一致する情報を探し、設定に応じて注視ターゲットを差し替える。",
+   "setOriginalCameraTargetToLook()": "保存済みの`originalCameraTargetToLook`へ戻すだけ。",
+   "setHeadTrackEnabledStateFromEditor(bool state)": "`headTrackEnabled`を設定し、`updateComponent`で反映する。",
+   "updateComponent()": "`GKC_Utils.updateComponent`を呼ぶだけ。"
+  }
+ },
+ {
+  "type": "headTrackTarget",
+  "summary": "トリガーに入った`headTrack`へ自身を注視対象として登録し、注視位置と可視判定を提供するコンポーネント。",
+  "methods": {
+   "getLookPositon()": "`targetToLook`があればその位置＋オフセット、無ければ自身の変換位置にオフセットを足して返す。",
+   "lookTargetVisible(Vector3 headPosition, LayerMask layer)": "無効時や距離超過ならfalseを返し、Raycast設定時は遮蔽物の有無で可視判定する。",
+   "drawLine(Vector3 startPosition, Vector3 endPosition, Color color)": "`showGizmo`が有効な時のみデバッグラインを描画する。",
+   "setEnableState(bool state)": "`targetEnabled`を設定するだけ。",
+   "disableState()": "`targetEnabled`をfalseにするだけ。",
+   "addTagToLocate(string tagToAdd)": "未登録ならタグを追加し、コライダーを一度切替えてトリガー判定を再評価させる。",
+   "removeTagToLocate(string tagToAdd)": "そのタグの`headTrack`を注視リストから外してから、タグを削除する。",
+   "removeAllHeadTracksFoundAndDisableHeadTrack()": "記録した全`headTrack`から自身を解除し、コライダーとターゲットを無効にする。",
+   "enableHeadTrack()": "`targetEnabled`をtrueにし、コライダーを有効化する。"
+  }
+ },
+ {
+  "type": "pointToLook",
+  "summary": "プレイヤーカメラに注視対象として検出させるための目印コンポーネント。",
+  "methods": {
+   "getPointToLookTransform()": "未設定なら自身のTransformを割り当てて返す。",
+   "setPointToLookEnabledState(bool state)": "`pointToLookEnabled`を設定するだけ。",
+   "isPointToLookEnabled()": "`pointToLookEnabled`を返すだけ。",
+   "checkToRemoveThisObjectFromPlayerLockOn()": "`applyDamage`に自身の位置を渡し、死亡対象としてのロックオン解除を判定させる。"
+  }
+ },
+ {
+  "type": "climbLedgeSystem",
+  "summary": "レッジの検出から掴み・登攀・ジャンプ・落下までをレイキャストとアニメーションで制御し、状態に応じてプレイヤーを停止・復帰させる。",
+  "methods": {
+   "enableOrDisableHangFromLedgeIcon(bool state)": "`hangFromLedgeIcon`の表示を`state`に合わせて切り替える。",
+   "resumePlayer()": "親設定や各種フラグを戻し、プレイヤーの移動・カメラ・アニメータを通常状態へ復帰させる。",
+   "startClimbLedgeAction()": "登攀可否を確認し、ルートモーションを有効化して登攀アニメーションと移動を開始する。",
+   "startLoseLedgeAction()": "掴んでいる時のみ下向きの速度を与えて`resumePlayer`し、レッジ喪失イベントを発火する。",
+   "loseAnyGrabbedSurface()": "`grabbingSurface`中なら`resumePlayer`で掴みを解除するだけ。",
+   "MatchTarget(Vector3 matchPosition, Quaternion matchRotation, AvatarTarget target, MatchTargetWeightMask weightMask, float normalisedStartTime, float normalisedEndTime)": "遷移中や終了後でなければ`animator.MatchTarget`を呼び、位置と回転をアニメーションに合わせる。",
+   "adjustHoldOnLedge()": "既存コルーチンを止め、プレイヤーを掴み位置へ移動・回転させるコルーチンを開始する。",
+   "stopAdjustHoldOnLedgeCoroutine()": "調整コルーチンを停止し、調整中フラグを解除する。",
+   "climbLedgeOnFirstPersonMovement()": "既存コルーチンを止め、一人称用の位置移動コルーチンを開始する。",
+   "stopClimbLedgeOnFirstPersonMovementCoroutine()": "一人称移動コルーチンがあれば停止するだけ。",
+   "rotateTowardLedgeOnFirstPerson()": "移動コルーチンを止め、カメラをレッジの壁向きへ回すコルーチンを開始する。",
+   "stopRotateTowardLedgeOnFirstPersonCoroutine()": "一人称の回転コルーチンがあれば停止するだけ。",
+   "setLedgeZoneFoundState(bool state)": "レッジゾーン確認が有効な時のみ`ledgeZoneFound`を設定する。",
+   "setNewRaycastDistance(float forwardDistance, float downDistance, Vector3 newCheckDownRaycastOffset)": "ゾーン確認が有効な時のみ前方・下方のレイ距離と下方チェックのオフセットを差し替える。",
+   "setOriginalRaycastDistance()": "保存済みのレイ距離へ戻し、下方オフセットをゼロにする。",
+   "setCanClimbCurrentLedgeZoneState(bool state)": "`canClimbCurrentLedgeZone`を設定するだけ。",
+   "setCanGrabAnySurfaceOnAirActiveState(bool state)": "空中での面掴み入力の有効フラグを設定するだけ。",
+   "setCanGrabAnySurfaceOnAirState(bool state)": "空中で任意の面を掴めるかのフラグを設定するだけ。",
+   "inputJumpOnHoldLedge()": "レッジ保持中のジャンプ入力で、入力方向に応じた飛び出しや真上ジャンプを行いイベントを出す。",
+   "inputGrabSurface()": "空中面掴み入力が有効なら`activateGrabToSurfaceAction`を呼ぶだけ。",
+   "activateGrabToSurfaceAction()": "停止・ポーズ・デバイス使用中などを除いた条件を満たす時、面の掴み処理へ進む。",
+   "activateGrabToSurfaceActionExternally(bool state, Transform newLedgeTransform)": "外部から掴み対象を指定して掴みを起動し、重複や直後の再呼び出しは無視する。",
+   "canGrabToSurface()": "接地・登攀中・壁走り・水泳・飛行などの状態を除いて掴み可能かを返す。",
+   "enableOrDisableGrabToSurfaceState()": "掴み中なら解除し、そうでなければ前方レイで面を探して停止・位置合わせ・掴みイベントを行う。",
+   "setPlayerPauseState()": "移動や重力、頭トラック、アニメータを止め、レッジ掴み姿勢へ切り替える。",
+   "activateGrabLedge()": "複数のレイキャストでレッジ位置と登攀位置を求め、プレイヤーを停止して位置合わせと掴みイベントを行う。",
+   "setClimbLedgeActiveState(bool state)": "`climbLedgeActive`を設定するだけ。",
+   "setClimbLedgeActiveStateFromEditor(bool state)": "`climbLedgeActive`を設定してコンポーネントを更新する。",
+   "checkEventOnLedgeGrabbed()": "`useEvents`が有効なら`eventOnLedgeGrabbed`を発火する。",
+   "checkEventOnLedgeLose()": "`useEvents`が有効なら`eventOnLedgeLose`を発火する。",
+   "checkEventOnLedgeClimbed()": "`useEvents`が有効なら`eventOnLedgeClimbed`を発火する。",
+   "checkEventOnStartLedgeClimb()": "`useEvents`が有効なら`eventOnStartLedgeClimb`を発火する。",
+   "checkEventOnLedgeJump()": "`useEvents`が有効なら`eventOnLedgeJump`を発火する。",
+   "setAvoidPlayerGrabLedgeValue(bool state)": "`avoidPlayerGrabLedge`を設定するだけ。",
+   "stopHangFromLedge()": "ハング検索の入力上書きや各フラグを初期化し、必要ならハングアイコンを消す。",
+   "setCanCheckForHangFromLedgeOnGroundState(bool state)": "`canCheckForHangFromLedgeOnGround`を設定するだけ。",
+   "setOnlyHangFromLedgeIfPlayerIsNotMovingValue(bool state)": "`onlyHangFromLedgeIfPlayerIsNotMoving`を設定するだけ。",
+   "setOnlyHangFromLedgeIfPlayerIsNotMovingOriginalValue()": "`onlyHangFromLedgeIfPlayerIsNotMoving`を保存済みの初期値へ戻すだけ。",
+   "setClimbLedgeActionPausedState(bool state)": "`climbLedgeActionPaused`を設定するだけ。",
+   "setOtherClimbActionActiveState(bool state)": "`otherClimbActionActive`を設定するだけ。",
+   "setGrabToSurfaceInputPausedState(bool state)": "`grabToSurfaceInputPaused`を設定するだけ。",
+   "stopSetClimbLedgeActionPausedStateWithDurationCoroutine()": "ポーズ用コルーチンがあれば停止するだけ。",
+   "setClimbLedgeActionPausedStateWithDuration(float pauseDuration)": "既存コルーチンを止め、指定時間だけ登攀ポーズと掴み禁止を立てるコルーチンを開始する。",
+   "rotateCharacterOnJump()": "ジャンプ時の回転コルーチンを開始するだけ。",
+   "rotateCharacterOnJumpCoroutine()": "`currentDirectionToRotatePlayer`方向へ、一人称/FBAならカメラ、三人称ならプレイヤーを徐々に回す。"
+  }
+ },
+ {
+  "type": "autoGrabLedgeTriggerSystem",
+  "summary": "トリガーに入ったプレイヤーへ、指定した`ledgeTransform`への自動掴みを要求する。",
+  "methods": {
+   "checkTriggerInfo(Collider col, bool isEnter)": "対象タグならプレイヤーへ`ledgeTransform`付きの自動掴みを要求し、退出時は解除する。"
+  }
+ },
+ {
+  "type": "ledgeZoneSystem",
+  "summary": "レッジゾーンのトリガーで、プレイヤーの登攀可否やレイキャスト距離などを一時的に切り替える。",
+  "methods": {
+   "checkTriggerInfo(Collider col, bool isEnter)": "対象タグのプレイヤーへゾーン検出状態・レイ距離・各種可否を設定し、退出時に元の値へ戻す。"
+  }
+ },
+ {
+  "type": "puzzleSystem",
+  "summary": "ドラッグ可能なオブジェクトを掴んで回転や距離変更を行い、所定数配置すると解決するパズル装置。プレイヤー入力とイベントで状態を管理する。",
+  "methods": {
+   "resetObjects()": "全オブジェクトを初期位置と回転へ戻し、配置数リセットとリセットイベントを行う。",
+   "OnTriggerExit(Collider col)": "`respawnDragableElements`と再出現位置が設定されていれば、出たオブジェクトをゾーンへ戻す。",
+   "canBeDragged(GameObject objectToCheck)": "`dragableElements`に含まれるかその子なら該当オブジェクトを返し、無ければnullを返す。",
+   "dropObject()": "回転固定やコライダー材質を戻し、掴み・移動・回転の各フラグと参照をクリアする。",
+   "checkIfObjectGrabbed(GameObject objectToCheck)": "掴んでいるオブジェクトと一致すれば`dropObject`を呼ぶだけ。",
+   "startOrStopPuzzle()": "使用状態を反転し、開始時はプレイヤー登録、終了時は必要ならリセットと回転の復元を行う。",
+   "setCurrentPlayer(GameObject player)": "プレイヤーの管理・カメラ・入力を取得し、このパズルを現在使用中として登録する。",
+   "increaseNumberObjectsPlaced()": "配置数を1増やし、必要数に達したら`solvePuzzle`を呼ぶ。",
+   "resetNumberObjectsPlaced()": "配置数を0にするだけ。",
+   "solvePuzzle()": "解決イベントを発火し、解決済みにして必要ならアイコン削除・トリガー無効・効果音を行う。",
+   "setMainColliderTriggerEnabledState(bool state)": "解決後にトリガー無効とする設定なら再有効化を拒否しつつ、`mainCollider`を切替える。",
+   "resetCurrentObjectRotation()": "既存コルーチンを止め、掴んだオブジェクトを初期回転へ戻すコルーチンを開始する。",
+   "removeDeviceFromList()": "プレイヤーの`usingDevicesSystem`からこのオブジェクトをデバイス一覧から外す。",
+   "playSound(AudioElement soundEffect)": "`soundEffect`がnullでなければピッチを確認のうえ`AudioPlayer`で一度再生する。",
+   "inputSetRotateObjectState(bool state)": "使用中で回転可能なら、回転フラグとRigidbodyの回転固定を`state`に合わせて切替える。",
+   "inputIncreaseObjectHolDistanceByButton(bool state)": "使用中かつ移動中なら、距離を広げるフラグを`state`に合わせるだけ。",
+   "inputDecreaseObjectHolDistanceByButton(bool state)": "使用中かつ移動中なら、距離を狭めるフラグを`state`に合わせるだけ。",
+   "inputSetObjectHolDistanceByMouseWheel(bool state)": "使用中かつ移動中なら、ホイール時刻を記録し`state`に応じて距離変更フラグを立てる。",
+   "inputResetPuzzle()": "使用中で解決前なら、非把持時は全体リセット、把持中は掴んだ物の回転を戻す。"
+  }
+ },
+ {
+  "type": "puzzleSystemPlayerManagement",
+  "summary": "プレイヤー側で使用中の`puzzleSystem`を保持し、入力をそこへ転送する窓口コンポーネント。",
+  "methods": {
+   "setcurrentPuzzleSystem(puzzleSystem newPuzzleObject)": "現在の`puzzleSystem`参照を保持するだけ。",
+   "setUsingPuzzleState(bool state)": "使用中フラグを設定し、状態変化イベントの確認を行う。",
+   "puzzleObjectInputSetRotateObjectState(bool state)": "使用中で参照があれば、回転状態の入力をパズルへ転送する。",
+   "puzzleObjectInputIncreaseObjectHolDistanceByButton(bool state)": "使用中で参照があれば、距離を広げる入力をパズルへ転送する。",
+   "puzzleObjectInputDecreaseObjectHolDistanceByButton(bool state)": "使用中で参照があれば、距離を狭める入力をパズルへ転送する。",
+   "puzzleObjectInputSetObjectHolDistanceByMouseWheel(bool state)": "使用中で参照があれば、ホイールによる距離変更入力をパズルへ転送する。",
+   "puzzleObjectInputResetPuzzle()": "使用中で参照があれば、パズルのリセット入力を呼ぶ。",
+   "checkEventsOnStateChange(bool state)": "イベントが有効なら、`state`に応じて有効化・無効化イベントを発火する。"
+  }
+ },
+ {
+  "type": "pianoSystem",
+  "summary": "鍵盤を名前で識別して発音と押下アニメーションを行い、曲データの自動演奏もできるコンポーネント。",
+  "methods": {
+   "autoPlaySong()": "`songToPlay`を`playSong`へ渡すだけ。",
+   "playSong(string songNotes)": "既存の演奏コルーチンを止め、`songNotes`を再生するコルーチンを開始する。",
+   "checkPressedKey(string keyName)": "ピアノ使用中なら`keyName`に一致する鍵の音を鳴らして回転させる。",
+   "rotatePressedKey(keyInfo currentKeyInfo)": "対象鍵の既存コルーチンを止め、押下回転のコルーチンを開始する。",
+   "playSound(AudioElement clipSound)": "`clipSound`がnullでなければ`AudioPlayer`で一度だけ再生する。",
+   "startOrStopUsingPiano()": "使用状態を反転させるだけ。",
+   "setUsingPianoState(bool state)": "使用フラグを設定し、使用開始時は`AudioSource`の有無を確認する。"
+  }
+ },
+ {
+  "type": "placeObjectSystem",
+  "summary": "対象オブジェクトがトリガー内で条件を満たすと、所定位置へ移動させて配置済みにするコンポーネント。",
+  "methods": {
+   "OnTriggerEnter(Collider col)": "配置前で対象オブジェクトなら、位置・回転制限なしの場合は配置判定を行い、トリガー内フラグを立てる。",
+   "OnTriggerExit(Collider col)": "配置前で対象オブジェクトなら`objectInsideTrigger`をfalseにするだけ。",
+   "checkIfCanBePlaced()": "前提個数などの条件を満たせば、パズル側の把持解除とRigidbody固定を行い、移動を開始して配置済みにする。",
+   "canBeDragged(GameObject objectToCheck)": "`objectToPlace`自身かその子なら対象を返し、それ以外はnullを返す。",
+   "moveObjectToPlace()": "既存コルーチンを止め、このTransformの位置と回転へ移動するコルーチンを開始する。",
+   "increaseNumberObjectsPlaced()": "配置数を1増やすだけ。",
+   "resetNumberObjectsPlaced()": "移動コルーチンを止め、配置数と配置済み・トリガー内フラグを初期化する。"
+  }
+ },
+ {
+  "type": "pressObjectsInOrderSystem",
+  "summary": "決められた順序で押される位置を判定し、順序を間違えるとリセットする仕組み。使用中は毎フレーム入力を監視する。",
+  "methods": {
+   "checkPressedPosition(string positionName)": "使用中なら次の期待位置と照合し、正しければイベントと進行、誤りならリセットと効果音を行う。",
+   "resetPressedObjects()": "進行インデックスを0に戻し、全位置の押下フラグを下ろす。",
+   "startOrStopPressedObjectSystem()": "使用状態を反転させるだけ。",
+   "setUsingPressedObjectSystemState(bool state)": "使用フラグを設定し、更新コルーチンの再起動やカメラ・タッチ環境の取得を行う。",
+   "stopUpdateCoroutine()": "更新コルーチンがあれば停止するだけ。"
+  }
+ }
+]

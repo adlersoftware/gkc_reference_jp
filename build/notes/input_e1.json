@@ -1,0 +1,390 @@
+[
+ {
+  "type": "changePlayerStateOnTriggerSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Event System\\changePlayerStateOnTriggerSystem.cs",
+  "methods": [
+   {
+    "sig": "findPlayerOnScene()",
+    "line": 328
+   },
+   {
+    "sig": "setCurrentPlayer(GameObject player)",
+    "line": 335
+   },
+   {
+    "sig": "changePlayerState()",
+    "line": 340
+   }
+  ]
+ },
+ {
+  "type": "eventInfoSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Event System\\eventInfoSystem.cs",
+  "methods": [
+   {
+    "sig": "stopCheckActionEventInfoList()",
+    "line": 31
+   },
+   {
+    "sig": "activateActionEventInfoList()",
+    "line": 46
+   },
+   {
+    "sig": "addNewEvent()",
+    "line": 157
+   },
+   {
+    "sig": "setEventInfoEnabledState(bool state)",
+    "line": 166
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 171
+   }
+  ]
+ },
+ {
+  "type": "eventObjectFoundOnCaptureSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Event System\\eventObjectFoundOnCaptureSystem.cs",
+  "methods": [
+   {
+    "sig": "callEventOnCapture()",
+    "line": 32
+   },
+   {
+    "sig": "callEventOnCaptureWithGameObject(GameObject newObject)",
+    "line": 47
+   },
+   {
+    "sig": "setEventEnabledState(bool state)",
+    "line": 70
+   }
+  ]
+ },
+ {
+  "type": "eventTriggerSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Event System\\eventTriggerSystem.cs",
+  "methods": [
+   {
+    "sig": "activateEventIfObjectActiveSelf()",
+    "line": 74
+   },
+   {
+    "sig": "activateEvent()",
+    "line": 81
+   },
+   {
+    "sig": "stopEventCoroutineIfActive()",
+    "line": 102
+   },
+   {
+    "sig": "stopEventCoroutine()",
+    "line": 111
+   },
+   {
+    "sig": "stopAllEventsAndDisableTriggerSystem()",
+    "line": 118
+   },
+   {
+    "sig": "activateEventAtOnce()",
+    "line": 182
+   },
+   {
+    "sig": "callElementFromList(eventInfo currentEventInfo)",
+    "line": 207
+   },
+   {
+    "sig": "getObjectToCall(GameObject defaultObjectToCall)",
+    "line": 333
+   },
+   {
+    "sig": "checkTriggerEventEnterType(GameObject objectToCheck)",
+    "line": 348
+   },
+   {
+    "sig": "checkTriggerEventExitType(GameObject objectToCheck)",
+    "line": 353
+   },
+   {
+    "sig": "checkTriggerEventType(GameObject objectToCheck, triggerType trigger)",
+    "line": 358
+   },
+   {
+    "sig": "getLastObjectDetected()",
+    "line": 401
+   },
+   {
+    "sig": "checkTag(GameObject objectToCheck)",
+    "line": 406
+   },
+   {
+    "sig": "checkIfObjectCanTrigger(GameObject objectToCheck)",
+    "line": 423
+   },
+   {
+    "sig": "checkTriggerEventTypeByFunction()",
+    "line": 442
+   },
+   {
+    "sig": "resetEventTriggered()",
+    "line": 449
+   },
+   {
+    "sig": "setEventAsTriggered()",
+    "line": 454
+   },
+   {
+    "sig": "setObjectOnTriggerEnterExternally(GameObject newObject)",
+    "line": 459
+   },
+   {
+    "sig": "setLoopEventAtTheEndEnabledState(bool state)",
+    "line": 468
+   },
+   {
+    "sig": "addNewEvent()",
+    "line": 526
+   },
+   {
+    "sig": "InsertEventAtIndex(int index)",
+    "line": 535
+   },
+   {
+    "sig": "setSimpleFunctionByTag(string functionName, GameObject objectTocall, string tag)",
+    "line": 544
+   },
+   {
+    "sig": "setUseLayerMaskState(bool state)",
+    "line": 559
+   },
+   {
+    "sig": "setLayerMaskValue(LayerMask newLayer)",
+    "line": 565
+   },
+   {
+    "sig": "setUseTagToTriggerState(bool state)",
+    "line": 572
+   },
+   {
+    "sig": "setUseTagListState(bool state)",
+    "line": 579
+   },
+   {
+    "sig": "setTagList(List<string> newList)",
+    "line": 586
+   },
+   {
+    "sig": "addElementToTagList(string newElement)",
+    "line": 593
+   },
+   {
+    "sig": "removeElementToTagList(string newElement)",
+    "line": 602
+   }
+  ]
+ },
+ {
+  "type": "randomEventSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Event System\\randomEventSystem.cs",
+  "methods": [
+   {
+    "sig": "callEventInOrderByIndex(int newValue)",
+    "line": 39
+   },
+   {
+    "sig": "callEventInOrder()",
+    "line": 46
+   },
+   {
+    "sig": "setEventIndexInOrderValue(int newValue)",
+    "line": 57
+   },
+   {
+    "sig": "resetEventIndexInOrder()",
+    "line": 66
+   },
+   {
+    "sig": "callRandomEventIgnoringProbabilityByName(string eventName)",
+    "line": 71
+   },
+   {
+    "sig": "callRandomEventByName(string eventName)",
+    "line": 80
+   },
+   {
+    "sig": "callRandomEvent()",
+    "line": 97
+   },
+   {
+    "sig": "setRandomEventsEnabledState(bool state)",
+    "line": 161
+   },
+   {
+    "sig": "setIgnoreRandomEventActiveState(bool state)",
+    "line": 166
+   }
+  ]
+ },
+ {
+  "type": "remoteAnimatorEventTriggerSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Event System\\remoteAnimatorEventTriggerSystem.cs",
+  "methods": [
+   {
+    "sig": "callRemoteEvent(string eventName)",
+    "line": 27
+   },
+   {
+    "sig": "setEnabledEventState(string eventName)",
+    "line": 58
+   },
+   {
+    "sig": "setDisabledEventState(string eventName)",
+    "line": 63
+   },
+   {
+    "sig": "setEnabledOrDisabledEventState(bool state, string eventName)",
+    "line": 68
+   }
+  ]
+ },
+ {
+  "type": "remoteEventActivator",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Event System\\remoteEventActivator.cs",
+  "methods": [
+   {
+    "sig": "callRemoteEvent(GameObject objectToCall)",
+    "line": 69
+   },
+   {
+    "sig": "setObjectToCall(GameObject objectToCall)",
+    "line": 76
+   },
+   {
+    "sig": "callEvent()",
+    "line": 81
+   },
+   {
+    "sig": "findPlayerOnScene()",
+    "line": 150
+   }
+  ]
+ },
+ {
+  "type": "remoteEventSearcher",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Event System\\remoteEventSearcher.cs",
+  "methods": [
+   {
+    "sig": "activateRemoteEventSearcher(string remoteEventSearcherName)",
+    "line": 36
+   }
+  ]
+ },
+ {
+  "type": "remoteEventSocket",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Event System\\remoteEventSocket.cs",
+  "methods": [
+   {
+    "sig": "getMainRemoteEventSystem()",
+    "line": 19
+   },
+   {
+    "sig": "isRemoteEventSocketEnabled()",
+    "line": 28
+   }
+  ]
+ },
+ {
+  "type": "remoteEventSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Event System\\remoteEventSystem.cs",
+  "methods": [
+   {
+    "sig": "callRemoveEvent(string eventName)",
+    "line": 59
+   },
+   {
+    "sig": "callRemoteEvent(string eventName)",
+    "line": 64
+   },
+   {
+    "sig": "callRemoteEventWithAmount(string eventName, float amount)",
+    "line": 97
+   },
+   {
+    "sig": "callRemoteEventWithBool(string eventName, bool state)",
+    "line": 130
+   },
+   {
+    "sig": "callRemoteEventWithGameObject(string eventName, GameObject objectToSend)",
+    "line": 163
+   },
+   {
+    "sig": "callRemoteEventWithTransform(string eventName, Transform transformToSend)",
+    "line": 196
+   },
+   {
+    "sig": "callRemoteEventWithString(string eventName, string strintParameter)",
+    "line": 229
+   },
+   {
+    "sig": "setEnabledEventState(string eventName)",
+    "line": 263
+   },
+   {
+    "sig": "setDisabledEventState(string eventName)",
+    "line": 268
+   },
+   {
+    "sig": "setEnabledOrDisabledEventState(bool state, string eventName)",
+    "line": 273
+   },
+   {
+    "sig": "setIgnoreEventActiveState(string eventName)",
+    "line": 291
+   },
+   {
+    "sig": "setIgnoreEventDeactiveState(string eventName)",
+    "line": 296
+   },
+   {
+    "sig": "setIgnoreEventState(bool state, string eventName)",
+    "line": 301
+   },
+   {
+    "sig": "setRemoteEventsEnabledState(bool state)",
+    "line": 310
+   },
+   {
+    "sig": "getRemoteEventSystemName()",
+    "line": 315
+   },
+   {
+    "sig": "getRemoteEventSystemID()",
+    "line": 320
+   },
+   {
+    "sig": "clearObjectsSearcResultList()",
+    "line": 326
+   },
+   {
+    "sig": "showObjectsBySearchName()",
+    "line": 345
+   },
+   {
+    "sig": "setEnabledEventStateFromEditor(string eventName)",
+    "line": 378
+   },
+   {
+    "sig": "setDisabledEventStateFromEditor(string eventName)",
+    "line": 385
+   },
+   {
+    "sig": "setRemoteEventsEnabledStateFromEditor(bool state)",
+    "line": 392
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 399
+   }
+  ]
+ }
+]

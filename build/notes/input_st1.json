@@ -1,0 +1,328 @@
+[
+ {
+  "type": "objectStatsSystem",
+  "file": "Stats System/Objects Stats/objectStatsSystem.cs",
+  "abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Stats System\\Objects Stats\\objectStatsSystem.cs",
+  "methods": [
+   {
+    "sig": "addObjectStatsToMainManager()",
+    "line": 38
+   },
+   {
+    "sig": "setMainCharacterGameObject(GameObject newObject)",
+    "line": 55
+   },
+   {
+    "sig": "checkMainCharacterGameObject()",
+    "line": 60
+   },
+   {
+    "sig": "getMainCharacterGameObject()",
+    "line": 73
+   },
+   {
+    "sig": "checkStatsStateOnLoad()",
+    "line": 78
+   },
+   {
+    "sig": "setStatsOnLoadWithDelay()",
+    "line": 89
+   },
+   {
+    "sig": "setStatsOnLoad()",
+    "line": 101
+   },
+   {
+    "sig": "setCurrentStatNameToSave(string newValue)",
+    "line": 123
+   },
+   {
+    "sig": "setCurrentFloatValueToSave(float newValue)",
+    "line": 128
+   },
+   {
+    "sig": "setCurrentBoolValueToSave(bool newValue)",
+    "line": 143
+   },
+   {
+    "sig": "checkEventOnStatsSave()",
+    "line": 158
+   }
+  ]
+ },
+ {
+  "type": "objectsStatsSystem",
+  "file": "Stats System/Objects Stats/objectsStatsSystem.cs",
+  "abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Stats System\\Objects Stats\\objectsStatsSystem.cs",
+  "methods": [
+   {
+    "sig": "getObjectStatsInfoTemplateDataList()",
+    "line": 28
+   },
+   {
+    "sig": "addObjectStatsSystem(objectStatsSystem newObjectStatsSystem)",
+    "line": 33
+   },
+   {
+    "sig": "getStatsFromObjectByName(string objectName)",
+    "line": 44
+   },
+   {
+    "sig": "objectCanBeUpgraded(string objectName)",
+    "line": 59
+   },
+   {
+    "sig": "increaseStat(string statName, float statExtraValue)",
+    "line": 74
+   },
+   {
+    "sig": "setObjectsStatsSystemEnabledState(bool state)",
+    "line": 106
+   },
+   {
+    "sig": "setObjectsStatsSystemEnabledStateFromEditor(bool state)",
+    "line": 111
+   }
+  ]
+ },
+ {
+  "type": "externalStatsManager",
+  "file": "Stats System/externalStatsManager.cs",
+  "abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Stats System\\externalStatsManager.cs",
+  "methods": [
+   {
+    "sig": "setTemporalStatName(string statName)",
+    "line": 13
+   },
+   {
+    "sig": "updatePlayerStateOfTemporalStat(float statExtraValue)",
+    "line": 20
+   },
+   {
+    "sig": "updateStatValueExternally(string statName, float newValue)",
+    "line": 31
+   },
+   {
+    "sig": "updateStatValueExternally(int statIndex, float newValue)",
+    "line": 38
+   }
+  ]
+ },
+ {
+  "type": "playerStatsSystem",
+  "file": "Stats System/playerStatsSystem.cs",
+  "abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Stats System\\playerStatsSystem.cs",
+  "methods": [
+   {
+    "sig": "initializeStatsValues()",
+    "line": 37
+   },
+   {
+    "sig": "setIsLoadingGameState(bool state)",
+    "line": 94
+   },
+   {
+    "sig": "isLoadingGameState()",
+    "line": 99
+   },
+   {
+    "sig": "getStatMaxAmountByIndex(int statIndex)",
+    "line": 104
+   },
+   {
+    "sig": "getStatMaxAmountByName(string statName)",
+    "line": 121
+   },
+   {
+    "sig": "isStatOnMaxAmount(string statName)",
+    "line": 152
+   },
+   {
+    "sig": "increasePlayerStatWithNameAndAmount(string statNameAndAmountString)",
+    "line": 189
+   },
+   {
+    "sig": "setTemporalStatName(string statName)",
+    "line": 208
+   },
+   {
+    "sig": "increasePlayerStateOfTemporalStat(float statExtraValue)",
+    "line": 213
+   },
+   {
+    "sig": "increasePlayerStatByMultiplier(string statName, float statMultiplier)",
+    "line": 222
+   },
+   {
+    "sig": "increasePlayerStat(string statName, float statExtraValue)",
+    "line": 233
+   },
+   {
+    "sig": "increaseExtraPlayerStat(string statName, float statExtraValue)",
+    "line": 264
+   },
+   {
+    "sig": "usePlayerStat(string statName, float statValueToUse)",
+    "line": 297
+   },
+   {
+    "sig": "usePlayerStatByIndex(int statIndex, float statValueToUse)",
+    "line": 328
+   },
+   {
+    "sig": "addOrRemovePlayerStatAmount(string statName, float amountToUse)",
+    "line": 341
+   },
+   {
+    "sig": "getStatName(int index)",
+    "line": 384
+   },
+   {
+    "sig": "getStatsNames()",
+    "line": 401
+   },
+   {
+    "sig": "getStatValue(string statName)",
+    "line": 412
+   },
+   {
+    "sig": "checkIfStatValueAvailable(string statName, int statAmount)",
+    "line": 429
+   },
+   {
+    "sig": "getStatValueByIndex(int statIndex)",
+    "line": 446
+   },
+   {
+    "sig": "getStatValueIndex(string statName)",
+    "line": 455
+   },
+   {
+    "sig": "updateStatValue(string statName, float newValue)",
+    "line": 472
+   },
+   {
+    "sig": "updateStatValueExternally(int statIndex, float newValue)",
+    "line": 501
+   },
+   {
+    "sig": "updateStatValueExternally(string statName, float newValue)",
+    "line": 506
+   },
+   {
+    "sig": "updateStatValue(int statIndex, float newValue)",
+    "line": 535
+   },
+   {
+    "sig": "enableOrDisableBoolPlayerStat(string statName, bool boolStateValue)",
+    "line": 540
+   },
+   {
+    "sig": "getBoolStatValue(string statName)",
+    "line": 567
+   },
+   {
+    "sig": "updateBoolStatValue(string statName, bool boolStateValue)",
+    "line": 584
+   },
+   {
+    "sig": "setPlayerStatsActiveState(bool state)",
+    "line": 603
+   },
+   {
+    "sig": "saveSettingsToTemplate()",
+    "line": 608
+   },
+   {
+    "sig": "loadSettingsFromTemplate(bool loadingFromEditor)",
+    "line": 637
+   },
+   {
+    "sig": "initializeAllStatValuesFromEditor()",
+    "line": 670
+   },
+   {
+    "sig": "initializeStatValueFromEditor(string statName, bool updateComponentValue)",
+    "line": 683
+   },
+   {
+    "sig": "updateStatValueFromEditor(string statName, float newValue)",
+    "line": 712
+   },
+   {
+    "sig": "setPlayerStatsActiveStateFromEditor(bool state)",
+    "line": 721
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 730
+   }
+  ]
+ },
+ {
+  "type": "showValuesOnScreenSystem",
+  "file": "Stats System/showValuesOnScreenSystem.cs",
+  "abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Stats System\\showValuesOnScreenSystem.cs",
+  "methods": [
+   {
+    "sig": "showInventoryObjectAmountByName()",
+    "line": 55
+   },
+   {
+    "sig": "showStatByName()",
+    "line": 66
+   },
+   {
+    "sig": "updateValueAmount(int IDValue, float newValue)",
+    "line": 77
+   },
+   {
+    "sig": "updateValueAmount(float newValue)",
+    "line": 82
+   }
+  ]
+ },
+ {
+  "type": "statType",
+  "file": "Stats System/statType.cs",
+  "abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Stats System\\statType.cs",
+  "methods": [
+   {
+    "sig": "eventToInitializeStat(float newValue)",
+    "line": 7
+   },
+   {
+    "sig": "eventToIncreaseStat(float newValue)",
+    "line": 12
+   },
+   {
+    "sig": "eventToUseStat(float newValue)",
+    "line": 17
+   },
+   {
+    "sig": "eventToAddAmount(float newValue)",
+    "line": 22
+   },
+   {
+    "sig": "eventToInitializeBoolStat(bool newValue)",
+    "line": 27
+   },
+   {
+    "sig": "eventToActivateBoolStat(bool newValue)",
+    "line": 32
+   },
+   {
+    "sig": "eventToInitializeStatOnComponent()",
+    "line": 37
+   },
+   {
+    "sig": "eventToInitializeBoolStatOnComponent()",
+    "line": 42
+   },
+   {
+    "sig": "updateStatAmountWithoutUpdatingStatManager(int statId, float amount)",
+    "line": 47
+   }
+  ]
+ }
+]

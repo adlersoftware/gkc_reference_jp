@@ -1,0 +1,612 @@
+[
+ {
+  "type": "playerController",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\playerController.cs",
+  "methods": [
+   {
+    "sig": "setDamageReactionPausedState(bool state)",
+    "line": 8731
+   },
+   {
+    "sig": "setPlayerUsingWeaponsState(bool state)",
+    "line": 8738
+   },
+   {
+    "sig": "isPlayerUsingWeapons()",
+    "line": 8743
+   },
+   {
+    "sig": "isPlayerUsingPowers()",
+    "line": 8752
+   },
+   {
+    "sig": "isPlayerUsingMeleeWeapons()",
+    "line": 8757
+   },
+   {
+    "sig": "isPlayerMeleeWeaponThrown()",
+    "line": 8762
+   },
+   {
+    "sig": "setPlayerMeleeWeaponThrownState(bool state)",
+    "line": 8767
+   },
+   {
+    "sig": "setPlayerUsingMeleeWeaponsState(bool state)",
+    "line": 8772
+   },
+   {
+    "sig": "setPlayerNavMeshEnabledState(bool state)",
+    "line": 8777
+   },
+   {
+    "sig": "isPlayerNavMeshEnabled()",
+    "line": 8788
+   },
+   {
+    "sig": "enableOrDisableDoubleJump(bool state)",
+    "line": 8793
+   },
+   {
+    "sig": "setMaxNumberJumpsInAir(float amount)",
+    "line": 8798
+   },
+   {
+    "sig": "enableOrDisableJump(bool state)",
+    "line": 8803
+   },
+   {
+    "sig": "setcanJumpActiveState(bool state)",
+    "line": 8808
+   },
+   {
+    "sig": "setJumpInputPausedState(bool state)",
+    "line": 8813
+   },
+   {
+    "sig": "setHoldJumpSlowDownFallEnabledState(bool state)",
+    "line": 8818
+   },
+   {
+    "sig": "setRunInputPausedState(bool state)",
+    "line": 8823
+   },
+   {
+    "sig": "setPhysicMaterialAssigmentPausedState(bool state)",
+    "line": 8828
+   },
+   {
+    "sig": "setUsingAbilityActiveState(bool state)",
+    "line": 8833
+   },
+   {
+    "sig": "isUsingAbilityActive()",
+    "line": 8838
+   },
+   {
+    "sig": "setCrouchInputPausedState(bool state)",
+    "line": 8843
+   },
+   {
+    "sig": "setHighFrictionMaterial()",
+    "line": 8848
+   },
+   {
+    "sig": "setZeroFrictionMaterial()",
+    "line": 8856
+   },
+   {
+    "sig": "playerCanRunNow()",
+    "line": 8864
+   },
+   {
+    "sig": "setNoAnimatorWalkMovementSpeed(float newValue, bool setOriginalValue)",
+    "line": 8870
+   },
+   {
+    "sig": "setNoAnimatorRunMovementSpeed(float newValue, bool setOriginalValue)",
+    "line": 8879
+   },
+   {
+    "sig": "setNoAnimatorCrouchMovementSpeed(float newValue, bool setOriginalValue)",
+    "line": 8888
+   },
+   {
+    "sig": "setNoAnimatorStrafeMovementSpeed(float newValue, bool setOriginalValue)",
+    "line": 8897
+   },
+   {
+    "sig": "setNoAnimatorWalkBackwardMovementSpeed(float newValue, bool setOriginalValue)",
+    "line": 8906
+   },
+   {
+    "sig": "setNoAnimatorRunBackwardMovementSpeed(float newValue, bool setOriginalValue)",
+    "line": 8915
+   },
+   {
+    "sig": "setNoAnimatorCrouchBackwardMovementSpeed(float newValue, bool setOriginalValue)",
+    "line": 8924
+   },
+   {
+    "sig": "setNoAnimatorStrafeBackwardMovementSpeed(float newValue, bool setOriginalValue)",
+    "line": 8933
+   },
+   {
+    "sig": "setNoAnimatorCanRunState(bool newState, bool setOriginalValue)",
+    "line": 8942
+   },
+   {
+    "sig": "setNoAnimatorGeneralMovementSpeed(float newValue, bool setOriginalValue)",
+    "line": 8951
+   },
+   {
+    "sig": "setNoAnimatorSpeedValue(float newValue)",
+    "line": 8963
+   },
+   {
+    "sig": "setAnimatorCanRunState(bool newState, bool setOriginalValue)",
+    "line": 8968
+   },
+   {
+    "sig": "setAnimatorGeneralMovementSpeed(float newValue, bool setOriginalValue)",
+    "line": 8977
+   },
+   {
+    "sig": "hasToLookInCameraDirection()",
+    "line": 8986
+   },
+   {
+    "sig": "setIgnoreLookInCameraDirectionOnFreeFireActiveState(bool state)",
+    "line": 8997
+   },
+   {
+    "sig": "hasToLookInCameraDirectionOnFreeFire()",
+    "line": 9002
+   },
+   {
+    "sig": "isPlayerLookingAtTarget()",
+    "line": 9011
+   },
+   {
+    "sig": "istargetToLookLocated()",
+    "line": 9016
+   },
+   {
+    "sig": "getCurrentTargetToLook()",
+    "line": 9021
+   },
+   {
+    "sig": "getOriginalLockedCameraPivotPosition()",
+    "line": 9026
+   },
+   {
+    "sig": "setCheckToKeepWeaponAfterAimingWeaponFromShootingState(bool state)",
+    "line": 9031
+   },
+   {
+    "sig": "isCheckToKeepWeaponAfterAimingWeaponFromShooting()",
+    "line": 9040
+   },
+   {
+    "sig": "setLookAlwaysInCameraDirectionState(bool state)",
+    "line": 9045
+   },
+   {
+    "sig": "isLookAlwaysInCameraDirectionActive()",
+    "line": 9050
+   },
+   {
+    "sig": "setOriginalLookAlwaysInCameraDirectionState()",
+    "line": 9055
+   },
+   {
+    "sig": "setLookInCameraDirectionIfLookingAtTargetState(bool state)",
+    "line": 9066
+   },
+   {
+    "sig": "setLookOnlyIfMovingState(bool state)",
+    "line": 9071
+   },
+   {
+    "sig": "setOriginalLookOnlyIfMovingState()",
+    "line": 9076
+   },
+   {
+    "sig": "activateOrDeactivateStrafeModeDuringActionSystem(bool state)",
+    "line": 9087
+   },
+   {
+    "sig": "activateOrDeactivateStrafeMode(bool state)",
+    "line": 9096
+   },
+   {
+    "sig": "activateStrafeMode()",
+    "line": 9115
+   },
+   {
+    "sig": "deactivateStrafeMode()",
+    "line": 9122
+   },
+   {
+    "sig": "setZeroGravityModeOnState(bool state)",
+    "line": 9129
+   },
+   {
+    "sig": "setPushPlayerWhenZeroGravityModeIsEnabledState(bool state)",
+    "line": 9158
+   },
+   {
+    "sig": "isPlayerOnZeroGravityMode()",
+    "line": 9163
+   },
+   {
+    "sig": "changeZeroGravityMovementVelocity(bool value)",
+    "line": 9168
+   },
+   {
+    "sig": "setCheckOnGrundStatePausedFFOrZGState(bool state)",
+    "line": 9183
+   },
+   {
+    "sig": "setIgnoreSetCheckOnGrundStatePausedFFOrZGStateActive(bool state)",
+    "line": 9194
+   },
+   {
+    "sig": "setcheckOnGroundStatePausedState(bool state)",
+    "line": 9199
+   },
+   {
+    "sig": "isPauseCheckOnGroundStateZGActive()",
+    "line": 9204
+   },
+   {
+    "sig": "setfreeFloatingModeOnState(bool state)",
+    "line": 9209
+   },
+   {
+    "sig": "enableOrDisableIKSystemManagerState(bool state)",
+    "line": 9236
+   },
+   {
+    "sig": "setIKBodyPausedState(bool state)",
+    "line": 9241
+   },
+   {
+    "sig": "isPlayerOnFreeFloatingMode()",
+    "line": 9246
+   },
+   {
+    "sig": "changeFreeFloatingMovementVelocity(bool value)",
+    "line": 9251
+   },
+   {
+    "sig": "changeSprintFovThirdPerson(bool value)",
+    "line": 9266
+   },
+   {
+    "sig": "isPlayerOnFFOrZeroGravityModeOn()",
+    "line": 9275
+   },
+   {
+    "sig": "isMovementSpeedIncreased()",
+    "line": 9280
+   },
+   {
+    "sig": "getCharacterHeight()",
+    "line": 9285
+   },
+   {
+    "sig": "getVerticalSpeed()",
+    "line": 9290
+   },
+   {
+    "sig": "getCurrentSurfaceHitAngle()",
+    "line": 9295
+   },
+   {
+    "sig": "setWalkSpeedValue(float newValue)",
+    "line": 9300
+   },
+   {
+    "sig": "setOriginalWalkSpeed()",
+    "line": 9305
+   },
+   {
+    "sig": "setWalkByDefaultState(bool state)",
+    "line": 9310
+   },
+   {
+    "sig": "setIncreaseMovementSpeedState(bool state)",
+    "line": 9319
+   },
+   {
+    "sig": "setIncreaseWalkSpeedValue(float newValue)",
+    "line": 9328
+   },
+   {
+    "sig": "setIncreaseWalkSpeedEnabled(bool state)",
+    "line": 9339
+   },
+   {
+    "sig": "setOriginalIncreaseWalkSpeedEnabledValue()",
+    "line": 9346
+   },
+   {
+    "sig": "setNewStationaryTurnSpeedValue(float newValue)",
+    "line": 9351
+   },
+   {
+    "sig": "setOriginalStationaryTurnSpeed()",
+    "line": 9356
+   },
+   {
+    "sig": "setStairsValues(float stairsMin, float stairsMax, float stairsAdherence)",
+    "line": 9361
+   },
+   {
+    "sig": "setUsingExternalCharacterMeshListState(bool state)",
+    "line": 9372
+   },
+   {
+    "sig": "setExternalCharacterMeshList(List<GameObject> newList)",
+    "line": 9377
+   },
+   {
+    "sig": "setCharacterMeshGameObjectStateOnlyIfThirdPersonActive(bool state)",
+    "line": 9382
+   },
+   {
+    "sig": "setExternalCharacterMeshListGameObjectState(bool state)",
+    "line": 9391
+   },
+   {
+    "sig": "setCharacterMeshGameObjectState(bool state)",
+    "line": 9406
+   },
+   {
+    "sig": "setCharacterMeshesListToDisableOnEventState(bool state)",
+    "line": 9466
+   },
+   {
+    "sig": "setUsingGenericModelActiveState(bool state)",
+    "line": 9471
+   },
+   {
+    "sig": "isUsingGenericModelActive()",
+    "line": 9476
+   },
+   {
+    "sig": "setExtraHeightDiffRaycastRadius(float newValue)",
+    "line": 9481
+   },
+   {
+    "sig": "setCustomMaxStepHeight(float newValue)",
+    "line": 9486
+   },
+   {
+    "sig": "setNewRayDistance(float newValue)",
+    "line": 9491
+   },
+   {
+    "sig": "setOriginalRayDistance()",
+    "line": 9496
+   },
+   {
+    "sig": "getGravityCenter()",
+    "line": 9501
+   },
+   {
+    "sig": "isUsingRegularGravity()",
+    "line": 9506
+   },
+   {
+    "sig": "getCharacterMeshGameObject()",
+    "line": 9511
+   },
+   {
+    "sig": "getCharacterHumanBone(HumanBodyBones boneToFind)",
+    "line": 9516
+   },
+   {
+    "sig": "getRightHandTransform()",
+    "line": 9521
+   },
+   {
+    "sig": "getLeftHandTransform()",
+    "line": 9532
+   },
+   {
+    "sig": "checkPlayerIsNotCarringWeapons()",
+    "line": 9543
+   },
+   {
+    "sig": "getCharacterAnimator()",
+    "line": 9552
+   },
+   {
+    "sig": "setNewRuntimeAnimatorController(RuntimeAnimatorController newRuntimeAnimatorController)",
+    "line": 9557
+   },
+   {
+    "sig": "setAnimatorState(bool state)",
+    "line": 9564
+   },
+   {
+    "sig": "resetAnimator()",
+    "line": 9569
+   },
+   {
+    "sig": "resetAnimatorEvenIfFullBodyAwarenessActive()",
+    "line": 9578
+   },
+   {
+    "sig": "setAnimatorUnscaledTimeState(bool state)",
+    "line": 9589
+   },
+   {
+    "sig": "playerCrossFadeInFixedTime(string actionName)",
+    "line": 9598
+   },
+   {
+    "sig": "setAnimatorLayerWeight(string animatorLayerName, float animatorLayerWeight)",
+    "line": 9603
+   },
+   {
+    "sig": "enableAnimatorLayerWeight(string animatorLayerName)",
+    "line": 9608
+   },
+   {
+    "sig": "disableAnimatorLayerWeight(string animatorLayerName)",
+    "line": 9613
+   },
+   {
+    "sig": "getPlayerInput()",
+    "line": 9618
+   },
+   {
+    "sig": "set3dOr2_5dWorldType(bool movingOn3dWorld)",
+    "line": 9623
+   },
+   {
+    "sig": "setMoveInXAxisOn2_5dState(bool state)",
+    "line": 9632
+   },
+   {
+    "sig": "isMoveInXAxisOn2_5d()",
+    "line": 9637
+   },
+   {
+    "sig": "isPlayerMovingOn3dWorld()",
+    "line": 9642
+   },
+   {
+    "sig": "isPlayerMovingOn2_5dWorld()",
+    "line": 9647
+   },
+   {
+    "sig": "isPlayerLookingAtRightOn2_5d()",
+    "line": 9652
+   },
+   {
+    "sig": "setFollowSplinePathActiveState(bool state)",
+    "line": 9665
+   },
+   {
+    "sig": "isPlayerSetAsChildOfParent()",
+    "line": 9670
+   },
+   {
+    "sig": "getRigidbody()",
+    "line": 9675
+   },
+   {
+    "sig": "setPlayerSetAsChildOfParentState(bool state)",
+    "line": 9680
+   },
+   {
+    "sig": "setHeadTrackCanBeUsedState(bool state)",
+    "line": 9685
+   },
+   {
+    "sig": "canHeadTrackBeUsed()",
+    "line": 9690
+   },
+   {
+    "sig": "setAddExtraRotationPausedState(bool state)",
+    "line": 9695
+   },
+   {
+    "sig": "setAutoTurnSpeed(float newValue)",
+    "line": 9700
+   },
+   {
+    "sig": "setAimTurnSpeed(float newValue)",
+    "line": 9705
+   },
+   {
+    "sig": "updateLandMark()",
+    "line": 9710
+   },
+   {
+    "sig": "setUseLandMarkState(bool state)",
+    "line": 9779
+   },
+   {
+    "sig": "rotateCharacterTowardDirection(Transform directionTransform, float minRotationAngle, float minRotationAmount, float maxRotationAmount)",
+    "line": 9784
+   },
+   {
+    "sig": "stopRotateCharacterTowardDirectionCoroutine()",
+    "line": 9791
+   },
+   {
+    "sig": "isTurnBasedCombatActionActive()",
+    "line": 9869
+   },
+   {
+    "sig": "setTurnBasedCombatActionActiveState(bool state)",
+    "line": 9874
+   },
+   {
+    "sig": "isTerrainDetected()",
+    "line": 9879
+   },
+   {
+    "sig": "setTerrainDetectedState(bool state)",
+    "line": 9884
+   },
+   {
+    "sig": "destroyCharacterAtOnce()",
+    "line": 9889
+   },
+   {
+    "sig": "setCharacterMeshGameObject(GameObject characterMesh)",
+    "line": 9897
+   },
+   {
+    "sig": "setStrafeModeFromEditor(bool state)",
+    "line": 9904
+   },
+   {
+    "sig": "setCrouchSlidingEnabledStateFromEditor(bool state)",
+    "line": 9913
+   },
+   {
+    "sig": "setAirDashEnabledStateFromEditor(bool state)",
+    "line": 9920
+   },
+   {
+    "sig": "setWallRunningEnabledStateFromEditor(bool state)",
+    "line": 9927
+   },
+   {
+    "sig": "setUseObstacleDetectionToAvoidMovementStateFromEditor(bool state)",
+    "line": 9934
+   },
+   {
+    "sig": "setCheckQuickMovementTurn180DegreesOnRunStateFromEditor(bool state)",
+    "line": 9941
+   },
+   {
+    "sig": "enableOrDisableDoubleJumpFromEditor(bool state)",
+    "line": 9948
+   },
+   {
+    "sig": "setUseLandMarkStateFromEditor(bool state)",
+    "line": 9955
+   },
+   {
+    "sig": "setSprintEnabledStateFromEditor(bool state)",
+    "line": 9962
+   },
+   {
+    "sig": "setIgnoreNewGroundAdherenceActiveState(bool state)",
+    "line": 10394
+   },
+   {
+    "sig": "setInoreInputOnNewGroundAdherenceActive(bool state)",
+    "line": 10400
+   }
+  ]
+ }
+]

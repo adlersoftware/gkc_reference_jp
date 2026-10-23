@@ -1,0 +1,172 @@
+[
+  {
+    "type": "airAttackToLandSystem",
+    "summary": "空中からの攻撃で地面へ落下させる処理を制御するコンポーネント。開始/終了イベントと下向きレイキャストによる地面検出を持つ。",
+    "methods": {
+      "activateAirAttackToLand()": "前回のコルーチンを止めて落下を再開し、地面を検出するまで`downForceAmount`の下向き力を加え、前後イベントを発火する。"
+    }
+  },
+  {
+    "type": "cuttingModeSystem",
+    "summary": "スライス用のカットモードを管理し、パネル回転・カメラ・アニメータ・スタミナ・バレットタイムを連動させる。",
+    "methods": {
+      "setSliceInputPausedForStaminaState(bool state)": "スタミナ不足で斬撃入力を止めるかどうかのフラグ`sliceInputPausedForStamina`を設定するだけ。",
+      "inputToggleCameraRotation()": "カットモード中かつ`canToggleCameraRotation`が有効なとき、パネル回転とカメラ回転状態を反転させる。",
+      "inputActivateCut()": "カットモード中ならスタミナを消費して斬撃コルーチンを開始し、パーティクルと切断方向を180度反転して`eventOnCutting`を呼ぶ。",
+      "setCuttingModeActiveState(bool state)": "カットモードを開始/終了し、パネル表示・カメラ状態・アニメータ・移動可否・バレットタイム・イベントをまとめて切り替える。",
+      "checkSetBulletTime()": "`setBulletTime`が有効ならコルーチンを止め、モード中は遅延後に開始、終了時は即解除する。",
+      "stopCheckSetBulletTimeCoroutine()": "バレットタイム設定用コルーチン`bulletTimeCoroutine`を停止するだけ。",
+      "stopActivateCutCoroutine()": "斬撃パネル移動コルーチン`moveReferencePanelOnCutCoroutine`を停止するだけ。",
+      "setGeneralStaminaUseMultiplierValue(float newValue)": "斬撃時のスタミナ消費に掛ける`generalStaminaUseMultiplier`を設定するだけ。",
+      "setUseStaminaOnSliceEnabledState(bool state)": "斬撃でスタミナを消費するか`useStaminaOnSliceEnabled`を設定するだけ。"
+    }
+  },
+  {
+    "type": "dualWieldMeleeWeaponObjectSystem",
+    "summary": "左手に持たせる二刀流用の近接武器オブジェクトとその`hitCombat`の攻撃判定を管理する。",
+    "methods": {
+      "enableDualWieldMeleeweapobObject(grabbedObjectMeleeAttackSystem newGrabbedObjectMeleeAttackSystem, bool useEventsOnDamageDetected)": "左手指定位置に武器を親子付けし、`hitCombat`のレイヤー/タグ/コライダーを設定して元サイズを保存し、表示する。",
+      "enableOrDisableDualWieldMeleeWeaponObject(bool state)": "`meleeWeaponObject`のアクティブ状態を指定値と異なる場合のみ切り替えるだけ。",
+      "disableDualWieldMeleeweapobObject()": "`hitCombat`のコライダーを無効にし、武器を`meleeWeaponParent`へ戻して位置と回転を基準値に戻す。",
+      "setHitCombatScale(Vector3 newScale)": "`hitCombat`のBoxColliderの`size`を指定値に設定するだけ。",
+      "setHitCombatScaleMultiplier(float newMultiplier)": "`hitCombat`のBoxColliderの`size`に指定倍率を掛けるだけ。",
+      "setHitCombatOffset(Vector3 newValue)": "`hitCombat`のBoxColliderの`center`を指定値に設定するだけ。",
+      "setOriginalHitCombatScale()": "保存しておいた元のコライダーサイズへ`setHitCombatScale`で戻すだけ。",
+      "setOriginalHitCombatOffset()": "保存しておいた元のコライダー中心へ`setHitCombatOffset`で戻すだけ。"
+    }
+  },
+  {
+    "type": "hiddenMeleeSurface",
+    "summary": "斬撃サーフェスを隠しサーフェスとして扱うためのフラグを保持する小型コンポーネント。",
+    "methods": {
+      "isSurfaceEnabled()": "`hiddenSurfaceEnabled`の値をそのまま返すだけ。",
+      "setHiddenSurfaceEnabledState(bool state)": "`hiddenSurfaceEnabled`を設定するだけ。"
+    }
+  },
+  {
+    "type": "meleeCombatAttackStartState",
+    "summary": "ダメージ判定トリガーのリセットを許可するフラグを持つ小型コンポーネント。",
+    "methods": {
+      "resetActivateDamageTriggerCoroutine()": "`attackResetEnabled`が真なら`mainGrabbedObjectMeleeAttackSystem`の同名メソッドを呼ぶだけ。"
+    }
+  },
+  {
+    "type": "meleeShieldObjectSystem",
+    "summary": "盾オブジェクトの所持者と耐久値を管理し、ブロック時の耐久減少や修理・破壊を`durabilityInfo`へ委譲する。",
+    "methods": {
+      "setCurrentCharacter(GameObject newObject)": "盾を所持するキャラクタ参照`currentCharacter`を設定するだけ。",
+      "getCurrentCharacter()": "`currentCharacter`をそのまま返すだけ。",
+      "checkDurabilityOnBlockWithShield(float extraMultiplier)": "耐久使用が有効なら`durabilityUsedOnBlock`×`extraMultiplier`を減らし、0以下になったらtrueを返す。",
+      "updateDurabilityAmountState()": "耐久使用が有効なときだけ`mainDurabilityInfo`の耐久値状態を更新する。",
+      "getDurabilityAmount()": "耐久使用が有効なら現在の耐久値を返し、無効なら-1を返す。",
+      "initializeDurabilityValue(float newAmount, int currentObjectIndex)": "耐久使用が有効なら耐久値を`newAmount`で初期化し、インベントリ番号`currentObjectIndex`も設定する。",
+      "setInventoryObjectIndex(int currentObjectIndex)": "耐久使用が有効なら`mainDurabilityInfo`のインベントリ番号を設定するだけ。",
+      "repairObjectFully()": "耐久使用が有効なら`mainDurabilityInfo`で耐久値を全回復する。",
+      "breakFullDurabilityOnCurrentWeapon()": "耐久使用が有効なら`mainDurabilityInfo`で耐久値を0まで削る。",
+      "setUseObjectDurabilityOnBlockValue(bool newValue)": "ブロックで耐久値を消費するか`useObjectDurabilityOnBlock`を設定するだけ。",
+      "setDurabilityUsedOnBlockValue(float newValue)": "ブロック1回あたりの耐久消費`durabilityUsedOnBlock`を設定するだけ。",
+      "setUseObjectDurabilityOnBlockValueFromEditor(bool newValue)": "値を設定したうえで`GKC_Utils.updateComponent`とシーンのダーティ更新を行うエディタ用。",
+      "setDurabilityUsedOnBlockValueFromEditor(float newValue)": "耐久消費値を設定したうえで`GKC_Utils.updateComponent`とシーンのダーティ更新を行うエディタ用。",
+      "setObjectNameFromEditor(string newName)": "耐久使用が有効なら`mainDurabilityInfo`へオブジェクト名をエディタから設定する。",
+      "setDurabilityAmountFromEditor(float newValue)": "耐久使用が有効なら`mainDurabilityInfo`の現在耐久値をエディタから設定する。",
+      "setMaxDurabilityAmountFromEditor(float newValue)": "耐久使用が有効なら`mainDurabilityInfo`の最大耐久値をエディタから設定する。"
+    }
+  },
+  {
+    "type": "meleeUISystem",
+    "summary": "近接武器の名前とアイコンを表示するUIパネルの表示切替とテキスト更新を担当する。",
+    "methods": {
+      "setCurrentMeleeWeaponName(string newName)": "武器名を保持し、ローカライズマネージャ経由のテキストを`meleeWeaponText`へ表示する。",
+      "setCurrrentMeleeWeaponIcon(Texture newIcon)": "`meleeWeaponImage`のテクスチャを指定アイコンに差し替えるだけ。",
+      "enableOrDisableMeleeUI(bool state)": "UI無効時や状態が同じなら何もせず、パネル表示を切り替えて有効/無効イベントを発火する。"
+    }
+  },
+  {
+    "type": "meleeWeaponAttackListInfoSocket",
+    "summary": "武器の攻撃情報とテンプレートのコピーを`grabPhysicalObjectMeleeAttackSystem`へ仲介するソケット。",
+    "methods": {
+      "copyWeaponInfoToTemplate(bool settingInfoOnEditorTime)": "`mainGrabPhysicalObjectMeleeAttackSystem`に攻撃情報を渡し、テンプレートへ情報をコピーさせる。",
+      "copyTemplateToWeaponAttackInfo(bool settingInfoOnEditorTime)": "同じく攻撃情報を渡したうえで、テンプレートから武器の攻撃情報へ逆コピーさせる。"
+    }
+  },
+  {
+    "type": "objectToFollowOnThrowMeleeWeapon",
+    "summary": "投擲した近接武器が追従する対象トランスフォームを保持する。",
+    "methods": {
+      "getMainObjectToFollow()": "`mainObjectToFollow`が未設定なら自身のトランスフォームを入れて返す。",
+      "setComponentedAddedTemporalyState(bool state)": "一時的にコンポーネントを追加したか`componentedAddedTemporaly`を設定するだけ。"
+    }
+  },
+  {
+    "type": "objectToUseMatchTargetSystem",
+    "summary": "トリガー内に入ったキャラクタを`matchPlayerToTargetSystem`の周囲リストへ登録/解除する。",
+    "methods": {
+      "removeAllMatchTargetList()": "登録済みの全`matchPlayerToTargetSystem`から自身を周囲リストから外し、内部リストを空にする。"
+    }
+  },
+  {
+    "type": "perfectDodgeSystem",
+    "summary": "回避成功時に周囲のキャラクタとプレイヤーを一定時間減速させる演出を制御し、開始/終了イベントを発火する。",
+    "methods": {
+      "activatePerfectDodgeToCharacter(GameObject newCharacter)": "対象キャラクタの`playerComponentsManager`をリストへ追加し、単体指定モードで`checkState`を実行する。",
+      "activatePerfectDodge()": "単体指定なしで`checkState`を呼び、全キャラクタの減速と自プレイヤーの速度低下を発動する。"
+    }
+  },
+  {
+    "type": "runtimeShatterRecursive",
+    "summary": "対象オブジェクトを指定回数だけ再帰的に粉砕し、生成した破片にコライダーと剛体を付ける。",
+    "methods": {
+      "activateShatterOnObject()": "対象を親から外し、`numberOfShatters`回`randomShatter`を実行してから破砕イベントを発火する。",
+      "randomShatter()": "現在の破片リストを1回ずつ粉砕し、元オブジェクトを除去して生成された破片をリストへ追加する。",
+      "addObjectsToShatter(GameObject newObject)": "未登録の場合のみ`objectsToShatter`へ追加するだけ。",
+      "randomShatterSingle(GameObject objectToShatter)": "カスタム/ランダム半径の位置で`shatterObject`を呼び、破片にコライダー・剛体・爆発力・タグ/レイヤーを設定して返す。",
+      "checkEventOnShatter()": "`useEventOnShatter`が有効なときだけ`eventOnShatter`を発火する。"
+    }
+  },
+  {
+    "type": "searchMeleeSurfaceSystem",
+    "summary": "近接攻撃時に足元や隠しサーフェスを探索し、サーフェス情報を攻撃システムへ渡す。",
+    "methods": {
+      "checkSurfaceDown()": "下方向のレイキャストでサーフェスを探す`checkSurfaceType(true)`を呼ぶだけ。",
+      "checkHiddenSurfacesDown()": "レイキャストを使わず近距離の`hiddenMeleeSurface`を探す`checkSurfaceType(false)`を呼ぶ。",
+      "checkSurface()": "サーフェス名・リモートイベント・検出イベントを処理し、`checkSurfaceFoundOnAttackToProcess`で攻撃側へ渡す。"
+    }
+  },
+  {
+    "type": "simpleSliceSystem",
+    "summary": "キャラクタやオブジェクト単体のスライス処理を`sliceSystemUtils`へ委譲する簡易スライスコンポーネント。",
+    "methods": {
+      "getRandomString()": "保持している`randomString`を返すだけ。",
+      "setRandomString(string newValue)": "`randomString`が空のときだけ指定文字列を設定する。",
+      "setRandomString()": "`setCustomIDOnSliceSpieces`が有効で空のとき、10〜20文字のランダムIDを生成する。",
+      "destroyAllSlicedPiecesByRandomString()": "ID設定が有効で`randomString`があるとき、同じIDの切断片をまとめて削除する。",
+      "initializeValuesOnHackableComponent()": "未初期化なら`sliceSystemUtils`で初期化し、`sliceInitialized`をtrueにする。",
+      "setDestructionPending(bool state)": "`sliceSystemUtils.setDestructionPending`に破壊待ちフラグを渡すだけ。",
+      "activateSlice(Collider objectCollider, Vector3 newNormalInWorldSpaceValue, Vector3 positionInWorldSpace, Vector3 slicePosition, bool updateLastObjectSpeed, Vector3 lastSpeed)": "`useParticlesOnSlice`ならパーティクルを出し、当たり位置を求めて`sliceCharacter`で切断する。",
+      "searchBodyParts()": "非トリガーのコライダー付き剛体を部位として集め、`severables`配列を作り直す。",
+      "setTagOnBodyParts(string newTag)": "`severables`内の全トランスフォームのタグを指定タグに変更する。",
+      "getMainAlternatePrefab()": "`alternatePrefab`を返すだけ。",
+      "getSeverables()": "`severables`配列を返すだけ。",
+      "setNewSeverablesList(GameObject newObject)": "指定オブジェクトの`genericRagdollBuilder`のボーンから`severables`を作り直す。",
+      "createRagdollPrefab()": "`alternatePrefab`が未設定ならパスを取得してスライス用ラグドールプレハブを生成する。",
+      "setSliceEnabledState(bool state)": "`sliceEnabled`を設定し、有効化時は初期化を実行する。",
+      "setMainSurfaceToSlice(surfaceToSlice newSurface)": "`mainSurfaceToSlice`を差し替えるだけ。",
+      "setSliceEnabledStateFromEditor(bool state)": "`sliceEnabled`を設定して`GKC_Utils.updateComponent`とダーティ更新を行うエディタ用。"
+    }
+  },
+  {
+    "type": "sliceSystem",
+    "summary": "オーバーラップボックスで対象を検出してメッシュを切断し、破片の剛体・力・ダメージ・イベントを処理する中核コンポーネント。",
+    "methods": {
+      "setCustomSliceTransformValues(string sliceInfoName)": "`sliceTransformValuesInfoList`から名前一致かつ有効な設定を探し、その切断値で`activateCut`を実行する。",
+      "setCustomCutTransformValues(Vector3 newCutOverlapBoxSize, Transform newcutPositionTransform, Transform newCutDirectionTransform, Transform newPlaneDefiner1, Transform newPlaneDefiner2, Transform newPlaneDefiner3)": "カスタム切断用の位置・回転・方向・平面定義3点・ボックスサイズを内部値へ取り込み、以降の`activateCut`で使う。",
+      "activateCutExternally()": "外部起点フラグを立ててから`activateCut`を呼び、バレットタイム判定を通常斬撃と区別する。",
+      "activateCut()": "`OverlapBox`で検出した各コライダーを`processObject`へ渡し、検出有無と最終切断時刻を記録する。",
+      "getLastCollidersListDetected()": "前回の検出コライダーをGameObjectリストとして返し、2回目以降は空を返す。",
+      "processObject(GameObject obj, Collider objectCollider, Vector3 slicePosition)": "無視リストと`surfaceToSlice`の可否を判定し、切断可なら`sliceCurrentObject`、不可ならダメージや力を適用する。",
+      "sliceCurrentObject(GameObject obj, Collider objectCollider, Material crossSectionMaterial, Vector3 slicePosition)": "キャラクタは死亡時にラグドール化して`activateSlice`、通常物は2分割し破片に剛体とコライダーを付ける。",
+      "checkForceToApplyOnObject(GameObject objectToDamage)": "切断方向`currentCutDirection`×`addForceMultiplier`の力を質量に掛け、車両には専用倍率を適用して加える。",
+      "anyObjectDetectedOnLastSlice()": "直前の`activateCut`で切断対象が検出されたか`objectsDetectedOnLastSlice`を返すだけ。"
+    }
+  }
+]

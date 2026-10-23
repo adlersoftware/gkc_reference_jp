@@ -1,0 +1,533 @@
+[
+ {
+  "type": "playerStatesManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\playerStatesManager.cs",
+  "source": "Player/playerStatesManager.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "changeModeByInputEnabled",
+    "label": "",
+    "section": "Player Modes Settings"
+   },
+   {
+    "field": "changeModeEnabled",
+    "label": "",
+    "section": "Player Modes Settings"
+   },
+   {
+    "field": "openPlayerModeMenuEnabled",
+    "label": "",
+    "section": "Player Control Settings"
+   },
+   {
+    "field": "changePlayerControlEnabled",
+    "label": "",
+    "section": "Player Control Settings"
+   },
+   {
+    "field": "canSetRegularModeActive",
+    "label": "",
+    "section": "Player Control Settings"
+   },
+   {
+    "field": "closeMenuWhenModeSelected",
+    "label": "",
+    "section": "Player Control Settings"
+   },
+   {
+    "field": "useBlurUIPanel",
+    "label": "",
+    "section": "Player Control Settings"
+   },
+   {
+    "field": "switchBetweenPlayerControlsEnabled",
+    "label": "",
+    "section": "Player Control Settings"
+   },
+   {
+    "field": "menuPanelName",
+    "label": "",
+    "section": "Player Control Settings"
+   },
+   {
+    "field": "useDefaultPlayersMode",
+    "label": "",
+    "section": "Player's Mode and Control Settings"
+   },
+   {
+    "field": "defaultPlayersModeName",
+    "label": "",
+    "section": "Player's Mode and Control Settings"
+   },
+   {
+    "field": "defaultControlStateName",
+    "label": "",
+    "section": "Player's Mode and Control Settings"
+   },
+   {
+    "field": "useRandomPlayerModeOnStart",
+    "label": "",
+    "section": "Player's Mode and Control Settings"
+   },
+   {
+    "field": "useRandomPlayerModeOnStartFromCustomList",
+    "label": "",
+    "section": "Player's Mode and Control Settings"
+   },
+   {
+    "field": "eventToEnableComponents",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "eventToDisableComponents",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "useEventIfSystemDisabled",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "eventIfSystemDisabled",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "currentPlayerModeText",
+    "label": "",
+    "section": "Player Components"
+   },
+   {
+    "field": "pauseManager",
+    "label": "",
+    "section": "Player Components"
+   },
+   {
+    "field": "playerControlModeMenu",
+    "label": "",
+    "section": "Player Components"
+   },
+   {
+    "field": "currentPlayerControlModeImage",
+    "label": "",
+    "section": "Player Components"
+   },
+   {
+    "field": "powersManager",
+    "label": "",
+    "section": "Player Components"
+   },
+   {
+    "field": "grabManager",
+    "label": "",
+    "section": "Player Components"
+   },
+   {
+    "field": "scannerManager",
+    "label": "",
+    "section": "Player Components"
+   },
+   {
+    "field": "playerManager",
+    "label": "",
+    "section": "Player Components"
+   },
+   {
+    "field": "playerCameraManager",
+    "label": "",
+    "section": "Player Components"
+   },
+   {
+    "field": "gravityManager",
+    "label": "",
+    "section": "Player Components"
+   },
+   {
+    "field": "weaponsManager",
+    "label": "",
+    "section": "Player Components"
+   },
+   {
+    "field": "combatManager",
+    "label": "",
+    "section": "Player Components"
+   },
+   {
+    "field": "IKSystemManager",
+    "label": "",
+    "section": "Player Components"
+   },
+   {
+    "field": "usingDevicesManager",
+    "label": "",
+    "section": "Player Components"
+   },
+   {
+    "field": "overrideElementManager",
+    "label": "",
+    "section": "Player Components"
+   },
+   {
+    "field": "headBobManager",
+    "label": "",
+    "section": "Player Components"
+   },
+   {
+    "field": "damageInScreenManager",
+    "label": "",
+    "section": "Player Components"
+   },
+   {
+    "field": "mainUpperBodyRotationSystem",
+    "label": "",
+    "section": "Player Components"
+   },
+   {
+    "field": "mainFindObjectivesSystem",
+    "label": "",
+    "section": "Player Components"
+   },
+   {
+    "field": "mainAINavMesh",
+    "label": "",
+    "section": "Player Components"
+   },
+   {
+    "field": "mainOxygenSystem",
+    "label": "",
+    "section": "Player Components"
+   },
+   {
+    "field": "mainPlayerAbilitiesSystem",
+    "label": "",
+    "section": "Player Components"
+   }
+  ]
+ },
+ {
+  "type": "playerStatsSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Stats System\\playerStatsSystem.cs",
+  "source": "Stats System/playerStatsSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "playerStatsActive",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "initializeStatsValuesAtStartActive",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "initializeStatsOnlyWhenLoadingGame",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "saveCurrentPlayerStatsToSaveFile",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useByAI",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "initializeValuesWhenNotLoadingFromTemplate",
+    "label": "",
+    "section": "Stats Settings Template"
+   },
+   {
+    "field": "mainStatsSettingsTemplate",
+    "label": "",
+    "section": "Stats Settings Template"
+   }
+  ]
+ },
+ {
+  "type": "playerTutorialSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Tutorial System\\playerTutorialSystem.cs",
+  "source": "Tutorial System/playerTutorialSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "tutorialsEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "instantiateTutorialPanelIfNotFound",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "minTimeToPressKey",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "tutorialOpened",
+    "label": "",
+    "section": "Tutorial State (Debug)"
+   },
+   {
+    "field": "mainTutorialUISystemFound",
+    "label": "",
+    "section": "Tutorial State (Debug)"
+   },
+   {
+    "field": "tutorialPanelPrefab",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "playerControllerManager",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "pauseManager",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "mainAudioSource",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "mainTutorialUISystem",
+    "label": "",
+    "section": "Components"
+   }
+  ]
+ },
+ {
+  "type": "playerWeaponSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\playerWeaponSystem.cs",
+  "source": "Weapons/playerWeaponSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "weaponSettingsName",
+    "label": "",
+    "section": "Weapon Info"
+   },
+   {
+    "field": "weaponSettingsNumberKey",
+    "label": "",
+    "section": "Weapon Info"
+   },
+   {
+    "field": "layer",
+    "label": "Layer To Check",
+    "section": "Fire Settings"
+   },
+   {
+    "field": "playerControllerGameObject",
+    "label": "",
+    "section": "Weapon Components"
+   },
+   {
+    "field": "playerCameraGameObject",
+    "label": "",
+    "section": "Weapon Components"
+   },
+   {
+    "field": "useHumanBodyBonesEnum",
+    "label": "",
+    "section": "Weapon Place On Player's Body Settings"
+   },
+   {
+    "field": "weaponParentBone",
+    "label": "",
+    "section": "Weapon Place On Player's Body Settings"
+   },
+   {
+    "field": "useMountPointForWeaponParent",
+    "label": "",
+    "section": "Weapon Place On Player's Body Settings"
+   },
+   {
+    "field": "mountPointNameForWeaponParent",
+    "label": "",
+    "section": "Weapon Place On Player's Body Settings"
+   },
+   {
+    "field": "projectilesPoolEnabled",
+    "label": "",
+    "section": "Projectile Settings"
+   },
+   {
+    "field": "maxAmountOfPoolElementsOnWeapon",
+    "label": "",
+    "section": "Projectile Settings"
+   },
+   {
+    "field": "weaponProjectile",
+    "label": "",
+    "section": "Projectile Settings"
+   },
+   {
+    "field": "checkForExtraCollidersOnWeaponOwnerIfDetected",
+    "label": "",
+    "section": "Projectile Settings"
+   },
+   {
+    "field": "ignoreTriggerOnRaycastEnabled",
+    "label": "",
+    "section": "Projectile Settings"
+   },
+   {
+    "field": "weaponEffectsSource",
+    "label": "",
+    "section": "Push Characters Settings"
+   },
+   {
+    "field": "outOfAmmo",
+    "label": "",
+    "section": "Sound Settings"
+   },
+   {
+    "field": "outOfAmmoAudioElement",
+    "label": "",
+    "section": "Sound Settings"
+   },
+   {
+    "field": "useEventOnSetDualWeapon",
+    "label": "",
+    "section": "Dual Weapon Event Settings"
+   },
+   {
+    "field": "eventOnSetRightWeapon",
+    "label": "",
+    "section": "Dual Weapon Event Settings"
+   },
+   {
+    "field": "eventOnSetLeftWeapon",
+    "label": "",
+    "section": "Dual Weapon Event Settings"
+   },
+   {
+    "field": "useEventOnSetSingleWeapon",
+    "label": "",
+    "section": "Single Weapon Event Settings"
+   },
+   {
+    "field": "eventOnSetSingleWeapon",
+    "label": "",
+    "section": "Single Weapon Event Settings"
+   },
+   {
+    "field": "useRemoteEventOnObjectsFound",
+    "label": "",
+    "section": "Remote Event Settings"
+   },
+   {
+    "field": "useRemoteEventOnObjectsFoundOnExplosion",
+    "label": "",
+    "section": "Remote Event Settings"
+   },
+   {
+    "field": "remoteEventNameOnExplosion",
+    "label": "",
+    "section": "Remote Event Settings"
+   },
+   {
+    "field": "useObjectDurability",
+    "label": "",
+    "section": "Durability Settings"
+   },
+   {
+    "field": "durabilityUsedOnAttack",
+    "label": "",
+    "section": "Durability Settings"
+   },
+   {
+    "field": "mainDurabilityInfo",
+    "label": "",
+    "section": "Durability Settings"
+   },
+   {
+    "field": "mainDecalManagerName",
+    "label": "",
+    "section": "Scorch from Decal Manager"
+   },
+   {
+    "field": "mainNoiseMeshManagerName",
+    "label": "",
+    "section": "Shoot Noise Settings"
+   },
+   {
+    "field": "canMarkTargets",
+    "label": "",
+    "section": "Mark Targets Settings"
+   },
+   {
+    "field": "markTargetName",
+    "label": "",
+    "section": "Tag List To Mark Targets"
+   },
+   {
+    "field": "maxDistanceToMarkTargets",
+    "label": "",
+    "section": "Tag List To Mark Targets"
+   },
+   {
+    "field": "markTargetsLayer",
+    "label": "",
+    "section": "Tag List To Mark Targets"
+   },
+   {
+    "field": "canMarkTargetsOnFirstPerson",
+    "label": "",
+    "section": "Tag List To Mark Targets"
+   },
+   {
+    "field": "canMarkTargetsOnThirdPerson",
+    "label": "",
+    "section": "Tag List To Mark Targets"
+   },
+   {
+    "field": "aimOnFirstPersonToMarkTarget",
+    "label": "",
+    "section": "Tag List To Mark Targets"
+   },
+   {
+    "field": "useMarkTargetSound",
+    "label": "",
+    "section": "Tag List To Mark Targets"
+   },
+   {
+    "field": "markTargetSound",
+    "label": "",
+    "section": "Tag List To Mark Targets"
+   },
+   {
+    "field": "markTargetAudioElement",
+    "label": "",
+    "section": "Tag List To Mark Targets"
+   },
+   {
+    "field": "useAbilitiesListToEnableOnWeapon",
+    "label": "",
+    "section": "Enable/Disable Abilities on Weapon Settings"
+   },
+   {
+    "field": "useAbilitiesListToDisableOnWeapon",
+    "label": "",
+    "section": "Enable/Disable Abilities on Weapon Settings"
+   }
+  ]
+ }
+]

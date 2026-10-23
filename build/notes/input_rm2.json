@@ -1,0 +1,852 @@
+[
+ {
+  "type": "turnBasedCombatUISystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Turn Based Combat\\turnBasedCombatUISystem.cs",
+  "methods": [
+   {
+    "sig": "stopMenuCoroutineUpdate()",
+    "line": 313
+   },
+   {
+    "sig": "setCurrentCommandNameUsed(string commandName)",
+    "line": 511
+   },
+   {
+    "sig": "confirmCurrentCommand()",
+    "line": 518
+   },
+   {
+    "sig": "cancelCurrentCommand()",
+    "line": 641
+   },
+   {
+    "sig": "confirmPassTurn()",
+    "line": 656
+   },
+   {
+    "sig": "setEnemyTeamTurnDirectly()",
+    "line": 678
+   },
+   {
+    "sig": "setNextTurn()",
+    "line": 690
+   },
+   {
+    "sig": "stopCommandCoroutine()",
+    "line": 753
+   },
+   {
+    "sig": "runFromCurrentCombat()",
+    "line": 762
+   },
+   {
+    "sig": "finishCurrentCombat()",
+    "line": 889
+   },
+   {
+    "sig": "enableOrDisabeExitCombatAfterResultPanel(bool state)",
+    "line": 1296
+   },
+   {
+    "sig": "exitFromCombatAfterWinningOrLoosing()",
+    "line": 1303
+   },
+   {
+    "sig": "checkMainPlayerStateBeforeActivateCombat()",
+    "line": 1488
+   },
+   {
+    "sig": "isCombatActive()",
+    "line": 1544
+   },
+   {
+    "sig": "setCharacterTeamsInfo()",
+    "line": 1690
+   },
+   {
+    "sig": "openPanelInfo(GameObject buttonObject)",
+    "line": 2019
+   },
+   {
+    "sig": "confirmCurrentCategoryCommnand()",
+    "line": 2092
+   },
+   {
+    "sig": "cancelCurrentCategoryCommnand()",
+    "line": 2136
+   },
+   {
+    "sig": "closeAllPanelInfo()",
+    "line": 2143
+   },
+   {
+    "sig": "showCurrentCommandDescription(GameObject buttonObject)",
+    "line": 2164
+   },
+   {
+    "sig": "disableCurrentCommandDescription()",
+    "line": 2205
+   },
+   {
+    "sig": "checkButtonPressed(GameObject buttonObject)",
+    "line": 2212
+   },
+   {
+    "sig": "addNewTurnBasedCombatChararcterUIInfo(GameObject characterUIOwner, GameObject sliderPrefab, string ownerName, int objectID, Transform healtSlidersParent, characterInfo newCharacterInfo)",
+    "line": 2353
+   },
+   {
+    "sig": "updateAllCharacterStatsUIValue()",
+    "line": 2456
+   },
+   {
+    "sig": "updateCharacterStatsUIValue(GameObject characterUIOwner, playerStatsSystem mainPlayerStatsSystem)",
+    "line": 2473
+   },
+   {
+    "sig": "allCharactersPositionAdjusted()",
+    "line": 2521
+   },
+   {
+    "sig": "getFirstCharacterAliveOfEnemyTeam()",
+    "line": 2542
+   },
+   {
+    "sig": "getFirstCharacterAliveOfPlayerTeam()",
+    "line": 2553
+   },
+   {
+    "sig": "checkTeamsDeadStateAfterCharacterDeath(Transform characterTransform)",
+    "line": 2564
+   },
+   {
+    "sig": "checkPlayerStateOnDeathDuringCombat()",
+    "line": 2604
+   },
+   {
+    "sig": "checkCharacterStateAfterResurrect(Transform characterTransform)",
+    "line": 2615
+   },
+   {
+    "sig": "isAllEnemyTeamDead()",
+    "line": 2777
+   },
+   {
+    "sig": "isAllPlayerTeamDead()",
+    "line": 2788
+   },
+   {
+    "sig": "getEnemyTeamAliveAmount()",
+    "line": 2800
+   },
+   {
+    "sig": "getPlayerTeamAliveAmount()",
+    "line": 2813
+   },
+   {
+    "sig": "checkInputListToPauseDuringAction(List<playerActionSystem.inputToPauseOnActionIfo> inputList, bool state)",
+    "line": 2826
+   },
+   {
+    "sig": "selectInventoryItem(GameObject inventoryButton)",
+    "line": 2907
+   },
+   {
+    "sig": "showInventoryItemListPanel()",
+    "line": 2974
+   },
+   {
+    "sig": "updateInventoryItemListPanel()",
+    "line": 3002
+   },
+   {
+    "sig": "confirmToUseInventoryItem()",
+    "line": 3057
+   },
+   {
+    "sig": "cancelUseInventoryItem()",
+    "line": 3126
+   },
+   {
+    "sig": "inputSelectNextOrPreviousCharacterTarget(bool state)",
+    "line": 3138
+   },
+   {
+    "sig": "inputConfirmCommandOnCurrentCharacterTarget()",
+    "line": 3145
+   },
+   {
+    "sig": "inputConfirmCommand()",
+    "line": 3156
+   },
+   {
+    "sig": "inputCancelCommand()",
+    "line": 3165
+   },
+   {
+    "sig": "inputSelectNextTarget()",
+    "line": 3174
+   },
+   {
+    "sig": "inputSelectPreviousTarget()",
+    "line": 3183
+   },
+   {
+    "sig": "setFreeCombatActiveStateOnAllCharacters(bool state)",
+    "line": 3192
+   },
+   {
+    "sig": "inputToggleCombatMode()",
+    "line": 3278
+   }
+  ]
+ },
+ {
+  "type": "turnBasedCombatActionsSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Turn Based Combat\\turnBasedCombatActionsSystem.cs",
+  "methods": [
+   {
+    "sig": "setCanUseExtraTurnsState(bool state)",
+    "line": 134
+   },
+   {
+    "sig": "setAmountOfExtraTurnsValue(int amount)",
+    "line": 139
+   },
+   {
+    "sig": "isCanUseExtraTurnsActive()",
+    "line": 144
+   },
+   {
+    "sig": "getAmountOfExtraTurns()",
+    "line": 149
+   },
+   {
+    "sig": "isTurnBasedCombatActionActive()",
+    "line": 154
+   },
+   {
+    "sig": "setTurnBasedCombatActionActiveState(bool state)",
+    "line": 159
+   },
+   {
+    "sig": "setCurrentCombatPositionAndRotationValues(Vector3 currentCombatPositionValues, Vector3 currentCombatRotationValues)",
+    "line": 179
+   },
+   {
+    "sig": "resetToCurrrentCombatPositionAndRotation(bool setPositionAtOnce)",
+    "line": 185
+   },
+   {
+    "sig": "setCharacterPositionAtonce(Vector3 targetPosition, Vector3 targetRotation, bool adjustPlayerCameraTransform)",
+    "line": 194
+   },
+   {
+    "sig": "activateCharacterMovement(Vector3 targetPosition, Vector3 targetRotation, bool adjustPlayerCameraTransform)",
+    "line": 207
+   },
+   {
+    "sig": "stopMovement()",
+    "line": 261
+   },
+   {
+    "sig": "activateOrder(string orderName)",
+    "line": 270
+   },
+   {
+    "sig": "activateOrderToAIBrain(string orderName)",
+    "line": 275
+   },
+   {
+    "sig": "isAdjustingCharacterPositionInProcess()",
+    "line": 309
+   },
+   {
+    "sig": "checkEventsForAliveOrDeadAfterCombat(bool state)",
+    "line": 314
+   },
+   {
+    "sig": "checkEventsOnCharacterCurrentTurnStart()",
+    "line": 327
+   },
+   {
+    "sig": "checkEventOnCurrentCharacterTurn()",
+    "line": 334
+   },
+   {
+    "sig": "checkEventOnCurrentTeamTurn()",
+    "line": 341
+   },
+   {
+    "sig": "checkEventOnEachTurn()",
+    "line": 348
+   },
+   {
+    "sig": "checkTurnBasedCombatOnDamageReceived()",
+    "line": 355
+   },
+   {
+    "sig": "updateAllCharacterStatsUIValue()",
+    "line": 366
+   },
+   {
+    "sig": "setNextTurn()",
+    "line": 375
+   },
+   {
+    "sig": "setCurrentCommandNameUsed(string commandName)",
+    "line": 384
+   },
+   {
+    "sig": "activateEffect(string effectName)",
+    "line": 393
+   },
+   {
+    "sig": "setFreeCombatActiveState(bool state)",
+    "line": 402
+   },
+   {
+    "sig": "checkIfCommandCanBeUsed(string commandName)",
+    "line": 407
+   },
+   {
+    "sig": "checkIfCommandCategoryCanBeUsed(string commandCategoryName)",
+    "line": 416
+   },
+   {
+    "sig": "checkTeamsDeadStateAfterCharacterDeath()",
+    "line": 425
+   },
+   {
+    "sig": "checkCharacterStateAfterResurrect()",
+    "line": 434
+   },
+   {
+    "sig": "checkPlayerStateOnDeathDuringCombat()",
+    "line": 443
+   },
+   {
+    "sig": "inputConfirmCommand()",
+    "line": 453
+   },
+   {
+    "sig": "inputCancelCommand()",
+    "line": 462
+   },
+   {
+    "sig": "inputSelectNextTarget()",
+    "line": 471
+   },
+   {
+    "sig": "inputSelectPreviousTarget()",
+    "line": 480
+   },
+   {
+    "sig": "inputToggleCombatMode()",
+    "line": 489
+   }
+  ]
+ },
+ {
+  "type": "turnBasedCombatSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Turn Based Combat\\turnBasedCombatSystem.cs",
+  "methods": [
+   {
+    "sig": "getComponentInstance()",
+    "line": 134
+   },
+   {
+    "sig": "adjustTurnBasedCombatPositionToPlayer()",
+    "line": 174
+   },
+   {
+    "sig": "enableWaitTimeToActivateTurnBasedCombat()",
+    "line": 208
+   },
+   {
+    "sig": "disableWaitTimeToActivateTurnBasedCombat()",
+    "line": 235
+   },
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 252
+   },
+   {
+    "sig": "updateLastTimeCombatRunActive(float value)",
+    "line": 318
+   },
+   {
+    "sig": "clearCharactersAround()",
+    "line": 323
+   },
+   {
+    "sig": "activateTurnBasedCombat()",
+    "line": 328
+   },
+   {
+    "sig": "deactivateTurnBasedCombat()",
+    "line": 333
+   },
+   {
+    "sig": "setTurnBasedCombatActiveState(bool state)",
+    "line": 359
+   },
+   {
+    "sig": "setMinTeamAmountToCheck(int newAmount)",
+    "line": 397
+   },
+   {
+    "sig": "stopMovement()",
+    "line": 507
+   },
+   {
+    "sig": "setCurrentPlayer(GameObject player)",
+    "line": 514
+   },
+   {
+    "sig": "getTurnBasedCombatTeamPositionsInfoData(int teamSize, string teamPositionInfoName, bool isPlayerTeam)",
+    "line": 531
+   },
+   {
+    "sig": "setUseCustomCameraState(bool state, string cameraStateName)",
+    "line": 569
+   },
+   {
+    "sig": "getPositionToRespawnList()",
+    "line": 576
+   },
+   {
+    "sig": "getClosestRespawnPosition(Vector3 currentPosition)",
+    "line": 581
+   },
+   {
+    "sig": "updateAllCharacterStatsUIValue()",
+    "line": 606
+   },
+   {
+    "sig": "setNextTurn()",
+    "line": 615
+   },
+   {
+    "sig": "setCurrentCommandNameUsed(string commandName)",
+    "line": 624
+   },
+   {
+    "sig": "activateEffect(string effectName)",
+    "line": 633
+   },
+   {
+    "sig": "setFreeCombatActiveState(bool state)",
+    "line": 652
+   },
+   {
+    "sig": "checkTeamsDeadStateAfterCharacterDeath(Transform characterTransform)",
+    "line": 661
+   },
+   {
+    "sig": "checkCharacterStateAfterResurrect(Transform characterTransform)",
+    "line": 668
+   },
+   {
+    "sig": "checkPlayerStateOnDeathDuringCombat()",
+    "line": 675
+   },
+   {
+    "sig": "inputConfirmCommand()",
+    "line": 683
+   },
+   {
+    "sig": "inputCancelCommand()",
+    "line": 692
+   },
+   {
+    "sig": "inputSelectNextTarget()",
+    "line": 701
+   },
+   {
+    "sig": "inputSelectPreviousTarget()",
+    "line": 710
+   },
+   {
+    "sig": "inputToggleCombatMode()",
+    "line": 719
+   },
+   {
+    "sig": "configureNewTeamInfo()",
+    "line": 728
+   },
+   {
+    "sig": "showAllTeamsInScene()",
+    "line": 823
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 838
+   }
+  ]
+ },
+ {
+  "type": "turnBasedCombatTeamInfo",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Turn Based Combat\\turnBasedCombatTeamInfo.cs",
+  "methods": [
+   {
+    "sig": "isTeamLeaderValue()",
+    "line": 48
+   },
+   {
+    "sig": "removeDeadCharactersFromTeam()",
+    "line": 53
+   },
+   {
+    "sig": "clearCharacterTeamList()",
+    "line": 62
+   },
+   {
+    "sig": "getCharacterTeamList()",
+    "line": 67
+   },
+   {
+    "sig": "setCharacterTeamList(List<GameObject> newList)",
+    "line": 72
+   },
+   {
+    "sig": "addCharacterToTeamList(GameObject newCharacter)",
+    "line": 77
+   },
+   {
+    "sig": "removeCharacterToTeamList(GameObject newCharacter)",
+    "line": 84
+   },
+   {
+    "sig": "checkEventsOnTeamDefeated()",
+    "line": 91
+   },
+   {
+    "sig": "checkEventOnRewardForOpponentTeam(List<GameObject> opponentTeamList)",
+    "line": 98
+   }
+  ]
+ },
+ {
+  "type": "overrideInputManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Override System\\overrideInputManager.cs",
+  "methods": [
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 51
+   },
+   {
+    "sig": "getCustomRawMovementAxis()",
+    "line": 98
+   },
+   {
+    "sig": "getCustomMovementAxis()",
+    "line": 107
+   },
+   {
+    "sig": "getCustomMouseAxis()",
+    "line": 116
+   },
+   {
+    "sig": "setCustomInputEnabledState(bool state)",
+    "line": 125
+   },
+   {
+    "sig": "setPlayerInfo(GameObject player)",
+    "line": 136
+   },
+   {
+    "sig": "overrideControlState(bool state, GameObject currentPlayer)",
+    "line": 169
+   },
+   {
+    "sig": "checkActivateActionScreen(bool state)",
+    "line": 193
+   },
+   {
+    "sig": "setPreOverrideControlState(bool state)",
+    "line": 202
+   },
+   {
+    "sig": "stopOverride()",
+    "line": 213
+   },
+   {
+    "sig": "removeNewTemporalObjectFromOverrideControlSystem(GameObject newObject)",
+    "line": 220
+   },
+   {
+    "sig": "setPlayerInputActionState(bool playerInputActionState, string multiAxesInputName, string axesInputName)",
+    "line": 227
+   },
+   {
+    "sig": "setPlayerInputMultiAxesState(bool playerInputMultiAxesState, string multiAxesInputName)",
+    "line": 240
+   },
+   {
+    "sig": "enablePlayerInputMultiAxes(string multiAxesInputName)",
+    "line": 249
+   },
+   {
+    "sig": "disablePlayerInputMultiAxes(string multiAxesInputName)",
+    "line": 258
+   },
+   {
+    "sig": "isGamePaused()",
+    "line": 267
+   },
+   {
+    "sig": "addNewAxes()",
+    "line": 277
+   },
+   {
+    "sig": "addNewAction(int multiAxesIndex)",
+    "line": 297
+   },
+   {
+    "sig": "updateMultiAxesList()",
+    "line": 320
+   },
+   {
+    "sig": "updateAxesList(int multiAxesListIndex)",
+    "line": 340
+   },
+   {
+    "sig": "setAllAxesList(int multiAxesListIndex)",
+    "line": 360
+   },
+   {
+    "sig": "setMultiAxesEnabledState(bool state)",
+    "line": 411
+   },
+   {
+    "sig": "setAllActionsEnabledState(int multiAxesListIndex, bool state)",
+    "line": 420
+   },
+   {
+    "sig": "getOverrideCameraControllerManager()",
+    "line": 429
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 434
+   }
+  ]
+ },
+ {
+  "type": "overrideElementControlSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Override System\\overrideElementControlSystem.cs",
+  "methods": [
+   {
+    "sig": "stopCurrentOverrideControl()",
+    "line": 175
+   },
+   {
+    "sig": "checkElementToControl()",
+    "line": 246
+   },
+   {
+    "sig": "checkElementToControl(Transform newRaycastPosition)",
+    "line": 251
+   },
+   {
+    "sig": "setCheckForExternalObjectsToDriveOrRideEnabledState(bool state)",
+    "line": 271
+   },
+   {
+    "sig": "isCheckForExternalObjectsToDriveOrRideEnabled()",
+    "line": 276
+   },
+   {
+    "sig": "overrideElementControl(GameObject objectToControl)",
+    "line": 281
+   },
+   {
+    "sig": "resetValues()",
+    "line": 498
+   },
+   {
+    "sig": "launchCameraToTarget(bool launchingToCharacter)",
+    "line": 505
+   },
+   {
+    "sig": "setControllerRigidbodyVelocity(bool state)",
+    "line": 758
+   },
+   {
+    "sig": "startOverride()",
+    "line": 773
+   },
+   {
+    "sig": "pauseOrPlayPlayerComponents(bool state)",
+    "line": 804
+   },
+   {
+    "sig": "checkCharacterMesh(bool state)",
+    "line": 846
+   },
+   {
+    "sig": "stopOverride()",
+    "line": 886
+   },
+   {
+    "sig": "reapearCharacter()",
+    "line": 959
+   },
+   {
+    "sig": "setDeadState()",
+    "line": 1016
+   },
+   {
+    "sig": "checkEventsOnStateChange(bool state)",
+    "line": 1021
+   },
+   {
+    "sig": "enableOrDisableStopOverridButton(bool state)",
+    "line": 1032
+   },
+   {
+    "sig": "setCurrentOverrideActivatedByAbilityState(bool state)",
+    "line": 1061
+   },
+   {
+    "sig": "setCurrentAbilityNameUsedToActivateOverride(string abilityName)",
+    "line": 1066
+   },
+   {
+    "sig": "addNewTemporalObject(GameObject newObject)",
+    "line": 1071
+   },
+   {
+    "sig": "removeNewTemporalObject(GameObject newObject)",
+    "line": 1078
+   },
+   {
+    "sig": "checkIfTemporalObjectOnList(GameObject newObject)",
+    "line": 1085
+   },
+   {
+    "sig": "setInputStopOverrideControlPausedState(bool state)",
+    "line": 1090
+   },
+   {
+    "sig": "inputStopOverrideControl()",
+    "line": 1096
+   }
+  ]
+ },
+ {
+  "type": "overrideCameraController",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Override System\\overrideCameraController.cs",
+  "methods": [
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 66
+   },
+   {
+    "sig": "getCameraTransform()",
+    "line": 118
+   },
+   {
+    "sig": "setCameraActiveState(bool state)",
+    "line": 123
+   },
+   {
+    "sig": "isCameraControllerEnabled()",
+    "line": 151
+   },
+   {
+    "sig": "setParentState(bool state)",
+    "line": 156
+   },
+   {
+    "sig": "resetLocalRotationPosition()",
+    "line": 168
+   },
+   {
+    "sig": "resetRotation(Quaternion newRotation)",
+    "line": 174
+   },
+   {
+    "sig": "checkCameraCollision()",
+    "line": 180
+   },
+   {
+    "sig": "getControllerRadius()",
+    "line": 212
+   },
+   {
+    "sig": "reapearInCertainPositionActive()",
+    "line": 217
+   },
+   {
+    "sig": "getPositionToReapear()",
+    "line": 222
+   }
+  ]
+ },
+ {
+  "type": "overrideController",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Override System\\overrideController.cs",
+  "methods": [
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 113
+   },
+   {
+    "sig": "changeControllerState(bool state)",
+    "line": 196
+   },
+   {
+    "sig": "setControllerMesh(GameObject newControllerMesh)",
+    "line": 238
+   },
+   {
+    "sig": "getControllerMesh()",
+    "line": 247
+   },
+   {
+    "sig": "removeControllerMesh()",
+    "line": 252
+   },
+   {
+    "sig": "inputJump()",
+    "line": 263
+   },
+   {
+    "sig": "inputSetBrakeState(bool state)",
+    "line": 272
+   },
+   {
+    "sig": "inputImpulse()",
+    "line": 283
+   },
+   {
+    "sig": "inputRunState(bool state)",
+    "line": 305
+   }
+  ]
+ },
+ {
+  "type": "objectToOverrideSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Override System\\objectToOverrideSystem.cs",
+  "methods": [
+   {
+    "sig": "canBeOverridenActive()",
+    "line": 42
+   },
+   {
+    "sig": "getObjectToOverride()",
+    "line": 47
+   },
+   {
+    "sig": "setCurrentPlayer(GameObject newPlayer)",
+    "line": 56
+   },
+   {
+    "sig": "setOverrideControlExternally(bool state)",
+    "line": 61
+   }
+  ]
+ }
+]

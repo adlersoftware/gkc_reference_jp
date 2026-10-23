@@ -1,0 +1,903 @@
+[
+ {
+  "type": "externalCameraShakeSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Camera\\Player Camera\\externalCameraShakeSystem.cs",
+  "source": "Camera/Player Camera/externalCameraShakeSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "externalCameraShakeEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "mainManagerName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "setPlayerManually",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "currentPlayer",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useShakeListTriggeredByActions",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "shakeUsingDistance",
+    "label": "",
+    "section": "Shake Triggered By Action List"
+   },
+   {
+    "field": "minDistanceToShake",
+    "label": "",
+    "section": "Shake Triggered By Action List"
+   },
+   {
+    "field": "layer",
+    "label": "",
+    "section": "Shake Triggered By Action List"
+   },
+   {
+    "field": "useShakeEvent",
+    "label": "",
+    "section": "Shake Triggered By Action List"
+   },
+   {
+    "field": "eventAtStart",
+    "label": "",
+    "section": "Shake Triggered By Action List"
+   },
+   {
+    "field": "eventAtEnd",
+    "label": "",
+    "section": "Shake Triggered By Action List"
+   },
+   {
+    "field": "showGizmo",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoLabelColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   }
+  ]
+ },
+ {
+  "type": "featuresManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\featuresManager.cs",
+  "source": "Others/featuresManager.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "explanation",
+    "label": "",
+    "section": ""
+   }
+  ]
+ },
+ {
+  "type": "footStepManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Foot Step\\footStepManager.cs",
+  "source": "Foot Step/footStepManager.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "stepsEnabled",
+    "label": "",
+    "section": "Use Footstep Setting"
+   },
+   {
+    "field": "soundsEnabled",
+    "label": "",
+    "section": "Use Footstep Setting"
+   },
+   {
+    "field": "typeOfFootStep",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "layer",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "leftFoot",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "rightFoot",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "defaultSurfaceName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "usePoolingSystemEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "mainNoiseMeshManagerName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useFeetVolumeRangeClamps",
+    "label": "",
+    "section": "General Volume Settings"
+   },
+   {
+    "field": "feetVolumeRangeClamps",
+    "label": "",
+    "section": "General Volume Settings"
+   },
+   {
+    "field": "useFootPrints",
+    "label": "",
+    "section": "Foot Prints Settings"
+   },
+   {
+    "field": "useFootPrintsFromStates",
+    "label": "",
+    "section": "Foot Prints Settings"
+   },
+   {
+    "field": "rightFootPrint",
+    "label": "",
+    "section": "Foot Prints Settings"
+   },
+   {
+    "field": "leftFootPrint",
+    "label": "",
+    "section": "Foot Prints Settings"
+   },
+   {
+    "field": "maxFootPrintDistance",
+    "label": "",
+    "section": "Foot Prints Settings"
+   },
+   {
+    "field": "distanceBetweenPrintsInFisrtPerson",
+    "label": "",
+    "section": "Foot Prints Settings"
+   },
+   {
+    "field": "useFootPrintMaxAmount",
+    "label": "",
+    "section": "Foot Prints Settings"
+   },
+   {
+    "field": "footPrintMaxAmount",
+    "label": "",
+    "section": "Foot Prints Settings"
+   },
+   {
+    "field": "removeFootPrintsInTime",
+    "label": "",
+    "section": "Foot Prints Settings"
+   },
+   {
+    "field": "timeToRemoveFootPrints",
+    "label": "",
+    "section": "Foot Prints Settings"
+   },
+   {
+    "field": "vanishFootPrints",
+    "label": "",
+    "section": "Foot Prints Settings"
+   },
+   {
+    "field": "vanishSpeed",
+    "label": "",
+    "section": "Foot Prints Settings"
+   },
+   {
+    "field": "useFootParticles",
+    "label": "",
+    "section": "Foot Particles Settings"
+   },
+   {
+    "field": "useFootParticlesFromStates",
+    "label": "",
+    "section": "Foot Particles Settings"
+   },
+   {
+    "field": "footParticles",
+    "label": "",
+    "section": "Foot Particles Settings"
+   },
+   {
+    "field": "useFootStepStateList",
+    "label": "",
+    "section": "Footstep Noise State List"
+   },
+   {
+    "field": "currentFootStepStateName",
+    "label": "",
+    "section": "Footstep Noise State List"
+   },
+   {
+    "field": "noiseDetectionLayer",
+    "label": "",
+    "section": "Footstep Noise State List"
+   },
+   {
+    "field": "useNoiseOnStepsEnabled",
+    "label": "",
+    "section": "Footstep Noise State List"
+   },
+   {
+    "field": "useNoiseMesh",
+    "label": "",
+    "section": "Footstep Noise State List"
+   },
+   {
+    "field": "showNoiseDetectionGizmo",
+    "label": "",
+    "section": "Footstep Noise State List"
+   },
+   {
+    "field": "playerManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "leftFootStep",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "rightFootStep",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "leftFootCollider",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "rightFootCollider",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "cameraAudioSource",
+    "label": "",
+    "section": "Player Elements"
+   }
+  ]
+ },
+ {
+  "type": "grabObjects",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Grab Objects\\grabObjects.cs",
+  "source": "Grab Objects/grabObjects.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "grabObjectsEnabled",
+    "label": "",
+    "section": "Main Grab Settings"
+   },
+   {
+    "field": "holdDistance",
+    "label": "",
+    "section": "Main Grab Settings"
+   },
+   {
+    "field": "maxDistanceHeld",
+    "label": "",
+    "section": "Main Grab Settings"
+   },
+   {
+    "field": "maxDistanceGrab",
+    "label": "",
+    "section": "Main Grab Settings"
+   },
+   {
+    "field": "holdSpeed",
+    "label": "",
+    "section": "Main Grab Settings"
+   },
+   {
+    "field": "closestHoldDistanceInFixedPosition",
+    "label": "",
+    "section": "Main Grab Settings"
+   },
+   {
+    "field": "grabInFixedPosition",
+    "label": "",
+    "section": "Main Grab Settings"
+   },
+   {
+    "field": "useGrabbedObjectOffsetThirdPerson",
+    "label": "",
+    "section": "Main Grab Settings"
+   },
+   {
+    "field": "grabbedObjectOffsetThirdPerson",
+    "label": "",
+    "section": "Main Grab Settings"
+   },
+   {
+    "field": "currentGrabMode",
+    "label": "",
+    "section": "Main Grab Settings"
+   },
+   {
+    "field": "changeGravityObjectsEnabled",
+    "label": "",
+    "section": "Main Grab Settings"
+   },
+   {
+    "field": "useForceWhenObjectDropped",
+    "label": "",
+    "section": "Main Grab Settings"
+   },
+   {
+    "field": "useForceWhenObjectDroppedOnThirdPerson",
+    "label": "",
+    "section": "Main Grab Settings"
+   },
+   {
+    "field": "forceWhenObjectDroppedOnThirdPerson",
+    "label": "",
+    "section": "Main Grab Settings"
+   },
+   {
+    "field": "useForceWhenObjectDroppedOnFirstPerson",
+    "label": "",
+    "section": "Main Grab Settings"
+   },
+   {
+    "field": "forceWhenObjectDroppedOnFirstPerson",
+    "label": "",
+    "section": "Main Grab Settings"
+   },
+   {
+    "field": "pauseCameraMouseWheelWhileObjectGrabbed",
+    "label": "",
+    "section": "Main Grab Settings"
+   },
+   {
+    "field": "ignoreDropMeleeWeaponIfCarried",
+    "label": "",
+    "section": "Main Grab Settings"
+   },
+   {
+    "field": "grabbedObjectTag",
+    "label": "",
+    "section": "Detection Settings"
+   },
+   {
+    "field": "grabbedObjectLayer",
+    "label": "",
+    "section": "Detection Settings"
+   },
+   {
+    "field": "canGrabVehicles",
+    "label": "",
+    "section": "Detection Settings"
+   },
+   {
+    "field": "useInfiniteStrength",
+    "label": "",
+    "section": "Strength Settings"
+   },
+   {
+    "field": "strengthAmount",
+    "label": "",
+    "section": "Strength Settings"
+   },
+   {
+    "field": "showCurrentObjectWeight",
+    "label": "",
+    "section": "Strength Settings"
+   },
+   {
+    "field": "weightPanel",
+    "label": "",
+    "section": "Strength Settings"
+   },
+   {
+    "field": "currentObjectWeightText",
+    "label": "",
+    "section": "Strength Settings"
+   },
+   {
+    "field": "regularWeightTextColor",
+    "label": "",
+    "section": "Strength Settings"
+   },
+   {
+    "field": "tooHeavyWeightTextColor",
+    "label": "",
+    "section": "Strength Settings"
+   },
+   {
+    "field": "playerStatsManager",
+    "label": "",
+    "section": "Strength Stat Settings"
+   },
+   {
+    "field": "strengthAmountStatName",
+    "label": "",
+    "section": "Strength Stat Settings"
+   },
+   {
+    "field": "grabObjectsPhysicallyEnabled",
+    "label": "",
+    "section": "Grab Physical Objects Settings"
+   },
+   {
+    "field": "placeToCarryPhysicalObjectsThirdPerson",
+    "label": "",
+    "section": "Hands List"
+   },
+   {
+    "field": "placeToCarryPhysicalObjectsFirstPerson",
+    "label": "",
+    "section": "Hands List"
+   },
+   {
+    "field": "positionToKeepObject",
+    "label": "",
+    "section": "Hands List"
+   },
+   {
+    "field": "translatePhysicalObjectSpeed",
+    "label": "",
+    "section": "Hands List"
+   },
+   {
+    "field": "showGrabObjectIconEnabled",
+    "label": "",
+    "section": "Hands List"
+   },
+   {
+    "field": "keyText",
+    "label": "",
+    "section": "Hands List"
+   },
+   {
+    "field": "grabObjectIcon",
+    "label": "",
+    "section": "Hands List"
+   },
+   {
+    "field": "iconRectTransform",
+    "label": "",
+    "section": "Hands List"
+   },
+   {
+    "field": "getClosestDeviceToCameraCenter",
+    "label": "",
+    "section": "Hands List"
+   },
+   {
+    "field": "useMaxDistanceToCameraCenter",
+    "label": "",
+    "section": "Hands List"
+   },
+   {
+    "field": "maxDistanceToCameraCenter",
+    "label": "",
+    "section": "Hands List"
+   },
+   {
+    "field": "pickableShader",
+    "label": "",
+    "section": "Hands List"
+   },
+   {
+    "field": "defaultShaderName",
+    "label": "",
+    "section": "Hands List"
+   },
+   {
+    "field": "useObjectToGrabFoundShader",
+    "label": "",
+    "section": "Outline Shader Device Found Settings"
+   },
+   {
+    "field": "objectToGrabFoundShader",
+    "label": "",
+    "section": "Outline Shader Device Found Settings"
+   },
+   {
+    "field": "shaderOutlineWidth",
+    "label": "",
+    "section": "Outline Shader Device Found Settings"
+   },
+   {
+    "field": "shaderOutlineColor",
+    "label": "",
+    "section": "Outline Shader Device Found Settings"
+   },
+   {
+    "field": "enableTransparency",
+    "label": "",
+    "section": "Grabbed Object Transparency Settings"
+   },
+   {
+    "field": "alphaTransparency",
+    "label": "",
+    "section": "Grabbed Object Transparency Settings"
+   },
+   {
+    "field": "useEventOnCheckIfDropObject",
+    "label": "",
+    "section": "Drop Object Events Settings"
+   },
+   {
+    "field": "eventOnCheckIfDropObject",
+    "label": "",
+    "section": "Drop Object Events Settings"
+   },
+   {
+    "field": "useRemoteEventOnObjectsFound",
+    "label": "",
+    "section": "Remove Event Settings"
+   },
+   {
+    "field": "dropCurrentObjectOnDeathEnabled",
+    "label": "",
+    "section": "Drop Objects On Death Settings"
+   },
+   {
+    "field": "keepMeleeWeaponOnDeathEnabled",
+    "label": "",
+    "section": "Drop Objects On Death Settings"
+   },
+   {
+    "field": "launchedObjectsCanMakeNoise",
+    "label": "",
+    "section": "Collision Noises Settings"
+   },
+   {
+    "field": "minObjectSpeedToActivateNoise",
+    "label": "",
+    "section": "Collision Noises Settings"
+   },
+   {
+    "field": "objectCanBeRotated",
+    "label": "",
+    "section": "Rotation Settings"
+   },
+   {
+    "field": "rotationSpeed",
+    "label": "",
+    "section": "Rotation Settings"
+   },
+   {
+    "field": "rotateSpeed",
+    "label": "",
+    "section": "Rotation Settings"
+   },
+   {
+    "field": "rotateToCameraInFixedPosition",
+    "label": "",
+    "section": "Rotation Settings"
+   },
+   {
+    "field": "rotateToCameraInFreePosition",
+    "label": "",
+    "section": "Rotation Settings"
+   },
+   {
+    "field": "minTimeToIncreaseThrowForce",
+    "label": "",
+    "section": "Throw Settings"
+   },
+   {
+    "field": "increaseThrowForceSpeed",
+    "label": "",
+    "section": "Throw Settings"
+   },
+   {
+    "field": "extraThorwForce",
+    "label": "",
+    "section": "Throw Settings"
+   },
+   {
+    "field": "maxThrowForce",
+    "label": "",
+    "section": "Throw Settings"
+   },
+   {
+    "field": "takeObjectMassIntoAccountOnThrowEnabled",
+    "label": "",
+    "section": "Throw Settings"
+   },
+   {
+    "field": "objectMassDividerOnThrow",
+    "label": "",
+    "section": "Throw Settings"
+   },
+   {
+    "field": "headTrackBodyWeightOnAim",
+    "label": "",
+    "section": "Throw Settings"
+   },
+   {
+    "field": "customAimReticleName",
+    "label": "",
+    "section": "Throw Settings"
+   },
+   {
+    "field": "ignoreThrowAnimationForPhysicalObjects",
+    "label": "",
+    "section": "Throw Settings"
+   },
+   {
+    "field": "ignoreThrowAnimationForMeleePhysicalObjects",
+    "label": "",
+    "section": "Throw Settings"
+   },
+   {
+    "field": "canUseZoomWhileGrabbed",
+    "label": "",
+    "section": "Zoom Settings"
+   },
+   {
+    "field": "zoomSpeed",
+    "label": "",
+    "section": "Zoom Settings"
+   },
+   {
+    "field": "maxZoomDistance",
+    "label": "",
+    "section": "Zoom Settings"
+   },
+   {
+    "field": "minZoomDistance",
+    "label": "",
+    "section": "Zoom Settings"
+   },
+   {
+    "field": "layer",
+    "label": "",
+    "section": "Power Settings"
+   },
+   {
+    "field": "gravityObjectsLayer",
+    "label": "",
+    "section": "Power Settings"
+   },
+   {
+    "field": "layerForCustomGravityObject",
+    "label": "",
+    "section": "Power Settings"
+   },
+   {
+    "field": "powerForceMode",
+    "label": "",
+    "section": "Power Settings"
+   },
+   {
+    "field": "useThrowObjectsLayer",
+    "label": "",
+    "section": "Power Settings"
+   },
+   {
+    "field": "throwObjectsLayerToCheck",
+    "label": "",
+    "section": "Power Settings"
+   },
+   {
+    "field": "useGrabbedParticles",
+    "label": "",
+    "section": "Power Settings"
+   },
+   {
+    "field": "useLoadThrowParticles",
+    "label": "",
+    "section": "Power Settings"
+   },
+   {
+    "field": "throwPower",
+    "label": "",
+    "section": "Realistic Settings"
+   },
+   {
+    "field": "realisticForceMode",
+    "label": "",
+    "section": "Realistic Settings"
+   },
+   {
+    "field": "usedByAI",
+    "label": "",
+    "section": "AI Settings"
+   },
+   {
+    "field": "useCursor",
+    "label": "",
+    "section": "UI Settings"
+   },
+   {
+    "field": "grabObjectActionName",
+    "label": "",
+    "section": "UI Settings"
+   },
+   {
+    "field": "extraTextStartActionKey",
+    "label": "",
+    "section": "UI Settings"
+   },
+   {
+    "field": "extraTextEndActionKey",
+    "label": "",
+    "section": "UI Settings"
+   },
+   {
+    "field": "touchButtonIcon",
+    "label": "",
+    "section": "UI Settings"
+   },
+   {
+    "field": "showObjectToGrabNameEnabled",
+    "label": "",
+    "section": "UI Settings"
+   },
+   {
+    "field": "objectToGrabNameText",
+    "label": "",
+    "section": "UI Settings"
+   },
+   {
+    "field": "objectToGrabNamePanel",
+    "label": "",
+    "section": "UI Settings"
+   },
+   {
+    "field": "objectHeld",
+    "label": "Current Object Held",
+    "section": "Player State"
+   },
+   {
+    "field": "currentPhysicalObjectToGrabFound",
+    "label": "",
+    "section": "Player State"
+   },
+   {
+    "field": "currentObjectToGrabFound",
+    "label": "",
+    "section": "Player State"
+   },
+   {
+    "field": "grabZoneTransform",
+    "label": "",
+    "section": "Grab Elements"
+   },
+   {
+    "field": "cursor",
+    "label": "",
+    "section": "Grab Elements"
+   },
+   {
+    "field": "cursorRectTransform",
+    "label": "",
+    "section": "Grab Elements"
+   },
+   {
+    "field": "foundObjectToGrabCursor",
+    "label": "",
+    "section": "Grab Elements"
+   },
+   {
+    "field": "grabbedObjectCursor",
+    "label": "",
+    "section": "Grab Elements"
+   },
+   {
+    "field": "powerSlider",
+    "label": "",
+    "section": "Grab Elements"
+   },
+   {
+    "field": "grabbedObjectClonnedColliderTransform",
+    "label": "",
+    "section": "Grab Elements"
+   },
+   {
+    "field": "grabbedObjectClonnedCollider",
+    "label": "",
+    "section": "Grab Elements"
+   },
+   {
+    "field": "playerCameraTransform",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "playerControllerManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "powersManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "playerInput",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "playerCameraManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "usingDevicesManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "weaponsManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "gravityManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "IKManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "mainCollider",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "mainCameraTransform",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "mainCamera",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "highFrictionMaterial",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "mainGrabbedObjectMeleeAttackSystem",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "mainHeadTrack",
+    "label": "",
+    "section": "Player Elements"
+   }
+  ]
+ }
+]

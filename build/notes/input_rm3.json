@@ -1,0 +1,916 @@
+[
+ {
+  "type": "gameLanguageSelector",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Localization System\\gameLanguageSelector.cs",
+  "methods": [
+   {
+    "sig": "updateCurrentLanguageByPlayerPrefs()",
+    "line": 67
+   },
+   {
+    "sig": "setCurrentLanguagePlayerPrefsValue()",
+    "line": 78
+   },
+   {
+    "sig": "getComponentInstance()",
+    "line": 85
+   },
+   {
+    "sig": "setGameLanguageByIndex(int languageIndex)",
+    "line": 151
+   },
+   {
+    "sig": "setGameLanguage(string languageSelected)",
+    "line": 158
+   },
+   {
+    "sig": "updateAllLanguageElementCheckerOnScene()",
+    "line": 191
+   },
+   {
+    "sig": "addLanguage(string newName)",
+    "line": 206
+   },
+   {
+    "sig": "removeLanguage(string newName)",
+    "line": 213
+   },
+   {
+    "sig": "setNewLanguageList(List<string> newNameList)",
+    "line": 220
+   },
+   {
+    "sig": "updateLanguageDropDown()",
+    "line": 227
+   },
+   {
+    "sig": "assignNewLanguageDropDown(Dropdown newDropDown)",
+    "line": 246
+   },
+   {
+    "sig": "checkIfLanguageDropDownAssignedAndUpdate(Dropdown newDropDown)",
+    "line": 251
+   },
+   {
+    "sig": "getCurrentLanguageList()",
+    "line": 260
+   },
+   {
+    "sig": "setCurrentLanguage(string newLanguage)",
+    "line": 265
+   },
+   {
+    "sig": "getCurrentLanguage()",
+    "line": 270
+   },
+   {
+    "sig": "setCurrentLanguageFromEditor(string newLanguage)",
+    "line": 275
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 287
+   }
+  ]
+ },
+ {
+  "type": "languageLocalizationManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Localization System\\languageLocalizationManager.cs",
+  "methods": [
+   {
+    "sig": "updateFileName()",
+    "line": 51
+   },
+   {
+    "sig": "updateLocalizationFileExternally()",
+    "line": 56
+   },
+   {
+    "sig": "checkEventsOnLanguageChange()",
+    "line": 61
+   },
+   {
+    "sig": "getDictionaryForEditor()",
+    "line": 68
+   },
+   {
+    "sig": "updateLocalizationFileFromEditor()",
+    "line": 74
+   },
+   {
+    "sig": "GetLocalizedValueFromEditor(string key)",
+    "line": 79
+   },
+   {
+    "sig": "addKey(string key, string value)",
+    "line": 85
+   },
+   {
+    "sig": "removeKey(string key)",
+    "line": 90
+   },
+   {
+    "sig": "addLanguage(string languageName)",
+    "line": 95
+   },
+   {
+    "sig": "addLanguageListToNewLocalizationFile()",
+    "line": 100
+   },
+   {
+    "sig": "getCurrentFilePath()",
+    "line": 107
+   },
+   {
+    "sig": "isUseResourcesPathActive()",
+    "line": 116
+   },
+   {
+    "sig": "checkIfLanguageFileExists()",
+    "line": 129
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 187
+   }
+  ]
+ },
+ {
+  "type": "localizationFileLoader",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Localization System\\localizationFileLoader.cs",
+  "methods": [
+   {
+    "sig": "loadFile(string filePath, bool useResourcesPath)",
+    "line": 24
+   },
+   {
+    "sig": "GetDictionaryValues(string attributeID)",
+    "line": 47
+   },
+   {
+    "sig": "addKey(string filePath, string key, string value, string languageName)",
+    "line": 109
+   },
+   {
+    "sig": "removeKey(string fileName, string filePath, string key, bool useResourcesPath)",
+    "line": 213
+   },
+   {
+    "sig": "addLanguage(string filePath, string languageName)",
+    "line": 273
+   },
+   {
+    "sig": "addLanguageListToNewLocalizationFile(string filePath)",
+    "line": 338
+   }
+  ]
+ },
+ {
+  "type": "languageElementChecker",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Localization System\\languageElementChecker.cs",
+  "methods": [
+   {
+    "sig": "updateLanguageOnElement()",
+    "line": 13
+   },
+   {
+    "sig": "updateLanguageOnElement(string currentLanguage)",
+    "line": 20
+   }
+  ]
+ },
+ {
+  "type": "simpleGameLanguageSelector",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Localization System\\simpleGameLanguageSelector.cs",
+  "methods": [
+   {
+    "sig": "setGameLanguageByIndex(int languageIndex)",
+    "line": 34
+   },
+   {
+    "sig": "setGameLanguage(string languageSelected)",
+    "line": 39
+   }
+  ]
+ },
+ {
+  "type": "UIElementsLocalizationManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Localization System\\UIElementsLocalizationManager.cs",
+  "methods": [
+   {
+    "sig": "checkFilePathValues()",
+    "line": 44
+   }
+  ]
+ },
+ {
+  "type": "interactionObjectsLocalizationManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Localization System\\interactionObjectsLocalizationManager.cs",
+  "methods": [
+   {
+    "sig": "checkFilePathValues()",
+    "line": 44
+   }
+  ]
+ },
+ {
+  "type": "inventoryLocalizationManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Localization System\\inventoryLocalizationManager.cs",
+  "methods": [
+   {
+    "sig": "checkFilePathValues()",
+    "line": 44
+   }
+  ]
+ },
+ {
+  "type": "searcherLocalizationToolEditor",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Localization System\\localizationToolEditor.cs",
+  "methods": [
+   {
+    "sig": "OnGUI()",
+    "line": 40
+   }
+  ]
+ },
+ {
+  "type": "addKeyLocalizationToolEditor",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Localization System\\localizationToolEditor.cs",
+  "methods": [
+   {
+    "sig": "OnGUI()",
+    "line": 151
+   }
+  ]
+ },
+ {
+  "type": "addLanguageLocalizationToolEditor",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Localization System\\localizationToolEditor.cs",
+  "methods": [
+   {
+    "sig": "OnGUI()",
+    "line": 217
+   }
+  ]
+ },
+ {
+  "type": "missionLocalizationManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Localization System\\missionLocalizationManager.cs",
+  "methods": [
+   {
+    "sig": "checkFilePathValues()",
+    "line": 44
+   }
+  ]
+ },
+ {
+  "type": "pointAndClickLocalizationManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Localization System\\pointAndClickLocalizationManager.cs",
+  "methods": [
+   {
+    "sig": "checkFilePathValues()",
+    "line": 44
+   }
+  ]
+ },
+ {
+  "type": "skillsLocalizationManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Localization System\\skillsLocalizationManager.cs",
+  "methods": [
+   {
+    "sig": "checkFilePathValues()",
+    "line": 44
+   }
+  ]
+ },
+ {
+  "type": "headTrack",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Head Track\\headTrack.cs",
+  "methods": [
+   {
+    "sig": "setSmoothHeadTrackDisableState(bool state)",
+    "line": 191
+   },
+   {
+    "sig": "setExternalHeadTrackPauseActiveState(bool state)",
+    "line": 196
+   },
+   {
+    "sig": "setHeadTrackSmoothPauseState(bool state)",
+    "line": 201
+   },
+   {
+    "sig": "updateHeadTrack()",
+    "line": 313
+   },
+   {
+    "sig": "setPauseCanLookStateWithDuration(float newDuration)",
+    "line": 322
+   },
+   {
+    "sig": "playerCanLook()",
+    "line": 347
+   },
+   {
+    "sig": "setFullBodyAwarenessActiveState(bool state)",
+    "line": 397
+   },
+   {
+    "sig": "getLookPosition()",
+    "line": 410
+   },
+   {
+    "sig": "setCanUseHeadTrackOnLockedCameraActiveState(bool state)",
+    "line": 549
+   },
+   {
+    "sig": "isTargetOnHeadRange(Vector3 direction)",
+    "line": 554
+   },
+   {
+    "sig": "lerpWeights(float headWeightTarget, float bodyWeightTarget)",
+    "line": 567
+   },
+   {
+    "sig": "getClosestTarget()",
+    "line": 582
+   },
+   {
+    "sig": "checkHeadTrackTarget(headTrackTarget target)",
+    "line": 642
+   },
+   {
+    "sig": "removeHeadTrackTarget(headTrackTarget target)",
+    "line": 661
+   },
+   {
+    "sig": "setHeadTransform(Transform headTransform)",
+    "line": 672
+   },
+   {
+    "sig": "searchHead()",
+    "line": 677
+   },
+   {
+    "sig": "setCameraBodyWeightValue(float newValue)",
+    "line": 684
+   },
+   {
+    "sig": "setOriginalCameraBodyWeightValue()",
+    "line": 689
+   },
+   {
+    "sig": "getHeadTrackTargetTransform()",
+    "line": 694
+   },
+   {
+    "sig": "getHeadTrackTargetParent()",
+    "line": 699
+   },
+   {
+    "sig": "getOriginalHeadTrackTargetPosition()",
+    "line": 704
+   },
+   {
+    "sig": "setHeadTrackEnabledState(bool state)",
+    "line": 709
+   },
+   {
+    "sig": "setOriginalHeadTrackEnabledState()",
+    "line": 714
+   },
+   {
+    "sig": "isHeadTrackEnabled()",
+    "line": 719
+   },
+   {
+    "sig": "setHeadTrackActiveWhileAimingState(bool state)",
+    "line": 724
+   },
+   {
+    "sig": "setHeadWeight(float newValue)",
+    "line": 729
+   },
+   {
+    "sig": "setBodyWeight(float newValue)",
+    "line": 734
+   },
+   {
+    "sig": "setLookInOppositeDirectionOutOfRangeValue(bool state)",
+    "line": 739
+   },
+   {
+    "sig": "setOriginalLookInOppositeDirectionOutOfRangeValue()",
+    "line": 744
+   },
+   {
+    "sig": "setNewCameraTargetToLook(Transform newCameraTargetToLook)",
+    "line": 749
+   },
+   {
+    "sig": "setNewCameraTargetToLookAndAdjustDirectionToPrevious(Transform newCameraTargetToLook)",
+    "line": 758
+   },
+   {
+    "sig": "setCustomHeadTrackToLookInfoByName(string nameToSearch)",
+    "line": 771
+   },
+   {
+    "sig": "setOriginalCameraTargetToLook()",
+    "line": 786
+   },
+   {
+    "sig": "setHeadTrackEnabledStateFromEditor(bool state)",
+    "line": 793
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 800
+   }
+  ]
+ },
+ {
+  "type": "headTrackTarget",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Head Track\\headTrackTarget.cs",
+  "methods": [
+   {
+    "sig": "getLookPositon()",
+    "line": 58
+   },
+   {
+    "sig": "lookTargetVisible(Vector3 headPosition, LayerMask layer)",
+    "line": 75
+   },
+   {
+    "sig": "drawLine(Vector3 startPosition, Vector3 endPosition, Color color)",
+    "line": 125
+   },
+   {
+    "sig": "setEnableState(bool state)",
+    "line": 176
+   },
+   {
+    "sig": "disableState()",
+    "line": 181
+   },
+   {
+    "sig": "addTagToLocate(string tagToAdd)",
+    "line": 186
+   },
+   {
+    "sig": "removeTagToLocate(string tagToAdd)",
+    "line": 201
+   },
+   {
+    "sig": "removeAllHeadTracksFoundAndDisableHeadTrack()",
+    "line": 225
+   },
+   {
+    "sig": "enableHeadTrack()",
+    "line": 243
+   }
+  ]
+ },
+ {
+  "type": "pointToLook",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Head Track\\pointToLook.cs",
+  "methods": [
+   {
+    "sig": "getPointToLookTransform()",
+    "line": 25
+   },
+   {
+    "sig": "setPointToLookEnabledState(bool state)",
+    "line": 34
+   },
+   {
+    "sig": "isPointToLookEnabled()",
+    "line": 39
+   },
+   {
+    "sig": "checkToRemoveThisObjectFromPlayerLockOn()",
+    "line": 44
+   }
+  ]
+ },
+ {
+  "type": "climbLedgeSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Climb System\\climbLedgeSystem.cs",
+  "methods": [
+   {
+    "sig": "enableOrDisableHangFromLedgeIcon(bool state)",
+    "line": 982
+   },
+   {
+    "sig": "resumePlayer()",
+    "line": 990
+   },
+   {
+    "sig": "startClimbLedgeAction()",
+    "line": 1084
+   },
+   {
+    "sig": "startLoseLedgeAction()",
+    "line": 1130
+   },
+   {
+    "sig": "loseAnyGrabbedSurface()",
+    "line": 1145
+   },
+   {
+    "sig": "MatchTarget(Vector3 matchPosition, Quaternion matchRotation, AvatarTarget target, MatchTargetWeightMask weightMask, float normalisedStartTime, float normalisedEndTime)",
+    "line": 1153
+   },
+   {
+    "sig": "adjustHoldOnLedge()",
+    "line": 1173
+   },
+   {
+    "sig": "stopAdjustHoldOnLedgeCoroutine()",
+    "line": 1180
+   },
+   {
+    "sig": "climbLedgeOnFirstPersonMovement()",
+    "line": 1270
+   },
+   {
+    "sig": "stopClimbLedgeOnFirstPersonMovementCoroutine()",
+    "line": 1277
+   },
+   {
+    "sig": "rotateTowardLedgeOnFirstPerson()",
+    "line": 1322
+   },
+   {
+    "sig": "stopRotateTowardLedgeOnFirstPersonCoroutine()",
+    "line": 1329
+   },
+   {
+    "sig": "setLedgeZoneFoundState(bool state)",
+    "line": 1370
+   },
+   {
+    "sig": "setNewRaycastDistance(float forwardDistance, float downDistance, Vector3 newCheckDownRaycastOffset)",
+    "line": 1380
+   },
+   {
+    "sig": "setOriginalRaycastDistance()",
+    "line": 1392
+   },
+   {
+    "sig": "setCanClimbCurrentLedgeZoneState(bool state)",
+    "line": 1402
+   },
+   {
+    "sig": "setCanGrabAnySurfaceOnAirActiveState(bool state)",
+    "line": 1407
+   },
+   {
+    "sig": "setCanGrabAnySurfaceOnAirState(bool state)",
+    "line": 1412
+   },
+   {
+    "sig": "inputJumpOnHoldLedge()",
+    "line": 1418
+   },
+   {
+    "sig": "inputGrabSurface()",
+    "line": 1473
+   },
+   {
+    "sig": "activateGrabToSurfaceAction()",
+    "line": 1482
+   },
+   {
+    "sig": "activateGrabToSurfaceActionExternally(bool state, Transform newLedgeTransform)",
+    "line": 1510
+   },
+   {
+    "sig": "canGrabToSurface()",
+    "line": 1551
+   },
+   {
+    "sig": "enableOrDisableGrabToSurfaceState()",
+    "line": 1592
+   },
+   {
+    "sig": "setPlayerPauseState()",
+    "line": 1706
+   },
+   {
+    "sig": "activateGrabLedge()",
+    "line": 1790
+   },
+   {
+    "sig": "setClimbLedgeActiveState(bool state)",
+    "line": 1998
+   },
+   {
+    "sig": "setClimbLedgeActiveStateFromEditor(bool state)",
+    "line": 2003
+   },
+   {
+    "sig": "checkEventOnLedgeGrabbed()",
+    "line": 2011
+   },
+   {
+    "sig": "checkEventOnLedgeLose()",
+    "line": 2018
+   },
+   {
+    "sig": "checkEventOnLedgeClimbed()",
+    "line": 2025
+   },
+   {
+    "sig": "checkEventOnStartLedgeClimb()",
+    "line": 2032
+   },
+   {
+    "sig": "checkEventOnLedgeJump()",
+    "line": 2039
+   },
+   {
+    "sig": "setAvoidPlayerGrabLedgeValue(bool state)",
+    "line": 2047
+   },
+   {
+    "sig": "stopHangFromLedge()",
+    "line": 2053
+   },
+   {
+    "sig": "setCanCheckForHangFromLedgeOnGroundState(bool state)",
+    "line": 2074
+   },
+   {
+    "sig": "setOnlyHangFromLedgeIfPlayerIsNotMovingValue(bool state)",
+    "line": 2079
+   },
+   {
+    "sig": "setOnlyHangFromLedgeIfPlayerIsNotMovingOriginalValue()",
+    "line": 2084
+   },
+   {
+    "sig": "setClimbLedgeActionPausedState(bool state)",
+    "line": 2089
+   },
+   {
+    "sig": "setOtherClimbActionActiveState(bool state)",
+    "line": 2094
+   },
+   {
+    "sig": "setGrabToSurfaceInputPausedState(bool state)",
+    "line": 2099
+   },
+   {
+    "sig": "stopSetClimbLedgeActionPausedStateWithDurationCoroutine()",
+    "line": 2104
+   },
+   {
+    "sig": "setClimbLedgeActionPausedStateWithDuration(float pauseDuration)",
+    "line": 2111
+   },
+   {
+    "sig": "rotateCharacterOnJump()",
+    "line": 2133
+   },
+   {
+    "sig": "rotateCharacterOnJumpCoroutine()",
+    "line": 2147
+   }
+  ]
+ },
+ {
+  "type": "autoGrabLedgeTriggerSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Climb System\\autoGrabLedgeTriggerSystem.cs",
+  "methods": [
+   {
+    "sig": "checkTriggerInfo(Collider col, bool isEnter)",
+    "line": 29
+   }
+  ]
+ },
+ {
+  "type": "ledgeZoneSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Climb System\\ledgeZoneSystem.cs",
+  "methods": [
+   {
+    "sig": "checkTriggerInfo(Collider col, bool isEnter)",
+    "line": 44
+   }
+  ]
+ },
+ {
+  "type": "puzzleSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Puzzles\\puzzleSystem.cs",
+  "methods": [
+   {
+    "sig": "resetObjects()",
+    "line": 387
+   },
+   {
+    "sig": "OnTriggerExit(Collider col)",
+    "line": 409
+   },
+   {
+    "sig": "canBeDragged(GameObject objectToCheck)",
+    "line": 472
+   },
+   {
+    "sig": "dropObject()",
+    "line": 487
+   },
+   {
+    "sig": "checkIfObjectGrabbed(GameObject objectToCheck)",
+    "line": 514
+   },
+   {
+    "sig": "startOrStopPuzzle()",
+    "line": 521
+   },
+   {
+    "sig": "setCurrentPlayer(GameObject player)",
+    "line": 554
+   },
+   {
+    "sig": "increaseNumberObjectsPlaced()",
+    "line": 573
+   },
+   {
+    "sig": "resetNumberObjectsPlaced()",
+    "line": 582
+   },
+   {
+    "sig": "solvePuzzle()",
+    "line": 587
+   },
+   {
+    "sig": "setMainColliderTriggerEnabledState(bool state)",
+    "line": 612
+   },
+   {
+    "sig": "resetCurrentObjectRotation()",
+    "line": 627
+   },
+   {
+    "sig": "removeDeviceFromList()",
+    "line": 667
+   },
+   {
+    "sig": "playSound(AudioElement soundEffect)",
+    "line": 674
+   },
+   {
+    "sig": "inputSetRotateObjectState(bool state)",
+    "line": 698
+   },
+   {
+    "sig": "inputIncreaseObjectHolDistanceByButton(bool state)",
+    "line": 711
+   },
+   {
+    "sig": "inputDecreaseObjectHolDistanceByButton(bool state)",
+    "line": 722
+   },
+   {
+    "sig": "inputSetObjectHolDistanceByMouseWheel(bool state)",
+    "line": 733
+   },
+   {
+    "sig": "inputResetPuzzle()",
+    "line": 752
+   }
+  ]
+ },
+ {
+  "type": "puzzleSystemPlayerManagement",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Puzzles\\puzzleSystemPlayerManagement.cs",
+  "methods": [
+   {
+    "sig": "setcurrentPuzzleSystem(puzzleSystem newPuzzleObject)",
+    "line": 23
+   },
+   {
+    "sig": "setUsingPuzzleState(bool state)",
+    "line": 28
+   },
+   {
+    "sig": "puzzleObjectInputSetRotateObjectState(bool state)",
+    "line": 36
+   },
+   {
+    "sig": "puzzleObjectInputIncreaseObjectHolDistanceByButton(bool state)",
+    "line": 47
+   },
+   {
+    "sig": "puzzleObjectInputDecreaseObjectHolDistanceByButton(bool state)",
+    "line": 58
+   },
+   {
+    "sig": "puzzleObjectInputSetObjectHolDistanceByMouseWheel(bool state)",
+    "line": 69
+   },
+   {
+    "sig": "puzzleObjectInputResetPuzzle()",
+    "line": 80
+   },
+   {
+    "sig": "checkEventsOnStateChange(bool state)",
+    "line": 91
+   }
+  ]
+ },
+ {
+  "type": "pianoSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Puzzles\\pianoSystem.cs",
+  "methods": [
+   {
+    "sig": "autoPlaySong()",
+    "line": 70
+   },
+   {
+    "sig": "playSong(string songNotes)",
+    "line": 75
+   },
+   {
+    "sig": "checkPressedKey(string keyName)",
+    "line": 121
+   },
+   {
+    "sig": "rotatePressedKey(keyInfo currentKeyInfo)",
+    "line": 136
+   },
+   {
+    "sig": "playSound(AudioElement clipSound)",
+    "line": 164
+   },
+   {
+    "sig": "startOrStopUsingPiano()",
+    "line": 175
+   },
+   {
+    "sig": "setUsingPianoState(bool state)",
+    "line": 180
+   }
+  ]
+ },
+ {
+  "type": "placeObjectSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Puzzles\\placeObjectSystem.cs",
+  "methods": [
+   {
+    "sig": "OnTriggerEnter(Collider col)",
+    "line": 98
+   },
+   {
+    "sig": "OnTriggerExit(Collider col)",
+    "line": 114
+   },
+   {
+    "sig": "checkIfCanBePlaced()",
+    "line": 125
+   },
+   {
+    "sig": "canBeDragged(GameObject objectToCheck)",
+    "line": 151
+   },
+   {
+    "sig": "moveObjectToPlace()",
+    "line": 164
+   },
+   {
+    "sig": "increaseNumberObjectsPlaced()",
+    "line": 202
+   },
+   {
+    "sig": "resetNumberObjectsPlaced()",
+    "line": 207
+   }
+  ]
+ },
+ {
+  "type": "pressObjectsInOrderSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Puzzles\\pressObjectsInOrderSystem.cs",
+  "methods": [
+   {
+    "sig": "checkPressedPosition(string positionName)",
+    "line": 121
+   },
+   {
+    "sig": "resetPressedObjects()",
+    "line": 165
+   },
+   {
+    "sig": "startOrStopPressedObjectSystem()",
+    "line": 174
+   },
+   {
+    "sig": "setUsingPressedObjectSystemState(bool state)",
+    "line": 179
+   },
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 201
+   }
+  ]
+ }
+]

@@ -1,0 +1,623 @@
+[
+ {
+  "type": "turnBasedCombatSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Turn Based Combat\\turnBasedCombatSystem.cs",
+  "source": "Turn Based Combat/turnBasedCombatSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "newCharacterTeamLeader",
+    "label": "",
+    "section": "Configure New Teams Settings"
+   },
+   {
+    "field": "teamPositionDataName",
+    "label": "",
+    "section": "Configure New Teams Settings"
+   },
+   {
+    "field": "newTeamAlwaysSelectFirst",
+    "label": "",
+    "section": "Configure New Teams Settings"
+   },
+   {
+    "field": "useCustomCameraStateOnNewTeam",
+    "label": "",
+    "section": "Configure New Teams Settings"
+   },
+   {
+    "field": "customCameraStateOnNewTeam",
+    "label": "",
+    "section": "Configure New Teams Settings"
+   },
+   {
+    "field": "useRewardSystem",
+    "label": "",
+    "section": "Configure New Teams Settings"
+   },
+   {
+    "field": "mainRewardSystem",
+    "label": "",
+    "section": "Configure New Teams Settings"
+   }
+  ]
+ },
+ {
+  "type": "tutorialUISystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Tutorial System\\tutorialUISystem.cs",
+  "source": "Tutorial System/tutorialUISystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "tutorialsPanel",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "videoAudioSource",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "mainVideoPlayerPanel",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "mainPlayerTutorialSystem",
+    "label": "",
+    "section": "Main Settings"
+   }
+  ]
+ },
+ {
+  "type": "useInventoryObject",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Inventory\\useInventoryObject.cs",
+  "source": "Inventory/useInventoryObject.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "canBeReUsed",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useInventoryType",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useObjectsOneByOneUsingButton",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "inventoryObjectAction",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "disableObjectActionAfterUse",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "tagToConfigure",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "playerTag",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "vehicleTag",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "checkPlayerInventoryWhileDriving",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "canUseAndUseInventoryPickupsOnTriggerEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "removeInventoryPickupObjectOnTrigger",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "objectUsedMessage",
+    "label": "",
+    "section": "Message Settings"
+   },
+   {
+    "field": "useCustomObjectNotFoundMessage",
+    "label": "",
+    "section": "Message Settings"
+   },
+   {
+    "field": "objectNotFoundMessage",
+    "label": "",
+    "section": "Message Settings"
+   },
+   {
+    "field": "enableObjectWhenActivate",
+    "label": "",
+    "section": "Object Activated Settings"
+   },
+   {
+    "field": "objectToEnable",
+    "label": "",
+    "section": "Object Activated Settings"
+   },
+   {
+    "field": "useAnimation",
+    "label": "",
+    "section": "Object Activated Settings"
+   },
+   {
+    "field": "objectWithAnimation",
+    "label": "",
+    "section": "Object Activated Settings"
+   },
+   {
+    "field": "animationName",
+    "label": "",
+    "section": "Object Activated Settings"
+   },
+   {
+    "field": "openPlayerInventoryMenu",
+    "label": "",
+    "section": "Player Inventory Menu Settings"
+   },
+   {
+    "field": "setNewInventoryPanel",
+    "label": "",
+    "section": "Player Inventory Menu Settings"
+   },
+   {
+    "field": "defaultInventoryPanelName",
+    "label": "",
+    "section": "Player Inventory Menu Settings"
+   },
+   {
+    "field": "newInventoryPanelName",
+    "label": "",
+    "section": "Player Inventory Menu Settings"
+   },
+   {
+    "field": "showDebugInfo",
+    "label": "",
+    "section": "Debug"
+   },
+   {
+    "field": "unlockFunctionCall",
+    "label": "",
+    "section": "Object Solved Event Settings"
+   },
+   {
+    "field": "useEventOnUnlockWithDelay",
+    "label": "",
+    "section": "Object Solved Event Settings"
+   },
+   {
+    "field": "delayToActivateEvent",
+    "label": "",
+    "section": "Object Solved Event Settings"
+   },
+   {
+    "field": "eventOnUnlockWithDelay",
+    "label": "",
+    "section": "Object Solved Event Settings"
+   },
+   {
+    "field": "useUnlockEventFromLoadingGame",
+    "label": "",
+    "section": "Object Solved Event Settings"
+   },
+   {
+    "field": "unlockEventFromLoadingGame",
+    "label": "",
+    "section": "Object Solved Event Settings"
+   },
+   {
+    "field": "deviceStringActionManager",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "mainAudioSource",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "mainCollider",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "currentElement",
+    "label": "",
+    "section": "Components"
+   }
+  ]
+ },
+ {
+  "type": "usingDevicesSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\usingDevicesSystem.cs",
+  "source": "Player/usingDevicesSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "canUseDevices",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useDeviceFunctionName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "setCurrentUserOnDeviceFunctionName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useDevicesActionName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "usePickUpAmountIfEqualToOne",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useOnlyDeviceIfVisibleOnCamera",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useDeviceButtonEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "holdInteractionButtonEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "checkIfDevicesGameObjectDetectedNotActive",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "checkIfPlayerColliderInsideBoundOfDeviceOnExit",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "layer",
+    "label": "",
+    "section": "Raycast Settings"
+   },
+   {
+    "field": "raycastDistance",
+    "label": "",
+    "section": "Raycast Settings"
+   },
+   {
+    "field": "ignoreCheckIfObstacleBetweenDeviceAndPlayer",
+    "label": "",
+    "section": "Raycast Settings"
+   },
+   {
+    "field": "useGameObjectListToIgnore",
+    "label": "",
+    "section": "Ignore GameObject List Settings"
+   },
+   {
+    "field": "holdButtonToTakePickupsAround",
+    "label": "",
+    "section": "Hold Button To Pick Around Settings"
+   },
+   {
+    "field": "holdButtonTime",
+    "label": "",
+    "section": "Hold Button To Pick Around Settings"
+   },
+   {
+    "field": "removeDeviceFromPlayerListOnMaxDistance",
+    "label": "",
+    "section": "Max Distance Interaction Settings"
+   },
+   {
+    "field": "maxDistanceToRemoveDeviceFromPlayerList",
+    "label": "",
+    "section": "Max Distance Interaction Settings"
+   },
+   {
+    "field": "showUseDeviceIconEnabled",
+    "label": "",
+    "section": "Device Icon Settings"
+   },
+   {
+    "field": "useFixedDeviceIconPosition",
+    "label": "",
+    "section": "Device Icon Settings"
+   },
+   {
+    "field": "deviceOnScreenIfUseFixedIconPosition",
+    "label": "",
+    "section": "Device Icon Settings"
+   },
+   {
+    "field": "useFixedDeviceIconPositionOnFBA",
+    "label": "",
+    "section": "Device Icon Settings"
+   },
+   {
+    "field": "followDeviceIconPositionOnFBAIfObjectOnScreen",
+    "label": "",
+    "section": "Device Icon Settings"
+   },
+   {
+    "field": "getClosestDeviceToCameraCenter",
+    "label": "",
+    "section": "Device Icon Settings"
+   },
+   {
+    "field": "useMaxDistanceToCameraCenter",
+    "label": "",
+    "section": "Device Icon Settings"
+   },
+   {
+    "field": "maxDistanceToCameraCenter",
+    "label": "",
+    "section": "Device Icon Settings"
+   },
+   {
+    "field": "defaultDeviceNameFontSize",
+    "label": "",
+    "section": "Device Icon Settings"
+   },
+   {
+    "field": "extraTextStartActionKey",
+    "label": "",
+    "section": "Device Icon Settings"
+   },
+   {
+    "field": "extraTextEndActionKey",
+    "label": "",
+    "section": "Device Icon Settings"
+   },
+   {
+    "field": "showCurrentDeviceAmount",
+    "label": "",
+    "section": "Device Icon Settings"
+   },
+   {
+    "field": "currentDeviceAmountTextPanel",
+    "label": "",
+    "section": "Device Icon Settings"
+   },
+   {
+    "field": "currentDeviceAmountText",
+    "label": "",
+    "section": "Device Icon Settings"
+   },
+   {
+    "field": "showDetectedDevicesIconOnScreen",
+    "label": "",
+    "section": "Device Icon Settings"
+   },
+   {
+    "field": "detectedDevicesIconPrefab",
+    "label": "",
+    "section": "Device Icon Settings"
+   },
+   {
+    "field": "detectedDevicesIconParent",
+    "label": "",
+    "section": "Device Icon Settings"
+   },
+   {
+    "field": "useMinDistanceToUseDevices",
+    "label": "",
+    "section": "Device Icon Settings"
+   },
+   {
+    "field": "minDistanceToUseDevices",
+    "label": "",
+    "section": "Device Icon Settings"
+   },
+   {
+    "field": "disableInteractionTouchButtonIfNotDevicesDetected",
+    "label": "",
+    "section": "Device Icon Settings"
+   },
+   {
+    "field": "keepInteractionTouchButtonAlwaysActive",
+    "label": "",
+    "section": "Device Icon Settings"
+   },
+   {
+    "field": "showInteractionPanelIfObjectNotOnScreen",
+    "label": "",
+    "section": "Device Icon Settings"
+   },
+   {
+    "field": "useIconButtonInfoList",
+    "label": "",
+    "section": "Icon Button List Settings"
+   },
+   {
+    "field": "defaultIconButtonName",
+    "label": "",
+    "section": "Icon Button List Settings"
+   },
+   {
+    "field": "interactionMessageGameObject",
+    "label": "",
+    "section": "Interaction Message Settings"
+   },
+   {
+    "field": "interactionMessageText",
+    "label": "",
+    "section": "Interaction Message Settings"
+   },
+   {
+    "field": "useInteractionActions",
+    "label": "",
+    "section": "Interaction Actions Settings"
+   },
+   {
+    "field": "useDeviceFoundShader",
+    "label": "",
+    "section": "Outline Shader Device Found Settings"
+   },
+   {
+    "field": "deviceFoundShader",
+    "label": "",
+    "section": "Outline Shader Device Found Settings"
+   },
+   {
+    "field": "shaderOutlineWidth",
+    "label": "",
+    "section": "Outline Shader Device Found Settings"
+   },
+   {
+    "field": "shaderOutlineColor",
+    "label": "",
+    "section": "Outline Shader Device Found Settings"
+   },
+   {
+    "field": "usedByAI",
+    "label": "",
+    "section": "AI Settings"
+   },
+   {
+    "field": "playerControllerManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "grabObjectsManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "playerInput",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "mainCamera",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "playerCameraManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "mainCameraTransform",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "mainCollider",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "examineObjectRenderTexturePanel",
+    "label": "",
+    "section": "Examine Object Elements"
+   },
+   {
+    "field": "examineObjectBlurPanelParent",
+    "label": "",
+    "section": "Examine Object Elements"
+   },
+   {
+    "field": "examineObjectRenderCamera",
+    "label": "",
+    "section": "Examine Object Elements"
+   },
+   {
+    "field": "examinateDevicesCamera",
+    "label": "",
+    "section": "Examine Object Elements"
+   },
+   {
+    "field": "touchButton",
+    "label": "",
+    "section": "Interaction Elements"
+   },
+   {
+    "field": "touchButtonRawImage",
+    "label": "",
+    "section": "Interaction Elements"
+   },
+   {
+    "field": "originalTouchButtonRawImage",
+    "label": "",
+    "section": "Interaction Elements"
+   },
+   {
+    "field": "touchButtonIcon",
+    "label": "",
+    "section": "Interaction Elements"
+   },
+   {
+    "field": "iconButton",
+    "label": "",
+    "section": "Interaction Elements"
+   },
+   {
+    "field": "iconButtonRectTransform",
+    "label": "",
+    "section": "Interaction Elements"
+   },
+   {
+    "field": "actionText",
+    "label": "",
+    "section": "Interaction Elements"
+   },
+   {
+    "field": "keyText",
+    "label": "",
+    "section": "Interaction Elements"
+   },
+   {
+    "field": "objectNameText",
+    "label": "",
+    "section": "Interaction Elements"
+   },
+   {
+    "field": "objectImage",
+    "label": "",
+    "section": "Interaction Elements"
+   },
+   {
+    "field": "objectDescriptionText",
+    "label": "",
+    "section": "Interaction Elements"
+   }
+  ]
+ }
+]

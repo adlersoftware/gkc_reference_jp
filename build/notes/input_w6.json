@@ -1,0 +1,760 @@
+[
+ {
+  "type": "weaponBuilder",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\weaponBuilder.cs",
+  "methods": [
+   {
+    "sig": "buildWeapon()",
+    "line": 81
+   },
+   {
+    "sig": "adjustWeaponParts()",
+    "line": 123
+   },
+   {
+    "sig": "checkArmsToReplace()",
+    "line": 192
+   },
+   {
+    "sig": "toogleArmsMeshActiveState()",
+    "line": 225
+   },
+   {
+    "sig": "adjustWeaponSettings()",
+    "line": 232
+   },
+   {
+    "sig": "checkIfCreateInventoryWeapon()",
+    "line": 247
+   },
+   {
+    "sig": "setCustomAmmoMeshInfo(GameObject newCustomAmmoMesh, Texture newCustomAmmoIcon, string newCustomAmmoDescription)",
+    "line": 258
+   },
+   {
+    "sig": "checkIfCreateInventoryWeaponAmmo()",
+    "line": 265
+   },
+   {
+    "sig": "checkCreateUsableWeaponPrefab()",
+    "line": 273
+   },
+   {
+    "sig": "checkRemoteRegularWeaponPickupPrefab()",
+    "line": 282
+   },
+   {
+    "sig": "adjustWeaponSettingsFromEditor()",
+    "line": 287
+   },
+   {
+    "sig": "completeWeaponBuild()",
+    "line": 294
+   },
+   {
+    "sig": "resetTemporalWeaponParts()",
+    "line": 311
+   },
+   {
+    "sig": "removeTemporalWeaponParts()",
+    "line": 325
+   },
+   {
+    "sig": "setCreateWeaponInventoryActiveState(bool state)",
+    "line": 363
+   },
+   {
+    "sig": "setCreateWeaponAmmoInventoryActiveState(bool state)",
+    "line": 370
+   },
+   {
+    "sig": "setWeaponAmmoAmountValue(float ammoAmount)",
+    "line": 377
+   },
+   {
+    "sig": "setCreateUsableWeaponPrefabActiveState(bool state)",
+    "line": 384
+   },
+   {
+    "sig": "alignViewWithWeaponCameraPosition()",
+    "line": 391
+   },
+   {
+    "sig": "setEditorCameraPosition(Transform transformToUse)",
+    "line": 396
+   },
+   {
+    "sig": "setNewWeaponName(string newWeaponName)",
+    "line": 401
+   },
+   {
+    "sig": "setNewWeaponIconTexture(Texture newWeaponIconTexture)",
+    "line": 410
+   },
+   {
+    "sig": "setNewWeaponDescription(string newValue)",
+    "line": 415
+   },
+   {
+    "sig": "setObjectWeight(float newValue)",
+    "line": 420
+   },
+   {
+    "sig": "setCanBeSold(bool newValue)",
+    "line": 425
+   },
+   {
+    "sig": "setvendorPrice(float newValue)",
+    "line": 430
+   },
+   {
+    "sig": "setSellPrice(float newValue)",
+    "line": 435
+   },
+   {
+    "sig": "setWeaponInventorySlotIconInEditor(Texture newTexture)",
+    "line": 440
+   },
+   {
+    "sig": "setWeaponIconHUDInEditor(Texture newTexture)",
+    "line": 445
+   },
+   {
+    "sig": "setWeaponIconInEditor(Texture newTexture)",
+    "line": 450
+   },
+   {
+    "sig": "setWeaponDurabilityInfo(bool useDurabilityValue, float durabilityAmountValue, float maxDurabilityAmountValue, float durabilityUsedOnAttackValue)",
+    "line": 455
+   },
+   {
+    "sig": "checkWeaponBuilder(playerWeaponsManager newPlayerWeaponsManager)",
+    "line": 463
+   },
+   {
+    "sig": "checkWeaponsPartsToRemoveOnAI()",
+    "line": 473
+   },
+   {
+    "sig": "createUsableWeaponPrefab()",
+    "line": 486
+   },
+   {
+    "sig": "instantiateUsableWeaponPrefabInScene()",
+    "line": 497
+   }
+  ]
+ },
+ {
+  "type": "weaponAttachmentSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\Attachments\\weaponAttachmentSystem.cs",
+  "methods": [
+   {
+    "sig": "initializeAttachmentSystem()",
+    "line": 159
+   },
+   {
+    "sig": "checkInitializeAttachmentElements()",
+    "line": 181
+   },
+   {
+    "sig": "instantiateAttachmentIcons()",
+    "line": 222
+   },
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 361
+   },
+   {
+    "sig": "activateAttachmentUIPanels()",
+    "line": 564
+   },
+   {
+    "sig": "openOrCloseWeaponAttachmentEditor(bool state)",
+    "line": 679
+   },
+   {
+    "sig": "canUseSmoothTransition()",
+    "line": 770
+   },
+   {
+    "sig": "cancelWeaponAttachmentEditor()",
+    "line": 775
+   },
+   {
+    "sig": "checkIfAttachmentSystemInitialized()",
+    "line": 810
+   },
+   {
+    "sig": "setAttachmentInitialState()",
+    "line": 825
+   },
+   {
+    "sig": "setAttachmentState(bool state, int attachmentInfoListIndex, int attachmentPlaceListIndex, string attachmentName)",
+    "line": 929
+   },
+   {
+    "sig": "checkPressedAttachmentButton(Button pressedButton)",
+    "line": 1048
+   },
+   {
+    "sig": "setAttachmentsState(bool state, bool changeCurrentState)",
+    "line": 1146
+   },
+   {
+    "sig": "checkAttachmentsHUD()",
+    "line": 1234
+   },
+   {
+    "sig": "checkAttachmentsOnDrawWeapon()",
+    "line": 1266
+   },
+   {
+    "sig": "checkAttachmentsOnKeepWeapon()",
+    "line": 1271
+   },
+   {
+    "sig": "isAttachmentAlreadyActiveOnWeapon(string attachmentName)",
+    "line": 1276
+   },
+   {
+    "sig": "pickupAttachment(string attachmentName)",
+    "line": 1297
+   },
+   {
+    "sig": "enableAllAttachments()",
+    "line": 1371
+   },
+   {
+    "sig": "playSound(AudioElement sound)",
+    "line": 1384
+   },
+   {
+    "sig": "setAdjustThirdPersonCameraActiveState(bool state)",
+    "line": 1396
+   },
+   {
+    "sig": "adjustThirdPersonCamera()",
+    "line": 1402
+   },
+   {
+    "sig": "canBeOpened()",
+    "line": 1484
+   },
+   {
+    "sig": "enableOrDisableAllAttachmentPlaces(bool value)",
+    "line": 1501
+   },
+   {
+    "sig": "enableOrDisableAllAttachment(bool value, int attachmentPlaceIndex)",
+    "line": 1511
+   },
+   {
+    "sig": "useEventOnPress()",
+    "line": 1522
+   },
+   {
+    "sig": "useEventOnPressDown()",
+    "line": 1539
+   },
+   {
+    "sig": "useEventOnPressUp()",
+    "line": 1557
+   },
+   {
+    "sig": "setSecondaryWeaponAttachmentSystem(weaponAttachmentSystem newAttachment)",
+    "line": 1574
+   },
+   {
+    "sig": "setUsingDualWeaponState(bool state)",
+    "line": 1579
+   },
+   {
+    "sig": "assignWeaponToAttachment(IKWeaponSystem newIKWeaponSystem)",
+    "line": 1584
+   },
+   {
+    "sig": "removeWeaponFromAttachment()",
+    "line": 1602
+   },
+   {
+    "sig": "assignWeaponAttachmentUI()",
+    "line": 1611
+   },
+   {
+    "sig": "getPersistanceAttachmentWeaponInfoList()",
+    "line": 1633
+   },
+   {
+    "sig": "initializeAttachmentValues(List<persistanceWeaponAttachmentPlaceInfo> weaponAttachmentList)",
+    "line": 1661
+   }
+  ]
+ },
+ {
+  "type": "gravityGun",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\New Weapon Behaviors\\gravityGun.cs",
+  "methods": [
+   {
+    "sig": "checkObjectFoundOrLostState()",
+    "line": 344
+   },
+   {
+    "sig": "grabObject()",
+    "line": 355
+   },
+   {
+    "sig": "grabCurrenObject(GameObject objectToGrab)",
+    "line": 362
+   },
+   {
+    "sig": "checkTypeObject(GameObject objectToCheck)",
+    "line": 584
+   },
+   {
+    "sig": "dropObject()",
+    "line": 612
+   },
+   {
+    "sig": "checkJointsInObject(GameObject objectToThrow, float force)",
+    "line": 781
+   },
+   {
+    "sig": "addForceToThrownRigidbody(GameObject objectToThrow, float force)",
+    "line": 792
+   },
+   {
+    "sig": "throwRealisticGrabbedObject()",
+    "line": 818
+   },
+   {
+    "sig": "resetFixedGrabedTransformPosition()",
+    "line": 832
+   },
+   {
+    "sig": "stopResetFixedGrabedTransformPositionCoroutine()",
+    "line": 839
+   },
+   {
+    "sig": "checkIfDropObject(GameObject objectToCheck)",
+    "line": 871
+   },
+   {
+    "sig": "setWeaponActiveState(bool state)",
+    "line": 878
+   },
+   {
+    "sig": "getGrabbedObject()",
+    "line": 895
+   },
+   {
+    "sig": "isGrabbedObject()",
+    "line": 900
+   },
+   {
+    "sig": "checkIfEnableNoiseOnCollision(GameObject objectToCheck, float launchSpeed)",
+    "line": 905
+   },
+   {
+    "sig": "addForceToLaunchObject()",
+    "line": 916
+   },
+   {
+    "sig": "launchObject()",
+    "line": 929
+   },
+   {
+    "sig": "isCurrentObjectToGrabFound(GameObject objectToCheck)",
+    "line": 988
+   },
+   {
+    "sig": "inputGrabObject()",
+    "line": 998
+   },
+   {
+    "sig": "inputHoldToLaunchObject()",
+    "line": 1006
+   },
+   {
+    "sig": "inputReleaseToLaunchObject()",
+    "line": 1014
+   },
+   {
+    "sig": "inputResetFixedGrabedTransformPosition()",
+    "line": 1034
+   },
+   {
+    "sig": "activateSecondaryFunctionPressDown()",
+    "line": 1041
+   },
+   {
+    "sig": "activateSecondaryFunctionPress()",
+    "line": 1048
+   },
+   {
+    "sig": "activateSecondaryFunctionPressUp()",
+    "line": 1055
+   },
+   {
+    "sig": "setNewGravityToGrabbedObject()",
+    "line": 1062
+   },
+   {
+    "sig": "isCarryingObject()",
+    "line": 1094
+   },
+   {
+    "sig": "setCanUseWeaponState(bool state)",
+    "line": 1099
+   },
+   {
+    "sig": "rotateRotor(float newSpeed)",
+    "line": 1120
+   }
+  ]
+ },
+ {
+  "type": "surfaceToSlice",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\New Weapon Behaviors\\surfaceToSlice.cs",
+  "methods": [
+   {
+    "sig": "checkEventsOnIgnoreDestroyOriginalObject()",
+    "line": 140
+   },
+   {
+    "sig": "checkEventBeforeSlice()",
+    "line": 147
+   },
+   {
+    "sig": "checkEventOnCut()",
+    "line": 154
+   },
+   {
+    "sig": "copySurfaceInfo(surfaceToSlice surfaceToCopy)",
+    "line": 161
+   },
+   {
+    "sig": "isObjectCharacter()",
+    "line": 211
+   },
+   {
+    "sig": "isIgnoreDamageIfSliceNotActivatedActive()",
+    "line": 216
+   },
+   {
+    "sig": "isCutSurfaceEnabled()",
+    "line": 221
+   },
+   {
+    "sig": "setCutSurfaceEnabledState(bool state)",
+    "line": 226
+   },
+   {
+    "sig": "setIgnoreRegularDamageIfCutSurfaceNotEnabledState(bool state)",
+    "line": 235
+   },
+   {
+    "sig": "isIgnoreRegularDamageIfCutSurfaceNotEnabled()",
+    "line": 240
+   },
+   {
+    "sig": "getLastTimeSliced()",
+    "line": 245
+   },
+   {
+    "sig": "sliceCanBeActivated(float minDelayToSliceSameObject)",
+    "line": 250
+   },
+   {
+    "sig": "checkSliceDirectionResult(Vector3 sliceDirectionRight, Vector3 sliceDirectionUp)",
+    "line": 265
+   },
+   {
+    "sig": "getMainSimpleSliceSystem()",
+    "line": 317
+   },
+   {
+    "sig": "setMainSimpleSliceSystem(GameObject newObject)",
+    "line": 322
+   },
+   {
+    "sig": "setMainSimpleSliceSystemCheckingNotNull(GameObject newObject)",
+    "line": 329
+   },
+   {
+    "sig": "setDestructionPending(bool state)",
+    "line": 336
+   },
+   {
+    "sig": "setUseTimeBulletValue(bool state)",
+    "line": 347
+   },
+   {
+    "sig": "checkTimeBulletOnCut()",
+    "line": 352
+   },
+   {
+    "sig": "getCrossSectionMaterial()",
+    "line": 359
+   },
+   {
+    "sig": "setCrossSectionMaterial(Material newMaterial)",
+    "line": 364
+   },
+   {
+    "sig": "checkDestroySlicedPartsAfterDelay()",
+    "line": 369
+   },
+   {
+    "sig": "setMainSurfaceToSlice(GameObject newObject)",
+    "line": 386
+   },
+   {
+    "sig": "getMainSurfaceToSlice()",
+    "line": 391
+   },
+   {
+    "sig": "setCutSurfaceEnabledStateFromEditor(bool state)",
+    "line": 401
+   }
+  ]
+ },
+ {
+  "type": "weaponAnimatorSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\weaponAnimatorSystem.cs",
+  "methods": [
+   {
+    "sig": "setIdleState(bool state)",
+    "line": 240
+   },
+   {
+    "sig": "setWalkState(bool state)",
+    "line": 280
+   },
+   {
+    "sig": "setRunState(bool state)",
+    "line": 320
+   },
+   {
+    "sig": "setShootState(bool state)",
+    "line": 360
+   },
+   {
+    "sig": "setReloadState(bool state)",
+    "line": 414
+   },
+   {
+    "sig": "setAimState(bool state)",
+    "line": 453
+   },
+   {
+    "sig": "setDrawState(bool state)",
+    "line": 489
+   },
+   {
+    "sig": "setHolsterState(bool state)",
+    "line": 508
+   },
+   {
+    "sig": "setMeleeAttackState(bool state)",
+    "line": 523
+   },
+   {
+    "sig": "stopAnimatorCoroutine()",
+    "line": 570
+   },
+   {
+    "sig": "updateAnimatorValues()",
+    "line": 697
+   },
+   {
+    "sig": "setWeaponInFirstPersonStateActiveState(bool state)",
+    "line": 793
+   },
+   {
+    "sig": "resetActiveStates()",
+    "line": 826
+   },
+   {
+    "sig": "getDrawDuration()",
+    "line": 860
+   },
+   {
+    "sig": "getHolsterDuration()",
+    "line": 865
+   },
+   {
+    "sig": "setMeleeAttackInfo()",
+    "line": 870
+   },
+   {
+    "sig": "getMeleeAttackStartDuration()",
+    "line": 881
+   },
+   {
+    "sig": "getMeleeAttackMiddleDuration()",
+    "line": 890
+   },
+   {
+    "sig": "getMeleeAttackEndDuration()",
+    "line": 899
+   },
+   {
+    "sig": "enableOrDisableWeaponAnimator(bool state)",
+    "line": 908
+   }
+  ]
+ },
+ {
+  "type": "smartphoneDevice",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\New Weapon Behaviors\\smartphoneDevice.cs",
+  "methods": [
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 134
+   },
+   {
+    "sig": "takePhoto()",
+    "line": 173
+   },
+   {
+    "sig": "checkFlash()",
+    "line": 259
+   },
+   {
+    "sig": "changeZoom()",
+    "line": 284
+   },
+   {
+    "sig": "turnOn()",
+    "line": 289
+   },
+   {
+    "sig": "turnOff()",
+    "line": 296
+   },
+   {
+    "sig": "changeSmartphoneState()",
+    "line": 303
+   },
+   {
+    "sig": "setSmartphoneState(bool state)",
+    "line": 308
+   },
+   {
+    "sig": "playSound()",
+    "line": 345
+   },
+   {
+    "sig": "setCurrentPerspectiveSystem(cameraPerspectiveSystem perspective)",
+    "line": 355
+   },
+   {
+    "sig": "removeCurrentPerspectiveSystem()",
+    "line": 362
+   },
+   {
+    "sig": "getSmarthphoneMainCamera()",
+    "line": 369
+   },
+   {
+    "sig": "setUseEventOnCaptureState(bool state)",
+    "line": 374
+   },
+   {
+    "sig": "setStoreCapturesEnabledState(bool state)",
+    "line": 379
+   },
+   {
+    "sig": "setUseOverrideSystemOnCaptureState(bool state)",
+    "line": 384
+   },
+   {
+    "sig": "rotateScreenToRight()",
+    "line": 389
+   },
+   {
+    "sig": "rotateScreenToLeft()",
+    "line": 396
+   },
+   {
+    "sig": "setFirstOrThirdPersonViewState(bool state)",
+    "line": 403
+   }
+  ]
+ },
+ {
+  "type": "armorSurfaceSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\armorSurfaceSystem.cs",
+  "methods": [
+   {
+    "sig": "addProjectile(projectileSystem newProjectile)",
+    "line": 97
+   },
+   {
+    "sig": "throwProjectilesStored(Vector3 throwDirection)",
+    "line": 108
+   },
+   {
+    "sig": "throwProjectilesStoredCheckingDirection(Transform playerTransform, Transform mainCameraTransform)",
+    "line": 122
+   },
+   {
+    "sig": "thereAreProjectilesStored()",
+    "line": 172
+   },
+   {
+    "sig": "destroyProjetilesOnShield()",
+    "line": 177
+   },
+   {
+    "sig": "isArmorEnabled()",
+    "line": 193
+   },
+   {
+    "sig": "isBlockProjectilesFromBreakingThroughSurfaceEnabled()",
+    "line": 198
+   },
+   {
+    "sig": "getArmorSurfacePriorityValue()",
+    "line": 203
+   },
+   {
+    "sig": "setNewArmorOwner(GameObject newObject)",
+    "line": 208
+   },
+   {
+    "sig": "getArmorOwner()",
+    "line": 213
+   },
+   {
+    "sig": "setArmorActiveState(bool state)",
+    "line": 218
+   },
+   {
+    "sig": "setTriggerScaleValues(Vector3 newCenterValues, Vector3 newSizeValues)",
+    "line": 227
+   },
+   {
+    "sig": "setEnableArmorSurfaceStateWithDuration(float delayDuration, bool stateBeforeDelay, bool stateAfterDelay)",
+    "line": 236
+   },
+   {
+    "sig": "stopSetArmorSurfaceStateAfterDelayCoroutine()",
+    "line": 245
+   },
+   {
+    "sig": "setArmorDamage(float damageAmount)",
+    "line": 267
+   },
+   {
+    "sig": "addArmorHealth(float healthAmount)",
+    "line": 291
+   },
+   {
+    "sig": "isUseArmorHealthAmountEnabled()",
+    "line": 306
+   }
+  ]
+ }
+]

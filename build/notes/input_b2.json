@@ -1,0 +1,628 @@
+[
+ {
+  "type": "playerController",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\playerController.cs",
+  "methods": [
+   {
+    "sig": "reactivateColliderIfPossible()",
+    "line": 5725
+   },
+   {
+    "sig": "addOrRemoveExtraColliders(Collider newCollider, bool state)",
+    "line": 5734
+   },
+   {
+    "sig": "setIgnoreCollisionOnExternalCollider(Collider newCollider, bool state)",
+    "line": 5757
+   },
+   {
+    "sig": "setIgnoreCollisionOnExternalColliderOnlyWithExtraColliderList(Collider newCollider, bool state)",
+    "line": 5776
+   },
+   {
+    "sig": "isUseExtraColliderListActive()",
+    "line": 5793
+   },
+   {
+    "sig": "getExtraColliderList()",
+    "line": 5798
+   },
+   {
+    "sig": "getCharacterLayer()",
+    "line": 5807
+   },
+   {
+    "sig": "setGravityMultiplierValue(bool setOriginal, float newValue)",
+    "line": 5812
+   },
+   {
+    "sig": "setGravityMultiplierValueFromExternalFunction(float newValue)",
+    "line": 5825
+   },
+   {
+    "sig": "getGravityMultiplier()",
+    "line": 5830
+   },
+   {
+    "sig": "setGravityForceValue(bool setOriginal, float newValue)",
+    "line": 5835
+   },
+   {
+    "sig": "setOriginalGravityForceValue()",
+    "line": 5844
+   },
+   {
+    "sig": "getGravityForce()",
+    "line": 5849
+   },
+   {
+    "sig": "setSlowFallExternallyActiveState(bool state)",
+    "line": 5854
+   },
+   {
+    "sig": "isSlowFallExternallyActive()",
+    "line": 5859
+   },
+   {
+    "sig": "canUseInput()",
+    "line": 5865
+   },
+   {
+    "sig": "inputCrouch()",
+    "line": 5902
+   },
+   {
+    "sig": "inputJump()",
+    "line": 5935
+   },
+   {
+    "sig": "isColliderPartOfCharacter(Collider newCollider)",
+    "line": 5981
+   },
+   {
+    "sig": "inputReleaseJumpButton()",
+    "line": 6000
+   },
+   {
+    "sig": "setJumpsAmountValue(int newValue)",
+    "line": 6017
+   },
+   {
+    "sig": "activateJump()",
+    "line": 6022
+   },
+   {
+    "sig": "setJumpActive(bool activateJumpOnAir)",
+    "line": 6027
+   },
+   {
+    "sig": "releaseJumpButton()",
+    "line": 6101
+   },
+   {
+    "sig": "relaseJumpButtonIfAddForceWhileButtonPressedActive()",
+    "line": 6108
+   },
+   {
+    "sig": "inputStartSlowDownFall()",
+    "line": 6115
+   },
+   {
+    "sig": "inputStopSlowDownFall()",
+    "line": 6137
+   },
+   {
+    "sig": "inputAirDash()",
+    "line": 6152
+   },
+   {
+    "sig": "inputSetMoveVerticallyState(bool state)",
+    "line": 6167
+   },
+   {
+    "sig": "inputSetChangeZeroGravityMovementSpeeState(bool state)",
+    "line": 6184
+   },
+   {
+    "sig": "inputSetChangeFreeFloatingMovementSpeeState(bool state)",
+    "line": 6199
+   },
+   {
+    "sig": "inputSetIncreaseMovementSpeedState(bool state)",
+    "line": 6214
+   },
+   {
+    "sig": "inputStartToRun()",
+    "line": 6245
+   },
+   {
+    "sig": "inputStopToRun()",
+    "line": 6259
+   },
+   {
+    "sig": "inputToggleWalkAndRun()",
+    "line": 6268
+   },
+   {
+    "sig": "checkIfCanRun()",
+    "line": 6299
+   },
+   {
+    "sig": "activateRun()",
+    "line": 6333
+   },
+   {
+    "sig": "checkIfStopRun()",
+    "line": 6344
+   },
+   {
+    "sig": "forceStopRun()",
+    "line": 6351
+   },
+   {
+    "sig": "stopRun()",
+    "line": 6360
+   },
+   {
+    "sig": "getRunButtonPressedTimer()",
+    "line": 6369
+   },
+   {
+    "sig": "playerIsBusy()",
+    "line": 6374
+   },
+   {
+    "sig": "setSlidindOnThirdPersonActiveState(bool state)",
+    "line": 6395
+   },
+   {
+    "sig": "crouch()",
+    "line": 6401
+   },
+   {
+    "sig": "checkIfActivateCrouchState()",
+    "line": 6523
+   },
+   {
+    "sig": "setCrouchState(bool state)",
+    "line": 6530
+   },
+   {
+    "sig": "setCrouchComponentsState(bool state)",
+    "line": 6543
+   },
+   {
+    "sig": "stopCrouchSliding()",
+    "line": 6554
+   },
+   {
+    "sig": "setCrouchSlidingEnabledState(bool state)",
+    "line": 6571
+   },
+   {
+    "sig": "playerCanGetUpFromCrouch()",
+    "line": 6576
+   },
+   {
+    "sig": "isCrouching()",
+    "line": 6595
+   },
+   {
+    "sig": "isCanCrouchWhenUsingWeaponsOnThirdPerson()",
+    "line": 6600
+   },
+   {
+    "sig": "setChoosingGravityDirectionState(bool state)",
+    "line": 6605
+   },
+   {
+    "sig": "setGravityPowerActiveState(bool state)",
+    "line": 6610
+   },
+   {
+    "sig": "isGravityPowerActive()",
+    "line": 6615
+   },
+   {
+    "sig": "isChoosingGravityDirection()",
+    "line": 6620
+   },
+   {
+    "sig": "setUsingCloseCombatActiveState(bool state)",
+    "line": 6625
+   },
+   {
+    "sig": "isUsingCloseCombatActive()",
+    "line": 6630
+   },
+   {
+    "sig": "iscloseCombatAttackInProcess()",
+    "line": 6635
+   },
+   {
+    "sig": "setCloseCombatAttackInProcessState(bool state)",
+    "line": 6640
+   },
+   {
+    "sig": "isMeleeAttackInProcess()",
+    "line": 6645
+   },
+   {
+    "sig": "setMeleeAttackInProcessState(bool state)",
+    "line": 6650
+   },
+   {
+    "sig": "setJumpLegExternallyActiveState(bool state)",
+    "line": 6655
+   },
+   {
+    "sig": "setIgnoreExternalActionsActiveState(bool state)",
+    "line": 6660
+   },
+   {
+    "sig": "isIgnoreExternalActionsActiveState()",
+    "line": 6665
+   },
+   {
+    "sig": "setRunnningState(bool state)",
+    "line": 6670
+   },
+   {
+    "sig": "isPlayerRunning()",
+    "line": 6731
+   },
+   {
+    "sig": "setSprintEnabledState(bool state)",
+    "line": 6736
+   },
+   {
+    "sig": "setSprintCanBeUsedState(bool state)",
+    "line": 6741
+   },
+   {
+    "sig": "stopSprint()",
+    "line": 6746
+   },
+   {
+    "sig": "isSprintEnabled()",
+    "line": 6751
+   },
+   {
+    "sig": "setOriginalSprintEnabledValue()",
+    "line": 6756
+   },
+   {
+    "sig": "setWalkBydefaultFromEditor()",
+    "line": 6765
+   },
+   {
+    "sig": "setRunAndWalkToggleBydefaultFromEditor()",
+    "line": 6772
+   },
+   {
+    "sig": "enableOrDisableSphereMode(bool state)",
+    "line": 6782
+   },
+   {
+    "sig": "isSphereModeActive()",
+    "line": 6789
+   },
+   {
+    "sig": "setLastTimeMoved()",
+    "line": 6794
+   },
+   {
+    "sig": "setLastTimeFalling()",
+    "line": 6799
+   },
+   {
+    "sig": "getLastTimeFalling()",
+    "line": 6804
+   },
+   {
+    "sig": "getLastJumpTime()",
+    "line": 6809
+   },
+   {
+    "sig": "getLastDoubleJumpTime()",
+    "line": 6814
+   },
+   {
+    "sig": "setLastTimeFiring()",
+    "line": 6819
+   },
+   {
+    "sig": "getLastTimeFiring()",
+    "line": 6824
+   },
+   {
+    "sig": "setAimingPowersState(bool state)",
+    "line": 6829
+   },
+   {
+    "sig": "setUsingPowersState(bool state)",
+    "line": 6834
+   },
+   {
+    "sig": "checkWeaponsState()",
+    "line": 6839
+   },
+   {
+    "sig": "setUsingFreeFireModeState(bool state)",
+    "line": 6866
+   },
+   {
+    "sig": "isUsingFreeFireMode()",
+    "line": 6871
+   },
+   {
+    "sig": "checkAnimatorIsEnabled(bool state)",
+    "line": 6877
+   },
+   {
+    "sig": "setUseFirstPersonPhysicsInThirdPersonActiveState(bool state)",
+    "line": 6905
+   },
+   {
+    "sig": "setFootStepManagerState(bool state)",
+    "line": 6910
+   },
+   {
+    "sig": "setCurrentFootStepsState()",
+    "line": 6921
+   },
+   {
+    "sig": "setCurrentHeadBobState()",
+    "line": 6958
+   },
+   {
+    "sig": "resetHeadBodState()",
+    "line": 7025
+   },
+   {
+    "sig": "isLastJumpActivatedExternally()",
+    "line": 7030
+   },
+   {
+    "sig": "ejectPlayerFromVehicle(float force)",
+    "line": 7036
+   },
+   {
+    "sig": "useJumpPlatform(Vector3 direction, ForceMode forceMode)",
+    "line": 7053
+   },
+   {
+    "sig": "useJumpPlatformWithKeyButton(bool state, float newJumpPower)",
+    "line": 7068
+   },
+   {
+    "sig": "setJumpPower(float newValue)",
+    "line": 7077
+   },
+   {
+    "sig": "setOriginalJumpPower()",
+    "line": 7084
+   },
+   {
+    "sig": "getCurrentNormal()",
+    "line": 7089
+   },
+   {
+    "sig": "externalForce(Vector3 direction)",
+    "line": 7094
+   },
+   {
+    "sig": "setExternalForceOnAir(Vector3 direction, float externalForceOnAirControl)",
+    "line": 7100
+   },
+   {
+    "sig": "disableExternalForceOnAirActive()",
+    "line": 7107
+   },
+   {
+    "sig": "changeHeadScale(bool state)",
+    "line": 7112
+   },
+   {
+    "sig": "isHeadScaleChanged()",
+    "line": 7137
+   },
+   {
+    "sig": "setDrivingState(bool state, GameObject vehicle, string vehicleName, Transform vehicleCameraControllerTransform)",
+    "line": 7143
+   },
+   {
+    "sig": "getLastTimeDriving()",
+    "line": 7185
+   },
+   {
+    "sig": "setTemporalVehicle(GameObject newVehicle)",
+    "line": 7190
+   },
+   {
+    "sig": "getTemporalVehicle()",
+    "line": 7195
+   },
+   {
+    "sig": "isPlayerRotatingToSurface()",
+    "line": 7200
+   },
+   {
+    "sig": "setCharacterRotatingToSurfaceState(bool state)",
+    "line": 7205
+   },
+   {
+    "sig": "isPlayerDriving()",
+    "line": 7210
+   },
+   {
+    "sig": "isDrivingRemotely()",
+    "line": 7215
+   },
+   {
+    "sig": "setDrivingRemotelyState(bool state)",
+    "line": 7220
+   },
+   {
+    "sig": "isOverridingElement()",
+    "line": 7225
+   },
+   {
+    "sig": "setOverridingElementState(bool state)",
+    "line": 7230
+   },
+   {
+    "sig": "setUsingDeviceState(bool state)",
+    "line": 7237
+   },
+   {
+    "sig": "setUsingGeneralDriveRiderSystem(bool state)",
+    "line": 7248
+   },
+   {
+    "sig": "isUsingGeneralDriveRiderSystem()",
+    "line": 7253
+   },
+   {
+    "sig": "isUsingDevice()",
+    "line": 7258
+   },
+   {
+    "sig": "setUsingSubMenuState(bool state)",
+    "line": 7264
+   },
+   {
+    "sig": "isUsingSubMenu()",
+    "line": 7269
+   },
+   {
+    "sig": "setPlayerMenuActiveState(bool state)",
+    "line": 7274
+   },
+   {
+    "sig": "isPlayerMenuActive()",
+    "line": 7281
+   },
+   {
+    "sig": "setGamePausedState(bool state)",
+    "line": 7286
+   },
+   {
+    "sig": "isGamePaused()",
+    "line": 7293
+   },
+   {
+    "sig": "setHeadBobPausedState(bool state)",
+    "line": 7298
+   },
+   {
+    "sig": "getCurrentVehicle()",
+    "line": 7303
+   },
+   {
+    "sig": "getCurrentVehicleCameraControllerTransform()",
+    "line": 7308
+   },
+   {
+    "sig": "getCurrentVehicleName()",
+    "line": 7313
+   },
+   {
+    "sig": "changeScriptState(bool state)",
+    "line": 7319
+   },
+   {
+    "sig": "removeJumpInputState()",
+    "line": 7348
+   },
+   {
+    "sig": "resetOtherInputFields()",
+    "line": 7355
+   },
+   {
+    "sig": "setCanMoveState(bool state)",
+    "line": 7374
+   },
+   {
+    "sig": "setCanMoveAIState(bool state)",
+    "line": 7387
+   },
+   {
+    "sig": "setPlayerVelocityToZero()",
+    "line": 7396
+   },
+   {
+    "sig": "setCurrentVelocityValue(Vector3 newValue)",
+    "line": 7405
+   },
+   {
+    "sig": "setVelocityChangeValue(Vector3 newValue)",
+    "line": 7410
+   },
+   {
+    "sig": "smoothChangeScriptState(bool state)",
+    "line": 7415
+   },
+   {
+    "sig": "canPlayerMove()",
+    "line": 7428
+   },
+   {
+    "sig": "setMoveInputPausedState(bool state)",
+    "line": 7433
+   },
+   {
+    "sig": "setMoveInputPausedWithDuration(bool state, float newDuration)",
+    "line": 7442
+   },
+   {
+    "sig": "canPlayerRagdollMove()",
+    "line": 7451
+   },
+   {
+    "sig": "setCanRagdollMoveState(bool state)",
+    "line": 7456
+   },
+   {
+    "sig": "setRagdollCurrentlyActiveState(bool state)",
+    "line": 7463
+   },
+   {
+    "sig": "isRagdollCurrentlyActive()",
+    "line": 7474
+   },
+   {
+    "sig": "setPlayerActionsInputEnabledState(bool state)",
+    "line": 7479
+   },
+   {
+    "sig": "enablePlayerActionsInput()",
+    "line": 7484
+   },
+   {
+    "sig": "disablePlayerActionsInput()",
+    "line": 7489
+   },
+   {
+    "sig": "smoothResetPlayerControllerInput()",
+    "line": 7494
+   },
+   {
+    "sig": "enableOrDisablePlayerControllerScript(bool state)",
+    "line": 7518
+   },
+   {
+    "sig": "resetAnimatorState()",
+    "line": 7569
+   },
+   {
+    "sig": "setPauseResetAnimatorStateFOrGroundAnimatorState(bool state)",
+    "line": 7618
+   },
+   {
+    "sig": "setOnGroundAnimatorIDValue(bool state)",
+    "line": 7623
+   }
+  ]
+ }
+]

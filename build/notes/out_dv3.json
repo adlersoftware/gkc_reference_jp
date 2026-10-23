@@ -1,0 +1,298 @@
+[
+ {
+  "type": "closetSystem",
+  "summary": "複数のドア付き収納を管理し、ドア開閉のアニメーション、内部オブジェクトの生成・表示切替、プレイヤーのデバイス一覧更新を行う。",
+  "methods": {
+   "changeDoorOpenCloseState(Transform currentDoor)": "指定ドアの開閉コルーチンを再開始し、`openType`に応じ移動か回転で開閉する。",
+   "setCurrentPlayer(GameObject player)": "プレイヤーを保持し、`usingDevicesSystem`を取得して次回以降の一覧操作に備える。",
+   "removeDeviceFromList(GameObject objecToRemove)": "プレイヤーの`usingDevicesSystem`から対象オブジェクトをデバイス一覧より除外する。",
+   "setObjectToAddToCloset(GameObject objectToAdd)": "収納へ追加するオブジェクトを保持するだけ。",
+   "setObjectToRemoveFromCloset(GameObject objectToRemove)": "収納から取り出すオブジェクトを保持するだけ。",
+   "addObjectToCloset(Transform doorToAdd)": "`objectToAddToCloset`の`objectToActive`を、開いている指定ドアの内部リストへ追加し親子付けする。",
+   "removeObjectFromCloset(Transform doorToAdd)": "指定ドアの内部リストから、`objectToRemoveFromCloset`に対応するオブジェクトを外す。",
+   "addNewDoor()": "新規ドア情報を一覧へ追加し、`updateComponent`でInspectorへ反映する。",
+   "updateComponent()": "`GKC_Utils.updateComponent`でコンポーネント更新を要求するだけ。"
+  }
+ },
+ {
+  "type": "computerDevice",
+  "summary": "パスワード入力式の端末。押されたキーを画面のコード文字列へ反映し、Enterで照合して一致時にアンロック状態へ切り替える。",
+  "methods": {
+   "activateComputer()": "`usingDevice`を反転し、`disableUseDeviceActionButton`時はプレイヤーの使用ボタン有効状態も切り替える。",
+   "checkKeyPressed(string keyPressed)": "押下キーを許可リストと照合して入力文字列を編集し、Enter時に`code`と一致すれば`enableAccessToCompturer`を呼ぶ。",
+   "unlockComputer()": "画面切替フラグ`changeScreen`を立てるだけ。",
+   "enableAccessToCompturer()": "正解音を鳴らし`unlocked`と表示を更新して`unlockObject`を呼び、解除イベントを発火する。",
+   "unlockComputerWithUsb()": "`unlockComputer`と`enableAccessToCompturer`を続けて呼び、USBによる解除を反映する。",
+   "playSound(AudioElement clipToPlay)": "`clipToPlay`が未設定でなければ`AudioPlayer.PlayOneShot`で再生する。"
+  }
+ },
+ {
+  "type": "elevatorFloorsPanel",
+  "summary": "エレベーターの階数ボタンを階数分だけ生成し、押された階へ`elevatorSystem`経由で移動させるUIパネル。",
+  "methods": {
+   "activateElevatorFloorPanel()": "`usingPanel`を反転するだけ。",
+   "goToFloor(Button button)": "押下ボタンに対応する階数インデックスを求め、移動に成功すれば`electronicDevice`を停止する。"
+  }
+ },
+ {
+  "type": "enemyHackPanel",
+  "summary": "敵デバイス用のハッキングパネル。ハックの開始・停止を`hackTerminal`へ渡し、成功/失敗のイベントを発火する。",
+  "methods": {
+   "activateHackPanel(bool state)": "`usingDevice`を設定し、開始時は`startHackFunction`と`activeHack`、停止時は`stopHacking`を実行する。",
+   "setCorrectlyHackedState()": "`setHackResult(true)`を呼ぶだけ。",
+   "setIncorrectlyHackedState()": "`setHackResult(false)`を呼ぶだけ。",
+   "setHackResult(bool state)": "`state`に応じて成功または失敗の`UnityEvent`を発火するだけ。",
+   "disablePanelHack()": "1秒待ってから`moveHackTerminal(false)`でパネルを閉じるコルーチンを開始する。"
+  }
+ },
+ {
+  "type": "examineObjectSystemPlayerManagement",
+  "summary": "プレイヤー側の観察入力を現在の観察対象へ中継する管理コンポーネント。ズームと回転リセット、キャンセルを扱う。",
+  "methods": {
+   "setExaminingObjectState(bool state)": "観察中フラグと開始時刻を更新し、状態変化イベントを呼ぶ。",
+   "setcurrentExanimeObject(examineObjectSystem newExamineObject)": "操作対象の`examineObjectSystem`を保持するだけ。",
+   "examineObjectInputSetZoomValue(bool value)": "観察中のみ、`value`を対象の`inputSetZoomValue`へ中継する。",
+   "examineObjectInputResetRotation()": "観察中のみ、対象の`inputResetRotation`を呼ぶ。",
+   "examineObjectInputResetRotationAndPosition()": "観察中のみ、対象の`inputResetRotationAndPosition`を呼ぶ。",
+   "examineObjectInputCancelExamine()": "観察開始から0.4秒未満は無視し、それ以降は対象の`inputCancelExamine`を呼ぶ。",
+   "examineObjectInputCheckIfMessage()": "観察中のみ、対象の`inputCheckIfMessage`を呼ぶ。",
+   "checkEventsOnStateChange(bool state)": "`useEventsOnStateChange`が有効なとき、`state`に応じ開始/終了イベントを発火する。"
+  }
+ },
+ {
+  "type": "hackTerminal",
+  "summary": "4方向アイコンの順番当てでデバイスをハッキングする端末。HUD表示、カメラ移動、制限時間、成功/失敗イベントを管理する。",
+  "methods": {
+   "activeHack()": "未使用かつ未ハック時にHUDとカメラを開き、ランダムな正解順を生成して入力受付を開始する。",
+   "disableHack(bool state)": "スライダーを戻して入力受付を止め、`state`なら1秒後にカメラを元位置へ戻す。",
+   "moveHackTerminal(bool state)": "端末UIを、開時は`hackTerminalTargetTransform`、閉時は元位置へ補間移動するコルーチンを開始する。",
+   "incorretlyHacked()": "失敗表示と失敗イベントを実行し、`resetAfterIncorrectHack`に応じてカメラ復帰を即時か遅延にする。",
+   "stopHacking()": "失敗表示と失敗イベントの後、入力受付とカメラ移動を停止する。",
+   "hasMoveCameraToDevice()": "`moveCameraToDevice`を取得し、`hasSecondMoveCameraToDevice`を呼ぶ。",
+   "setCurrentPlayer()": "`electronicDevice`からプレイヤーを取得し、入力管理とカメラ管理へ設定する。",
+   "getCameraMovementManager()": "`moveCameraToDevice`が未取得なら`GetComponent`で取得して保持する。",
+   "setTextContent(string textContent)": "`currentPasswordText`へ`textContent`を設定するだけ。"
+  }
+ },
+ {
+  "type": "interactionObjectMessage",
+  "summary": "トリガー内のプレイヤーへメッセージを表示するデバイス。任意でカメラ移動、操作停止、開始/終了イベントも行う。",
+  "methods": {
+   "activateDevice()": "使用状態を反転し、メッセージの表示/停止、カメラ移動、操作停止、イベント発火を行う。",
+   "checkTriggerInfo(Collider col, bool isEnter)": "タグ一致時、入場でプレイヤー各コンポーネントを取得し、退場でプレイヤー参照を解除する。",
+   "setDeviceState(bool state)": "プレイヤーの操作停止とポーズ状態を設定し、`state`に応じ制御スクリプトを停止/再開する。",
+   "removeMessage()": "`messageRemoved`を立て、デバイス一覧から自身を外してコライダーを無効化する。"
+  }
+ },
+ {
+  "type": "jumpPlatform",
+  "summary": "触れたプレイヤー・乗り物・任意の剛体を打ち上げるジャンプ台。対象種別や設定に応じ力を加える方法を変える。",
+  "methods": {
+   "setPlatformEnabledState(bool state)": "`platformEnabled`を設定するだけ。"
+  }
+ },
+ {
+  "type": "laser",
+  "summary": "レーザービームの見た目を制御する基底コンポーネント。UVスクロール・幅の脈動・ビーム長を毎フレーム更新する。",
+  "methods": {
+   "animateLaser()": "マテリアルのUVをスクロールし、幅を脈動させて`LineRenderer`の太さとテクスチャ長を更新する。",
+   "laserAnimation()": "揺らぎ用の`aniDir`と`minWidth`をランダムに更新して待つだけのコルーチン。",
+   "disableLaser()": "自身を無効化し、`LineRenderer`があれば合わせて無効化する。"
+  }
+ },
+ {
+  "type": "laserConnector",
+  "summary": "偏向されたレーザーを反射先まで伸ばすコネクタ。ヒット先がレシーバーかプリズムかで接続状態を切り替える。",
+  "methods": {
+   "disableRefractionState()": "反射レーザーとキューブの屈折状態を解除し、`laserDevice`の割当とレシーバー接続を無効化して自身を非アクティブにする。",
+   "setColor()": "`currentLaser`の`_TintColor`を自身のマテリアルへコピーする。",
+   "setCurrentLaser(GameObject laser)": "`currentLaser`を保持するだけ。",
+   "setCubeRefractionLaser(GameObject cube)": "`cubeRefractionLaser`を保持するだけ。"
+  }
+ },
+ {
+  "type": "laserDevice",
+  "summary": "レーザーの発射側。レイキャストでヒットを判定し、シールドやダメージ処理、コネクタへの受け渡しを行う。",
+  "methods": {
+   "setAssignLaserState(bool state)": "`assigned`を設定するだけ。"
+  }
+ },
+ {
+  "type": "laserReceiver",
+  "summary": "色付きレーザーを受けて接続先オブジェクトの関数を呼ぶレシーバー。接続中は内部の円柱が回転し続ける。",
+  "methods": {
+   "laserConnected(Color col)": "`col`が`colorNeeded`と一致する場合のみ接続し、接続先へ`activeFunctionName`を`true`で送る。",
+   "laserDisconnected()": "接続状態を解除し、`objectToConnect`へ`activeFunctionName`を`false`で送る。"
+  }
+ },
+ {
+  "type": "moveCameraToDevice",
+  "summary": "デバイス使用時にプレイヤーカメラを`cameraPosition`へ移動し、終了時に元へ戻すコンポーネント。使用中は操作や武器、HUDを停止する。",
+  "methods": {
+   "moveCamera(bool state)": "`cameraPosition`へカメラを親子付けして移動し、操作停止や武器・HUD・カーソルの切替、終了時の復元を行う。",
+   "hasSecondMoveCameraToDevice()": "`secondMoveCameraToDevice`を`true`にするだけ。",
+   "setCurrentPlayer(GameObject player)": "プレイヤーを保持し、制御・カメラ・武器・頭部トラッキングなど各コンポーネントを取得する。",
+   "enableFreeInteractionState()": "`carryWeaponOnLowerPositionActive`のときだけ、武器の下部携行を有効化し汎用カーソルを無効化する。",
+   "disableFreeInteractionState()": "`carryWeaponOnLowerPositionActive`のときだけ、下部携行を解除し汎用カーソルを有効化する。",
+   "stopMovement()": "カメラ移動コルーチンを停止し、`deviceEnabled`を`false`にする。",
+   "isCameraMoving()": "`movingCamera`を返すだけ。",
+   "setCurrentPlayerUseDeviceButtonEnabledState(bool state)": "`usingDevicesSystem`があれば、使用ボタンの有効状態を`state`に設定する。"
+  }
+ },
+ {
+  "type": "moveDeviceToCamera",
+  "summary": "デバイス本体をプレイヤーカメラの前に引き寄せて観察させるコンポーネント。終了時は元の親・位置・回転へ戻す。",
+  "methods": {
+   "moveCamera(bool state)": "デバイスをカメラの子にして手前へ移動し、操作停止や武器・HUD・コライダーを切替、終了時は元の位置と親へ戻す。",
+   "checkCameraPosition()": "実行中の移動コルーチンを止め、`adjustCamera`を再開始する。",
+   "setRigidbodyState(bool state)": "`objectHasActiveRigidbody`のとき、元値を退避して重力と`isKinematic`を切り替える。",
+   "setCurrentPlayer(GameObject player)": "プレイヤーを保持し、制御・カメラ・武器・足音などの各コンポーネントを取得する。",
+   "setColliderListState(bool state)": "指定コライダー群の有効状態を設定し、プレイヤーとの衝突判定を`deviceEnabled`に応じ無視させる。",
+   "setIgnoreDeviceTriggerEnabledState(bool state)": "`ignoreDeviceTriggerEnabled`を設定するだけ。",
+   "setLayerList()": "子`Transform`を走査して元レイヤーを記録し、`disabledObjectList`の要素を非アクティブ化する。",
+   "setLayerListState(bool state)": "記録した各オブジェクトのレイヤーを、元の値か`layerToExaminateDevices`へ切り替える。",
+   "changeDeviceZoom(bool zoomIn)": "`zoomIn`に応じカメラからの距離を増減し、上下限でクランプして移動を再開する。",
+   "resetRotation()": "現在位置を目標に、回転だけを`Quaternion.identity`へ戻して移動を再開する。",
+   "resetRotationAndPosition()": "初期距離の正面位置と`Quaternion.identity`回転を目標にして移動を再開する。"
+  }
+ },
+ {
+  "type": "oneWayPlatformSystem",
+  "summary": "一方通行の足場。進入方向やしゃがみ・入力の条件に応じ、プレイヤーとのコリジョンを選択的に無視する。",
+  "methods": {
+   "OnTriggerEnter(Collider col)": "`checkTriggerInfo`を入場として呼ぶだけ。",
+   "OnTriggerExit(Collider col)": "`checkTriggerInfo`を退場として呼ぶだけ。",
+   "checkTriggerInfo(Collider col, bool isEnter)": "タグ一致時、入場で搭乗者を追加し下方向の衝突を必要なら無視、退場で衝突を戻して搭乗者を除去する。",
+   "addPassenger(Transform newPassenger)": "未登録なら`playerController`とコライダーを取得して搭乗者リストへ追加する。"
+  }
+ },
+ {
+  "type": "padlockSystemPlayerManagement",
+  "summary": "プレイヤー側の南京錠パズル入力を、現在の`padlockSystem`へ中継する管理コンポーネント。",
+  "methods": {
+   "setCurrentPadlockSystem(padlockSystem newPadlockSystem)": "操作対象の`padlockSystem`を保持するだけ。",
+   "setUsingPadlockState(bool state)": "`usingPadlock`を設定し、状態変化イベントを呼ぶ。",
+   "inputRotateWheel(bool directionUp)": "使用中かつ対象があるとき、回転方向`directionUp`を`inputRotateWheel`へ中継する。",
+   "checkEventsOnStateChange(bool state)": "`useEventsOnStateChange`が有効なとき、`state`に応じ開始/終了イベントを発火する。"
+  }
+ },
+ {
+  "type": "rechargerStation",
+  "summary": "プレイヤーが入ると体力とエネルギーを`healSpeed`で回復する充填ステーション。満タンで停止し、アニメと効果音を制御する。",
+  "methods": {
+   "healPlayer()": "プレイヤーが内部にいて未回復なら、回復を開始してアニメ再生・効果音ループ・ボタン無効化を行う。",
+   "stopHealing()": "回復を止めて`fullyHealed`を`true`にし、効果音のループを解除する。"
+  }
+ },
+ {
+  "type": "refractionCube",
+  "summary": "レーザーを屈折させるプリズム。設定色を自身へ反映し、屈折中かどうかを外部へ公開する。",
+  "methods": {
+   "setRefractingLaserState(bool state)": "`refractingLaser`を設定するだけ。",
+   "isRefracting()": "`refractingLaser`を返すだけ。"
+  }
+ },
+ {
+  "type": "rotatingPlatform",
+  "summary": "指定軸・角度・速度で回転を繰り返す足場。1回転後に`rotationDelay`だけ待って再び回り始める。",
+  "methods": {
+   "rotatePlatform()": "既存の回転コルーチンを止め、回転コルーチンを開始する。",
+   "stopRotationCoroutine()": "実行中の回転コルーチンを止めるだけ。",
+   "setRotationActiveState(bool state)": "`rotationActive`を設定し、有効なら回転を開始、無効ならコルーチンを停止する。"
+  }
+ },
+ {
+  "type": "securityCamera",
+  "summary": "監視カメラの首振りとズームを制御する。通常入力と`overrideInputManager`による強制操作の両方に対応する。",
+  "methods": {
+   "getLookValue(Vector2 currentAxisValues)": "受け取った軸値を保持し、次フレームの回転計算に使わせる。",
+   "setZoom(int mult)": "`mult`の方向へFOVを変化させ、`zoomLimit`の範囲内にクランプする。",
+   "changeCameraState(bool state)": "`activated`を設定し、カメラの有効化と、終了時のFOV復元を行う。",
+   "startOverride()": "`overrideControlState(true)`を呼ぶだけ。",
+   "stopOverride()": "`overrideControlState(false)`を呼ぶだけ。",
+   "overrideControlState(bool state)": "開始時は現在の首振り角を引き継ぎ、終了時は角度と軸値をリセットして上書き操作状態を設定する。"
+  }
+ },
+ {
+  "type": "securityCameraControl",
+  "summary": "監視カメラ用の操作UI。ジョイスティックとズームボタンへのタッチ/マウス入力、プレイヤー入力をカメラ回転へ変換する。",
+  "methods": {
+   "rotateCamera(Vector2 values)": "軸値に感度を掛けて`clampTiltX`/`clampTiltZ`内にクランプし、ジョイスティックのX/Z軸を回転させる。",
+   "activateSecurityControl()": "`setSecurityCameraControlState(true)`を呼ぶだけ。",
+   "deactivateSecurityCameraControl()": "`setSecurityCameraControlState(false)`を呼ぶだけ。",
+   "setSecurityCameraControlState(bool state)": "有効化時にプレイヤーの各コンポーネントを取得し、`controlEnabled`と監視カメラの状態を設定、無効時はジョイスティックを戻す。"
+  }
+ },
+ {
+  "type": "simpleSwitch",
+  "summary": "単発/双方向のスイッチ。アニメと効果音を再生し、`UnityEvent`または`SendMessage`で対象オブジェクトを操作する。",
+  "methods": {
+   "setCurrentPlayer(GameObject newPlayer)": "`currentPlayer`を保持するだけ。",
+   "setCurrentUser(GameObject newPlayer)": "`currentPlayer`を保持するだけ。",
+   "turnSwitchOff()": "`switchTurnedOn`が`true`のときだけ`activateDevice`を呼ぶ。",
+   "turnSwitchOn()": "`switchTurnedOn`が`false`のときだけ`activateDevice`を呼ぶ。",
+   "activateDevice()": "有効/アニメ再生可否を判定し、単発/双方向のアニメと効果音、ユーザー通知、イベントまたは関数呼び出しを行う。",
+   "setButtonEnabledState(bool state)": "`buttonEnabled`を設定するだけ。",
+   "triggerButtonEventFromEditor()": "`activateDevice`を呼ぶだけ。",
+   "playSingleAnimation()": "`animationSpeed`でアニメを再生し、押下音を鳴らす。",
+   "playDualAnimation(bool playForward)": "`playForward`に応じアニメの速度と開始位置を変えて再生し、押下音を鳴らす。",
+   "setDeviceStringActionState(bool state)": "`deviceStringAction`があれば、`changeActionName`で表示アクション名を切り替える。"
+  }
+ },
+ {
+  "type": "songsManager",
+  "summary": "フォルダ内の音声ファイルと内部リストを読み込み、ラジオ用の曲リストを提供するシングルトン管理。",
+  "methods": {
+   "getComponentInstance()": "初期化済みなら何もせず、重複インスタンスは破棄、それ以外は静的参照を自身に設定する。",
+   "getSongsList()": "`audioElements`を返すだけ。",
+   "allSongsLoaded()": "`songsLoaded`を返すだけ。"
+  }
+ },
+ {
+  "type": "teleportationPlatform",
+  "summary": "触れたオブジェクトを対向する転送先プラットフォームへ送る。位置・回転・重力方向の調整とイベント発火を行う。",
+  "methods": {
+   "removeObjectInside()": "`objectInside`を`null`にするだけ。",
+   "activateTeleport()": "転送先プラットフォームを取得して`sendObject`で送り、内部参照を解除し、設定に応じイベントを発火する。",
+   "sendObject(GameObject objectToMove)": "レイキャストで着地点を求め、乗り物は半径分浮かせ、任意で回転・カメラ・重力方向を調整して移動する。",
+   "setTeleportEnabledState(bool state)": "`teleportEnabled`を設定するだけ。"
+  }
+ },
+ {
+  "type": "vendingMachine",
+  "summary": "自販機型のオブジェクト生成器。有効時のみ、指定位置（半径内のランダム位置も可）にプレハブを出現させる。",
+  "methods": {
+   "setVendingMachineEnabledState(bool state)": "`vendingMachineEnabled`を設定するだけ。",
+   "getObject()": "リスト使用時は全要素、そうでなければ`objectToSpawn`を`spawnObject`へ渡す。",
+   "spawnObject(GameObject newObject)": "有効時のみ生成上限を確認し、`spawnPosition`周辺に複製して名前とアクティブ状態を整える。"
+  }
+ },
+ {
+  "type": "waypointPlayerPathSystem",
+  "summary": "ウェイポイント巡回路。順番制/順不同の到達判定、タイマー、マップアイコン、ライン表示、完了/失敗イベントを管理する。",
+  "methods": {
+   "convertSeconds()": "残り時間を`MM:SS`形式の文字列に変換する。",
+   "addNewWayPoint()": "既存の最後のポイント前方に新規ポイントと`mapObjectInformation`を生成し、一覧へ追加する。",
+   "renamePoints()": "各ポイント名を連番へ振り直し、`updateComponent`を呼ぶ。",
+   "pointReached(Transform point)": "設定に応じ到達判定し、正しければカウント・追加時間・効果音、全達成で完了イベント、誤順なら`stopPath`を実行する。",
+   "setCurrentUser(GameObject user)": "`currentUser`を保持するだけ。",
+   "resetPath()": "プレイヤーから音源とHUDを取得し、到達状況・タイマー・マップアイコンを初期化して経路を開始する。",
+   "stopPath()": "経路を停止し、タイマー・マップアイコン・ラインを片付けて未完了イベントと効果音を実行する。",
+   "playAudioSourceShoot(AudioElement clip)": "プレイヤーの音源を割り当て、`AudioPlayer.PlayOneShot`で再生する。",
+   "updateComponent()": "`GKC_Utils.updateComponent`と`updateDirtyScene`で更新を要求する。"
+  }
+ },
+ {
+  "type": "zipline",
+  "summary": "プレイヤーがぶら下がって移動するジップライン。IK、親子付け、速度制御、接続状態を管理する。",
+  "methods": {
+   "stopUpdateCoroutine()": "実行中の`mainCoroutine`を停止するだけ。",
+   "activateZipLine()": "使用状態を反転し、開始時は速度更新コルーチンを、終了時は停止扱いで`changeZiplineState`を呼ぶ。",
+   "changeZiplineState(bool state)": "IK・コライダー・親子付け・`isKinematic`・入力停止を切り替え、開始/終了位置への移動を再開する。",
+   "setCurrentPlayer(GameObject player)": "プレイヤーを保持し、制御・入力・IK・デバイス操作の各コンポーネントを取得する。",
+   "checkZiplineMovement()": "実行中の移動コルーチンを止め、`movingTransform`を目標位置へ動かすコルーチンを開始する。",
+   "setZiplineConnectedState(bool state)": "`ziplineConnected`とトリガーを設定し、接続時は`connectZipine`を呼ぶ。",
+   "connectZipine()": "実行中の接続コルーチンを止め、ワイヤーを伸ばす`connectZipineCoroutine`を開始する。"
+  }
+ }
+]

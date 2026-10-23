@@ -1,0 +1,1736 @@
+[
+ {
+  "type": "quickPlayerModeChangeSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\quickPlayerModeChangeSystem.cs",
+  "methods": [
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 121
+   },
+   {
+    "sig": "stopUpdateCheckChangeOfModeCoroutine()",
+    "line": 672
+   },
+   {
+    "sig": "setSelectionModeDisabled(string selectionName)",
+    "line": 1035
+   },
+   {
+    "sig": "setSelectionModeEnabled(string selectionName)",
+    "line": 1040
+   },
+   {
+    "sig": "setSelectionModeEnabledOrDisabledState(bool state, string selectionName)",
+    "line": 1045
+   },
+   {
+    "sig": "checkToSelectNextSelectionOnWeaponAmmoEmpty()",
+    "line": 1088
+   },
+   {
+    "sig": "setSelectionInfoEnabledState(bool state)",
+    "line": 1136
+   },
+   {
+    "sig": "setSetSelectionInfoEnableStateEnabledState(bool state)",
+    "line": 1141
+   },
+   {
+    "sig": "setExternalSetSelectionInfoEnabledState(bool state)",
+    "line": 1146
+   },
+   {
+    "sig": "inputActiveModePressHold(string modeName)",
+    "line": 1226
+   },
+   {
+    "sig": "checkIfModeActiveToReleaseIt()",
+    "line": 1263
+   },
+   {
+    "sig": "inputActiveModePressUp(string modeName)",
+    "line": 1281
+   },
+   {
+    "sig": "inputActivateMode(string modeName)",
+    "line": 1372
+   },
+   {
+    "sig": "inputActivateModeDownHoldUpExternally(string modeName)",
+    "line": 1461
+   },
+   {
+    "sig": "inputSetNextOrPreviousSelectionInfo(bool state)",
+    "line": 1470
+   },
+   {
+    "sig": "setSelectionInfoEnabledStateFromEditor(bool state)",
+    "line": 1785
+   },
+   {
+    "sig": "setSetSelectionInfoEnableStateEnabledStateFromEditor(bool state)",
+    "line": 1792
+   },
+   {
+    "sig": "setExternalSetSelectionInfoEnabledStateFromEditor(bool state)",
+    "line": 1799
+   }
+  ]
+ },
+ {
+  "type": "jetpackSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Extra Movements\\jetpackSystem.cs",
+  "methods": [
+   {
+    "sig": "canUseJetpack()",
+    "line": 274
+   },
+   {
+    "sig": "startOrStopJetpack(bool state)",
+    "line": 289
+   },
+   {
+    "sig": "changeThrustsParticlesState(bool state)",
+    "line": 353
+   },
+   {
+    "sig": "enableOrDisableJetpack(bool state)",
+    "line": 373
+   },
+   {
+    "sig": "getJetpackFuel(float amount)",
+    "line": 478
+   },
+   {
+    "sig": "getJetpackFuelAmountToPick()",
+    "line": 491
+   },
+   {
+    "sig": "enableOrDisableJetPackMesh(bool state)",
+    "line": 496
+   },
+   {
+    "sig": "removeJetpackMesh()",
+    "line": 515
+   },
+   {
+    "sig": "setUsedByAIState(bool state)",
+    "line": 522
+   },
+   {
+    "sig": "enableOrDisableTurbo(bool state)",
+    "line": 527
+   },
+   {
+    "sig": "setJetpackEnabledState(bool state)",
+    "line": 549
+   },
+   {
+    "sig": "setOriginalJetpackEnabledState()",
+    "line": 558
+   },
+   {
+    "sig": "setJetpackModePausedState(bool state)",
+    "line": 563
+   },
+   {
+    "sig": "inputStartOrStopJetpack(bool state)",
+    "line": 575
+   },
+   {
+    "sig": "inputChangeTurboState(bool state)",
+    "line": 582
+   },
+   {
+    "sig": "setJetpackEnabledStateFromEditor(bool state)",
+    "line": 617
+   }
+  ]
+ },
+ {
+  "type": "swimSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Extra Movements\\swimSystem.cs",
+  "methods": [
+   {
+    "sig": "stopCheckIfPlayerNotOnVehicleCoroutine()",
+    "line": 882
+   },
+   {
+    "sig": "setSwimSystemActivestate(bool state)",
+    "line": 909
+   },
+   {
+    "sig": "enableOrDisableTurbo(bool state)",
+    "line": 1286
+   },
+   {
+    "sig": "setCanUseTurboPausedState(bool state)",
+    "line": 1315
+   },
+   {
+    "sig": "inputChangeTurboState(bool state)",
+    "line": 1341
+   },
+   {
+    "sig": "inputMoveUp(bool state)",
+    "line": 1352
+   },
+   {
+    "sig": "inputMoveDown(bool state)",
+    "line": 1471
+   },
+   {
+    "sig": "setSwimZoneTransform(Transform newSwimZoneTransform)",
+    "line": 1535
+   },
+   {
+    "sig": "setSwimTrigger(Collider newSwimTrigger)",
+    "line": 1540
+   },
+   {
+    "sig": "isSwimTriggerListEmpty()",
+    "line": 1547
+   },
+   {
+    "sig": "addSwimTrigger(Collider newTrigger)",
+    "line": 1556
+   },
+   {
+    "sig": "removeSwimTrigger(Collider newTrigger)",
+    "line": 1567
+   },
+   {
+    "sig": "clearSwimTriggerList()",
+    "line": 1578
+   },
+   {
+    "sig": "setCurrentWaterSurfaceSystem(waterSurfaceSystem newWaterSurfaceSystem)",
+    "line": 1585
+   },
+   {
+    "sig": "setDivingState(bool state)",
+    "line": 1592
+   },
+   {
+    "sig": "setEnableExternalForceOnSwimModeState(bool state)",
+    "line": 1662
+   }
+  ]
+ },
+ {
+  "type": "wallSlideJumpSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Extra Movements\\wallSlideJumpSystem.cs",
+  "methods": [
+   {
+    "sig": "setSlideImpulseForce(Vector3 forceAmount, bool useCameraDirection)",
+    "line": 603
+   },
+   {
+    "sig": "setJumpActive(Vector3 newImpulseOnJumpAmount)",
+    "line": 632
+   },
+   {
+    "sig": "setCheckIfDetectSlideActiveState(bool state)",
+    "line": 664
+   },
+   {
+    "sig": "setSlideActiveState(bool state)",
+    "line": 722
+   },
+   {
+    "sig": "setSlideEnabledState(bool state)",
+    "line": 887
+   },
+   {
+    "sig": "setSlideCanBeUsedState(bool state)",
+    "line": 896
+   },
+   {
+    "sig": "setSliderEnabledState()",
+    "line": 901
+   },
+   {
+    "sig": "setOriginalSliderEnabledState()",
+    "line": 906
+   },
+   {
+    "sig": "setSlideDownSpeedMultiplier(float newValue)",
+    "line": 915
+   },
+   {
+    "sig": "setForceSlowDownOnSurfaceActiveState(bool state)",
+    "line": 920
+   },
+   {
+    "sig": "enableCheckIfDetectSlideActiveStateExternally()",
+    "line": 925
+   },
+   {
+    "sig": "disableCheckIfDetectSlideActiveStateExternally()",
+    "line": 934
+   },
+   {
+    "sig": "checkEventsOnStateChange(bool state)",
+    "line": 968
+   },
+   {
+    "sig": "setWallJumpSlidePausedState(bool state)",
+    "line": 989
+   },
+   {
+    "sig": "rotateCharacterOnJump()",
+    "line": 1000
+   },
+   {
+    "sig": "rotateCharacterOnJumpCoroutine()",
+    "line": 1014
+   }
+  ]
+ },
+ {
+  "type": "ragdollBuilder",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Character Builder\\ragdollBuilder.cs",
+  "methods": [
+   {
+    "sig": "getCharacterBonesFromEditor()",
+    "line": 91
+   },
+   {
+    "sig": "setCharacterBones(Transform newHead, Transform newRightElbow, Transform newLeftElbow, Transform newRightArm, Transform newLeftArm, Transform newMiddleSpine, Transform newPelvis, Transform newRightHips, Transform newLeftHips, Transform newRightKnee, Transform newLeftKnee)",
+    "line": 103
+   },
+   {
+    "sig": "getCharacterBones()",
+    "line": 137
+   },
+   {
+    "sig": "checkAllBonesFound()",
+    "line": 189
+   },
+   {
+    "sig": "createRagdoll()",
+    "line": 205
+   },
+   {
+    "sig": "updateRagdollActivatorParts()",
+    "line": 308
+   },
+   {
+    "sig": "removeRagdoll()",
+    "line": 590
+   },
+   {
+    "sig": "removeRagdollFromEditor()",
+    "line": 645
+   },
+   {
+    "sig": "enableRagdollColliders()",
+    "line": 658
+   },
+   {
+    "sig": "disableRagdollColliders()",
+    "line": 663
+   },
+   {
+    "sig": "setRagdollCollidersState(bool state)",
+    "line": 668
+   },
+   {
+    "sig": "setCheckIfRagdollComponentsAlreadyAddedOnModelActiveState(bool state)",
+    "line": 737
+   },
+   {
+    "sig": "setIgnoreStoreBonesByGetBoneTransformActiveState(bool state)",
+    "line": 742
+   },
+   {
+    "sig": "getAnimator(Animator anim)",
+    "line": 747
+   },
+   {
+    "sig": "setRagdollActivator(ragdollActivator newRagdollActivator)",
+    "line": 752
+   }
+  ]
+ },
+ {
+  "type": "customCharacterControllerManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Generic Model Controller\\customCharacterControllerManager.cs",
+  "methods": [
+   {
+    "sig": "toggleCustomCharacterControllerExternally(string characterControllerName)",
+    "line": 134
+   },
+   {
+    "sig": "toggleCustomCharacterController(string characterControllerName)",
+    "line": 145
+   },
+   {
+    "sig": "disableCustomCharacterControllerState()",
+    "line": 166
+   },
+   {
+    "sig": "setRandomCustomCharacterControllerState()",
+    "line": 190
+   },
+   {
+    "sig": "setCustomCharacterControllerState(string characterControllerStateName)",
+    "line": 199
+   },
+   {
+    "sig": "isCustomCharacterControllerActive()",
+    "line": 728
+   },
+   {
+    "sig": "checkEventsOnStateChange(bool state)",
+    "line": 733
+   },
+   {
+    "sig": "setToggleCustomCharacterControllerPausedState(bool state)",
+    "line": 744
+   },
+   {
+    "sig": "addNewCustomCharacterController(customCharacterControllerBase newCustomCharacterControllerBase, string newName)",
+    "line": 749
+   },
+   {
+    "sig": "addNewCustomCharacterControllerToSpawn(GameObject newCustomCharacterControllerBaseObject, string newName)",
+    "line": 762
+   },
+   {
+    "sig": "toggleCharacterModelMeshOnEditor(bool state)",
+    "line": 777
+   },
+   {
+    "sig": "setStartGameWithCustomCharacterControllerFromEditor(bool state)",
+    "line": 818
+   },
+   {
+    "sig": "setCustomCharacterControllerToStartNameFromEditor(string newCharacterName)",
+    "line": 825
+   },
+   {
+    "sig": "setCapsuleValuesFromMainCharacter()",
+    "line": 832
+   }
+  ]
+ },
+ {
+  "type": "railSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Extra Movements\\railSystem.cs",
+  "methods": [
+   {
+    "sig": "setImpulseForce(Vector3 forceAmount, bool useCameraDirection)",
+    "line": 417
+   },
+   {
+    "sig": "setJumpActive(Vector3 newImpulseOnJumpAmount)",
+    "line": 442
+   },
+   {
+    "sig": "setRailSystemActivestate(bool state)",
+    "line": 458
+   },
+   {
+    "sig": "setRailEnabledState(bool state)",
+    "line": 691
+   },
+   {
+    "sig": "enableOrDisableTurbo(bool state)",
+    "line": 700
+   },
+   {
+    "sig": "setCanUseTurboPausedState(bool state)",
+    "line": 721
+   },
+   {
+    "sig": "inputChangeTurboState(bool state)",
+    "line": 735
+   },
+   {
+    "sig": "setCanChangeDirectionEnabledState(bool state)",
+    "line": 742
+   },
+   {
+    "sig": "setOriginalCanChangeDirectionEnabled()",
+    "line": 747
+   },
+   {
+    "sig": "setCurrentSpline(BezierSpline newSpline)",
+    "line": 752
+   },
+   {
+    "sig": "setCurrentBezierDuration(float newValue)",
+    "line": 757
+   },
+   {
+    "sig": "adjustPlayerToRailOnStart(Vector3 initialPosition)",
+    "line": 773
+   },
+   {
+    "sig": "resetPlayerRotation()",
+    "line": 822
+   }
+  ]
+ },
+ {
+  "type": "walkOnBalanceSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Extra Movements\\walkOnBalanceSystem.cs",
+  "methods": [
+   {
+    "sig": "setImpulseForce(Vector3 forceAmount, bool useCameraDirection)",
+    "line": 481
+   },
+   {
+    "sig": "setJumpActive(Vector3 newImpulseOnJumpAmount)",
+    "line": 506
+   },
+   {
+    "sig": "setMovementSystemActivestate(bool state)",
+    "line": 522
+   },
+   {
+    "sig": "setMovementEnabledState(bool state)",
+    "line": 885
+   },
+   {
+    "sig": "enableOrDisableTurbo(bool state)",
+    "line": 894
+   },
+   {
+    "sig": "setCanUseTurboPausedState(bool state)",
+    "line": 919
+   },
+   {
+    "sig": "inputChangeTurboState(bool state)",
+    "line": 933
+   },
+   {
+    "sig": "setCurrentWaypoint(simpleWaypointSystem newSimpleWaypointSystem)",
+    "line": 940
+   },
+   {
+    "sig": "adjustPlayerToMovementOnStart(Vector3 initialPosition)",
+    "line": 964
+   },
+   {
+    "sig": "resetPlayerRotation()",
+    "line": 1035
+   },
+   {
+    "sig": "getClosestPosition(Vector3 position)",
+    "line": 1092
+   },
+   {
+    "sig": "setSetPlayerAsChildStateState(bool state, Transform newPlayerParentTransform)",
+    "line": 1145
+   },
+   {
+    "sig": "setJumpOnEndState(bool state)",
+    "line": 1152
+   }
+  ]
+ },
+ {
+  "type": "playerStateSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\playerStateSystem.cs",
+  "methods": [
+   {
+    "sig": "setPlayerState(string stateName)",
+    "line": 30
+   },
+   {
+    "sig": "checkIfStateCanChange(int stateIndexToCheck)",
+    "line": 97
+   },
+   {
+    "sig": "setUseTemporalDurationOnState(string stateName)",
+    "line": 124
+   },
+   {
+    "sig": "setStateEnabledState(bool state, string stateName)",
+    "line": 150
+   },
+   {
+    "sig": "setStateEnabledState(string stateName)",
+    "line": 161
+   },
+   {
+    "sig": "setStateDisabledState(string stateName)",
+    "line": 166
+   },
+   {
+    "sig": "setActivateStateOnStartState(bool state)",
+    "line": 171
+   },
+   {
+    "sig": "setStateToActivateOnStartValue(string newName)",
+    "line": 175
+   },
+   {
+    "sig": "setStateEnabledStateFromEditor(string stateName)",
+    "line": 181
+   },
+   {
+    "sig": "setStateDisabledStateFromEditor(string stateName)",
+    "line": 188
+   },
+   {
+    "sig": "setActivateStateOnStartStateFromEditor(bool state)",
+    "line": 195
+   },
+   {
+    "sig": "setStateToActivateOnStartValueFromEditor(string newName)",
+    "line": 201
+   }
+  ]
+ },
+ {
+  "type": "bodyMountPointsSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Character Builder\\bodyMountPointsSystem.cs",
+  "methods": [
+   {
+    "sig": "removeCharacterBodyMountPointsToTemporalParent(Transform newParent)",
+    "line": 44
+   },
+   {
+    "sig": "resetCharacterBodyMountPointsLocalPositions()",
+    "line": 60
+   },
+   {
+    "sig": "setCharacterBodyMountPointsInfoList()",
+    "line": 77
+   },
+   {
+    "sig": "setIndividualCharacterBodyMountPointInfoByName(string mountPointName)",
+    "line": 85
+   },
+   {
+    "sig": "getMountPointTransformByName(string mountPointName)",
+    "line": 168
+   },
+   {
+    "sig": "getHumanBoneMountPointTransformByName(string mountPointName)",
+    "line": 184
+   },
+   {
+    "sig": "setCustomBoneMountPointTransformByName(string mountPointName, Transform newCUstomBoneTransform, bool state)",
+    "line": 212
+   },
+   {
+    "sig": "setCustomBoneMountPointTransformByNameFromEditor(string mountPointName, Transform newCUstomBoneTransform, bool state)",
+    "line": 224
+   },
+   {
+    "sig": "toggleShowHandleGizmo()",
+    "line": 231
+   },
+   {
+    "sig": "toggleEditMountPoint()",
+    "line": 236
+   },
+   {
+    "sig": "setNewAnimator(Animator newAnimator)",
+    "line": 271
+   }
+  ]
+ },
+ {
+  "type": "flySystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Extra Movements\\flySystem.cs",
+  "methods": [
+   {
+    "sig": "enableOrDisableFlyingMode(bool state)",
+    "line": 290
+   },
+   {
+    "sig": "enableOrDisableTurbo(bool state)",
+    "line": 412
+   },
+   {
+    "sig": "resetCOMRotation()",
+    "line": 436
+   },
+   {
+    "sig": "resetCOMRotationCoroutine()",
+    "line": 445
+   },
+   {
+    "sig": "inputChangeTurboState(bool state)",
+    "line": 456
+   },
+   {
+    "sig": "inputMoveUp(bool state)",
+    "line": 463
+   },
+   {
+    "sig": "inputMoveDown(bool state)",
+    "line": 470
+   },
+   {
+    "sig": "setFlyModeEnabledState(bool state)",
+    "line": 495
+   },
+   {
+    "sig": "setOriginalFlyModeEnabledState()",
+    "line": 504
+   },
+   {
+    "sig": "setEnableExternalForceOnFlyModeState(bool state)",
+    "line": 541
+   },
+   {
+    "sig": "setFlyModeEnabledStateFromEditor(bool state)",
+    "line": 548
+   }
+  ]
+ },
+ {
+  "type": "wallRunningSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Extra Movements\\wallRunningSystem.cs",
+  "methods": [
+   {
+    "sig": "setWallRunningImpulseForce(Vector3 forceAmount, bool useCameraDirection)",
+    "line": 702
+   },
+   {
+    "sig": "setJumpActive()",
+    "line": 739
+   },
+   {
+    "sig": "setWallRunningActiveState(bool state)",
+    "line": 775
+   },
+   {
+    "sig": "setWallRunningEnabledState(bool state)",
+    "line": 943
+   },
+   {
+    "sig": "setWallRunningCanBeUsedState(bool state)",
+    "line": 961
+   },
+   {
+    "sig": "setOriginalWallRunningEnabledState()",
+    "line": 966
+   },
+   {
+    "sig": "setAutoUseDownMovementOnWallRunningActiveState(bool state)",
+    "line": 971
+   },
+   {
+    "sig": "setAutoUseStopWallRunningAfterDelayState(bool state)",
+    "line": 976
+   },
+   {
+    "sig": "resetCOMRotation()",
+    "line": 981
+   },
+   {
+    "sig": "resetCOMRotationCoroutine()",
+    "line": 995
+   },
+   {
+    "sig": "setWallRunningEnabledStateFromEditor(bool state)",
+    "line": 1068
+   }
+  ]
+ },
+ {
+  "type": "genericRagdollBuilder",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\genericRagdollBuilder.cs",
+  "methods": [
+   {
+    "sig": "checkAllBonesFound()",
+    "line": 585
+   },
+   {
+    "sig": "buildRagdoll()",
+    "line": 610
+   },
+   {
+    "sig": "removeRagdoll()",
+    "line": 626
+   },
+   {
+    "sig": "updateRagdollActivatorParts(bool addingRagdollOnEditorTime)",
+    "line": 682
+   },
+   {
+    "sig": "updateRagdollActivatorPatsIngame()",
+    "line": 717
+   },
+   {
+    "sig": "enableRagdollElements()",
+    "line": 722
+   },
+   {
+    "sig": "disableRagdollElements()",
+    "line": 727
+   },
+   {
+    "sig": "setActiveRagdollElements(bool state)",
+    "line": 732
+   },
+   {
+    "sig": "activateRagdollState()",
+    "line": 752
+   },
+   {
+    "sig": "activateEventToSendBonesList()",
+    "line": 794
+   },
+   {
+    "sig": "getRagdollElementsOnBoneListManually()",
+    "line": 805
+   }
+  ]
+ },
+ {
+  "type": "multipleInteractionSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\multipleInteractionSystem.cs",
+  "methods": [
+   {
+    "sig": "activateInteraction(List<string> typeNameList, GameObject character)",
+    "line": 52
+   },
+   {
+    "sig": "checkEventOnEnterExit(bool state, GameObject newPlayer)",
+    "line": 132
+   },
+   {
+    "sig": "setInteractionPauseActiveState(bool state)",
+    "line": 168
+   },
+   {
+    "sig": "removeDeviceFromPlayerList()",
+    "line": 173
+   },
+   {
+    "sig": "setMainColliderEnabledState(bool state)",
+    "line": 186
+   },
+   {
+    "sig": "disableInteractionIfActive()",
+    "line": 193
+   },
+   {
+    "sig": "enableOrDisableInteraction(bool state)",
+    "line": 202
+   },
+   {
+    "sig": "removeDeviceFromListAndDisableInteraction()",
+    "line": 221
+   },
+   {
+    "sig": "disableEntireMultipleInteraction()",
+    "line": 228
+   },
+   {
+    "sig": "stopActivateInteractionCoroutine()",
+    "line": 241
+   },
+   {
+    "sig": "disableEntireMultipleInteractionFromEditor()",
+    "line": 257
+   }
+  ]
+ },
+ {
+  "type": "handsOnMeleeWeaponIKSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Animator IK\\handsOnMeleeWeaponIKSystem.cs",
+  "methods": [
+   {
+    "sig": "playerIsBusy()",
+    "line": 190
+   },
+   {
+    "sig": "setWeightLerpSpeedValue(float newValue)",
+    "line": 205
+   },
+   {
+    "sig": "setOriginalWeightLerpSpeed()",
+    "line": 210
+   },
+   {
+    "sig": "setAdjustHandsPausedState(bool state)",
+    "line": 215
+   },
+   {
+    "sig": "setSmoothBusyDisableActiveState(bool state)",
+    "line": 220
+   },
+   {
+    "sig": "setAdjustHandsEnabledState(bool state)",
+    "line": 225
+   },
+   {
+    "sig": "enableHandsCheckPausedWithDelayActive(float duration)",
+    "line": 231
+   },
+   {
+    "sig": "stopUpdateDelayToResumeStateCoroutine()",
+    "line": 238
+   },
+   {
+    "sig": "disableStateIfNotCurrentlyActiveOnIKSystem()",
+    "line": 384
+   },
+   {
+    "sig": "setAdjustHandsEnabledStateFromEditor(bool state)",
+    "line": 394
+   }
+  ]
+ },
+ {
+  "type": "handsOnSurfaceIKSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Animator IK\\handsOnSurfaceIKSystem.cs",
+  "methods": [
+   {
+    "sig": "currentWeightInBothHandsEqualTo(float weightValue)",
+    "line": 330
+   },
+   {
+    "sig": "playerIsBusy()",
+    "line": 419
+   },
+   {
+    "sig": "setWeightLerpSpeedValue(float newValue)",
+    "line": 436
+   },
+   {
+    "sig": "setOriginalWeightLerpSpeed()",
+    "line": 441
+   },
+   {
+    "sig": "setAdjustHandsPausedState(bool state)",
+    "line": 446
+   },
+   {
+    "sig": "setSmoothBusyDisableActiveState(bool state)",
+    "line": 451
+   },
+   {
+    "sig": "setAdjustHandsToSurfacesEnabledState(bool state)",
+    "line": 456
+   },
+   {
+    "sig": "enableHandsCheckPausedWithDelayActive(float duration)",
+    "line": 462
+   },
+   {
+    "sig": "stopUpdateDelayToResumeStateCoroutine()",
+    "line": 469
+   },
+   {
+    "sig": "setAdjustHandsToSurfacesEnabledStateFromEditor(bool state)",
+    "line": 491
+   }
+  ]
+ },
+ {
+  "type": "characterStateIconSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\characterStateIconSystem.cs",
+  "methods": [
+   {
+    "sig": "enableOrDisableCharacterIcon(characterStateInfo characterState, bool state)",
+    "line": 109
+   },
+   {
+    "sig": "checkCharacterStateIconForViewChange()",
+    "line": 164
+   },
+   {
+    "sig": "setCharacterStateIcon(string stateName)",
+    "line": 171
+   },
+   {
+    "sig": "disableCharacterStateIcon()",
+    "line": 218
+   },
+   {
+    "sig": "playSound(AudioElement sound)",
+    "line": 228
+   },
+   {
+    "sig": "enableOrDisableCharacterStateSound(bool state, string characterStateName)",
+    "line": 239
+   },
+   {
+    "sig": "enableCharacterStateSound(string characterStateName)",
+    "line": 250
+   },
+   {
+    "sig": "disableCharacterStateSound(string characterStateName)",
+    "line": 255
+   },
+   {
+    "sig": "enableCharacterStateSoundFromEditor(string characterStateName)",
+    "line": 260
+   },
+   {
+    "sig": "disableCharacterStateSoundFromEditor(string characterStateName)",
+    "line": 267
+   }
+  ]
+ },
+ {
+  "type": "OnAnimatorIKComponent",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Animator IK\\OnAnimatorIKComponent.cs",
+  "methods": [
+   {
+    "sig": "updateOnAnimatorIKState()",
+    "line": 9
+   },
+   {
+    "sig": "setUpdateIKEnabledState(bool state)",
+    "line": 16
+   },
+   {
+    "sig": "isUpdateIKEnabled()",
+    "line": 21
+   },
+   {
+    "sig": "setActiveState(bool state)",
+    "line": 26
+   },
+   {
+    "sig": "enableBothHands()",
+    "line": 31
+   },
+   {
+    "sig": "enableOnlyLeftHand()",
+    "line": 36
+   },
+   {
+    "sig": "enableOnlyRightHand()",
+    "line": 41
+   },
+   {
+    "sig": "enableOrDisableRightOrLeftHand(bool state, bool isRightHand, bool setStateOnBothHands)",
+    "line": 46
+   },
+   {
+    "sig": "setCharacterElements(GameObject newCharacter)",
+    "line": 51
+   }
+  ]
+ },
+ {
+  "type": "bulletTimeFiringSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Extra Movements\\bulletTimeFiringSystem.cs",
+  "methods": [
+   {
+    "sig": "setMovementActiveState(bool state)",
+    "line": 352
+   },
+   {
+    "sig": "stopActivateJumpForcesCoroutine()",
+    "line": 537
+   },
+   {
+    "sig": "disableMovement()",
+    "line": 596
+   },
+   {
+    "sig": "resetActionIdOnTimeBulletJump()",
+    "line": 758
+   },
+   {
+    "sig": "setCurrentPlayerActionSystemCustomActionCategoryID()",
+    "line": 763
+   },
+   {
+    "sig": "inputSetTimeBullettFiring()",
+    "line": 835
+   },
+   {
+    "sig": "checkEventOnStateChange(bool state)",
+    "line": 840
+   },
+   {
+    "sig": "setMovementEnabledState(bool state)",
+    "line": 849
+   },
+   {
+    "sig": "setMovementEnabledStateFromEditor(bool state)",
+    "line": 855
+   }
+  ]
+ },
+ {
+  "type": "climbDetectionCollisionSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Extra Movements\\climbDetectionCollisionSystem.cs",
+  "methods": [
+   {
+    "sig": "updateObjectPosition(Vector3 newPosition)",
+    "line": 164
+   },
+   {
+    "sig": "enableOrDisableClimbDetection(bool state)",
+    "line": 169
+   },
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 214
+   },
+   {
+    "sig": "climbSurfaceDetected()",
+    "line": 647
+   },
+   {
+    "sig": "getMainRigidbodyVelocity()",
+    "line": 718
+   },
+   {
+    "sig": "getMainRigidbodyPosition()",
+    "line": 723
+   },
+   {
+    "sig": "getLastClimbNormal()",
+    "line": 728
+   },
+   {
+    "sig": "getContactNormal()",
+    "line": 733
+   },
+   {
+    "sig": "setNewParent(Transform newParent)",
+    "line": 738
+   }
+  ]
+ },
+ {
+  "type": "paragliderSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Extra Movements\\paragliderSystem.cs",
+  "methods": [
+   {
+    "sig": "enableOrDisableParagliderMode(bool state)",
+    "line": 151
+   },
+   {
+    "sig": "inputToggletParagliderActiveState()",
+    "line": 327
+   },
+   {
+    "sig": "inputSetParagliderActiveState(bool state)",
+    "line": 336
+   },
+   {
+    "sig": "stopCheckingToActivateParagliderCoroutine()",
+    "line": 382
+   },
+   {
+    "sig": "setParagliderModePausedState(bool state)",
+    "line": 403
+   },
+   {
+    "sig": "setUseLastTimeParagliderPauseActive(float newDuration)",
+    "line": 414
+   },
+   {
+    "sig": "setParagliderModeEnabledState(bool state)",
+    "line": 423
+   },
+   {
+    "sig": "setOriginalParagliderModeEnabledState()",
+    "line": 432
+   },
+   {
+    "sig": "setParagliderModeEnabledStateFromEditor(bool state)",
+    "line": 457
+   }
+  ]
+ },
+ {
+  "type": "IKFootSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Animator IK\\IKFootSystem.cs",
+  "methods": [
+   {
+    "sig": "calculateInitialFootValues()",
+    "line": 140
+   },
+   {
+    "sig": "getNewRaycastPosition(Vector3 targetTransformPosition, Vector3 lowerLegPosition, out float newDistance)",
+    "line": 449
+   },
+   {
+    "sig": "setIKFootPausedState(bool state)",
+    "line": 460
+   },
+   {
+    "sig": "setLegsInfo(Transform newHips, Transform rightLowerLeg, Transform leftLowerLeg, Transform rightFoot, Transform leftFoot, Transform rightToes, Transform leftToes)",
+    "line": 465
+   },
+   {
+    "sig": "setIKFootSystemEnabledState(bool state)",
+    "line": 484
+   },
+   {
+    "sig": "setIKFootSystemEnabledStateFromEditor(bool state)",
+    "line": 497
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 504
+   }
+  ]
+ },
+ {
+  "type": "characterModelListManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Character Builder\\characterModelListManager.cs",
+  "methods": [
+   {
+    "sig": "getCurrentCharacterModelID()",
+    "line": 90
+   },
+   {
+    "sig": "replaceCharacterModelByID(int id)",
+    "line": 99
+   },
+   {
+    "sig": "replaceCharacterModel()",
+    "line": 112
+   },
+   {
+    "sig": "replaceCharacterModel(string name)",
+    "line": 119
+   },
+   {
+    "sig": "setNextCharacterModel()",
+    "line": 328
+   },
+   {
+    "sig": "setPreviousCharacterModel()",
+    "line": 333
+   },
+   {
+    "sig": "setNextOrPreviousCharacterModel(bool state)",
+    "line": 338
+   }
+  ]
+ },
+ {
+  "type": "doubleJumpAnimationTrigger",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\doubleJumpAnimationTrigger.cs",
+  "methods": [
+   {
+    "sig": "activateGroundJumpAnimation()",
+    "line": 62
+   },
+   {
+    "sig": "activateDoubleJumpAnimation()",
+    "line": 113
+   },
+   {
+    "sig": "setIgnoreGroundJumpAnimationActiveState(bool state)",
+    "line": 164
+   },
+   {
+    "sig": "setGroundJumpAnimationEnabledState(bool state)",
+    "line": 173
+   },
+   {
+    "sig": "setDoubleJumpAnimationEnabledState(bool state)",
+    "line": 182
+   },
+   {
+    "sig": "setGroundJumpAnimationEnabledStateFromEditor(bool state)",
+    "line": 188
+   },
+   {
+    "sig": "setDoubleJumpAnimationEnabledStateFromEditor(bool state)",
+    "line": 195
+   }
+  ]
+ },
+ {
+  "type": "adjustCharacterHeightSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Character Builder\\adjustCharacterHeightSystem.cs",
+  "methods": [
+   {
+    "sig": "adjustHeightValueInRuntime()",
+    "line": 146
+   },
+   {
+    "sig": "adjustHeightValue()",
+    "line": 174
+   },
+   {
+    "sig": "adjustFireWeaponsScale()",
+    "line": 341
+   },
+   {
+    "sig": "adjustFireWeaponsOffset()",
+    "line": 352
+   },
+   {
+    "sig": "adjustFireWeaponsTransformReferences()",
+    "line": 365
+   },
+   {
+    "sig": "adjustCameraStates()",
+    "line": 374
+   }
+  ]
+ },
+ {
+  "type": "freeFallCharacterActivator",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Extra Movements\\freeFallCharacterActivator.cs",
+  "methods": [
+   {
+    "sig": "disableFreeFallActiveState()",
+    "line": 162
+   },
+   {
+    "sig": "setFreeFallPausedState(bool state)",
+    "line": 169
+   },
+   {
+    "sig": "checkFallSpeed()",
+    "line": 182
+   },
+   {
+    "sig": "setResetCheckOnFreeFallActiveState(bool state)",
+    "line": 195
+   },
+   {
+    "sig": "inputEnableOrDisableFallTurbo(bool state)",
+    "line": 200
+   },
+   {
+    "sig": "stopFreeFallStateIfActive()",
+    "line": 316
+   }
+  ]
+ },
+ {
+  "type": "characterPropertiesSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\States\\characterPropertiesSystem.cs",
+  "methods": [
+   {
+    "sig": "activateStateAffected(string stateName, float stateDuration, float stateAmount)",
+    "line": 18
+   },
+   {
+    "sig": "activateStateAffected(string stateName)",
+    "line": 31
+   },
+   {
+    "sig": "deactivateStateAffected(string stateName)",
+    "line": 36
+   },
+   {
+    "sig": "activateOrDeactivateStateAffected(string stateName, bool state)",
+    "line": 41
+   },
+   {
+    "sig": "getCharacterStateAffectedInfoByName(string stateName)",
+    "line": 54
+   },
+   {
+    "sig": "getCharacterStateAffectedInfoGameObjectByName(string stateName)",
+    "line": 65
+   }
+  ]
+ },
+ {
+  "type": "remotePlayerNavmeshOverride",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\remotePlayerNavmeshOverride.cs",
+  "methods": [
+   {
+    "sig": "setPlayerNavMeshWaypointTargetPosition(List<Transform> waypointList)",
+    "line": 18
+   },
+   {
+    "sig": "setPlayerNavMeshTransformTargetPosition(Transform newTransformPosition)",
+    "line": 23
+   },
+   {
+    "sig": "setPlayerNavMeshTargetPosition()",
+    "line": 28
+   },
+   {
+    "sig": "enablePlayerNavMeshState()",
+    "line": 33
+   },
+   {
+    "sig": "disablePlayerNavMeshState()",
+    "line": 38
+   },
+   {
+    "sig": "setPlayerNavMeshEnabledState(bool state)",
+    "line": 43
+   }
+  ]
+ },
+ {
+  "type": "freeClimbZoneSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Extra Movements\\freeClimbZoneSystem.cs",
+  "methods": [
+   {
+    "sig": "checkTriggerInfo(Collider col, bool isEnter)",
+    "line": 54
+   },
+   {
+    "sig": "checkPlayerParentState()",
+    "line": 121
+   },
+   {
+    "sig": "isIgnoreSurfaceToClimbEnabled()",
+    "line": 130
+   },
+   {
+    "sig": "setIgnoreSurfaceToClimbEnabledState(bool state)",
+    "line": 135
+   },
+   {
+    "sig": "isAllowClimbSurfaceOnInputEnabled()",
+    "line": 140
+   }
+  ]
+ },
+ {
+  "type": "externalControllerBehaviorManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Extra Movements\\externalControllerBehaviorManager.cs",
+  "methods": [
+   {
+    "sig": "setExternalControllerActive(string nameToCheck)",
+    "line": 32
+   },
+   {
+    "sig": "setExternalControllerDeactive(string nameToCheck)",
+    "line": 37
+   },
+   {
+    "sig": "setExternalControllerState(string nameToCheck, bool state)",
+    "line": 42
+   },
+   {
+    "sig": "checkInputListToPauseDuringAction(List<playerActionSystem.inputToPauseOnActionIfo> inputList, bool state)",
+    "line": 120
+   }
+  ]
+ },
+ {
+  "type": "remotePlayerNavmeshOverrideSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\remotePlayerNavmeshOverrideSystem.cs",
+  "methods": [
+   {
+    "sig": "setRemoteNavmeshState()",
+    "line": 31
+   },
+   {
+    "sig": "setRemoteNavmeshStateExternally(bool state)",
+    "line": 36
+   },
+   {
+    "sig": "activateRemoteNavmesh()",
+    "line": 45
+   },
+   {
+    "sig": "disableRemoteNavmesh()",
+    "line": 62
+   }
+  ]
+ },
+ {
+  "type": "playerSphereModeSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Extra Movements\\playerSphereModeSystem.cs",
+  "methods": [
+   {
+    "sig": "setCurrentVehicleInfo(string newVehicleInfoName)",
+    "line": 110
+   },
+   {
+    "sig": "toggleSphereModeActiveState()",
+    "line": 147
+   },
+   {
+    "sig": "setSphereModeActiveState(bool state)",
+    "line": 152
+   }
+  ]
+ },
+ {
+  "type": "rollOnLandingSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Extra Movements\\rollOnLandingSystem.cs",
+  "methods": [
+   {
+    "sig": "setCancelCheckRollOnLandingOnceActive(bool state)",
+    "line": 62
+   },
+   {
+    "sig": "inputActivateRollOnLanding()",
+    "line": 69
+   },
+   {
+    "sig": "inputDeactivateRollOnLanding()",
+    "line": 130
+   }
+  ]
+ },
+ {
+  "type": "AIMountManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Generic Model Controller\\AIMountManager.cs",
+  "methods": [
+   {
+    "sig": "assignCurrentMountGameObject(GameObject newObject)",
+    "line": 60
+   },
+   {
+    "sig": "removeCurrentMountGameObject()",
+    "line": 96
+   },
+   {
+    "sig": "callCurrentMount()",
+    "line": 113
+   }
+  ]
+ },
+ {
+  "type": "customCharacterControllerBaseBuilder",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Generic Model Controller\\customCharacterControllerBaseBuilder.cs",
+  "methods": [
+   {
+    "sig": "adjustSettingsFromEditor()",
+    "line": 14
+   },
+   {
+    "sig": "adjustSettings()",
+    "line": 19
+   },
+   {
+    "sig": "adjustSettingsFromList(List<buildPlayer.settingsInfo> settingsList)",
+    "line": 31
+   }
+  ]
+ },
+ {
+  "type": "characterStateAffectedInfo",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\States\\characterStateAffectedInfo.cs",
+  "methods": [
+   {
+    "sig": "activateStateAffected(float stateDuration, float stateAmount)",
+    "line": 16
+   },
+   {
+    "sig": "activateStateAffected(bool state)",
+    "line": 21
+   },
+   {
+    "sig": "isStateAffectedActive()",
+    "line": 26
+   }
+  ]
+ },
+ {
+  "type": "playerIdleSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\playerIdleSystem.cs",
+  "methods": [
+   {
+    "sig": "activateIdle()",
+    "line": 82
+   },
+   {
+    "sig": "deactivateIdle()",
+    "line": 87
+   },
+   {
+    "sig": "setIdleIndex(int newValue)",
+    "line": 156
+   }
+  ]
+ },
+ {
+  "type": "spriteAnimatorSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\spriteAnimatorSystem.cs",
+  "methods": [
+   {
+    "sig": "setSpriteAnimatorActiveState(bool state)",
+    "line": 269
+   },
+   {
+    "sig": "checkEventState(bool state)",
+    "line": 308
+   },
+   {
+    "sig": "setSpriteAnimatorActiveStateFromEditor(bool state)",
+    "line": 317
+   }
+  ]
+ },
+ {
+  "type": "characterModelElementInfo",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Character Builder\\characterModelElementInfo.cs",
+  "methods": [
+   {
+    "sig": "getCharacterElements()",
+    "line": 104
+   },
+   {
+    "sig": "getCharacterBones()",
+    "line": 111
+   }
+  ]
+ },
+ {
+  "type": "AddPlayerSpawned",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\AddPlayerSpawned.cs",
+  "methods": [
+   {
+    "sig": "AddNewPlayerSpawned(GameObject gameObj)",
+    "line": 16
+   }
+  ]
+ },
+ {
+  "type": "climbRopeTriggerMatchSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Extra Movements\\climbRopeTriggerMatchSystem.cs",
+  "methods": [
+   {
+    "sig": "checkTriggerInfo(Collider col, bool isEnter)",
+    "line": 37
+   }
+  ]
+ },
+ {
+  "type": "climbRopeTriggerSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Extra Movements\\climbRopeTriggerSystem.cs",
+  "methods": [
+   {
+    "sig": "checkTriggerInfo(Collider col, bool isEnter)",
+    "line": 49
+   }
+  ]
+ },
+ {
+  "type": "portableClimbRopeTriggerSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Extra Movements\\portableClimbRopeTriggerSystem.cs",
+  "methods": [
+   {
+    "sig": "activateClimbRopeTrigger()",
+    "line": 57
+   }
+  ]
+ },
+ {
+  "type": "portableWalkOnBalanceTriggerSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Extra Movements\\portableWalkOnBalanceTriggerSystem.cs",
+  "methods": [
+   {
+    "sig": "activateWalkOnBalanceTrigger()",
+    "line": 54
+   }
+  ]
+ },
+ {
+  "type": "railTriggerSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Extra Movements\\railTriggerSystem.cs",
+  "methods": [
+   {
+    "sig": "checkTriggerInfo(Collider col, bool isEnter)",
+    "line": 52
+   }
+  ]
+ },
+ {
+  "type": "simpleWaypointSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Extra Movements\\simpleWaypointSystem.cs",
+  "methods": [
+   {
+    "sig": "getWayPoints()",
+    "line": 20
+   }
+  ]
+ },
+ {
+  "type": "slideZoneSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Extra Movements\\slideZoneSystem.cs",
+  "methods": [
+   {
+    "sig": "checkTriggerInfo(Collider col, bool isEnter)",
+    "line": 59
+   }
+  ]
+ },
+ {
+  "type": "swimTriggerSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Extra Movements\\swimTriggerSystem.cs",
+  "methods": [
+   {
+    "sig": "checkTriggerInfo(Collider col, bool isEnter)",
+    "line": 83
+   }
+  ]
+ },
+ {
+  "type": "walkOnBalanceTriggerSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Extra Movements\\walkOnBalanceTriggerSystem.cs",
+  "methods": [
+   {
+    "sig": "checkTriggerInfo(Collider col, bool isEnter)",
+    "line": 59
+   }
+  ]
+ },
+ {
+  "type": "wallSlideJumpZoneSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Extra Movements\\wallSlideJumpZoneSystem.cs",
+  "methods": [
+   {
+    "sig": "checkTriggerInfo(Collider col, bool isEnter)",
+    "line": 30
+   }
+  ]
+ },
+ {
+  "type": "setCustomCharacterStateTriggerSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Generic Model Controller\\setCustomCharacterStateTriggerSystem.cs",
+  "methods": [
+   {
+    "sig": "checkCustomCharacterToActivate(GameObject newCharacterGameObject)",
+    "line": 21
+   }
+  ]
+ },
+ {
+  "type": "spiderCharacterController",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Generic Model Controller\\spiderCharacterController.cs",
+  "methods": [
+   {
+    "sig": "setPauseSpiderInputState(bool state)",
+    "line": 84
+   }
+  ]
+ },
+ {
+  "type": "wolfCharacterController",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Generic Model Controller\\wolfCharacterController.cs",
+  "methods": [
+   {
+    "sig": "setCharacterPivotTransform(Transform newTransform)",
+    "line": 249
+   }
+  ]
+ },
+ {
+  "type": "setCharacterAffectedState",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\States\\setCharacterAffectedState.cs",
+  "methods": [
+   {
+    "sig": "checkObjectDetected(GameObject objectToDamage)",
+    "line": 15
+   }
+  ]
+ },
+ {
+  "type": "stairAdherenceSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\stairAdherenceSystem.cs",
+  "methods": [
+   {
+    "sig": "setStairsValuesOnPlayer(playerController newPlayerController)",
+    "line": 15
+   }
+  ]
+ }
+]

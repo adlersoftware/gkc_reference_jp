@@ -1,0 +1,60 @@
+[
+  {
+    "type": "playerOptionsEditorSystem",
+    "fields": {
+      "playerOptionsEditorEnabled": "有効にすると起動時に各オプション値の初期化を実行する。",
+      "initializeOptionsOnlyWhenLoadingGame": "オンにするとセーブ読込時のみ初期値を適用する。",
+      "saveCurrentPlayerOptionsToSaveFile": "現在のオプション値をセーブデータに保存するかどうか。",
+      "valuesInitialized": "初期化処理が完了したかを示す実行時状態フラグ。"
+    }
+  },
+  {
+    "type": "playerSkillsSystem",
+    "fields": {
+      "playerSkillsActive": "スキルシステム全体を稼働させるかどうか。",
+      "initializeSkillsValuesAtStartActive": "オンにすると開始時にスキル値の初期化を実行する。",
+      "initializeSkillsOnlyWhenLoadingGame": "オンにするとセーブ読込時のみ初期化を実行する。",
+      "saveCurrentPlayerSkillsToSaveFile": "現在のスキル状況をセーブデータに保存するかどうか。",
+      "initializeValuesWhenNotLoadingFromTemplate": "オンにすると非読込時にテンプレートから状態を復元する。",
+      "mainSkillSettingsTemplate": "スキルの解放状態を保存・読込するテンプレート。",
+      "mainPlayerStatsSystem": "スキル効果でステータスを増加させる対象の`playerStatsSystem`。"
+    }
+  },
+  {
+    "type": "playerSkillsUISystem",
+    "fields": {
+      "showLockedSkillName": "オンにすると未解放スキルでも実際の名前を表示する。",
+      "lockedSkillNameToShow": "未解放時にスキル名欄へ表示する代替文字列。",
+      "showLockedSkillDescription": "オンにすると未解放スキルでも実際の説明文を表示する。",
+      "lockedSkillDescriptionToShow": "未解放時に説明欄へ表示する代替文字列。",
+      "useDoublePressToShowIncreaseSkillButtonEnabled": "オンにすると同スロットの二度押しでポイント使用確認を出す。",
+      "showDebugPrint": "スキルUIの処理状況をコンソールに出力する。",
+      "skillsMenuPanel": "スキルメニューとして開閉されるUIパネル。",
+      "currentSkillCategoryNameText": "選択中カテゴリ名を表示するテキスト。",
+      "currentSkillNameText": "選択中スキル名を表示するテキスト。",
+      "currentSkillDescriptionText": "選択中スキルの説明文を表示するテキスト。",
+      "currentSkillLevelDescriptionText": "現在のスキルレベルの説明を表示するテキスト。",
+      "currentSkillPointsText": "所持スキルポイント数を表示するテキスト。",
+      "requiredSkillPointsText": "次段階に必要なスキルポイントを表示するテキスト。",
+      "confirmUseSkillPointsPanel": "スキルポイント使用の確認を表示するパネル。",
+      "playerExperienceManager": "スキルポイント残量を管理する`playerExperienceSystem`。",
+      "playerSkillsManager": "参照するスキル情報を提供する`playerSkillsSystem`。",
+      "categoryScrollBar": "カテゴリ一覧のスクロール位置を制御するバー。",
+      "categoryListContent": "カテゴリ一覧の要素を並べるコンテナ。",
+      "categoryScrollRect": "カテゴリ一覧のスクロール制御を行う`ScrollRect`。",
+      "eventOnSkillMenuOpened": "スキルメニューを開いた時に実行するイベント。",
+      "eventOnSkillMenuClosed": "スキルメニューを閉じた時に実行するイベント。",
+      "eventOnSkillPointsUsed": "ポイント消費が成功した時に実行するイベント。",
+      "eventOnNotEnoughSkillPoints": "ポイント不足で消費に失敗した時に実行するイベント。"
+    }
+  },
+  {
+    "type": "playerStateSystem",
+    "fields": {
+      "playerStatesEnabled": "プレイヤー状態システムを有効にするかどうか。",
+      "activateStateOnStart": "オンにすると開始時に指定した状態を適用する。",
+      "stateToActivateOnStart": "開始時に適用する状態を一覧から名前で指定する。",
+      "showDebugPrint": "状態の切替結果などをコンソールに出力する。"
+    }
+  }
+]

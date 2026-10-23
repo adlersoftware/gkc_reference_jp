@@ -1,0 +1,991 @@
+{
+"craftedObjectPlacedHelper": {
+"type": "craftedObjectPlacedHelper",
+"file": "Crafting System/craftedObjectPlacedHelper.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Crafting System\\craftedObjectPlacedHelper.cs",
+"methods": [
+{
+"sig": "getObjectName()",
+"line": 37
+},
+{
+"sig": "getObject()",
+"line": 42
+},
+{
+"sig": "checkEventsOnStateChange(bool state)",
+"line": 47
+},
+{
+"sig": "checkStateOnTakeObjectBack()",
+"line": 58
+},
+{
+"sig": "checkEventsOnStateChangeWithPlayer(bool state, GameObject currentPlayer)",
+"line": 69
+},
+{
+"sig": "setObjectPlacedState(bool state)",
+"line": 80
+},
+{
+"sig": "isObjectPlaced()",
+"line": 85
+},
+{
+"sig": "setObjectCanBeTakenBackToInventoryEnabledState(bool state)",
+"line": 90
+},
+{
+"sig": "isObjectCanBeTakenBackToInventoryEnabled()",
+"line": 95
+}
+]
+},
+"craftingPlacementSystem": {
+"type": "craftingPlacementSystem",
+"file": "Crafting System/craftingPlacementSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Crafting System\\craftingPlacementSystem.cs",
+"methods": [
+{
+"sig": "stopUpdateCoroutine()",
+"line": 122
+},
+{
+"sig": "confirmToPlaceObject()",
+"line": 197
+},
+{
+"sig": "setCurrentObjectToPlaceMesh(GameObject newObject)",
+"line": 324
+},
+{
+"sig": "setOriginalPlacementActivePausedState()",
+"line": 362
+},
+{
+"sig": "setPlacementActivePausedState(bool state)",
+"line": 367
+},
+{
+"sig": "isPlacementActivePaused()",
+"line": 382
+},
+{
+"sig": "setPlacementActiveState(bool state)",
+"line": 387
+},
+{
+"sig": "checkInputListToPauseDuringAction(bool state)",
+"line": 457
+},
+{
+"sig": "inputRotateObjectToRightOrLeft(bool state)",
+"line": 471
+},
+{
+"sig": "inputRotateObjectToUpOrDown(bool state)",
+"line": 504
+},
+{
+"sig": "inputConfirmToPlaceObject()",
+"line": 537
+},
+{
+"sig": "inputConfirmToTakeObjectBackToInventory()",
+"line": 568
+},
+{
+"sig": "setIgnoreDisablePlacementActiveOnCancelInputActionActiveState(bool state)",
+"line": 665
+},
+{
+"sig": "setTogglePlacementActiveOnCancelInputActionActiveState(bool state)",
+"line": 670
+},
+{
+"sig": "inputCancelPlaceObject()",
+"line": 675
+},
+{
+"sig": "inputConfirmToAttachObjectToSurfaceDetected()",
+"line": 708
+},
+{
+"sig": "inputCheckConnectStationInput()",
+"line": 721
+},
+{
+"sig": "inputCheckRemoveStationInput()",
+"line": 844
+},
+{
+"sig": "inputSelectNextObjectForPlacement()",
+"line": 966
+},
+{
+"sig": "inputSelectPreviousObjectForPlacement()",
+"line": 979
+}
+]
+},
+"craftingSocket": {
+"type": "craftingSocket",
+"file": "Crafting System/craftingSocket.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Crafting System\\craftingSocket.cs",
+"methods": [
+{
+"sig": "assignCraftingStationSystem(craftingStationSystem newCraftingStationSystem)",
+"line": 30
+},
+{
+"sig": "removeCraftingStationSystem()",
+"line": 37
+},
+{
+"sig": "checkIfSocketAssigned()",
+"line": 42
+},
+{
+"sig": "enableOrDisableLineRenderer(bool state)",
+"line": 47
+},
+{
+"sig": "enableLineRendererIfSocketAssigned()",
+"line": 56
+},
+{
+"sig": "updateLinerenderPositions()",
+"line": 63
+},
+{
+"sig": "setLineRendererTargetPosition(Vector3 targetPosition)",
+"line": 70
+},
+{
+"sig": "setLineRendererTargetPosition(Transform targetTransform)",
+"line": 78
+}
+]
+},
+"craftingStationSystem": {
+"type": "craftingStationSystem",
+"file": "Crafting System/craftingStationSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Crafting System\\craftingStationSystem.cs",
+"methods": [
+{
+"sig": "setInputSocket(craftingSocket newSocket)",
+"line": 83
+},
+{
+"sig": "removeInputSocket()",
+"line": 96
+},
+{
+"sig": "setOutputSocket(craftingSocket newSocket)",
+"line": 109
+},
+{
+"sig": "removeOutputSocket()",
+"line": 122
+},
+{
+"sig": "sendEnergyValue(float newAmount)",
+"line": 135
+},
+{
+"sig": "setInfiniteEnergyState(bool state)",
+"line": 140
+},
+{
+"sig": "checkStateOnSetInput()",
+"line": 145
+},
+{
+"sig": "checkStateOnSetOuput()",
+"line": 150
+},
+{
+"sig": "checkStateOnRemoveInput()",
+"line": 155
+},
+{
+"sig": "checkStateOnRemoveOuput()",
+"line": 160
+},
+{
+"sig": "setCurrentEnergyStationSystem(energyStationSystem newEnergyStationSystem)",
+"line": 165
+},
+{
+"sig": "checkEnergyStationOnStateChange()",
+"line": 174
+},
+{
+"sig": "checkStateOnTakeObjectBack()",
+"line": 179
+},
+{
+"sig": "getStationName()",
+"line": 196
+},
+{
+"sig": "addCraftingStationSystem(craftingStationSystem newCraftingStationSystem)",
+"line": 201
+},
+{
+"sig": "removeCraftingStationSystem(craftingStationSystem newCraftingStationSystem)",
+"line": 208
+},
+{
+"sig": "clearCraftingStationSystemList()",
+"line": 215
+}
+]
+},
+"craftingSystem": {
+"type": "craftingSystem",
+"file": "Crafting System/craftingSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Crafting System\\craftingSystem.cs",
+"methods": [
+{
+"sig": "openOrCloseCraftingMenu(bool state)",
+"line": 159
+},
+{
+"sig": "checkStateOnCraftObject()",
+"line": 195
+},
+{
+"sig": "getCurrentInventoryObjectIndex()",
+"line": 211
+},
+{
+"sig": "getInventoryObjectAmountByName(string inventoryObjectName)",
+"line": 216
+},
+{
+"sig": "getInventoryObjectIconByName(string inventoryObjectName)",
+"line": 221
+},
+{
+"sig": "removeObjectAmountFromInventoryByName(string objectName, int amountToMove)",
+"line": 226
+},
+{
+"sig": "removeObjectAmountFromInventoryByIndex(int objectIndex, int amountToMove)",
+"line": 231
+},
+{
+"sig": "checkIfPlayerInventoryIsFull(string inventoryObjectName, int inventoryObjectAmount)",
+"line": 236
+},
+{
+"sig": "giveInventoryObjectToCharacter(string objectName, int objectAmount)",
+"line": 263
+},
+{
+"sig": "getInventoryList()",
+"line": 269
+},
+{
+"sig": "getInventoryInfoByName(string objectName)",
+"line": 274
+},
+{
+"sig": "getInventoryInfoByIndex(int objectIndex)",
+"line": 279
+},
+{
+"sig": "repairDurabilityObjectByIndex(int objectIndex)",
+"line": 284
+},
+{
+"sig": "isObjectBroken(int objectIndex)",
+"line": 289
+},
+{
+"sig": "isObjectDurabilityComplete(int objectIndex)",
+"line": 294
+},
+{
+"sig": "getInventoryMeshByName(string objectName)",
+"line": 299
+},
+{
+"sig": "getCurrentObjectToPlace()",
+"line": 304
+},
+{
+"sig": "getCurrentObjectToPlaceByName(string objectName)",
+"line": 309
+},
+{
+"sig": "updateObjectSelectedName(string newCurrentObjectCategorySelectedName, string newCurrentObjectSelectedName)",
+"line": 314
+},
+{
+"sig": "getCurrentObjectLayerMaskToAttachObjectByName(string objectName)",
+"line": 319
+},
+{
+"sig": "getCurrentObjectToPlacePositionOffsetByName(string objectName)",
+"line": 324
+},
+{
+"sig": "checkIfCurrentObjectToPlaceUseCustomLayerMaskByName(string objectName)",
+"line": 329
+},
+{
+"sig": "getCurrentObjectCustomLayerMaskToPlaceObjectByName(string objectName)",
+"line": 334
+},
+{
+"sig": "getCurrentObjectCanBeRotatedValuesByName(string objectName, ref bool objectCanBeRotatedOnYAxis, ref bool objectCanBeRotatedOnXAxis)",
+"line": 339
+},
+{
+"sig": "getCurrentObjectSelectedName()",
+"line": 344
+},
+{
+"sig": "isIgnoreCheckMaterialsNeededToCraftEnabled()",
+"line": 349
+},
+{
+"sig": "setPlacementActiveState(bool state)",
+"line": 354
+},
+{
+"sig": "setPlacementActiveStateExternally(bool state)",
+"line": 385
+},
+{
+"sig": "setCurrentInventoryObjectSelectedIndex(int newValue)",
+"line": 428
+},
+{
+"sig": "selectNextOrPreviousObjectForPlacement(bool state)",
+"line": 437
+},
+{
+"sig": "setPlacementActivePausedState(bool state)",
+"line": 544
+},
+{
+"sig": "setOriginalPlacementActivePausedState()",
+"line": 549
+},
+{
+"sig": "checkIfStatValueAvailable(string statName, int statAmount)",
+"line": 554
+},
+{
+"sig": "addOrRemovePlayerStatAmount(string statName, int statAmount)",
+"line": 559
+},
+{
+"sig": "setUseOnlyBlueprintsUnlockedState(bool state)",
+"line": 565
+},
+{
+"sig": "isUseOnlyBlueprintsUnlockedActive()",
+"line": 574
+},
+{
+"sig": "setBlueprintsUnlockedListValue(List<string> newBlueprintsUnlockedList)",
+"line": 579
+},
+{
+"sig": "getBlueprintsUnlockedListValue()",
+"line": 588
+},
+{
+"sig": "addNewBlueprintsUnlockedElement(string newBlueprintsUnlockedElement)",
+"line": 593
+},
+{
+"sig": "setObjectCategoriesToCraftAvailableAtAnyMomentValue(List<string> newList)",
+"line": 608
+},
+{
+"sig": "getObjectCategoriesToCraftAvailableAtAnyMomentValue()",
+"line": 613
+},
+{
+"sig": "addObjectCategoriesToCraftAvailableAtAnyMomentElement(string newElement)",
+"line": 618
+},
+{
+"sig": "getCraftObjectInTimeInfoList()",
+"line": 625
+},
+{
+"sig": "anyObjectToCraftInTimeActive()",
+"line": 630
+},
+{
+"sig": "setCraftObjectInTimeInfoList(List<craftObjectInTimeSimpleInfo> newCraftObjectInTimeSimpleInfoList)",
+"line": 639
+},
+{
+"sig": "setOpenFromWorkbenchState(bool state, List<string> newObjectCategoriesToCraftAvailableOnCurrentBench, bool allowToCraftAllObjectsOnCurrentBenchValue)",
+"line": 644
+},
+{
+"sig": "setCurrentcurrentCraftingWorkbenchSystem(craftingWorkbenchSystem newCraftingWorkbenchSystem)",
+"line": 655
+},
+{
+"sig": "stopUsingWorkbenchOnDamageReceived()",
+"line": 662
+},
+{
+"sig": "closeMenuOnWorkbenchWithActionSystem()",
+"line": 673
+},
+{
+"sig": "repairCurrentObjectSelectedOnInventoryMenu()",
+"line": 684
+},
+{
+"sig": "updateUIAfterRepairingCurrentObjectSelectedOnInventoryMenu(bool state)",
+"line": 693
+},
+{
+"sig": "getStatsFromObjectByName(string objectName)",
+"line": 698
+},
+{
+"sig": "objectCanBeUpgraded(string objectName)",
+"line": 703
+},
+{
+"sig": "setCraftingSystemEnabledStateFromEditor(bool state)",
+"line": 709
+},
+{
+"sig": "updateComponent()",
+"line": 716
+}
+]
+},
+"craftingUISystem": {
+"type": "craftingUISystem",
+"file": "Crafting System/craftingUISystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Crafting System\\craftingUISystem.cs",
+"methods": [
+{
+"sig": "showInventoryList()",
+"line": 300
+},
+{
+"sig": "showBlueprintList()",
+"line": 315
+},
+{
+"sig": "showUpgradePanel()",
+"line": 351
+},
+{
+"sig": "closeUpgradePanel()",
+"line": 364
+},
+{
+"sig": "setShowAllObjectsOrOnlyAvailableToCreate(bool state)",
+"line": 438
+},
+{
+"sig": "repairCurrentObjectSelectedOnInventoryMenu()",
+"line": 447
+},
+{
+"sig": "repairObjectExternallyByIndex(int objectIndex)",
+"line": 456
+},
+{
+"sig": "repairObject()",
+"line": 489
+},
+{
+"sig": "disassembleObject()",
+"line": 558
+},
+{
+"sig": "checkShowAllObjectsByFilter()",
+"line": 606
+},
+{
+"sig": "removeObjectsFilter()",
+"line": 681
+},
+{
+"sig": "confirmToCreate()",
+"line": 704
+},
+{
+"sig": "increaseOrDecreaseAmountToCreate(bool state)",
+"line": 1066
+},
+{
+"sig": "resetAmountToCreate()",
+"line": 1100
+},
+{
+"sig": "selectFirstObjectAvailableButton()",
+"line": 1107
+},
+{
+"sig": "checkButtonPressedWithoutCheckIfPreviouslyPressed(GameObject buttonObject)",
+"line": 1297
+},
+{
+"sig": "checkButtonPressed(GameObject buttonObject)",
+"line": 1320
+},
+{
+"sig": "updateObjectSelectedName(string newCurrentObjectCategorySelectedName, string newCurrentObjectSelectedName)",
+"line": 1358
+},
+{
+"sig": "canObjectBePlaced(string objectCategoryName, string objectName)",
+"line": 1619
+},
+{
+"sig": "openPanelInfo(GameObject buttonObject)",
+"line": 1756
+},
+{
+"sig": "setOpenFromWorkbenchState(bool state, List<string> newObjectCategoriesToCraftAvailableOnCurrentBench, bool allowToCraftAllObjectsOnCurrentBenchValue)",
+"line": 1966
+},
+{
+"sig": "setCurrentcurrentCraftingWorkbenchSystem(craftingWorkbenchSystem newCraftingWorkbenchSystem)",
+"line": 1984
+},
+{
+"sig": "checkEventToStopUsingWorkbenchOnDamageReceived()",
+"line": 1989
+},
+{
+"sig": "getCurrentObjectToPlace()",
+"line": 1998
+},
+{
+"sig": "getCurrentObjectToPlaceByName(string objectName)",
+"line": 2014
+},
+{
+"sig": "getCurrentObjectLayerMaskToAttachObjectByName(string objectName)",
+"line": 2030
+},
+{
+"sig": "getCurrentObjectToPlacePositionOffsetByName(string objectName)",
+"line": 2046
+},
+{
+"sig": "checkIfCurrentObjectToPlaceUseCustomLayerMaskByName(string objectName)",
+"line": 2062
+},
+{
+"sig": "getCurrentObjectCustomLayerMaskToPlaceObjectByName(string objectName)",
+"line": 2078
+},
+{
+"sig": "getCurrentObjectCanBeRotatedValuesByName(string objectName, ref bool objectCanBeRotatedOnYAxis, ref bool objectCanBeRotatedOnXAxis)",
+"line": 2094
+},
+{
+"sig": "getCraftingBlueprintInfoTemplateDataList()",
+"line": 2113
+},
+{
+"sig": "getCurrentObjectSelectedName()",
+"line": 2118
+},
+{
+"sig": "setPlacementActiveState(bool state)",
+"line": 2123
+},
+{
+"sig": "setUseOnlyBlueprintsUnlockedState(bool state)",
+"line": 2324
+},
+{
+"sig": "isUseOnlyBlueprintsUnlockedActive()",
+"line": 2329
+},
+{
+"sig": "setBlueprintsUnlockedListValue(List<string> newBlueprintsUnlockedList)",
+"line": 2334
+},
+{
+"sig": "getBlueprintsUnlockedListValue()",
+"line": 2339
+},
+{
+"sig": "addNewBlueprintsUnlockedElement(string newBlueprintsUnlockedElement)",
+"line": 2344
+},
+{
+"sig": "isCurrentObjectCategoryAvailable(string categoryName)",
+"line": 2355
+},
+{
+"sig": "anyObjectToCraftInTimeActive()",
+"line": 2386
+},
+{
+"sig": "getCraftObjectInTimeInfoList()",
+"line": 2391
+},
+{
+"sig": "setCraftObjectInTimeInfoList(List<craftObjectInTimeSimpleInfo> newCraftObjectInTimeSimpleInfoList)",
+"line": 2416
+}
+]
+},
+"craftingWorkbenchSystem": {
+"type": "craftingWorkbenchSystem",
+"file": "Crafting System/craftingWorkbenchSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Crafting System\\craftingWorkbenchSystem.cs",
+"methods": [
+{
+"sig": "activateWorkbench(GameObject currentPlayer)",
+"line": 56
+},
+{
+"sig": "deactivateWorkBench(GameObject currentPlayer)",
+"line": 80
+},
+{
+"sig": "addInventoryObjectByName(string objectName, int amountToMove)",
+"line": 99
+},
+{
+"sig": "checkEventToStopUsingWorkbenchOnDamageReceived()",
+"line": 104
+},
+{
+"sig": "getWorkbenchID()",
+"line": 109
+}
+]
+},
+"craftingZoneSystem": {
+"type": "craftingZoneSystem",
+"file": "Crafting System/craftingZoneSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Crafting System\\craftingZoneSystem.cs",
+"methods": [
+{
+"sig": "checkTriggerInfo(Collider col, bool isEnter)",
+"line": 26
+}
+]
+},
+"durabilityInfo": {
+"type": "durabilityInfo",
+"file": "Crafting System/durabilityInfo.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Crafting System\\durabilityInfo.cs",
+"methods": [
+{
+"sig": "initializeDurabilityValue(float newAmount)",
+"line": 84
+},
+{
+"sig": "getDurabilityAmount()",
+"line": 91
+},
+{
+"sig": "repairObjectFully()",
+"line": 96
+},
+{
+"sig": "breakFullDurability()",
+"line": 101
+},
+{
+"sig": "addOrRemoveDurabilityAmountToObjectByName(float newAmount, bool setAmountAsCurrentValue)",
+"line": 106
+},
+{
+"sig": "updateDurabilityAmountState()",
+"line": 147
+},
+{
+"sig": "setFullDurabilityState()",
+"line": 188
+},
+{
+"sig": "setInvulnerabilityActiveState(bool state)",
+"line": 216
+},
+{
+"sig": "setMainCharacterGameObject(GameObject newObject)",
+"line": 227
+},
+{
+"sig": "checkMainCharacterGameObject()",
+"line": 232
+},
+{
+"sig": "getMainCharacterGameObject()",
+"line": 245
+},
+{
+"sig": "activateDurabilityRegeneration()",
+"line": 251
+},
+{
+"sig": "stopUpdateRegenerationCoroutine()",
+"line": 258
+},
+{
+"sig": "stopUpdateRegenerationAfterDelayCoroutine()",
+"line": 304
+},
+{
+"sig": "isDurabilityEmpty()",
+"line": 324
+},
+{
+"sig": "setObjectName(string newName)",
+"line": 329
+},
+{
+"sig": "setMaxDurabilityAmount(float newValue)",
+"line": 334
+},
+{
+"sig": "setInventoryObjectIndex(int newValue)",
+"line": 339
+},
+{
+"sig": "setObjectNameFromEditor(string newName)",
+"line": 345
+},
+{
+"sig": "setMaxDurabilityAmountFromEditor(float newValue)",
+"line": 352
+},
+{
+"sig": "setDurabilityAmountFromEditor(float newValue)",
+"line": 359
+}
+]
+},
+"energyStationSystem": {
+"type": "energyStationSystem",
+"file": "Crafting System/energyStationSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Crafting System\\energyStationSystem.cs",
+"methods": [
+{
+"sig": "stopUpdateCoroutine()",
+"line": 54
+},
+{
+"sig": "getCurrentEnergyAmount()",
+"line": 119
+},
+{
+"sig": "getEnergyName()",
+"line": 124
+},
+{
+"sig": "setEnergyActiveState(bool state)",
+"line": 129
+},
+{
+"sig": "refillAllEnergy()",
+"line": 154
+},
+{
+"sig": "removeAllEnergy()",
+"line": 159
+},
+{
+"sig": "setCurrentEnergyAmount(float newAmount)",
+"line": 164
+},
+{
+"sig": "addOrRemoveToCurrentEnergyAmount(float newAmount)",
+"line": 171
+},
+{
+"sig": "setEnergyInUseState(bool state)",
+"line": 197
+},
+{
+"sig": "checkEventOnEmptyEnergy()",
+"line": 226
+},
+{
+"sig": "checkEventOnRefilledEnergy()",
+"line": 240
+}
+]
+},
+"materialExtractionStationSystem": {
+"type": "materialExtractionStationSystem",
+"file": "Crafting System/materialExtractionStationSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Crafting System\\materialExtractionStationSystem.cs",
+"methods": [
+{
+"sig": "toggleExtraction()",
+"line": 187
+},
+{
+"sig": "setExtractionActiveState(bool state)",
+"line": 192
+},
+{
+"sig": "stopUpdateCoroutine()",
+"line": 290
+},
+{
+"sig": "addEnergy(float newValue)",
+"line": 526
+},
+{
+"sig": "refullEnergy()",
+"line": 546
+},
+{
+"sig": "removeEnergySource()",
+"line": 551
+},
+{
+"sig": "getCurrentEnergyAmount()",
+"line": 564
+},
+{
+"sig": "getMaxEnergyAmount()",
+"line": 569
+},
+{
+"sig": "setEnergySource(inventoryBankSystem newBank)",
+"line": 574
+},
+{
+"sig": "canExtractMaterial(string materialName)",
+"line": 594
+}
+]
+},
+"materialExtractionStationUISystem": {
+"type": "materialExtractionStationUISystem",
+"file": "Crafting System/materialExtractionStationUISystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Crafting System\\materialExtractionStationUISystem.cs",
+"methods": [
+{
+"sig": "setExtractionActiveState(bool state)",
+"line": 43
+},
+{
+"sig": "stopUpdateCoroutine()",
+"line": 66
+}
+]
+},
+"materialsZoneSystem": {
+"type": "materialsZoneSystem",
+"file": "Crafting System/materialsZoneSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Crafting System\\materialsZoneSystem.cs",
+"methods": [
+{
+"sig": "setMaterialsZoneExtractionInProcessState(bool state)",
+"line": 86
+},
+{
+"sig": "getRemainMaterialsAmount()",
+"line": 109
+},
+{
+"sig": "setMaterialsZoneFullState(bool state)",
+"line": 120
+},
+{
+"sig": "isMaterialsZoneEnabled()",
+"line": 144
+},
+{
+"sig": "setMaterialsZoneEmptyState(bool state)",
+"line": 149
+},
+{
+"sig": "isMaterialsZoneEmpty()",
+"line": 176
+},
+{
+"sig": "isCanBeExtractedByExternalElementsEnabled()",
+"line": 181
+},
+{
+"sig": "getMaterialZoneID()",
+"line": 186
+},
+{
+"sig": "stopRefillMaterialsZoneCoroutine()",
+"line": 191
+},
+{
+"sig": "checkMaterialZoneToExtractExternally()",
+"line": 211
+}
+]
+},
+"processStationSystem": {
+"type": "processStationSystem",
+"file": "Crafting System/processStationSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Crafting System\\processStationSystem.cs",
+"methods": [
+{
+"sig": "toggleProcessStation()",
+"line": 71
+},
+{
+"sig": "setStationActiveState(bool state)",
+"line": 76
+},
+{
+"sig": "stopUpdateCoroutine()",
+"line": 105
+},
+{
+"sig": "getProcessMaterialInfoByName(string objectName)",
+"line": 185
+}
+]
+},
+"simpleBreakObject": {
+"type": "simpleBreakObject",
+"file": "Crafting System/simpleBreakObject.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Crafting System\\simpleBreakObject.cs",
+"methods": [
+{
+"sig": "fixBrokenObject()",
+"line": 263
+},
+{
+"sig": "activateBreakObject()",
+"line": 282
+},
+{
+"sig": "setCanBreakStatePaused(bool state)",
+"line": 433
+},
+{
+"sig": "setObjectOwner(GameObject newObject)",
+"line": 438
+},
+{
+"sig": "waitToBreak()",
+"line": 454
+},
+{
+"sig": "setExplosionValues(float force, float radius)",
+"line": 472
+}
+]
+}
+}

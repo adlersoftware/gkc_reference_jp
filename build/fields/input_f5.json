@@ -1,0 +1,268 @@
+[
+ {
+  "type": "consoleMode",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\Console Mode\\consoleMode.cs",
+  "source": "Others/Console Mode/consoleMode.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "consoleModeEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "incorrectCommandMessage",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "lineSpacingAmount",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "consoleOpened",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "maxRadiusToInstantiate",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "deletingTextRate",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "startDeletingTimeAmount",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "consoleWindow",
+    "label": "",
+    "section": "Element Settings"
+   },
+   {
+    "field": "commandTextParent",
+    "label": "",
+    "section": "Element Settings"
+   },
+   {
+    "field": "commandTextParentRectTransform",
+    "label": "",
+    "section": "Element Settings"
+   },
+   {
+    "field": "currentConsoleCommandText",
+    "label": "",
+    "section": "Element Settings"
+   },
+   {
+    "field": "input",
+    "label": "",
+    "section": "Element Settings"
+   },
+   {
+    "field": "playerInput",
+    "label": "",
+    "section": "Element Settings"
+   },
+   {
+    "field": "pauseManager",
+    "label": "",
+    "section": "Element Settings"
+   },
+   {
+    "field": "playerControllerManager",
+    "label": "",
+    "section": "Element Settings"
+   },
+   {
+    "field": "mainGameManager",
+    "label": "",
+    "section": "Element Settings"
+   },
+   {
+    "field": "spawnPosition",
+    "label": "",
+    "section": "Element Settings"
+   },
+   {
+    "field": "commandListScrollRect",
+    "label": "",
+    "section": "Element Settings"
+   },
+   {
+    "field": "tabKeyName",
+    "label": "",
+    "section": "Key Names Settings"
+   },
+   {
+    "field": "deleteKeyName",
+    "label": "",
+    "section": "Key Names Settings"
+   },
+   {
+    "field": "spaceKeyName",
+    "label": "",
+    "section": "Key Names Settings"
+   },
+   {
+    "field": "backSpaceKeyName",
+    "label": "",
+    "section": "Key Names Settings"
+   },
+   {
+    "field": "returnKeyName",
+    "label": "",
+    "section": "Key Names Settings"
+   },
+   {
+    "field": "enterKeyName",
+    "label": "",
+    "section": "Key Names Settings"
+   },
+   {
+    "field": "leftShiftKeyName",
+    "label": "",
+    "section": "Key Names Settings"
+   },
+   {
+    "field": "downArrowKeyName",
+    "label": "",
+    "section": "Key Names Settings"
+   },
+   {
+    "field": "upArrowKeyName",
+    "label": "",
+    "section": "Key Names Settings"
+   },
+   {
+    "field": "alphaKeyName",
+    "label": "",
+    "section": "Key Names Settings"
+   },
+   {
+    "field": "capslockKeyName",
+    "label": "",
+    "section": "Key Names Settings"
+   },
+   {
+    "field": "showDebugPrint",
+    "label": "",
+    "section": "Debug"
+   }
+  ]
+ },
+ {
+  "type": "customCharacterControllerBaseBuilder",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\Generic Model Controller\\customCharacterControllerBaseBuilder.cs",
+  "source": "Player/Generic Model Controller/customCharacterControllerBaseBuilder.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "mainCustomCharacterControllerBase",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "currentArrayElement",
+    "label": "",
+    "section": "Settings List"
+   },
+   {
+    "field": "currentArrayElement",
+    "label": "",
+    "section": "Settings List"
+   }
+  ]
+ },
+ {
+  "type": "decalManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Decal\\decalManager.cs",
+  "source": "Decal/decalManager.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "fadeDecals",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "fadeSpeed",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "projectileImpactSoundPrefab",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "disableFullDecallSystem",
+    "label": "",
+    "section": "Decal System Enabled Settings"
+   },
+   {
+    "field": "decalsPlacedOnSurfacesEnabled",
+    "label": "",
+    "section": "Decal System Enabled Settings"
+   },
+   {
+    "field": "particlesPlacedOnSurfaceEnabled",
+    "label": "",
+    "section": "Decal System Enabled Settings"
+   },
+   {
+    "field": "soundsPlacedOnSurfaceEnabled",
+    "label": "",
+    "section": "Decal System Enabled Settings"
+   }
+  ]
+ },
+ {
+  "type": "decalTypeInformation",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Decal\\decalTypeInformation.cs",
+  "source": "Decal/decalTypeInformation.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "mainManagerName",
+    "label": "",
+    "section": "Impact Surface Settings"
+   },
+   {
+    "field": "decalSurfaceActive",
+    "label": "",
+    "section": "Impact Surface Settings"
+   },
+   {
+    "field": "parentScorchOnThisObject",
+    "label": "",
+    "section": "Impact Surface Settings"
+   },
+   {
+    "field": "showGizmo",
+    "label": "",
+    "section": "Debug/Gizmo Settings"
+   },
+   {
+    "field": "gizmoLabelColor",
+    "label": "",
+    "section": "Debug/Gizmo Settings"
+   },
+   {
+    "field": "showDebugPrint",
+    "label": "",
+    "section": "Debug/Gizmo Settings"
+   }
+  ]
+ }
+]

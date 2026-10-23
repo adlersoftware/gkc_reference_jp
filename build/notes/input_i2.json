@@ -1,0 +1,556 @@
+[
+ {
+  "type": "useInventoryObject",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Inventory\\useInventoryObject.cs",
+  "methods": [
+   {
+    "sig": "setCanBeUsedState(bool state)",
+    "line": 149
+   },
+   {
+    "sig": "getInventoryObjectCanBeUsed()",
+    "line": 154
+   },
+   {
+    "sig": "activateDevice()",
+    "line": 159
+   },
+   {
+    "sig": "useObjectAmountExternallyByName(string inventoryObjectName, int amountUsed)",
+    "line": 184
+   },
+   {
+    "sig": "useSingleObjectExternallyByName(string inventoryObjectName)",
+    "line": 197
+   },
+   {
+    "sig": "useObject(int amountUsed, string inventoryObjectName, GameObject inventoryInfoGameObject)",
+    "line": 202
+   },
+   {
+    "sig": "solveThisInventoryObject()",
+    "line": 378
+   },
+   {
+    "sig": "solveThisInventoryObjectFromLoadingGame()",
+    "line": 383
+   },
+   {
+    "sig": "activateEventOnUnlockWithDelay()",
+    "line": 388
+   },
+   {
+    "sig": "updateUseInventoryObjectState()",
+    "line": 404
+   },
+   {
+    "sig": "setToNullCurrentInventoryObject()",
+    "line": 438
+   },
+   {
+    "sig": "selectObjectOnInventory()",
+    "line": 444
+   },
+   {
+    "sig": "setUseInventoryType(useInventoryObjectType newUseInventoryObjectType)",
+    "line": 482
+   },
+   {
+    "sig": "setOriginalUseInventoryType()",
+    "line": 487
+   },
+   {
+    "sig": "useObjectByButton()",
+    "line": 492
+   },
+   {
+    "sig": "useObjectByMenu()",
+    "line": 503
+   },
+   {
+    "sig": "useObjectAutomatically()",
+    "line": 512
+   },
+   {
+    "sig": "setInfoCurrentInventoryObjectToUse()",
+    "line": 529
+   },
+   {
+    "sig": "getObjectUsedMessage()",
+    "line": 603
+   },
+   {
+    "sig": "getCustomObjectNotFoundMessage()",
+    "line": 608
+   },
+   {
+    "sig": "isCustomObjectNotFoundMessageActive()",
+    "line": 613
+   },
+   {
+    "sig": "isInventoryPlaceUsed()",
+    "line": 618
+   },
+   {
+    "sig": "inventoryObjectNeededListContainsObject(GameObject objectToCheck, string inventoryObjectName)",
+    "line": 623
+   },
+   {
+    "sig": "getInventoryObjectNeededAmount(GameObject objectToCheck, string inventoryObjectName)",
+    "line": 655
+   },
+   {
+    "sig": "setCharacterDirectly(GameObject newObject)",
+    "line": 689
+   },
+   {
+    "sig": "checkTriggerInfo(Collider col, bool isEnter)",
+    "line": 712
+   },
+   {
+    "sig": "checkIfInventoryPickupIsUsed(inventoryObject inventoryObjectToCheck)",
+    "line": 791
+   },
+   {
+    "sig": "removePlayerInventoryInfo()",
+    "line": 867
+   },
+   {
+    "sig": "playObjectUsedSound(int index)",
+    "line": 876
+   },
+   {
+    "sig": "setCurrentPlayer(GameObject player)",
+    "line": 885
+   },
+   {
+    "sig": "removeCurrentPlayer()",
+    "line": 895
+   },
+   {
+    "sig": "removeDeviceFromList()",
+    "line": 902
+   },
+   {
+    "sig": "getCurrentAmountUsed()",
+    "line": 909
+   },
+   {
+    "sig": "enableOrDisableTrigger(bool state)",
+    "line": 914
+   },
+   {
+    "sig": "openOrClosePlayerInventoryMenu()",
+    "line": 933
+   },
+   {
+    "sig": "disableInventoryMenu()",
+    "line": 952
+   },
+   {
+    "sig": "addInventoryObjectNeededInfo()",
+    "line": 960
+   },
+   {
+    "sig": "addSubInventoryObjectNeededList(int index)",
+    "line": 971
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 980
+   }
+  ]
+ },
+ {
+  "type": "inventoryCharacterCustomizationSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Inventory\\inventoryCharacterCustomizationSystem.cs",
+  "methods": [
+   {
+    "sig": "checkSetInitialArmorClothList()",
+    "line": 241
+   },
+   {
+    "sig": "stopMenuCoroutineUpdate()",
+    "line": 262
+   },
+   {
+    "sig": "inputSetRotationInputActive(bool state)",
+    "line": 269
+   },
+   {
+    "sig": "setMultipleCharacterCustomizationTypeButtonInfoByName(string characterName)",
+    "line": 350
+   },
+   {
+    "sig": "openOrCloseCustomizationMenu(bool state)",
+    "line": 357
+   },
+   {
+    "sig": "equipObject(string objectName, string categoryName)",
+    "line": 475
+   },
+   {
+    "sig": "unequipObject(string objectName, string categoryName)",
+    "line": 480
+   },
+   {
+    "sig": "unequipAllCurrentArmorCloth()",
+    "line": 603
+   },
+   {
+    "sig": "setNewArmorClothPieceTemplateData(armorClothPieceTemplateData newArmorClothPieceTemplateData)",
+    "line": 751
+   },
+   {
+    "sig": "setNewFullArmorClothTemplateData(fullArmorClothTemplateData newFullArmorClothTemplateData)",
+    "line": 756
+   },
+   {
+    "sig": "setInitialArmorClothPieceListState(bool state)",
+    "line": 761
+   },
+   {
+    "sig": "setUseCharacterAspectCustomizationTemplateState(bool state)",
+    "line": 766
+   },
+   {
+    "sig": "setUseRandomCharacterAspectCustomizationTemplateState(bool state)",
+    "line": 771
+   },
+   {
+    "sig": "setCharacterAspectCustomizationTemplateList(List<characterAspectCustomizationTemplate> newList)",
+    "line": 776
+   },
+   {
+    "sig": "setInitialCharacterAspectCustomizationTemplate(characterAspectCustomizationTemplate newCharacterAspectCustomizationTemplate)",
+    "line": 781
+   },
+   {
+    "sig": "checkCameraViewToFirstOrThirdPerson(bool state)",
+    "line": 1038
+   },
+   {
+    "sig": "checkCameraViewToFirstOrThirdPersonOnEditor(bool state)",
+    "line": 1049
+   },
+   {
+    "sig": "setInitialArmorClothList()",
+    "line": 1060
+   },
+   {
+    "sig": "dropArmorClothPieceByCategoryName(string categoryName)",
+    "line": 1127
+   },
+   {
+    "sig": "dropArmorClothPieceByName(string pieceName)",
+    "line": 1150
+   },
+   {
+    "sig": "addOrRemoveDurabilityAmountToObjectByCategoryName(string categoryName, float newAmount, bool setAmountAsCurrentValue)",
+    "line": 1221
+   },
+   {
+    "sig": "updateDurabilityAmountStateOnAllObjects()",
+    "line": 1261
+   },
+   {
+    "sig": "updateDurabilityAmountStateOnObjectByName(string objectName)",
+    "line": 1278
+   },
+   {
+    "sig": "getDurabilityAmountStateOnObjectByName(string objectName)",
+    "line": 1298
+   },
+   {
+    "sig": "initializeDurabilityValue(float newAmount, string objectName, int currentObjectIndex)",
+    "line": 1311
+   },
+   {
+    "sig": "repairObjectFully(string objectName)",
+    "line": 1326
+   },
+   {
+    "sig": "isCheckAvailableArmorClothQuickAccessSlotsWhenEquippingObjectsEnabled()",
+    "line": 1355
+   },
+   {
+    "sig": "checkIfArmorPartCanBeEquippedOnSameBodyPart(string objectName)",
+    "line": 1360
+   },
+   {
+    "sig": "getCharacterCustomizationManager()",
+    "line": 1369
+   },
+   {
+    "sig": "updateCharacterTransform()",
+    "line": 1374
+   },
+   {
+    "sig": "setNewCharacterModel(GameObject newObject)",
+    "line": 1381
+   },
+   {
+    "sig": "updateCheckAssignCharacterAspectCustomizationUISystem()",
+    "line": 1388
+   },
+   {
+    "sig": "setNextOrPreviousCharacterModel(bool state)",
+    "line": 1397
+   },
+   {
+    "sig": "renameArmorClothObjectByName(string currentObjectName, string newObjectName)",
+    "line": 1406
+   },
+   {
+    "sig": "setNewCharacterCustomizationManager(characterCustomizationManager newCharacterCustomizationManager)",
+    "line": 1468
+   },
+   {
+    "sig": "setKeepAllCharacterMeshesDisabledActiveStateOnEditor(bool state)",
+    "line": 1475
+   },
+   {
+    "sig": "setStoreDurabilityValuesOfPiecesEnabledValueOnEditor(bool state)",
+    "line": 1482
+   }
+  ]
+ },
+ {
+  "type": "objectOnInventory",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Inventory\\Inventory Pickups Behaviour\\objectOnInventory.cs",
+  "methods": [
+   {
+    "sig": "activateUseObjectActionOnInventory(GameObject currentPlayer, int amountToUse)",
+    "line": 120
+   },
+   {
+    "sig": "activateUseObjectActionOnInventoryWithExternalCharacter(GameObject currentPlayer, GameObject currentExternalCharacterForInventoryUsage, int amountToUse)",
+    "line": 125
+   },
+   {
+    "sig": "activateCombineObjectActionOnInventory(GameObject currentPlayer, inventoryInfo inventoryInfoToUse)",
+    "line": 130
+   },
+   {
+    "sig": "carryPhysicalObjectFromInventory(GameObject currentPlayer)",
+    "line": 135
+   },
+   {
+    "sig": "eventOnPickObject(GameObject currentPlayer)",
+    "line": 140
+   },
+   {
+    "sig": "eventOnDropObject(GameObject currentPlayer)",
+    "line": 145
+   },
+   {
+    "sig": "checkRemoteEvents(GameObject currentPlayer)",
+    "line": 150
+   },
+   {
+    "sig": "checkRemoteEventsOnUseObject(GameObject currentPlayer)",
+    "line": 172
+   },
+   {
+    "sig": "checkRemoteEventsOnSetObjectEquipState(GameObject currentPlayer, bool state)",
+    "line": 194
+   },
+   {
+    "sig": "setObjectEquippedStateOnInventory(GameObject currentPlayer, bool state)",
+    "line": 237
+   },
+   {
+    "sig": "checkIfEnableAbilitiesOnEquipInventoryObject(GameObject currentPlayer, bool state)",
+    "line": 254
+   },
+   {
+    "sig": "checkIfEnableAbilitiesOnUseInventoryObject(GameObject currentPlayer)",
+    "line": 261
+   },
+   {
+    "sig": "checkIfActivateAbilitiesOnUseInventoryObject(GameObject currentPlayer)",
+    "line": 268
+   },
+   {
+    "sig": "checkIfAbilitiesOnUseOrCooldown(GameObject currentPlayer)",
+    "line": 275
+   },
+   {
+    "sig": "checkIfIncreaseStatsOnUseInventoryObject(GameObject currentPlayer)",
+    "line": 284
+   },
+   {
+    "sig": "checkIfaddNewBlueprintsUnlockedList(GameObject currentPlayer)",
+    "line": 291
+   },
+   {
+    "sig": "checkConditions(GameObject currentPlayer)",
+    "line": 298
+   },
+   {
+    "sig": "checkExternalElementsOnUseInventoryObject(GameObject currentPlayer)",
+    "line": 321
+   },
+   {
+    "sig": "getCustomMessageOnNotAbleToEquip()",
+    "line": 336
+   }
+  ]
+ },
+ {
+  "type": "inventoryManagerInfo",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Inventory\\inventoryManagerInfo.cs",
+  "methods": [
+   {
+    "sig": "isSaveCurrentPlayerInventoryToSaveFileActive()",
+    "line": 31
+   },
+   {
+    "sig": "isLoadCurrentPlayerInventoryFromSaveFileActive()",
+    "line": 36
+   },
+   {
+    "sig": "setInventorySlotAmountValue(int newValue)",
+    "line": 41
+   },
+   {
+    "sig": "getInventorySlotAmount()",
+    "line": 46
+   },
+   {
+    "sig": "setInfiniteSlotsState(bool state)",
+    "line": 51
+   },
+   {
+    "sig": "isSetInfiniteSlotValuesOnSaveLoadActive()",
+    "line": 56
+   },
+   {
+    "sig": "isInfiniteSlotsActive()",
+    "line": 61
+   },
+   {
+    "sig": "initializeInventoryValues()",
+    "line": 66
+   },
+   {
+    "sig": "getInventoryList()",
+    "line": 71
+   },
+   {
+    "sig": "getCurrentInventoryListManagerList()",
+    "line": 76
+   },
+   {
+    "sig": "setNewInventoryListManagerList(List<inventoryListElement> newList)",
+    "line": 81
+   },
+   {
+    "sig": "setIsLoadingGameState(bool state)",
+    "line": 86
+   },
+   {
+    "sig": "isLoadingGameState()",
+    "line": 91
+   },
+   {
+    "sig": "updateDurabilityAmountStateOnAllInventoryObjects()",
+    "line": 96
+   },
+   {
+    "sig": "getLastWeaponCarriedOnHandsName()",
+    "line": 101
+   },
+   {
+    "sig": "setLastWeaponCarriedOnHandsName(string objectName)",
+    "line": 106
+   },
+   {
+    "sig": "setInventoryWasEmptyWhenSavedState(bool state)",
+    "line": 111
+   },
+   {
+    "sig": "getInventoryWasEmptyWhenSaved()",
+    "line": 116
+   }
+  ]
+ },
+ {
+  "type": "inventoryBankSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Inventory\\inventoryBankSystem.cs",
+  "methods": [
+   {
+    "sig": "spawnRandomObjectFromInventoryBank()",
+    "line": 122
+   },
+   {
+    "sig": "setUsingInventoryBankState(bool state)",
+    "line": 165
+   },
+   {
+    "sig": "activateInventoryBank()",
+    "line": 174
+   },
+   {
+    "sig": "checkEventOnInventoryEmpty()",
+    "line": 242
+   },
+   {
+    "sig": "playAnimation(bool playForward)",
+    "line": 255
+   },
+   {
+    "sig": "playSound(bool state)",
+    "line": 281
+   },
+   {
+    "sig": "setCurrentPlayer(GameObject player)",
+    "line": 294
+   },
+   {
+    "sig": "setInventoryFromInventoryListManager()",
+    "line": 312
+   },
+   {
+    "sig": "getInventoryListManagerList()",
+    "line": 412
+   },
+   {
+    "sig": "setInventoryObjectListNames()",
+    "line": 444
+   },
+   {
+    "sig": "addNewInventoryObjectToInventoryListManagerList()",
+    "line": 453
+   },
+   {
+    "sig": "getPositionToSpawnObjects()",
+    "line": 464
+   },
+   {
+    "sig": "getBankInventoryList()",
+    "line": 469
+   },
+   {
+    "sig": "getBankInventoryListFromFullBank()",
+    "line": 474
+   },
+   {
+    "sig": "addInventoryObjectByName(string objectName, int amountToAdd)",
+    "line": 489
+   },
+   {
+    "sig": "getInventoryObjectAmountByName(string inventoryObjectName)",
+    "line": 524
+   },
+   {
+    "sig": "removeObjectAmountFromInventory(string objectName, int amountToRemove)",
+    "line": 554
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 606
+   }
+  ]
+ }
+]

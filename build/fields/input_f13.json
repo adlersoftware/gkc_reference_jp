@@ -1,0 +1,1023 @@
+[
+ {
+  "type": "inventoryListManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Inventory\\inventoryListManager.cs",
+  "source": "Inventory/inventoryListManager.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "relativePathCaptures",
+    "label": "",
+    "section": "Inventory Capture Tool Settings"
+   },
+   {
+    "field": "inventoryCamera",
+    "label": "",
+    "section": "Inventory Capture Tool Settings"
+   },
+   {
+    "field": "lookObjectsPosition",
+    "label": "",
+    "section": "Inventory Capture Tool Settings"
+   },
+   {
+    "field": "inventoryCameraParentGameObject",
+    "label": "",
+    "section": "Inventory Capture Tool Settings"
+   },
+   {
+    "field": "emptyInventoryPrefab",
+    "label": "",
+    "section": "Prefabs Settings"
+   },
+   {
+    "field": "relativeInventoryPath",
+    "label": "",
+    "section": "Prefabs Settings"
+   },
+   {
+    "field": "removeInventoryPrefabWhenDeletingInventoryObject",
+    "label": "",
+    "section": "Prefabs Settings"
+   },
+   {
+    "field": "mainInventoryBankManager",
+    "label": "",
+    "section": "Inventory Bank Settings"
+   },
+   {
+    "field": "inventoryListMessage",
+    "label": "",
+    "section": "Inventory List (DEBUG)"
+   },
+   {
+    "field": "inventoryListUpdateMessage",
+    "label": "",
+    "section": "Update Inventory List Info"
+   },
+   {
+    "field": "mainInventoryListManagerData",
+    "label": "",
+    "section": "Save/Load Inventory List To File"
+   },
+   {
+    "field": "updateInventoryListScriptableObjectOnCreateEditRemove",
+    "label": "",
+    "section": "Save/Load Inventory List To File"
+   },
+   {
+    "field": "addNewInventoryObjectToAddThroughEditorList",
+    "label": "",
+    "section": "Add Inventory Object Info To Main List"
+   },
+   {
+    "field": "newInventoryObjectToAddThroughEditor",
+    "label": "",
+    "section": "Add Inventory Object Info To Main List"
+   },
+   {
+    "field": "useNewCategoryToAddObject",
+    "label": "",
+    "section": "Add Inventory Object Info To Main List"
+   },
+   {
+    "field": "newCategoryToAddObject",
+    "label": "",
+    "section": "Add Inventory Object Info To Main List"
+   },
+   {
+    "field": "mainFullCraftingBlueprintInfoTemplateData",
+    "label": "",
+    "section": "Full Crafting Blueprint Template Data List"
+   },
+   {
+    "field": "currentArrayElement",
+    "label": "",
+    "section": "Full Crafting Blueprint Template Data List"
+   },
+   {
+    "field": "currentArrayElement",
+    "label": "",
+    "section": "Object Info"
+   }
+  ]
+ },
+ {
+  "type": "inventoryManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Inventory\\inventoryManager.cs",
+  "source": "Inventory/inventoryManager.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "inventoryEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "openInventoryMenuEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "infiniteSlots",
+    "label": "",
+    "section": "Inventory Slots Settings"
+   },
+   {
+    "field": "inventorySlotAmount",
+    "label": "",
+    "section": "Inventory Slots Settings"
+   },
+   {
+    "field": "infiniteAmountPerSlot",
+    "label": "",
+    "section": "Inventory Slots Settings"
+   },
+   {
+    "field": "amountPerSlot",
+    "label": "",
+    "section": "Inventory Slots Settings"
+   },
+   {
+    "field": "combineElementsAtDrop",
+    "label": "",
+    "section": "Inventory Slots Settings"
+   },
+   {
+    "field": "ignoreMaximumObjectAmount",
+    "label": "",
+    "section": "Inventory Slots Settings"
+   },
+   {
+    "field": "buttonUsable",
+    "label": "Button Usable Color",
+    "section": "Other Inventory Settings"
+   },
+   {
+    "field": "buttonNotUsable",
+    "label": "Button Not Usable Color",
+    "section": "Other Inventory Settings"
+   },
+   {
+    "field": "useOnlyWhenNeededAmountToUseObject",
+    "label": "",
+    "section": "Other Inventory Settings"
+   },
+   {
+    "field": "activeNumberOfObjectsToUseMenu",
+    "label": "",
+    "section": "Other Inventory Settings"
+   },
+   {
+    "field": "setTotalAmountWhenDropObject",
+    "label": "",
+    "section": "Other Inventory Settings"
+   },
+   {
+    "field": "configureNumberObjectsToUseRate",
+    "label": "",
+    "section": "Other Inventory Settings"
+   },
+   {
+    "field": "fasterNumberObjectsToUseRate",
+    "label": "",
+    "section": "Other Inventory Settings"
+   },
+   {
+    "field": "waitTimeToUseFasterNumberObjectsToUseRate",
+    "label": "",
+    "section": "Other Inventory Settings"
+   },
+   {
+    "field": "useBlurUIPanel",
+    "label": "",
+    "section": "Other Inventory Settings"
+   },
+   {
+    "field": "showInventoryObjectsName",
+    "label": "",
+    "section": "Other Inventory Settings"
+   },
+   {
+    "field": "showObjectAmountIfEqualOne",
+    "label": "",
+    "section": "Other Inventory Settings"
+   },
+   {
+    "field": "selectFirstInventoryObjectWhenOpeningMenu",
+    "label": "",
+    "section": "Other Inventory Settings"
+   },
+   {
+    "field": "dropSingleObjectOnInfiniteAmount",
+    "label": "",
+    "section": "Other Inventory Settings"
+   },
+   {
+    "field": "menuPanelName",
+    "label": "",
+    "section": "Other Inventory Settings"
+   },
+   {
+    "field": "checkDurabilityOnObjectEnabled",
+    "label": "",
+    "section": "Objects Durability Settings"
+   },
+   {
+    "field": "destroyObjectsOnEmptyDurability",
+    "label": "",
+    "section": "Objects Durability Settings"
+   },
+   {
+    "field": "dropObjectsOnEmptyDurability",
+    "label": "",
+    "section": "Objects Durability Settings"
+   },
+   {
+    "field": "setObjectsAsBrokenOnEmptyDurability",
+    "label": "",
+    "section": "Objects Durability Settings"
+   },
+   {
+    "field": "unequipObjectOnEmptyDurability",
+    "label": "",
+    "section": "Objects Durability Settings"
+   },
+   {
+    "field": "brokenObjectsCantBeUsed",
+    "label": "",
+    "section": "Objects Durability Settings"
+   },
+   {
+    "field": "brokenObjectsCantBeEquipped",
+    "label": "",
+    "section": "Objects Durability Settings"
+   },
+   {
+    "field": "checkWeightLimitToPickObjects",
+    "label": "",
+    "section": "Weight Settings"
+   },
+   {
+    "field": "mainInventoryWeightManager",
+    "label": "",
+    "section": "Weight Settings"
+   },
+   {
+    "field": "storePickedWeaponsOnInventory",
+    "label": "",
+    "section": "Inventory Weapons Settings"
+   },
+   {
+    "field": "equipWeaponsWhenPicked",
+    "label": "",
+    "section": "Inventory Weapons Settings"
+   },
+   {
+    "field": "equipPickedWeaponOnlyItNotPreviousWeaponEquipped",
+    "label": "",
+    "section": "Inventory Weapons Settings"
+   },
+   {
+    "field": "changeToFireWeaponsModeWhenPickingFireWeapon",
+    "label": "",
+    "section": "Inventory Weapons Settings"
+   },
+   {
+    "field": "changeToMeleeWeaponsModeWhenPickingMeleeWeapon",
+    "label": "",
+    "section": "Inventory Weapons Settings"
+   },
+   {
+    "field": "useMaxNumberOfWeaponsToEquip",
+    "label": "",
+    "section": "Inventory Weapons Settings"
+   },
+   {
+    "field": "maxNumberOfWeaponsToEquip",
+    "label": "",
+    "section": "Inventory Weapons Settings"
+   },
+   {
+    "field": "maxNumberOfWeaponsEquippedMessage",
+    "label": "",
+    "section": "Inventory Weapons Settings"
+   },
+   {
+    "field": "takeAmmoFromWeaponsAlreadyCarried",
+    "label": "",
+    "section": "Inventory Weapons Settings"
+   },
+   {
+    "field": "drawInitialWeaponEquippedOnStartEnabled",
+    "label": "",
+    "section": "Inventory Weapons Settings"
+   },
+   {
+    "field": "drawFirstMeleeWeaponAvailable",
+    "label": "",
+    "section": "Inventory Weapons Settings"
+   },
+   {
+    "field": "drawFirstFireWeaponAvailable",
+    "label": "",
+    "section": "Inventory Weapons Settings"
+   },
+   {
+    "field": "drawLastWeaponCarriedOnHandsOnLoadEnabled",
+    "label": "",
+    "section": "Inventory Weapons Settings"
+   },
+   {
+    "field": "examineObjectBeforeStoreEnabled",
+    "label": "",
+    "section": "Examine Object Settings"
+   },
+   {
+    "field": "distanceToPlaceObjectInCamera",
+    "label": "",
+    "section": "Examine Object Settings"
+   },
+   {
+    "field": "placeObjectInCameraSpeed",
+    "label": "",
+    "section": "Examine Object Settings"
+   },
+   {
+    "field": "numberOfRotationsObjectInCamera",
+    "label": "",
+    "section": "Examine Object Settings"
+   },
+   {
+    "field": "placeObjectInCameraRotationSpeed",
+    "label": "",
+    "section": "Examine Object Settings"
+   },
+   {
+    "field": "extraCameraFovOnExamineObjects",
+    "label": "",
+    "section": "Examine Object Settings"
+   },
+   {
+    "field": "useInventoryCameraEnabled",
+    "label": "",
+    "section": "Inventory Show Object Settings"
+   },
+   {
+    "field": "rotationSpeed",
+    "label": "",
+    "section": "Inventory Show Object Settings"
+   },
+   {
+    "field": "zoomSpeed",
+    "label": "",
+    "section": "Inventory Show Object Settings"
+   },
+   {
+    "field": "maxZoomValue",
+    "label": "",
+    "section": "Inventory Show Object Settings"
+   },
+   {
+    "field": "minZoomValue",
+    "label": "",
+    "section": "Inventory Show Object Settings"
+   },
+   {
+    "field": "showMessageWhenObjectUsed",
+    "label": "",
+    "section": "Inventory Messages Settings"
+   },
+   {
+    "field": "usedObjectMessage",
+    "label": "",
+    "section": "Inventory Messages Settings"
+   },
+   {
+    "field": "fullInventoryMessage",
+    "label": "",
+    "section": "Inventory Messages Settings"
+   },
+   {
+    "field": "fullInventoryMessageTime",
+    "label": "",
+    "section": "Inventory Messages Settings"
+   },
+   {
+    "field": "combinedObjectMessage",
+    "label": "",
+    "section": "Inventory Messages Settings"
+   },
+   {
+    "field": "combineObjectMessageTime",
+    "label": "",
+    "section": "Inventory Messages Settings"
+   },
+   {
+    "field": "usedObjectMessageTime",
+    "label": "",
+    "section": "Inventory Messages Settings"
+   },
+   {
+    "field": "unableToUseObjectMessage",
+    "label": "",
+    "section": "Inventory Messages Settings"
+   },
+   {
+    "field": "nonNeededAmountAvaliable",
+    "label": "",
+    "section": "Inventory Messages Settings"
+   },
+   {
+    "field": "objectNotFoundMessage",
+    "label": "",
+    "section": "Inventory Messages Settings"
+   },
+   {
+    "field": "cantUseThisObjectHereMessage",
+    "label": "",
+    "section": "Inventory Messages Settings"
+   },
+   {
+    "field": "unableToCombineMessage",
+    "label": "",
+    "section": "Inventory Messages Settings"
+   },
+   {
+    "field": "canBeCombinedButObjectIsFullMessage",
+    "label": "",
+    "section": "Inventory Messages Settings"
+   },
+   {
+    "field": "notEnoughSpaceToCombineMessage",
+    "label": "",
+    "section": "Inventory Messages Settings"
+   },
+   {
+    "field": "weightLimitReachedMessage",
+    "label": "",
+    "section": "Inventory Messages Settings"
+   },
+   {
+    "field": "objectTooMuchHeavyToCarryMessage",
+    "label": "",
+    "section": "Inventory Messages Settings"
+   },
+   {
+    "field": "maxObjectAmountReachedMessageTime",
+    "label": "",
+    "section": "Inventory Messages Settings"
+   },
+   {
+    "field": "maxObjectAmountReachedMessage",
+    "label": "",
+    "section": "Inventory Messages Settings"
+   },
+   {
+    "field": "useAudioSounds",
+    "label": "",
+    "section": "Sound Settings"
+   },
+   {
+    "field": "mainAudioSource",
+    "label": "",
+    "section": "Sound Settings"
+   },
+   {
+    "field": "useInventoryOptionsOnSlot",
+    "label": "",
+    "section": "Inventory Options On Slot Settings"
+   },
+   {
+    "field": "inventoryOptionsOnSlotPanel",
+    "label": "",
+    "section": "Inventory Options On Slot Settings"
+   },
+   {
+    "field": "mainInventorySlotOptionsButtons",
+    "label": "",
+    "section": "Inventory Options On Slot Settings"
+   },
+   {
+    "field": "usedByAI",
+    "label": "",
+    "section": "AI Settings"
+   },
+   {
+    "field": "sendGrabbedObjectToInventoryIfGrabbingNewOne",
+    "label": "",
+    "section": "Grab Objects Settings"
+   },
+   {
+    "field": "takeOnlyOneUnitToGrab",
+    "label": "",
+    "section": "Grab Objects Settings"
+   },
+   {
+    "field": "eventOnInventoryInitialized",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "eventOnClickInventoryChange",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "eventOnInventorySlotSelected",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "eventOnInventorySlotUnSelected",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "eventOnInventoryClosed",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "eventOnInventoryOpened",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "eventOnInventoryListChange",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "useEventOnInventoryObjectEquipped",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "eventOnInventoryObjectEquipped",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "useEventOnInventoryObjectUnEquipped",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "eventOnInventoryObjectUnEquipped",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "useEventOnRepairCurrentObject",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "eventOnRepairCurrentObject",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "eventOnUnableToRepairCurrentObject",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "useEventIfSystemDisabled",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "eventIfSystemDisabled",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "loadCurrentPlayerInventoryFromSaveFile",
+    "label": "",
+    "section": "Save/Load Inventory Settings"
+   },
+   {
+    "field": "saveCurrentPlayerInventoryToSaveFile",
+    "label": "",
+    "section": "Save/Load Inventory Settings"
+   },
+   {
+    "field": "setInfiniteSlotValuesOnSaveLoad",
+    "label": "",
+    "section": "Save/Load Inventory Settings"
+   },
+   {
+    "field": "showDebugPrint",
+    "label": "",
+    "section": "Inventory Menu State"
+   },
+   {
+    "field": "inventoryPanel",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "inventoryListContent",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "inventoryListScrollRect",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "objectIcon",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "equipButton",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "unequipButton",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "useButtonImage",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "equipButtonImage",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "unequipButtonImage",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "dropButtonImage",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "combineButtonImage",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "examineButtonImage",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "discardButtonImage",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "dropAllUnitsObjectButtonImage",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "examineObjectPanel",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "examineObjectName",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "examineObjectDescription",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "takeObjectInExaminePanelButton",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "currentObjectName",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "currentObjectInfo",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "objectImage",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "inventoryCamera",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "inventoryLight",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "lookObjectsPosition",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "emptyInventoryPrefab",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "numberOfObjectsToUseMenu",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "numberOfObjectsToUseMenuRectTransform",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "numberOfObjectsToUseText",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "numberOfObjectsToUseMenuPosition",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "numberOfObjectsToDropMenuPosition",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "inventorySlotsScrollbar",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "inventoryObjectInforScrollbar",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "weaponsManager",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "mainMeleeWeaponsGrabbedManager",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "playerControllerManager",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "pauseManager",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "playerInput",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "mainInventoryListManager",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "usingDevicesManager",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "mainInventoryMenuPanelsSystem",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "mainInventoryBankUISystem",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "mainVendorUISystem",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "mainInventoryQuickAccessSlotsSystem",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "mainInventoryManagerPrefab",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "mainInventoryCharacterCustomizationSystem",
+    "label": "",
+    "section": "Inventory List"
+   },
+   {
+    "field": "useScriptableObjectForInitialInventoryList",
+    "label": "",
+    "section": "Initial Inventory List"
+   },
+   {
+    "field": "useMultipleScriptableObjectForInitialInventoryList",
+    "label": "",
+    "section": "Initial Inventory List"
+   },
+   {
+    "field": "mainInitialInventoryListData",
+    "label": "",
+    "section": "Initial Inventory List"
+   }
+  ]
+ },
+ {
+  "type": "inventoryMenuPanelsSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Inventory\\inventoryMenuPanelsSystem.cs",
+  "source": "Inventory/inventoryMenuPanelsSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "setStateOnStart",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "stateOnStart",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "currentState",
+    "label": "",
+    "section": "Debug"
+   }
+  ]
+ },
+ {
+  "type": "lockedCameraSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\lockedCameraSystem.cs",
+  "source": "Devices/lockedCameraSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "layerToPlaceNewCamera",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useRaycastToPlaceCameras",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "eventTriggerScale",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "cameraTransformPrefab",
+    "label": "",
+    "section": "Prefab Elements"
+   },
+   {
+    "field": "cameraTriggerPrefab",
+    "label": "",
+    "section": "Prefab Elements"
+   },
+   {
+    "field": "showGizmo",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "showGizmoOnPlaying",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoLabelColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoRadius",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoArrowLength",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoArrowLineLength",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoArrowAngle",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoArrowColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "boundColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "useFreeHandle",
+    "label": "",
+    "section": "Free Handles Settings"
+   },
+   {
+    "field": "handleRadius",
+    "label": "",
+    "section": "Free Handles Settings"
+   },
+   {
+    "field": "handleGizmoColor",
+    "label": "",
+    "section": "Free Handles Settings"
+   },
+   {
+    "field": "showDoPositionHandles",
+    "label": "",
+    "section": "Free Handles Settings"
+   },
+   {
+    "field": "showButtons",
+    "label": "",
+    "section": "Free Handles Settings"
+   },
+   {
+    "field": "buttonsSize",
+    "label": "",
+    "section": "Free Handles Settings"
+   },
+   {
+    "field": "showFloorTriggersCubes",
+    "label": "",
+    "section": "Floors Triggers Settings"
+   },
+   {
+    "field": "floorTriggersCubesColor",
+    "label": "",
+    "section": "Floors Triggers Settings"
+   },
+   {
+    "field": "showWaypointList",
+    "label": "",
+    "section": "Waypoint List Settings"
+   },
+   {
+    "field": "waypointListColor",
+    "label": "",
+    "section": "Waypoint List Settings"
+   },
+   {
+    "field": "cameraViewExplanation",
+    "label": "",
+    "section": "Main Settings"
+   }
+  ]
+ }
+]

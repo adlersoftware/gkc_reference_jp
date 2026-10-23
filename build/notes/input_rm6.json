@@ -1,0 +1,744 @@
+[
+ {
+  "type": "characterCustomizationManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Character Aspect Customization System\\characterCustomizationManager.cs",
+  "methods": [
+   {
+    "sig": "resetAllCharacterObjectstoMainBaseModel()",
+    "line": 104
+   },
+   {
+    "sig": "setCustomizationFromTemplate(characterAspectCustomizationTemplate newCharacterAspectCustomizationTemplate, bool isFullSet)",
+    "line": 114
+   },
+   {
+    "sig": "checkDisableAccessoryByNameAndCategory(string categoryName, string objectName)",
+    "line": 367
+   },
+   {
+    "sig": "setObjectState(bool boolValue, string objectName, bool disableOtherObjects, string categoryOfObjectsToDisable, bool equippingObject)",
+    "line": 421
+   },
+   {
+    "sig": "setBlendShapeValue(string blendShapeName, float blendShapeValue, bool useRandomFloatValue, float sliderMaxValue)",
+    "line": 569
+   },
+   {
+    "sig": "getBlendShapeValue(string blendShapeName, float sliderMaxValue)",
+    "line": 601
+   },
+   {
+    "sig": "getExtraTypeNameListObjectByName(string objectName)",
+    "line": 621
+   },
+   {
+    "sig": "setEditActiveState(bool state)",
+    "line": 648
+   },
+   {
+    "sig": "getTemporalBlendshapeInfoList()",
+    "line": 653
+   },
+   {
+    "sig": "enableOrDisableHeadTemporaly(bool state)",
+    "line": 676
+   },
+   {
+    "sig": "checkCameraViewToFirstOrThirdPerson(bool state)",
+    "line": 820
+   },
+   {
+    "sig": "checkEquippedStateOnObject(bool state, string objectName, string categoryName)",
+    "line": 904
+   },
+   {
+    "sig": "setBlendshapeList(List<temporalBlendshapeInfo> newTemporalBlendshapeInfoList)",
+    "line": 1043
+   },
+   {
+    "sig": "getCurrentPiecesList()",
+    "line": 1051
+   },
+   {
+    "sig": "getCurrentAccessoriesList()",
+    "line": 1056
+   },
+   {
+    "sig": "setCurrentAccessoriesList(List<string> newTemporalAccessoriesList)",
+    "line": 1061
+   },
+   {
+    "sig": "getArmorClothPieceByName(string categoryName)",
+    "line": 1086
+   },
+   {
+    "sig": "getArmorClothCategoryByName(string objectName)",
+    "line": 1124
+   },
+   {
+    "sig": "checkIfArmorPartCanBeEquippedOnSameBodyPart(string objectName)",
+    "line": 1140
+   },
+   {
+    "sig": "checkIfObjectAlreadyOnCurrentPiecesList(string pieceName)",
+    "line": 1216
+   },
+   {
+    "sig": "checkEventOnDurabilityAffected(string bodyPartName)",
+    "line": 1248
+   },
+   {
+    "sig": "setCharacterTransform(Transform newTransform)",
+    "line": 1265
+   },
+   {
+    "sig": "renamePiece(string currentObjectName, string newObjectName)",
+    "line": 1310
+   },
+   {
+    "sig": "createPieceMeshesObjectsFromSetByName()",
+    "line": 1334
+   },
+   {
+    "sig": "checkCameraViewToFirstOrThirdPersonOnEditor(bool state)",
+    "line": 1356
+   }
+  ]
+ },
+ {
+  "type": "characterAspectCustomizationUISystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Character Aspect Customization System\\characterAspectCustomizationUISystem.cs",
+  "methods": [
+   {
+    "sig": "copy()",
+    "line": 132
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 160
+   },
+   {
+    "sig": "setMultipleCharacterCustomizationTypeButtonInfoByName(string characterName)",
+    "line": 191
+   },
+   {
+    "sig": "stopMenuCoroutineUpdate()",
+    "line": 261
+   },
+   {
+    "sig": "inputSetRotationInputActive(bool state)",
+    "line": 268
+   },
+   {
+    "sig": "inputToggleRotationInputActive()",
+    "line": 275
+   },
+   {
+    "sig": "checkButtonPressedWithoutCheckIfPreviouslyPressed(GameObject buttonObject)",
+    "line": 306
+   },
+   {
+    "sig": "checkButtonPressed(GameObject buttonObject)",
+    "line": 311
+   },
+   {
+    "sig": "openPanelInfo(GameObject buttonObject)",
+    "line": 453
+   },
+   {
+    "sig": "closeAllPanelInfo()",
+    "line": 538
+   },
+   {
+    "sig": "setMainCharacterCustomizationManager(characterCustomizationManager newCharacterCustomizationManager)",
+    "line": 567
+   },
+   {
+    "sig": "setMainCharacterAspectCustomizationTemplateData(characterAspectCustomizationTemplateData newCharacterAspectCustomizationTemplateData)",
+    "line": 574
+   },
+   {
+    "sig": "setMainCharacterTransform(Transform newTransform)",
+    "line": 579
+   },
+   {
+    "sig": "setMainPlayerControllerTransform(Transform newTransform)",
+    "line": 584
+   },
+   {
+    "sig": "setNewCharacterModel(GameObject newObject)",
+    "line": 589
+   },
+   {
+    "sig": "setNextOrPreviousCharacterModel(bool state)",
+    "line": 606
+   },
+   {
+    "sig": "enableOrDisableHeadTemporaly(bool state)",
+    "line": 655
+   },
+   {
+    "sig": "equipOrUnequipObject(bool state, string objectName, string categoryName)",
+    "line": 845
+   },
+   {
+    "sig": "checkCameraViewToFirstOrThirdPerson(bool state)",
+    "line": 871
+   },
+   {
+    "sig": "checkCameraViewToFirstOrThirdPersonOnEditor(bool state)",
+    "line": 880
+   },
+   {
+    "sig": "checkIfObjectAlreadyOnCurrentPiecesList(string pieceName)",
+    "line": 889
+   },
+   {
+    "sig": "getArmorClothPieceByName(string categoryName)",
+    "line": 898
+   },
+   {
+    "sig": "getArmorClothCategoryByName(string categoryName)",
+    "line": 907
+   },
+   {
+    "sig": "setMainInventoryCharacterCustomizationSystem(inventoryCharacterCustomizationSystem newInventoryCharacterCustomizationSystem)",
+    "line": 916
+   }
+  ]
+ },
+ {
+  "type": "characterCustomizationBlendshapesHelper",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Character Aspect Customization System\\characterCustomizationBlendshapesHelper.cs",
+  "methods": [
+   {
+    "sig": "storeBlendshapesCustomization()",
+    "line": 35
+   },
+   {
+    "sig": "setBlendshapeList()",
+    "line": 48
+   },
+   {
+    "sig": "checkMainCHaracterCustomizatationManager()",
+    "line": 61
+   },
+   {
+    "sig": "setPlayerGameObject(GameObject newObject)",
+    "line": 72
+   },
+   {
+    "sig": "getCurrentCharacterModelID()",
+    "line": 88
+   },
+   {
+    "sig": "setCurrentCharacterModelID(int newID)",
+    "line": 97
+   }
+  ]
+ },
+ {
+  "type": "characterCustomizationInventoryHelper",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Character Aspect Customization System\\characterCustomizationInventoryHelper.cs",
+  "methods": [
+   {
+    "sig": "storeCustomizationElementsAsInventory()",
+    "line": 41
+   },
+   {
+    "sig": "setMainCharacterCustomizationManager(characterCustomizationManager newCharacterCustomizationManager)",
+    "line": 118
+   },
+   {
+    "sig": "setMainFullArmorClothTemplateData(fullArmorClothTemplateData newFullArmorClothTemplateData)",
+    "line": 123
+   },
+   {
+    "sig": "setNewCharacterModel(GameObject newObject)",
+    "line": 128
+   }
+  ]
+ },
+ {
+  "type": "armorClothPickup",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Character Aspect Customization System\\armorClothPickup.cs",
+  "methods": [
+   {
+    "sig": "setObjectName(string newName)",
+    "line": 85
+   }
+  ]
+ },
+ {
+  "type": "playerNavMeshSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Point And Click\\playerNavMeshSystem.cs",
+  "methods": [
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 333
+   },
+   {
+    "sig": "checkRaycastPositionWithVector3(Vector3 raycastPosition)",
+    "line": 792
+   },
+   {
+    "sig": "checkRaycastPosition(Ray newRay)",
+    "line": 800
+   },
+   {
+    "sig": "checkPointAndClickElementPressed()",
+    "line": 924
+   },
+   {
+    "sig": "setAgentDestination(Vector3 targetPosition)",
+    "line": 1137
+   },
+   {
+    "sig": "updateCurrentNavMeshPath(Vector3 targetPosition)",
+    "line": 1148
+   },
+   {
+    "sig": "setOnGroundState(bool state)",
+    "line": 1171
+   },
+   {
+    "sig": "getCurrentMovementDirection()",
+    "line": 1176
+   },
+   {
+    "sig": "moveNavMesh(Vector3 move, bool crouch, bool jump)",
+    "line": 1181
+   },
+   {
+    "sig": "pauseAI(bool state)",
+    "line": 1425
+   },
+   {
+    "sig": "recalculatePath()",
+    "line": 1462
+   },
+   {
+    "sig": "jumpStart()",
+    "line": 1469
+   },
+   {
+    "sig": "jumpEnded()",
+    "line": 1474
+   },
+   {
+    "sig": "setTarget(Transform currentTarget)",
+    "line": 1492
+   },
+   {
+    "sig": "removeTarget()",
+    "line": 1497
+   },
+   {
+    "sig": "setCanUseTargetParticlesState(bool state)",
+    "line": 1519
+   },
+   {
+    "sig": "lookAtTaget(bool state)",
+    "line": 1524
+   },
+   {
+    "sig": "setNewWaypointList(List<Transform> newList)",
+    "line": 1530
+   },
+   {
+    "sig": "closestWaypoint(Vector3 currentPosition)",
+    "line": 1549
+   },
+   {
+    "sig": "isCharacterAttacking()",
+    "line": 1571
+   },
+   {
+    "sig": "isCharacterFollowing()",
+    "line": 1576
+   },
+   {
+    "sig": "isCharacterWaiting()",
+    "line": 1581
+   },
+   {
+    "sig": "isCharacterHiding()",
+    "line": 1586
+   },
+   {
+    "sig": "setCharacterStates(bool attackValue, bool followValue, bool waitValue, bool hideValue)",
+    "line": 1591
+   },
+   {
+    "sig": "setTargetType(bool isFriendly, bool isObject, bool isSurface)",
+    "line": 1599
+   },
+   {
+    "sig": "isFollowingTarget()",
+    "line": 1610
+   },
+   {
+    "sig": "setShowCursorPausedState(bool state)",
+    "line": 1615
+   },
+   {
+    "sig": "setPlayerNavMeshEnabledState(bool state)",
+    "line": 1620
+   },
+   {
+    "sig": "startToUseDevice()",
+    "line": 1660
+   },
+   {
+    "sig": "stopToUseDevice()",
+    "line": 1714
+   },
+   {
+    "sig": "disablePanelInfo()",
+    "line": 1723
+   },
+   {
+    "sig": "setStartAndStopUseDeviceButtonsState(bool startState, bool stopState)",
+    "line": 1734
+   },
+   {
+    "sig": "setPointAndClickDetectedState(bool state)",
+    "line": 1745
+   },
+   {
+    "sig": "setPlayerTargetPosition(Vector3 targetPosition)",
+    "line": 1750
+   },
+   {
+    "sig": "enablePlayerNavmeshWithoutPointAndClick(bool state)",
+    "line": 1777
+   },
+   {
+    "sig": "setUsingPlayerNavmeshExternallyState(bool state)",
+    "line": 1804
+   },
+   {
+    "sig": "setUseDynamicObstacleDetectionState(bool state)",
+    "line": 1809
+   },
+   {
+    "sig": "setOriginalUseDynamicObstacleDetection()",
+    "line": 1814
+   },
+   {
+    "sig": "isUsingPlayerNavmeshExternallyActive()",
+    "line": 1819
+   },
+   {
+    "sig": "isPlayerNavMeshEnabled()",
+    "line": 1824
+   },
+   {
+    "sig": "enableCustomNavMeshSpeed(float newValue)",
+    "line": 1829
+   },
+   {
+    "sig": "disableCustomNavMeshSpeed()",
+    "line": 1836
+   },
+   {
+    "sig": "enableCustomMinDistance(float newValue)",
+    "line": 1841
+   },
+   {
+    "sig": "disableCustomMinDistance()",
+    "line": 1848
+   }
+  ]
+ },
+ {
+  "type": "pointAndClickElement",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Point And Click\\pointAndClickElement.cs",
+  "methods": [
+   {
+    "sig": "setElementEnabledState(bool state)",
+    "line": 121
+   },
+   {
+    "sig": "getPointAndClickElementTextInfo()",
+    "line": 138
+   },
+   {
+    "sig": "usePointAndClickElement()",
+    "line": 143
+   },
+   {
+    "sig": "isDevice()",
+    "line": 168
+   },
+   {
+    "sig": "isFriend()",
+    "line": 173
+   },
+   {
+    "sig": "isEnemy()",
+    "line": 178
+   },
+   {
+    "sig": "getElementToUse()",
+    "line": 183
+   },
+   {
+    "sig": "getPositionForNavMesh(Vector3 playerPosition)",
+    "line": 188
+   },
+   {
+    "sig": "removeElement()",
+    "line": 203
+   },
+   {
+    "sig": "checkIfRemove()",
+    "line": 208
+   },
+   {
+    "sig": "setHoveringPointAndClickElementState(bool state)",
+    "line": 216
+   },
+   {
+    "sig": "checkTriggerInfo(Collider col, bool isEnter)",
+    "line": 239
+   }
+  ]
+ },
+ {
+  "type": "vendorUISystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vendor System\\vendorUISystem.cs",
+  "methods": [
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 212
+   },
+   {
+    "sig": "setCurrentInventoryBankObject(GameObject inventoryBankGameObject)",
+    "line": 308
+   },
+   {
+    "sig": "setCurrentInventoryBankSystem(GameObject inventoryBankGameObject)",
+    "line": 313
+   },
+   {
+    "sig": "updateInventoryListOnVendorSystem()",
+    "line": 338
+   },
+   {
+    "sig": "openOrCloseVendorMenuByButton()",
+    "line": 353
+   },
+   {
+    "sig": "openOrCloseVendorMenu(bool state)",
+    "line": 384
+   },
+   {
+    "sig": "updateAllInventoryVendorUI()",
+    "line": 417
+   },
+   {
+    "sig": "resetVendorUIState()",
+    "line": 459
+   },
+   {
+    "sig": "createCategorySlots()",
+    "line": 547
+   },
+   {
+    "sig": "createInventoryIcons()",
+    "line": 593
+   },
+   {
+    "sig": "resetScrollRectAndScrollBarPositions()",
+    "line": 602
+   },
+   {
+    "sig": "resetObjectScrollRectAndScrollBarPositions()",
+    "line": 611
+   },
+   {
+    "sig": "createVendorObjectIcon(inventoryInfo currentInventoryInfo, int index)",
+    "line": 634
+   },
+   {
+    "sig": "destroyVendorObjectSlotPanelInfoList()",
+    "line": 699
+   },
+   {
+    "sig": "destroyVendorCategorySlotPanelInfoList()",
+    "line": 708
+   },
+   {
+    "sig": "getCategoryPressedButton(Button buttonObj)",
+    "line": 717
+   },
+   {
+    "sig": "getObjectPressedButton(Button buttonObj)",
+    "line": 807
+   },
+   {
+    "sig": "setObjectInfo(int index)",
+    "line": 822
+   },
+   {
+    "sig": "setVendorObjectSlotPanelInfoPressedState(bool state)",
+    "line": 920
+   },
+   {
+    "sig": "setVendorCategorySlotPanelInfoPressedState(bool state)",
+    "line": 929
+   },
+   {
+    "sig": "enableObjectRotation()",
+    "line": 938
+   },
+   {
+    "sig": "disableObjectRotation()",
+    "line": 945
+   },
+   {
+    "sig": "destroyObjectInCamera()",
+    "line": 950
+   },
+   {
+    "sig": "zoomInEnabled()",
+    "line": 957
+   },
+   {
+    "sig": "zoomInDisabled()",
+    "line": 962
+   },
+   {
+    "sig": "zoomOutEnabled()",
+    "line": 967
+   },
+   {
+    "sig": "zoomOutDisabled()",
+    "line": 972
+   },
+   {
+    "sig": "checkResetCameraFov(float targetValue)",
+    "line": 977
+   },
+   {
+    "sig": "addObjectToUse()",
+    "line": 982
+   },
+   {
+    "sig": "removeObjectToUse()",
+    "line": 1009
+   },
+   {
+    "sig": "startToAddObjectToUse()",
+    "line": 1036
+   },
+   {
+    "sig": "stopToAddObjectToUse()",
+    "line": 1043
+   },
+   {
+    "sig": "startToRemoveObjectToUse()",
+    "line": 1052
+   },
+   {
+    "sig": "stopToRemoveObjectToUse()",
+    "line": 1059
+   },
+   {
+    "sig": "resetAndDisableNumberOfObjectsToUseMenu()",
+    "line": 1068
+   },
+   {
+    "sig": "resetNumberOfObjectsToUse()",
+    "line": 1073
+   },
+   {
+    "sig": "setNumberOfObjectsToUseText(int amount)",
+    "line": 1092
+   },
+   {
+    "sig": "setBuyMode()",
+    "line": 1127
+   },
+   {
+    "sig": "setSellMode()",
+    "line": 1144
+   },
+   {
+    "sig": "joinSameInventoryObjectsAmount()",
+    "line": 1184
+   },
+   {
+    "sig": "destroyAndClearAllList()",
+    "line": 1205
+   },
+   {
+    "sig": "callEventOnSetBuyMode()",
+    "line": 1218
+   },
+   {
+    "sig": "callEventOnSetSellMode()",
+    "line": 1223
+   },
+   {
+    "sig": "confirmBuyObject()",
+    "line": 1228
+   },
+   {
+    "sig": "confirmSellObject()",
+    "line": 1346
+   },
+   {
+    "sig": "removeButton()",
+    "line": 1423
+   },
+   {
+    "sig": "updateCurrentInventoryObjectSlot()",
+    "line": 1476
+   }
+  ]
+ },
+ {
+  "type": "vendorSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vendor System\\vendorSystem.cs",
+  "methods": [
+   {
+    "sig": "setNewInventoryListManagerList(List<inventoryListElement> newList)",
+    "line": 27
+   },
+   {
+    "sig": "setInventoryFromInventoryListManager()",
+    "line": 37
+   },
+   {
+    "sig": "getVendorInventoryList()",
+    "line": 88
+   },
+   {
+    "sig": "setVendorInventoryList(List<inventoryInfo> newVendorInventoryList)",
+    "line": 93
+   },
+   {
+    "sig": "getInventoryListManagerList()",
+    "line": 98
+   },
+   {
+    "sig": "setInventoryObjectListNames()",
+    "line": 126
+   },
+   {
+    "sig": "addNewInventoryObjectToInventoryListManagerList()",
+    "line": 135
+   },
+   {
+    "sig": "saveCurrentVendorListToFile()",
+    "line": 146
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 173
+   }
+  ]
+ }
+]

@@ -1,0 +1,373 @@
+[
+ {
+  "batch": "f1",
+  "types": 4,
+  "fields": 25,
+  "file": "D:\\dev\\gkc_ref\\build\\fields\\input_f1.json",
+  "components": [
+   "AIWayPointPatrol#1",
+   "BezierSpline#1",
+   "CustomizableToolbarSettings#1",
+   "GKCUIManager#1"
+  ]
+ },
+ {
+  "batch": "f2",
+  "types": 3,
+  "fields": 193,
+  "file": "D:\\dev\\gkc_ref\\build\\fields\\input_f2.json",
+  "components": [
+   "IKDrivingSystem#1",
+   "IKWeaponSystem#1",
+   "WaypointCircuit#1"
+  ]
+ },
+ {
+  "batch": "f3",
+  "types": 4,
+  "fields": 132,
+  "file": "D:\\dev\\gkc_ref\\build\\fields\\input_f3.json",
+  "components": [
+   "actionSystem#1",
+   "buildPlayer#1",
+   "cameraWaypointSystem#1",
+   "characterFactionManager#1"
+  ]
+ },
+ {
+  "batch": "f4",
+  "types": 4,
+  "fields": 151,
+  "file": "D:\\dev\\gkc_ref\\build\\fields\\input_f4.json",
+  "components": [
+   "checkpointSystem#1",
+   "chestSystem#1",
+   "closeCombatSystem#1",
+   "closetSystem#1"
+  ]
+ },
+ {
+  "batch": "f5",
+  "types": 4,
+  "fields": 46,
+  "file": "D:\\dev\\gkc_ref\\build\\fields\\input_f5.json",
+  "components": [
+   "consoleMode#1",
+   "customCharacterControllerBaseBuilder#1",
+   "decalManager#1",
+   "decalTypeInformation#1"
+  ]
+ },
+ {
+  "batch": "f6",
+  "types": 4,
+  "fields": 140,
+  "file": "D:\\dev\\gkc_ref\\build\\fields\\input_f6.json",
+  "components": [
+   "deviceStringAction#1",
+   "dialogContentSystem#1",
+   "doorSystem#1",
+   "dropPickUpSystem#1"
+  ]
+ },
+ {
+  "batch": "f7",
+  "types": 4,
+  "fields": 90,
+  "file": "D:\\dev\\gkc_ref\\build\\fields\\input_f7.json",
+  "components": [
+   "electronicDevice#1",
+   "elevatorSystem#1",
+   "eventInfoSystem#1",
+   "eventTriggerSystem#1"
+  ]
+ },
+ {
+  "batch": "f8",
+  "types": 4,
+  "fields": 173,
+  "file": "D:\\dev\\gkc_ref\\build\\fields\\input_f8.json",
+  "components": [
+   "externalCameraShakeSystem#1",
+   "featuresManager#1",
+   "footStepManager#1",
+   "grabObjects#1"
+  ]
+ },
+ {
+  "batch": "f9",
+  "types": 1,
+  "fields": 131,
+  "file": "D:\\dev\\gkc_ref\\build\\fields\\input_f9.json",
+  "components": [
+   "grabbedObjectMeleeAttackSystem#1"
+  ]
+ },
+ {
+  "batch": "f10",
+  "types": 3,
+  "fields": 145,
+  "file": "D:\\dev\\gkc_ref\\build\\fields\\input_f10.json",
+  "components": [
+   "gravitySystem#1",
+   "headBob#1",
+   "headTrack#1"
+  ]
+ },
+ {
+  "batch": "f11",
+  "types": 3,
+  "fields": 191,
+  "file": "D:\\dev\\gkc_ref\\build\\fields\\input_f11.json",
+  "components": [
+   "health#1",
+   "hideCharacterFixedPlaceSystem#1",
+   "hoverBoardWayPoints#1"
+  ]
+ },
+ {
+  "batch": "f12",
+  "types": 4,
+  "fields": 107,
+  "file": "D:\\dev\\gkc_ref\\build\\fields\\input_f12.json",
+  "components": [
+   "inputActionManager#1",
+   "inputManager#1",
+   "inventoryBankManager#1",
+   "inventoryBankSystem#1"
+  ]
+ },
+ {
+  "batch": "f13",
+  "types": 4,
+  "fields": 197,
+  "file": "D:\\dev\\gkc_ref\\build\\fields\\input_f13.json",
+  "components": [
+   "inventoryListManager#1",
+   "inventoryManager#1",
+   "inventoryMenuPanelsSystem#1",
+   "lockedCameraSystem#1"
+  ]
+ },
+ {
+  "batch": "f14",
+  "types": 2,
+  "fields": 89,
+  "file": "D:\\dev\\gkc_ref\\build\\fields\\input_f14.json",
+  "components": [
+   "mapCreator#1",
+   "mapObjectInformation#1"
+  ]
+ },
+ {
+  "batch": "f15",
+  "types": 3,
+  "fields": 157,
+  "file": "D:\\dev\\gkc_ref\\build\\fields\\input_f15.json",
+  "components": [
+   "mapSystem#1",
+   "mapTileBuilder#1",
+   "mapZoneUnlocker#1"
+  ]
+ },
+ {
+  "batch": "f16",
+  "types": 4,
+  "fields": 157,
+  "file": "D:\\dev\\gkc_ref\\build\\fields\\input_f16.json",
+  "components": [
+   "moveCameraToDevice#1",
+   "moveDeviceToCamera#1",
+   "nonEssentialCharacterElementsManager#1",
+   "objectiveEventSystem#1"
+  ]
+ },
+ {
+  "batch": "f17",
+  "types": 4,
+  "fields": 162,
+  "file": "D:\\dev\\gkc_ref\\build\\fields\\input_f17.json",
+  "components": [
+   "otherPowers#1",
+   "overrideInputManager#1",
+   "pickUpManager#1",
+   "pickUpObject#1"
+  ]
+ },
+ {
+  "batch": "f18",
+  "types": 2,
+  "fields": 187,
+  "file": "D:\\dev\\gkc_ref\\build\\fields\\input_f18.json",
+  "components": [
+   "pickUpsScreenInfo#1",
+   "playerCamera#1"
+  ]
+ },
+ {
+  "batch": "f19",
+  "types": 2,
+  "fields": 90,
+  "file": "D:\\dev\\gkc_ref\\build\\fields\\input_f19.json",
+  "components": [
+   "playerCamera#2",
+   "playerCharactersManager#1"
+  ]
+ },
+ {
+  "batch": "f20",
+  "types": 1,
+  "fields": 170,
+  "file": "D:\\dev\\gkc_ref\\build\\fields\\input_f20.json",
+  "components": [
+   "playerController#1"
+  ]
+ },
+ {
+  "batch": "f21",
+  "types": 1,
+  "fields": 170,
+  "file": "D:\\dev\\gkc_ref\\build\\fields\\input_f21.json",
+  "components": [
+   "playerController#2"
+  ]
+ },
+ {
+  "batch": "f22",
+  "types": 4,
+  "fields": 184,
+  "file": "D:\\dev\\gkc_ref\\build\\fields\\input_f22.json",
+  "components": [
+   "playerController#3",
+   "playerExperienceSystem#1",
+   "playerInputManager#1",
+   "playerInputPanelSystem#1"
+  ]
+ },
+ {
+  "batch": "f23",
+  "types": 4,
+  "fields": 38,
+  "file": "D:\\dev\\gkc_ref\\build\\fields\\input_f23.json",
+  "components": [
+   "playerOptionsEditorSystem#1",
+   "playerSkillsSystem#1",
+   "playerSkillsUISystem#1",
+   "playerStateSystem#1"
+  ]
+ },
+ {
+  "batch": "f24",
+  "types": 4,
+  "fields": 99,
+  "file": "D:\\dev\\gkc_ref\\build\\fields\\input_f24.json",
+  "components": [
+   "playerStatesManager#1",
+   "playerStatsSystem#1",
+   "playerTutorialSystem#1",
+   "playerWeaponSystem#1"
+  ]
+ },
+ {
+  "batch": "f25",
+  "types": 1,
+  "fields": 170,
+  "file": "D:\\dev\\gkc_ref\\build\\fields\\input_f25.json",
+  "components": [
+   "playerWeaponsManager#1"
+  ]
+ },
+ {
+  "batch": "f26",
+  "types": 4,
+  "fields": 97,
+  "file": "D:\\dev\\gkc_ref\\build\\fields\\input_f26.json",
+  "components": [
+   "playerWeaponsManager#2",
+   "prefabsManager#1",
+   "pressObjectsInOrderSystem#1",
+   "projectileSystem#1"
+  ]
+ },
+ {
+  "batch": "f27",
+  "types": 4,
+  "fields": 136,
+  "file": "D:\\dev\\gkc_ref\\build\\fields\\input_f27.json",
+  "components": [
+   "putObjectSystem#1",
+   "ragdollActivator#1",
+   "remoteEventSystem#1",
+   "sceneLoadSystem#1"
+  ]
+ },
+ {
+  "batch": "f28",
+  "types": 4,
+  "fields": 73,
+  "file": "D:\\dev\\gkc_ref\\build\\fields\\input_f28.json",
+  "components": [
+   "screenObjectivesSystem#1",
+   "setGravity#1",
+   "simpleSwitch#1",
+   "tagLayerSystem#1"
+  ]
+ },
+ {
+  "batch": "f29",
+  "types": 4,
+  "fields": 117,
+  "file": "D:\\dev\\gkc_ref\\build\\fields\\input_f29.json",
+  "components": [
+   "turnBasedCombatSystem#1",
+   "tutorialUISystem#1",
+   "useInventoryObject#1",
+   "usingDevicesSystem#1"
+  ]
+ },
+ {
+  "batch": "f30",
+  "types": 3,
+  "fields": 63,
+  "file": "D:\\dev\\gkc_ref\\build\\fields\\input_f30.json",
+  "components": [
+   "vehicleBuilder#1",
+   "vehicleCameraController#1",
+   "vehicleCameraShake#1"
+  ]
+ },
+ {
+  "batch": "f31",
+  "types": 2,
+  "fields": 164,
+  "file": "D:\\dev\\gkc_ref\\build\\fields\\input_f31.json",
+  "components": [
+   "vehicleHUDManager#1",
+   "vehicleInterface#1"
+  ]
+ },
+ {
+  "batch": "f32",
+  "types": 4,
+  "fields": 116,
+  "file": "D:\\dev\\gkc_ref\\build\\fields\\input_f32.json",
+  "components": [
+   "vehicleWeaponSystem#1",
+   "vendorSystem#1",
+   "waypointPlatform#1",
+   "waypointPlayerPathSystem#1"
+  ]
+ },
+ {
+  "batch": "f33",
+  "types": 4,
+  "fields": 108,
+  "file": "D:\\dev\\gkc_ref\\build\\fields\\input_f33.json",
+  "components": [
+   "weaponAttachmentSystem#1",
+   "weaponBuilder#1",
+   "weaponTransformInfoSystem#1",
+   "zeroGravityRoomSystem#1"
+  ]
+ }
+]

@@ -1,0 +1,861 @@
+[
+ {
+  "type": "playerWeaponsManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\playerWeaponsManager.cs",
+  "source": "Weapons/playerWeaponsManager.cs",
+  "part": 1,
+  "total_parts": 2,
+  "fields": [
+   {
+    "field": "currentIKWeapon",
+    "label": "",
+    "section": "Single Weapon State"
+   },
+   {
+    "field": "currentRightIKWeapon",
+    "label": "",
+    "section": "Dual Weapon State"
+   },
+   {
+    "field": "currentLeftIkWeapon",
+    "label": "",
+    "section": "Dual Weapon State"
+   },
+   {
+    "field": "weaponsSlotsAmount",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "weaponsLayer",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "setWeaponWhenPicked",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "canGrabObjectsCarryingWeapons",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "drawKeepWeaponWhenModeChanged",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "changeWeaponsWithNumberKeysActive",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "changeWeaponsWithMouseWheelActive",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "changeWeaponsWithKeysActive",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "ignoreUseDrawKeepWeaponAnimation",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "forceWeaponToUseQuickDrawKeepWeaponActive",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useDrawKeepWeaponAnimationOnAllWeaponsOnFBA",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "changeToNextWeaponIfAmmoEmpty",
+    "label": "",
+    "section": "Empty Ammo Current Weapon Settings"
+   },
+   {
+    "field": "removeCurrentWeaponAsNotUsableIfAmmoEmptyEnabled",
+    "label": "",
+    "section": "Empty Ammo Current Weapon Settings"
+   },
+   {
+    "field": "useEventOnEmptyAmmoOnCurrentWeapon",
+    "label": "",
+    "section": "Empty Ammo Current Weapon Settings"
+   },
+   {
+    "field": "eventOnEmptyAmmoOnCurrentWeapon",
+    "label": "",
+    "section": "Empty Ammo Current Weapon Settings"
+   },
+   {
+    "field": "targetToDamageLayer",
+    "label": "",
+    "section": "Target Detection Settings"
+   },
+   {
+    "field": "targetForScorchLayer",
+    "label": "",
+    "section": "Target Detection Settings"
+   },
+   {
+    "field": "useCustomLayerToCheck",
+    "label": "",
+    "section": "Target Detection Settings"
+   },
+   {
+    "field": "customLayerToCheck",
+    "label": "",
+    "section": "Target Detection Settings"
+   },
+   {
+    "field": "useCustomIgnoreTags",
+    "label": "",
+    "section": "Target Detection Settings"
+   },
+   {
+    "field": "weaponsHUDEnabled",
+    "label": "",
+    "section": "Weapon HUD Settings"
+   },
+   {
+    "field": "disableWeaponsHUDAfterDelayEnabled",
+    "label": "",
+    "section": "Weapon HUD Settings"
+   },
+   {
+    "field": "delayToDisableWeaponsHUD",
+    "label": "",
+    "section": "Weapon HUD Settings"
+   },
+   {
+    "field": "showRemainAmmoText",
+    "label": "",
+    "section": "Weapon HUD Settings"
+   },
+   {
+    "field": "weaponCursorActive",
+    "label": "",
+    "section": "Weapon Reticle Settings"
+   },
+   {
+    "field": "useWeaponCursorUnableToShootThirdPerson",
+    "label": "",
+    "section": "Weapon Reticle Settings"
+   },
+   {
+    "field": "useWeaponCursorUnableToShootFirstPerson",
+    "label": "",
+    "section": "Weapon Reticle Settings"
+   },
+   {
+    "field": "canFireWeaponsWithoutAiming",
+    "label": "",
+    "section": "Weapon Management Settings"
+   },
+   {
+    "field": "drawWeaponIfFireButtonPressed",
+    "label": "",
+    "section": "Weapon Management Settings"
+   },
+   {
+    "field": "drawAndAimWeaponIfFireButtonPressed",
+    "label": "",
+    "section": "Weapon Management Settings"
+   },
+   {
+    "field": "keepWeaponAfterDelayThirdPerson",
+    "label": "",
+    "section": "Weapon Management Settings"
+   },
+   {
+    "field": "keepWeaponAfterDelayFirstPerson",
+    "label": "",
+    "section": "Weapon Management Settings"
+   },
+   {
+    "field": "keepWeaponDelay",
+    "label": "",
+    "section": "Weapon Management Settings"
+   },
+   {
+    "field": "useQuickDrawWeapon",
+    "label": "",
+    "section": "Weapon Management Settings"
+   },
+   {
+    "field": "timeToStopAimAfterStopFiring",
+    "label": "",
+    "section": "Weapon Management Settings"
+   },
+   {
+    "field": "useAimCameraOnFreeFireMode",
+    "label": "",
+    "section": "Weapon Management Settings"
+   },
+   {
+    "field": "pivotPointRotationActive",
+    "label": "",
+    "section": "Weapon Management Settings"
+   },
+   {
+    "field": "pivotPointRotationSpeed",
+    "label": "",
+    "section": "Weapon Management Settings"
+   },
+   {
+    "field": "runWhenAimingWeaponInThirdPerson",
+    "label": "",
+    "section": "Weapon Management Settings"
+   },
+   {
+    "field": "stopRunIfPreviouslyNotRunning",
+    "label": "",
+    "section": "Weapon Management Settings"
+   },
+   {
+    "field": "runAlsoWhenFiringWithoutAiming",
+    "label": "",
+    "section": "Weapon Management Settings"
+   },
+   {
+    "field": "canJumpWhileAimingThirdPerson",
+    "label": "",
+    "section": "Weapon Management Settings"
+   },
+   {
+    "field": "canAimOnAirThirdPerson",
+    "label": "",
+    "section": "Weapon Management Settings"
+   },
+   {
+    "field": "stopAimingOnAirThirdPerson",
+    "label": "",
+    "section": "Weapon Management Settings"
+   },
+   {
+    "field": "ignoreParentWeaponOutsidePlayerBodyWhenNotActive",
+    "label": "",
+    "section": "Weapon Management Settings"
+   },
+   {
+    "field": "keepLookAtTargetActiveWhenFiringWithoutAiming",
+    "label": "",
+    "section": "Weapon Management Settings"
+   },
+   {
+    "field": "useCameraShakeOnShootEnabled",
+    "label": "",
+    "section": "Weapon Management Settings"
+   },
+   {
+    "field": "ignoreNewAnimatorWeaponIDSettings",
+    "label": "",
+    "section": "Weapon Management Settings"
+   },
+   {
+    "field": "ignoreUpperBodyRotationSystem",
+    "label": "",
+    "section": "Weapon Management Settings"
+   },
+   {
+    "field": "ignoreShakeUpperBodyEnabled",
+    "label": "",
+    "section": "Weapon Management Settings"
+   },
+   {
+    "field": "fullBodyAwarenessWeaponsParentOffsetPosition",
+    "label": "",
+    "section": "Weapon Management Settings"
+   },
+   {
+    "field": "overrideOptionToHideWeaponMeshWhenNotUsed",
+    "label": "",
+    "section": "Weapon Management Settings"
+   },
+   {
+    "field": "hideWeaponMeshWhenNotUsed",
+    "label": "",
+    "section": "Weapon Management Settings"
+   },
+   {
+    "field": "activateDualWeaponsEnabled",
+    "label": "",
+    "section": "Dual Wield Fire Weapons Settings"
+   },
+   {
+    "field": "shootDualWeaponsWithSingleInputEnabled",
+    "label": "",
+    "section": "Dual Wield Fire Weapons Settings"
+   },
+   {
+    "field": "aimDualWeaponsWithRightShootInputEnabled",
+    "label": "",
+    "section": "Dual Wield Fire Weapons Settings"
+   },
+   {
+    "field": "ignoreCheckSurfaceCollisionThirdPerson",
+    "label": "",
+    "section": "Weapons Collision Detection Settings"
+   },
+   {
+    "field": "ignoreCheckSurfaceCollisionFirstPerson",
+    "label": "",
+    "section": "Weapons Collision Detection Settings"
+   },
+   {
+    "field": "useExtraColliderOnFireWeaponOnFBA",
+    "label": "",
+    "section": "Weapons Collision Detection Settings"
+   },
+   {
+    "field": "useExtraColliderOnFireWeaponsOnThirdPerson",
+    "label": "",
+    "section": "Weapons Collision Detection Settings"
+   },
+   {
+    "field": "extraColliderOnFireWeaponOnFBATransform",
+    "label": "",
+    "section": "Weapons Collision Detection Settings"
+   },
+   {
+    "field": "extraColliderOnFireWeaponOnFBA",
+    "label": "",
+    "section": "Weapons Collision Detection Settings"
+   },
+   {
+    "field": "fireWeaponsInputActive",
+    "label": "",
+    "section": "Weapons Input Settings"
+   },
+   {
+    "field": "generalWeaponsInputActive",
+    "label": "",
+    "section": "Weapons Input Settings"
+   },
+   {
+    "field": "checkDurabilityOnObjectEnabled",
+    "label": "",
+    "section": "Objects Durability Settings"
+   },
+   {
+    "field": "useEventOnDurabilityEmptyOnMeleeWeapon",
+    "label": "",
+    "section": "Objects Durability Settings"
+   },
+   {
+    "field": "eventOnDurabilityEmptyOnMeleeWeapon",
+    "label": "",
+    "section": "Objects Durability Settings"
+   },
+   {
+    "field": "storePickedWeaponsOnInventory",
+    "label": "",
+    "section": "Inventory Settings"
+   },
+   {
+    "field": "drawWeaponWhenPicked",
+    "label": "",
+    "section": "Inventory Settings"
+   },
+   {
+    "field": "drawPickedWeaponOnlyItNotPreviousWeaponEquipped",
+    "label": "",
+    "section": "Inventory Settings"
+   },
+   {
+    "field": "changeToNextWeaponWhenEquipped",
+    "label": "",
+    "section": "Inventory Settings"
+   },
+   {
+    "field": "changeToNextWeaponWhenUnequipped",
+    "label": "",
+    "section": "Inventory Settings"
+   },
+   {
+    "field": "notActivateWeaponsAtStart",
+    "label": "",
+    "section": "Inventory Settings"
+   },
+   {
+    "field": "canStoreAnyNumberSameWeapon",
+    "label": "",
+    "section": "Inventory Settings"
+   },
+   {
+    "field": "useAmmoFromInventoryInAllWeapons",
+    "label": "",
+    "section": "Inventory Settings"
+   },
+   {
+    "field": "openWeaponAttachmentsMenuEnabled",
+    "label": "",
+    "section": "Attachment Settings"
+   },
+   {
+    "field": "setFirstPersonForAttachmentEditor",
+    "label": "",
+    "section": "Attachment Settings"
+   },
+   {
+    "field": "useUniversalAttachments",
+    "label": "",
+    "section": "Attachment Settings"
+   },
+   {
+    "field": "openWeaponAttachmentsMenuPaused",
+    "label": "",
+    "section": "Attachment Settings"
+   },
+   {
+    "field": "startGameWithCurrentWeapon",
+    "label": "",
+    "section": "Initial Weapon Settings"
+   },
+   {
+    "field": "drawInitialWeaponSelected",
+    "label": "",
+    "section": "Initial Weapon Settings"
+   },
+   {
+    "field": "startWithFirstWeaponAvailable",
+    "label": "",
+    "section": "Initial Weapon Settings"
+   },
+   {
+    "field": "startGameWithDualWeapons",
+    "label": "",
+    "section": "Initial Weapon Settings"
+   },
+   {
+    "field": "startWithRandomWeapon",
+    "label": "",
+    "section": "Initial Weapon Settings"
+   },
+   {
+    "field": "canDropWeapons",
+    "label": "",
+    "section": "Drop Weapon Settings"
+   },
+   {
+    "field": "changeToNextWeaponWhenDrop",
+    "label": "",
+    "section": "Drop Weapon Settings"
+   },
+   {
+    "field": "dropWeaponForceThirdPerson",
+    "label": "",
+    "section": "Drop Weapon Settings"
+   },
+   {
+    "field": "dropWeaponForceFirstPerson",
+    "label": "",
+    "section": "Drop Weapon Settings"
+   },
+   {
+    "field": "holdDropButtonToIncreaseForce",
+    "label": "",
+    "section": "Drop Weapon Settings"
+   },
+   {
+    "field": "dropIncreaseForceSpeed",
+    "label": "",
+    "section": "Drop Weapon Settings"
+   },
+   {
+    "field": "maxDropForce",
+    "label": "",
+    "section": "Drop Weapon Settings"
+   },
+   {
+    "field": "dropWeaponInventoryObjectsPickups",
+    "label": "",
+    "section": "Drop Weapon Settings"
+   },
+   {
+    "field": "throwWeaponInCameraDirectionEnabled",
+    "label": "",
+    "section": "Drop Weapon Settings"
+   },
+   {
+    "field": "checkAimOnThrowWeaponStateEnabled",
+    "label": "",
+    "section": "Drop Weapon Settings"
+   },
+   {
+    "field": "headTrackBodyWeightOnAimOnThrowWeapon",
+    "label": "",
+    "section": "Drop Weapon Settings"
+   },
+   {
+    "field": "customAimReticleName",
+    "label": "",
+    "section": "Drop Weapon Settings"
+   },
+   {
+    "field": "dropCurrentWeaponWhenDie",
+    "label": "",
+    "section": "Death Settings"
+   },
+   {
+    "field": "dropAllWeaponsWhenDie",
+    "label": "",
+    "section": "Death Settings"
+   },
+   {
+    "field": "dropWeaponsOnlyIfUsing",
+    "label": "",
+    "section": "Death Settings"
+   },
+   {
+    "field": "drawWeaponWhenResurrect",
+    "label": "",
+    "section": "Death Settings"
+   },
+   {
+    "field": "canMarkTargets",
+    "label": "",
+    "section": "Mark Targets Settings"
+   },
+   {
+    "field": "useAimAssistInThirdPerson",
+    "label": "",
+    "section": "Aim Assist Settings"
+   },
+   {
+    "field": "useAimAssistInFirstPerson",
+    "label": "",
+    "section": "Aim Assist Settings"
+   },
+   {
+    "field": "useMaxDistanceToCameraCenterAimAssist",
+    "label": "",
+    "section": "Aim Assist Settings"
+   },
+   {
+    "field": "maxDistanceToCameraCenterAimAssist",
+    "label": "",
+    "section": "Aim Assist Settings"
+   },
+   {
+    "field": "useAimAssistInLockedCamera",
+    "label": "",
+    "section": "Aim Assist Settings"
+   },
+   {
+    "field": "aimAssistLookAtTargetSpeed",
+    "label": "",
+    "section": "Aim Assist Settings"
+   },
+   {
+    "field": "damageMultiplierStat",
+    "label": "",
+    "section": "Weapons Stats Settings"
+   },
+   {
+    "field": "extraDamageStat",
+    "label": "",
+    "section": "Weapons Stats Settings"
+   },
+   {
+    "field": "spreadMultiplierStat",
+    "label": "",
+    "section": "Weapons Stats Settings"
+   },
+   {
+    "field": "fireRateMultiplierStat",
+    "label": "",
+    "section": "Weapons Stats Settings"
+   },
+   {
+    "field": "extraReloadSpeedStat",
+    "label": "",
+    "section": "Weapons Stats Settings"
+   },
+   {
+    "field": "magazineExtraSizeStat",
+    "label": "",
+    "section": "Weapons Stats Settings"
+   },
+   {
+    "field": "cantPickWeaponMessage",
+    "label": "",
+    "section": "Weapons Message Settings"
+   },
+   {
+    "field": "cantDropCurrentWeaponMessage",
+    "label": "",
+    "section": "Weapons Message Settings"
+   },
+   {
+    "field": "cantPickAttachmentMessage",
+    "label": "",
+    "section": "Weapons Message Settings"
+   },
+   {
+    "field": "weaponMessageDuration",
+    "label": "",
+    "section": "Weapons Message Settings"
+   },
+   {
+    "field": "useEventsOnStateChange",
+    "label": "",
+    "section": "Weapons Mode Active Event Settings"
+   },
+   {
+    "field": "evenOnStateEnabled",
+    "label": "",
+    "section": "Weapons Mode Active Event Settings"
+   },
+   {
+    "field": "eventOnStateDisabled",
+    "label": "",
+    "section": "Weapons Mode Active Event Settings"
+   },
+   {
+    "field": "weaponsCanBeStolenFromCharacter",
+    "label": "",
+    "section": "Stolen Weapon Settings"
+   },
+   {
+    "field": "useEventOnWeaponStolen",
+    "label": "",
+    "section": "Stolen Weapon Settings"
+   },
+   {
+    "field": "eventOnWeaponStolen",
+    "label": "",
+    "section": "Stolen Weapon Settings"
+   },
+   {
+    "field": "loadCurrentPlayerWeaponsFromSaveFile",
+    "label": "",
+    "section": "Save/Load Weapons Settings"
+   },
+   {
+    "field": "saveCurrentPlayerWeaponsToSaveFile",
+    "label": "",
+    "section": "Save/Load Weapons Settings"
+   },
+   {
+    "field": "loadWeaponAttachmentsInfoFromSaveFile",
+    "label": "",
+    "section": "Save/Load Weapons Settings"
+   },
+   {
+    "field": "saveWeaponAttachmentsInfoToSaveFile",
+    "label": "",
+    "section": "Save/Load Weapons Settings"
+   },
+   {
+    "field": "minSwipeDist",
+    "label": "",
+    "section": "Touch Settings"
+   },
+   {
+    "field": "usedByAI",
+    "label": "",
+    "section": "AI Settings"
+   },
+   {
+    "field": "useUsableWeaponPrefabInfoList",
+    "label": "",
+    "section": "Usable Weapon Prefab List"
+   },
+   {
+    "field": "useWeaponPocketEnabled",
+    "label": "",
+    "section": "Weapon Pocket List"
+   },
+   {
+    "field": "currentOffsetParentThirdPerson",
+    "label": "",
+    "section": "Position On Character Offset Settings"
+   },
+   {
+    "field": "weaponsHUD",
+    "label": "",
+    "section": "HUD Elements"
+   },
+   {
+    "field": "singleWeaponHUD",
+    "label": "",
+    "section": "HUD Elements"
+   },
+   {
+    "field": "currentWeaponNameText",
+    "label": "",
+    "section": "HUD Elements"
+   },
+   {
+    "field": "currentWeaponAmmoText",
+    "label": "",
+    "section": "HUD Elements"
+   },
+   {
+    "field": "useRemainAmmoWeaponText",
+    "label": "",
+    "section": "HUD Elements"
+   },
+   {
+    "field": "remainAmmoWeaponText",
+    "label": "",
+    "section": "HUD Elements"
+   },
+   {
+    "field": "ammoSlider",
+    "label": "",
+    "section": "HUD Elements"
+   },
+   {
+    "field": "currentWeaponIcon",
+    "label": "",
+    "section": "HUD Elements"
+   },
+   {
+    "field": "attachmentPanel",
+    "label": "",
+    "section": "HUD Elements"
+   },
+   {
+    "field": "attachmentAmmoText",
+    "label": "",
+    "section": "HUD Elements"
+   },
+   {
+    "field": "currentAttachmentIcon",
+    "label": "",
+    "section": "HUD Elements"
+   },
+   {
+    "field": "dualWeaponHUD",
+    "label": "",
+    "section": "HUD Elements"
+   },
+   {
+    "field": "currentRightWeaponAmmoText",
+    "label": "",
+    "section": "HUD Elements"
+   },
+   {
+    "field": "rightAttachmentPanel",
+    "label": "",
+    "section": "HUD Elements"
+   },
+   {
+    "field": "rigthAttachmentAmmoText",
+    "label": "",
+    "section": "HUD Elements"
+   },
+   {
+    "field": "currentRightAttachmentIcon",
+    "label": "",
+    "section": "HUD Elements"
+   },
+   {
+    "field": "currentLeftWeaponAmmoText",
+    "label": "",
+    "section": "HUD Elements"
+   },
+   {
+    "field": "leftAttachmentPanel",
+    "label": "",
+    "section": "HUD Elements"
+   },
+   {
+    "field": "leftAttachmentAmmoText",
+    "label": "",
+    "section": "HUD Elements"
+   },
+   {
+    "field": "currentLeftAttachmentIcon",
+    "label": "",
+    "section": "HUD Elements"
+   },
+   {
+    "field": "weaponsParent",
+    "label": "",
+    "section": "HUD Elements"
+   },
+   {
+    "field": "weaponsTransformInFirstPerson",
+    "label": "",
+    "section": "HUD Elements"
+   },
+   {
+    "field": "weaponsTransformInThirdPerson",
+    "label": "",
+    "section": "HUD Elements"
+   },
+   {
+    "field": "thirdPersonParent",
+    "label": "",
+    "section": "HUD Elements"
+   },
+   {
+    "field": "firstPersonParent",
+    "label": "",
+    "section": "HUD Elements"
+   },
+   {
+    "field": "cameraController",
+    "label": "",
+    "section": "HUD Elements"
+   },
+   {
+    "field": "weaponsCamera",
+    "label": "",
+    "section": "HUD Elements"
+   },
+   {
+    "field": "weaponCursor",
+    "label": "",
+    "section": "HUD Elements"
+   },
+   {
+    "field": "cursorRectTransform",
+    "label": "",
+    "section": "HUD Elements"
+   },
+   {
+    "field": "weaponCursorRegular",
+    "label": "",
+    "section": "HUD Elements"
+   },
+   {
+    "field": "weaponCursorAimingInFirstPerson",
+    "label": "",
+    "section": "HUD Elements"
+   },
+   {
+    "field": "weaponCursorUnableToShoot",
+    "label": "",
+    "section": "HUD Elements"
+   },
+   {
+    "field": "weaponCustomReticle",
+    "label": "",
+    "section": "HUD Elements"
+   },
+   {
+    "field": "weaponsMessageWindow",
+    "label": "",
+    "section": "HUD Elements"
+   },
+   {
+    "field": "mainObjectTransformData",
+    "label": "",
+    "section": "HUD Elements"
+   }
+  ]
+ }
+]

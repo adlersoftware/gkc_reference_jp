@@ -1,0 +1,320 @@
+[
+ {
+  "type": "objectiveStationUISystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Objectives Mission System\\objectiveStationUISystem.cs",
+  "methods": [
+   {
+    "sig": "setButtonsColor(bool activeObjectiveColor)",
+    "line": 159
+   },
+   {
+    "sig": "setCurrentObjectiveStationSystem(objectiveStationSystem newObjectiveStationSystem)",
+    "line": 169
+   },
+   {
+    "sig": "openOrCloseObjectiveStationMenu(bool state)",
+    "line": 177
+   },
+   {
+    "sig": "setObjectiveInfoList()",
+    "line": 251
+   },
+   {
+    "sig": "checkPressedMission(GameObject objectiveSlot)",
+    "line": 417
+   },
+   {
+    "sig": "updateChracterObjectiveTextContent(string objectiveName, string objectiveDescription, string objectiveFullDescription, string objectiveRewards)",
+    "line": 488
+   },
+   {
+    "sig": "updateObjectiveTextContent(string objectiveName, string objectiveDescription, string objectiveFullDescription, string objectiveRewards)",
+    "line": 509
+   },
+   {
+    "sig": "acceptMissionFromObjectiveStationPanel()",
+    "line": 531
+   },
+   {
+    "sig": "acceptMissionFromCharacterObjectivePanel()",
+    "line": 599
+   },
+   {
+    "sig": "checkStartCurrentMission()",
+    "line": 643
+   },
+   {
+    "sig": "startCurrentMission()",
+    "line": 658
+   },
+   {
+    "sig": "stopAcceptMissionFromCharacterObjectivePanelCoroutine()",
+    "line": 674
+   },
+   {
+    "sig": "getMissionRewardFromCharacterObjectivePanel()",
+    "line": 692
+   },
+   {
+    "sig": "openOrCloseObjectiveMenuFromTouch()",
+    "line": 708
+   },
+   {
+    "sig": "openOrCloseObjectiveStationMenuByButton()",
+    "line": 713
+   },
+   {
+    "sig": "showMissionCompleteMessage()",
+    "line": 723
+   },
+   {
+    "sig": "showMissionCompleteMessageTemporarily()",
+    "line": 732
+   },
+   {
+    "sig": "showMissionCompleteMessageTemporarily(float delayToDisablePanel)",
+    "line": 737
+   },
+   {
+    "sig": "checkIfMissionsAvailableInCharacter()",
+    "line": 760
+   },
+   {
+    "sig": "enableAndSetMissionCompletePanelInfo()",
+    "line": 779
+   },
+   {
+    "sig": "disableMissionCompletePanel()",
+    "line": 815
+   },
+   {
+    "sig": "showMissionAcceptedMessage(string missionAcceptedMessage, float delayToDisableMissionAcceptedPanelValue)",
+    "line": 820
+   },
+   {
+    "sig": "showMissionAcceptedMessage(string missionAcceptedMessage)",
+    "line": 833
+   },
+   {
+    "sig": "disableMissionAcceptedPanel()",
+    "line": 849
+   },
+   {
+    "sig": "enableAndSetMissionAcceptedPanelInfo(string missionAcceptedMessage)",
+    "line": 854
+   }
+  ]
+ },
+ {
+  "type": "objectiveStationSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Objectives Mission System\\objectiveStationSystem.cs",
+  "methods": [
+   {
+    "sig": "checkMissionsState()",
+    "line": 55
+   },
+   {
+    "sig": "setCurrentPlayer(GameObject player)",
+    "line": 82
+   },
+   {
+    "sig": "activateObjectiveStation()",
+    "line": 94
+   },
+   {
+    "sig": "setUsingObjectiveStationState(bool state)",
+    "line": 108
+   },
+   {
+    "sig": "getObjectiveInfoList()",
+    "line": 114
+   },
+   {
+    "sig": "increaseCurrentCharacterObjectiveIndex()",
+    "line": 120
+   },
+   {
+    "sig": "setCurrentCharacterObjectiveIndex(int newIndex)",
+    "line": 129
+   },
+   {
+    "sig": "getCurrentCharacterObjectiveIndex()",
+    "line": 139
+   },
+   {
+    "sig": "isThereMissionsAvailableOnStation(int indexMissionToCheck)",
+    "line": 145
+   },
+   {
+    "sig": "getAllMissionsSystemOnLevel()",
+    "line": 165
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 185
+   }
+  ]
+ },
+ {
+  "type": "screenObjectivesSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Objectives Mission System\\screenObjectivesSystem.cs",
+  "methods": [
+   {
+    "sig": "getComponentInstance()",
+    "line": 36
+   },
+   {
+    "sig": "addNewPlayer(playerScreenObjectivesSystem newPlayer)",
+    "line": 66
+   },
+   {
+    "sig": "addElementToScreenObjectiveList(GameObject obj, bool useCloseDistance, float radiusDistance, bool showOffScreen, bool showDistanceInfo, bool showDistanceOffScreen, string objectiveIconName, bool useCustomObjectiveColor, Color objectiveColor, bool removeCustomObjectiveColor, float iconOffset)",
+    "line": 86
+   },
+   {
+    "sig": "getCurrentID()",
+    "line": 164
+   },
+   {
+    "sig": "increaseCurrentID()",
+    "line": 169
+   },
+   {
+    "sig": "addElementFromPlayerList(objectiveInfo newObjectiveInfo, objectiveIconElement currentObjectiveIconElement, Transform currentPlayer, bool addIconOnRestOfPlayers)",
+    "line": 174
+   },
+   {
+    "sig": "removeElementFromList(objectiveInfo objectiveListElement)",
+    "line": 194
+   },
+   {
+    "sig": "removeGameObjectFromList(GameObject objectToSearch)",
+    "line": 213
+   },
+   {
+    "sig": "removeGameObjectListFromList(List<GameObject> list)",
+    "line": 228
+   },
+   {
+    "sig": "removeElementFromObjectiveList(objectiveInfo objectiveListElement)",
+    "line": 273
+   },
+   {
+    "sig": "removeElementFromObjectiveListCalledByPlayer(int objectId, GameObject currentPlayer)",
+    "line": 293
+   },
+   {
+    "sig": "checkObjectiveInfoOnMapSystem(objectiveInfo objectiveListElement)",
+    "line": 329
+   },
+   {
+    "sig": "setScreenObjectiveVisibleState(bool state, GameObject mapObject)",
+    "line": 357
+   },
+   {
+    "sig": "checkGetMapCreatorManager()",
+    "line": 372
+   }
+  ]
+ },
+ {
+  "type": "playerScreenObjectivesSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Objectives Mission System\\playerScreenObjectivesSystem.cs",
+  "methods": [
+   {
+    "sig": "addElementToList(screenObjectivesSystem.objectiveInfo newObjectiveToAdd, GameObject screenIconPrefab, int objectID)",
+    "line": 364
+   },
+   {
+    "sig": "removeElementFromList(int objectID)",
+    "line": 449
+   },
+   {
+    "sig": "removeElementFromListByPlayer(screenObjectivesSystem.objectiveInfo objectiveListElement)",
+    "line": 468
+   },
+   {
+    "sig": "pauseOrResumeShowObjectives(bool state)",
+    "line": 483
+   },
+   {
+    "sig": "pauseOrResumeShowObjectivesFromEditor(bool state)",
+    "line": 494
+   },
+   {
+    "sig": "addElementToPlayerList(GameObject obj, bool addMapIcon, bool useCloseDistance, float radiusDistance, bool showOffScreen, bool showMapWindowIcon, bool showDistanceInfo, bool showDistanceOffScreenInfo, string objectiveIconName, bool useCustomObjectiveColor, Color objectiveColor, bool removeCustomObjectiveColor, int buildingIndex, float iconOffset, bool addIconOnRestOfPlayers)",
+    "line": 501
+   },
+   {
+    "sig": "checkGetMapCreatorManager()",
+    "line": 597
+   },
+   {
+    "sig": "objectAlreadyOnList(GameObject objectToCheck)",
+    "line": 622
+   },
+   {
+    "sig": "removeElementFromListByPlayer(GameObject objectToCheck)",
+    "line": 641
+   },
+   {
+    "sig": "removeElementListFromListByPlayer(List<Transform> objectToCheckList)",
+    "line": 668
+   },
+   {
+    "sig": "setShowObjectivesActiveState(bool state)",
+    "line": 685
+   },
+   {
+    "sig": "setShowObjectivesActiveStateFromEditor(bool state)",
+    "line": 690
+   }
+  ]
+ },
+ {
+  "type": "setMissionSubObjectiveStateRemotelySystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Objectives Mission System\\setMissionSubObjectiveStateRemotelySystem.cs",
+  "methods": [
+   {
+    "sig": "addSubObjectiveCompleteRemotely(string customSubObjectiveName)",
+    "line": 50
+   },
+   {
+    "sig": "addSubObjectiveCompleteRemotely()",
+    "line": 55
+   },
+   {
+    "sig": "sendMissionInfo(string newSubObjectiveName)",
+    "line": 60
+   },
+   {
+    "sig": "cancelCurrentMissionRemotely()",
+    "line": 93
+   },
+   {
+    "sig": "setMissionID(int newValue)",
+    "line": 137
+   },
+   {
+    "sig": "increaseMissionID()",
+    "line": 142
+   },
+   {
+    "sig": "decreaseMissionID()",
+    "line": 147
+   },
+   {
+    "sig": "setSubObjectiveName(string newValue)",
+    "line": 156
+   },
+   {
+    "sig": "setMissionInfoEnabledState(bool state)",
+    "line": 161
+   },
+   {
+    "sig": "setMissionInfoEnabledStateFromEditor(bool state)",
+    "line": 166
+   }
+  ]
+ }
+]

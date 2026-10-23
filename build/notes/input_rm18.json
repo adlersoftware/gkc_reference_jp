@@ -1,0 +1,426 @@
+[
+ {
+  "type": "mapTileBuilder",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Map\\mapTileBuilder.cs",
+  "methods": [
+   {
+    "sig": "createMapTileElement()",
+    "line": 66
+   },
+   {
+    "sig": "calculateMapTileMesh()",
+    "line": 98
+   },
+   {
+    "sig": "removeMapTileRenderer()",
+    "line": 167
+   },
+   {
+    "sig": "setWallRendererMaterialColor(Color newColor)",
+    "line": 186
+   },
+   {
+    "sig": "set3dMapPartMaterialColor(Color newColor)",
+    "line": 197
+   },
+   {
+    "sig": "setOriginal3dMapPartMaterialColor()",
+    "line": 204
+   },
+   {
+    "sig": "enableMapPart()",
+    "line": 211
+   },
+   {
+    "sig": "enableOrDisableEventTriggerList(bool state)",
+    "line": 242
+   },
+   {
+    "sig": "disableMapPart()",
+    "line": 255
+   },
+   {
+    "sig": "setMapPartEnabledState(bool state)",
+    "line": 266
+   },
+   {
+    "sig": "enableOrDisableTextMesh(bool state)",
+    "line": 271
+   },
+   {
+    "sig": "addEventTriggerToActive()",
+    "line": 292
+   },
+   {
+    "sig": "setMapPartEnabledStateFromEditor(bool state)",
+    "line": 345
+   },
+   {
+    "sig": "removeEventTrigger(int eventTriggerIndex)",
+    "line": 352
+   },
+   {
+    "sig": "removeAllEventTriggers()",
+    "line": 371
+   },
+   {
+    "sig": "addMapPartTextMesh()",
+    "line": 388
+   },
+   {
+    "sig": "removeTextMesh(int textMeshIndex)",
+    "line": 424
+   },
+   {
+    "sig": "removeAllTextMesh()",
+    "line": 443
+   },
+   {
+    "sig": "addNewVertex(int insertAtIndex)",
+    "line": 460
+   },
+   {
+    "sig": "removeVertex(int vertexIndex)",
+    "line": 493
+   },
+   {
+    "sig": "removeAllVertex()",
+    "line": 506
+   },
+   {
+    "sig": "renameAllVertex()",
+    "line": 519
+   },
+   {
+    "sig": "reverVertexOrder()",
+    "line": 530
+   },
+   {
+    "sig": "setInternalName(string nameToConfigure)",
+    "line": 537
+   },
+   {
+    "sig": "renameMapPart()",
+    "line": 544
+   },
+   {
+    "sig": "updateMapPart3dMeshPositionFromEditor()",
+    "line": 557
+   },
+   {
+    "sig": "updateMapPart3dMeshPosition(Vector3 offset)",
+    "line": 562
+   },
+   {
+    "sig": "enableOrDisableMapPart3dMesh(bool state)",
+    "line": 569
+   },
+   {
+    "sig": "removeMapPart3dMesh()",
+    "line": 578
+   },
+   {
+    "sig": "removeMapPart3dMeshFromEditor()",
+    "line": 587
+   },
+   {
+    "sig": "setGenerate3dMapPartMeshState(bool state)",
+    "line": 598
+   },
+   {
+    "sig": "setGenerate3dMapPartMeshStateFromEditor(bool state)",
+    "line": 603
+   },
+   {
+    "sig": "generateMapPart3dMeshFromEditor()",
+    "line": 610
+   },
+   {
+    "sig": "generateMapPart3dMesh(float meshHeight)",
+    "line": 617
+   },
+   {
+    "sig": "setMapManager(mapCreator currentMapManager)",
+    "line": 792
+   },
+   {
+    "sig": "setMapPartParent(Transform currentMapPartParent)",
+    "line": 799
+   },
+   {
+    "sig": "setMapPartBuildingIndex(int newIndex)",
+    "line": 806
+   },
+   {
+    "sig": "setMapPartFlooorIndex(int newIndex)",
+    "line": 813
+   },
+   {
+    "sig": "setMapPartIndex(int newIndex)",
+    "line": 820
+   },
+   {
+    "sig": "setRandomMapPartColor()",
+    "line": 827
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 834
+   }
+  ]
+ },
+ {
+  "type": "mapObjectInformation",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Map\\mapObjectInformation.cs",
+  "methods": [
+   {
+    "sig": "checkAssignMapObject()",
+    "line": 170
+   },
+   {
+    "sig": "createMapIconInfo()",
+    "line": 179
+   },
+   {
+    "sig": "getScreenObjectivesManager()",
+    "line": 246
+   },
+   {
+    "sig": "addMapObject(string mapIconType)",
+    "line": 263
+   },
+   {
+    "sig": "removeMapObject()",
+    "line": 278
+   },
+   {
+    "sig": "setPathElementInfo(bool showOffScreenIconInfo, bool showMapWindowIconInfo, bool showDistanceInfo)",
+    "line": 312
+   },
+   {
+    "sig": "getMapIconTypeList()",
+    "line": 321
+   },
+   {
+    "sig": "getBuildingList()",
+    "line": 336
+   },
+   {
+    "sig": "getFloorList()",
+    "line": 360
+   },
+   {
+    "sig": "checkGetMapManager()",
+    "line": 393
+   },
+   {
+    "sig": "checkGetMapCreatorManager()",
+    "line": 400
+   },
+   {
+    "sig": "getCurrentMapManager()",
+    "line": 425
+   },
+   {
+    "sig": "getMapPartList()",
+    "line": 434
+   },
+   {
+    "sig": "getIconTypeIndexByName(string iconTypeName)",
+    "line": 470
+   },
+   {
+    "sig": "getMapObjectInformation()",
+    "line": 480
+   },
+   {
+    "sig": "checkIfMapObjectInformationFound()",
+    "line": 489
+   },
+   {
+    "sig": "setCustomValues(bool visibleInAllBuildingsValue, bool visibleInAllFloorsValue, bool calculateFloorAtStartValue, bool useCloseDistanceValue, float triggerRadiusValue, bool showOffScreenIconValue, bool showMapWindowIconValue, bool showDistanceValue, bool showDistanceOffScreenValue, string objectiveIconNameValue, bool useCustomObjectiveColorValue, Color objectiveColorValue, bool removeCustomObjectiveColorValue)",
+    "line": 513
+   },
+   {
+    "sig": "changeMapObjectIconFloor(int newFloorIndex)",
+    "line": 535
+   },
+   {
+    "sig": "changeMapObjectIconFloorByPosition()",
+    "line": 542
+   },
+   {
+    "sig": "enableSingleMapIconByID()",
+    "line": 549
+   },
+   {
+    "sig": "assignID(int newID)",
+    "line": 554
+   },
+   {
+    "sig": "checkPointReachedEvent()",
+    "line": 561
+   },
+   {
+    "sig": "checkEventOnChangeFloor(int currentBuildingIndex, int currentFloorIndex)",
+    "line": 572
+   },
+   {
+    "sig": "setCurrentMapObjectInfo(mapSystem.mapObjectInfo newMapObjectInfo)",
+    "line": 587
+   },
+   {
+    "sig": "setNewBuildingAndFloorIndex(int newBuildingIndex, int newFloorIndex)",
+    "line": 594
+   },
+   {
+    "sig": "setNewBuildingAndFloorIndexByInspector()",
+    "line": 604
+   },
+   {
+    "sig": "setNewBuildingIndex(int newBuildingIndex)",
+    "line": 611
+   },
+   {
+    "sig": "setNewFloorIndex(int newFloorIndex)",
+    "line": 616
+   },
+   {
+    "sig": "getBuildingIndex()",
+    "line": 621
+   },
+   {
+    "sig": "getFloorIndex()",
+    "line": 626
+   },
+   {
+    "sig": "removeComponentWhenObjectiveReachedEnabled()",
+    "line": 631
+   },
+   {
+    "sig": "setMapObjectName(string newName)",
+    "line": 636
+   },
+   {
+    "sig": "getMapObjectName()",
+    "line": 641
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 650
+   }
+  ]
+ },
+ {
+  "type": "mapZoneUnlocker",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Map\\mapZoneUnlocker.cs",
+  "methods": [
+   {
+    "sig": "checkGetMapCreatorManager()",
+    "line": 17
+   },
+   {
+    "sig": "unlockMapZone()",
+    "line": 42
+   },
+   {
+    "sig": "enableOrDisableAllFloorParts(bool state, int buildingIndex, int floorIndex)",
+    "line": 61
+   },
+   {
+    "sig": "enableOrDisableMapPartsRange(bool state, int buildingIndex, int floorIndex)",
+    "line": 70
+   },
+   {
+    "sig": "searchBuildingList()",
+    "line": 83
+   },
+   {
+    "sig": "clearAllBuildingList()",
+    "line": 130
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 137
+   }
+  ]
+ },
+ {
+  "type": "addMapObjectInformation",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Map\\addMapObjectInformation.cs",
+  "methods": [
+   {
+    "sig": "checkGetMapCreatorManager()",
+    "line": 75
+   },
+   {
+    "sig": "activateMapObject()",
+    "line": 98
+   },
+   {
+    "sig": "removeMapObject()",
+    "line": 170
+   }
+  ]
+ },
+ {
+  "type": "buildingAndFloorObjectInfoSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Map\\buildingAndFloorObjectInfoSystem.cs",
+  "methods": [
+   {
+    "sig": "setCurrentObjectToChangeBuildingInfo(GameObject newObject)",
+    "line": 13
+   },
+   {
+    "sig": "setBuildingAndFloorInfoToObject()",
+    "line": 18
+   },
+   {
+    "sig": "setBuildingFloorInfo(Transform newBuildingParent, Transform newFloorParent, mapCreator newMapCreator)",
+    "line": 23
+   }
+  ]
+ },
+ {
+  "type": "quickTravelStationSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Map\\quickTravelStationSystem.cs",
+  "methods": [
+   {
+    "sig": "travelToThisStation(Transform currentPlayer)",
+    "line": 111
+   },
+   {
+    "sig": "OnTriggerEnter(Collider col)",
+    "line": 143
+   },
+   {
+    "sig": "activateStation()",
+    "line": 152
+   }
+  ]
+ },
+ {
+  "type": "setMapOrientationSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Map\\setMapOrientationSystem.cs",
+  "methods": [
+   {
+    "sig": "setMapOrientation()",
+    "line": 24
+   },
+   {
+    "sig": "setCurrentPlayer(GameObject newPlayer)",
+    "line": 37
+   }
+  ]
+ },
+ {
+  "type": "GKC_Triangulator_Utils",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Map\\GKC_Triangulator_Utils.cs",
+  "methods": [
+   {
+    "sig": "Triangulate()",
+    "line": 14
+   }
+  ]
+ }
+]

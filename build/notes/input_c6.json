@@ -1,0 +1,700 @@
+[
+ {
+  "type": "health",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Health\\health.cs",
+  "methods": [
+   {
+    "sig": "setUseEventOnDamageEnabledState(bool state)",
+    "line": 515
+   },
+   {
+    "sig": "setIgnoreSetShieldStateActive(bool state)",
+    "line": 522
+   },
+   {
+    "sig": "setShieldState(bool state)",
+    "line": 527
+   },
+   {
+    "sig": "setOriginalUseShieldState()",
+    "line": 550
+   },
+   {
+    "sig": "setUseShieldState(bool state)",
+    "line": 555
+   },
+   {
+    "sig": "setShieldStateAndCheckEventsForShieldState(bool state)",
+    "line": 564
+   },
+   {
+    "sig": "checkEventsForShieldState()",
+    "line": 571
+   },
+   {
+    "sig": "addDamageReceiversToRagdoll()",
+    "line": 583
+   },
+   {
+    "sig": "removeDamageReceiversFromRagdoll()",
+    "line": 622
+   },
+   {
+    "sig": "setDamage(float damageAmount, Vector3 fromDirection, Vector3 damagePosition, GameObject attacker, GameObject projectile, bool damageConstant, bool searchClosestWeakSpot, bool ignoreShield, bool ignoreDamageInScreen, bool damageCanBeBlocked, bool canActivateReactionSystemTemporally, int damageReactionID, int damageTypeID)",
+    "line": 639
+   },
+   {
+    "sig": "enableUseCustomStateHealthAmountOnSpotEnabledState(string weakSpotName)",
+    "line": 1278
+   },
+   {
+    "sig": "disableUseCustomStateHealthAmountOnSpotEnabledState(string weakSpotName)",
+    "line": 1283
+   },
+   {
+    "sig": "setUseCustomStateHealthAmountOnSpotEnabledState(bool state, string weakSpotName)",
+    "line": 1288
+   },
+   {
+    "sig": "enableUseHealthAmountOnSpotState(string weakSpotName)",
+    "line": 1297
+   },
+   {
+    "sig": "disableUseHealthAmountOnSpotState(string weakSpotName)",
+    "line": 1302
+   },
+   {
+    "sig": "setUseHealthAmountOnSpotState(bool state, string weakSpotName)",
+    "line": 1307
+   },
+   {
+    "sig": "setCurrentWeakSpotNameToAdjust(string weakSpotName)",
+    "line": 1318
+   },
+   {
+    "sig": "setCurrentCustomStateHealthAmountOnSpotID(int newID)",
+    "line": 1323
+   },
+   {
+    "sig": "setCurrentCustomStateHealthAmountOnSpotID(int newID, string weakSpotName)",
+    "line": 1331
+   },
+   {
+    "sig": "setSendFunctionWhenDamageStateOnWeakSpot(string weakSpotName, bool state)",
+    "line": 1340
+   },
+   {
+    "sig": "setDrivingState(bool state)",
+    "line": 1349
+   },
+   {
+    "sig": "setDrivingRemotelyState(bool state)",
+    "line": 1354
+   },
+   {
+    "sig": "setIgnoreIfCharacterDrivingOnDamageReceiverState(bool state)",
+    "line": 1359
+   },
+   {
+    "sig": "isDamageReactionPaused()",
+    "line": 1369
+   },
+   {
+    "sig": "setUseEventOnHealthValueListState(bool state)",
+    "line": 1374
+   },
+   {
+    "sig": "setOriginalUseEventOnHealthValueListState()",
+    "line": 1379
+   },
+   {
+    "sig": "checkEventOnHealthValueList(bool receivingDamage)",
+    "line": 1384
+   },
+   {
+    "sig": "setEventOnHealthValueEnabledState(bool state, string stateName)",
+    "line": 1441
+   },
+   {
+    "sig": "setEventOnHealthValueEnabledState(string stateName)",
+    "line": 1454
+   },
+   {
+    "sig": "setEventOnHealthValueDisabledState(string stateName)",
+    "line": 1459
+   },
+   {
+    "sig": "getLastDamageTime()",
+    "line": 1464
+   },
+   {
+    "sig": "damageSpot(int elementIndex, float damageAmount)",
+    "line": 1469
+   },
+   {
+    "sig": "checkIfEnabledStateCanChange(bool state)",
+    "line": 1482
+   },
+   {
+    "sig": "setDamageTargetOverTimeWithAmountAndDurationAndRate(string amountAndDurationAndRateString)",
+    "line": 1489
+   },
+   {
+    "sig": "setDamageTargetOverTimeToDeath(float damageOverTimeAmount)",
+    "line": 1514
+   },
+   {
+    "sig": "setDamageTargetOverTimeState(float damageOverTimeDelay, float damageOverTimeDuration, float damageOverTimeAmount, float damageOverTimeRate, bool damageOverTimeToDeath, int damageTypeID)",
+    "line": 1519
+   },
+   {
+    "sig": "stopDamageOverTime()",
+    "line": 1556
+   },
+   {
+    "sig": "setDamageOrHealthTargetWithDelay(float waitAmount, float valueAmount, int damageTypeID)",
+    "line": 1565
+   },
+   {
+    "sig": "stopDamageOrHealthTargetWithDelay()",
+    "line": 1586
+   },
+   {
+    "sig": "sedateCharacter(Vector3 position, float sedateDelay, bool useWeakSpotToReduceDelay, bool sedateUntilReceiveDamage, float sedateDuration)",
+    "line": 1594
+   },
+   {
+    "sig": "sedateCharacter(float sedateDuration)",
+    "line": 1623
+   },
+   {
+    "sig": "sedateCharacterUntilReceiveDamage(float sedateDuration)",
+    "line": 1628
+   },
+   {
+    "sig": "getCurrentSedateDuration()",
+    "line": 1633
+   },
+   {
+    "sig": "setSedateState(bool state)",
+    "line": 1638
+   },
+   {
+    "sig": "isReceiveDamageFromCollisionsEnabled()",
+    "line": 1665
+   },
+   {
+    "sig": "setImpactReceivedInfo(Vector3 impactVelocity)",
+    "line": 1670
+   },
+   {
+    "sig": "setRagdollImpactReceivedInfo(Vector3 impactVelocity, Collider impactCollider)",
+    "line": 1687
+   },
+   {
+    "sig": "characterIsOnRagdollState()",
+    "line": 1694
+   },
+   {
+    "sig": "getMainRagdollActivator()",
+    "line": 1703
+   },
+   {
+    "sig": "canRagdollReceiveDamageOnImpact()",
+    "line": 1708
+   },
+   {
+    "sig": "updateSlider(float value)",
+    "line": 1713
+   },
+   {
+    "sig": "updateSliderWithoutUpdatingStatManager(int statId, float value)",
+    "line": 1722
+   },
+   {
+    "sig": "updatePlayerStatsManagerValue()",
+    "line": 1750
+   },
+   {
+    "sig": "updatePlayerStatesManagerMaxHealthValue()",
+    "line": 1757
+   },
+   {
+    "sig": "updateSliderMaxValue(float newMaxValue)",
+    "line": 1764
+   },
+   {
+    "sig": "removeHealthSlider()",
+    "line": 1779
+   },
+   {
+    "sig": "checkHideHealthSliderParent()",
+    "line": 1790
+   },
+   {
+    "sig": "isPlayerMenuActive()",
+    "line": 1830
+   },
+   {
+    "sig": "getHealth(float amount)",
+    "line": 1866
+   },
+   {
+    "sig": "addHealth(float amount)",
+    "line": 1875
+   },
+   {
+    "sig": "addHealthWithoutUpdatingStatManager(int statId, float amount)",
+    "line": 1892
+   },
+   {
+    "sig": "updateHealthAmountWithoutUpdatingStatManager(int statId, float amount)",
+    "line": 1909
+   },
+   {
+    "sig": "updateMaxHealthAmountWithoutUpdatingStatManager(int statId, float newAmount)",
+    "line": 1927
+   },
+   {
+    "sig": "updateRegenerateAmountWithoutUpdatingStatManager(int statId, float newAmount)",
+    "line": 1936
+   },
+   {
+    "sig": "setHealthAmountOnMaxValue()",
+    "line": 1941
+   },
+   {
+    "sig": "clampHealthAmountToMaxHealth()",
+    "line": 1946
+   },
+   {
+    "sig": "setSliderInfo(string name, Color color)",
+    "line": 1954
+   },
+   {
+    "sig": "updateNameWithAlly()",
+    "line": 1965
+   },
+   {
+    "sig": "updateNameWithEnemy()",
+    "line": 1970
+   },
+   {
+    "sig": "hacked()",
+    "line": 1975
+   },
+   {
+    "sig": "resurrect()",
+    "line": 1981
+   },
+   {
+    "sig": "setResurrectAfterDelayEnabledState(bool state)",
+    "line": 2055
+   },
+   {
+    "sig": "setPauseResurrectCheckState(bool state)",
+    "line": 2060
+   },
+   {
+    "sig": "resurrectFromExternalCall()",
+    "line": 2067
+   },
+   {
+    "sig": "setSliderVisibleState(bool state)",
+    "line": 2124
+   },
+   {
+    "sig": "setSliderVisibleStateForPlayer(GameObject player, bool state)",
+    "line": 2133
+   },
+   {
+    "sig": "setSliderLocatedState(bool state)",
+    "line": 2142
+   },
+   {
+    "sig": "setSliderLocatedState(GameObject player, bool state)",
+    "line": 2151
+   },
+   {
+    "sig": "getHealthID()",
+    "line": 2160
+   },
+   {
+    "sig": "getClosesWeakSpotIndex(Vector3 collisionPosition)",
+    "line": 2194
+   },
+   {
+    "sig": "checkIfDamagePositionIsCloseEnoughToWeakSpotByName(Vector3 collisionPosition, List<string> weakSpotNameList, float maxDistanceToWeakSpot)",
+    "line": 2246
+   },
+   {
+    "sig": "checkIfWeakSpotListContainsTransform(Transform transformToCheck)",
+    "line": 2296
+   },
+   {
+    "sig": "activateEventToSendCurrentHealthAmount()",
+    "line": 2313
+   },
+   {
+    "sig": "getMaxHealthAmount()",
+    "line": 2323
+   },
+   {
+    "sig": "getAuxHealthAmount()",
+    "line": 2328
+   },
+   {
+    "sig": "addAuxHealthAmount(float amount)",
+    "line": 2333
+   },
+   {
+    "sig": "getHealthAmountToLimit()",
+    "line": 2338
+   },
+   {
+    "sig": "pushFullCharacter()",
+    "line": 2343
+   },
+   {
+    "sig": "pushCharacterWithoutForce()",
+    "line": 2354
+   },
+   {
+    "sig": "pushCharacterWithoutForceXAmountOfTime(float newValue)",
+    "line": 2361
+   },
+   {
+    "sig": "pushFullCharacterXAmountOfTime(float newValue, Vector3 direction)",
+    "line": 2368
+   },
+   {
+    "sig": "TakeDamage(float damage)",
+    "line": 2376
+   },
+   {
+    "sig": "killCharacter()",
+    "line": 2381
+   },
+   {
+    "sig": "killByButton()",
+    "line": 2387
+   },
+   {
+    "sig": "killByButtonWithoutRagdollForce()",
+    "line": 2393
+   },
+   {
+    "sig": "killCharacter(Vector3 fromDirection, Vector3 damagePos, GameObject attacker, GameObject projectile, bool damageConstant)",
+    "line": 2406
+   },
+   {
+    "sig": "takeHealth(float damageAmount)",
+    "line": 2411
+   },
+   {
+    "sig": "takeHealthWithoutDamageReaction(float damageAmount)",
+    "line": 2417
+   },
+   {
+    "sig": "takeConstantDamage(float damageAmount)",
+    "line": 2429
+   },
+   {
+    "sig": "takeConstantDamageWithoutShield(float damageAmount)",
+    "line": 2435
+   },
+   {
+    "sig": "takeDamageFromDebugDamageSourceTransform(float damageAmount)",
+    "line": 2441
+   },
+   {
+    "sig": "getShieldSystem()",
+    "line": 2449
+   },
+   {
+    "sig": "getShieldAmountToLimit()",
+    "line": 2454
+   },
+   {
+    "sig": "addAuxShieldAmount(float amount)",
+    "line": 2463
+   },
+   {
+    "sig": "callExtraDeadFunctions()",
+    "line": 2470
+   },
+   {
+    "sig": "getPlaceToShoot()",
+    "line": 2505
+   },
+   {
+    "sig": "getTransformToAttachWeaponsByClosestPosition(Vector3 positionToCheck)",
+    "line": 2510
+   },
+   {
+    "sig": "getClosestWeakSpotPositionToPosition(Vector3 positionToCheck, List<string> weakListNameToCheck, bool checkWeakListName, float maxDistanceToBodyPart)",
+    "line": 2568
+   },
+   {
+    "sig": "updateDamageReceivers()",
+    "line": 2632
+   },
+   {
+    "sig": "activateAllEventsOnEmptyHealthAmountOnWeakSpotsList()",
+    "line": 2660
+   },
+   {
+    "sig": "activateAllEventsOnDamageWeakSpotsList()",
+    "line": 2673
+   },
+   {
+    "sig": "getImpactListInfo()",
+    "line": 2691
+   },
+   {
+    "sig": "getDecalImpactIndex()",
+    "line": 2711
+   },
+   {
+    "sig": "isUseImpactSurfaceActive()",
+    "line": 2716
+   },
+   {
+    "sig": "getCharacterName()",
+    "line": 2721
+   },
+   {
+    "sig": "addObjectAsNewCharacterDamageReceiver(GameObject newObject)",
+    "line": 2739
+   },
+   {
+    "sig": "setCustomTransformListDamageReceiver()",
+    "line": 2759
+   },
+   {
+    "sig": "updateCharacterDamageReceiverOnObject()",
+    "line": 2778
+   },
+   {
+    "sig": "addDamageReceiverToObject()",
+    "line": 2797
+   },
+   {
+    "sig": "setHumanoidWeaKSpots(bool clearPreviousWeakSpotList)",
+    "line": 2811
+   },
+   {
+    "sig": "resetWeakSpotDamageMultipliers()",
+    "line": 2905
+   },
+   {
+    "sig": "addWeakSpot(Transform spotTransform, string spotName, float damageMultiplier, bool killedInOneShot, HumanBodyBones newHumanBodyBone)",
+    "line": 2920
+   },
+   {
+    "sig": "enableOverrideAndActivateInvincibleState()",
+    "line": 2937
+   },
+   {
+    "sig": "disableOverrideAndActivateInvincibleState()",
+    "line": 2946
+   },
+   {
+    "sig": "setInvincibleState(bool state)",
+    "line": 2960
+   },
+   {
+    "sig": "setInvincibleStateDuration(float invincibleDuration)",
+    "line": 2986
+   },
+   {
+    "sig": "setInvincibleStateDurationWithoutDisableDamageOverTime(float invincibleDuration)",
+    "line": 2995
+   },
+   {
+    "sig": "setCheckEventsOnTemporalInvincibilityActiveState(bool state)",
+    "line": 3023
+   },
+   {
+    "sig": "checkEventsOnInvicibleStateChange(bool state)",
+    "line": 3032
+   },
+   {
+    "sig": "stopSetInvincibleStateDurationCoroutine()",
+    "line": 3043
+   },
+   {
+    "sig": "initializeHealthAmount(float newValue)",
+    "line": 3050
+   },
+   {
+    "sig": "checkLastIncreaseMaxHealthAmount()",
+    "line": 3057
+   },
+   {
+    "sig": "increaseMaxHealthAmount(float newAmount)",
+    "line": 3066
+   },
+   {
+    "sig": "increaseMaxHealthAmountByMultiplier(float amountMultiplier)",
+    "line": 3081
+   },
+   {
+    "sig": "initializeMaxHealthAmount(float newValue)",
+    "line": 3094
+   },
+   {
+    "sig": "setRegenerateHealthState(bool state)",
+    "line": 3099
+   },
+   {
+    "sig": "setConstantRegenerateState(bool state)",
+    "line": 3104
+   },
+   {
+    "sig": "initializeRegenerateAmount(float newValue)",
+    "line": 3109
+   },
+   {
+    "sig": "increaseRegenerateAmount(float newValue)",
+    "line": 3114
+   },
+   {
+    "sig": "increaseRegenerateAmountByMultiplier(float amountMultiplier)",
+    "line": 3119
+   },
+   {
+    "sig": "checkIfMaxHealth()",
+    "line": 3124
+   },
+   {
+    "sig": "setShield(float shieldAmount)",
+    "line": 3129
+   },
+   {
+    "sig": "getHealthAmountToPick(float amount)",
+    "line": 3145
+   },
+   {
+    "sig": "setGeneralDamageMultiplerActiveState(bool state)",
+    "line": 3172
+   },
+   {
+    "sig": "setGeneralDamageMultiplierValue(float newValue)",
+    "line": 3179
+   },
+   {
+    "sig": "setOriginalDamageMultiplierValue()",
+    "line": 3184
+   },
+   {
+    "sig": "characterHasWeakSpotList()",
+    "line": 3228
+   },
+   {
+    "sig": "setUseWeakSpotsActiveState(bool state)",
+    "line": 3233
+   },
+   {
+    "sig": "setOriginalUseWeakSpotsActiveState()",
+    "line": 3238
+   },
+   {
+    "sig": "setActivateRagdollOnDamageReceivedState(bool state)",
+    "line": 3243
+   },
+   {
+    "sig": "setOriginalActivateRagdollOnDamageReceivedState()",
+    "line": 3250
+   },
+   {
+    "sig": "setSliderOffset(float newValue)",
+    "line": 3412
+   },
+   {
+    "sig": "addDamageReceiverGameObjectList(GameObject newObject)",
+    "line": 3492
+   },
+   {
+    "sig": "removeDamageReceiverGameObjectList(GameObject newObject)",
+    "line": 3499
+   },
+   {
+    "sig": "clearDamageReceiverGameObjectList()",
+    "line": 3506
+   },
+   {
+    "sig": "setAllyNewNameIngame(string newName)",
+    "line": 3512
+   },
+   {
+    "sig": "setEnemyNewNameIngame(string newName)",
+    "line": 3517
+   },
+   {
+    "sig": "enableOrDisableDamageTypeInfo(string damageTypeName, bool state)",
+    "line": 3522
+   },
+   {
+    "sig": "increaseDamageTypeInfo(string damageTypeName, float extraValue)",
+    "line": 3535
+   },
+   {
+    "sig": "setObtainHealthOnDamageTypeState(string damageTypeName, bool state)",
+    "line": 3548
+   },
+   {
+    "sig": "setEventOnHealthValueEnabledStateFromEditor(string stateName)",
+    "line": 3564
+   },
+   {
+    "sig": "setEventOnHealthValueDisabledStateFromEditor(string stateName)",
+    "line": 3571
+   },
+   {
+    "sig": "setResurrectAfterDelayEnabledStateFromEditor(bool state)",
+    "line": 3578
+   },
+   {
+    "sig": "initializeHealthAmountFromEditor(float newValue)",
+    "line": 3585
+   },
+   {
+    "sig": "initializeMaxHealthAmountFromEditor(float newValue)",
+    "line": 3592
+   },
+   {
+    "sig": "updatePlayerStatsManagerValueFromEditor()",
+    "line": 3599
+   },
+   {
+    "sig": "updatePlayerStatesManagerMaxHealthValueFromEditor()",
+    "line": 3606
+   },
+   {
+    "sig": "setAllyNewName(string newName)",
+    "line": 3613
+   },
+   {
+    "sig": "setEnemyNewName(string newName)",
+    "line": 3622
+   },
+   {
+    "sig": "setUseShieldStateFromEditor(bool state)",
+    "line": 3631
+   },
+   {
+    "sig": "enableUseHealthAmountOnSpotStateFromEditor(string weakSpotName)",
+    "line": 3638
+   },
+   {
+    "sig": "disableUseHealthAmountOnSpotStateFromEditor(string weakSpotName)",
+    "line": 3645
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 3652
+   }
+  ]
+ }
+]

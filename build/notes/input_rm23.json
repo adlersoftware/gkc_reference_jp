@@ -1,0 +1,42 @@
+[
+ {
+  "type": "brainwashAIProjectile",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Powers\\New Projectiles Behaviors\\brainwashAIProjectile.cs",
+  "methods": [
+   {
+    "sig": "checkObjectDetected(Collider col)",
+    "line": 27
+   }
+  ]
+ },
+ {
+  "type": "gravityWallRunTriggerSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Powers\\gravityWallRunTriggerSystem.cs",
+  "methods": [
+   {
+    "sig": "checkTriggerInfo(Collider col, bool isEnter)",
+    "line": 35
+   }
+  ]
+ },
+ {
+  "type": "nanoBlade",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Powers\\nanoBlade.cs",
+  "methods": [
+   {
+    "sig": "checkObjectDetected(Collider col)",
+    "line": 9
+   }
+  ]
+ },
+ {
+  "type": "slowObjectsColor",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Powers\\slowObjectsColor.cs",
+  "methods": [
+   {
+    "sig": "startSlowObject(bool useSlowObjectColorValue, Color newSlowColor, float newSlowValue, float newSlowDownDuration, slowObject newSlowObjectComponent)",
+    "line": 117
+   }
+  ]
+ }
+]

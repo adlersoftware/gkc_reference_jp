@@ -1,0 +1,796 @@
+[
+ {
+  "type": "gravitySystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Gravity\\gravitySystem.cs",
+  "methods": [
+   {
+    "sig": "setAllowCircumnavigationOnAllSurfacesWithIgnoretagListState(bool state)",
+    "line": 908
+   },
+   {
+    "sig": "setCircumnavigationOnAllSurfacesWithIgnoretagList(List<string> newList)",
+    "line": 913
+   },
+   {
+    "sig": "setUpdateCurrentNormalByExternalTransformState(bool state, Transform newTransform, bool ignoreRecalculateSurfaceValue)",
+    "line": 937
+   },
+   {
+    "sig": "setIgnoreRecalculateSurfaceState(bool state)",
+    "line": 964
+   },
+   {
+    "sig": "checkOnGroundOrAirState()",
+    "line": 999
+   },
+   {
+    "sig": "activateGravityPower()",
+    "line": 1068
+   },
+   {
+    "sig": "deactivateGravityPower()",
+    "line": 1183
+   },
+   {
+    "sig": "checkKeepWeapons()",
+    "line": 1264
+   },
+   {
+    "sig": "checkKeepPower()",
+    "line": 1271
+   },
+   {
+    "sig": "changeMovementVelocity(bool value)",
+    "line": 1279
+   },
+   {
+    "sig": "addParent(GameObject obj)",
+    "line": 1310
+   },
+   {
+    "sig": "removeParent()",
+    "line": 1336
+   },
+   {
+    "sig": "setExternalGravityCenterAsParent()",
+    "line": 1351
+   },
+   {
+    "sig": "setFatherDetectedAsParent()",
+    "line": 1356
+   },
+   {
+    "sig": "setNullParent()",
+    "line": 1361
+   },
+   {
+    "sig": "setNewParent(Transform newParent)",
+    "line": 1366
+   },
+   {
+    "sig": "setCorrectParent()",
+    "line": 1382
+   },
+   {
+    "sig": "changeCameraView(bool state)",
+    "line": 1392
+   },
+   {
+    "sig": "canRotatePlayer()",
+    "line": 1420
+   },
+   {
+    "sig": "changeOnTrigger(Vector3 dir, Vector3 right)",
+    "line": 1426
+   },
+   {
+    "sig": "stopGravityPower()",
+    "line": 1473
+   },
+   {
+    "sig": "checkRotateToSurface(Vector3 normal, float rotSpeed)",
+    "line": 1528
+   },
+   {
+    "sig": "stopRotateToSurfaceCoroutine()",
+    "line": 1535
+   },
+   {
+    "sig": "rotateToSurface(Vector3 normal, float rotSpeed)",
+    "line": 1543
+   },
+   {
+    "sig": "isCharacterRotatingToSurface()",
+    "line": 1672
+   },
+   {
+    "sig": "checkRotateToSurfaceWithoutParent(Vector3 normal, float rotSpeed)",
+    "line": 1686
+   },
+   {
+    "sig": "stopRotateToSurfaceWithOutParentCoroutine()",
+    "line": 1693
+   },
+   {
+    "sig": "rotateToSurfaceWithOutParent(Vector3 normal, float rotSpeed)",
+    "line": 1701
+   },
+   {
+    "sig": "setNormal(Vector3 normal)",
+    "line": 1755
+   },
+   {
+    "sig": "setCurrentNormal(Vector3 newValue)",
+    "line": 1787
+   },
+   {
+    "sig": "getRegularGravity()",
+    "line": 1797
+   },
+   {
+    "sig": "updateCurrentRotatingNormal(Vector3 newNormal)",
+    "line": 1802
+   },
+   {
+    "sig": "getCurrentRotatingNormal()",
+    "line": 1807
+   },
+   {
+    "sig": "checkRotateCharacter(Vector3 normal)",
+    "line": 1814
+   },
+   {
+    "sig": "rotateCharacter(Vector3 normal)",
+    "line": 1828
+   },
+   {
+    "sig": "changeGravityDirectionDirectlyInvertedValue(Vector3 gravityDirection, bool preserveVelocity)",
+    "line": 1854
+   },
+   {
+    "sig": "changeGravityDirectionDirectly(Vector3 gravityDirection, bool preserveVelocity)",
+    "line": 1859
+   },
+   {
+    "sig": "setCurrentSetGravityManager(setGravity currentSetGravity)",
+    "line": 1903
+   },
+   {
+    "sig": "setCurrentGravityCenterPoint(Transform newTransform)",
+    "line": 1910
+   },
+   {
+    "sig": "getCurrentSetGravityManager()",
+    "line": 1917
+   },
+   {
+    "sig": "changeColor(bool state)",
+    "line": 1922
+   },
+   {
+    "sig": "changeColorCoroutine(bool value)",
+    "line": 1936
+   },
+   {
+    "sig": "setMeshCharacter(SkinnedMeshRenderer currentMeshCharacter)",
+    "line": 1963
+   },
+   {
+    "sig": "death(bool state)",
+    "line": 1973
+   },
+   {
+    "sig": "setGravityArrow(GameObject obj)",
+    "line": 1988
+   },
+   {
+    "sig": "setGravityArrowState(bool state)",
+    "line": 1993
+   },
+   {
+    "sig": "setFirstPersonView(bool state)",
+    "line": 2004
+   },
+   {
+    "sig": "isCurcumnavigating()",
+    "line": 2014
+   },
+   {
+    "sig": "isGravityPowerActive()",
+    "line": 2024
+   },
+   {
+    "sig": "startOverride()",
+    "line": 2029
+   },
+   {
+    "sig": "stopOverride()",
+    "line": 2034
+   },
+   {
+    "sig": "overrideTurretControlState(bool state)",
+    "line": 2039
+   },
+   {
+    "sig": "isZeroGravityModeOn()",
+    "line": 2044
+   },
+   {
+    "sig": "toggleZeroGravityModeOnState()",
+    "line": 2049
+   },
+   {
+    "sig": "setZeroGravityModeOnState(bool state)",
+    "line": 2056
+   },
+   {
+    "sig": "setZeroGravityModeOnStateWithOutRotation(bool state)",
+    "line": 2081
+   },
+   {
+    "sig": "disableFreeFloatingModeOnIfActive()",
+    "line": 2098
+   },
+   {
+    "sig": "setfreeFloatingModeOnState(bool state)",
+    "line": 2105
+   },
+   {
+    "sig": "checkEventsOnFreeFloatingModeStateChange(bool state)",
+    "line": 2128
+   },
+   {
+    "sig": "checkEventsOnZeroGravityModeStateChange(bool state)",
+    "line": 2139
+   },
+   {
+    "sig": "checkEventsOnUseGravityPowerStateChange(bool state)",
+    "line": 2150
+   },
+   {
+    "sig": "setPowerActivateState(bool state)",
+    "line": 2161
+   },
+   {
+    "sig": "changeFreeFloatingModeOnState()",
+    "line": 2168
+   },
+   {
+    "sig": "setfreeFloatingModeOnStateWithDelay(float delayAmount, bool state)",
+    "line": 2173
+   },
+   {
+    "sig": "stopSetfreeFloatingModeOnStateWithDelayCoroutine()",
+    "line": 2180
+   },
+   {
+    "sig": "setfreeFloatingModeOnStateWithDelayCoroutine(float delayAmount, bool state)",
+    "line": 2187
+   },
+   {
+    "sig": "setCanActivateFreeFloatingModeState(bool state)",
+    "line": 2194
+   },
+   {
+    "sig": "rotateCharacterInZeroGravityMode(Vector3 normal, float rotSpeed)",
+    "line": 2199
+   },
+   {
+    "sig": "rotateCharacterInZeroGravityModeCoroutine(Vector3 normal, float rotSpeed)",
+    "line": 2209
+   },
+   {
+    "sig": "teleportPlayer(Vector3 teleportPosition, float teleportSpeed, Vector3 normal, float rotSpeed)",
+    "line": 2242
+   },
+   {
+    "sig": "stopTeleporting()",
+    "line": 2249
+   },
+   {
+    "sig": "setPlayerControlState(bool state)",
+    "line": 2258
+   },
+   {
+    "sig": "isTeleportInProcess()",
+    "line": 2345
+   },
+   {
+    "sig": "setGravityPowerEnabledState(bool state)",
+    "line": 2350
+   },
+   {
+    "sig": "setGravityPowerState(bool enablePower)",
+    "line": 2355
+   },
+   {
+    "sig": "disableGravityPowerIfOnAir()",
+    "line": 2370
+   },
+   {
+    "sig": "enableCameraShake()",
+    "line": 2377
+   },
+   {
+    "sig": "disableCameraShake()",
+    "line": 2386
+   },
+   {
+    "sig": "setCameraShakeCanBeUsedState(bool state)",
+    "line": 2397
+   },
+   {
+    "sig": "setGravityPowerInputEnabledState(bool state)",
+    "line": 2406
+   },
+   {
+    "sig": "inputSetGravityPowerState(bool enablePower)",
+    "line": 2412
+   },
+   {
+    "sig": "inputChangeGravitySpeed(bool increaseSpeed)",
+    "line": 2419
+   },
+   {
+    "sig": "inputAdjustToSurfaceOnZeroGravity()",
+    "line": 2430
+   },
+   {
+    "sig": "setCustomDirectionOnResetZeroGravityRotationValue(Vector3 newValue)",
+    "line": 2445
+   },
+   {
+    "sig": "setCustomDirectionOnResetZeroGravityRotationValue(Transform newTransform)",
+    "line": 2450
+   },
+   {
+    "sig": "inputResetRotationOnZeroGravity()",
+    "line": 2455
+   },
+   {
+    "sig": "inputToggleReverseGravity()",
+    "line": 2482
+   },
+   {
+    "sig": "setCurrentZeroGravityRoom(zeroGravityRoomSystem gravityRoom)",
+    "line": 2499
+   },
+   {
+    "sig": "isPlayerInsiderGravityRoom()",
+    "line": 2510
+   },
+   {
+    "sig": "getCurrentZeroGravityRoom()",
+    "line": 2515
+   },
+   {
+    "sig": "getCurrentSurfaceBelowPlayer()",
+    "line": 2520
+   },
+   {
+    "sig": "addObjectToCurrentZeroGravityRoomSystem(GameObject objectToAdd)",
+    "line": 2525
+   },
+   {
+    "sig": "setCircumnavigateSurfaceState(bool state)",
+    "line": 2532
+   },
+   {
+    "sig": "setCheckSurfaceInFrontState(bool state)",
+    "line": 2558
+   },
+   {
+    "sig": "setCheckSurfaceBelowLedgeState(bool state)",
+    "line": 2563
+   },
+   {
+    "sig": "setUsedByAIState(bool state)",
+    "line": 2568
+   }
+  ]
+ },
+ {
+  "type": "zeroGravityRoomSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Gravity\\zeroGravityRoomSystem.cs",
+  "methods": [
+   {
+    "sig": "checkObjectToAdd(GameObject newObject)",
+    "line": 192
+   },
+   {
+    "sig": "checkObjectToRemove(GameObject newObject)",
+    "line": 250
+   },
+   {
+    "sig": "removeObjectFromRoom(GameObject newObject)",
+    "line": 319
+   },
+   {
+    "sig": "setObjectInsideState(GameObject newObject)",
+    "line": 379
+   },
+   {
+    "sig": "ContainsPoint(Vector2 currentPosition)",
+    "line": 459
+   },
+   {
+    "sig": "checkInsideFarthestPosition(Vector3 currentPosition)",
+    "line": 484
+   },
+   {
+    "sig": "objectInsideRoom(GameObject objectToCheck)",
+    "line": 495
+   },
+   {
+    "sig": "FindParentWithTag(GameObject childObject, List<string> tagList)",
+    "line": 504
+   },
+   {
+    "sig": "setNewGravityForceValueForObjectsInsideRoom(float newGravityForceValue)",
+    "line": 519
+   },
+   {
+    "sig": "setOriginalGravityForceValueForObjectsInsideRoom()",
+    "line": 524
+   },
+   {
+    "sig": "setGravityForceValueForObjectsInsideRoom(bool setOriginal, float newValue)",
+    "line": 529
+   },
+   {
+    "sig": "setZeroGravityStateOnRoom()",
+    "line": 556
+   },
+   {
+    "sig": "setRegularGravityStateOnRoom()",
+    "line": 572
+   },
+   {
+    "sig": "setCustomGravityStateOnRoom()",
+    "line": 586
+   },
+   {
+    "sig": "setCustomGravityStateOnRoom(Transform newGravityDirectionTransform)",
+    "line": 596
+   },
+   {
+    "sig": "setOriginalGravityDirectionStateOnRoom()",
+    "line": 605
+   },
+   {
+    "sig": "updateObjectsAndCharactersGravityInsideRoom()",
+    "line": 614
+   },
+   {
+    "sig": "setCharactersGravityStateOnRoom(bool hasRegularGravity, bool hasZeroGravity)",
+    "line": 625
+   },
+   {
+    "sig": "addForceToObjectsOnZeroGravity()",
+    "line": 654
+   },
+   {
+    "sig": "addExplosionForceToObjectsOnZeroGravity()",
+    "line": 672
+   },
+   {
+    "sig": "playSound(AudioElement sound)",
+    "line": 689
+   },
+   {
+    "sig": "addObjectToRoom(GameObject objectToAdd)",
+    "line": 698
+   },
+   {
+    "sig": "addObjectsToRoom(Transform parentToCheck)",
+    "line": 703
+   },
+   {
+    "sig": "addChildsFromParent(Transform parentToCheck)",
+    "line": 714
+   },
+   {
+    "sig": "isRoomHasZeroGravityActive()",
+    "line": 725
+   },
+   {
+    "sig": "renameRoomPoints()",
+    "line": 732
+   },
+   {
+    "sig": "addRoomPoint()",
+    "line": 741
+   },
+   {
+    "sig": "addRoomPoint(int index)",
+    "line": 766
+   },
+   {
+    "sig": "removeRoomPoint(int index)",
+    "line": 787
+   },
+   {
+    "sig": "removeAllRoomPoints()",
+    "line": 798
+   }
+  ]
+ },
+ {
+  "type": "vehicleGravityControl",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Gravity\\vehicleGravityControl.cs",
+  "methods": [
+   {
+    "sig": "setCollisionDetected(Collision currentCollision)",
+    "line": 637
+   },
+   {
+    "sig": "setFatherDetectedAsParent()",
+    "line": 678
+   },
+   {
+    "sig": "setNullParent()",
+    "line": 685
+   },
+   {
+    "sig": "activateGravityPower(Vector3 dir, Vector3 right)",
+    "line": 704
+   },
+   {
+    "sig": "deactivateGravityPower()",
+    "line": 735
+   },
+   {
+    "sig": "changeGravityControlState(bool state)",
+    "line": 785
+   },
+   {
+    "sig": "rotateToSurface(Vector3 normal, int rotSpeed)",
+    "line": 798
+   },
+   {
+    "sig": "setUseCenterPointActiveState(bool state, Transform newCenterPoint)",
+    "line": 841
+   },
+   {
+    "sig": "rotateVehicleToRaycastDirection(Vector3 raycastDirection)",
+    "line": 848
+   },
+   {
+    "sig": "rotateVehicleToLandSurface(Vector3 hitNormal)",
+    "line": 955
+   },
+   {
+    "sig": "rotateVehicleToLandSurfaceCoroutine(Vector3 hitNormal)",
+    "line": 968
+   },
+   {
+    "sig": "getCurrentCameraPivot(Transform newPivot)",
+    "line": 1009
+   },
+   {
+    "sig": "pauseDownForce(bool state)",
+    "line": 1014
+   },
+   {
+    "sig": "setCustomNormal(Vector3 normal)",
+    "line": 1019
+   },
+   {
+    "sig": "getGravityForce()",
+    "line": 1038
+   },
+   {
+    "sig": "setNewGravityForce(float newValue)",
+    "line": 1043
+   },
+   {
+    "sig": "setOriginalGravityForce()",
+    "line": 1048
+   },
+   {
+    "sig": "getRegularGravity()",
+    "line": 1058
+   },
+   {
+    "sig": "updateCurrentNormalExternally(Vector3 newValue)",
+    "line": 1063
+   },
+   {
+    "sig": "changeDriverGravityWhenGetsOffActive()",
+    "line": 1068
+   },
+   {
+    "sig": "isSetVehicleRegularGravityOnDriverGetOffActive()",
+    "line": 1073
+   },
+   {
+    "sig": "setGravityForcePausedState(bool state)",
+    "line": 1078
+   },
+   {
+    "sig": "isGravityPowerActive()",
+    "line": 1083
+   },
+   {
+    "sig": "isGravityControlEnabled()",
+    "line": 1088
+   },
+   {
+    "sig": "inputEnableOrDisableGravityControl(bool enableGravityControl)",
+    "line": 1094
+   },
+   {
+    "sig": "inputIncreasOrDecreaseGravitySpeed(bool increaseGravitySpeed)",
+    "line": 1116
+   },
+   {
+    "sig": "setCheckDownSpeedActiveState(bool state)",
+    "line": 1139
+   }
+  ]
+ },
+ {
+  "type": "artificialObjectGravity",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Gravity\\artificialObjectGravity.cs",
+  "methods": [
+   {
+    "sig": "getComponents()",
+    "line": 66
+   },
+   {
+    "sig": "enableGravity(LayerMask layer, PhysicsMaterial frictionMaterial, Vector3 normalDirection)",
+    "line": 185
+   },
+   {
+    "sig": "setActiveState(bool state)",
+    "line": 202
+   },
+   {
+    "sig": "removeGravity()",
+    "line": 207
+   },
+   {
+    "sig": "removeGravityComponent()",
+    "line": 221
+   },
+   {
+    "sig": "removeJustGravityComponent()",
+    "line": 228
+   },
+   {
+    "sig": "setZeroGravityActiveState(bool state)",
+    "line": 305
+   },
+   {
+    "sig": "setCurrentGravity(Vector3 newNormal)",
+    "line": 317
+   },
+   {
+    "sig": "setUseCenterPointActiveState(bool state, Transform newCenterPoint)",
+    "line": 330
+   },
+   {
+    "sig": "setUseInverseDirectionToCenterPointState(bool state)",
+    "line": 337
+   },
+   {
+    "sig": "setGravityForceValue(bool setOriginal, float newValue)",
+    "line": 342
+   },
+   {
+    "sig": "setUseCenterPointListForRigidbodiesState(bool state, List<Transform> newCenterPointList)",
+    "line": 351
+   },
+   {
+    "sig": "getCurrentNormalDirection()",
+    "line": 358
+   }
+  ]
+ },
+ {
+  "type": "gravityObjectManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Gravity\\gravityObjectManager.cs",
+  "methods": [
+   {
+    "sig": "onGroundOrOnAir(bool state)",
+    "line": 7
+   },
+   {
+    "sig": "isSearchingSurface()",
+    "line": 12
+   },
+   {
+    "sig": "getCurrentNormal()",
+    "line": 17
+   },
+   {
+    "sig": "getGravityCenter()",
+    "line": 22
+   },
+   {
+    "sig": "isPlayerSearchingGravitySurface()",
+    "line": 27
+   },
+   {
+    "sig": "isUsingRegularGravity()",
+    "line": 32
+   }
+  ]
+ },
+ {
+  "type": "setGravity",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Gravity\\setGravity.cs",
+  "methods": [
+   {
+    "sig": "checkObjectGravityOnEnter(GameObject objectToCheck)",
+    "line": 162
+   },
+   {
+    "sig": "checkObjectGravityOnExit(GameObject objectToCheck)",
+    "line": 167
+   },
+   {
+    "sig": "checkTriggerType(Collider col, bool isEnter)",
+    "line": 172
+   },
+   {
+    "sig": "checkObjectOnGravitySystem(GameObject objectToCheck, bool isEnter)",
+    "line": 193
+   },
+   {
+    "sig": "getGravityDirection(Vector3 objectPosition)",
+    "line": 465
+   },
+   {
+    "sig": "reverseGravityDirection()",
+    "line": 509
+   }
+  ]
+ },
+ {
+  "type": "parentAssignedSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Gravity\\parentAssignedSystem.cs",
+  "methods": [
+   {
+    "sig": "assignParent(GameObject newParent)",
+    "line": 19
+   },
+   {
+    "sig": "getAssignedParent()",
+    "line": 26
+   },
+   {
+    "sig": "getAssignedParentTransform()",
+    "line": 39
+   }
+  ]
+ },
+ {
+  "type": "updateCharacterGravityTriggerSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Gravity\\updateCharacterGravityTriggerSystem.cs",
+  "methods": [
+   {
+    "sig": "checkTriggerType(Collider col, bool isEnter)",
+    "line": 45
+   },
+   {
+    "sig": "checkObjectOnGravitySystem(GameObject objectToCheck, bool isEnter)",
+    "line": 58
+   }
+  ]
+ },
+ {
+  "type": "zeroGravityRoomObjectChecker",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Gravity\\zeroGravityRoomObjectChecker.cs",
+  "methods": [
+   {
+    "sig": "setCurrentZeroGravityRoom(zeroGravityRoomSystem gravityRoom)",
+    "line": 21
+   },
+   {
+    "sig": "checkAddObjectToCurrentRoom(GameObject newObject)",
+    "line": 32
+   }
+  ]
+ }
+]

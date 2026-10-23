@@ -1,0 +1,618 @@
+[
+ {
+  "type": "vehicleWeaponSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\vehicleWeaponSystem.cs",
+  "source": "Vehicles/vehicleWeaponSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "weaponsEnabled",
+    "label": "",
+    "section": "Basic Settings"
+   },
+   {
+    "field": "vehicle",
+    "label": "",
+    "section": "Basic Settings"
+   },
+   {
+    "field": "weaponLookDirection",
+    "label": "",
+    "section": "Basic Settings"
+   },
+   {
+    "field": "weaponsSlotsAmount",
+    "label": "",
+    "section": "Basic Settings"
+   },
+   {
+    "field": "weaponIndexToStart",
+    "label": "",
+    "section": "Basic Settings"
+   },
+   {
+    "field": "projectilesPoolEnabled",
+    "label": "",
+    "section": "Basic Settings"
+   },
+   {
+    "field": "maxAmountOfPoolElementsOnWeapon",
+    "label": "",
+    "section": "Basic Settings"
+   },
+   {
+    "field": "ignoreDisableVehicleWeaponsIfDestroyed",
+    "label": "",
+    "section": "Basic Settings"
+   },
+   {
+    "field": "weaponsEffectsSource",
+    "label": "",
+    "section": "Basic Settings"
+   },
+   {
+    "field": "outOfAmmo",
+    "label": "",
+    "section": "Basic Settings"
+   },
+   {
+    "field": "outOfAmmoAudioElement",
+    "label": "",
+    "section": "Basic Settings"
+   },
+   {
+    "field": "layer",
+    "label": "",
+    "section": "Target Detection Settings"
+   },
+   {
+    "field": "targetForScorchLayer",
+    "label": "",
+    "section": "Target Detection Settings"
+   },
+   {
+    "field": "useCustomIgnoreTags",
+    "label": "",
+    "section": "Target Detection Settings"
+   },
+   {
+    "field": "hasBaseRotation",
+    "label": "",
+    "section": "Base Rotation Settings"
+   },
+   {
+    "field": "minimumX",
+    "label": "",
+    "section": "Base Rotation Settings"
+   },
+   {
+    "field": "maximumX",
+    "label": "",
+    "section": "Base Rotation Settings"
+   },
+   {
+    "field": "minimumY",
+    "label": "",
+    "section": "Base Rotation Settings"
+   },
+   {
+    "field": "maximumY",
+    "label": "",
+    "section": "Base Rotation Settings"
+   },
+   {
+    "field": "mainVehicleWeaponsGameObject",
+    "label": "",
+    "section": "Base Rotation Settings"
+   },
+   {
+    "field": "baseX",
+    "label": "",
+    "section": "Base Rotation Settings"
+   },
+   {
+    "field": "baseY",
+    "label": "",
+    "section": "Base Rotation Settings"
+   },
+   {
+    "field": "baseXRotationSpeed",
+    "label": "",
+    "section": "Base Rotation Settings"
+   },
+   {
+    "field": "baseYRotationSpeed",
+    "label": "",
+    "section": "Base Rotation Settings"
+   },
+   {
+    "field": "noInputWeaponDirection",
+    "label": "",
+    "section": "Base Rotation Settings"
+   },
+   {
+    "field": "canRotateWeaponsWithNoCameraInput",
+    "label": "",
+    "section": "Base Rotation Settings"
+   },
+   {
+    "field": "noCameraInputWeaponRotationSpeed",
+    "label": "",
+    "section": "Base Rotation Settings"
+   },
+   {
+    "field": "weaponCursorMovementSpeed",
+    "label": "",
+    "section": "Base Rotation Settings"
+   },
+   {
+    "field": "weaponCursorRaycastLayer",
+    "label": "",
+    "section": "Base Rotation Settings"
+   },
+   {
+    "field": "useWeaponCursorScreenLimit",
+    "label": "",
+    "section": "Base Rotation Settings"
+   },
+   {
+    "field": "weaponCursorHorizontalLimit",
+    "label": "",
+    "section": "Base Rotation Settings"
+   },
+   {
+    "field": "weaponCursorVerticalLimit",
+    "label": "",
+    "section": "Base Rotation Settings"
+   },
+   {
+    "field": "circleCameraLimit2_5d",
+    "label": "",
+    "section": "Base Rotation Settings"
+   },
+   {
+    "field": "vehicleCameraManager",
+    "label": "",
+    "section": "Vehicle Elements"
+   },
+   {
+    "field": "mainRigidbody",
+    "label": "",
+    "section": "Vehicle Elements"
+   },
+   {
+    "field": "actionManager",
+    "label": "",
+    "section": "Vehicle Elements"
+   },
+   {
+    "field": "hudManager",
+    "label": "",
+    "section": "Vehicle Elements"
+   },
+   {
+    "field": "parable",
+    "label": "",
+    "section": "Vehicle Elements"
+   },
+   {
+    "field": "gravityControlManager",
+    "label": "",
+    "section": "Vehicle Elements"
+   },
+   {
+    "field": "vehicleCameraManagerTransform",
+    "label": "",
+    "section": "Vehicle Elements"
+   },
+   {
+    "field": "minSwipeDist",
+    "label": "",
+    "section": "Touch Options"
+   },
+   {
+    "field": "mainDecalManagerName",
+    "label": "",
+    "section": "Weapons List"
+   }
+  ]
+ },
+ {
+  "type": "vendorSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vendor System\\vendorSystem.cs",
+  "source": "Vendor System/vendorSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "useGeneralBuyPriceMultiplier",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "generalBuyPriceMultiplayerPercentage",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useGeneralSellPriceMultiplier",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "generalSellPriceMultiplayerPercentage",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "infiniteVendorAmountAvailable",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "gameSystemManager",
+    "label": "",
+    "section": "Main Inventory Elements"
+   },
+   {
+    "field": "mainInventoryManager",
+    "label": "",
+    "section": "Main Inventory Elements"
+   },
+   {
+    "field": "loadCurrentVendorInventoryFromSaveFile",
+    "label": "",
+    "section": "Save/Load Vendor Inventory Settings"
+   },
+   {
+    "field": "saveCurrentVendorInventoryToSaveFile",
+    "label": "",
+    "section": "Save/Load Vendor Inventory Settings"
+   }
+  ]
+ },
+ {
+  "type": "waypointPlatform",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\waypointPlatform.cs",
+  "source": "Devices/waypointPlatform.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "platformActive",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "playerTag",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "vehicleTag",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "repeatWaypoints",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "moveInCircles",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "stopIfPlayerOutside",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "waitTimeBetweenPoints",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "movementSpeed",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "movingForward",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useJustToMovePlatform",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "mirrorPlatformMovement",
+    "label": "",
+    "section": "Mirror Platform Options"
+   },
+   {
+    "field": "mirrorMovementDirection",
+    "label": "",
+    "section": "Mirror Platform Options"
+   },
+   {
+    "field": "platformToMirror",
+    "label": "",
+    "section": "Mirror Platform Options"
+   },
+   {
+    "field": "returnToTransformWhenPlayerExits",
+    "label": "",
+    "section": "Return To Transform Options"
+   },
+   {
+    "field": "transformToReturnWhenPlayerExits",
+    "label": "",
+    "section": "Return To Transform Options"
+   },
+   {
+    "field": "delayToReturnWhenPlayerExits",
+    "label": "",
+    "section": "Return To Transform Options"
+   },
+   {
+    "field": "returnMovementSpeed",
+    "label": "",
+    "section": "Return To Transform Options"
+   },
+   {
+    "field": "resetWaypointIndexOnReturn",
+    "label": "",
+    "section": "Return To Transform Options"
+   },
+   {
+    "field": "useEventOnWaypointReached",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "platformTransform",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "deviceStringActionManager",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "waypointsParent",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "showGizmo",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "showVertexHandles",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "gizmoLabelColor",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "gizmoRadius",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "useHandleForVertex",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "handleRadius",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "handleGizmoColor",
+    "label": "",
+    "section": "Gizmo Options"
+   }
+  ]
+ },
+ {
+  "type": "waypointPlayerPathSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\waypointPlayerPathSystem.cs",
+  "source": "Devices/waypointPlayerPathSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "inOrder",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "showOneByOne",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "triggerRadius",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "showOffScreenIcon",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "showMapWindowIcon",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "showDistance",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "pathActive",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "mainManagerName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "eventOnPathComplete",
+    "label": "",
+    "section": "Events To Call Settings"
+   },
+   {
+    "field": "eventOnPathIncomplete",
+    "label": "",
+    "section": "Events To Call Settings"
+   },
+   {
+    "field": "useTimer",
+    "label": "",
+    "section": "Events To Call Settings"
+   },
+   {
+    "field": "timerSpeed",
+    "label": "",
+    "section": "Events To Call Settings"
+   },
+   {
+    "field": "minutesToComplete",
+    "label": "",
+    "section": "Events To Call Settings"
+   },
+   {
+    "field": "secondsToComplete",
+    "label": "",
+    "section": "Events To Call Settings"
+   },
+   {
+    "field": "extraTimePerPoint",
+    "label": "",
+    "section": "Events To Call Settings"
+   },
+   {
+    "field": "pathCompleteAudioSound",
+    "label": "",
+    "section": "Events To Call Settings"
+   },
+   {
+    "field": "pathCompleteAudioElement",
+    "label": "",
+    "section": "Events To Call Settings"
+   },
+   {
+    "field": "pathUncompleteAudioSound",
+    "label": "",
+    "section": "Events To Call Settings"
+   },
+   {
+    "field": "pathUncompleteAudioElement",
+    "label": "",
+    "section": "Events To Call Settings"
+   },
+   {
+    "field": "secondTimerSound",
+    "label": "",
+    "section": "Events To Call Settings"
+   },
+   {
+    "field": "secondTimerAudioElement",
+    "label": "",
+    "section": "Events To Call Settings"
+   },
+   {
+    "field": "secondSoundTimerLowerThan",
+    "label": "",
+    "section": "Events To Call Settings"
+   },
+   {
+    "field": "pointReachedSound",
+    "label": "",
+    "section": "Events To Call Settings"
+   },
+   {
+    "field": "pointReachedAudioElement",
+    "label": "",
+    "section": "Events To Call Settings"
+   },
+   {
+    "field": "useLineRenderer",
+    "label": "",
+    "section": "Events To Call Settings"
+   },
+   {
+    "field": "lineRendererColor",
+    "label": "",
+    "section": "Events To Call Settings"
+   },
+   {
+    "field": "lineRendererWidth",
+    "label": "",
+    "section": "Events To Call Settings"
+   },
+   {
+    "field": "showGizmo",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "showInfoLabel",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "gizmoLabelColor",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "gizmoRadius",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "useRegularGizmoRadius",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "useHandleForVertex",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "handleRadius",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "handleGizmoColor",
+    "label": "",
+    "section": "Gizmo Options"
+   },
+   {
+    "field": "showDoPositionHandles",
+    "label": "",
+    "section": "Gizmo Options"
+   }
+  ]
+ }
+]

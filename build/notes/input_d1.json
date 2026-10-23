@@ -1,0 +1,306 @@
+[
+ {
+  "type": "dialogInfo",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Dialog System\\completeDialogInfo.cs",
+  "methods": [
+   {
+    "sig": "InitializeAudioElements()",
+    "line": 126
+   }
+  ]
+ },
+ {
+  "type": "simpleDialogInfo",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Dialog System\\completeDialogInfo.cs",
+  "methods": [
+   {
+    "sig": "InitializeAudioElements()",
+    "line": 222
+   }
+  ]
+ },
+ {
+  "type": "dialogContentSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Dialog System\\dialogContentSystem.cs",
+  "methods": [
+   {
+    "sig": "setCurrentPlayer(GameObject newPlayer)",
+    "line": 72
+   },
+   {
+    "sig": "activateDialog()",
+    "line": 77
+   },
+   {
+    "sig": "setDialogInProcessState(bool state)",
+    "line": 125
+   },
+   {
+    "sig": "activateEventOnDialogStopped()",
+    "line": 134
+   },
+   {
+    "sig": "setNextCompleteDialogIndex()",
+    "line": 143
+   },
+   {
+    "sig": "setPrevioustCompleteDialogIndex()",
+    "line": 152
+   },
+   {
+    "sig": "setCompleteDialogIndex(int newIndex)",
+    "line": 161
+   },
+   {
+    "sig": "setPlayingExternalDialogState(bool state)",
+    "line": 170
+   },
+   {
+    "sig": "checkIfPlayDialogOnTriggerEnter()",
+    "line": 175
+   },
+   {
+    "sig": "disableDialogCharacterAnimatorState(float delayAmount)",
+    "line": 193
+   },
+   {
+    "sig": "stopDisableDialogCharacterAnimatorStateCoroutine()",
+    "line": 204
+   },
+   {
+    "sig": "setDialogAnimatorState(bool state)",
+    "line": 218
+   },
+   {
+    "sig": "enableAnimatorLayerWeight(string animatorLayerName)",
+    "line": 229
+   },
+   {
+    "sig": "checkEventsOnDialog(bool state)",
+    "line": 236
+   },
+   {
+    "sig": "checkIfPauseOrResumeAI(bool state)",
+    "line": 247
+   },
+   {
+    "sig": "checkIfAIFollowPlayerAfterDialogEnd(bool state)",
+    "line": 288
+   },
+   {
+    "sig": "setDialogAnswerConditionCheckResult(bool state)",
+    "line": 311
+   },
+   {
+    "sig": "setNextDialogWithConditionCheckResult(bool state)",
+    "line": 326
+   },
+   {
+    "sig": "getCompleteDialogInfoTemplateByLanguageName(string languageName)",
+    "line": 341
+   },
+   {
+    "sig": "getDialogContentID()",
+    "line": 353
+   },
+   {
+    "sig": "getDialogContentScene()",
+    "line": 358
+   },
+   {
+    "sig": "getCurrentDialogIndex()",
+    "line": 363
+   },
+   {
+    "sig": "addNewDialog()",
+    "line": 369
+   },
+   {
+    "sig": "addNewLine(int dialogIndex)",
+    "line": 380
+   },
+   {
+    "sig": "addNewAnswer(int dialogIndex, int lineIndex)",
+    "line": 391
+   },
+   {
+    "sig": "assignIDToDialog(int newID)",
+    "line": 402
+   },
+   {
+    "sig": "assignDialogContentScene(int newScene)",
+    "line": 409
+   },
+   {
+    "sig": "setDialogOwnerGameObject(GameObject newOwner)",
+    "line": 416
+   },
+   {
+    "sig": "addDialogToCharacterManually()",
+    "line": 448
+   },
+   {
+    "sig": "addDialogContentToTemplate()",
+    "line": 460
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 516
+   }
+  ]
+ },
+ {
+  "type": "dialogManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Dialog System\\dialogManager.cs",
+  "methods": [
+   {
+    "sig": "getComponentInstance()",
+    "line": 48
+   },
+   {
+    "sig": "getAllDialogContentSystemOnLevel()",
+    "line": 72
+   },
+   {
+    "sig": "getAllDialogContentOnLevelAndAssignInfo()",
+    "line": 85
+   },
+   {
+    "sig": "clearDialogContentList()",
+    "line": 105
+   },
+   {
+    "sig": "getDialogContentSystem(int dialogContentID, int dialogContentScene)",
+    "line": 112
+   },
+   {
+    "sig": "instantiateDialogContentSystem()",
+    "line": 131
+   },
+   {
+    "sig": "instantiateExternalDialogSystem()",
+    "line": 136
+   },
+   {
+    "sig": "instantateObjectOnLevel(GameObject objectToInstantiate)",
+    "line": 141
+   },
+   {
+    "sig": "getLastObjectInstantiated()",
+    "line": 170
+   },
+   {
+    "sig": "addDialogContentToCharacter(Transform newDialogContentParent, GameObject newDialogContentOwner)",
+    "line": 175
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 188
+   }
+  ]
+ },
+ {
+  "type": "dialogSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Dialog System\\dialogSystem.cs",
+  "methods": [
+   {
+    "sig": "setNewDialogContent(dialogContentSystem newDialogContent)",
+    "line": 227
+   },
+   {
+    "sig": "playDialogWithoutPausingPlayer()",
+    "line": 351
+   },
+   {
+    "sig": "inputPlayNextDialogWioutPausingPlayer()",
+    "line": 364
+   },
+   {
+    "sig": "playDialogWithoutPausingPlayerOneByOne()",
+    "line": 434
+   },
+   {
+    "sig": "playNextDialogWithoutPausingPlayer()",
+    "line": 451
+   },
+   {
+    "sig": "playNextDialogWithoutPausingPlayerShowingDialogLinePartByPart()",
+    "line": 471
+   },
+   {
+    "sig": "stopPlayNextDialogWithoutPausingPlayerShowingDialogLinePartByPartCoroutine()",
+    "line": 492
+   },
+   {
+    "sig": "stopPlayDialogWithoutPausingPlayerCoroutine()",
+    "line": 612
+   },
+   {
+    "sig": "setNextDialog()",
+    "line": 750
+   },
+   {
+    "sig": "setNextDialogWithConditionCheckResult(bool state)",
+    "line": 821
+   },
+   {
+    "sig": "closeDialogIfActive()",
+    "line": 842
+   },
+   {
+    "sig": "closeDialog()",
+    "line": 849
+   },
+   {
+    "sig": "setDialogContentAnswer(Button buttonToCheck)",
+    "line": 928
+   },
+   {
+    "sig": "setDialogAnswerConditionCheckResult(bool state)",
+    "line": 1007
+   },
+   {
+    "sig": "checkDialogEvents()",
+    "line": 1030
+   },
+   {
+    "sig": "updateDialogContent()",
+    "line": 1047
+   },
+   {
+    "sig": "disableDialogCharacterAnimatorState(float delayAmount)",
+    "line": 1517
+   },
+   {
+    "sig": "stopDisableDialogCharacterAnimatorStateCoroutine()",
+    "line": 1528
+   },
+   {
+    "sig": "setDialogAnimatorState(bool state)",
+    "line": 1542
+   }
+  ]
+ },
+ {
+  "type": "externalDialogTriggerSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Dialog System\\externalDialogTriggerSystem.cs",
+  "methods": [
+   {
+    "sig": "activateDialogByCharacter(GameObject newCharacter)",
+    "line": 33
+   },
+   {
+    "sig": "activateDialog()",
+    "line": 49
+   },
+   {
+    "sig": "activateDialogToPlayer(GameObject playerToCheck)",
+    "line": 68
+   },
+   {
+    "sig": "findPlayerOnScene()",
+    "line": 108
+   }
+  ]
+ }
+]

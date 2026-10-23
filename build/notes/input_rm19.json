@@ -1,0 +1,344 @@
+[
+ {
+  "type": "grabObjects",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Grab Objects\\grabObjects.cs",
+  "methods": [
+   {
+    "sig": "checkDisableWeightPanel()",
+    "line": 759
+   },
+   {
+    "sig": "checkObjectWeight(GameObject objectToCheck)",
+    "line": 774
+   },
+   {
+    "sig": "enableOrDisableIconButton(bool state)",
+    "line": 805
+   },
+   {
+    "sig": "grabObject()",
+    "line": 816
+   },
+   {
+    "sig": "grabPhysicalObjectExternally(GameObject objectToGrab)",
+    "line": 828
+   },
+   {
+    "sig": "grabCurrenObject(GameObject objectToGrab)",
+    "line": 835
+   },
+   {
+    "sig": "checkTypeObject(GameObject objectToCheck)",
+    "line": 1332
+   },
+   {
+    "sig": "checkToDropObjectIfNotPhysicalWeaponElseKeepWeapon()",
+    "line": 1359
+   },
+   {
+    "sig": "checkToDropObjectIfCarryingRegularPhysicalObject()",
+    "line": 1370
+   },
+   {
+    "sig": "setIgnoreDropMeleeWeaponOnDeathState(bool state)",
+    "line": 1379
+   },
+   {
+    "sig": "checkToDropObjectOnDeath()",
+    "line": 1384
+   },
+   {
+    "sig": "dropObject()",
+    "line": 1396
+   },
+   {
+    "sig": "checkJointsInObject(GameObject objectToThrow, float force)",
+    "line": 1659
+   },
+   {
+    "sig": "addForceToThrownRigidbody(GameObject objectToThrow, float force)",
+    "line": 1670
+   },
+   {
+    "sig": "getLastHoldTimer()",
+    "line": 1731
+   },
+   {
+    "sig": "getThrowDirection()",
+    "line": 1736
+   },
+   {
+    "sig": "checkGrabbedObjectAction()",
+    "line": 1787
+   },
+   {
+    "sig": "throwRealisticGrabbedObject()",
+    "line": 1843
+   },
+   {
+    "sig": "changeGrabbedZoom(int zoomType)",
+    "line": 1868
+   },
+   {
+    "sig": "resetFixedGrabedTransformPosition()",
+    "line": 1899
+   },
+   {
+    "sig": "stopResetFixedGrabedTransformPositionCoroutine()",
+    "line": 1908
+   },
+   {
+    "sig": "enableOrDisableGrabObjectCursor(bool value)",
+    "line": 1961
+   },
+   {
+    "sig": "enableOrDisableGeneralCursor(bool state)",
+    "line": 1970
+   },
+   {
+    "sig": "enableOrDisableGeneralCursorFromExternalComponent(bool state)",
+    "line": 1979
+   },
+   {
+    "sig": "enableOrDisableFoundObjectToGrabCursor(bool state)",
+    "line": 1984
+   },
+   {
+    "sig": "checkIfDropObject(GameObject objectToCheck)",
+    "line": 1991
+   },
+   {
+    "sig": "checkIfObjectCanBePlaced(GameObject objectToCheck)",
+    "line": 2002
+   },
+   {
+    "sig": "checkIfDropObject()",
+    "line": 2013
+   },
+   {
+    "sig": "setAimingState(bool state)",
+    "line": 2020
+   },
+   {
+    "sig": "getGrabbedObject()",
+    "line": 2041
+   },
+   {
+    "sig": "isGrabbedObject()",
+    "line": 2046
+   },
+   {
+    "sig": "checkIfEnableNoiseOnCollision(GameObject objectToCheck, float launchSpeed)",
+    "line": 2051
+   },
+   {
+    "sig": "addForceToLaunchObject()",
+    "line": 2062
+   },
+   {
+    "sig": "launchObject()",
+    "line": 2094
+   },
+   {
+    "sig": "isCurrentObjectToGrabFound(GameObject objectToCheck)",
+    "line": 2187
+   },
+   {
+    "sig": "objectInphysicalObjectToGrabFoundList(GameObject objectToCheck)",
+    "line": 2196
+   },
+   {
+    "sig": "addCurrentPhysicalObjectToGrabFound(GameObject objectToGrab)",
+    "line": 2205
+   },
+   {
+    "sig": "removeCurrentPhysicalObjectToGrabFound(GameObject objectToGrab)",
+    "line": 2216
+   },
+   {
+    "sig": "clearPhysicalObjectToGrabFoundList()",
+    "line": 2241
+   },
+   {
+    "sig": "physicalObjectToGrabFound()",
+    "line": 2256
+   },
+   {
+    "sig": "getClosestPhysicalObjectToGrab()",
+    "line": 2261
+   },
+   {
+    "sig": "checkIfSetNewShaderToObjectToGrabFound(GameObject objectToCheck)",
+    "line": 2352
+   },
+   {
+    "sig": "checkIfSetOriginalShaderToPreviousObjectToGrabFound()",
+    "line": 2365
+   },
+   {
+    "sig": "setKeyText(bool state)",
+    "line": 2378
+   },
+   {
+    "sig": "isIKSystemEnabledOnCurrentGrabbedObject()",
+    "line": 2425
+   },
+   {
+    "sig": "grabPhysicalObject(grabPhysicalObjectSystem.grabPhysicalObjectInfo newGrabPhysicalObjectInfo)",
+    "line": 2430
+   },
+   {
+    "sig": "setGrabbedObjectClonnedColliderEnabledState(bool state)",
+    "line": 2776
+   },
+   {
+    "sig": "dropPhysicalObject()",
+    "line": 2834
+   },
+   {
+    "sig": "isCarryingPhysicalObject()",
+    "line": 2971
+   },
+   {
+    "sig": "getCurrentPhysicalObjectGrabbed()",
+    "line": 2976
+   },
+   {
+    "sig": "translatePhysicalObject(Vector3 worldPosition)",
+    "line": 2981
+   },
+   {
+    "sig": "stopTranslatePhysicalObject()",
+    "line": 2988
+   },
+   {
+    "sig": "checkPhysicalObjectGrabbedPosition(bool firstPersonActive)",
+    "line": 3020
+   },
+   {
+    "sig": "checkIfDropObjectIfNotPhysical(bool disableAimState)",
+    "line": 3203
+   },
+   {
+    "sig": "checkIfDropObjectIfPhysical()",
+    "line": 3214
+   },
+   {
+    "sig": "isPauseCameraMouseWheelWhileObjectGrabbedActive()",
+    "line": 3221
+   },
+   {
+    "sig": "setGrabObjectsEnabledState(bool state)",
+    "line": 3226
+   },
+   {
+    "sig": "isGrabObjectsEnabled()",
+    "line": 3231
+   },
+   {
+    "sig": "setGrabObjectsPhysicallyEnabledState(bool state)",
+    "line": 3236
+   },
+   {
+    "sig": "isGrabObjectsPhysicallyEnabled()",
+    "line": 3241
+   },
+   {
+    "sig": "setGrabObjectsInputPausedState(bool state)",
+    "line": 3246
+   },
+   {
+    "sig": "setGrabObjectsInputDisabledState(bool state)",
+    "line": 3251
+   },
+   {
+    "sig": "isCarryingMeleeWeapon()",
+    "line": 3256
+   },
+   {
+    "sig": "isCarryingRegularPhysicalObject()",
+    "line": 3265
+   },
+   {
+    "sig": "activateReturnProjectilesOnContact()",
+    "line": 3280
+   },
+   {
+    "sig": "keepOrCarryGrabbebObject(bool keepGrabbedObject)",
+    "line": 3287
+   },
+   {
+    "sig": "isFirstPersonActive()",
+    "line": 3300
+   },
+   {
+    "sig": "setCurrentGrabObjectGenericModeMountPointSystem(grabObjectGenericModeMountPointSystem newGrabObjectGenericModeMountPointSystem)",
+    "line": 3322
+   },
+   {
+    "sig": "inputGrabObject()",
+    "line": 3330
+   },
+   {
+    "sig": "inputHoldToLaunchObject()",
+    "line": 3364
+   },
+   {
+    "sig": "inputReleaseToLaunchObject()",
+    "line": 3398
+   },
+   {
+    "sig": "inputSetRotateObjectState(bool rotationEnabled)",
+    "line": 3442
+   },
+   {
+    "sig": "inputZoomObject(bool zoomIn)",
+    "line": 3465
+   },
+   {
+    "sig": "inputResetFixedGrabedTransformPosition()",
+    "line": 3484
+   },
+   {
+    "sig": "initializeStrengthAmount(float newValue)",
+    "line": 3499
+   },
+   {
+    "sig": "increaseStrengthAmount(float newValue)",
+    "line": 3504
+   },
+   {
+    "sig": "updateStrengthAmountWithoutUpdatingStatManager(int statId, float amount)",
+    "line": 3509
+   },
+   {
+    "sig": "increaseStrengthAmountAndUpdateStat(float newValue)",
+    "line": 3514
+   },
+   {
+    "sig": "setUseInfiniteStrengthState(bool state)",
+    "line": 3529
+   },
+   {
+    "sig": "setUsedByAIState(bool state)",
+    "line": 3534
+   },
+   {
+    "sig": "setUseObjectToGrabFoundShaderState(bool state)",
+    "line": 3539
+   },
+   {
+    "sig": "setUseObjectToGrabFoundShaderStateFromEditor(bool state)",
+    "line": 3586
+   },
+   {
+    "sig": "setGrabObjectsEnabledStateFromEditor(bool state)",
+    "line": 3593
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 3600
+   }
+  ]
+ }
+]

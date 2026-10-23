@@ -1,0 +1,105 @@
+[
+ {
+  "type": "dialogInfo",
+  "summary": "1つのダイアログ行の本文・所有者名・分岐・音声・アニメーション設定を保持するシリアライズ可能クラス。`InitializeAudioElements` は音声クリップを `AudioElement` へ橋渡しする。",
+  "methods": {
+   "InitializeAudioElements()": "`dialogLineSound` を `dialogLineAudioElement.clip` に代入するだけ。"
+  }
+ },
+ {
+  "type": "simpleDialogInfo",
+  "summary": "ローカライズ用テンプレートで使う簡易版のダイアログ情報クラス。本文・所有者名・音声・回答リストのみを保持する。",
+  "methods": {
+   "InitializeAudioElements()": "`dialogLineSound` を `dialogLineAudioElement.clip` に代入するだけ。"
+  }
+ },
+ {
+  "type": "dialogContentSystem",
+  "summary": "キャラクター1体分のダイアログ内容（複数の `completeDialogInfo`）を保持するコンポーネント。プレイヤーの `dialogSystem` と連携して開始・終了を切り替え、イベント・AI 停止・アニメータ制御も担当する。",
+  "methods": {
+   "setCurrentPlayer(GameObject newPlayer)": "`currentPlayer` に `newPlayer` を代入するだけ。",
+   "activateDialog()": "`dialogActive` を反転し、開始時はプレイヤーの `dialogSystem` に自身を渡して会話を開始する。",
+   "setDialogInProcessState(bool state)": "`dialogInProcess` を設定し、false なら `dialogActive` も false にする。",
+   "activateEventOnDialogStopped()": "現在のダイアログがプレイヤー非停止設定なら `eventOnDialogStopped` を実行する。",
+   "setNextCompleteDialogIndex()": "`currentDialogIndex` を1つ進め、末尾を超えると最後のインデックスに留める。",
+   "setPrevioustCompleteDialogIndex()": "`currentDialogIndex` を1つ戻し、0未満になると0に留める。",
+   "setCompleteDialogIndex(int newIndex)": "`currentDialogIndex` に `newIndex` を設定し、一覧数を超える場合は末尾に補正する。",
+   "setPlayingExternalDialogState(bool state)": "`playingExternalDialog` を設定するだけ。",
+   "checkIfPlayDialogOnTriggerEnter()": "前回のコルーチンを停止し、1フレーム後にトリガー用イベントを呼ぶコルーチンを開始する。",
+   "disableDialogCharacterAnimatorState(float delayAmount)": "`useAnimations` 有効時のみ、`delayAmount` 秒後にアニメータを解除するコルーチンを開始する。",
+   "stopDisableDialogCharacterAnimatorStateCoroutine()": "アニメータ解除用コルーチンが実行中なら停止するだけ。",
+   "setDialogAnimatorState(bool state)": "`mainAnimator` の bool と `mainPlayerController` のルートモーション設定をまとめて切り替える。",
+   "enableAnimatorLayerWeight(string animatorLayerName)": "`mainPlayerController` の同名メソッドに委譲してアニメータレイヤーの重みを有効にする。",
+   "checkEventsOnDialog(bool state)": "`useEventsOnStartEndDialog` 有効時、`state` で開始/終了イベントを呼び分ける。",
+   "checkIfPauseOrResumeAI(bool state)": "`dialogOwner` の AI を、開始時は徘徊中断と停止、終了時は再開と徘徊無効に切り替える。",
+   "checkIfAIFollowPlayerAfterDialogEnd(bool state)": "`state` かつ `currentPlayer` があるとき、`dialogOwner` の AI にプレイヤーを登録する。",
+   "setDialogAnswerConditionCheckResult(bool state)": "`dialogActive` のとき、プレイヤーの `dialogSystem` へ条件判定結果を転送する。",
+   "setNextDialogWithConditionCheckResult(bool state)": "`dialogActive` のとき、プレイヤーの `dialogSystem` へ条件分岐結果を転送する。",
+   "getCompleteDialogInfoTemplateByLanguageName(string languageName)": "`language` が一致するテンプレートを返し、見つからなければ `null` を返す。",
+   "getDialogContentID()": "`dialogContentID` を返すだけ。",
+   "getDialogContentScene()": "`dialogContentScene` を返すだけ。",
+   "getCurrentDialogIndex()": "`currentDialogIndex` を返すだけ。",
+   "addNewDialog()": "空の `completeDialogInfo` を ID 付きで一覧に追加し、`updateComponent` を呼ぶ。",
+   "addNewLine(int dialogIndex)": "指定ダイアログに空の `dialogInfo` を ID 付きで追加し、`updateComponent` を呼ぶ。",
+   "addNewAnswer(int dialogIndex, int lineIndex)": "指定行に空の `dialogLineInfo` を ID 付きで追加し、`updateComponent` を呼ぶ。",
+   "assignIDToDialog(int newID)": "`dialogContentID` を設定して `updateComponent` を呼ぶ。",
+   "assignDialogContentScene(int newScene)": "`dialogContentScene` を設定して `updateComponent` を呼ぶ。",
+   "setDialogOwnerGameObject(GameObject newOwner)": "`dialogOwner` を設定し、`playerController` からアニメータ取得と追従対象の設定を行う。",
+   "addDialogToCharacterManually()": "`newCharacterToAddDialog` があれば所有者として設定し、そのフィールドを空にして更新する。",
+   "addDialogContentToTemplate()": "現在のダイアログ内容を `English` 言語のテンプレートとして複製し、一覧に追加する。",
+   "updateComponent()": "`GKC_Utils` 経由でコンポーネントとシーンのダーティ更新を行う。"
+  }
+ },
+ {
+  "type": "dialogManager",
+  "summary": "レベル内の `dialogContentSystem` を一覧管理し、ID とシーン番号で検索・生成するマネージャ。シングルトン `Instance` として初期化される。",
+  "methods": {
+   "getComponentInstance()": "既に初期化済みなら何もせず、重複インスタンスなら自身を破棄し、それ以外は静的 `Instance` に登録する。",
+   "getAllDialogContentSystemOnLevel()": "シーン上の `dialogContentSystem` を検索して一覧を作り直す。",
+   "getAllDialogContentOnLevelAndAssignInfo()": "一覧を再取得し、各要素へ連番 ID と `dialogScene` を割り当てて更新する。",
+   "clearDialogContentList()": "`dialogContentSystemList` を空にして `updateComponent` を呼ぶ。",
+   "getDialogContentSystem(int dialogContentID, int dialogContentScene)": "シーン番号と ID の両方が一致する要素を返し、無ければ `null` を返す。",
+   "instantiateDialogContentSystem()": "`dialogContentPrefab` を `instantateObjectOnLevel` でシーンに生成する。",
+   "instantiateExternalDialogSystem()": "`externalDialogPrefab` を `instantateObjectOnLevel` でシーンに生成する。",
+   "instantateObjectOnLevel(GameObject objectToInstantiate)": "エディタカメラのレイキャスト位置にプレハブを生成し、`lastObjectInstantiated` に保持する。",
+   "getLastObjectInstantiated()": "`lastObjectInstantiated` を返すだけ。",
+   "addDialogContentToCharacter(Transform newDialogContentParent, GameObject newDialogContentOwner)": "ダイアログ内容を生成し、その所有者を指定オブジェクトに設定する（親引数は未使用）。",
+   "updateComponent()": "`GKC_Utils` 経由でコンポーネントとシーンのダーティ更新を行う。"
+  }
+ },
+ {
+  "type": "dialogSystem",
+  "summary": "プレイヤー側でダイアログ UI を表示し、行送り・回答選択・文字送り・音声・アニメーションを制御するコンポーネント。`dialogContentSystem` から受け取った内容でパネルと選択肢を更新する。",
+  "methods": {
+   "setNewDialogContent(dialogContentSystem newDialogContent)": "新しいダイアログ内容と現在言語を読み込み、行一覧・設定を反映してパネル表示やイベント実行まで行う。",
+   "playDialogWithoutPausingPlayer()": "自動再生が有効なら自動送りコルーチンを開始し、無効なら1行ずつ表示する処理に切り替える。",
+   "inputPlayNextDialogWioutPausingPlayer()": "入力で1行進める。文字送り中は全文表示し、通常は次行送りか終了処理を行う。",
+   "playDialogWithoutPausingPlayerOneByOne()": "実行中の自動送りを止め、`dialogInProcess` を立てて先頭行の表示を始める。",
+   "playNextDialogWithoutPausingPlayer()": "インデックスを進めて次の行を表示し、末尾を超えたら `closeDialog` で終了する。",
+   "playNextDialogWithoutPausingPlayerShowingDialogLinePartByPart()": "インデックスを進めたうえで文字送りコルーチンを開始し、行を部分表示する。",
+   "stopPlayNextDialogWithoutPausingPlayerShowingDialogLinePartByPartCoroutine()": "`textingShowingPartByPart` を false にし、文字送りコルーチンが有れば停止する。",
+   "stopPlayDialogWithoutPausingPlayerCoroutine()": "自動送りコルーチンが有れば停止するだけ。",
+   "setNextDialog()": "現在行の設定に従い、固定 ID・ランダム・条件イベント・次行送りのいずれかで表示行を進める。",
+   "setNextDialogWithConditionCheckResult(bool state)": "`state` に応じた遷移先 ID へ移動し、範囲外なら `closeDialog` を呼ぶ。",
+   "closeDialogIfActive()": "`dialogActive` が true のときだけ `closeDialog` を呼ぶ。",
+   "closeDialog()": "再生コルーチンと UI を閉じ、入力復帰・終了イベント・AI 復帰・音声停止・外部状態解除を行う。",
+   "setDialogContentAnswer(Button buttonToCheck)": "押された回答ボタンを特定し、遷移先 ID や条件イベント、行の無効化を適用して表示を更新する。",
+   "setDialogAnswerConditionCheckResult(bool state)": "保留中の回答インデックスを使い、`state` に応じた遷移先 ID へ移動して表示を更新する。",
+   "checkDialogEvents()": "現在行のプレイヤー送信イベント・`eventOnDialog`・遠隔イベントを実行する。",
+   "updateDialogContent()": "現在行の本文・選択肢・文字色・音声・アニメーション・選択中 UI をまとめて更新する。",
+   "disableDialogCharacterAnimatorState(float delayAmount)": "`delayAmount` 秒後にアニメータ状態を解除するコルーチンを開始する。",
+   "stopDisableDialogCharacterAnimatorStateCoroutine()": "アニメータ解除用コルーチンが有れば停止するだけ。",
+   "setDialogAnimatorState(bool state)": "`mainAnimator` の bool とプレイヤーのルートモーション設定を切り替える。"
+  }
+ },
+ {
+  "type": "externalDialogTriggerSystem",
+  "summary": "外部から既存の `dialogContentSystem` のダイアログを開始するトリガー。対象キャラクターやプレイヤーを指定し、`electronicDevice` 経由で会話を開始する。",
+  "methods": {
+   "activateDialogByCharacter(GameObject newCharacter)": "`characterDialogContentSystem` から内容とデバイスを取り、ID 一致時のみ開始する。",
+   "activateDialog()": "手動指定時はプレイヤーの有無を確認・検索し、問題なければ `startDialog` を呼ぶ。",
+   "activateDialogToPlayer(GameObject playerToCheck)": "`playerToCheck` を対象プレイヤーに設定し、`startDialog` を呼ぶ。",
+   "findPlayerOnScene()": "`searchPlayerOnSceneIfNotAssigned` 有効時、シーンのメインプレイヤーを対象に設定する。"
+  }
+ }
+]

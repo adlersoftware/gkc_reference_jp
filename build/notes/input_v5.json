@@ -1,0 +1,394 @@
+[
+ {
+  "type": "carController",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\Vehicle Controllers\\carController.cs",
+  "methods": [
+   {
+    "sig": "vehicleBounceMovement(float horizontalLeanAmount, float verticalLeanAmount)",
+    "line": 999
+   },
+   {
+    "sig": "rotateVehicle()",
+    "line": 1125
+   },
+   {
+    "sig": "useVehicleJumpPlatform(Vector3 direction)",
+    "line": 1225
+   },
+   {
+    "sig": "useJumpPlatformParable(Vector3 direction)",
+    "line": 1230
+   },
+   {
+    "sig": "setJumpPower(float newJumpPower)",
+    "line": 1237
+   },
+   {
+    "sig": "setNewJumpPower(float newJumpPower)",
+    "line": 1242
+   },
+   {
+    "sig": "setOriginalJumpPower()",
+    "line": 1247
+   },
+   {
+    "sig": "setMaxSpeed(float maxSpeedValue)",
+    "line": 1252
+   },
+   {
+    "sig": "setMaxAcceleration(float maxAccelerationValue)",
+    "line": 1257
+   },
+   {
+    "sig": "setMaxBrakePower(float maxBrakePower)",
+    "line": 1262
+   },
+   {
+    "sig": "setMaxTurboPower(float maxTurboPower)",
+    "line": 1267
+   },
+   {
+    "sig": "setCanJumpState(bool state)",
+    "line": 1272
+   },
+   {
+    "sig": "setRotateVehicleUpwardState(bool state)",
+    "line": 1277
+   },
+   {
+    "sig": "setPreserveDirectionWhileInAirState(bool state)",
+    "line": 1282
+   },
+   {
+    "sig": "setPauseAutoRotationActiveState(bool state)",
+    "line": 1287
+   }
+  ]
+ },
+ {
+  "type": "boatController",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\Vehicle Controllers\\boatController.cs",
+  "methods": [
+   {
+    "sig": "checkEventOnWindStateChange(bool state)",
+    "line": 452
+   },
+   {
+    "sig": "checkEventOnSailStateChange(bool state)",
+    "line": 461
+   },
+   {
+    "sig": "useVehicleJumpPlatform(Vector3 direction)",
+    "line": 544
+   },
+   {
+    "sig": "useJumpPlatformParable(Vector3 direction)",
+    "line": 549
+   },
+   {
+    "sig": "setNewJumpPower(float newJumpPower)",
+    "line": 556
+   },
+   {
+    "sig": "setOriginalJumpPower()",
+    "line": 561
+   },
+   {
+    "sig": "setCanJumpState(bool state)",
+    "line": 566
+   },
+   {
+    "sig": "setSailActiveState(bool state)",
+    "line": 637
+   },
+   {
+    "sig": "setWindCheckState(bool state)",
+    "line": 644
+   },
+   {
+    "sig": "inputToggleWindCheckState()",
+    "line": 651
+   },
+   {
+    "sig": "inputToggleSailActive()",
+    "line": 658
+   },
+   {
+    "sig": "inputIncreaseDensity()",
+    "line": 665
+   },
+   {
+    "sig": "inputDecreaseDensity()",
+    "line": 678
+   }
+  ]
+ },
+ {
+  "type": "motorBikeController",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\Vehicle Controllers\\motorBikeController.cs",
+  "methods": [
+   {
+    "sig": "checkDriverFootPosition()",
+    "line": 593
+   },
+   {
+    "sig": "playStandAnimation(bool playForward)",
+    "line": 646
+   },
+   {
+    "sig": "stopVehicleParticles()",
+    "line": 744
+   },
+   {
+    "sig": "useVehicleJumpPlatform(Vector3 direction)",
+    "line": 802
+   },
+   {
+    "sig": "useJumpPlatformParable(Vector3 direction)",
+    "line": 807
+   },
+   {
+    "sig": "setNewJumpPower(float newJumpPower)",
+    "line": 812
+   },
+   {
+    "sig": "setOriginalJumpPower()",
+    "line": 817
+   },
+   {
+    "sig": "setChassisRotation(Vector3 rotationAmount)",
+    "line": 824
+   },
+   {
+    "sig": "stopSetChassisRotationCoroutine()",
+    "line": 830
+   },
+   {
+    "sig": "adjustFeetToGround(bool adjustToGround)",
+    "line": 869
+   },
+   {
+    "sig": "stopAdjustHoldOnLedgeCoroutine()",
+    "line": 876
+   },
+   {
+    "sig": "setCanJumpState(bool state)",
+    "line": 970
+   }
+  ]
+ },
+ {
+  "type": "airCraftController",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\Vehicle Controllers\\airCraftController.cs",
+  "methods": [
+   {
+    "sig": "resetInputValues()",
+    "line": 571
+   },
+   {
+    "sig": "enableOrDisableTrailsState(bool state)",
+    "line": 580
+   },
+   {
+    "sig": "playAnimation(bool forward, GameObject obj, string name)",
+    "line": 739
+   },
+   {
+    "sig": "setTurnOnStateSound()",
+    "line": 765
+   },
+   {
+    "sig": "setTurnOffStateSound(bool previouslyTurnedOn)",
+    "line": 772
+   },
+   {
+    "sig": "inputSetRotateToLeftState(bool state)",
+    "line": 952
+   },
+   {
+    "sig": "inputSetRotateToRightState(bool state)",
+    "line": 969
+   },
+   {
+    "sig": "inputLandOrTakeOff()",
+    "line": 986
+   }
+  ]
+ },
+ {
+  "type": "sphereController",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\Vehicle Controllers\\sphereController.cs",
+  "methods": [
+   {
+    "sig": "preventSnapToGround()",
+    "line": 616
+   },
+   {
+    "sig": "useVehicleJumpPlatform(Vector3 direction)",
+    "line": 834
+   },
+   {
+    "sig": "useJumpPlatformParable(Vector3 direction)",
+    "line": 839
+   },
+   {
+    "sig": "setNewJumpPower(float newJumpPower)",
+    "line": 846
+   },
+   {
+    "sig": "setOriginalJumpPower()",
+    "line": 851
+   },
+   {
+    "sig": "inputSetClimbState(bool state)",
+    "line": 938
+   },
+   {
+    "sig": "inputToggleClimbState()",
+    "line": 960
+   }
+  ]
+ },
+ {
+  "type": "hoverCraftController",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\Vehicle Controllers\\hoverCraftController.cs",
+  "methods": [
+   {
+    "sig": "useVehicleJumpPlatform(Vector3 direction)",
+    "line": 588
+   },
+   {
+    "sig": "useJumpPlatformParable(Vector3 direction)",
+    "line": 595
+   },
+   {
+    "sig": "setNewJumpPower(float newJumpPower)",
+    "line": 602
+   },
+   {
+    "sig": "setOriginalJumpPower()",
+    "line": 607
+   },
+   {
+    "sig": "setCanJumpState(bool state)",
+    "line": 612
+   }
+  ]
+ },
+ {
+  "type": "hoverBoardController",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\Vehicle Controllers\\hoverBoardController.cs",
+  "methods": [
+   {
+    "sig": "useVehicleJumpPlatform(Vector3 direction)",
+    "line": 493
+   },
+   {
+    "sig": "useJumpPlatformParable(Vector3 direction)",
+    "line": 500
+   },
+   {
+    "sig": "setNewJumpPower(float newJumpPower)",
+    "line": 507
+   },
+   {
+    "sig": "setOriginalJumpPower()",
+    "line": 512
+   },
+   {
+    "sig": "setCanJumpState(bool state)",
+    "line": 517
+   }
+  ]
+ },
+ {
+  "type": "flyingController",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\Vehicle Controllers\\flyingController.cs",
+  "methods": [
+   {
+    "sig": "stopVehicleParticles()",
+    "line": 589
+   },
+   {
+    "sig": "inputIncreaseHeightState(bool state)",
+    "line": 728
+   },
+   {
+    "sig": "inputDecreaseHeightState(bool state)",
+    "line": 755
+   },
+   {
+    "sig": "inputSetRotateToLeftState(bool state)",
+    "line": 766
+   },
+   {
+    "sig": "inputSetRotateToRightState(bool state)",
+    "line": 787
+   }
+  ]
+ },
+ {
+  "type": "hoverBoardAnimationSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\Vehicle Controllers\\hoverBoardAnimationSystem.cs",
+  "methods": [
+   {
+    "sig": "changeVehicleState(bool state)",
+    "line": 173
+   }
+  ]
+ },
+ {
+  "type": "vehicleBuilder",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\vehicleBuilder.cs",
+  "methods": [
+   {
+    "sig": "buildVehicle()",
+    "line": 40
+   },
+   {
+    "sig": "adjustVehicleParts()",
+    "line": 53
+   },
+   {
+    "sig": "adjustVehicleSettings()",
+    "line": 114
+   },
+   {
+    "sig": "adjustVehicleSettingsFromEditor()",
+    "line": 129
+   },
+   {
+    "sig": "completeVehicleBuild()",
+    "line": 134
+   },
+   {
+    "sig": "setVehicleName(string newValue)",
+    "line": 152
+   },
+   {
+    "sig": "resetTemporalVehicleParts()",
+    "line": 157
+   },
+   {
+    "sig": "removeTemporalVehicleParts()",
+    "line": 171
+   },
+   {
+    "sig": "getMeshParentTransformValues()",
+    "line": 211
+   },
+   {
+    "sig": "placeVehicleInCameraPosition()",
+    "line": 223
+   },
+   {
+    "sig": "alignViewWithVehicleCameraPosition()",
+    "line": 238
+   },
+   {
+    "sig": "setEditorCameraPosition(Transform transformToUse)",
+    "line": 243
+   }
+  ]
+ }
+]

@@ -1,0 +1,848 @@
+[
+ {
+  "type": "otherPowers",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Powers\\otherPowers.cs",
+  "source": "Powers/otherPowers.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "aimModeEnabled",
+    "label": "",
+    "section": "Enabled abilities"
+   },
+   {
+    "field": "shootEnabled",
+    "label": "",
+    "section": "Enabled abilities"
+   },
+   {
+    "field": "changePowersEnabled",
+    "label": "",
+    "section": "Enabled abilities"
+   },
+   {
+    "field": "changePowersWithNumberKeysActive",
+    "label": "",
+    "section": "Powers Settings"
+   },
+   {
+    "field": "changePowersWithMouseWheelActive",
+    "label": "",
+    "section": "Powers Settings"
+   },
+   {
+    "field": "changePowersWithKeysActive",
+    "label": "",
+    "section": "Powers Settings"
+   },
+   {
+    "field": "layerToDamage",
+    "label": "",
+    "section": "Target Detection Settings"
+   },
+   {
+    "field": "useCustomIgnoreTags",
+    "label": "",
+    "section": "Target Detection Settings"
+   },
+   {
+    "field": "playerStatsManager",
+    "label": "",
+    "section": "Energy Stat Settings"
+   },
+   {
+    "field": "energyStatName",
+    "label": "",
+    "section": "Energy Stat Settings"
+   },
+   {
+    "field": "ignoreCheckPlayerStatesManagerToFireProjectiles",
+    "label": "",
+    "section": "Energy Stat Settings"
+   },
+   {
+    "field": "canFirePowersWithoutAiming",
+    "label": "",
+    "section": "Powers Movements Settings"
+   },
+   {
+    "field": "useAimCameraOnFreeFireMode",
+    "label": "",
+    "section": "Powers Movements Settings"
+   },
+   {
+    "field": "timeToStopAimAfterStopFiring",
+    "label": "",
+    "section": "Powers Movements Settings"
+   },
+   {
+    "field": "useLowerRotationSpeedAimedThirdPerson",
+    "label": "",
+    "section": "Powers Movements Settings"
+   },
+   {
+    "field": "verticalRotationSpeedAimedInThirdPerson",
+    "label": "",
+    "section": "Powers Movements Settings"
+   },
+   {
+    "field": "horizontalRotationSpeedAimedInThirdPerson",
+    "label": "",
+    "section": "Powers Movements Settings"
+   },
+   {
+    "field": "runWhenAimingPowerInThirdPerson",
+    "label": "",
+    "section": "Powers Movements Settings"
+   },
+   {
+    "field": "stopRunIfPreviouslyNotRunning",
+    "label": "",
+    "section": "Powers Movements Settings"
+   },
+   {
+    "field": "useUpperBodyRotationSystemToAim",
+    "label": "",
+    "section": "Powers Movements Settings"
+   },
+   {
+    "field": "cursor",
+    "label": "",
+    "section": "Reticle/Cursor Elements"
+   },
+   {
+    "field": "regularReticle",
+    "label": "",
+    "section": "Reticle/Cursor Elements"
+   },
+   {
+    "field": "customReticle",
+    "label": "",
+    "section": "Reticle/Cursor Elements"
+   },
+   {
+    "field": "customReticleImage",
+    "label": "",
+    "section": "Reticle/Cursor Elements"
+   },
+   {
+    "field": "powerBar",
+    "label": "",
+    "section": "Power Elements"
+   },
+   {
+    "field": "powerBarText",
+    "label": "",
+    "section": "Power Elements"
+   },
+   {
+    "field": "powersInfoPanel",
+    "label": "",
+    "section": "Power Elements"
+   },
+   {
+    "field": "usePowerRotationPoint",
+    "label": "",
+    "section": "Power Rotation Point Settings"
+   },
+   {
+    "field": "powerRotationPoint",
+    "label": "",
+    "section": "Power Rotation Point Settings"
+   },
+   {
+    "field": "rotationUpPointAmountMultiplier",
+    "label": "",
+    "section": "Power Rotation Point Settings"
+   },
+   {
+    "field": "rotationDownPointAmountMultiplier",
+    "label": "",
+    "section": "Power Rotation Point Settings"
+   },
+   {
+    "field": "rotationPointSpeed",
+    "label": "",
+    "section": "Power Rotation Point Settings"
+   },
+   {
+    "field": "useRotationUpClamp",
+    "label": "",
+    "section": "Power Rotation Point Settings"
+   },
+   {
+    "field": "rotationUpClampAmount",
+    "label": "",
+    "section": "Power Rotation Point Settings"
+   },
+   {
+    "field": "useRotationDownClamp",
+    "label": "",
+    "section": "Power Rotation Point Settings"
+   },
+   {
+    "field": "rotationDownClamp",
+    "label": "",
+    "section": "Power Rotation Point Settings"
+   },
+   {
+    "field": "useEventsOnStateChange",
+    "label": "",
+    "section": "Powers Mode Active Event Settings"
+   },
+   {
+    "field": "evenOnStateEnabled",
+    "label": "",
+    "section": "Powers Mode Active Event Settings"
+   },
+   {
+    "field": "eventOnStateDisabled",
+    "label": "",
+    "section": "Powers Mode Active Event Settings"
+   },
+   {
+    "field": "useEventOnStartStopAim",
+    "label": "",
+    "section": "Powers Mode Active Event Settings"
+   },
+   {
+    "field": "eventOnStartAim",
+    "label": "",
+    "section": "Powers Mode Active Event Settings"
+   },
+   {
+    "field": "eventOnStopAim",
+    "label": "",
+    "section": "Powers Mode Active Event Settings"
+   },
+   {
+    "field": "shootZoneAudioSource",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "mainCameraTransform",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "mainCamera",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "upperBodyRotationManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "IKSystemManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "playerCameraManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "headBobManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "weaponsManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "playerControllerManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "grabObjectsManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "headTrackManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "impactDecalManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "playerInput",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "powersManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "playerCollider",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "cursorRectTransform",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "parable",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "leftHand",
+    "label": "",
+    "section": "Player Hands Settings"
+   },
+   {
+    "field": "rightHand",
+    "label": "",
+    "section": "Player Hands Settings"
+   },
+   {
+    "field": "useFreeAimMode",
+    "label": "",
+    "section": "Free Fire Mode Settings"
+   },
+   {
+    "field": "freeAimModeeActive",
+    "label": "",
+    "section": "Free Fire Mode Settings"
+   },
+   {
+    "field": "armsPivotRotationTransform",
+    "label": "",
+    "section": "Free Fire Mode Settings"
+   },
+   {
+    "field": "armsPivotRotationSpeed",
+    "label": "",
+    "section": "Free Fire Mode Settings"
+   },
+   {
+    "field": "armsPivotClampRotation",
+    "label": "",
+    "section": "Free Fire Mode Settings"
+   },
+   {
+    "field": "armsPivotRotationMultiplier",
+    "label": "",
+    "section": "Free Fire Mode Settings"
+   },
+   {
+    "field": "freeAimModLookInOppositeDirectionExtraRange",
+    "label": "",
+    "section": "Free Fire Mode Settings"
+   },
+   {
+    "field": "freeAimModePlayerStatusID",
+    "label": "",
+    "section": "Free Fire Mode Settings"
+   },
+   {
+    "field": "canCrouchWhenUsingPowersOnThirdPerson",
+    "label": "",
+    "section": "Other Aim Settings"
+   },
+   {
+    "field": "setNewAnimatorCrouchID",
+    "label": "",
+    "section": "Other Aim Settings"
+   },
+   {
+    "field": "newAnimatorCrouchID",
+    "label": "",
+    "section": "Other Aim Settings"
+   },
+   {
+    "field": "generalAttackDamageMultiplier",
+    "label": "",
+    "section": "Powers List"
+   },
+   {
+    "field": "initialPowerIndex",
+    "label": "",
+    "section": "Powers List"
+   },
+   {
+    "field": "headLookWhenAiming",
+    "label": "",
+    "section": "Head Look Settings"
+   },
+   {
+    "field": "headLookSpeed",
+    "label": "",
+    "section": "Head Look Settings"
+   },
+   {
+    "field": "headLookTarget",
+    "label": "",
+    "section": "Head Look Settings"
+   },
+   {
+    "field": "autoShootOnTag",
+    "label": "",
+    "section": "Auto Shoot Settings"
+   },
+   {
+    "field": "layerToAutoShoot",
+    "label": "",
+    "section": "Auto Shoot Settings"
+   },
+   {
+    "field": "maxDistanceToRaycast",
+    "label": "",
+    "section": "Auto Shoot Settings"
+   },
+   {
+    "field": "shootAtLayerToo",
+    "label": "",
+    "section": "Auto Shoot Settings"
+   },
+   {
+    "field": "useAimAssistInThirdPerson",
+    "label": "",
+    "section": "Aim Assist Settings"
+   },
+   {
+    "field": "useMaxDistanceToCameraCenterAimAssist",
+    "label": "",
+    "section": "Aim Assist Settings"
+   },
+   {
+    "field": "maxDistanceToCameraCenterAimAssist",
+    "label": "",
+    "section": "Aim Assist Settings"
+   },
+   {
+    "field": "useAimAssistInLockedCamera",
+    "label": "",
+    "section": "Aim Assist Settings"
+   },
+   {
+    "field": "projectilesPoolEnabled",
+    "label": "",
+    "section": "Power Amount Settings"
+   },
+   {
+    "field": "maxAmountOfPoolElementsOnWeapon",
+    "label": "",
+    "section": "Power Amount Settings"
+   },
+   {
+    "field": "infinitePower",
+    "label": "",
+    "section": "Power Amount Settings"
+   },
+   {
+    "field": "powerAmount",
+    "label": "",
+    "section": "Power Amount Settings"
+   },
+   {
+    "field": "maxPowerAmount",
+    "label": "",
+    "section": "Power Amount Settings"
+   },
+   {
+    "field": "regeneratePower",
+    "label": "",
+    "section": "Regenerate Power Settings"
+   },
+   {
+    "field": "constantRegenerate",
+    "label": "",
+    "section": "Regenerate Power Settings"
+   },
+   {
+    "field": "regenerateTime",
+    "label": "",
+    "section": "Regenerate Power Settings"
+   },
+   {
+    "field": "regenerateSpeed",
+    "label": "",
+    "section": "Regenerate Power Settings"
+   },
+   {
+    "field": "regenerateAmount",
+    "label": "",
+    "section": "Regenerate Power Settings"
+   },
+   {
+    "field": "targetToDamageLayer",
+    "label": "",
+    "section": "Powers Settings"
+   },
+   {
+    "field": "targetForScorchLayer",
+    "label": "",
+    "section": "Powers Settings"
+   },
+   {
+    "field": "powersSlotsAmount",
+    "label": "",
+    "section": "Powers Settings"
+   },
+   {
+    "field": "mainDecalManagerName",
+    "label": "",
+    "section": "Powers Settings"
+   },
+   {
+    "field": "selectedPowerIcon",
+    "label": "",
+    "section": "Powers Elements"
+   },
+   {
+    "field": "selectedPowerHud",
+    "label": "",
+    "section": "Powers Elements"
+   },
+   {
+    "field": "shootZone",
+    "label": "",
+    "section": "Powers Elements"
+   },
+   {
+    "field": "firstPersonShootPosition",
+    "label": "",
+    "section": "Powers Elements"
+   },
+   {
+    "field": "minSwipeDist",
+    "label": "",
+    "section": "Touch Change Powers Settings"
+   },
+   {
+    "field": "usedByAI",
+    "label": "",
+    "section": "AI Settings"
+   },
+   {
+    "field": "currentArrayElement",
+    "label": "",
+    "section": "Auto Shoot Settings"
+   }
+  ]
+ },
+ {
+  "type": "overrideInputManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Override System\\overrideInputManager.cs",
+  "source": "Override System/overrideInputManager.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "inputEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "isPlayerController",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "playerInput",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "showDebugActions",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "destroyObjectOnStopOverride",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "eventToDestroy",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "startOverrideFunction",
+    "label": "",
+    "section": "Main Event Settings"
+   },
+   {
+    "field": "stopOverrideFunction",
+    "label": "",
+    "section": "Main Event Settings"
+   },
+   {
+    "field": "usePreOverrideFunctions",
+    "label": "",
+    "section": "Pre Event Settings"
+   },
+   {
+    "field": "preStartOverrideFunction",
+    "label": "",
+    "section": "Pre Event Settings"
+   },
+   {
+    "field": "preStopOverrideFunction",
+    "label": "",
+    "section": "Pre Event Settings"
+   },
+   {
+    "field": "activateActionScreen",
+    "label": "",
+    "section": "Action Screen Settings"
+   },
+   {
+    "field": "actionScreenName",
+    "label": "",
+    "section": "Action Screen Settings"
+   },
+   {
+    "field": "overrideCameraControllerManager",
+    "label": "",
+    "section": "Override Camera Controller"
+   }
+  ]
+ },
+ {
+  "type": "pickUpManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\PickUps\\pickUpManager.cs",
+  "source": "PickUps/pickUpManager.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "showIconsActive",
+    "label": "",
+    "section": "Main Settings"
+   }
+  ]
+ },
+ {
+  "type": "pickUpObject",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\PickUps\\pickUpObject.cs",
+  "source": "PickUps/pickUpObject.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "amount",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useAmountPerUnit",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "amountPerUnit",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "pickUpSound",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "pickUpSoundAudioElement",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "staticPickUp",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "moveToPlayerOnTrigger",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "pickUpOption",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "mainPickupType",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "mainPickupManagerName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useDurability",
+    "label": "",
+    "section": "Durability Settings"
+   },
+   {
+    "field": "maxDurabilityAmount",
+    "label": "",
+    "section": "Durability Settings"
+   },
+   {
+    "field": "durabilityAmount",
+    "label": "",
+    "section": "Durability Settings"
+   },
+   {
+    "field": "canBeExamined",
+    "label": "",
+    "section": "Examine Settings"
+   },
+   {
+    "field": "ignoreExamineObjectBeforeStoreEnabled",
+    "label": "",
+    "section": "Examine Settings"
+   },
+   {
+    "field": "showPickupInfoOnTaken",
+    "label": "",
+    "section": "Icon Settings"
+   },
+   {
+    "field": "usePickupIconOnScreen",
+    "label": "",
+    "section": "Icon Settings"
+   },
+   {
+    "field": "pickupIconGeneralName",
+    "label": "",
+    "section": "Icon Settings"
+   },
+   {
+    "field": "pickupIconName",
+    "label": "",
+    "section": "Icon Settings"
+   },
+   {
+    "field": "usePickupIconOnTaken",
+    "label": "",
+    "section": "Icon Settings"
+   },
+   {
+    "field": "pickupIcon",
+    "label": "",
+    "section": "Icon Settings"
+   },
+   {
+    "field": "usableByAnything",
+    "label": "",
+    "section": "Pick Up Used By"
+   },
+   {
+    "field": "usableByPlayer",
+    "label": "",
+    "section": "Pick Up Used By"
+   },
+   {
+    "field": "usableByVehicles",
+    "label": "",
+    "section": "Pick Up Used By"
+   },
+   {
+    "field": "usableByCharacters",
+    "label": "",
+    "section": "Pick Up Used By"
+   },
+   {
+    "field": "playerTag",
+    "label": "",
+    "section": "Pick Up Used By"
+   },
+   {
+    "field": "friendTag",
+    "label": "",
+    "section": "Pick Up Used By"
+   },
+   {
+    "field": "enemyTag",
+    "label": "",
+    "section": "Pick Up Used By"
+   },
+   {
+    "field": "useEventOnTaken",
+    "label": "",
+    "section": "Pick Up Taken Event Settings"
+   },
+   {
+    "field": "eventOnTaken",
+    "label": "",
+    "section": "Pick Up Taken Event Settings"
+   },
+   {
+    "field": "useEventOnRemainingAmount",
+    "label": "",
+    "section": "Pick Up Taken Event Settings"
+   },
+   {
+    "field": "eventOnRemainingAmount",
+    "label": "",
+    "section": "Pick Up Taken Event Settings"
+   },
+   {
+    "field": "sendPickupFinder",
+    "label": "",
+    "section": "Pick Up Taken Event Settings"
+   },
+   {
+    "field": "sendPickupFinderEvent",
+    "label": "",
+    "section": "Pick Up Taken Event Settings"
+   },
+   {
+    "field": "useRemoteEvent",
+    "label": "",
+    "section": "Pick Up Taken Event Settings"
+   },
+   {
+    "field": "showDebugPrint",
+    "label": "",
+    "section": "Debug"
+   },
+   {
+    "field": "inventoryObjectManager",
+    "label": "",
+    "section": "Object Components"
+   },
+   {
+    "field": "deviceStringActionManager",
+    "label": "",
+    "section": "Object Components"
+   },
+   {
+    "field": "mainSphereCollider",
+    "label": "",
+    "section": "Object Components"
+   },
+   {
+    "field": "mainCollider",
+    "label": "",
+    "section": "Object Components"
+   },
+   {
+    "field": "mainRigidbody",
+    "label": "",
+    "section": "Object Components"
+   }
+  ]
+ }
+]

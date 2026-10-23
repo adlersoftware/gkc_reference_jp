@@ -1,0 +1,470 @@
+[
+ {
+  "type": "playerCamera",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Camera\\Player Camera\\playerCamera.cs",
+  "source": "Camera/Player Camera/playerCamera.cs",
+  "part": 2,
+  "total_parts": 2,
+  "fields": [
+   {
+    "field": "canActivateLookAtTargetEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "canActiveLookAtTargetOnLockedCamera",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "lookAtTargetTransform",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "targetToLook",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "maxDistanceToFindTarget",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useLayerToSearchTargets",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "layerToLook",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "lookOnlyIfTargetOnScreen",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "checkObstaclesToTarget",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "getClosestToCameraCenter",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useMaxDistanceToCameraCenter",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "maxDistanceToCameraCenter",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "activateStrafeModeIfNoTargetsToLookFound",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "layerToCheckPossibleTargetsBelowCursor",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "searchPointToLookComponents",
+    "label": "",
+    "section": "Search Point To Look Objects Settings"
+   },
+   {
+    "field": "pointToLookComponentsLayer",
+    "label": "",
+    "section": "Search Point To Look Objects Settings"
+   },
+   {
+    "field": "useTimeToStopAimAssist",
+    "label": "",
+    "section": "Stop Look At Target Aim Assist Settings"
+   },
+   {
+    "field": "timeToStopAimAssist",
+    "label": "",
+    "section": "Stop Look At Target Aim Assist Settings"
+   },
+   {
+    "field": "useTimeToStopAimAssistLockedCamera",
+    "label": "",
+    "section": "Stop Look At Target Aim Assist Settings"
+   },
+   {
+    "field": "timeToStopAimAssistLockedCamera",
+    "label": "",
+    "section": "Stop Look At Target Aim Assist Settings"
+   },
+   {
+    "field": "canChangeTargetToLookWithCameraAxis",
+    "label": "",
+    "section": "Change Between Target Settings"
+   },
+   {
+    "field": "minimumCameraDragToChangeTargetToLook",
+    "label": "",
+    "section": "Change Between Target Settings"
+   },
+   {
+    "field": "waitTimeToNextChangeTargetToLook",
+    "label": "",
+    "section": "Change Between Target Settings"
+   },
+   {
+    "field": "useOnlyHorizontalCameraDragValue",
+    "label": "",
+    "section": "Change Between Target Settings"
+   },
+   {
+    "field": "lookAtTargetSpeed",
+    "label": "",
+    "section": "Look At Target Speed Settings"
+   },
+   {
+    "field": "lookCloserAtTargetSpeed",
+    "label": "",
+    "section": "Look At Target Speed Settings"
+   },
+   {
+    "field": "lookAtTargetSpeed2_5dView",
+    "label": "",
+    "section": "Look At Target Speed Settings"
+   },
+   {
+    "field": "lookAtTargetSpeedOthersLockedViews",
+    "label": "",
+    "section": "Look At Target Speed Settings"
+   },
+   {
+    "field": "useLookTargetIcon",
+    "label": "",
+    "section": "Icon Settings"
+   },
+   {
+    "field": "lookAtTargetIcon",
+    "label": "",
+    "section": "Icon Settings"
+   },
+   {
+    "field": "lookAtTargetRegularIconGameObject",
+    "label": "",
+    "section": "Icon Settings"
+   },
+   {
+    "field": "lookAtTargetIconWhenNotAiming",
+    "label": "",
+    "section": "Icon Settings"
+   },
+   {
+    "field": "lookAtBodyPartsOnCharacters",
+    "label": "",
+    "section": "Look At Characters Body Parts Settings"
+   },
+   {
+    "field": "useObjectToGrabFoundShader",
+    "label": "",
+    "section": "Look At Characters Body Parts Settings"
+   },
+   {
+    "field": "objectToGrabFoundShader",
+    "label": "",
+    "section": "Look At Characters Body Parts Settings"
+   },
+   {
+    "field": "shaderOutlineWidth",
+    "label": "",
+    "section": "Look At Characters Body Parts Settings"
+   },
+   {
+    "field": "shaderOutlineColor",
+    "label": "",
+    "section": "Look At Characters Body Parts Settings"
+   },
+   {
+    "field": "useRemoteEventsOnLockOn",
+    "label": "",
+    "section": "Remote Events On Lock On Settings"
+   },
+   {
+    "field": "useEventsOnLockOn",
+    "label": "",
+    "section": "Events On Lock On Settings"
+   },
+   {
+    "field": "eventOnLockOnStart",
+    "label": "",
+    "section": "Events On Lock On Settings"
+   },
+   {
+    "field": "eventOnLockOnEnd",
+    "label": "",
+    "section": "Events On Lock On Settings"
+   },
+   {
+    "field": "useEventsOnLockAtTarget",
+    "label": "",
+    "section": "Events On Lock On Settings"
+   },
+   {
+    "field": "eventOnLockAtTargetStart",
+    "label": "",
+    "section": "Events On Lock On Settings"
+   },
+   {
+    "field": "eventOnLockAtTargetEnd",
+    "label": "",
+    "section": "Events On Lock On Settings"
+   },
+   {
+    "field": "useEventOnMovingLockedCamera",
+    "label": "",
+    "section": "Event On Moving Locked Camera Settings"
+   },
+   {
+    "field": "useEventOnFreeCamereToo",
+    "label": "",
+    "section": "Event On Moving Locked Camera Settings"
+   },
+   {
+    "field": "eventOnStartMovingLockedCamera",
+    "label": "",
+    "section": "Event On Moving Locked Camera Settings"
+   },
+   {
+    "field": "eventOnKeepMovingLockedCamera",
+    "label": "",
+    "section": "Event On Moving Locked Camera Settings"
+   },
+   {
+    "field": "eventOnStopMovingLockedCamera",
+    "label": "",
+    "section": "Event On Moving Locked Camera Settings"
+   },
+   {
+    "field": "useEventOnThirdFirstPersonViewChange",
+    "label": "",
+    "section": "Event On Third/First Person View Change Settings"
+   },
+   {
+    "field": "setFirstPersonEvent",
+    "label": "",
+    "section": "Event On Third/First Person View Change Settings"
+   },
+   {
+    "field": "setThirdPersonEvent",
+    "label": "",
+    "section": "Event On Third/First Person View Change Settings"
+   },
+   {
+    "field": "useEventOnFBAViewChange",
+    "label": "",
+    "section": "Event On FBA Person View Change Settings"
+   },
+   {
+    "field": "eventOnEnableFBA",
+    "label": "",
+    "section": "Event On FBA Person View Change Settings"
+   },
+   {
+    "field": "eventOnDisableFBA",
+    "label": "",
+    "section": "Event On FBA Person View Change Settings"
+   },
+   {
+    "field": "eventOnEnableFBAInEditor",
+    "label": "",
+    "section": "Event On FBA Person View Change Settings"
+   },
+   {
+    "field": "eventOnDisableFBAInEditor",
+    "label": "",
+    "section": "Event On FBA Person View Change Settings"
+   },
+   {
+    "field": "useHeadColliderOnFBA",
+    "label": "",
+    "section": "Other FBA Settings"
+   },
+   {
+    "field": "useHeadColliderOnThirdPerson",
+    "label": "",
+    "section": "Other FBA Settings"
+   },
+   {
+    "field": "headColliderOnFBA",
+    "label": "",
+    "section": "Other FBA Settings"
+   },
+   {
+    "field": "eventToActivateHeadColliderOnFBA",
+    "label": "",
+    "section": "Other FBA Settings"
+   },
+   {
+    "field": "eventToDeactivateHeadColliderOnFBA",
+    "label": "",
+    "section": "Other FBA Settings"
+   },
+   {
+    "field": "eventToActivateHeadColliderOnFBAOnEditor",
+    "label": "",
+    "section": "Other FBA Settings"
+   },
+   {
+    "field": "eventToDeactivateHeadColliderOnFBAOnEditor",
+    "label": "",
+    "section": "Other FBA Settings"
+   },
+   {
+    "field": "setThirdPersonInEditorEvent",
+    "label": "",
+    "section": "Change Third/First Person View In Editor Events Settings"
+   },
+   {
+    "field": "setFirstPersonInEditorEvent",
+    "label": "",
+    "section": "Change Third/First Person View In Editor Events Settings"
+   }
+  ]
+ },
+ {
+  "type": "playerCharactersManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Game Manager\\playerCharactersManager.cs",
+  "source": "Game Manager/playerCharactersManager.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "searchPlayersAtStart",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "ignoreCheckEmptyCharactersOnStartEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "currentNumberOfPlayers",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "mainCharacter",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "newPlayerPositionOffset",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "regularReferenceResolution",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "splitReferenceResolution",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "cameraStateNameToUse",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "configureLocalMultiplayerCharactersOnAwake",
+    "label": "",
+    "section": "Configure/Spawn Multiple Players On Awake Settings"
+   },
+   {
+    "field": "numberOfPlayersOnAwake",
+    "label": "",
+    "section": "Configure/Spawn Multiple Players On Awake Settings"
+   },
+   {
+    "field": "cameraStateNameOnAwake",
+    "label": "",
+    "section": "Configure/Spawn Multiple Players On Awake Settings"
+   },
+   {
+    "field": "extraPlayerPrefab",
+    "label": "",
+    "section": "Configure/Spawn Multiple Players On Awake Settings"
+   },
+   {
+    "field": "initialMultiplayerSpawnPosition",
+    "label": "",
+    "section": "Configure/Spawn Multiple Players On Awake Settings"
+   },
+   {
+    "field": "onlinePlayerPrefab",
+    "label": "",
+    "section": "Online Settings"
+   },
+   {
+    "field": "useTransformPositionListToSpawnOnlinePlayer",
+    "label": "",
+    "section": "Online Settings"
+   },
+   {
+    "field": "spawnOnlinePlayersOnStart",
+    "label": "",
+    "section": "Online Settings"
+   },
+   {
+    "field": "numberOfOnlinePlayersToSpawnOnStart",
+    "label": "",
+    "section": "Online Settings"
+   },
+   {
+    "field": "setCurrentCharacterToControlAndAIAtStart",
+    "label": "",
+    "section": "Use AI As Partner To Switch Settings"
+   },
+   {
+    "field": "keepActiveOnlyCurrentPlayerSelected",
+    "label": "",
+    "section": "Use AI As Partner To Switch Settings"
+   },
+   {
+    "field": "changeCameraPositionAtOnceOnCharacterChange",
+    "label": "",
+    "section": "Use AI As Partner To Switch Settings"
+   },
+   {
+    "field": "setCurrentPlayerPositionToPreviousCharacter",
+    "label": "",
+    "section": "Use AI As Partner To Switch Settings"
+   },
+   {
+    "field": "currentCharacterToControlName",
+    "label": "",
+    "section": "Use AI As Partner To Switch Settings"
+   },
+   {
+    "field": "delayTimeToChangeBetweenCharacters",
+    "label": "",
+    "section": "Use AI As Partner To Switch Settings"
+   },
+   {
+    "field": "mainDynamicSplitScreenSystem",
+    "label": "",
+    "section": "Dynamic Split Camera Settings"
+   }
+  ]
+ }
+]

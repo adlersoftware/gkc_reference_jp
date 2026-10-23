@@ -1,0 +1,628 @@
+[
+ {
+  "type": "playerController",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Player\\playerController.cs",
+  "methods": [
+   {
+    "sig": "setPauseMainRigidbodyVelocityUpdateState(bool state)",
+    "line": 2925
+   },
+   {
+    "sig": "setUseMaxFallSpeedExternallyActiveState(bool state)",
+    "line": 2930
+   },
+   {
+    "sig": "setCustomMaxFallSpeedExternally(float newValue)",
+    "line": 2935
+   },
+   {
+    "sig": "setMainAxisValues()",
+    "line": 2940
+   },
+   {
+    "sig": "setMainRawAxisValues()",
+    "line": 2945
+   },
+   {
+    "sig": "setCustomAxisValues(Vector2 newValue)",
+    "line": 2950
+   },
+   {
+    "sig": "setAIMainAxisValues()",
+    "line": 2955
+   },
+   {
+    "sig": "setMainAIRawAxisValues()",
+    "line": 2960
+   },
+   {
+    "sig": "updateOverrideInputValues(Vector2 inputValues, bool state)",
+    "line": 2965
+   },
+   {
+    "sig": "setNewMainCameraTransform(Transform newTransform)",
+    "line": 2970
+   },
+   {
+    "sig": "setNewPlayerCameraTransform(Transform newTransform)",
+    "line": 2975
+   },
+   {
+    "sig": "setDisableStrafeModeExternallyIfIncreaseWalkSpeedActiveState(bool state)",
+    "line": 2980
+   },
+   {
+    "sig": "checkObstacleToAvoidMovement()",
+    "line": 2987
+   },
+   {
+    "sig": "isObstacleToAvoidMovementFound()",
+    "line": 3043
+   },
+   {
+    "sig": "getCurrentForwardDirection()",
+    "line": 3048
+   },
+   {
+    "sig": "getCurrentRightDirection()",
+    "line": 3053
+   },
+   {
+    "sig": "isUseSmoothPlayerRotationAxisOn2_5dEnabled()",
+    "line": 3060
+   },
+   {
+    "sig": "getCurrent2_5dRightDirection()",
+    "line": 3068
+   },
+   {
+    "sig": "setIgnoreLookInCameraDirectionValue(bool state)",
+    "line": 3318
+   },
+   {
+    "sig": "setIgnoreStrafeModeInputCheckActiveState(bool state)",
+    "line": 3323
+   },
+   {
+    "sig": "setTurnAmountClampValue(float newValue)",
+    "line": 3330
+   },
+   {
+    "sig": "setRotateInCameraDirectionOnAirOnExternalActionActiveState(bool state)",
+    "line": 3337
+   },
+   {
+    "sig": "isLookCameraDirectionInFBAIsCurrentlyActive()",
+    "line": 3481
+   },
+   {
+    "sig": "setPausePlayerRotateToCameraDirectionOnFirstPersonActiveState(bool state)",
+    "line": 3490
+   },
+   {
+    "sig": "setCurrentNormalCharacter(Vector3 newNormal)",
+    "line": 3579
+   },
+   {
+    "sig": "setApplyAnimatorVelocityWithoutMovingState(bool state)",
+    "line": 3584
+   },
+   {
+    "sig": "setIgnoreUseDelayOnGroundJumpActiveState(bool state)",
+    "line": 3812
+   },
+   {
+    "sig": "enableOrDisableUseDelayOnGroundJumpState(bool state, float delayAmount)",
+    "line": 3817
+   },
+   {
+    "sig": "setApplyRootMotionAlwaysActiveState(bool state)",
+    "line": 4015
+   },
+   {
+    "sig": "updateAnimatorExternally()",
+    "line": 4020
+   },
+   {
+    "sig": "setPlayerStatusIDValue(int newValue)",
+    "line": 4650
+   },
+   {
+    "sig": "resetPlayerStatusID()",
+    "line": 4655
+   },
+   {
+    "sig": "getPlayerStatusID()",
+    "line": 4660
+   },
+   {
+    "sig": "setCurrentIdleIDValue(int newValue)",
+    "line": 4665
+   },
+   {
+    "sig": "setCurrentIdleIDValueFloat(float newValue)",
+    "line": 4670
+   },
+   {
+    "sig": "getCurrentIdleID()",
+    "line": 4675
+   },
+   {
+    "sig": "setCurrentStrafeIDValue(int newValue)",
+    "line": 4680
+   },
+   {
+    "sig": "getCurrentStrafeIDValue()",
+    "line": 4685
+   },
+   {
+    "sig": "setCurrentCrouchIDValue(int newValue)",
+    "line": 4690
+   },
+   {
+    "sig": "getCurrentCrouchIDValue()",
+    "line": 4695
+   },
+   {
+    "sig": "setCurrentAirIDValue(int newValue)",
+    "line": 4700
+   },
+   {
+    "sig": "setOriginalAirIDValue()",
+    "line": 4705
+   },
+   {
+    "sig": "setCurrentAirSpeedValue(int newValue)",
+    "line": 4710
+   },
+   {
+    "sig": "setCurrentShieldActiveValue(int newValue)",
+    "line": 4715
+   },
+   {
+    "sig": "getCurrentAirID()",
+    "line": 4720
+   },
+   {
+    "sig": "updatePlayerStatusIDOnAnimator()",
+    "line": 4725
+   },
+   {
+    "sig": "updateIdleIDOnAnimator()",
+    "line": 4732
+   },
+   {
+    "sig": "updateStrafeIDOnAnimator()",
+    "line": 4739
+   },
+   {
+    "sig": "updateAirIDOnAnimator()",
+    "line": 4746
+   },
+   {
+    "sig": "updateAirIDAnimatorID()",
+    "line": 4753
+   },
+   {
+    "sig": "setCurrentWeaponID(int newValue)",
+    "line": 4760
+   },
+   {
+    "sig": "updateWeaponID()",
+    "line": 4765
+   },
+   {
+    "sig": "updateWeaponIDSmoothly()",
+    "line": 4776
+   },
+   {
+    "sig": "setUsingNewWeaponID(bool state)",
+    "line": 4818
+   },
+   {
+    "sig": "setAnimatorTrigger(int triggerID)",
+    "line": 4823
+   },
+   {
+    "sig": "setAnimatorTrigger(string triggerName)",
+    "line": 4828
+   },
+   {
+    "sig": "resetAnimatorTrigger(int triggerID)",
+    "line": 4835
+   },
+   {
+    "sig": "resetAnimatorTrigger(string triggerName)",
+    "line": 4840
+   },
+   {
+    "sig": "setPlayerOnGroundAnimatorStateOnOverrideOnGround(bool state)",
+    "line": 4847
+   },
+   {
+    "sig": "setPlayerOnGroundAnimatorStateOnOverrideOnGroundWithTime(bool state)",
+    "line": 4852
+   },
+   {
+    "sig": "setPreviousValueOnGroundAnimatorStateValue(bool state)",
+    "line": 4857
+   },
+   {
+    "sig": "overrideOnGroundAnimatorValue(float newOverrideOnGroundDuration)",
+    "line": 4862
+   },
+   {
+    "sig": "disableOverrideOnGroundAnimatorValue()",
+    "line": 4871
+   },
+   {
+    "sig": "setIgnoreRootMotionDuringActionState(bool state)",
+    "line": 4880
+   },
+   {
+    "sig": "OnAnimatorMove()",
+    "line": 4886
+   },
+   {
+    "sig": "activateCustomAction(string actionName)",
+    "line": 5012
+   },
+   {
+    "sig": "stopCustomAction(string actionName)",
+    "line": 5019
+   },
+   {
+    "sig": "stopAllActionsOnActionSystem()",
+    "line": 5026
+   },
+   {
+    "sig": "getCurrentActionName()",
+    "line": 5033
+   },
+   {
+    "sig": "playCurrentAnimationOnPlayerActionSystem()",
+    "line": 5042
+   },
+   {
+    "sig": "setExtraCharacterVelocity(Vector3 extraValue)",
+    "line": 5049
+   },
+   {
+    "sig": "setActionCanHappenOnAirState(bool state)",
+    "line": 5060
+   },
+   {
+    "sig": "setActionActiveState(bool state)",
+    "line": 5065
+   },
+   {
+    "sig": "getLastTimeActionActive()",
+    "line": 5090
+   },
+   {
+    "sig": "isActionActive()",
+    "line": 5095
+   },
+   {
+    "sig": "setNewActionIDExternally(int newID)",
+    "line": 5100
+   },
+   {
+    "sig": "setActionActiveExternally(bool state)",
+    "line": 5107
+   },
+   {
+    "sig": "getCurrentActionCategoryActive()",
+    "line": 5114
+   },
+   {
+    "sig": "setCurrentCustomActionCategoryID(int newID)",
+    "line": 5123
+   },
+   {
+    "sig": "setEnableChangeScriptStateAfterFinishActionState(bool state)",
+    "line": 5130
+   },
+   {
+    "sig": "setDisableChangeScriptStateAfterFinishActionState(bool state)",
+    "line": 5135
+   },
+   {
+    "sig": "setActionActiveWithMovementState(bool state)",
+    "line": 5140
+   },
+   {
+    "sig": "setIgnoreCameraDirectionOnMovementState(bool state)",
+    "line": 5145
+   },
+   {
+    "sig": "setIgnoreCameraDirectionOnStrafeMovementState(bool state)",
+    "line": 5156
+   },
+   {
+    "sig": "setUseRootMotionActiveState(bool state)",
+    "line": 5161
+   },
+   {
+    "sig": "setForceUseRootMotionActiveState(bool state)",
+    "line": 5166
+   },
+   {
+    "sig": "setOriginalUseRootMotionActiveState()",
+    "line": 5171
+   },
+   {
+    "sig": "setNoRootMotionValues(float noRootWalkMovementSpeedValue, float noRootRunMovementSpeedValue, float noRootSprintMovementSpeedValue, float noRootCrouchMovementSpeedValue, float noRootCrouchRunMovementSpeedValue, float noRootWalkStrafeMovementSpeedValue, float noRootRunStrafeMovementSpeedValue)",
+    "line": 5176
+   },
+   {
+    "sig": "setOriginalNoRootMotionValues()",
+    "line": 5190
+   },
+   {
+    "sig": "setDeactivateRootMotionOnStrafeActiveOnLockedViewState(bool state)",
+    "line": 5197
+   },
+   {
+    "sig": "setRotateDirectlyTowardCameraOnStrafeState(bool state)",
+    "line": 5212
+   },
+   {
+    "sig": "setAllowDownVelocityDuringActionState(bool state)",
+    "line": 5217
+   },
+   {
+    "sig": "setPlayerControllerMovementValues(float moveSpeedMultiplierValue, float animSpeedMultiplierValue, float jumpPowerValue, float airSpeedValue, float airControlValue)",
+    "line": 5222
+   },
+   {
+    "sig": "resetPlayerControllerMovementValues()",
+    "line": 5236
+   },
+   {
+    "sig": "setAirSpeedValue(float newAirSpeedValue)",
+    "line": 5250
+   },
+   {
+    "sig": "setAirControlValue(float newAirControlValue)",
+    "line": 5255
+   },
+   {
+    "sig": "setOriginalAirSpeed()",
+    "line": 5260
+   },
+   {
+    "sig": "setOriginalAirControl()",
+    "line": 5265
+   },
+   {
+    "sig": "setIgnoreInputOnAirControlActiveState(bool state)",
+    "line": 5270
+   },
+   {
+    "sig": "setAnimatorSpeedUpdatePausedState(bool state)",
+    "line": 5275
+   },
+   {
+    "sig": "setOverrideAnimationSpeedActiveState(bool state)",
+    "line": 5280
+   },
+   {
+    "sig": "updateCurrentAnimatorSpeed(float newSpeed)",
+    "line": 5285
+   },
+   {
+    "sig": "setNoAnimatorMovementSpeedMultiplierValue(float newValue)",
+    "line": 5290
+   },
+   {
+    "sig": "setOriginalNoAnimatorMovementSpeedMultiplierValue()",
+    "line": 5295
+   },
+   {
+    "sig": "getCurrentSurfaceBelowPlayer()",
+    "line": 5300
+   },
+   {
+    "sig": "checkIfPlayerOnGroundWithRaycast()",
+    "line": 5305
+   },
+   {
+    "sig": "setCheckOnGroungPausedState(bool state)",
+    "line": 5318
+   },
+   {
+    "sig": "isPlayerOnGround()",
+    "line": 5325
+   },
+   {
+    "sig": "setPlayerOnGroundState(bool state)",
+    "line": 5330
+   },
+   {
+    "sig": "setOnGroundState(bool state)",
+    "line": 5335
+   },
+   {
+    "sig": "isStrafeModeActive()",
+    "line": 5344
+   },
+   {
+    "sig": "updateStrafeModeActiveState()",
+    "line": 5349
+   },
+   {
+    "sig": "updateWallRunningState()",
+    "line": 5355
+   },
+   {
+    "sig": "checkIfActivateWallRunningState()",
+    "line": 5362
+   },
+   {
+    "sig": "isWallRunningActive()",
+    "line": 5369
+   },
+   {
+    "sig": "setWallRunningActiveValue(bool state)",
+    "line": 5374
+   },
+   {
+    "sig": "isExternalControlBehaviorForAirTypeActive()",
+    "line": 5379
+   },
+   {
+    "sig": "setWallRunningActiveState(bool state)",
+    "line": 5384
+   },
+   {
+    "sig": "setWallRunningImpulseForce(Vector3 forceAmount, bool useCameraDirection)",
+    "line": 5391
+   },
+   {
+    "sig": "setWallRunningEnabledState(bool state)",
+    "line": 5398
+   },
+   {
+    "sig": "setPauseAllPlayerDownForces(bool state)",
+    "line": 5405
+   },
+   {
+    "sig": "setLadderFoundState(bool state)",
+    "line": 5410
+   },
+   {
+    "sig": "isLadderFound()",
+    "line": 5425
+   },
+   {
+    "sig": "isPauseAllPlayerDownForcesActive()",
+    "line": 5430
+   },
+   {
+    "sig": "setUseObstacleDetectionToAvoidMovementState(bool state)",
+    "line": 5435
+   },
+   {
+    "sig": "setCheckQuickMovementTurn180DegreesOnRunState(bool state)",
+    "line": 5440
+   },
+   {
+    "sig": "setAirDashEnabledState(bool state)",
+    "line": 5445
+   },
+   {
+    "sig": "doAirDash()",
+    "line": 5450
+   },
+   {
+    "sig": "addExternalForce(Vector3 forceDireciton)",
+    "line": 5521
+   },
+   {
+    "sig": "setGravityForcePuase(bool state)",
+    "line": 5526
+   },
+   {
+    "sig": "isGravityForcePaused()",
+    "line": 5533
+   },
+   {
+    "sig": "setRigidbodyVelocityToZero()",
+    "line": 5538
+   },
+   {
+    "sig": "getCurrentDeltaTime()",
+    "line": 5543
+   },
+   {
+    "sig": "getCurrentScaleTime()",
+    "line": 5565
+   },
+   {
+    "sig": "setPlayerColliderCapsuleScale(float capsuleHeight)",
+    "line": 5594
+   },
+   {
+    "sig": "setPlayerColliderCapsuleScaleWithCenterAsRadius(float capsuleHeight)",
+    "line": 5603
+   },
+   {
+    "sig": "setCapsuleHeightOnCrouch(float newValue)",
+    "line": 5616
+   },
+   {
+    "sig": "setPlayerColliderCapsuleCenter(Vector3 newValue)",
+    "line": 5621
+   },
+   {
+    "sig": "setPlayerCapsuleColliderDirection(int newDirection)",
+    "line": 5626
+   },
+   {
+    "sig": "setPlayerCapsuleColliderRadius(float newValue)",
+    "line": 5631
+   },
+   {
+    "sig": "setOriginalPlayerCapsuleColliderRadius()",
+    "line": 5636
+   },
+   {
+    "sig": "setOriginalPlayerColliderCapsuleScale()",
+    "line": 5641
+   },
+   {
+    "sig": "setOriginalPlayerColliderCapsuleScaleIfCrouchNotActive()",
+    "line": 5646
+   },
+   {
+    "sig": "getMainCapsuleCollider()",
+    "line": 5655
+   },
+   {
+    "sig": "getMainCapsuleColliderBounds()",
+    "line": 5660
+   },
+   {
+    "sig": "setCharacterRadius(float newValue)",
+    "line": 5665
+   },
+   {
+    "sig": "getCharacterRadius()",
+    "line": 5670
+   },
+   {
+    "sig": "setCharacterCustomScale(float newValue)",
+    "line": 5675
+   },
+   {
+    "sig": "setPlaceToShootPositionOffset(float newValue)",
+    "line": 5682
+   },
+   {
+    "sig": "setPlaceToShootLocalPosition(Vector3 newValue)",
+    "line": 5691
+   },
+   {
+    "sig": "setCheckFallStatePausedState(bool state)",
+    "line": 5696
+   },
+   {
+    "sig": "getMainCollider()",
+    "line": 5701
+   },
+   {
+    "sig": "setMainColliderState(bool state)",
+    "line": 5706
+   },
+   {
+    "sig": "setMainColliderTriggerState(bool state)",
+    "line": 5715
+   },
+   {
+    "sig": "isMainColliderEnabled()",
+    "line": 5720
+   }
+  ]
+ }
+]

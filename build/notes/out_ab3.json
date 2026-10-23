@@ -1,0 +1,241 @@
+[
+ {
+  "type": "drainStatSystem",
+  "summary": "カメラ前方の対象を検出し、時間経過で相手のステータスを吸い取って自分を強化するドレイン能力。対象検出、吸収コルーチン、対象を引き寄せる処理をまとめて持つ。",
+  "methods": {
+   "stopDrainManually()": "`drainActive` の時だけ手動停止用イベント `eventToStopDrainManually` を発火する。",
+   "stopDrainIfActive()": "`drainActive` なら `stopDrain` を呼び、必要に応じて終了イベントも発火する。",
+   "checkTargetToDrain()": "カメラ前方のレイキャストで対象を検出し、`drainActive` と対象リストを設定して開始イベントを発火する。",
+   "startDrainCoroutine()": "既存のドレインコルーチンを止め、`activateDrainStatCoroutine` を開始する。",
+   "stopActivateDrainStatCoroutine()": "`drainCoroutine` が動いていれば停止する。",
+   "stopDrain()": "ドレインと引き寄せのコルーチンを止め、`drainActive` を下げて終了イベントと終了リモートイベントを実行する。",
+   "checkRemoteEventOnStart()": "`useRemoteEventOnObjectsFound` が有効なら検出済みオブジェクトへ開始用リモートイベントを送る。",
+   "checkRemoteEventOnEnd()": "`useRemoteEventOnObjectsFound` が有効なら検出済みオブジェクトへ終了用リモートイベントを送る。",
+   "startMoveObjectCoroutine()": "既存の引き寄せコルーチンを止め、`moveObjectCoroutine` を開始する。",
+   "stopMoveObjectCoroutine()": "`moveCoroutine` が動いていれば停止する。",
+   "setDrainActionPausedState(bool state)": "`drainActionPaused` を設定するだけ。",
+   "setMoveObjectActiveState(bool state)": "`moveObjectActive` を設定し、有効になった時は引き寄せコルーチンを開始する。"
+  }
+ },
+ {
+  "type": "grapplingHookEffect",
+  "summary": "グラップリングフックのロープを `LineRenderer` で螺旋状に描画するエフェクト。`DoGrapple` で対象点を決め、更新時に頂点を毎フレーム再計算する。",
+  "methods": {
+   "activateGrapplingHookEffect(Vector3 raycastDirection)": "指定方向へカメラからレイを飛ばし、当たれば線を有効化して `DoGrapple` を呼びエフェクトを開始する。",
+   "activateGrapplingHookEffect()": "カメラ前方へレイを飛ばし、当たれば線を有効化して `DoGrapple` を呼びエフェクトを開始する。",
+   "deactivateGrapplingHookEffect()": "`grapplingHookEffectActive` を下げ、線を無効化して全頂点を原点位置へ戻す。",
+   "DoGrapple(Vector3 newWrapplePoint)": "対象点を設定し、時間オフセットをリセットして頂点数を `Segments` に合わせる。",
+   "setFixedUpdateActiveState(bool state)": "`fixedUpdateActive` を設定するだけ（更新を `FixedUpdate` 側で行うかの切り替え）。",
+   "changeLineRendererOriginPositionParent(Transform newParent)": "線の原点を `newParent` の子にしてローカル座標をゼロに合わせる。",
+   "setNewlineRendererTargetPositionTransform(Transform newObject)": "`lineRendererTargetPositionTransform` を新しい対象に差し替えるだけ。"
+  }
+ },
+ {
+  "type": "grapplingHookTarget",
+  "summary": "グラップリングフックの対象地点コンポーネント。プレイヤーがトリガーに入ると対象リストへ登録し、フック・スイング受信時のイベントを持つ。",
+  "methods": {
+   "checkTriggerInfo(Collider col, bool isEnter)": "対象レイヤーとタグが合えば、`isEnter` に応じてプレイヤーの対象リストへ自身を登録・解除する。",
+   "checkEventOnHookReceived()": "`useEventOnHookReceived` が有効なら `eventOnHookReceived` を発火するだけ。",
+   "checkEventOnSwingReceived()": "`useEventOnSwingReceived` が有効なら `eventOnSwingReceived` を発火するだけ。"
+  }
+ },
+ {
+  "type": "grapplingHookTargetsSystem",
+  "summary": "プレイヤーが狙えるグラップリング対象を管理し、対象アイコンの生成・表示・削除を行う。`grapplingHookSystem` とテレポートシステムへ対象を引き渡す。",
+  "methods": {
+   "setCurrentGrapplingHookTargetState(bool state)": "現在の対象アイコンの表示を `state` に合わせて切り替え、`iconCurrentlyEnabled` を更新する。",
+   "disableGrapplingHookTargets()": "`enableOrDisableGrapplingHookTargets(false)` を呼ぶだけ。",
+   "enableGrapplingHookTargets()": "`enableOrDisableGrapplingHookTargets(true)` を呼ぶだけ。",
+   "enableOrDisableGrapplingHookTargets(bool state)": "全対象のアイコン表示を `state` に合わせて切り替え、`iconCurrentlyEnabled` を更新する。",
+   "addNewGrapplingHookTarget(Transform targetTransform)": "アイコンのプレハブを生成して対象情報をリストに追加し、`hookTargetsDetected` を立てる。",
+   "removeNewGrapplingHookTarget(Transform targetTransform)": "一致する対象のアイコンを破棄してリストから外し、空ならフックとテレポートの対象を解除する。",
+   "pauseOrResumeShowGrapplingHookTargets(bool state)": "`showGrapplingHookTargetsPaused` を設定し、アイコン親の表示を反転させる。"
+  }
+ },
+ {
+  "type": "laserPlayer",
+  "summary": "プレイヤーに当たったレーザーを反射・描画する `laser` 派生クラス。ヒット位置、レーザーの色、屈折回数を保持する。",
+  "methods": {
+   "setLaserInfo(laserDevice.laserType type, GameObject laser, Vector3 pos)": "当たっているレーザーとヒット位置・種類を保持し、色を合わせて `LineRenderer` の頂点を初期化する。",
+   "removeLaserInfo()": "`currentLaserRenderer` を null にするだけ。"
+  }
+ },
+ {
+  "type": "laserVisionSystem",
+  "summary": "レーザーでオブジェクトを切断するビジョン能力。レーザー位置の移動量から切断方向を決め、`sliceSystem` でスライスする。",
+  "methods": {
+   "setLaserVisionActiveState(bool state)": "`laserVisionEnabled` を確認してから状態とレーザー表示を切り替え、対応するイベントを発火する。",
+   "toggleLaserVisionActiveState()": "現在の `laserVisionActive` を反転して `setLaserVisionActiveState` を呼ぶ。"
+  }
+ },
+ {
+  "type": "manualDetonationMineObject",
+  "summary": "手動起爆式の地雷オブジェクト。起爆用イベントを持ち、所有する `manualDetonationMineSystem` に自身の解除を依頼する。",
+  "methods": {
+   "activateMine()": "`eventToActivateMine` を発火するだけ。",
+   "removeMine()": "`mainManualDetonationMineSystem` があれば `removeCurrentMine` を呼んで自身を解除させる。",
+   "setManualDetonationMineSystem(manualDetonationMineSystem newManualDetonationMineSystem)": "`mainManualDetonationMineSystem` を設定するだけ。"
+  }
+ },
+ {
+  "type": "manualDetonationMineSystem",
+  "summary": "手動起爆式の地雷の設置と起爆を管理するコンポーネント。設置イベント、現在の地雷、設置時刻を保持する。",
+  "methods": {
+   "placeNewMine()": "`currentMine` が空の時だけ設置イベント `eventToPlaceNewMine` を発火する。",
+   "setCurrentMine(GameObject newMineObject)": "現在の地雷を登録し、その `manualDetonationMineObject` に自身を渡して設置時刻を記録する。",
+   "activateCurrentMine()": "`minDelayToActivateMine` を過ぎていれば現在の地雷を起爆し、`removeCurrentMine` で参照を消す。",
+   "removeCurrentMine()": "`currentMine` を null にするだけ。"
+  }
+ },
+ {
+  "type": "objectToAttractWithGrapplingHook",
+  "summary": "グラップリングフックで引き寄せられるオブジェクト側の設定。引力状態の切替、終了時の減速と速度復帰、複数 `Rigidbody` の検索を扱う。",
+  "methods": {
+   "setAttractionHookRemovedByDistanceState(bool state)": "`attractionHookRemovedByDistance` を設定するだけ。",
+   "setAttractObjectState(bool state)": "`attractObjectEnabled` なら引力状態を切り替え、重力の復帰・イベント・減速処理まで行い結果を返す。",
+   "getRigidbodyToAttract()": "`mainRigidbody` を返すだけ。",
+   "checkToReduceSpeed()": "`useReducedVelocityOnDisableAttract` が有効なら既存の減速コルーチンを止めて新たに開始する。",
+   "stopCheckToReduceSpeed()": "`reduceSpeedCoroutine` が動いていれば停止する。",
+   "stopGrapplingHookAndResumeValuesWithoutForce()": "速度記録をゼロにしてから `stopGrapplingHookAndResumeValues` を呼ぶ。",
+   "stopGrapplingHookAndResumeValues()": "減速処理中ならコルーチンを止めて元の速度に戻し、終了イベントを発火して状態を戻す。",
+   "stopGrapplingHookIfActiveOnGrabObject()": "減速処理中ならコルーチンを止め、速度記録と各フラグをリセットするだけ。",
+   "searchRigidbodyElements()": "子階層の `Rigidbody` を集めてリストと `mainRigidbody` を再構築し、`updateComponent` を呼ぶ。",
+   "updateComponent()": "`GKC_Utils.updateComponent` と `updateDirtyScene` でシーン更新を通知する。"
+  }
+ },
+ {
+  "type": "particleCollisionDetection",
+  "summary": "パーティクル衝突を検出し、位置や相手オブジェクトをイベントで通知するコンポーネント。レイヤーと最大検出回数の制限を持つ。",
+  "methods": {
+   "setDetectionEnabledState(bool state)": "`detectionEnabled` を設定するだけ。"
+  }
+ },
+ {
+  "type": "playerAbilitiesUIEditorSystem",
+  "summary": "アビリティUIの編集画面を開閉し、ホイールとスロット一覧を更新するUIコンポーネント。スロット生成やスクロール位置のリセットも行う。",
+  "methods": {
+   "openOrCloseAbilitiesUIEditor(bool state)": "編集UIの表示を `state` に合わせて切り替え、開く時はホイール位置やスロット表示・スクロールを整える。",
+   "updateAbilitiesUIEditorValues()": "初回はアビリティ数だけスロット要素を生成し、その後は各有効状態に応じてスロット表示を更新する。",
+   "resetScroll(Scrollbar scrollBarToReset)": "2フレーム待ってから指定スクロールバーの値を1にするコルーチンを開始する。",
+   "resetInventorySlotsRectTransform()": "レイアウト再構築後に2フレーム待ってスクロール位置を先頭へ戻すコルーチンを開始する。"
+  }
+ },
+ {
+  "type": "playerShieldSystem",
+  "summary": "プレイヤーのシールドと手元レーザーを扱うアビリティ。飛来する弾を防ぎ、貯めた弾を撃ち返す機能も持つ。",
+  "methods": {
+   "setActiveShieldState(bool state)": "プレイヤーが多忙でなければ `setShieldState` を呼んでシールドを切り替える。",
+   "setShieldState(bool state)": "条件を満たす時だけ `shieldActive` とシールド表示を切り替え、`checkIfDestroyProjectiles` を呼ぶ。",
+   "activateLaserForceField(Vector3 pos)": "レーザー照射状態にしてシールドを表示し、`pos` を当たり位置として `laserPlayer` に渡して弾を破棄する。",
+   "deactivateLaserForceField()": "`laserActive` を下げてシールドと手元レーザーを消し、`removeLaserInfo` でレーザー参照を外す。",
+   "setShieldEnabledState(bool state)": "`shieldEnabled` を設定するだけ。",
+   "returnEnemyProjectiles()": "条件を満たす時、画面中央のレイキャスト先を狙って貯めた弾を `throwProjectilesStored` で撃ち返す。",
+   "setLaser(GameObject l, laserDevice.laserType type)": "`currentLaser` と `lasertype` を設定するだけ。",
+   "setLaserRefractionLimit(int value)": "`laserPlayerManager.reflactionLimit` に `value + 1` を設定するだけ。",
+   "setLaserAbilityEnabledState(bool state)": "`laserAbilityEnabled` を設定するだけ。"
+  }
+ },
+ {
+  "type": "playerStealthSystem",
+  "summary": "ステルスモードの状態と制限時間を管理するアビリティ。状態変化をイベントで通知し、時間切れで自動解除する。",
+  "methods": {
+   "setStealthModeState(bool state)": "`stealthModeEnabled` なら `stealthModeActive` を更新し、有効・無効に応じたイベントを発火する。",
+   "stopSetStealthModeTimeLimit()": "`timeLimitCoroutine` が動いていれば停止する。",
+   "setStealthModeTimeLimit()": "既存の制限時間コルーチンを止め、`timeLimit` 後にステルスを解除するコルーチンを開始する。"
+  }
+ },
+ {
+  "type": "playerTeleportSystem",
+  "summary": "プレイヤーのテレポート能力。照準した地点への移動、操作とカメラFOVの制御、フック対象への移動を扱う。",
+  "methods": {
+   "stopTeleportInProcess()": "テレポート中か探索中なら実行フラグ・探索状態・マークを戻し、弾丸時間も解除して停止する。",
+   "teleportPlayer(Transform objectToMove, Vector3 teleportPosition, bool checkPositionAngle, bool changeFov, float newFovValue, float fovChangeSpeed, float teleportSpeed, bool rotatePlayerTowardPosition, bool teleportInstantlyToPositionValue, bool useActionSystemOnTeleportValue, bool useSmoothCameraFollowStateOnTeleportValue, float smoothCameraFollowDurationValue, float teleportDistanceOffsetValue, LayerMask layermaskToDetect, bool checkPlayerHeightToTeleportPosition)": "既存のテレポートを止め、地点・FOV・速度など引数の設定で `teleportPlayerCoroutine` を開始する。",
+   "stopTeleporting()": "`teleportCoroutine` を止めてプレイヤー操作を有効に戻すだけ。",
+   "resumeIfTeleportActive()": "テレポート中なら `stopTeleporting` と `setTeleportEndState` で通常状態へ戻す。",
+   "setTeleportEndState()": "テレポート中なら終了フラグを下げ、使用アクションの停止・FOV復帰・終了イベントを行う。",
+   "setPlayerControlState(bool state)": "操作可否に応じてプレイヤーの重力・速度・接地判定・摩擦などの制御状態をまとめて切り替える。",
+   "holdTeleport()": "条件を満たす時だけ `searchingForTeleport` を立て、ボタン押下時刻を記録して照準を開始する。",
+   "releaseTeleport()": "ロックオン対象への即時テレポートも判定し、実行可能なら `teleportPlayer` を呼んで移動を開始する。",
+   "setTeleportingEnabledState(bool state)": "`teleportingEnabled` を設定するだけ。",
+   "isTeleportInProcess()": "`teleportInProcess` を返すだけ。",
+   "isSearchingForTeleport()": "`searchingForTeleport` を返すだけ。",
+   "getTeleportCanBeExecutedState()": "`teleportCanBeExecuted` を返すだけ。",
+   "setTeleportHookTarget(Transform newTarget)": "`useFixedTeleportHookPointsEnabled` の時だけ `currentTeleportHookTarget` を差し替える。"
+  }
+ },
+ {
+  "type": "removeGravityFromCharacterSystem",
+  "summary": "ラグドール化したキャラクターの重力を一定時間だけ切り、上方向の力とトルクを加えるコンポーネント。",
+  "methods": {
+   "activateRemoveGravity()": "既存のコルーチンを止め、一定時間だけラグドールの重力を切って上方向の力とトルクを加える処理を開始する。"
+  }
+ },
+ {
+  "type": "removeGravityFromObjectSystem",
+  "summary": "オブジェクトの重力を一定時間だけ解除して力を加え、減速・キネマティック切替の後に元の重力へ戻す。",
+  "methods": {
+   "activateRemoveGravity()": "既存のコルーチンを止め、重力を切って力を加え、減速後に元の重力へ戻す一連の処理を開始する。"
+  }
+ },
+ {
+  "type": "simpleLaser",
+  "summary": "カメラから照射するシンプルなレーザー。ヒット判定、ダメージ、レーザードットの表示を扱う。",
+  "methods": {
+   "setLaserEnabledState(bool state)": "レーザーと `LineRenderer` の表示を切り替え、回転を戻してドット表示と最終ダメージ時刻をリセットする。"
+  }
+ },
+ {
+  "type": "simpleStrafeAndAimState",
+  "summary": "ストレイフモードとエイム状態をまとめて切り替える補助コンポーネント。元のストレイフIDやカメラ状態を保存し、解除時に復元する。",
+  "methods": {
+   "setSimpleStrafeAndAimState(bool state)": "有効時のみ、フルボディアウェアネス以外で状態を切り替えて `activateState` か `deactivateState` を呼ぶ。",
+   "activateState()": "元のストレイフ設定を保存し、ストレイフ・エイム・カメラ状態を設定値に合わせて有効化する。",
+   "deactivateState()": "保存したストレイフIDや移動設定を戻し、エイムとカメラ状態を元に復帰させる。",
+   "checkLookAtTargetActiveState()": "状態が有効なら、対象を見ているかに応じてストレイフモードを切り替える。",
+   "checkLookAtTargetDeactivateState()": "状態と `activateStrafeModeOnLockOnTargetActive` が有効ならストレイフモードを解除する。"
+  }
+ },
+ {
+  "type": "simpleThrowFireWaveAbility",
+  "summary": "状態フラグと開始・終了イベントだけを持つ単純な火炎波アビリティ。",
+  "methods": {
+   "toggleCurrentState()": "`currentState` を反転して `setCurrentState` を呼ぶだけ。",
+   "setCurrentState(bool state)": "状態が変わる時だけ `currentState` を更新し、開始・終了イベントを発火する。"
+  }
+ },
+ {
+  "type": "slowDownAllAIOnSceneSystem",
+  "summary": "シーン内のAIを一時停止・再開させてスローダウンさせる能力。敵のみを対象にする設定も持つ。",
+  "methods": {
+   "toggleSlowDownState()": "`slowDownActive` を反転して `setSlowDownState` を呼ぶだけ。",
+   "setSlowDownState(bool state)": "`slowDownEnabled` なら状態を更新し、開始・終了イベントと敵のみ・全AIの一時停止を切り替える。"
+  }
+ },
+ {
+  "type": "stealObjectFromCharacterSystem",
+  "summary": "注視中または周囲のキャラクターから武器を盗む能力。確率・距離・クールダウンで成否を判定する。",
+  "methods": {
+   "activateStealFromCharacter()": "有効かつクールダウン外なら、確率判定を経て対象の武器を盗み、成功時に時刻を記録する。"
+  }
+ },
+ {
+  "type": "throwObjectTrayectorySystem",
+  "summary": "投擲物の生成、放物線の照準、発射を担当するコンポーネント。カメラのレイキャストで着弾点を求めて速度を計算する。",
+  "methods": {
+   "setCurrentObjectToThrow(GameObject newObject)": "投擲位置にオブジェクトを配置・表示し、`Rigidbody` をキネマティックにしてプレイヤーとの衝突を無視する。",
+   "instantiateObject()": "`currentObjectToThrow` が無ければ投擲位置と回転でプレハブを生成し、設定処理に渡す。",
+   "calculateThrowDirection()": "カメラのレイキャストで着弾点を求め、`currentTargetPosition` を更新する（ロックオンカメラにも対応）。",
+   "throwObject()": "必要ならオブジェクトを生成し、放物線速度か指定方向の速度で `Rigidbody` に力を加えて射出する。",
+   "inputThrowObject()": "`throwObjectEnabled` の時だけ `throwObject` を呼ぶ。",
+   "inputInstantiateObject()": "`throwObjectEnabled` の時だけ `instantiateObject` を呼ぶ。",
+   "inputCalculateThrowDirection()": "`throwObjectEnabled` の時だけ `calculateThrowDirection` を呼ぶ。"
+  }
+ },
+ {
+  "type": "wallRunningZoneSystem",
+  "summary": "ゾーンに入ったプレイヤーの壁走り設定を切り替えるトリガー。退出時には元の壁走り設定へ戻す。",
+  "methods": {
+   "checkTriggerInfo(Collider col, bool isEnter)": "対象タグのプレイヤーなら、`isEnter` に応じて壁走り設定を適用し、退出時は元の状態に戻す。"
+  }
+ }
+]

@@ -1,0 +1,424 @@
+[
+ {
+  "type": "playerWeaponSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\playerWeaponSystem.cs",
+  "methods": [
+   {
+    "sig": "getWeaponIConHUD()",
+    "line": 3040
+   },
+   {
+    "sig": "getWeaponInventorySlotIcon()",
+    "line": 3045
+   },
+   {
+    "sig": "setWeaponInventorySlotIcon(Texture newTexture)",
+    "line": 3050
+   },
+   {
+    "sig": "setWeaponIconHUD(Texture newTexture)",
+    "line": 3059
+   },
+   {
+    "sig": "setWeaponIcon(Texture newTexture)",
+    "line": 3068
+   },
+   {
+    "sig": "setWeaponInventorySlotIconInEditor(Texture newTexture)",
+    "line": 3078
+   },
+   {
+    "sig": "setWeaponIconHUDInEditor(Texture newTexture)",
+    "line": 3085
+   },
+   {
+    "sig": "setWeaponIconInEditor(Texture newTexture)",
+    "line": 3092
+   },
+   {
+    "sig": "setNumberKey(int newNumberKey)",
+    "line": 3099
+   },
+   {
+    "sig": "enableMuzzleFlashLight()",
+    "line": 3108
+   },
+   {
+    "sig": "checkWeaponShootNoise()",
+    "line": 3134
+   },
+   {
+    "sig": "setMagazineSize(int magazineSize)",
+    "line": 3181
+   },
+   {
+    "sig": "getAmmoAmountToRefillMagazine()",
+    "line": 3190
+   },
+   {
+    "sig": "getPlayerWeaponsManger()",
+    "line": 3195
+   },
+   {
+    "sig": "setOriginalMagazineSize()",
+    "line": 3200
+   },
+   {
+    "sig": "setCurrentProjectilesInMagazine(int newAmount)",
+    "line": 3218
+   },
+   {
+    "sig": "setSilencerState(bool state)",
+    "line": 3228
+   },
+   {
+    "sig": "setAutomaticFireMode(bool state)",
+    "line": 3233
+   },
+   {
+    "sig": "setOriginalAutomaticFireMode()",
+    "line": 3238
+   },
+   {
+    "sig": "setFireRate(float newFireRate)",
+    "line": 3243
+   },
+   {
+    "sig": "setOriginalFireRate()",
+    "line": 3248
+   },
+   {
+    "sig": "setProjectileDamage(float newDamage)",
+    "line": 3253
+   },
+   {
+    "sig": "setOriginalProjectileDamage()",
+    "line": 3258
+   },
+   {
+    "sig": "setWeaponShootSoundEffect(AudioClip newClip)",
+    "line": 3263
+   },
+   {
+    "sig": "setWeaponImpactSoundEffect(AudioClip newClip)",
+    "line": 3269
+   },
+   {
+    "sig": "setCustomWeaponImpactSoundEffect(AudioClip newClip)",
+    "line": 3277
+   },
+   {
+    "sig": "setCustomImpactSoundEffect(AudioClip newClip)",
+    "line": 3288
+   },
+   {
+    "sig": "setWeaponUseRayCastShoot(bool state)",
+    "line": 3299
+   },
+   {
+    "sig": "setOriginalWeaponUseRayCastShoot()",
+    "line": 3304
+   },
+   {
+    "sig": "setBurstModeState(bool state)",
+    "line": 3309
+   },
+   {
+    "sig": "setOriginalBurstMode()",
+    "line": 3320
+   },
+   {
+    "sig": "setBurstAmount(int newAmount)",
+    "line": 3325
+   },
+   {
+    "sig": "setUsingSightState(bool state)",
+    "line": 3330
+   },
+   {
+    "sig": "setUsingSightFullBodyAwareness(bool state)",
+    "line": 3335
+   },
+   {
+    "sig": "isUsingSightFullBodyAwareness()",
+    "line": 3340
+   },
+   {
+    "sig": "setProjectileDamageMultiplier(float multiplier)",
+    "line": 3345
+   },
+   {
+    "sig": "setSpreadState(bool state)",
+    "line": 3350
+   },
+   {
+    "sig": "setOriginalSpreadState()",
+    "line": 3355
+   },
+   {
+    "sig": "isUsingSight()",
+    "line": 3360
+   },
+   {
+    "sig": "setKillOneShotState(bool state)",
+    "line": 3365
+   },
+   {
+    "sig": "setExplosiveAmmoState(bool state)",
+    "line": 3370
+   },
+   {
+    "sig": "setOriginalExplosiveAmmoState()",
+    "line": 3375
+   },
+   {
+    "sig": "setDamageOverTimeAmmoState(bool state)",
+    "line": 3380
+   },
+   {
+    "sig": "setOriginalDamageOverTimeAmmoState()",
+    "line": 3385
+   },
+   {
+    "sig": "setRemoveDamageOverTimeAmmoState(bool state)",
+    "line": 3390
+   },
+   {
+    "sig": "setOriginalRemoveDamageOverTimeAmmoState()",
+    "line": 3396
+   },
+   {
+    "sig": "setSedateAmmoState(bool state)",
+    "line": 3402
+   },
+   {
+    "sig": "setOriginalSedateAmmoState()",
+    "line": 3408
+   },
+   {
+    "sig": "resetAmmoState(bool state)",
+    "line": 3414
+   },
+   {
+    "sig": "getFireRate()",
+    "line": 3427
+   },
+   {
+    "sig": "setPushCharacterState(bool state)",
+    "line": 3432
+   },
+   {
+    "sig": "setOriginalPushCharacterState()",
+    "line": 3437
+   },
+   {
+    "sig": "useCustomReticleEnabled()",
+    "line": 3442
+   },
+   {
+    "sig": "getRegularCustomReticle()",
+    "line": 3447
+   },
+   {
+    "sig": "useAimCustomReticleEnabled()",
+    "line": 3452
+   },
+   {
+    "sig": "getAimCustomReticle()",
+    "line": 3457
+   },
+   {
+    "sig": "useDynamicReticleEnabled()",
+    "line": 3462
+   },
+   {
+    "sig": "getDynamicReticleName()",
+    "line": 3467
+   },
+   {
+    "sig": "isUseRemainAmmoFromInventoryActive()",
+    "line": 3472
+   },
+   {
+    "sig": "setNewWeaponProjectile(GameObject newProjectile)",
+    "line": 3477
+   },
+   {
+    "sig": "setOriginalWeaponProjectile()",
+    "line": 3482
+   },
+   {
+    "sig": "setProjectileWithAbilityState(bool newValue)",
+    "line": 3487
+   },
+   {
+    "sig": "setOriginalProjectileWithAbilityValue()",
+    "line": 3492
+   },
+   {
+    "sig": "setUsingDualWeaponState(bool state)",
+    "line": 3497
+   },
+   {
+    "sig": "setUsingRightHandDualWeaponState(bool state)",
+    "line": 3508
+   },
+   {
+    "sig": "resetWeaponMeshTransform()",
+    "line": 3521
+   },
+   {
+    "sig": "enableOrDisableWeaponMesh(bool state)",
+    "line": 3527
+   },
+   {
+    "sig": "setWeaponMeshScale(float newValue)",
+    "line": 3535
+   },
+   {
+    "sig": "placeMagazineInPlayerHand(bool state)",
+    "line": 3540
+   },
+   {
+    "sig": "setNewReloadTimeFirstPerson(float newValue)",
+    "line": 3557
+   },
+   {
+    "sig": "setInfiniteAmmoValue(bool state)",
+    "line": 3562
+   },
+   {
+    "sig": "setOriginalInfiniteAmmo()",
+    "line": 3567
+   },
+   {
+    "sig": "setSliceObjectsDetectedState(bool state)",
+    "line": 3572
+   },
+   {
+    "sig": "setOriginalSliceObjectsDetected()",
+    "line": 3577
+   },
+   {
+    "sig": "setProjectileSpecialActionActiveState(bool state)",
+    "line": 3582
+   },
+   {
+    "sig": "setProjectileSpecialActionValue(bool state)",
+    "line": 3587
+   },
+   {
+    "sig": "checkDurabilityOnAttack()",
+    "line": 3592
+   },
+   {
+    "sig": "updateDurabilityAmountState()",
+    "line": 3605
+   },
+   {
+    "sig": "initializeDurabilityValue(float newAmount, int currentObjectIndex)",
+    "line": 3612
+   },
+   {
+    "sig": "setInventoryObjectIndex(int currentObjectIndex)",
+    "line": 3621
+   },
+   {
+    "sig": "getDurabilityAmount()",
+    "line": 3628
+   },
+   {
+    "sig": "repairObjectFully()",
+    "line": 3637
+   },
+   {
+    "sig": "breakFullDurabilityOnCurrentWeapon()",
+    "line": 3644
+   },
+   {
+    "sig": "setDurabilityUsedOnAttackValue(float newValue)",
+    "line": 3655
+   },
+   {
+    "sig": "setObjectNameFromEditor(string newName)",
+    "line": 3660
+   },
+   {
+    "sig": "setDurabilityAmountFromEditor(float newValue)",
+    "line": 3667
+   },
+   {
+    "sig": "setMaxDurabilityAmountFromEditor(float newValue)",
+    "line": 3674
+   },
+   {
+    "sig": "setCanGrabObjectsCarryingWeaponsState(bool state)",
+    "line": 3681
+   },
+   {
+    "sig": "setOriginalCanGrabObjectsCarryingWeaponsState()",
+    "line": 3686
+   },
+   {
+    "sig": "setDurabilityUsedOnAttackValueFromEditor(float newValue)",
+    "line": 3692
+   },
+   {
+    "sig": "setMagazineSizeFromEditor(float newAmount)",
+    "line": 3699
+   },
+   {
+    "sig": "setRemainAmmoAmountFromEditor(int newRemainAmmoAmount)",
+    "line": 3706
+   },
+   {
+    "sig": "setInfiniteAmmoValueFromEditor(bool state)",
+    "line": 3713
+   },
+   {
+    "sig": "setFireRateFromEditor(float newFireRate)",
+    "line": 3720
+   },
+   {
+    "sig": "setProjectileDamageFromEditor(float newDamage)",
+    "line": 3727
+   },
+   {
+    "sig": "setCharacter(GameObject pController, GameObject pCamera)",
+    "line": 3734
+   },
+   {
+    "sig": "setWeaponParent(Transform parent, Animator animatorToUse)",
+    "line": 3742
+   },
+   {
+    "sig": "updateWeaponParentInRuntime(Transform parent, Animator mainAnimtor)",
+    "line": 3772
+   },
+   {
+    "sig": "getWeaponComponents()",
+    "line": 3789
+   },
+   {
+    "sig": "getImpactListInfo()",
+    "line": 3820
+   },
+   {
+    "sig": "setWeaponSystemAmmoName(string newWeaponAmmoName)",
+    "line": 3840
+   },
+   {
+    "sig": "setWeaponSystemName(string newName)",
+    "line": 3847
+   },
+   {
+    "sig": "renameWeaponAmmo(string currentAmmoName, string newAmmoName)",
+    "line": 3858
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 3868
+   }
+  ]
+ }
+]

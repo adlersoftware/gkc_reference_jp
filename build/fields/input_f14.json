@@ -1,0 +1,465 @@
+[
+ {
+  "type": "mapCreator",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Map\\mapCreator.cs",
+  "source": "Map/mapCreator.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "floorMaterial",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "mapLayer",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "triggerToChangeBuildingPrefab",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "triggerToChangeFloorPrefab",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "triggerToChangeDynamicObjectPrefab",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "mapPart3dMeshMaterial",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "mapPart3dMaterialColor",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "layerToPlaceElements",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "useRaycastToPlaceElements",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "mapPartEnabledTriggerScale",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "enabledTriggerGizmoColor",
+    "label": "",
+    "section": "Other Settings"
+   },
+   {
+    "field": "showGizmo",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "updateAllMapTilesEveryFrame",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "showMapPartsGizmo",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "useSameLineColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "mapLinesColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoLabelColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "showMapPartsTextGizmo",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "useHandleForVertex",
+    "label": "",
+    "section": "Handle Vertex Settings"
+   },
+   {
+    "field": "handleRadius",
+    "label": "",
+    "section": "Handle Vertex Settings"
+   },
+   {
+    "field": "showVertexHandles",
+    "label": "",
+    "section": "Handle Vertex Settings"
+   },
+   {
+    "field": "showBuildingTriggersLine",
+    "label": "",
+    "section": "Building Triggers Settings"
+   },
+   {
+    "field": "buildingTriggersLineColor",
+    "label": "",
+    "section": "Building Triggers Settings"
+   },
+   {
+    "field": "showBuildingTriggers",
+    "label": "",
+    "section": "Building Triggers Settings"
+   },
+   {
+    "field": "buildingTriggersColor",
+    "label": "",
+    "section": "Building Triggers Settings"
+   },
+   {
+    "field": "showBuildingTriggersCubes",
+    "label": "",
+    "section": "Building Triggers Settings"
+   },
+   {
+    "field": "buildingTriggersCubesColor",
+    "label": "",
+    "section": "Building Triggers Settings"
+   },
+   {
+    "field": "showFloorTriggersLine",
+    "label": "",
+    "section": "Floors Triggers Settings"
+   },
+   {
+    "field": "floorTriggersLineColor",
+    "label": "",
+    "section": "Floors Triggers Settings"
+   },
+   {
+    "field": "showFloorTriggers",
+    "label": "",
+    "section": "Floors Triggers Settings"
+   },
+   {
+    "field": "floorTriggersColor",
+    "label": "",
+    "section": "Floors Triggers Settings"
+   },
+   {
+    "field": "showFloorTriggersCubes",
+    "label": "",
+    "section": "Floors Triggers Settings"
+   },
+   {
+    "field": "floorTriggersCubesColor",
+    "label": "",
+    "section": "Floors Triggers Settings"
+   },
+   {
+    "field": "showMapPartEnabledTrigger",
+    "label": "",
+    "section": "Floors Triggers Settings"
+   },
+   {
+    "field": "generate3dMeshesActive",
+    "label": "",
+    "section": "Map Part 3d Mesh Settings"
+   },
+   {
+    "field": "generate3dMeshesShowGizmo",
+    "label": "",
+    "section": "Map Part 3d Mesh Settings"
+   },
+   {
+    "field": "generateFull3dMapMeshes",
+    "label": "",
+    "section": "Map Part 3d Mesh Settings"
+   },
+   {
+    "field": "mapPart3dHeight",
+    "label": "",
+    "section": "Map Part 3d Mesh Settings"
+   },
+   {
+    "field": "mapPart3dOffset",
+    "label": "",
+    "section": "Map Part 3d Mesh Settings"
+   }
+  ]
+ },
+ {
+  "type": "mapObjectInformation",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Map\\mapObjectInformation.cs",
+  "source": "Map/mapObjectInformation.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "mapObjectName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "description",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "mapObject",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "mainScreenObjectivesManagerName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "mainMapCreatorManagerName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "visibleInAllBuildings",
+    "label": "",
+    "section": "Map Object Settings"
+   },
+   {
+    "field": "visibleInAllFloors",
+    "label": "",
+    "section": "Map Object Settings"
+   },
+   {
+    "field": "calculateFloorAtStart",
+    "label": "",
+    "section": "Map Object Settings"
+   },
+   {
+    "field": "useCustomValues",
+    "label": "",
+    "section": "Map Object Settings"
+   },
+   {
+    "field": "offset",
+    "label": "",
+    "section": "Map Object Settings"
+   },
+   {
+    "field": "extraIconSizeOnMap",
+    "label": "",
+    "section": "Map Object Settings"
+   },
+   {
+    "field": "followCameraRotation",
+    "label": "",
+    "section": "Map Object Settings"
+   },
+   {
+    "field": "followObjectRotation",
+    "label": "",
+    "section": "Map Object Settings"
+   },
+   {
+    "field": "canChangeBuildingAndFloor",
+    "label": "",
+    "section": "Map Object Settings"
+   },
+   {
+    "field": "activateAtStart",
+    "label": "",
+    "section": "Map Object Settings"
+   },
+   {
+    "field": "checkIfIncludedOnScreenObjectiveOnRemoveMapObject",
+    "label": "",
+    "section": "Map Object Settings"
+   },
+   {
+    "field": "disableWhenPlayerHasReached",
+    "label": "",
+    "section": "Advanced Settings"
+   },
+   {
+    "field": "useCloseDistance",
+    "label": "",
+    "section": "Advanced Settings"
+   },
+   {
+    "field": "showOffScreenIcon",
+    "label": "",
+    "section": "Advanced Settings"
+   },
+   {
+    "field": "showMapWindowIcon",
+    "label": "",
+    "section": "Advanced Settings"
+   },
+   {
+    "field": "showDistance",
+    "label": "",
+    "section": "Advanced Settings"
+   },
+   {
+    "field": "showDistanceOffScreen",
+    "label": "",
+    "section": "Advanced Settings"
+   },
+   {
+    "field": "triggerRadius",
+    "label": "",
+    "section": "Advanced Settings"
+   },
+   {
+    "field": "triggerColor",
+    "label": "",
+    "section": "Advanced Settings"
+   },
+   {
+    "field": "objectiveOffset",
+    "label": "",
+    "section": "Advanced Settings"
+   },
+   {
+    "field": "removeComponentWhenObjectiveReached",
+    "label": "",
+    "section": "Advanced Settings"
+   },
+   {
+    "field": "setCustomCompassSettings",
+    "label": "",
+    "section": "Advanced Settings"
+   },
+   {
+    "field": "useCompassIcon",
+    "label": "",
+    "section": "Advanced Settings"
+   },
+   {
+    "field": "compassIconPrefab",
+    "label": "",
+    "section": "Advanced Settings"
+   },
+   {
+    "field": "verticalOffset",
+    "label": "",
+    "section": "Advanced Settings"
+   },
+   {
+    "field": "useCustomObjectiveColor",
+    "label": "",
+    "section": "Advanced Settings"
+   },
+   {
+    "field": "removeCustomObjectiveColor",
+    "label": "",
+    "section": "Advanced Settings"
+   },
+   {
+    "field": "objectiveColor",
+    "label": "",
+    "section": "Advanced Settings"
+   },
+   {
+    "field": "callEventWhenPointReached",
+    "label": "",
+    "section": "Unity Event When Point Reached Settings"
+   },
+   {
+    "field": "pointReachedEvent",
+    "label": "",
+    "section": "Unity Event When Point Reached Settings"
+   },
+   {
+    "field": "belongToMapPart",
+    "label": "",
+    "section": "Map Part Owner Settings"
+   },
+   {
+    "field": "useEventsOnChangeFloor",
+    "label": "",
+    "section": "Floor Changed Events Settings"
+   },
+   {
+    "field": "useEventOnEnabledFloor",
+    "label": "",
+    "section": "Floor Changed Events Settings"
+   },
+   {
+    "field": "evenOnEnabledFloor",
+    "label": "",
+    "section": "Floor Changed Events Settings"
+   },
+   {
+    "field": "useEventOnDisabledFloor",
+    "label": "",
+    "section": "Floor Changed Events Settings"
+   },
+   {
+    "field": "evenOnDisabledFloor",
+    "label": "",
+    "section": "Floor Changed Events Settings"
+   },
+   {
+    "field": "buildingIndex",
+    "label": "",
+    "section": "Debug Options"
+   },
+   {
+    "field": "floorIndex",
+    "label": "",
+    "section": "Debug Options"
+   },
+   {
+    "field": "showGizmo",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoLabelOffset",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoLabelColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "offsetShowGizmo",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "offsetGizmoColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "offsetRadius",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "mapCreatorManager",
+    "label": "",
+    "section": "Debug"
+   }
+  ]
+ }
+]

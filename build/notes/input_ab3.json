@@ -1,0 +1,544 @@
+[
+ {
+  "type": "drainStatSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Abilities System\\Custom Abilities\\drainStatSystem.cs",
+  "methods": [
+   {
+    "sig": "stopDrainManually()",
+    "line": 95
+   },
+   {
+    "sig": "stopDrainIfActive()",
+    "line": 101
+   },
+   {
+    "sig": "checkTargetToDrain()",
+    "line": 112
+   },
+   {
+    "sig": "startDrainCoroutine()",
+    "line": 193
+   },
+   {
+    "sig": "stopActivateDrainStatCoroutine()",
+    "line": 200
+   },
+   {
+    "sig": "stopDrain()",
+    "line": 259
+   },
+   {
+    "sig": "checkRemoteEventOnStart()",
+    "line": 288
+   },
+   {
+    "sig": "checkRemoteEventOnEnd()",
+    "line": 304
+   },
+   {
+    "sig": "startMoveObjectCoroutine()",
+    "line": 320
+   },
+   {
+    "sig": "stopMoveObjectCoroutine()",
+    "line": 327
+   },
+   {
+    "sig": "setDrainActionPausedState(bool state)",
+    "line": 363
+   },
+   {
+    "sig": "setMoveObjectActiveState(bool state)",
+    "line": 368
+   }
+  ]
+ },
+ {
+  "type": "grapplingHookEffect",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Abilities System\\Custom Abilities\\Grappling Hook System\\grapplingHookEffect.cs",
+  "methods": [
+   {
+    "sig": "activateGrapplingHookEffect(Vector3 raycastDirection)",
+    "line": 83
+   },
+   {
+    "sig": "activateGrapplingHookEffect()",
+    "line": 98
+   },
+   {
+    "sig": "deactivateGrapplingHookEffect()",
+    "line": 109
+   },
+   {
+    "sig": "DoGrapple(Vector3 newWrapplePoint)",
+    "line": 120
+   },
+   {
+    "sig": "setFixedUpdateActiveState(bool state)",
+    "line": 131
+   },
+   {
+    "sig": "changeLineRendererOriginPositionParent(Transform newParent)",
+    "line": 205
+   },
+   {
+    "sig": "setNewlineRendererTargetPositionTransform(Transform newObject)",
+    "line": 212
+   }
+  ]
+ },
+ {
+  "type": "grapplingHookTarget",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Abilities System\\Custom Abilities\\Grappling Hook System\\grapplingHookTarget.cs",
+  "methods": [
+   {
+    "sig": "checkTriggerInfo(Collider col, bool isEnter)",
+    "line": 64
+   },
+   {
+    "sig": "checkEventOnHookReceived()",
+    "line": 124
+   },
+   {
+    "sig": "checkEventOnSwingReceived()",
+    "line": 131
+   }
+  ]
+ },
+ {
+  "type": "grapplingHookTargetsSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Abilities System\\Custom Abilities\\Grappling Hook System\\grapplingHookTargetsSystem.cs",
+  "methods": [
+   {
+    "sig": "setCurrentGrapplingHookTargetState(bool state)",
+    "line": 252
+   },
+   {
+    "sig": "disableGrapplingHookTargets()",
+    "line": 259
+   },
+   {
+    "sig": "enableGrapplingHookTargets()",
+    "line": 264
+   },
+   {
+    "sig": "enableOrDisableGrapplingHookTargets(bool state)",
+    "line": 269
+   },
+   {
+    "sig": "addNewGrapplingHookTarget(Transform targetTransform)",
+    "line": 281
+   },
+   {
+    "sig": "removeNewGrapplingHookTarget(Transform targetTransform)",
+    "line": 305
+   },
+   {
+    "sig": "pauseOrResumeShowGrapplingHookTargets(bool state)",
+    "line": 332
+   }
+  ]
+ },
+ {
+  "type": "laserPlayer",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Abilities System\\Custom Abilities\\laserPlayer.cs",
+  "methods": [
+   {
+    "sig": "setLaserInfo(laserDevice.laserType type, GameObject laser, Vector3 pos)",
+    "line": 282
+   },
+   {
+    "sig": "removeLaserInfo()",
+    "line": 307
+   }
+  ]
+ },
+ {
+  "type": "laserVisionSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Abilities System\\Custom Abilities\\laserVisionSystem.cs",
+  "methods": [
+   {
+    "sig": "setLaserVisionActiveState(bool state)",
+    "line": 103
+   },
+   {
+    "sig": "toggleLaserVisionActiveState()",
+    "line": 124
+   }
+  ]
+ },
+ {
+  "type": "manualDetonationMineObject",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Abilities System\\Custom Abilities\\manualDetonationMineObject.cs",
+  "methods": [
+   {
+    "sig": "activateMine()",
+    "line": 12
+   },
+   {
+    "sig": "removeMine()",
+    "line": 17
+   },
+   {
+    "sig": "setManualDetonationMineSystem(manualDetonationMineSystem newManualDetonationMineSystem)",
+    "line": 24
+   }
+  ]
+ },
+ {
+  "type": "manualDetonationMineSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Abilities System\\Custom Abilities\\manualDetonationMineSystem.cs",
+  "methods": [
+   {
+    "sig": "placeNewMine()",
+    "line": 18
+   },
+   {
+    "sig": "setCurrentMine(GameObject newMineObject)",
+    "line": 25
+   },
+   {
+    "sig": "activateCurrentMine()",
+    "line": 36
+   },
+   {
+    "sig": "removeCurrentMine()",
+    "line": 47
+   }
+  ]
+ },
+ {
+  "type": "objectToAttractWithGrapplingHook",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Abilities System\\Custom Abilities\\Grappling Hook System\\objectToAttractWithGrapplingHook.cs",
+  "methods": [
+   {
+    "sig": "setAttractionHookRemovedByDistanceState(bool state)",
+    "line": 121
+   },
+   {
+    "sig": "setAttractObjectState(bool state)",
+    "line": 126
+   },
+   {
+    "sig": "getRigidbodyToAttract()",
+    "line": 161
+   },
+   {
+    "sig": "checkToReduceSpeed()",
+    "line": 166
+   },
+   {
+    "sig": "stopCheckToReduceSpeed()",
+    "line": 177
+   },
+   {
+    "sig": "stopGrapplingHookAndResumeValuesWithoutForce()",
+    "line": 237
+   },
+   {
+    "sig": "stopGrapplingHookAndResumeValues()",
+    "line": 246
+   },
+   {
+    "sig": "stopGrapplingHookIfActiveOnGrabObject()",
+    "line": 265
+   },
+   {
+    "sig": "searchRigidbodyElements()",
+    "line": 300
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 330
+   }
+  ]
+ },
+ {
+  "type": "particleCollisionDetection",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Abilities System\\particleCollisionDetection.cs",
+  "methods": [
+   {
+    "sig": "setDetectionEnabledState(bool state)",
+    "line": 98
+   }
+  ]
+ },
+ {
+  "type": "playerAbilitiesUIEditorSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Abilities System\\playerAbilitiesUIEditorSystem.cs",
+  "methods": [
+   {
+    "sig": "openOrCloseAbilitiesUIEditor(bool state)",
+    "line": 380
+   },
+   {
+    "sig": "updateAbilitiesUIEditorValues()",
+    "line": 424
+   },
+   {
+    "sig": "resetScroll(Scrollbar scrollBarToReset)",
+    "line": 486
+   },
+   {
+    "sig": "resetInventorySlotsRectTransform()",
+    "line": 499
+   }
+  ]
+ },
+ {
+  "type": "playerShieldSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Abilities System\\Custom Abilities\\playerShieldSystem.cs",
+  "methods": [
+   {
+    "sig": "setActiveShieldState(bool state)",
+    "line": 98
+   },
+   {
+    "sig": "setShieldState(bool state)",
+    "line": 106
+   },
+   {
+    "sig": "activateLaserForceField(Vector3 pos)",
+    "line": 120
+   },
+   {
+    "sig": "deactivateLaserForceField()",
+    "line": 159
+   },
+   {
+    "sig": "setShieldEnabledState(bool state)",
+    "line": 175
+   },
+   {
+    "sig": "returnEnemyProjectiles()",
+    "line": 181
+   },
+   {
+    "sig": "setLaser(GameObject l, laserDevice.laserType type)",
+    "line": 217
+   },
+   {
+    "sig": "setLaserRefractionLimit(int value)",
+    "line": 225
+   },
+   {
+    "sig": "setLaserAbilityEnabledState(bool state)",
+    "line": 230
+   }
+  ]
+ },
+ {
+  "type": "playerStealthSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Abilities System\\Custom Abilities\\playerStealthSystem.cs",
+  "methods": [
+   {
+    "sig": "setStealthModeState(bool state)",
+    "line": 22
+   },
+   {
+    "sig": "stopSetStealthModeTimeLimit()",
+    "line": 39
+   },
+   {
+    "sig": "setStealthModeTimeLimit()",
+    "line": 46
+   }
+  ]
+ },
+ {
+  "type": "playerTeleportSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Abilities System\\Custom Abilities\\playerTeleportSystem.cs",
+  "methods": [
+   {
+    "sig": "stopTeleportInProcess()",
+    "line": 256
+   },
+   {
+    "sig": "teleportPlayer(Transform objectToMove, Vector3 teleportPosition, bool checkPositionAngle, bool changeFov, float newFovValue, float fovChangeSpeed, float teleportSpeed, bool rotatePlayerTowardPosition, bool teleportInstantlyToPositionValue, bool useActionSystemOnTeleportValue, bool useSmoothCameraFollowStateOnTeleportValue, float smoothCameraFollowDurationValue, float teleportDistanceOffsetValue, LayerMask layermaskToDetect, bool checkPlayerHeightToTeleportPosition)",
+    "line": 277
+   },
+   {
+    "sig": "stopTeleporting()",
+    "line": 291
+   },
+   {
+    "sig": "resumeIfTeleportActive()",
+    "line": 300
+   },
+   {
+    "sig": "setTeleportEndState()",
+    "line": 311
+   },
+   {
+    "sig": "setPlayerControlState(bool state)",
+    "line": 328
+   },
+   {
+    "sig": "holdTeleport()",
+    "line": 525
+   },
+   {
+    "sig": "releaseTeleport()",
+    "line": 541
+   },
+   {
+    "sig": "setTeleportingEnabledState(bool state)",
+    "line": 638
+   },
+   {
+    "sig": "isTeleportInProcess()",
+    "line": 643
+   },
+   {
+    "sig": "isSearchingForTeleport()",
+    "line": 648
+   },
+   {
+    "sig": "getTeleportCanBeExecutedState()",
+    "line": 653
+   },
+   {
+    "sig": "setTeleportHookTarget(Transform newTarget)",
+    "line": 712
+   }
+  ]
+ },
+ {
+  "type": "removeGravityFromCharacterSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Abilities System\\Custom Abilities\\removeGravityFromCharacterSystem.cs",
+  "methods": [
+   {
+    "sig": "activateRemoveGravity()",
+    "line": 33
+   }
+  ]
+ },
+ {
+  "type": "removeGravityFromObjectSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Abilities System\\Custom Abilities\\removeGravityFromObjectSystem.cs",
+  "methods": [
+   {
+    "sig": "activateRemoveGravity()",
+    "line": 59
+   }
+  ]
+ },
+ {
+  "type": "simpleLaser",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Abilities System\\Custom Abilities\\simpleLaser.cs",
+  "methods": [
+   {
+    "sig": "setLaserEnabledState(bool state)",
+    "line": 309
+   }
+  ]
+ },
+ {
+  "type": "simpleStrafeAndAimState",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Abilities System\\simpleStrafeAndAimState.cs",
+  "methods": [
+   {
+    "sig": "setSimpleStrafeAndAimState(bool state)",
+    "line": 60
+   },
+   {
+    "sig": "activateState()",
+    "line": 84
+   },
+   {
+    "sig": "deactivateState()",
+    "line": 121
+   },
+   {
+    "sig": "checkLookAtTargetActiveState()",
+    "line": 152
+   },
+   {
+    "sig": "checkLookAtTargetDeactivateState()",
+    "line": 171
+   }
+  ]
+ },
+ {
+  "type": "simpleThrowFireWaveAbility",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Abilities System\\simpleThrowFireWaveAbility.cs",
+  "methods": [
+   {
+    "sig": "toggleCurrentState()",
+    "line": 13
+   },
+   {
+    "sig": "setCurrentState(bool state)",
+    "line": 18
+   }
+  ]
+ },
+ {
+  "type": "slowDownAllAIOnSceneSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Abilities System\\Custom Abilities\\slowDownAllAIOnSceneSystem.cs",
+  "methods": [
+   {
+    "sig": "toggleSlowDownState()",
+    "line": 32
+   },
+   {
+    "sig": "setSlowDownState(bool state)",
+    "line": 37
+   }
+  ]
+ },
+ {
+  "type": "stealObjectFromCharacterSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Abilities System\\Custom Abilities\\stealObjectFromCharacterSystem.cs",
+  "methods": [
+   {
+    "sig": "activateStealFromCharacter()",
+    "line": 63
+   }
+  ]
+ },
+ {
+  "type": "throwObjectTrayectorySystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Abilities System\\throwObjectTrayectorySystem.cs",
+  "methods": [
+   {
+    "sig": "setCurrentObjectToThrow(GameObject newObject)",
+    "line": 91
+   },
+   {
+    "sig": "instantiateObject()",
+    "line": 133
+   },
+   {
+    "sig": "calculateThrowDirection()",
+    "line": 154
+   },
+   {
+    "sig": "throwObject()",
+    "line": 216
+   },
+   {
+    "sig": "inputThrowObject()",
+    "line": 299
+   },
+   {
+    "sig": "inputInstantiateObject()",
+    "line": 306
+   },
+   {
+    "sig": "inputCalculateThrowDirection()",
+    "line": 313
+   }
+  ]
+ },
+ {
+  "type": "wallRunningZoneSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Abilities System\\wallRunningZoneSystem.cs",
+  "methods": [
+   {
+    "sig": "checkTriggerInfo(Collider col, bool isEnter)",
+    "line": 29
+   }
+  ]
+ }
+]

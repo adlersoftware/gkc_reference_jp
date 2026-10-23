@@ -1,0 +1,580 @@
+[
+ {
+  "type": "AIFireWeaponsSystemBrain",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\Custom AI Behavior\\AIFireWeaponsSystemBrain.cs",
+  "methods": [
+   {
+    "sig": "updateAI()",
+    "line": 351
+   },
+   {
+    "sig": "resetRandomWalkState()",
+    "line": 488
+   },
+   {
+    "sig": "resetRollState()",
+    "line": 499
+   },
+   {
+    "sig": "resetStates()",
+    "line": 506
+   },
+   {
+    "sig": "checkIfResetStatsOnRandomWalk()",
+    "line": 513
+   },
+   {
+    "sig": "checkRollState()",
+    "line": 520
+   },
+   {
+    "sig": "checkWalkState()",
+    "line": 575
+   },
+   {
+    "sig": "updateInsideMinDistance(bool newInsideMinDistanceToAttack)",
+    "line": 622
+   },
+   {
+    "sig": "updateMainFireWeaponsBehavior()",
+    "line": 700
+   },
+   {
+    "sig": "checkNoFireWeaponsAvailableState()",
+    "line": 928
+   },
+   {
+    "sig": "checkAttackState()",
+    "line": 1188
+   },
+   {
+    "sig": "updateMainFireWeaponsAttack(bool newCanUseAttackActiveState)",
+    "line": 1370
+   },
+   {
+    "sig": "setNextWeapon()",
+    "line": 1375
+   },
+   {
+    "sig": "setNewWeaponByName(string weaponName)",
+    "line": 1433
+   },
+   {
+    "sig": "setWeaponsSystemActiveState(bool state)",
+    "line": 1454
+   },
+   {
+    "sig": "pauseAttackDuringXTime(float newDuration)",
+    "line": 1492
+   },
+   {
+    "sig": "setWaitToActivateAttackActiveState(bool state)",
+    "line": 1501
+   },
+   {
+    "sig": "setUseRandomWalkEnabledState(bool state)",
+    "line": 1558
+   },
+   {
+    "sig": "setOriginalUseRandomWalkEnabledState()",
+    "line": 1563
+   },
+   {
+    "sig": "resetBehaviorStates()",
+    "line": 1568
+   },
+   {
+    "sig": "setDrawOrHolsterWeaponState(bool state)",
+    "line": 1585
+   },
+   {
+    "sig": "setAimWeaponState(bool state)",
+    "line": 1612
+   },
+   {
+    "sig": "setShootWeaponState(bool state)",
+    "line": 1636
+   },
+   {
+    "sig": "dropWeapon()",
+    "line": 1651
+   },
+   {
+    "sig": "shootTarget()",
+    "line": 1690
+   },
+   {
+    "sig": "resetAttackState()",
+    "line": 1711
+   },
+   {
+    "sig": "checkIfDrawWeaponsWhenResumingAI()",
+    "line": 1719
+   },
+   {
+    "sig": "stopAim()",
+    "line": 1726
+   },
+   {
+    "sig": "disableOnSpottedState()",
+    "line": 1733
+   },
+   {
+    "sig": "updateWeaponsAvailableState()",
+    "line": 1738
+   },
+   {
+    "sig": "setBehaviorStatesPausedState(bool state)",
+    "line": 1743
+   },
+   {
+    "sig": "isWeaponEquiped()",
+    "line": 1752
+   },
+   {
+    "sig": "updateIfCarryingWeapon()",
+    "line": 1757
+   },
+   {
+    "sig": "inputWeaponMeleeAttack()",
+    "line": 1762
+   },
+   {
+    "sig": "stopCurrentAttackInProcess()",
+    "line": 1771
+   },
+   {
+    "sig": "setTurnBasedCombatActionActiveState(bool state)",
+    "line": 1780
+   },
+   {
+    "sig": "checkAIBehaviorStateOnCharacterSpawn()",
+    "line": 1785
+   },
+   {
+    "sig": "checkAIBehaviorStateOnCharacterDespawn()",
+    "line": 1794
+   },
+   {
+    "sig": "setMaxWaitTimeToForceAttackIfNotUsedLongTimeAgoValue(float newValue)",
+    "line": 1799
+   },
+   {
+    "sig": "setCheckToForceAttackIfNotUsedLongTimeAgoState(bool state)",
+    "line": 1804
+   },
+   {
+    "sig": "checkIfDisableCurrentWeaponToChangeAttackMode(string newModeName)",
+    "line": 1808
+   },
+   {
+    "sig": "changeCurrentAttackMode(string newModeName)",
+    "line": 1813
+   },
+   {
+    "sig": "stopAttackState()",
+    "line": 1829
+   },
+   {
+    "sig": "setAttackEnabledState(bool state)",
+    "line": 1853
+   },
+   {
+    "sig": "updateCurrentTargetSelectedInfo()",
+    "line": 1858
+   },
+   {
+    "sig": "setAttackEnabledStateFromEditor(bool state)",
+    "line": 1939
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 1946
+   }
+  ]
+ },
+ {
+  "type": "AICloseCombatSystemBrain",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\Close Combat\\AICloseCombatSystemBrain.cs",
+  "methods": [
+   {
+    "sig": "updateAI()",
+    "line": 264
+   },
+   {
+    "sig": "updateMainCloseCombatAttack(bool newCanUseAttackActiveState)",
+    "line": 368
+   },
+   {
+    "sig": "updateMainCloseCombatBehavior()",
+    "line": 373
+   },
+   {
+    "sig": "AICloseCombatAttack()",
+    "line": 501
+   },
+   {
+    "sig": "resetRandomWalkState()",
+    "line": 755
+   },
+   {
+    "sig": "resetBlockState()",
+    "line": 774
+   },
+   {
+    "sig": "resetRollState()",
+    "line": 791
+   },
+   {
+    "sig": "resetAttackState()",
+    "line": 798
+   },
+   {
+    "sig": "resetStates()",
+    "line": 803
+   },
+   {
+    "sig": "checkIfResetStatsOnRandomWalk()",
+    "line": 814
+   },
+   {
+    "sig": "checkBlockState()",
+    "line": 821
+   },
+   {
+    "sig": "updateBlockState()",
+    "line": 832
+   },
+   {
+    "sig": "checkRollState()",
+    "line": 898
+   },
+   {
+    "sig": "checkWalkState()",
+    "line": 957
+   },
+   {
+    "sig": "updateInsideMinDistance(bool newInsideMinDistanceToAttack)",
+    "line": 1020
+   },
+   {
+    "sig": "setCloseCombatSystemActiveState(bool state)",
+    "line": 1025
+   },
+   {
+    "sig": "checkEventsOnStateChange(bool state)",
+    "line": 1052
+   },
+   {
+    "sig": "startOverride()",
+    "line": 1063
+   },
+   {
+    "sig": "stopOverride()",
+    "line": 1068
+   },
+   {
+    "sig": "overrideTurretControlState(bool state)",
+    "line": 1073
+   },
+   {
+    "sig": "setBlockEnabledState(bool state)",
+    "line": 1078
+   },
+   {
+    "sig": "setRollEnabledState(bool state)",
+    "line": 1087
+   },
+   {
+    "sig": "pauseAttackDuringXTime(float newDuration)",
+    "line": 1096
+   },
+   {
+    "sig": "setWaitToActivateAttackActiveState(bool state)",
+    "line": 1105
+   },
+   {
+    "sig": "setUseRandomWalkEnabledState(bool state)",
+    "line": 1164
+   },
+   {
+    "sig": "setOriginalUseRandomWalkEnabledState()",
+    "line": 1169
+   },
+   {
+    "sig": "setIgnoreRandomWalkActiveState(bool state)",
+    "line": 1173
+   },
+   {
+    "sig": "resetBehaviorStates()",
+    "line": 1178
+   },
+   {
+    "sig": "setMinRandomTimeBetweenAttacks(float newValue)",
+    "line": 1195
+   },
+   {
+    "sig": "setMaxRandomTimeBetweenAttacks(float newValue)",
+    "line": 1200
+   },
+   {
+    "sig": "setOriginalMinRandomTimeBetweenAttacks()",
+    "line": 1205
+   },
+   {
+    "sig": "setOriginalMaxRandomTimeBetweenAttacks()",
+    "line": 1210
+   },
+   {
+    "sig": "setMinTimeBetweenAttacks(float newValue)",
+    "line": 1215
+   },
+   {
+    "sig": "setOriginalMinTimeBetweenAttacks()",
+    "line": 1220
+   },
+   {
+    "sig": "setBehaviorStatesPausedState(bool state)",
+    "line": 1225
+   },
+   {
+    "sig": "isAIBehaviorAttackInProcess()",
+    "line": 1230
+   },
+   {
+    "sig": "stopCurrentAttackInProcess()",
+    "line": 1235
+   },
+   {
+    "sig": "setTurnBasedCombatActionActiveState(bool state)",
+    "line": 1242
+   },
+   {
+    "sig": "checkAIBehaviorStateOnCharacterSpawn()",
+    "line": 1247
+   },
+   {
+    "sig": "checkAIBehaviorStateOnCharacterDespawn()",
+    "line": 1252
+   },
+   {
+    "sig": "setMaxWaitTimeToForceAttackIfNotUsedLongTimeAgoValue(float newValue)",
+    "line": 1257
+   },
+   {
+    "sig": "setCheckToForceAttackIfNotUsedLongTimeAgoState(bool state)",
+    "line": 1262
+   },
+   {
+    "sig": "changeCurrentAttackMode(string newModeName)",
+    "line": 1267
+   },
+   {
+    "sig": "stopAttackState()",
+    "line": 1283
+   },
+   {
+    "sig": "setAttackEnabledState(bool state)",
+    "line": 1300
+   },
+   {
+    "sig": "setAttackEnabledStateFromEditor(bool state)",
+    "line": 1305
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 1312
+   }
+  ]
+ },
+ {
+  "type": "AIMeleeCombatSystemBrain",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\Melee Combat System\\AIMeleeCombatSystemBrain.cs",
+  "methods": [
+   {
+    "sig": "updateAI()",
+    "line": 410
+   },
+   {
+    "sig": "resetRandomWalkState()",
+    "line": 816
+   },
+   {
+    "sig": "resetBlockState()",
+    "line": 827
+   },
+   {
+    "sig": "resetRollState()",
+    "line": 840
+   },
+   {
+    "sig": "dropWeapon()",
+    "line": 847
+   },
+   {
+    "sig": "resetAttackState()",
+    "line": 908
+   },
+   {
+    "sig": "resetStates()",
+    "line": 913
+   },
+   {
+    "sig": "checkIfResetStatsOnRandomWalk()",
+    "line": 926
+   },
+   {
+    "sig": "checkBlockState()",
+    "line": 933
+   },
+   {
+    "sig": "updateBlockState()",
+    "line": 944
+   },
+   {
+    "sig": "checkRollState()",
+    "line": 1009
+   },
+   {
+    "sig": "checkWalkState()",
+    "line": 1078
+   },
+   {
+    "sig": "updateInsideMinDistance(bool newInsideMinDistanceToAttack)",
+    "line": 1131
+   },
+   {
+    "sig": "updateMainMeleeBehavior()",
+    "line": 1156
+   },
+   {
+    "sig": "checkNoMeleeWeaponsAvailableState()",
+    "line": 1320
+   },
+   {
+    "sig": "checkAttackState()",
+    "line": 1613
+   },
+   {
+    "sig": "useAttack(string attackType)",
+    "line": 1783
+   },
+   {
+    "sig": "updateMainMeleeAttack(bool newCanUseAttackActiveState)",
+    "line": 1792
+   },
+   {
+    "sig": "setCombatSystemActiveState(bool state)",
+    "line": 1797
+   },
+   {
+    "sig": "pauseAttackDuringXTime(float newDuration)",
+    "line": 1837
+   },
+   {
+    "sig": "setWaitToActivateAttackActiveState(bool state)",
+    "line": 1850
+   },
+   {
+    "sig": "setUseRandomWalkEnabledState(bool state)",
+    "line": 1913
+   },
+   {
+    "sig": "setOriginalUseRandomWalkEnabledState()",
+    "line": 1918
+   },
+   {
+    "sig": "resetBehaviorStates()",
+    "line": 1923
+   },
+   {
+    "sig": "setDrawOrHolsterWeaponState(bool state)",
+    "line": 1948
+   },
+   {
+    "sig": "setCurrentMeleeWeaponAtDistanceState(bool state)",
+    "line": 1969
+   },
+   {
+    "sig": "setPauseRollState(bool state)",
+    "line": 2001
+   },
+   {
+    "sig": "checkIfDrawMeleeWeaponAfterResumingAI()",
+    "line": 2012
+   },
+   {
+    "sig": "updateWeaponsAvailableState()",
+    "line": 2029
+   },
+   {
+    "sig": "setBehaviorStatesPausedState(bool state)",
+    "line": 2034
+   },
+   {
+    "sig": "setSameAttackTypeNameValue(string newValue)",
+    "line": 2039
+   },
+   {
+    "sig": "isWeaponEquiped()",
+    "line": 2044
+   },
+   {
+    "sig": "isAIBehaviorAttackInProcess()",
+    "line": 2049
+   },
+   {
+    "sig": "checkIfActivateParryCounterOnPerfectBlock()",
+    "line": 2054
+   },
+   {
+    "sig": "stopCurrentAttackInProcess()",
+    "line": 2099
+   },
+   {
+    "sig": "setTurnBasedCombatActionActiveState(bool state)",
+    "line": 2106
+   },
+   {
+    "sig": "checkAIBehaviorStateOnCharacterSpawn()",
+    "line": 2111
+   },
+   {
+    "sig": "checkAIBehaviorStateOnCharacterDespawn()",
+    "line": 2118
+   },
+   {
+    "sig": "setMaxWaitTimeToForceAttackIfNotUsedLongTimeAgoValue(float newValue)",
+    "line": 2123
+   },
+   {
+    "sig": "setCheckToForceAttackIfNotUsedLongTimeAgoState(bool state)",
+    "line": 2128
+   },
+   {
+    "sig": "checkIfDisableCurrentWeaponToChangeAttackMode(string newModeName)",
+    "line": 2133
+   },
+   {
+    "sig": "changeCurrentAttackMode(string newModeName)",
+    "line": 2138
+   },
+   {
+    "sig": "stopAttackState()",
+    "line": 2154
+   },
+   {
+    "sig": "setAttackEnabledState(bool state)",
+    "line": 2180
+   },
+   {
+    "sig": "setAttackEnabledStateFromEditor(bool state)",
+    "line": 2185
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 2192
+   }
+  ]
+ }
+]

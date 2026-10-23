@@ -1,0 +1,10758 @@
+[
+{
+"name": "abilitiesAIBehavior",
+"kind": "class",
+"base": [
+"AIBehaviorInfo"
+],
+"file": "AI/Custom AI Behavior/abilitiesAIBehavior.cs",
+"line": 5,
+"fields": 1,
+"methods": 9
+},
+{
+"name": "addPatrolSystemToAI",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "AI/addPatrolSystemToAI.cs",
+"line": 5,
+"fields": 4,
+"methods": 3
+},
+{
+"name": "AIAbilitiesSystemBrain",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "AI/Custom AI Behavior/AIAbilitiesSystemBrain.cs",
+"line": 6,
+"fields": 38,
+"methods": 33
+},
+{
+"name": "AIAimRotationManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "AI/Custom AI Behavior/AIAimRotationManager.cs",
+"line": 5,
+"fields": 10,
+"methods": 5
+},
+{
+"name": "AIAroundManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "AI/AIAroundManager.cs",
+"line": 6,
+"fields": 25,
+"methods": 8
+},
+{
+"name": "AIBehaviorInfo",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "AI/Custom AI Behavior/AI Behavior Info.cs",
+"line": 5,
+"fields": 1,
+"methods": 47
+},
+{
+"name": "AICloseCombatSystemBrain",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "AI/Close Combat/AICloseCombatSystemBrain.cs",
+"line": 7,
+"fields": 78,
+"methods": 47
+},
+{
+"name": "AIFireWeaponsSystemBrain",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "AI/Custom AI Behavior/AIFireWeaponsSystemBrain.cs",
+"line": 6,
+"fields": 97,
+"methods": 47
+},
+{
+"name": "AIHealtSliderInfo",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "AI/AIHealtSliderInfo.cs",
+"line": 5,
+"fields": 5,
+"methods": 0
+},
+{
+"name": "AIHidePositionsManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "AI/AIHidePositionsManager.cs",
+"line": 5,
+"fields": 3,
+"methods": 1
+},
+{
+"name": "AIMeleeCombatSystemBrain",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "AI/Melee Combat System/AIMeleeCombatSystemBrain.cs",
+"line": 6,
+"fields": 129,
+"methods": 46
+},
+{
+"name": "AINavMesh",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "AI/AINavMesh.cs",
+"line": 9,
+"fields": 129,
+"methods": 105
+},
+{
+"name": "AINavMeshMoveInfo",
+"kind": "class",
+"base": [],
+"file": "AI/AINavMeshMoveInfo.cs",
+"line": 5,
+"fields": 6,
+"methods": 0
+},
+{
+"name": "AIPatrolSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "AI/AIPatrolSystem.cs",
+"line": 7,
+"fields": 26,
+"methods": 11
+},
+{
+"name": "AIPowersSystemBrain",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "AI/Custom AI Behavior/AIPowersSystemBrain.cs",
+"line": 6,
+"fields": 56,
+"methods": 38
+},
+{
+"name": "AITurnBasedCombatSystemBrain",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "AI/Custom AI Behavior/AITurnBasedCombatSystemBrain.cs",
+"line": 6,
+"fields": 43,
+"methods": 24
+},
+{
+"name": "AITurret",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "AI/Turret/AITurret.cs",
+"line": 7,
+"fields": 38,
+"methods": 17
+},
+{
+"name": "AIViewTriggerSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "AI/AIViewTriggerSystem.cs",
+"line": 5,
+"fields": 16,
+"methods": 4
+},
+{
+"name": "AIWalkToPosition",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "AI/AIWalkToPosition.cs",
+"line": 6,
+"fields": 12,
+"methods": 3
+},
+{
+"name": "AIWayPointPatrol",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "AI/AIWayPointPatrol.cs",
+"line": 5,
+"fields": 13,
+"methods": 7
+},
+{
+"name": "animalAINavmesh",
+"kind": "class",
+"base": [
+"AINavMesh"
+],
+"file": "AI/animalAINavmesh.cs",
+"line": 5,
+"fields": 1,
+"methods": 3
+},
+{
+"name": "brainwashAIState",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "AI/brainwashAIState.cs",
+"line": 5,
+"fields": 11,
+"methods": 2
+},
+{
+"name": "changeAIAttackModeByDistance",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "AI/changeAIAttackModeByDistance.cs",
+"line": 5,
+"fields": 17,
+"methods": 8
+},
+{
+"name": "characterFactionManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "AI/Faction/characterFactionManager.cs",
+"line": 6,
+"fields": 15,
+"methods": 34
+},
+{
+"name": "characterToReceiveOrders",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "AI/Custom Orders/characterToReceiveOrders.cs",
+"line": 6,
+"fields": 5,
+"methods": 4
+},
+{
+"name": "closeCombatAIBehavior",
+"kind": "class",
+"base": [
+"AIBehaviorInfo"
+],
+"file": "AI/Custom AI Behavior/closeCombatAIBehavior.cs",
+"line": 5,
+"fields": 1,
+"methods": 20
+},
+{
+"name": "customOrderBehavior",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "AI/Custom Orders/customOrderBehavior.cs",
+"line": 6,
+"fields": 5,
+"methods": 5
+},
+{
+"name": "customOrderBehaviorToAttack",
+"kind": "class",
+"base": [
+"customOrderBehavior"
+],
+"file": "AI/Custom Orders/customOrderBehaviorToAttack.cs",
+"line": 5,
+"fields": 18,
+"methods": 5
+},
+{
+"name": "customOrderBehaviorToBorrowWeapon",
+"kind": "class",
+"base": [
+"customOrderBehavior"
+],
+"file": "AI/Custom Orders/customOrderBehaviorToBorrowWeapon.cs",
+"line": 5,
+"fields": 4,
+"methods": 1
+},
+{
+"name": "customOrderBehaviorToFollow",
+"kind": "class",
+"base": [
+"customOrderBehavior"
+],
+"file": "AI/Custom Orders/customOrderBehaviorToFollow.cs",
+"line": 5,
+"fields": 19,
+"methods": 5
+},
+{
+"name": "customOrderBehaviorToHide",
+"kind": "class",
+"base": [
+"customOrderBehavior"
+],
+"file": "AI/Custom Orders/customOrderBehaviorToHide.cs",
+"line": 5,
+"fields": 0,
+"methods": 3
+},
+{
+"name": "customOrderBehaviorToShapeShiftCharacter",
+"kind": "class",
+"base": [
+"customOrderBehavior"
+],
+"file": "AI/Custom Orders/customOrderBehaviorToShapeShiftCharacter.cs",
+"line": 5,
+"fields": 3,
+"methods": 1
+},
+{
+"name": "customOrderBehaviorToSwitchCharacter",
+"kind": "class",
+"base": [
+"customOrderBehavior"
+],
+"file": "AI/Custom Orders/customOrderBehaviorToSwitchCharacter.cs",
+"line": 5,
+"fields": 1,
+"methods": 3
+},
+{
+"name": "customOrderBehaviorToUseAbility",
+"kind": "class",
+"base": [
+"customOrderBehavior"
+],
+"file": "AI/Custom Orders/customOrderBehaviorToUseAbility.cs",
+"line": 5,
+"fields": 18,
+"methods": 5
+},
+{
+"name": "customOrderBehaviorToWait",
+"kind": "class",
+"base": [
+"customOrderBehavior"
+],
+"file": "AI/Custom Orders/customOrderBehaviorToWait.cs",
+"line": 5,
+"fields": 0,
+"methods": 2
+},
+{
+"name": "enemyLaser",
+"kind": "class",
+"base": [
+"laser"
+],
+"file": "AI/Turret/enemyLaser.cs",
+"line": 4,
+"fields": 12,
+"methods": 1
+},
+{
+"name": "eventOnTargetDetectedFaction",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "AI/eventOnTargetDetectedFaction.cs",
+"line": 6,
+"fields": 3,
+"methods": 6
+},
+{
+"name": "factionSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "AI/Faction/factionSystem.cs",
+"line": 5,
+"fields": 3,
+"methods": 27
+},
+{
+"name": "fieldOfViewMeshSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "AI/fieldOfViewMeshSystem.cs",
+"line": 5,
+"fields": 13,
+"methods": 4
+},
+{
+"name": "findObjectivesSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "AI/findObjectivesSystem.cs",
+"line": 6,
+"fields": 237,
+"methods": 200
+},
+{
+"name": "friendListElement",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "AI/friendListElement.cs",
+"line": 4,
+"fields": 1,
+"methods": 0
+},
+{
+"name": "friendListManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "AI/friendListManager.cs",
+"line": 7,
+"fields": 24,
+"methods": 27
+},
+{
+"name": "handleVehicleAIBehavior",
+"kind": "class",
+"base": [
+"AIBehaviorInfo"
+],
+"file": "AI/Custom AI Behavior/handleVehicleAIBehavior.cs",
+"line": 6,
+"fields": 34,
+"methods": 18
+},
+{
+"name": "manageAITarget",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "AI/Turret/manageAITarget.cs",
+"line": 6,
+"fields": 44,
+"methods": 19
+},
+{
+"name": "meleeAIBehavior",
+"kind": "class",
+"base": [
+"AIBehaviorInfo"
+],
+"file": "AI/Custom AI Behavior/meleeAIBehavior.cs",
+"line": 5,
+"fields": 1,
+"methods": 24
+},
+{
+"name": "objectSignalForTargetToAI",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "AI/objectSignalForTargetToAI.cs",
+"line": 5,
+"fields": 11,
+"methods": 2
+},
+{
+"name": "powersAIBehavior",
+"kind": "class",
+"base": [
+"AIBehaviorInfo"
+],
+"file": "AI/Custom AI Behavior/powersAIBehavior.cs",
+"line": 5,
+"fields": 1,
+"methods": 20
+},
+{
+"name": "shootBowSimpleAIAction",
+"kind": "class",
+"base": [
+"simpleAIAction"
+],
+"file": "AI/Custom AI Behavior/shootBowSimpleAIAction.cs",
+"line": 5,
+"fields": 10,
+"methods": 4
+},
+{
+"name": "shootFireWeaponSimpleAIAction",
+"kind": "class",
+"base": [
+"simpleAIAction"
+],
+"file": "AI/Custom AI Behavior/shootFireWeaponSimpleAIAction.cs",
+"line": 5,
+"fields": 8,
+"methods": 4
+},
+{
+"name": "shootPowerSimpleAIAction",
+"kind": "class",
+"base": [
+"simpleAIAction"
+],
+"file": "AI/Custom AI Behavior/shootPowerSimpleAIAction.cs",
+"line": 5,
+"fields": 8,
+"methods": 4
+},
+{
+"name": "simpleAIAction",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "AI/Custom AI Behavior/simpleAIAction.cs",
+"line": 6,
+"fields": 11,
+"methods": 7
+},
+{
+"name": "sleepingStateIconSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "AI/sleepingStateIconSystem.cs",
+"line": 5,
+"fields": 20,
+"methods": 2
+},
+{
+"name": "turnBasedCombatAIBehavior",
+"kind": "class",
+"base": [
+"AIBehaviorInfo"
+],
+"file": "AI/Custom AI Behavior/turnBasedCombatAIBehavior.cs",
+"line": 5,
+"fields": 1,
+"methods": 9
+},
+{
+"name": "useAbilitySimpleAIAction",
+"kind": "class",
+"base": [
+"simpleAIAction"
+],
+"file": "AI/Custom AI Behavior/useAbilitySimpleAIAction.cs",
+"line": 5,
+"fields": 6,
+"methods": 5
+},
+{
+"name": "useCustomAbilitySimpleAIAction",
+"kind": "class",
+"base": [
+"simpleAIAction"
+],
+"file": "AI/Custom AI Behavior/useCustomAbilitySimpleAIAction.cs",
+"line": 5,
+"fields": 9,
+"methods": 5
+},
+{
+"name": "weaponsAIBehavior",
+"kind": "class",
+"base": [
+"AIBehaviorInfo"
+],
+"file": "AI/Custom AI Behavior/weaponsAIBehavior.cs",
+"line": 5,
+"fields": 1,
+"methods": 30
+},
+{
+"name": "abilityInfo",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Abilities System/abilityInfo.cs",
+"line": 6,
+"fields": 68,
+"methods": 42
+},
+{
+"name": "abilitySlotElement",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Abilities System/abilitySlotElement.cs",
+"line": 5,
+"fields": 1,
+"methods": 0
+},
+{
+"name": "customAbilitySystem",
+"kind": "class",
+"base": [
+"abilityInfo"
+],
+"file": "Abilities System/Custom Abilities/customAbilitySystem.cs",
+"line": 6,
+"fields": 25,
+"methods": 8
+},
+{
+"name": "dashSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Abilities System/dashSystem.cs",
+"line": 6,
+"fields": 26,
+"methods": 25
+},
+{
+"name": "drainStatSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Abilities System/Custom Abilities/drainStatSystem.cs",
+"line": 6,
+"fields": 29,
+"methods": 12
+},
+{
+"name": "grapplingHookEffect",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Abilities System/Custom Abilities/Grappling Hook System/grapplingHookEffect.cs",
+"line": 5,
+"fields": 24,
+"methods": 7
+},
+{
+"name": "grapplingHookSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Abilities System/Custom Abilities/Grappling Hook System/grapplingHookSystem.cs",
+"line": 7,
+"fields": 150,
+"methods": 29
+},
+{
+"name": "grapplingHookTarget",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Abilities System/Custom Abilities/Grappling Hook System/grapplingHookTarget.cs",
+"line": 6,
+"fields": 14,
+"methods": 3
+},
+{
+"name": "grapplingHookTargetsSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Abilities System/Custom Abilities/Grappling Hook System/grapplingHookTargetsSystem.cs",
+"line": 6,
+"fields": 15,
+"methods": 7
+},
+{
+"name": "laserPlayer",
+"kind": "class",
+"base": [
+"laser"
+],
+"file": "Abilities System/Custom Abilities/laserPlayer.cs",
+"line": 5,
+"fields": 12,
+"methods": 2
+},
+{
+"name": "laserVisionSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Abilities System/Custom Abilities/laserVisionSystem.cs",
+"line": 6,
+"fields": 20,
+"methods": 2
+},
+{
+"name": "magicSpellActionSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Abilities System/magicSpellActionSystem.cs",
+"line": 6,
+"fields": 33,
+"methods": 19
+},
+{
+"name": "manualDetonationMineObject",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Abilities System/Custom Abilities/manualDetonationMineObject.cs",
+"line": 6,
+"fields": 1,
+"methods": 3
+},
+{
+"name": "manualDetonationMineSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Abilities System/Custom Abilities/manualDetonationMineSystem.cs",
+"line": 6,
+"fields": 3,
+"methods": 4
+},
+{
+"name": "objectToAttractWithGrapplingHook",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Abilities System/Custom Abilities/Grappling Hook System/objectToAttractWithGrapplingHook.cs",
+"line": 6,
+"fields": 40,
+"methods": 10
+},
+{
+"name": "oxygenSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Abilities System/oxygenSystem.cs",
+"line": 8,
+"fields": 35,
+"methods": 20
+},
+{
+"name": "particleCollisionDetection",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Abilities System/particleCollisionDetection.cs",
+"line": 6,
+"fields": 13,
+"methods": 1
+},
+{
+"name": "particleTriggerDetection",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Abilities System/particleTriggerDetection.cs",
+"line": 5,
+"fields": 0,
+"methods": 0
+},
+{
+"name": "playerAbilitiesSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Abilities System/playerAbilitiesSystem.cs",
+"line": 6,
+"fields": 21,
+"methods": 63
+},
+{
+"name": "playerAbilitiesUIEditorSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Abilities System/playerAbilitiesUIEditorSystem.cs",
+"line": 11,
+"fields": 20,
+"methods": 4
+},
+{
+"name": "playerAbilitiesUISystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Abilities System/playerAbilitiesUISystem.cs",
+"line": 11,
+"fields": 69,
+"methods": 50
+},
+{
+"name": "playerGravitySystem",
+"kind": "class",
+"base": [
+"abilityInfo"
+],
+"file": "Abilities System/Custom Abilities/playerGravitySystem.cs",
+"line": 5,
+"fields": 2,
+"methods": 8
+},
+{
+"name": "playerShieldSystem",
+"kind": "class",
+"base": [
+"abilityInfo"
+],
+"file": "Abilities System/Custom Abilities/playerShieldSystem.cs",
+"line": 5,
+"fields": 16,
+"methods": 17
+},
+{
+"name": "playerStealthSystem",
+"kind": "class",
+"base": [
+"abilityInfo"
+],
+"file": "Abilities System/Custom Abilities/playerStealthSystem.cs",
+"line": 6,
+"fields": 4,
+"methods": 11
+},
+{
+"name": "playerTeleportSystem",
+"kind": "class",
+"base": [
+"abilityInfo"
+],
+"file": "Abilities System/Custom Abilities/playerTeleportSystem.cs",
+"line": 8,
+"fields": 48,
+"methods": 21
+},
+{
+"name": "removeGravityFromCharacterSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Abilities System/Custom Abilities/removeGravityFromCharacterSystem.cs",
+"line": 5,
+"fields": 9,
+"methods": 1
+},
+{
+"name": "removeGravityFromObjectSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Abilities System/Custom Abilities/removeGravityFromObjectSystem.cs",
+"line": 5,
+"fields": 14,
+"methods": 1
+},
+{
+"name": "simpleAimAndThrowObjectState",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Abilities System/simpleAimAndThrowObjectState.cs",
+"line": 5,
+"fields": 0,
+"methods": 0
+},
+{
+"name": "simpleLaser",
+"kind": "class",
+"base": [
+"laser"
+],
+"file": "Abilities System/Custom Abilities/simpleLaser.cs",
+"line": 6,
+"fields": 28,
+"methods": 1
+},
+{
+"name": "simpleStrafeAndAimState",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Abilities System/simpleStrafeAndAimState.cs",
+"line": 5,
+"fields": 16,
+"methods": 5
+},
+{
+"name": "simpleThrowFireWaveAbility",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Abilities System/simpleThrowFireWaveAbility.cs",
+"line": 6,
+"fields": 3,
+"methods": 2
+},
+{
+"name": "slowDownAllAIOnSceneSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Abilities System/Custom Abilities/slowDownAllAIOnSceneSystem.cs",
+"line": 6,
+"fields": 7,
+"methods": 2
+},
+{
+"name": "staminaSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Abilities System/staminaSystem.cs",
+"line": 7,
+"fields": 32,
+"methods": 33
+},
+{
+"name": "stealObjectFromCharacterSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Abilities System/Custom Abilities/stealObjectFromCharacterSystem.cs",
+"line": 6,
+"fields": 18,
+"methods": 1
+},
+{
+"name": "templateAbilitySystem",
+"kind": "class",
+"base": [
+"abilityInfo"
+],
+"file": "Abilities System/Custom Abilities/templateAbilitySystem.cs",
+"line": 5,
+"fields": 0,
+"methods": 8
+},
+{
+"name": "throwObjectTrayectorySystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Abilities System/throwObjectTrayectorySystem.cs",
+"line": 5,
+"fields": 29,
+"methods": 7
+},
+{
+"name": "wallRunningZoneSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Abilities System/wallRunningZoneSystem.cs",
+"line": 5,
+"fields": 5,
+"methods": 1
+},
+{
+"name": "actionSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Action System/actionSystem.cs",
+"line": 10,
+"fields": 65,
+"methods": 37
+},
+{
+"name": "activateActionOnCharactersOnScene",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Action System/activateActionOnCharactersOnScene.cs",
+"line": 5,
+"fields": 4,
+"methods": 1
+},
+{
+"name": "characterActionSystemChecker",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Action System/characterActionSystemChecker.cs",
+"line": 5,
+"fields": 4,
+"methods": 1
+},
+{
+"name": "customActionSystemTrigger",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Action System/customActionSystemTrigger.cs",
+"line": 5,
+"fields": 13,
+"methods": 3
+},
+{
+"name": "playerActionSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Action System/playerActionSystem.cs",
+"line": 6,
+"fields": 95,
+"methods": 82
+},
+{
+"name": "sharedActionButtonActivator",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Action System/Shared Action System/sharedActionButtonActivator.cs",
+"line": 6,
+"fields": 20,
+"methods": 16
+},
+{
+"name": "sharedActionContent",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Action System/Shared Action System/sharedActionContent.cs",
+"line": 6,
+"fields": 33,
+"methods": 0
+},
+{
+"name": "sharedActionSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Action System/Shared Action System/sharedActionSystem.cs",
+"line": 8,
+"fields": 27,
+"methods": 12
+},
+{
+"name": "sharedActionSystemRemoteActivator",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Action System/Shared Action System/sharedActionSystemRemoteActivator.cs",
+"line": 8,
+"fields": 28,
+"methods": 9
+},
+{
+"name": "sharedActionZone",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Action System/Shared Action System/sharedActionZone.cs",
+"line": 5,
+"fields": 31,
+"methods": 14
+},
+{
+"name": "sharedActionZoneManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Action System/Shared Action System/sharedActionZoneManager.cs",
+"line": 6,
+"fields": 2,
+"methods": 4
+},
+{
+"name": "sharedActionZoneTrigger",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Action System/Shared Action System/sharedActionZoneTrigger.cs",
+"line": 6,
+"fields": 17,
+"methods": 1
+},
+{
+"name": "AudioElement",
+"kind": "class",
+"base": [],
+"file": "Audio/AudioElement.cs",
+"line": 12,
+"fields": 6,
+"methods": 0
+},
+{
+"name": "AudioElementHolder",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Audio/AudioElementHolder.cs",
+"line": 5,
+"fields": 1,
+"methods": 6
+},
+{
+"name": "AudioElementHolderPlayer",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Audio/AudioElementHolderPlayer.cs",
+"line": 5,
+"fields": 1,
+"methods": 6
+},
+{
+"name": "AudioManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Audio/AudioManager.cs",
+"line": 5,
+"fields": 0,
+"methods": 1
+},
+{
+"name": "AudioPlayer",
+"kind": "class",
+"base": [],
+"file": "Audio/AudioPlayer.cs",
+"line": 5,
+"fields": 0,
+"methods": 5
+},
+{
+"name": "AudioPlayMethod",
+"kind": "enum",
+"base": [],
+"file": "Audio/AudioElement.cs",
+"line": 5,
+"fields": 0,
+"methods": 0
+},
+{
+"name": "IExternalAudioPlayer",
+"kind": "interface",
+"base": [],
+"file": "Audio/IExternalAudioPlayer.cs",
+"line": 5,
+"fields": 0,
+"methods": 0
+},
+{
+"name": "camera2_5dSplineZoneOptions",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Camera/Player Camera/camera2_5dSplineZoneOptions.cs",
+"line": 5,
+"fields": 7,
+"methods": 3
+},
+{
+"name": "camera2_5dZoneLimitSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Camera/Player Camera/camera2_5dZoneLimitSystem.cs",
+"line": 5,
+"fields": 21,
+"methods": 4
+},
+{
+"name": "cameraAxisComponentsInfo",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Camera/Player Camera/cameraAxisComponentsInfo.cs",
+"line": 4,
+"fields": 1,
+"methods": 0
+},
+{
+"name": "cameraCaptureSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Camera/Captures/cameraCaptureSystem.cs",
+"line": 9,
+"fields": 14,
+"methods": 20
+},
+{
+"name": "cameraControllerManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Camera/Player Camera/cameraControllerManager.cs",
+"line": 5,
+"fields": 0,
+"methods": 35
+},
+{
+"name": "cameraEffect",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Camera/Camera Effect/cameraEffect.cs",
+"line": 5,
+"fields": 1,
+"methods": 1
+},
+{
+"name": "cameraEffectSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Camera/Camera Effect/cameraEffectSystem.cs",
+"line": 6,
+"fields": 11,
+"methods": 15
+},
+{
+"name": "cameraPerspectiveSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Camera/Captures/cameraPerspectiveSystem.cs",
+"line": 7,
+"fields": 29,
+"methods": 4
+},
+{
+"name": "cameraStateInfo",
+"kind": "class",
+"base": [],
+"file": "Camera/Player Camera/cameraStateInfo.cs",
+"line": 5,
+"fields": 40,
+"methods": 1
+},
+{
+"name": "cameraWaypointSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Camera/Cutscene/cameraWaypointSystem.cs",
+"line": 7,
+"fields": 34,
+"methods": 19
+},
+{
+"name": "captureSlot",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Camera/Captures/captureSlot.cs",
+"line": 5,
+"fields": 1,
+"methods": 0
+},
+{
+"name": "customCameraEffect",
+"kind": "class",
+"base": [
+"cameraEffect"
+],
+"file": "Camera/Camera Effect/customCameraEffect.cs",
+"line": 5,
+"fields": 2,
+"methods": 1
+},
+{
+"name": "dynamicSplitScreenSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Camera/Others/dynamicSplitScreenSystem.cs",
+"line": 5,
+"fields": 35,
+"methods": 2
+},
+{
+"name": "externalCameraShakeSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Camera/Player Camera/externalCameraShakeSystem.cs",
+"line": 6,
+"fields": 18,
+"methods": 8
+},
+{
+"name": "externalShakeInfo",
+"kind": "class",
+"base": [],
+"file": "Camera/Player Camera/externalShakeInfo.cs",
+"line": 4,
+"fields": 16,
+"methods": 0
+},
+{
+"name": "externalShakeInfoListElement",
+"kind": "class",
+"base": [],
+"file": "Camera/Player Camera/externalShakeInfoListElement.cs",
+"line": 4,
+"fields": 6,
+"methods": 0
+},
+{
+"name": "externalShakeListManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Camera/Player Camera/externalShakeListManager.cs",
+"line": 5,
+"fields": 1,
+"methods": 5
+},
+{
+"name": "extraCameraEffectSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Camera/Camera Effect/extraCameraEffectSystem.cs",
+"line": 5,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "headBob",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Camera/Player Camera/headBob.cs",
+"line": 6,
+"fields": 32,
+"methods": 30
+},
+{
+"name": "pauseOrResumePlayerControllerAndCameraSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Camera/Cutscene/pauseOrResumePlayerControllerAndCameraSystem.cs",
+"line": 6,
+"fields": 32,
+"methods": 11
+},
+{
+"name": "photoModeSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Camera/Camera Effect/photoModeSystem.cs",
+"line": 6,
+"fields": 30,
+"methods": 14
+},
+{
+"name": "pixelCameraEffect",
+"kind": "class",
+"base": [
+"cameraEffect"
+],
+"file": "Camera/Camera Effect/pixelCameraEffect.cs",
+"line": 5,
+"fields": 7,
+"methods": 2
+},
+{
+"name": "playerCamera",
+"kind": "class",
+"base": [
+"cameraControllerManager"
+],
+"file": "Camera/Player Camera/playerCamera.cs",
+"line": 9,
+"fields": 297,
+"methods": 379
+},
+{
+"name": "playerCullingSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Camera/Others/playerCullingSystem.cs",
+"line": 5,
+"fields": 23,
+"methods": 10
+},
+{
+"name": "remoteEventOnCameraCaptureSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Camera/Captures/remoteEventOnCameraCaptureSystem.cs",
+"line": 5,
+"fields": 8,
+"methods": 2
+},
+{
+"name": "setCameraFOVValue",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Camera/Player Camera/setCameraFOVValue.cs",
+"line": 5,
+"fields": 7,
+"methods": 6
+},
+{
+"name": "setTransparentSurfaces",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Camera/Others/setTransparentSurfaces.cs",
+"line": 6,
+"fields": 32,
+"methods": 6
+},
+{
+"name": "setTransparentSurfacesSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Camera/Others/setTransparentSurfacesSystem.cs",
+"line": 5,
+"fields": 9,
+"methods": 12
+},
+{
+"name": "simpleMoveCameraToPosition",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Camera/Others/simpleMoveCameraToPosition.cs",
+"line": 4,
+"fields": 12,
+"methods": 3
+},
+{
+"name": "simpleShowHideMouseCursor",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Camera/Cutscene/simpleShowHideMouseCursor.cs",
+"line": 5,
+"fields": 5,
+"methods": 3
+},
+{
+"name": "solidCameraEffect",
+"kind": "class",
+"base": [
+"cameraEffect"
+],
+"file": "Camera/Camera Effect/solidCameraEffect.cs",
+"line": 5,
+"fields": 10,
+"methods": 2
+},
+{
+"name": "vehicleCameraController",
+"kind": "class",
+"base": [
+"cameraControllerManager"
+],
+"file": "Camera/Vehicles/vehicleCameraController.cs",
+"line": 8,
+"fields": 57,
+"methods": 45
+},
+{
+"name": "vehicleCameraShake",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Camera/Vehicles/vehicleCameraShake.cs",
+"line": 5,
+"fields": 7,
+"methods": 7
+},
+{
+"name": "armorClothInventoryPrefabCreationSystem",
+"kind": "class",
+"base": [
+"inventoryPrefabCreationSystem"
+],
+"file": "Character Aspect Customization System/armorClothInventoryPrefabCreationSystem.cs",
+"line": 5,
+"fields": 0,
+"methods": 1
+},
+{
+"name": "armorClothOnInventory",
+"kind": "class",
+"base": [
+"objectOnInventory"
+],
+"file": "Character Aspect Customization System/armorClothOnInventory.cs",
+"line": 5,
+"fields": 1,
+"methods": 3
+},
+{
+"name": "armorClothPickup",
+"kind": "class",
+"base": [
+"pickupType"
+],
+"file": "Character Aspect Customization System/armorClothPickup.cs",
+"line": 5,
+"fields": 2,
+"methods": 4
+},
+{
+"name": "armorClothPieceTemplate",
+"kind": "class",
+"base": [
+"ScriptableObject"
+],
+"file": "Character Aspect Customization System/armorClothPieceTemplate.cs",
+"line": 5,
+"fields": 4,
+"methods": 0
+},
+{
+"name": "armorClothPieceTemplateData",
+"kind": "class",
+"base": [
+"ScriptableObject"
+],
+"file": "Character Aspect Customization System/armorClothPieceTemplateData.cs",
+"line": 5,
+"fields": 3,
+"methods": 0
+},
+{
+"name": "armorClothStatsInfo",
+"kind": "class",
+"base": [],
+"file": "Character Aspect Customization System/armorClothStatsInfo.cs",
+"line": 5,
+"fields": 23,
+"methods": 0
+},
+{
+"name": "characterAspectCustomizationTemplate",
+"kind": "class",
+"base": [
+"ScriptableObject"
+],
+"file": "Character Aspect Customization System/characterAspectCustomizationTemplate.cs",
+"line": 5,
+"fields": 3,
+"methods": 0
+},
+{
+"name": "characterAspectCustomizationTemplateData",
+"kind": "class",
+"base": [
+"ScriptableObject"
+],
+"file": "Character Aspect Customization System/characterAspectCustomizationTemplateData.cs",
+"line": 5,
+"fields": 3,
+"methods": 0
+},
+{
+"name": "characterAspectCustomizationUISystem",
+"kind": "class",
+"base": [
+"ingameMenuPanel"
+],
+"file": "Character Aspect Customization System/characterAspectCustomizationUISystem.cs",
+"line": 7,
+"fields": 26,
+"methods": 26
+},
+{
+"name": "characterCustomizationBlendshapesHelper",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Character Aspect Customization System/characterCustomizationBlendshapesHelper.cs",
+"line": 5,
+"fields": 6,
+"methods": 6
+},
+{
+"name": "characterCustomizationInfo",
+"kind": "class",
+"base": [],
+"file": "Character Aspect Customization System/characterCustomizationInfo.cs",
+"line": 5,
+"fields": 10,
+"methods": 0
+},
+{
+"name": "characterCustomizationInventoryHelper",
+"kind": "class",
+"base": [
+"inventoryManagerInfo"
+],
+"file": "Character Aspect Customization System/characterCustomizationInventoryHelper.cs",
+"line": 6,
+"fields": 8,
+"methods": 4
+},
+{
+"name": "characterCustomizationManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Character Aspect Customization System/characterCustomizationManager.cs",
+"line": 6,
+"fields": 23,
+"methods": 25
+},
+{
+"name": "characterCustomizationTypeInfo",
+"kind": "class",
+"base": [],
+"file": "Character Aspect Customization System/characterCustomizationInfo.cs",
+"line": 31,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "fullArmorClothTemplate",
+"kind": "class",
+"base": [
+"ScriptableObject"
+],
+"file": "Character Aspect Customization System/fullArmorClothTemplate.cs",
+"line": 5,
+"fields": 4,
+"methods": 0
+},
+{
+"name": "fullArmorClothTemplateData",
+"kind": "class",
+"base": [
+"ScriptableObject"
+],
+"file": "Character Aspect Customization System/fullArmorClothTemplateData.cs",
+"line": 5,
+"fields": 3,
+"methods": 0
+},
+{
+"name": "checkpointElement",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Checkpoint/checkpointElement.cs",
+"line": 6,
+"fields": 15,
+"methods": 3
+},
+{
+"name": "checkpointSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Checkpoint/checkpointSystem.cs",
+"line": 5,
+"fields": 17,
+"methods": 12
+},
+{
+"name": "autoGrabLedgeTriggerSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Climb System/autoGrabLedgeTriggerSystem.cs",
+"line": 5,
+"fields": 3,
+"methods": 1
+},
+{
+"name": "climbLedgeSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Climb System/climbLedgeSystem.cs",
+"line": 6,
+"fields": 109,
+"methods": 45
+},
+{
+"name": "ledgeZoneSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Climb System/ledgeZoneSystem.cs",
+"line": 5,
+"fields": 10,
+"methods": 1
+},
+{
+"name": "airAttackToLandSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Combat System/Melee Combat System/airAttackToLandSystem.cs",
+"line": 7,
+"fields": 8,
+"methods": 1
+},
+{
+"name": "closeCombatSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Combat System/closeCombatSystem.cs",
+"line": 7,
+"fields": 117,
+"methods": 74
+},
+{
+"name": "cuttingModeSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Combat System/Melee Combat System/Slice System/cuttingModeSystem.cs",
+"line": 6,
+"fields": 40,
+"methods": 9
+},
+{
+"name": "dualWieldMeleeWeaponObjectSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Combat System/Melee Combat System/dualWieldMeleeWeaponObjectSystem.cs",
+"line": 5,
+"fields": 14,
+"methods": 8
+},
+{
+"name": "hiddenMeleeSurface",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Combat System/Melee Combat System/hiddenMeleeSurface.cs",
+"line": 5,
+"fields": 2,
+"methods": 2
+},
+{
+"name": "matchPlayerToTargetSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Combat System/matchPlayerToTargetSystem.cs",
+"line": 7,
+"fields": 45,
+"methods": 14
+},
+{
+"name": "meleeAttackSurfaceInfo",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Combat System/Melee Combat System/meleeAttackSurfaceInfo.cs",
+"line": 6,
+"fields": 23,
+"methods": 10
+},
+{
+"name": "meleeCombatAttackStartState",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Combat System/Melee Combat System/meleeCombatAttackStartState.cs",
+"line": 5,
+"fields": 2,
+"methods": 1
+},
+{
+"name": "meleeCombatThrowReturnWeaponSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Combat System/Melee Combat System/meleeCombatThrowReturnWeaponSystem.cs",
+"line": 7,
+"fields": 107,
+"methods": 37
+},
+{
+"name": "meleeShieldObjectSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Combat System/Melee Combat System/meleeShieldObjectSystem.cs",
+"line": 5,
+"fields": 10,
+"methods": 16
+},
+{
+"name": "meleeUISystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Combat System/Melee Combat System/meleeUISystem.cs",
+"line": 7,
+"fields": 9,
+"methods": 3
+},
+{
+"name": "meleeWeaponAttackInfo",
+"kind": "class",
+"base": [
+"ScriptableObject"
+],
+"file": "Combat System/Melee Combat System/meleeWeaponAttackInfo.cs",
+"line": 5,
+"fields": 3,
+"methods": 0
+},
+{
+"name": "meleeWeaponAttackListInfoSocket",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Combat System/Melee Combat System/meleeWeaponAttackListInfoSocket.cs",
+"line": 5,
+"fields": 2,
+"methods": 2
+},
+{
+"name": "meleeWeaponAttackListInfoSocketEditor",
+"kind": "class",
+"base": [
+"Editor"
+],
+"file": "Combat System/Melee Combat System/meleeWeaponAttackListInfoSocketEditor.cs",
+"line": 7,
+"fields": 0,
+"methods": 1
+},
+{
+"name": "meleeWeaponInfo",
+"kind": "class",
+"base": [],
+"file": "Combat System/Melee Combat System/meleeWeaponInfo.cs",
+"line": 5,
+"fields": 14,
+"methods": 0
+},
+{
+"name": "meleeWeaponRangeAttacksManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Combat System/Melee Combat System/meleeWeaponRangeAttacksManager.cs",
+"line": 6,
+"fields": 15,
+"methods": 13
+},
+{
+"name": "meleeWeaponRangeAttacksSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Combat System/Melee Combat System/meleeWeaponRangeAttacksSystem.cs",
+"line": 6,
+"fields": 1,
+"methods": 0
+},
+{
+"name": "meleeWeaponsGrabbedManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Combat System/Melee Combat System/meleeWeaponsGrabbedManager.cs",
+"line": 6,
+"fields": 57,
+"methods": 106
+},
+{
+"name": "meleeWeaponTransformData",
+"kind": "class",
+"base": [
+"ScriptableObject"
+],
+"file": "Combat System/Melee Combat System/meleeWeaponTransformData.cs",
+"line": 5,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "meleeWeaponTransformInfoSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Combat System/Melee Combat System/meleeWeaponTransformInfoSystem.cs",
+"line": 5,
+"fields": 10,
+"methods": 9
+},
+{
+"name": "objectToFollowOnThrowMeleeWeapon",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Combat System/Melee Combat System/objectToFollowOnThrowMeleeWeapon.cs",
+"line": 5,
+"fields": 2,
+"methods": 2
+},
+{
+"name": "objectToUseMatchTargetSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Combat System/objectToUseMatchTargetSystem.cs",
+"line": 5,
+"fields": 6,
+"methods": 1
+},
+{
+"name": "perfectDodgeSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Combat System/perfectDodgeSystem.cs",
+"line": 6,
+"fields": 15,
+"methods": 2
+},
+{
+"name": "runtimeShatterRecursive",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Combat System/Melee Combat System/Slice System/runtimeShatterRecursive.cs",
+"line": 6,
+"fields": 20,
+"methods": 5
+},
+{
+"name": "searchMeleeSurfaceSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Combat System/Melee Combat System/searchMeleeSurfaceSystem.cs",
+"line": 5,
+"fields": 13,
+"methods": 3
+},
+{
+"name": "simpleSliceSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Combat System/Melee Combat System/Slice System/simpleSliceSystem.cs",
+"line": 6,
+"fields": 16,
+"methods": 16
+},
+{
+"name": "sliceSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Combat System/Melee Combat System/Slice System/sliceSystem.cs",
+"line": 5,
+"fields": 36,
+"methods": 9
+},
+{
+"name": "sliceSystemUtils",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Combat System/Melee Combat System/Slice System/sliceSystemUtils.cs",
+"line": 10,
+"fields": 0,
+"methods": 11
+},
+{
+"name": "GKCConditionInfo",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Condition System/GKCConditionInfo.cs",
+"line": 6,
+"fields": 18,
+"methods": 11
+},
+{
+"name": "GKCConditionSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Condition System/GKCConditionSystem.cs",
+"line": 5,
+"fields": 2,
+"methods": 3
+},
+{
+"name": "GKCCurrencyConditionSystem",
+"kind": "class",
+"base": [
+"GKCConditionInfo"
+],
+"file": "Condition System/GKCCurrencyConditionSystem.cs",
+"line": 5,
+"fields": 1,
+"methods": 2
+},
+{
+"name": "GKCFireWeaponsConditionSystem",
+"kind": "class",
+"base": [
+"GKCConditionInfo"
+],
+"file": "Condition System/GKCFireWeaponsConditionSystem.cs",
+"line": 5,
+"fields": 6,
+"methods": 4
+},
+{
+"name": "GKCInventoryConditionSystem",
+"kind": "class",
+"base": [
+"GKCConditionInfo"
+],
+"file": "Condition System/GKCInventoryConditionSystem.cs",
+"line": 5,
+"fields": 4,
+"methods": 2
+},
+{
+"name": "GKCMeleeConditionSystem",
+"kind": "class",
+"base": [
+"GKCConditionInfo"
+],
+"file": "Condition System/GKCMeleeConditionSystem.cs",
+"line": 5,
+"fields": 7,
+"methods": 4
+},
+{
+"name": "GKCVehicleConditionSystem",
+"kind": "class",
+"base": [
+"GKCConditionInfo"
+],
+"file": "Condition System/GKCVehicleConditionSystem.cs",
+"line": 5,
+"fields": 5,
+"methods": 2
+},
+{
+"name": "GKCVendorConditionSystem",
+"kind": "class",
+"base": [
+"GKCConditionInfo"
+],
+"file": "Condition System/GKCVendorConditionSystem.cs",
+"line": 5,
+"fields": 4,
+"methods": 2
+},
+{
+"name": "simpleFireWeaponsConditionSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Condition System/simpleFireWeaponsConditionSystem.cs",
+"line": 6,
+"fields": 11,
+"methods": 2
+},
+{
+"name": "craftedObjectPlacedHelper",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Crafting System/craftedObjectPlacedHelper.cs",
+"line": 6,
+"fields": 10,
+"methods": 9
+},
+{
+"name": "craftingBlueprintInfo",
+"kind": "class",
+"base": [],
+"file": "Crafting System/craftingBlueprintInfo.cs",
+"line": 5,
+"fields": 3,
+"methods": 0
+},
+{
+"name": "craftingBlueprintInfoTemplate",
+"kind": "class",
+"base": [
+"ScriptableObject"
+],
+"file": "Crafting System/craftingBlueprintInfoTemplate.cs",
+"line": 5,
+"fields": 21,
+"methods": 0
+},
+{
+"name": "craftingBlueprintInfoTemplateData",
+"kind": "class",
+"base": [
+"ScriptableObject"
+],
+"file": "Crafting System/craftingBlueprintInfoTemplateData.cs",
+"line": 5,
+"fields": 4,
+"methods": 0
+},
+{
+"name": "craftingIngredientObjectInfo",
+"kind": "class",
+"base": [],
+"file": "Crafting System/craftingBlueprintInfo.cs",
+"line": 17,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "craftingObjectButtonInfo",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Crafting System/craftingObjectButtonInfo.cs",
+"line": 6,
+"fields": 9,
+"methods": 0
+},
+{
+"name": "craftingPlacementSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Crafting System/craftingPlacementSystem.cs",
+"line": 6,
+"fields": 31,
+"methods": 20
+},
+{
+"name": "craftingSocket",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Crafting System/craftingSocket.cs",
+"line": 5,
+"fields": 5,
+"methods": 8
+},
+{
+"name": "craftingStatInfo",
+"kind": "class",
+"base": [],
+"file": "Crafting System/craftingBlueprintInfo.cs",
+"line": 25,
+"fields": 4,
+"methods": 0
+},
+{
+"name": "craftingStationSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Crafting System/craftingStationSystem.cs",
+"line": 6,
+"fields": 20,
+"methods": 17
+},
+{
+"name": "craftingSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Crafting System/craftingSystem.cs",
+"line": 6,
+"fields": 37,
+"methods": 55
+},
+{
+"name": "craftingUISystem",
+"kind": "class",
+"base": [
+"ingameMenuPanel"
+],
+"file": "Crafting System/craftingUISystem.cs",
+"line": 8,
+"fields": 101,
+"methods": 45
+},
+{
+"name": "craftingWorkbenchSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Crafting System/craftingWorkbenchSystem.cs",
+"line": 6,
+"fields": 13,
+"methods": 5
+},
+{
+"name": "craftingZoneSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Crafting System/craftingZoneSystem.cs",
+"line": 5,
+"fields": 3,
+"methods": 1
+},
+{
+"name": "durabilityInfo",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Crafting System/durabilityInfo.cs",
+"line": 6,
+"fields": 22,
+"methods": 21
+},
+{
+"name": "durabilityInfoOnFireWeapons",
+"kind": "class",
+"base": [
+"durabilityInfo"
+],
+"file": "Crafting System/durabilityInfoOnFireWeapons.cs",
+"line": 5,
+"fields": 0,
+"methods": 3
+},
+{
+"name": "durabilityInfoOnMeleeShields",
+"kind": "class",
+"base": [
+"durabilityInfo"
+],
+"file": "Crafting System/durabilityInfoOnMeleeShields.cs",
+"line": 5,
+"fields": 0,
+"methods": 3
+},
+{
+"name": "durabilityInfoOnMeleeWeapons",
+"kind": "class",
+"base": [
+"durabilityInfo"
+],
+"file": "Crafting System/durabilityInfoOnMeleeWeapons.cs",
+"line": 5,
+"fields": 0,
+"methods": 3
+},
+{
+"name": "energyStationSystem",
+"kind": "class",
+"base": [
+"craftingStationSystem"
+],
+"file": "Crafting System/energyStationSystem.cs",
+"line": 6,
+"fields": 17,
+"methods": 13
+},
+{
+"name": "fullCraftingBlueprintInfoTemplateData",
+"kind": "class",
+"base": [
+"ScriptableObject"
+],
+"file": "Crafting System/fullCraftingBlueprintInfoTemplateData.cs",
+"line": 5,
+"fields": 3,
+"methods": 0
+},
+{
+"name": "materialExtractionStationSystem",
+"kind": "class",
+"base": [
+"craftingStationSystem"
+],
+"file": "Crafting System/materialExtractionStationSystem.cs",
+"line": 6,
+"fields": 45,
+"methods": 12
+},
+{
+"name": "materialExtractionStationUISystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Crafting System/materialExtractionStationUISystem.cs",
+"line": 6,
+"fields": 9,
+"methods": 2
+},
+{
+"name": "materialsZoneSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Crafting System/materialsZoneSystem.cs",
+"line": 6,
+"fields": 25,
+"methods": 10
+},
+{
+"name": "processMaterialInfo",
+"kind": "class",
+"base": [],
+"file": "Crafting System/craftingBlueprintInfo.cs",
+"line": 39,
+"fields": 4,
+"methods": 0
+},
+{
+"name": "processStationSystem",
+"kind": "class",
+"base": [
+"craftingStationSystem"
+],
+"file": "Crafting System/processStationSystem.cs",
+"line": 5,
+"fields": 17,
+"methods": 4
+},
+{
+"name": "simpleBreakObject",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Crafting System/simpleBreakObject.cs",
+"line": 7,
+"fields": 60,
+"methods": 6
+},
+{
+"name": "simpleDeviceStationSystem",
+"kind": "class",
+"base": [
+"craftingStationSystem"
+],
+"file": "Crafting System/simpleDeviceStationSystem.cs",
+"line": 6,
+"fields": 4,
+"methods": 2
+},
+{
+"name": "decalManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Decal/decalManager.cs",
+"line": 6,
+"fields": 8,
+"methods": 12
+},
+{
+"name": "decalTypeInformation",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Decal/decalTypeInformation.cs",
+"line": 5,
+"fields": 10,
+"methods": 7
+},
+{
+"name": "checkCollisionToApplyDamage",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Demo/checkCollisionToApplyDamage.cs",
+"line": 6,
+"fields": 36,
+"methods": 3
+},
+{
+"name": "clock",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Demo/clock.cs",
+"line": 4,
+"fields": 3,
+"methods": 0
+},
+{
+"name": "damageCharacterOnCollision",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Demo/damageCharacterOnCollision.cs",
+"line": 5,
+"fields": 27,
+"methods": 3
+},
+{
+"name": "deviceToActive",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Demo/deviceToActive.cs",
+"line": 4,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "moveObject",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Demo/moveObject.cs",
+"line": 4,
+"fields": 6,
+"methods": 4
+},
+{
+"name": "openStructure",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Demo/openStructure.cs",
+"line": 5,
+"fields": 6,
+"methods": 1
+},
+{
+"name": "setLaserRefractions",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Demo/setLaserRefractions.cs",
+"line": 5,
+"fields": 3,
+"methods": 2
+},
+{
+"name": "setText",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Demo/setText.cs",
+"line": 5,
+"fields": 2,
+"methods": 1
+},
+{
+"name": "simpleObject",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Demo/simpleObject.cs",
+"line": 4,
+"fields": 2,
+"methods": 2
+},
+{
+"name": "simpleTurretRobot",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Demo/simpleTurretRobot.cs",
+"line": 4,
+"fields": 3,
+"methods": 4
+},
+{
+"name": "solarSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Demo/solarSystem.cs",
+"line": 5,
+"fields": 4,
+"methods": 0
+},
+{
+"name": "accessTerminal",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Devices/accessTerminal.cs",
+"line": 11,
+"fields": 40,
+"methods": 13
+},
+{
+"name": "closetSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Devices/closetSystem.cs",
+"line": 6,
+"fields": 10,
+"methods": 9
+},
+{
+"name": "computerDevice",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Devices/computerDevice.cs",
+"line": 11,
+"fields": 39,
+"methods": 6
+},
+{
+"name": "deviceStringAction",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Devices/deviceStringAction.cs",
+"line": 5,
+"fields": 55,
+"methods": 17
+},
+{
+"name": "doorSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Devices/doorSystem.cs",
+"line": 7,
+"fields": 46,
+"methods": 23
+},
+{
+"name": "electronicDevice",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Devices/electronicDevice.cs",
+"line": 8,
+"fields": 45,
+"methods": 23
+},
+{
+"name": "elevatorFloorsPanel",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Devices/elevatorFloorsPanel.cs",
+"line": 6,
+"fields": 5,
+"methods": 2
+},
+{
+"name": "elevatorSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Devices/elevatorSystem.cs",
+"line": 6,
+"fields": 22,
+"methods": 13
+},
+{
+"name": "enemyHackPanel",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Devices/enemyHackPanel.cs",
+"line": 5,
+"fields": 6,
+"methods": 5
+},
+{
+"name": "examineObjectSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Devices/examineObjectSystem.cs",
+"line": 8,
+"fields": 31,
+"methods": 16
+},
+{
+"name": "examineObjectSystemPlayerManagement",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Devices/examineObjectSystemPlayerManagement.cs",
+"line": 6,
+"fields": 5,
+"methods": 8
+},
+{
+"name": "fallingPlatform",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Devices/fallingPlatform.cs",
+"line": 4,
+"fields": 9,
+"methods": 0
+},
+{
+"name": "hackTerminal",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Devices/hackTerminal.cs",
+"line": 10,
+"fields": 21,
+"methods": 9
+},
+{
+"name": "hologramDoor",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Devices/hologramDoor.cs",
+"line": 8,
+"fields": 27,
+"methods": 16
+},
+{
+"name": "interactionObjectMessage",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Devices/interactionObjectMessage.cs",
+"line": 6,
+"fields": 15,
+"methods": 4
+},
+{
+"name": "jumpPlatform",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Devices/jumpPlatform.cs",
+"line": 5,
+"fields": 21,
+"methods": 1
+},
+{
+"name": "laser",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Devices/laser.cs",
+"line": 4,
+"fields": 8,
+"methods": 3
+},
+{
+"name": "laserConnector",
+"kind": "class",
+"base": [
+"laser"
+],
+"file": "Devices/laserConnector.cs",
+"line": 4,
+"fields": 1,
+"methods": 4
+},
+{
+"name": "laserDevice",
+"kind": "class",
+"base": [
+"laser"
+],
+"file": "Devices/laserDevice.cs",
+"line": 5,
+"fields": 17,
+"methods": 2
+},
+{
+"name": "laserReceiver",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Devices/laserReceiver.cs",
+"line": 4,
+"fields": 4,
+"methods": 2
+},
+{
+"name": "lockedCameraSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Devices/lockedCameraSystem.cs",
+"line": 6,
+"fields": 27,
+"methods": 39
+},
+{
+"name": "movableDoor",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Devices/movableDoor.cs",
+"line": 4,
+"fields": 5,
+"methods": 0
+},
+{
+"name": "moveCameraToDevice",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Devices/moveCameraToDevice.cs",
+"line": 4,
+"fields": 47,
+"methods": 8
+},
+{
+"name": "moveDeviceToCamera",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Devices/moveDeviceToCamera.cs",
+"line": 6,
+"fields": 36,
+"methods": 11
+},
+{
+"name": "oneWayPlatformSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Devices/oneWayPlatformSystem.cs",
+"line": 5,
+"fields": 11,
+"methods": 4
+},
+{
+"name": "padlockSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Devices/padlockSystem.cs",
+"line": 11,
+"fields": 27,
+"methods": 14
+},
+{
+"name": "padlockSystemPlayerManagement",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Devices/padlockSystemPlayerManagement.cs",
+"line": 6,
+"fields": 4,
+"methods": 4
+},
+{
+"name": "pressurePlate",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Devices/pressurePlate.cs",
+"line": 6,
+"fields": 10,
+"methods": 0
+},
+{
+"name": "radioSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Devices/Radio/radioSystem.cs",
+"line": 10,
+"fields": 25,
+"methods": 17
+},
+{
+"name": "rechargerStation",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Devices/rechargerStation.cs",
+"line": 5,
+"fields": 11,
+"methods": 2
+},
+{
+"name": "refractionCube",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Devices/refractionCube.cs",
+"line": 4,
+"fields": 4,
+"methods": 2
+},
+{
+"name": "rotatingPlatform",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Devices/rotatingPlatform.cs",
+"line": 5,
+"fields": 5,
+"methods": 3
+},
+{
+"name": "securityCamera",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Devices/securityCamera.cs",
+"line": 4,
+"fields": 13,
+"methods": 6
+},
+{
+"name": "securityCameraControl",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Devices/securityCameraControl.cs",
+"line": 4,
+"fields": 13,
+"methods": 4
+},
+{
+"name": "simpleSwitch",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Devices/simpleSwitch.cs",
+"line": 6,
+"fields": 20,
+"methods": 10
+},
+{
+"name": "songsManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Devices/Radio/songsManager.cs",
+"line": 11,
+"fields": 12,
+"methods": 4
+},
+{
+"name": "teleportationPlatform",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Devices/teleportationPlatform.cs",
+"line": 5,
+"fields": 19,
+"methods": 4
+},
+{
+"name": "vendingMachine",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Devices/vendingMachine.cs",
+"line": 5,
+"fields": 9,
+"methods": 3
+},
+{
+"name": "waypointPlatform",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Devices/waypointPlatform.cs",
+"line": 6,
+"fields": 37,
+"methods": 13
+},
+{
+"name": "waypointPlayerPathSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Devices/waypointPlayerPathSystem.cs",
+"line": 8,
+"fields": 38,
+"methods": 9
+},
+{
+"name": "zipline",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Devices/zipline.cs",
+"line": 5,
+"fields": 17,
+"methods": 7
+},
+{
+"name": "characterDialogContentSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Dialog System/characterDialogContentSystem.cs",
+"line": 5,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "completeDialogInfo",
+"kind": "class",
+"base": [],
+"file": "Dialog System/completeDialogInfo.cs",
+"line": 8,
+"fields": 21,
+"methods": 0
+},
+{
+"name": "completeDialogInfoTemplate",
+"kind": "class",
+"base": [],
+"file": "Dialog System/completeDialogInfo.cs",
+"line": 182,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "dialogContentSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Dialog System/dialogContentSystem.cs",
+"line": 6,
+"fields": 24,
+"methods": 31
+},
+{
+"name": "dialogContentTemplate",
+"kind": "class",
+"base": [
+"ScriptableObject"
+],
+"file": "Dialog System/dialogContentTemplate.cs",
+"line": 5,
+"fields": 3,
+"methods": 0
+},
+{
+"name": "dialogInfo",
+"kind": "class",
+"base": [],
+"file": "Dialog System/completeDialogInfo.cs",
+"line": 49,
+"fields": 47,
+"methods": 1
+},
+{
+"name": "dialogLineInfo",
+"kind": "class",
+"base": [],
+"file": "Dialog System/completeDialogInfo.cs",
+"line": 134,
+"fields": 26,
+"methods": 0
+},
+{
+"name": "dialogManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Dialog System/dialogManager.cs",
+"line": 5,
+"fields": 7,
+"methods": 12
+},
+{
+"name": "dialogSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Dialog System/dialogSystem.cs",
+"line": 11,
+"fields": 57,
+"methods": 19
+},
+{
+"name": "externalDialogTriggerSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Dialog System/externalDialogTriggerSystem.cs",
+"line": 5,
+"fields": 9,
+"methods": 4
+},
+{
+"name": "simpleCompleteDialogInfo",
+"kind": "class",
+"base": [],
+"file": "Dialog System/completeDialogInfo.cs",
+"line": 192,
+"fields": 3,
+"methods": 0
+},
+{
+"name": "simpleDialogInfo",
+"kind": "class",
+"base": [],
+"file": "Dialog System/completeDialogInfo.cs",
+"line": 204,
+"fields": 7,
+"methods": 1
+},
+{
+"name": "simpleDialogLineInfo",
+"kind": "class",
+"base": [],
+"file": "Dialog System/completeDialogInfo.cs",
+"line": 230,
+"fields": 3,
+"methods": 0
+},
+{
+"name": "changePlayerStateOnTriggerSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Event System/changePlayerStateOnTriggerSystem.cs",
+"line": 6,
+"fields": 122,
+"methods": 3
+},
+{
+"name": "eventInfoSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Event System/eventInfoSystem.cs",
+"line": 6,
+"fields": 10,
+"methods": 5
+},
+{
+"name": "eventObjectFoundOnCaptureSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Event System/eventObjectFoundOnCaptureSystem.cs",
+"line": 6,
+"fields": 8,
+"methods": 3
+},
+{
+"name": "eventParameters",
+"kind": "class",
+"base": [],
+"file": "Event System/eventParameters.cs",
+"line": 6,
+"fields": 0,
+"methods": 0
+},
+{
+"name": "eventTriggerSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Event System/eventTriggerSystem.cs",
+"line": 6,
+"fields": 35,
+"methods": 29
+},
+{
+"name": "randomEventSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Event System/randomEventSystem.cs",
+"line": 6,
+"fields": 7,
+"methods": 9
+},
+{
+"name": "remoteAnimatorEventTriggerSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Event System/remoteAnimatorEventTriggerSystem.cs",
+"line": 5,
+"fields": 3,
+"methods": 4
+},
+{
+"name": "remoteEventActivator",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Event System/remoteEventActivator.cs",
+"line": 5,
+"fields": 17,
+"methods": 4
+},
+{
+"name": "remoteEventSearcher",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Event System/remoteEventSearcher.cs",
+"line": 5,
+"fields": 6,
+"methods": 1
+},
+{
+"name": "remoteEventSocket",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Event System/remoteEventSocket.cs",
+"line": 5,
+"fields": 2,
+"methods": 2
+},
+{
+"name": "remoteEventSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Event System/remoteEventSystem.cs",
+"line": 6,
+"fields": 10,
+"methods": 22
+},
+{
+"name": "experienceObtainedInfoPanel",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Experience System/experienceObtainedInfoPanel.cs",
+"line": 5,
+"fields": 1,
+"methods": 0
+},
+{
+"name": "objectExperienceSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Experience System/objectExperienceSystem.cs",
+"line": 6,
+"fields": 63,
+"methods": 3
+},
+{
+"name": "playerExperienceSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Experience System/playerExperienceSystem.cs",
+"line": 9,
+"fields": 64,
+"methods": 35
+},
+{
+"name": "customNoiseSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Foot Step/customNoiseSystem.cs",
+"line": 6,
+"fields": 4,
+"methods": 2
+},
+{
+"name": "footStep",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Foot Step/footStep.cs",
+"line": 6,
+"fields": 8,
+"methods": 4
+},
+{
+"name": "footStepManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Foot Step/footStepManager.cs",
+"line": 7,
+"fields": 41,
+"methods": 23
+},
+{
+"name": "footStepSurfaceSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Foot Step/footStepSurfaceSystem.cs",
+"line": 5,
+"fields": 1,
+"methods": 1
+},
+{
+"name": "noiseMeshSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Foot Step/noiseMeshSystem.cs",
+"line": 5,
+"fields": 4,
+"methods": 3
+},
+{
+"name": "noiseReactionData",
+"kind": "class",
+"base": [
+"ScriptableObject"
+],
+"file": "Foot Step/noiseReactionData.cs",
+"line": 5,
+"fields": 1,
+"methods": 0
+},
+{
+"name": "noiseReactionInfo",
+"kind": "class",
+"base": [],
+"file": "Foot Step/noiseReactionData.cs",
+"line": 12,
+"fields": 9,
+"methods": 0
+},
+{
+"name": "noiseSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Foot Step/noiseSystem.cs",
+"line": 5,
+"fields": 23,
+"methods": 5
+},
+{
+"name": "basicSingleManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Game Manager/basicSingleManager.cs",
+"line": 5,
+"fields": 0,
+"methods": 1
+},
+{
+"name": "gameManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Game Manager/gameManager.cs",
+"line": 9,
+"fields": 44,
+"methods": 43
+},
+{
+"name": "mainManagerAdministrator",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Game Manager/mainManagerAdministrator.cs",
+"line": 11,
+"fields": 4,
+"methods": 12
+},
+{
+"name": "playerCharactersManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Game Manager/playerCharactersManager.cs",
+"line": 8,
+"fields": 32,
+"methods": 53
+},
+{
+"name": "prefabsManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Game Manager/prefabsManager.cs",
+"line": 6,
+"fields": 10,
+"methods": 17
+},
+{
+"name": "switchCompanionSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Game Manager/switchCompanionSystem.cs",
+"line": 6,
+"fields": 8,
+"methods": 5
+},
+{
+"name": "checkObjectOnTrigger",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Grab Objects/checkObjectOnTrigger.cs",
+"line": 6,
+"fields": 12,
+"methods": 2
+},
+{
+"name": "grabbedObjectMeleeAttackSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Grab Objects/grabbedObjectMeleeAttackSystem.cs",
+"line": 8,
+"fields": 134,
+"methods": 211
+},
+{
+"name": "grabbedObjectState",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Grab Objects/grabbedObjectState.cs",
+"line": 6,
+"fields": 9,
+"methods": 12
+},
+{
+"name": "grabObjectEventSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Grab Objects/grabObjectEventSystem.cs",
+"line": 6,
+"fields": 4,
+"methods": 2
+},
+{
+"name": "grabObjectGenericModeMountPointSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Grab Objects/grabObjectGenericModeMountPointSystem.cs",
+"line": 5,
+"fields": 4,
+"methods": 6
+},
+{
+"name": "grabObjectParent",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Grab Objects/grabObjectParent.cs",
+"line": 5,
+"fields": 1,
+"methods": 1
+},
+{
+"name": "grabObjectProperties",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Grab Objects/grabObjectProperties.cs",
+"line": 6,
+"fields": 14,
+"methods": 6
+},
+{
+"name": "grabObjects",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Grab Objects/grabObjects.cs",
+"line": 7,
+"fields": 147,
+"methods": 84
+},
+{
+"name": "grabObjectsPowerSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Grab Objects/grabObjectsPowerSystem.cs",
+"line": 7,
+"fields": 42,
+"methods": 10
+},
+{
+"name": "grabPhysicalObjectMeleeAttackSystem",
+"kind": "class",
+"base": [
+"weaponObjectInfo"
+],
+"file": "Grab Objects/grabPhysicalObjectMeleeAttackSystem.cs",
+"line": 6,
+"fields": 171,
+"methods": 79
+},
+{
+"name": "grabPhysicalObjectSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Grab Objects/grabPhysicalObjectSystem.cs",
+"line": 6,
+"fields": 94,
+"methods": 56
+},
+{
+"name": "objectDistributorSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Grab Objects/objectDistributorSystem.cs",
+"line": 6,
+"fields": 19,
+"methods": 4
+},
+{
+"name": "objectToPlaceSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Grab Objects/objectToPlaceSystem.cs",
+"line": 7,
+"fields": 38,
+"methods": 35
+},
+{
+"name": "outlineObjectSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Grab Objects/outlineObjectSystem.cs",
+"line": 6,
+"fields": 30,
+"methods": 12
+},
+{
+"name": "putObjectSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Grab Objects/putObjectSystem.cs",
+"line": 7,
+"fields": 41,
+"methods": 23
+},
+{
+"name": "artificialObjectGravity",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Gravity/artificialObjectGravity.cs",
+"line": 5,
+"fields": 16,
+"methods": 13
+},
+{
+"name": "gravityObjectManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Gravity/gravityObjectManager.cs",
+"line": 5,
+"fields": 0,
+"methods": 6
+},
+{
+"name": "gravitySystem",
+"kind": "class",
+"base": [
+"gravityObjectManager"
+],
+"file": "Gravity/gravitySystem.cs",
+"line": 8,
+"fields": 114,
+"methods": 102
+},
+{
+"name": "objectToUseArtificialGravitySystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Gravity/objectToUseArtificialGravitySystem.cs",
+"line": 5,
+"fields": 0,
+"methods": 0
+},
+{
+"name": "parentAssignedSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Gravity/parentAssignedSystem.cs",
+"line": 5,
+"fields": 2,
+"methods": 3
+},
+{
+"name": "setGravity",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Gravity/setGravity.cs",
+"line": 5,
+"fields": 57,
+"methods": 6
+},
+{
+"name": "updateCharacterGravityTriggerSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Gravity/updateCharacterGravityTriggerSystem.cs",
+"line": 5,
+"fields": 6,
+"methods": 2
+},
+{
+"name": "vehicleGravityControl",
+"kind": "class",
+"base": [
+"gravityObjectManager"
+],
+"file": "Gravity/vehicleGravityControl.cs",
+"line": 5,
+"fields": 45,
+"methods": 29
+},
+{
+"name": "zeroGravityRoomObjectChecker",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Gravity/zeroGravityRoomObjectChecker.cs",
+"line": 5,
+"fields": 3,
+"methods": 2
+},
+{
+"name": "zeroGravityRoomSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Gravity/zeroGravityRoomSystem.cs",
+"line": 6,
+"fields": 59,
+"methods": 30
+},
+{
+"name": "headTrack",
+"kind": "class",
+"base": [
+"OnAnimatorIKComponent"
+],
+"file": "Head Track/headTrack.cs",
+"line": 7,
+"fields": 54,
+"methods": 36
+},
+{
+"name": "headTrackTarget",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Head Track/headTrackTarget.cs",
+"line": 5,
+"fields": 13,
+"methods": 9
+},
+{
+"name": "pointToLook",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Head Track/pointToLook.cs",
+"line": 5,
+"fields": 3,
+"methods": 4
+},
+{
+"name": "activateReactionSystem",
+"kind": "class",
+"base": [
+"applyEffectOnArea"
+],
+"file": "Health/activateReactionSystem.cs",
+"line": 5,
+"fields": 10,
+"methods": 1
+},
+{
+"name": "applyDamage",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Health/applyDamage.cs",
+"line": 5,
+"fields": 0,
+"methods": 116
+},
+{
+"name": "applyDamageOnArea",
+"kind": "class",
+"base": [
+"applyEffectOnArea"
+],
+"file": "Health/applyDamageOnArea.cs",
+"line": 5,
+"fields": 11,
+"methods": 2
+},
+{
+"name": "applyDissolveOnArea",
+"kind": "class",
+"base": [
+"applyEffectOnArea"
+],
+"file": "Health/applyDissolveOnArea.cs",
+"line": 5,
+"fields": 6,
+"methods": 1
+},
+{
+"name": "applyEffectOnArea",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Health/applyEffectOnArea.cs",
+"line": 6,
+"fields": 35,
+"methods": 11
+},
+{
+"name": "applyHealOnArea",
+"kind": "class",
+"base": [
+"applyEffectOnArea"
+],
+"file": "Health/applyHealOnArea.cs",
+"line": 5,
+"fields": 0,
+"methods": 1
+},
+{
+"name": "characterDamageReceiver",
+"kind": "class",
+"base": [
+"healthManagement"
+],
+"file": "Health/characterDamageReceiver.cs",
+"line": 5,
+"fields": 5,
+"methods": 56
+},
+{
+"name": "damageHitReactionSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Health/damageHitReactionSystem.cs",
+"line": 6,
+"fields": 18,
+"methods": 18
+},
+{
+"name": "damageInfo",
+"kind": "class",
+"base": [],
+"file": "Health/damageInfo.cs",
+"line": 5,
+"fields": 10,
+"methods": 0
+},
+{
+"name": "damageInScreen",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Health/damageInScreen.cs",
+"line": 5,
+"fields": 7,
+"methods": 5
+},
+{
+"name": "damageOnScreenInfoSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Health/damageOnScreenInfoSystem.cs",
+"line": 6,
+"fields": 3,
+"methods": 7
+},
+{
+"name": "damageOrHealTrigger",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Health/damageOrHealTrigger.cs",
+"line": 5,
+"fields": 23,
+"methods": 1
+},
+{
+"name": "damageScreenSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Health/damageScreenSystem.cs",
+"line": 6,
+"fields": 20,
+"methods": 8
+},
+{
+"name": "destroyableObject",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Health/destroyableObject.cs",
+"line": 7,
+"fields": 51,
+"methods": 1
+},
+{
+"name": "externalDamageProperties",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Health/externalDamageProperties.cs",
+"line": 5,
+"fields": 2,
+"methods": 1
+},
+{
+"name": "health",
+"kind": "class",
+"base": [
+"healthManagement"
+],
+"file": "Health/health.cs",
+"line": 8,
+"fields": 128,
+"methods": 225
+},
+{
+"name": "healthBarManagementSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Health/healthBarManagementSystem.cs",
+"line": 6,
+"fields": 3,
+"methods": 23
+},
+{
+"name": "healthElementInfo",
+"kind": "class",
+"base": [],
+"file": "Health/healthElementInfo.cs",
+"line": 5,
+"fields": 5,
+"methods": 0
+},
+{
+"name": "healthManagement",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Health/healthManagement.cs",
+"line": 6,
+"fields": 9,
+"methods": 70
+},
+{
+"name": "healthSliderInfo",
+"kind": "class",
+"base": [],
+"file": "Health/healthSliderInfo.cs",
+"line": 6,
+"fields": 24,
+"methods": 0
+},
+{
+"name": "playerDamageOnScreenInfoSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Health/playerDamageOnScreenInfoSystem.cs",
+"line": 6,
+"fields": 28,
+"methods": 8
+},
+{
+"name": "playerHealthBarManagementSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Health/playerHealthBarManagementSystem.cs",
+"line": 7,
+"fields": 25,
+"methods": 23
+},
+{
+"name": "setHealthCustomWeakSpotID",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Health/setHealthCustomWeakSpotID.cs",
+"line": 6,
+"fields": 4,
+"methods": 9
+},
+{
+"name": "shieldSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Health/shieldSystem.cs",
+"line": 7,
+"fields": 32,
+"methods": 28
+},
+{
+"name": "weakSpotInfo",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Health/weakSpotInfo.cs",
+"line": 4,
+"fields": 1,
+"methods": 0
+},
+{
+"name": "hideCharacterFixedPlaceSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Hide System/hideCharacterFixedPlaceSystem.cs",
+"line": 6,
+"fields": 47,
+"methods": 12
+},
+{
+"name": "hideCharacterFixedPlaceSystemPlayerManagement",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Hide System/hideCharacterFixedPlaceSystemPlayerManagement.cs",
+"line": 6,
+"fields": 8,
+"methods": 10
+},
+{
+"name": "hideFromEnemiesSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Hide System/hideFromEnemiesSystem.cs",
+"line": 5,
+"fields": 15,
+"methods": 7
+},
+{
+"name": "actionInputDelaySystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Input/actionInputDelaySystem.cs",
+"line": 6,
+"fields": 8,
+"methods": 2
+},
+{
+"name": "editButtonInput",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Input/editButtonInput.cs",
+"line": 5,
+"fields": 9,
+"methods": 0
+},
+{
+"name": "editControlPosition",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Input/editControlPosition.cs",
+"line": 12,
+"fields": 9,
+"methods": 11
+},
+{
+"name": "editInputPanelInfo",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Input/editInputPanelInfo.cs",
+"line": 5,
+"fields": 4,
+"methods": 0
+},
+{
+"name": "inputActionManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Input/inputActionManager.cs",
+"line": 6,
+"fields": 30,
+"methods": 28
+},
+{
+"name": "InputAxisWrapper",
+"kind": "class",
+"base": [],
+"file": "Input/InputAxisWrapper.cs",
+"line": 7,
+"fields": 0,
+"methods": 8
+},
+{
+"name": "inputDoubleClickEventSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Input/inputDoubleClickEventSystem.cs",
+"line": 6,
+"fields": 7,
+"methods": 1
+},
+{
+"name": "inputManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Input/inputManager.cs",
+"line": 18,
+"fields": 63,
+"methods": 116
+},
+{
+"name": "inputPanelUISystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Input/inputPanelUISystem.cs",
+"line": 5,
+"fields": 4,
+"methods": 3
+},
+{
+"name": "JoystickData",
+"kind": "class",
+"base": [],
+"file": "Input/JoystickData.cs",
+"line": 5,
+"fields": 0,
+"methods": 0
+},
+{
+"name": "mouseCursorController",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Input/mouseCursorController.cs",
+"line": 6,
+"fields": 38,
+"methods": 13
+},
+{
+"name": "MouseOperations",
+"kind": "class",
+"base": [],
+"file": "Input/mouseOperations.cs",
+"line": 4,
+"fields": 0,
+"methods": 4
+},
+{
+"name": "playerInputManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Input/playerInputManager.cs",
+"line": 11,
+"fields": 79,
+"methods": 146
+},
+{
+"name": "playerInputPanelSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Input/playerInputPanelSystem.cs",
+"line": 6,
+"fields": 11,
+"methods": 28
+},
+{
+"name": "playerInputPauseSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Input/playerInputPauseSystem.cs",
+"line": 5,
+"fields": 3,
+"methods": 2
+},
+{
+"name": "pressMultipleKeysActionInputSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Input/pressMultipleKeysActionInputSystem.cs",
+"line": 6,
+"fields": 11,
+"methods": 3
+},
+{
+"name": "savedButtons",
+"kind": "class",
+"base": [],
+"file": "Input/editControlPosition.cs",
+"line": 401,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "screenActionInfo",
+"kind": "class",
+"base": [],
+"file": "Input/screenActionInfo.cs",
+"line": 5,
+"fields": 9,
+"methods": 0
+},
+{
+"name": "showPlayerInputValues",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Input/showPlayerInputValues.cs",
+"line": 6,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "touchButtonColorChangeSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Input/touchButtonColorChangeSystem.cs",
+"line": 6,
+"fields": 3,
+"methods": 2
+},
+{
+"name": "touchButtonEventSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour",
+"IPointerDownHandler",
+"IPointerUpHandler"
+],
+"file": "Input/touchButtonEventSystem.cs",
+"line": 8,
+"fields": 4,
+"methods": 3
+},
+{
+"name": "touchPanelsInfo",
+"kind": "class",
+"base": [],
+"file": "Input/screenActionInfo.cs",
+"line": 28,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "touchPanelsSchemesInfo",
+"kind": "class",
+"base": [],
+"file": "Input/screenActionInfo.cs",
+"line": 35,
+"fields": 5,
+"methods": 0
+},
+{
+"name": "touchScreenPinchSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Input/touchScreenPinchSystem.cs",
+"line": 6,
+"fields": 11,
+"methods": 0
+},
+{
+"name": "ammoInventoryPrefabCreationSystem",
+"kind": "class",
+"base": [
+"inventoryPrefabCreationSystem"
+],
+"file": "Inventory/ammoInventoryPrefabCreationSystem.cs",
+"line": 5,
+"fields": 0,
+"methods": 1
+},
+{
+"name": "ammoOnInventory",
+"kind": "class",
+"base": [
+"objectOnInventory"
+],
+"file": "Inventory/Inventory Pickups Behaviour/ammoOnInventory.cs",
+"line": 5,
+"fields": 1,
+"methods": 1
+},
+{
+"name": "carryPhysicallyObjectFromInventory",
+"kind": "class",
+"base": [
+"objectOnInventory"
+],
+"file": "Inventory/carryPhysicallyObjectFromInventory.cs",
+"line": 5,
+"fields": 3,
+"methods": 4
+},
+{
+"name": "consumableInventoryPrefabCreationSystem",
+"kind": "class",
+"base": [
+"inventoryPrefabCreationSystem"
+],
+"file": "Inventory/consumableInventoryPrefabCreationSystem.cs",
+"line": 5,
+"fields": 0,
+"methods": 1
+},
+{
+"name": "currencySystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Inventory/currencySystem.cs",
+"line": 7,
+"fields": 14,
+"methods": 9
+},
+{
+"name": "energyOnInventory",
+"kind": "class",
+"base": [
+"objectOnInventory"
+],
+"file": "Inventory/Inventory Pickups Behaviour/energyOnInventory.cs",
+"line": 5,
+"fields": 0,
+"methods": 2
+},
+{
+"name": "generalItemOnInventory",
+"kind": "class",
+"base": [
+"objectOnInventory"
+],
+"file": "Inventory/generalItemOnInventory.cs",
+"line": 5,
+"fields": 2,
+"methods": 3
+},
+{
+"name": "getInventoryObjectSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Inventory/getInventoryObjectSystem.cs",
+"line": 6,
+"fields": 21,
+"methods": 3
+},
+{
+"name": "getObjectFromInventorySystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Inventory/getObjectFromInventorySystem.cs",
+"line": 6,
+"fields": 10,
+"methods": 6
+},
+{
+"name": "healthOnInventory",
+"kind": "class",
+"base": [
+"objectOnInventory"
+],
+"file": "Inventory/Inventory Pickups Behaviour/healthOnInventory.cs",
+"line": 5,
+"fields": 1,
+"methods": 2
+},
+{
+"name": "initialinventoryListData",
+"kind": "class",
+"base": [
+"ScriptableObject"
+],
+"file": "Inventory/Scriptable Objects/initialinventoryListData.cs",
+"line": 5,
+"fields": 3,
+"methods": 0
+},
+{
+"name": "inventoryBankManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Inventory/inventoryBankManager.cs",
+"line": 5,
+"fields": 10,
+"methods": 11
+},
+{
+"name": "inventoryBankSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Inventory/inventoryBankSystem.cs",
+"line": 12,
+"fields": 34,
+"methods": 18
+},
+{
+"name": "inventoryBankUISystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Inventory/inventoryBankUISystem.cs",
+"line": 13,
+"fields": 66,
+"methods": 49
+},
+{
+"name": "inventoryCaptureManager",
+"kind": "class",
+"base": [
+"EditorWindow"
+],
+"file": "Inventory/inventoryCaptureManager.cs",
+"line": 11,
+"fields": 7,
+"methods": 6
+},
+{
+"name": "inventoryCaptureManagerTransparent",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Inventory/inventoryCaptureManagerTransparent.cs",
+"line": 10,
+"fields": 6,
+"methods": 1
+},
+{
+"name": "inventoryCategoryInfo",
+"kind": "class",
+"base": [],
+"file": "Inventory/inventoryCategoryInfo.cs",
+"line": 5,
+"fields": 4,
+"methods": 0
+},
+{
+"name": "inventoryCharacterCustomizationSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Inventory/inventoryCharacterCustomizationSystem.cs",
+"line": 6,
+"fields": 64,
+"methods": 37
+},
+{
+"name": "inventoryInfo",
+"kind": "class",
+"base": [],
+"file": "Inventory/inventoryInfo.cs",
+"line": 7,
+"fields": 68,
+"methods": 4
+},
+{
+"name": "inventoryListElement",
+"kind": "class",
+"base": [],
+"file": "Inventory/inventoryListElement.cs",
+"line": 5,
+"fields": 24,
+"methods": 0
+},
+{
+"name": "inventoryListManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Inventory/inventoryListManager.cs",
+"line": 13,
+"fields": 21,
+"methods": 45
+},
+{
+"name": "inventoryListManagerData",
+"kind": "class",
+"base": [
+"ScriptableObject"
+],
+"file": "Inventory/Scriptable Objects/inventoryListManagerData.cs",
+"line": 5,
+"fields": 1,
+"methods": 0
+},
+{
+"name": "inventoryManager",
+"kind": "class",
+"base": [
+"inventoryManagerInfo"
+],
+"file": "Inventory/inventoryManager.cs",
+"line": 13,
+"fields": 171,
+"methods": 267
+},
+{
+"name": "inventoryManagerInfo",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Inventory/inventoryManagerInfo.cs",
+"line": 5,
+"fields": 9,
+"methods": 18
+},
+{
+"name": "inventoryMenuIconElement",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Inventory/inventoryMenuIconElement.cs",
+"line": 5,
+"fields": 16,
+"methods": 0
+},
+{
+"name": "inventoryMenuPanelsSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Inventory/inventoryMenuPanelsSystem.cs",
+"line": 7,
+"fields": 4,
+"methods": 1
+},
+{
+"name": "inventoryObject",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Inventory/inventoryObject.cs",
+"line": 4,
+"fields": 8,
+"methods": 8
+},
+{
+"name": "inventoryObjectToEquipInfo",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Inventory/inventoryObjectToEquipInfo.cs",
+"line": 5,
+"fields": 0,
+"methods": 3
+},
+{
+"name": "inventoryPrefabCreationSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Inventory/inventoryPrefabCreationSystem.cs",
+"line": 5,
+"fields": 0,
+"methods": 1
+},
+{
+"name": "inventoryQuickAccessSlotElement",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Inventory/Inventory Quick Access System/inventoryQuickAccessSlotElement.cs",
+"line": 6,
+"fields": 1,
+"methods": 0
+},
+{
+"name": "inventoryQuickAccessSlotsSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Inventory/Inventory Quick Access System/inventoryQuickAccessSlotsSystem.cs",
+"line": 8,
+"fields": 59,
+"methods": 59
+},
+{
+"name": "inventorySlotOptionsButtons",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Inventory/inventorySlotOptionsButtons.cs",
+"line": 6,
+"fields": 25,
+"methods": 1
+},
+{
+"name": "inventoryWeightManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Inventory/inventoryWeightManager.cs",
+"line": 9,
+"fields": 20,
+"methods": 12
+},
+{
+"name": "jetpackFuelOnInventory",
+"kind": "class",
+"base": [
+"objectOnInventory"
+],
+"file": "Inventory/Inventory Pickups Behaviour/jetpackFuelOnInventory.cs",
+"line": 5,
+"fields": 0,
+"methods": 1
+},
+{
+"name": "meleeShieldInventoryPrefabCreationSystem",
+"kind": "class",
+"base": [
+"inventoryPrefabCreationSystem"
+],
+"file": "Inventory/meleeShieldInventoryPrefabCreationSystem.cs",
+"line": 5,
+"fields": 0,
+"methods": 1
+},
+{
+"name": "meleeShieldOnInventory",
+"kind": "class",
+"base": [
+"objectOnInventory"
+],
+"file": "Inventory/Inventory Pickups Behaviour/meleeShieldOnInventory.cs",
+"line": 5,
+"fields": 1,
+"methods": 4
+},
+{
+"name": "meleeWeaponConsumableInventoryPrefabCreationSystem",
+"kind": "class",
+"base": [
+"inventoryPrefabCreationSystem"
+],
+"file": "Inventory/meleeWeaponConsumableInventoryPrefabCreationSystem.cs",
+"line": 5,
+"fields": 0,
+"methods": 1
+},
+{
+"name": "meleeWeaponConsumableOnInventory",
+"kind": "class",
+"base": [
+"objectOnInventory"
+],
+"file": "Inventory/Inventory Pickups Behaviour/meleeWeaponConsumableOnInventory.cs",
+"line": 5,
+"fields": 2,
+"methods": 1
+},
+{
+"name": "meleeWeaponInventoryPrefabCreationSystem",
+"kind": "class",
+"base": [
+"inventoryPrefabCreationSystem"
+],
+"file": "Inventory/meleeWeaponInventoryPrefabCreationSystem.cs",
+"line": 5,
+"fields": 0,
+"methods": 1
+},
+{
+"name": "meleeWeaponOnInventory",
+"kind": "class",
+"base": [
+"objectOnInventory"
+],
+"file": "Inventory/Inventory Pickups Behaviour/meleeWeaponOnInventory.cs",
+"line": 5,
+"fields": 2,
+"methods": 3
+},
+{
+"name": "objectOnInventory",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Inventory/Inventory Pickups Behaviour/objectOnInventory.cs",
+"line": 5,
+"fields": 29,
+"methods": 19
+},
+{
+"name": "oxygenOnInventory",
+"kind": "class",
+"base": [
+"objectOnInventory"
+],
+"file": "Inventory/Inventory Pickups Behaviour/oxygenOnInventory.cs",
+"line": 5,
+"fields": 0,
+"methods": 2
+},
+{
+"name": "playerInventoryCategoriesListManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Inventory/playerInventoryCategoriesListManager.cs",
+"line": 9,
+"fields": 15,
+"methods": 12
+},
+{
+"name": "shieldOnInventory",
+"kind": "class",
+"base": [
+"objectOnInventory"
+],
+"file": "Inventory/Inventory Pickups Behaviour/shieldOnInventory.cs",
+"line": 5,
+"fields": 0,
+"methods": 1
+},
+{
+"name": "simpleInventoryContentManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Inventory/simpleInventoryContentManager.cs",
+"line": 5,
+"fields": 6,
+"methods": 8
+},
+{
+"name": "simpleInventorySlotOptionsButton",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Inventory/simpleInventorySlotOptionsButton.cs",
+"line": 5,
+"fields": 0,
+"methods": 0
+},
+{
+"name": "staminaOnInventory",
+"kind": "class",
+"base": [
+"objectOnInventory"
+],
+"file": "Inventory/Inventory Pickups Behaviour/staminaOnInventory.cs",
+"line": 5,
+"fields": 0,
+"methods": 2
+},
+{
+"name": "useInventoryObject",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Inventory/useInventoryObject.cs",
+"line": 7,
+"fields": 40,
+"methods": 39
+},
+{
+"name": "vehicleFuelOnInventory",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Inventory/Inventory Pickups Behaviour/vehicleFuelOnInventory.cs",
+"line": 5,
+"fields": 0,
+"methods": 0
+},
+{
+"name": "weaponAttachmentInventoryPrefabCreationSystem",
+"kind": "class",
+"base": [
+"inventoryPrefabCreationSystem"
+],
+"file": "Inventory/weaponAttachmentInventoryPrefabCreationSystem.cs",
+"line": 5,
+"fields": 0,
+"methods": 1
+},
+{
+"name": "weaponAttachmentOnInventory",
+"kind": "class",
+"base": [
+"objectOnInventory"
+],
+"file": "Inventory/Inventory Pickups Behaviour/weaponAttachmentOnInventory.cs",
+"line": 5,
+"fields": 1,
+"methods": 1
+},
+{
+"name": "weaponInventoryPrefabCreationSystem",
+"kind": "class",
+"base": [
+"inventoryPrefabCreationSystem"
+],
+"file": "Inventory/weaponInventoryPrefabCreationSystem.cs",
+"line": 5,
+"fields": 0,
+"methods": 1
+},
+{
+"name": "weaponOnInventory",
+"kind": "class",
+"base": [
+"objectOnInventory"
+],
+"file": "Inventory/Inventory Pickups Behaviour/weaponOnInventory.cs",
+"line": 5,
+"fields": 3,
+"methods": 5
+},
+{
+"name": "ladderSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Ladder System/ladderSystem.cs",
+"line": 6,
+"fields": 21,
+"methods": 4
+},
+{
+"name": "playerLadderSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Ladder System/playerLadderSystem.cs",
+"line": 6,
+"fields": 52,
+"methods": 12
+},
+{
+"name": "levelManagerIngame",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Level Manager/levelManagerIngame.cs",
+"line": 9,
+"fields": 17,
+"methods": 5
+},
+{
+"name": "travelStationPanel",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Level Manager/travelStationPanel.cs",
+"line": 5,
+"fields": 1,
+"methods": 0
+},
+{
+"name": "travelStationPanelInfo",
+"kind": "class",
+"base": [],
+"file": "Level Manager/travelStationPanelInfo.cs",
+"line": 6,
+"fields": 4,
+"methods": 0
+},
+{
+"name": "travelStationSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Level Manager/travelStationSystem.cs",
+"line": 6,
+"fields": 5,
+"methods": 4
+},
+{
+"name": "travelStationUISystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Level Manager/travelStationUISystem.cs",
+"line": 7,
+"fields": 23,
+"methods": 11
+},
+{
+"name": "addKeyLocalizationToolEditor",
+"kind": "class",
+"base": [
+"EditorWindow"
+],
+"file": "Localization System/localizationToolEditor.cs",
+"line": 119,
+"fields": 3,
+"methods": 2
+},
+{
+"name": "addLanguageLocalizationToolEditor",
+"kind": "class",
+"base": [
+"EditorWindow"
+],
+"file": "Localization System/localizationToolEditor.cs",
+"line": 194,
+"fields": 2,
+"methods": 2
+},
+{
+"name": "gameLanguageSelector",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Localization System/gameLanguageSelector.cs",
+"line": 8,
+"fields": 12,
+"methods": 19
+},
+{
+"name": "interactionObjectsLocalizationManager",
+"kind": "class",
+"base": [
+"languageLocalizationManager"
+],
+"file": "Localization System/interactionObjectsLocalizationManager.cs",
+"line": 8,
+"fields": 0,
+"methods": 13
+},
+{
+"name": "interactionObjectsLocalizationManagerEditor",
+"kind": "class",
+"base": [
+"Editor"
+],
+"file": "Localization System/interactionObjectsLocalizationManagerEditor.cs",
+"line": 9,
+"fields": 0,
+"methods": 1
+},
+{
+"name": "inventoryLocalizationManager",
+"kind": "class",
+"base": [
+"languageLocalizationManager"
+],
+"file": "Localization System/inventoryLocalizationManager.cs",
+"line": 8,
+"fields": 0,
+"methods": 13
+},
+{
+"name": "inventoryLocalizationManagerEditor",
+"kind": "class",
+"base": [
+"Editor"
+],
+"file": "Localization System/inventoryLocalizationManagerEditor.cs",
+"line": 9,
+"fields": 0,
+"methods": 1
+},
+{
+"name": "languageCheckerUIElement",
+"kind": "class",
+"base": [
+"languageElementChecker"
+],
+"file": "Localization System/languageCheckerUIElement.cs",
+"line": 8,
+"fields": 11,
+"methods": 1
+},
+{
+"name": "languageElementChecker",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Localization System/languageElementChecker.cs",
+"line": 5,
+"fields": 1,
+"methods": 2
+},
+{
+"name": "languageElementDeviceChecker",
+"kind": "class",
+"base": [
+"languageElementChecker"
+],
+"file": "Localization System/languageElementDeviceChecker.cs",
+"line": 5,
+"fields": 1,
+"methods": 1
+},
+{
+"name": "languageLocalizationManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Localization System/languageLocalizationManager.cs",
+"line": 10,
+"fields": 11,
+"methods": 15
+},
+{
+"name": "localizationFileLoader",
+"kind": "class",
+"base": [],
+"file": "Localization System/localizationFileLoader.cs",
+"line": 12,
+"fields": 2,
+"methods": 6
+},
+{
+"name": "missionLocalizationManager",
+"kind": "class",
+"base": [
+"languageLocalizationManager"
+],
+"file": "Localization System/missionLocalizationManager.cs",
+"line": 8,
+"fields": 0,
+"methods": 13
+},
+{
+"name": "missionLocalizationManagerEditor",
+"kind": "class",
+"base": [
+"Editor"
+],
+"file": "Localization System/missionLocalizationManagerEditor.cs",
+"line": 9,
+"fields": 0,
+"methods": 1
+},
+{
+"name": "pointAndClickLocalizationManager",
+"kind": "class",
+"base": [
+"languageLocalizationManager"
+],
+"file": "Localization System/pointAndClickLocalizationManager.cs",
+"line": 8,
+"fields": 0,
+"methods": 13
+},
+{
+"name": "pointAndClickLocalizationManagerEditor",
+"kind": "class",
+"base": [
+"Editor"
+],
+"file": "Localization System/pointAndClickLocalizationManagerEditor.cs",
+"line": 9,
+"fields": 0,
+"methods": 1
+},
+{
+"name": "searcherLocalizationToolEditor",
+"kind": "class",
+"base": [
+"EditorWindow"
+],
+"file": "Localization System/localizationToolEditor.cs",
+"line": 10,
+"fields": 5,
+"methods": 2
+},
+{
+"name": "simpleGameLanguageSelector",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Localization System/simpleGameLanguageSelector.cs",
+"line": 7,
+"fields": 5,
+"methods": 2
+},
+{
+"name": "skillsLocalizationManager",
+"kind": "class",
+"base": [
+"languageLocalizationManager"
+],
+"file": "Localization System/skillsLocalizationManager.cs",
+"line": 8,
+"fields": 0,
+"methods": 13
+},
+{
+"name": "skillsLocalizationManagerEditor",
+"kind": "class",
+"base": [
+"Editor"
+],
+"file": "Localization System/skillsLocalizationManagerEditor.cs",
+"line": 9,
+"fields": 0,
+"methods": 1
+},
+{
+"name": "UIElementsLocalizationManager",
+"kind": "class",
+"base": [
+"languageLocalizationManager"
+],
+"file": "Localization System/UIElementsLocalizationManager.cs",
+"line": 8,
+"fields": 0,
+"methods": 13
+},
+{
+"name": "UIElementsLocalizationManagerEditor",
+"kind": "class",
+"base": [
+"Editor"
+],
+"file": "Localization System/UIElementsLocalizationManagerEditor.cs",
+"line": 9,
+"fields": 0,
+"methods": 1
+},
+{
+"name": "addMapObjectInformation",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Map/addMapObjectInformation.cs",
+"line": 5,
+"fields": 27,
+"methods": 3
+},
+{
+"name": "buildingAndFloorObjectInfoSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Map/buildingAndFloorObjectInfoSystem.cs",
+"line": 5,
+"fields": 3,
+"methods": 3
+},
+{
+"name": "GKC_Triangulator_Utils",
+"kind": "class",
+"base": [],
+"file": "Map/GKC_Triangulator_Utils.cs",
+"line": 5,
+"fields": 0,
+"methods": 1
+},
+{
+"name": "glossaryElement",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Map/glossaryElement.cs",
+"line": 4,
+"fields": 1,
+"methods": 0
+},
+{
+"name": "mapCreator",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Map/mapCreator.cs",
+"line": 5,
+"fields": 45,
+"methods": 79
+},
+{
+"name": "mapIconType",
+"kind": "class",
+"base": [],
+"file": "Map/mapIconType.cs",
+"line": 5,
+"fields": 7,
+"methods": 0
+},
+{
+"name": "mapObjectInformation",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Map/mapObjectInformation.cs",
+"line": 6,
+"fields": 66,
+"methods": 34
+},
+{
+"name": "mapSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Map/mapSystem.cs",
+"line": 8,
+"fields": 157,
+"methods": 111
+},
+{
+"name": "mapTileBuilder",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Map/mapTileBuilder.cs",
+"line": 5,
+"fields": 38,
+"methods": 41
+},
+{
+"name": "mapUISystem",
+"kind": "class",
+"base": [
+"ingameMenuPanel"
+],
+"file": "Map/mapUISystem.cs",
+"line": 7,
+"fields": 37,
+"methods": 50
+},
+{
+"name": "mapZoneUnlocker",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Map/mapZoneUnlocker.cs",
+"line": 5,
+"fields": 4,
+"methods": 7
+},
+{
+"name": "objectiveIconInfo",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Map/objectiveIconInfo.cs",
+"line": 5,
+"fields": 3,
+"methods": 0
+},
+{
+"name": "quickTravelStationSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Map/quickTravelStationSystem.cs",
+"line": 6,
+"fields": 18,
+"methods": 3
+},
+{
+"name": "setMapOrientationSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Map/setMapOrientationSystem.cs",
+"line": 5,
+"fields": 2,
+"methods": 2
+},
+{
+"name": "customActionOpenMenuSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Menu/customActionOpenMenuSystem.cs",
+"line": 5,
+"fields": 1,
+"methods": 1
+},
+{
+"name": "customActionOpenMenuWeaponAttachment",
+"kind": "class",
+"base": [
+"customActionOpenMenuSystem"
+],
+"file": "Menu/customActionOpenMenuWeaponAttachment.cs",
+"line": 5,
+"fields": 0,
+"methods": 1
+},
+{
+"name": "GKCLoadingScreenSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Menu/GKCLoadingScreenSystem.cs",
+"line": 8,
+"fields": 23,
+"methods": 1
+},
+{
+"name": "homeMenu",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Menu/homeMenu.cs",
+"line": 6,
+"fields": 11,
+"methods": 8
+},
+{
+"name": "ingameMenuPanel",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Menu/ingameMenuPanel.cs",
+"line": 6,
+"fields": 28,
+"methods": 23
+},
+{
+"name": "menuPause",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Menu/menuPause.cs",
+"line": 9,
+"fields": 107,
+"methods": 143
+},
+{
+"name": "openMenuSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Menu/openMenuSystem.cs",
+"line": 5,
+"fields": 14,
+"methods": 8
+},
+{
+"name": "preventClickDrag",
+"kind": "class",
+"base": [
+"ScrollRect"
+],
+"file": "Menu/preventClickDrag.cs",
+"line": 6,
+"fields": 0,
+"methods": 3
+},
+{
+"name": "resetScrollRectOnEnable",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Menu/resetScrollRectOnEnable.cs",
+"line": 6,
+"fields": 6,
+"methods": 1
+},
+{
+"name": "sceneLoadSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Menu/sceneLoadSystem.cs",
+"line": 7,
+"fields": 16,
+"methods": 6
+},
+{
+"name": "sceneSlot",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Menu/sceneSlot.cs",
+"line": 5,
+"fields": 1,
+"methods": 0
+},
+{
+"name": "setCanvasParentSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Menu/setCanvasParentSystem.cs",
+"line": 6,
+"fields": 6,
+"methods": 1
+},
+{
+"name": "simpleUIButtonInfo",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Menu/simpleUIButtonInfo.cs",
+"line": 6,
+"fields": 5,
+"methods": 2
+},
+{
+"name": "touchButtonListener",
+"kind": "class",
+"base": [
+"MonoBehaviour",
+"IPointerDownHandler",
+"IPointerUpHandler"
+],
+"file": "Mobile/touchButtonListener.cs",
+"line": 8,
+"fields": 11,
+"methods": 7
+},
+{
+"name": "touchJoystick",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Mobile/touchJoystick.cs",
+"line": 5,
+"fields": 33,
+"methods": 11
+},
+{
+"name": "objectiveEventSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Objectives Mission System/objectiveEventSystem.cs",
+"line": 9,
+"fields": 82,
+"methods": 43
+},
+{
+"name": "objectiveLogSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Objectives Mission System/objectiveLogSystem.cs",
+"line": 8,
+"fields": 30,
+"methods": 35
+},
+{
+"name": "objectiveManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Objectives Mission System/objectiveManager.cs",
+"line": 5,
+"fields": 8,
+"methods": 19
+},
+{
+"name": "objectiveMenuIconElement",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Objectives Mission System/objectiveMenuIconElement.cs",
+"line": 6,
+"fields": 10,
+"methods": 0
+},
+{
+"name": "objectiveStationSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Objectives Mission System/objectiveStationSystem.cs",
+"line": 6,
+"fields": 11,
+"methods": 11
+},
+{
+"name": "objectiveStationUISystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Objectives Mission System/objectiveStationUISystem.cs",
+"line": 8,
+"fields": 45,
+"methods": 25
+},
+{
+"name": "playerScreenObjectivesSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Objectives Mission System/playerScreenObjectivesSystem.cs",
+"line": 6,
+"fields": 16,
+"methods": 12
+},
+{
+"name": "screenObjectivesSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Objectives Mission System/screenObjectivesSystem.cs",
+"line": 6,
+"fields": 5,
+"methods": 15
+},
+{
+"name": "setMissionSubObjectiveStateRemotelySystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Objectives Mission System/setMissionSubObjectiveStateRemotelySystem.cs",
+"line": 6,
+"fields": 12,
+"methods": 10
+},
+{
+"name": "GKC_PlayerPrefabSpawner",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Online System/GKC_PlayerPrefabSpawner.cs",
+"line": 6,
+"fields": 16,
+"methods": 5
+},
+{
+"name": "addForceToObjectSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/addForceToObjectSystem.cs",
+"line": 5,
+"fields": 24,
+"methods": 6
+},
+{
+"name": "animatorTriggerEnterExitEvent",
+"kind": "class",
+"base": [
+"StateMachineBehaviour"
+],
+"file": "Others/animatorTriggerEnterExitEvent.cs",
+"line": 5,
+"fields": 7,
+"methods": 2
+},
+{
+"name": "animatorTriggerEvent",
+"kind": "class",
+"base": [
+"StateMachineBehaviour"
+],
+"file": "Others/animatorTriggerEvent.cs",
+"line": 5,
+"fields": 8,
+"methods": 2
+},
+{
+"name": "applyPresetSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/applyPresetSystem.cs",
+"line": 14,
+"fields": 0,
+"methods": 1
+},
+{
+"name": "audioSourceInfo",
+"kind": "class",
+"base": [],
+"file": "Others/audioSourceInfo.cs",
+"line": 5,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "BezierSpline",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/BezierSpline.cs",
+"line": 6,
+"fields": 15,
+"methods": 25
+},
+{
+"name": "changeObjectColors",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/changeObjectColors.cs",
+"line": 5,
+"fields": 2,
+"methods": 1
+},
+{
+"name": "checkCharactersParentOnDestroy",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/checkCharactersParentOnDestroy.cs",
+"line": 5,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "checkCollisionType",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/checkCollisionType.cs",
+"line": 5,
+"fields": 33,
+"methods": 8
+},
+{
+"name": "checkIfCharacterUsingWeaponsToChangeMode",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/checkIfCharacterUsingWeaponsToChangeMode.cs",
+"line": 6,
+"fields": 11,
+"methods": 3
+},
+{
+"name": "coinPocketSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/coinPocketSystem.cs",
+"line": 6,
+"fields": 6,
+"methods": 5
+},
+{
+"name": "combineMeshSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/combineMeshSystem.cs",
+"line": 5,
+"fields": 15,
+"methods": 3
+},
+{
+"name": "consoleLogOnScreenSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/consoleLogOnScreenSystem.cs",
+"line": 6,
+"fields": 3,
+"methods": 1
+},
+{
+"name": "consoleMode",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/Console Mode/consoleMode.cs",
+"line": 8,
+"fields": 32,
+"methods": 22
+},
+{
+"name": "createMeshDuplicate",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/createMeshDuplicate.cs",
+"line": 6,
+"fields": 8,
+"methods": 1
+},
+{
+"name": "destroyGameObject",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/destroyGameObject.cs",
+"line": 5,
+"fields": 16,
+"methods": 13
+},
+{
+"name": "dissolveObject",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/dissolveObject.cs",
+"line": 5,
+"fields": 22,
+"methods": 8
+},
+{
+"name": "enableOrDisableAIOnDistanceManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/enableOrDisableAIOnDistanceManager.cs",
+"line": 5,
+"fields": 8,
+"methods": 2
+},
+{
+"name": "enableOrDisableObjectOnDistanceManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/enableOrDisableObjectOnDistanceManager.cs",
+"line": 6,
+"fields": 16,
+"methods": 4
+},
+{
+"name": "enableOrDisableObjectsOnDistanceSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/enableOrDisableObjectsOnDistanceSystem.cs",
+"line": 6,
+"fields": 9,
+"methods": 6
+},
+{
+"name": "eventObjectFoundOnRaycastSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/eventObjectFoundOnRaycastSystem.cs",
+"line": 6,
+"fields": 15,
+"methods": 4
+},
+{
+"name": "fadeObject",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/fadeObject.cs",
+"line": 4,
+"fields": 6,
+"methods": 1
+},
+{
+"name": "featuresManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/featuresManager.cs",
+"line": 9,
+"fields": 1,
+"methods": 0
+},
+{
+"name": "filesChecker",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/filesChecker.cs",
+"line": 6,
+"fields": 11,
+"methods": 1
+},
+{
+"name": "FloatingObject",
+"kind": "class",
+"base": [
+"objectOnWater"
+],
+"file": "Others/FloatingObject.cs",
+"line": 6,
+"fields": 29,
+"methods": 15
+},
+{
+"name": "FloatingObjectSocket",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/FloatingObjectSocket.cs",
+"line": 5,
+"fields": 1,
+"methods": 1
+},
+{
+"name": "flyingTurretSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/flyingTurretSystem.cs",
+"line": 5,
+"fields": 12,
+"methods": 5
+},
+{
+"name": "followObjectPositionSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/followObjectPositionSystem.cs",
+"line": 5,
+"fields": 8,
+"methods": 7
+},
+{
+"name": "followObjectPositionUpdateSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/followObjectPositionUpdateSystem.cs",
+"line": 5,
+"fields": 6,
+"methods": 5
+},
+{
+"name": "GKC_Utils",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/GKC_Utils.cs",
+"line": 21,
+"fields": 0,
+"methods": 177
+},
+{
+"name": "GKCTeleportHelper",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/GKCTeleportHelper.cs",
+"line": 3,
+"fields": 1,
+"methods": 5
+},
+{
+"name": "GKCUIManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/GKCUIManager.cs",
+"line": 7,
+"fields": 5,
+"methods": 10
+},
+{
+"name": "graphicQualitySettingsSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/graphicQualitySettingsSystem.cs",
+"line": 6,
+"fields": 10,
+"methods": 5
+},
+{
+"name": "headExplodeExample",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/headExplodeExample.cs",
+"line": 5,
+"fields": 4,
+"methods": 2
+},
+{
+"name": "hideBodyPartOnCharacterSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/hideBodyPartOnCharacterSystem.cs",
+"line": 5,
+"fields": 8,
+"methods": 18
+},
+{
+"name": "ignoreCollisionHelper",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/ignoreCollisionHelper.cs",
+"line": 5,
+"fields": 9,
+"methods": 8
+},
+{
+"name": "ignoreCollisionSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/ignoreCollisionSystem.cs",
+"line": 5,
+"fields": 7,
+"methods": 1
+},
+{
+"name": "initialPopUpWindow",
+"kind": "class",
+"base": [
+"EditorWindow"
+],
+"file": "Others/initialPopUpWindow.cs",
+"line": 11,
+"fields": 1,
+"methods": 2
+},
+{
+"name": "mechanismPart",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/mechanismPart.cs",
+"line": 4,
+"fields": 8,
+"methods": 3
+},
+{
+"name": "moveObjectLateUpdate",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/moveObjectLateUpdate.cs",
+"line": 4,
+"fields": 6,
+"methods": 4
+},
+{
+"name": "moveObjectSmoothlySystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/moveObjectSmoothlySystem.cs",
+"line": 5,
+"fields": 3,
+"methods": 2
+},
+{
+"name": "nonEssentialCharacterElementsManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/nonEssentialCharacterElementsManager.cs",
+"line": 7,
+"fields": 5,
+"methods": 12
+},
+{
+"name": "objectOnWater",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/objectOnWater.cs",
+"line": 5,
+"fields": 0,
+"methods": 7
+},
+{
+"name": "onDisableCheckSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/onDisableCheckSystem.cs",
+"line": 6,
+"fields": 3,
+"methods": 0
+},
+{
+"name": "onEnableCheckSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/onEnableCheckSystem.cs",
+"line": 7,
+"fields": 3,
+"methods": 0
+},
+{
+"name": "openInitialPopUpWindow",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/openInitialPopUpWindow.cs",
+"line": 11,
+"fields": 2,
+"methods": 1
+},
+{
+"name": "pathInfoValues",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/pathInfoValues.cs",
+"line": 5,
+"fields": 0,
+"methods": 31
+},
+{
+"name": "pauseAnimationSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/pauseAnimationSystem.cs",
+"line": 5,
+"fields": 10,
+"methods": 4
+},
+{
+"name": "placeObjectInCameraEditorPositionSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/placeObjectInCameraEditorPositionSystem.cs",
+"line": 5,
+"fields": 7,
+"methods": 8
+},
+{
+"name": "playerOptionsEditorSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/playerOptionsEditorSystem.cs",
+"line": 7,
+"fields": 6,
+"methods": 11
+},
+{
+"name": "playSoundOnCollision",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/playSoundOnCollision.cs",
+"line": 5,
+"fields": 4,
+"methods": 1
+},
+{
+"name": "playSoundOnTriggerEnter",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/playSoundOnTriggerEnter.cs",
+"line": 6,
+"fields": 6,
+"methods": 1
+},
+{
+"name": "preventCharacterCollisionOnTop",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/preventCharacterCollisionOnTop.cs",
+"line": 5,
+"fields": 11,
+"methods": 1
+},
+{
+"name": "putGear",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/putGear.cs",
+"line": 5,
+"fields": 6,
+"methods": 1
+},
+{
+"name": "railMechanism",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/railMechanism.cs",
+"line": 6,
+"fields": 28,
+"methods": 10
+},
+{
+"name": "regularVehicleOnWater",
+"kind": "class",
+"base": [
+"FloatingObject"
+],
+"file": "Others/regularVehicleOnWater.cs",
+"line": 6,
+"fields": 24,
+"methods": 5
+},
+{
+"name": "replaceMaterialSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/replaceMaterialSystem.cs",
+"line": 5,
+"fields": 4,
+"methods": 2
+},
+{
+"name": "rotateObjects",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/rotateObjects.cs",
+"line": 4,
+"fields": 5,
+"methods": 10
+},
+{
+"name": "rotateObjectSmoothlySystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/rotateObjectSmoothlySystem.cs",
+"line": 5,
+"fields": 6,
+"methods": 3
+},
+{
+"name": "rotateObjectWithRegularUpdate",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/rotateObjectWithRegularUpdate.cs",
+"line": 6,
+"fields": 5,
+"methods": 10
+},
+{
+"name": "rotatoryGear",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/rotatoryGear.cs",
+"line": 5,
+"fields": 1,
+"methods": 1
+},
+{
+"name": "scanElementInfo",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/scanElementInfo.cs",
+"line": 10,
+"fields": 8,
+"methods": 4
+},
+{
+"name": "scannerSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/Scanner System/scannerSystem.cs",
+"line": 7,
+"fields": 46,
+"methods": 24
+},
+{
+"name": "selectObjectManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/selectObjectManager.cs",
+"line": 6,
+"fields": 5,
+"methods": 4
+},
+{
+"name": "selectObjectManagerEditor",
+"kind": "class",
+"base": [
+"Editor"
+],
+"file": "Others/selectObjectManagerEditor.cs",
+"line": 7,
+"fields": 0,
+"methods": 1
+},
+{
+"name": "setCharacterAsChildSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/setCharacterAsChildSystem.cs",
+"line": 6,
+"fields": 13,
+"methods": 5
+},
+{
+"name": "setCharacterParentOnMovingObject",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/setCharacterParentOnMovingObject.cs",
+"line": 5,
+"fields": 5,
+"methods": 2
+},
+{
+"name": "setFixedRotation",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/setFixedRotation.cs",
+"line": 5,
+"fields": 1,
+"methods": 0
+},
+{
+"name": "setGameObjectActiveState",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/setGameObjectActiveState.cs",
+"line": 5,
+"fields": 4,
+"methods": 3
+},
+{
+"name": "setInitialPositionAtGameStart",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/setInitialPositionAtGameStart.cs",
+"line": 5,
+"fields": 14,
+"methods": 1
+},
+{
+"name": "setObjectParentSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/setObjectParentSystem.cs",
+"line": 5,
+"fields": 5,
+"methods": 5
+},
+{
+"name": "setObjectScaleSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/setObjectScaleSystem.cs",
+"line": 6,
+"fields": 3,
+"methods": 2
+},
+{
+"name": "setRigidbodyStateSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/setRigidbodyStateSystem.cs",
+"line": 6,
+"fields": 14,
+"methods": 7
+},
+{
+"name": "shakeCharacterBodyPartSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/shakeCharacterBodyPartSystem.cs",
+"line": 5,
+"fields": 17,
+"methods": 5
+},
+{
+"name": "showGameInfoHud",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/showGameInfoHud.cs",
+"line": 6,
+"fields": 1,
+"methods": 3
+},
+{
+"name": "showMessageOnHUDSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/showMessageOnHUDSystem.cs",
+"line": 8,
+"fields": 4,
+"methods": 6
+},
+{
+"name": "simpleActionButton",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/simpleActionButton.cs",
+"line": 4,
+"fields": 2,
+"methods": 1
+},
+{
+"name": "simpleAnimationSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/simpleAnimationSystem.cs",
+"line": 5,
+"fields": 18,
+"methods": 7
+},
+{
+"name": "simpleAudioPlay",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/simpleAudioPlay.cs",
+"line": 5,
+"fields": 1,
+"methods": 0
+},
+{
+"name": "simpleBulletTimeOnCharacterEffect",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/simpleBulletTimeOnCharacterEffect.cs",
+"line": 5,
+"fields": 14,
+"methods": 2
+},
+{
+"name": "simpleCoinPickup",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/simpleCoinPickup.cs",
+"line": 5,
+"fields": 2,
+"methods": 1
+},
+{
+"name": "simpleEventSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/simpleEventSystem.cs",
+"line": 6,
+"fields": 11,
+"methods": 7
+},
+{
+"name": "SimpleFPSCounter",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/SimpleFPSCounter.cs",
+"line": 6,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "simpleGUILayoutStateManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/simpleGUILayoutStateManager.cs",
+"line": 5,
+"fields": 3,
+"methods": 1
+},
+{
+"name": "simpleLamp",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/simpleLamp.cs",
+"line": 5,
+"fields": 5,
+"methods": 3
+},
+{
+"name": "simpleLaserObjectDetectorSystem",
+"kind": "class",
+"base": [
+"laser"
+],
+"file": "Others/simpleLaserObjectDetectorSystem.cs",
+"line": 6,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "simpleLensFlareSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/simpleLensFlareSystem.cs",
+"line": 5,
+"fields": 4,
+"methods": 1
+},
+{
+"name": "simpleLightingModifier",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/simpleLightingModifier.cs",
+"line": 6,
+"fields": 2,
+"methods": 3
+},
+{
+"name": "simpleMoveObjectSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/simpleMoveObjectSystem.cs",
+"line": 5,
+"fields": 4,
+"methods": 1
+},
+{
+"name": "simpleRandomTextManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/simpleRandomTextManager.cs",
+"line": 7,
+"fields": 4,
+"methods": 1
+},
+{
+"name": "simpleRaycastPlacementDetector",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/simpleRaycastPlacementDetector.cs",
+"line": 5,
+"fields": 5,
+"methods": 1
+},
+{
+"name": "simpleScannerSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/Scanner System/simpleScannerSystem.cs",
+"line": 6,
+"fields": 8,
+"methods": 2
+},
+{
+"name": "simpleSetQuaternionRotation",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/simpleSetQuaternionRotation.cs",
+"line": 5,
+"fields": 0,
+"methods": 1
+},
+{
+"name": "simpleSoundSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/simpleSoundSystem.cs",
+"line": 6,
+"fields": 3,
+"methods": 2
+},
+{
+"name": "simpleSpawnObjectManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/simpleSpawnObjectManager.cs",
+"line": 5,
+"fields": 6,
+"methods": 10
+},
+{
+"name": "spawnObject",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/spawnObject.cs",
+"line": 6,
+"fields": 45,
+"methods": 19
+},
+{
+"name": "spiderControllerInterface",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/spiderControllerInterface.cs",
+"line": 5,
+"fields": 0,
+"methods": 10
+},
+{
+"name": "SplineWalker",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/SplineWalker.cs",
+"line": 3,
+"fields": 6,
+"methods": 0
+},
+{
+"name": "stopParticlesAtStart",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/stopParticlesAtStart.cs",
+"line": 5,
+"fields": 4,
+"methods": 0
+},
+{
+"name": "stopParticlesOnDisable",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/stopParticlesOnDisable.cs",
+"line": 5,
+"fields": 3,
+"methods": 0
+},
+{
+"name": "tagLayerSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/tagLayerSystem.cs",
+"line": 8,
+"fields": 7,
+"methods": 11
+},
+{
+"name": "taskCounterSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/taskCounterSystem.cs",
+"line": 6,
+"fields": 12,
+"methods": 12
+},
+{
+"name": "UIMouseHoverEvent",
+"kind": "class",
+"base": [
+"MonoBehaviour",
+"IPointerEnterHandler",
+"IPointerExitHandler"
+],
+"file": "Others/UIMouseHoverEvent.cs",
+"line": 7,
+"fields": 4,
+"methods": 2
+},
+{
+"name": "updateRigidbodyStateInsideRigidbodySystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/updateRigidbodyStateInsideRigidbodySystem.cs",
+"line": 5,
+"fields": 15,
+"methods": 5
+},
+{
+"name": "vehiclePassengerUnderwater",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/vehiclePassengerUnderwater.cs",
+"line": 6,
+"fields": 11,
+"methods": 4
+},
+{
+"name": "waterSurfaceSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/waterSurfaceSystem.cs",
+"line": 5,
+"fields": 0,
+"methods": 6
+},
+{
+"name": "windOnObjectState",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Others/windOnObjectState.cs",
+"line": 5,
+"fields": 5,
+"methods": 6
+},
+{
+"name": "objectToOverrideSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Override System/objectToOverrideSystem.cs",
+"line": 5,
+"fields": 10,
+"methods": 4
+},
+{
+"name": "overrideCameraController",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Override System/overrideCameraController.cs",
+"line": 5,
+"fields": 18,
+"methods": 11
+},
+{
+"name": "overrideController",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Override System/overrideController.cs",
+"line": 5,
+"fields": 38,
+"methods": 9
+},
+{
+"name": "overrideElementControlSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Override System/overrideElementControlSystem.cs",
+"line": 7,
+"fields": 53,
+"methods": 24
+},
+{
+"name": "overrideInputManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Override System/overrideInputManager.cs",
+"line": 6,
+"fields": 16,
+"methods": 25
+},
+{
+"name": "infoPanelOnScreenSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Panel Info System/infoPanelOnScreenSystem.cs",
+"line": 5,
+"fields": 25,
+"methods": 4
+},
+{
+"name": "playerInfoPanelOnScreenSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Panel Info System/playerInfoPanelOnScreenSystem.cs",
+"line": 7,
+"fields": 11,
+"methods": 6
+},
+{
+"name": "sliderInfoSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Panel Info System/sliderInfoSystem.cs",
+"line": 6,
+"fields": 2,
+"methods": 2
+},
+{
+"name": "abilityPickup",
+"kind": "class",
+"base": [
+"pickupType"
+],
+"file": "PickUps/Pickups Behaviour/abilityPickup.cs",
+"line": 5,
+"fields": 1,
+"methods": 2
+},
+{
+"name": "ammoPickup",
+"kind": "class",
+"base": [
+"pickupType"
+],
+"file": "PickUps/Pickups Behaviour/ammoPickup.cs",
+"line": 5,
+"fields": 2,
+"methods": 4
+},
+{
+"name": "chestSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "PickUps/chestSystem.cs",
+"line": 6,
+"fields": 39,
+"methods": 10
+},
+{
+"name": "crate",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "PickUps/crate.cs",
+"line": 6,
+"fields": 16,
+"methods": 4
+},
+{
+"name": "dropPickUpSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "PickUps/dropPickUpSystem.cs",
+"line": 5,
+"fields": 24,
+"methods": 8
+},
+{
+"name": "energyPickup",
+"kind": "class",
+"base": [
+"pickupType"
+],
+"file": "PickUps/Pickups Behaviour/energyPickup.cs",
+"line": 5,
+"fields": 0,
+"methods": 2
+},
+{
+"name": "experienceMultiplierPickup",
+"kind": "class",
+"base": [
+"pickupType"
+],
+"file": "PickUps/Pickups Behaviour/experienceMultiplierPickup.cs",
+"line": 5,
+"fields": 2,
+"methods": 2
+},
+{
+"name": "experiencePickup",
+"kind": "class",
+"base": [
+"pickupType"
+],
+"file": "PickUps/Pickups Behaviour/experiencePickup.cs",
+"line": 5,
+"fields": 2,
+"methods": 2
+},
+{
+"name": "explosiveBarrel",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "PickUps/explosiveBarrel.cs",
+"line": 6,
+"fields": 46,
+"methods": 7
+},
+{
+"name": "generalPickup",
+"kind": "class",
+"base": [
+"pickupType"
+],
+"file": "PickUps/Pickups Behaviour/generalPickup.cs",
+"line": 5,
+"fields": 2,
+"methods": 4
+},
+{
+"name": "grabObjectsStrengthPickup",
+"kind": "class",
+"base": [
+"pickupType"
+],
+"file": "PickUps/Pickups Behaviour/grabObjectsStrengthPickup.cs",
+"line": 5,
+"fields": 0,
+"methods": 2
+},
+{
+"name": "healthPickup",
+"kind": "class",
+"base": [
+"pickupType"
+],
+"file": "PickUps/Pickups Behaviour/healthPickup.cs",
+"line": 5,
+"fields": 0,
+"methods": 2
+},
+{
+"name": "inventoryExtraSpacePickup",
+"kind": "class",
+"base": [
+"pickupType"
+],
+"file": "PickUps/Pickups Behaviour/inventoryExtraSpacePickup.cs",
+"line": 5,
+"fields": 0,
+"methods": 2
+},
+{
+"name": "inventoryPickup",
+"kind": "class",
+"base": [
+"pickupType"
+],
+"file": "PickUps/Pickups Behaviour/inventoryPickup.cs",
+"line": 5,
+"fields": 0,
+"methods": 2
+},
+{
+"name": "inventoryWeightBagPickup",
+"kind": "class",
+"base": [
+"pickupType"
+],
+"file": "PickUps/Pickups Behaviour/inventoryWeightBagPickup.cs",
+"line": 5,
+"fields": 0,
+"methods": 2
+},
+{
+"name": "jetpackFuelPickup",
+"kind": "class",
+"base": [
+"pickupType"
+],
+"file": "PickUps/Pickups Behaviour/jetpackFuelPickup.cs",
+"line": 5,
+"fields": 0,
+"methods": 2
+},
+{
+"name": "mapPickup",
+"kind": "class",
+"base": [
+"pickupType"
+],
+"file": "PickUps/Pickups Behaviour/mapPickup.cs",
+"line": 5,
+"fields": 0,
+"methods": 2
+},
+{
+"name": "meleeShieldPickup",
+"kind": "class",
+"base": [
+"pickupType"
+],
+"file": "PickUps/Pickups Behaviour/meleeShieldPickup.cs",
+"line": 5,
+"fields": 1,
+"methods": 3
+},
+{
+"name": "meleeWeaponConsumablePickup",
+"kind": "class",
+"base": [
+"pickupType"
+],
+"file": "PickUps/Pickups Behaviour/meleeWeaponConsumablePickup.cs",
+"line": 5,
+"fields": 1,
+"methods": 3
+},
+{
+"name": "meleeWeaponPickup",
+"kind": "class",
+"base": [
+"pickupType"
+],
+"file": "PickUps/Pickups Behaviour/meleeWeaponPickup.cs",
+"line": 5,
+"fields": 1,
+"methods": 4
+},
+{
+"name": "moneyPickup",
+"kind": "class",
+"base": [
+"pickupType"
+],
+"file": "PickUps/Pickups Behaviour/moneyPickup.cs",
+"line": 5,
+"fields": 2,
+"methods": 2
+},
+{
+"name": "oxygenPickup",
+"kind": "class",
+"base": [
+"pickupType"
+],
+"file": "PickUps/Pickups Behaviour/oxygenPickup.cs",
+"line": 5,
+"fields": 1,
+"methods": 2
+},
+{
+"name": "pickUpElementInfo",
+"kind": "class",
+"base": [],
+"file": "PickUps/pickUpElementInfo.cs",
+"line": 5,
+"fields": 6,
+"methods": 0
+},
+{
+"name": "pickUpIcon",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "PickUps/pickUpIcon.cs",
+"line": 6,
+"fields": 1,
+"methods": 0
+},
+{
+"name": "pickUpIconInfo",
+"kind": "class",
+"base": [],
+"file": "PickUps/pickUpIconInfo.cs",
+"line": 6,
+"fields": 13,
+"methods": 0
+},
+{
+"name": "pickUpManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "PickUps/pickUpManager.cs",
+"line": 6,
+"fields": 4,
+"methods": 12
+},
+{
+"name": "pickUpObject",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "PickUps/pickUpObject.cs",
+"line": 7,
+"fields": 57,
+"methods": 44
+},
+{
+"name": "pickUpsScreenInfo",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "PickUps/pickUpsScreenInfo.cs",
+"line": 6,
+"fields": 17,
+"methods": 7
+},
+{
+"name": "pickupType",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "PickUps/Pickups Behaviour/pickupType.cs",
+"line": 5,
+"fields": 15,
+"methods": 14
+},
+{
+"name": "playerPickupIconManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "PickUps/playerPickupIconManager.cs",
+"line": 6,
+"fields": 17,
+"methods": 10
+},
+{
+"name": "powerPickup",
+"kind": "class",
+"base": [
+"pickupType"
+],
+"file": "PickUps/Pickups Behaviour/powerPickup.cs",
+"line": 5,
+"fields": 1,
+"methods": 2
+},
+{
+"name": "rewardPickup",
+"kind": "class",
+"base": [
+"pickupType"
+],
+"file": "PickUps/Pickups Behaviour/rewardPickup.cs",
+"line": 5,
+"fields": 1,
+"methods": 2
+},
+{
+"name": "shieldPickup",
+"kind": "class",
+"base": [
+"pickupType"
+],
+"file": "PickUps/Pickups Behaviour/shieldPickup.cs",
+"line": 5,
+"fields": 0,
+"methods": 2
+},
+{
+"name": "skillPointPickup",
+"kind": "class",
+"base": [
+"pickupType"
+],
+"file": "PickUps/Pickups Behaviour/skillPointPickup.cs",
+"line": 5,
+"fields": 0,
+"methods": 2
+},
+{
+"name": "staminaPickup",
+"kind": "class",
+"base": [
+"pickupType"
+],
+"file": "PickUps/Pickups Behaviour/staminaPickup.cs",
+"line": 5,
+"fields": 0,
+"methods": 2
+},
+{
+"name": "vehicleFuelPickup",
+"kind": "class",
+"base": [
+"pickupType"
+],
+"file": "PickUps/Pickups Behaviour/vehicleFuelPickup.cs",
+"line": 5,
+"fields": 0,
+"methods": 2
+},
+{
+"name": "weaponAttachmentPickup",
+"kind": "class",
+"base": [
+"pickupType"
+],
+"file": "PickUps/Pickups Behaviour/weaponAttachmentPickup.cs",
+"line": 5,
+"fields": 2,
+"methods": 3
+},
+{
+"name": "weaponPickup",
+"kind": "class",
+"base": [
+"pickupType"
+],
+"file": "PickUps/Pickups Behaviour/weaponPickup.cs",
+"line": 5,
+"fields": 1,
+"methods": 5
+},
+{
+"name": "AddPlayerSpawned",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/AddPlayerSpawned.cs",
+"line": 5,
+"fields": 0,
+"methods": 1
+},
+{
+"name": "adjustCharacterHeightSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/Character Builder/adjustCharacterHeightSystem.cs",
+"line": 6,
+"fields": 49,
+"methods": 6
+},
+{
+"name": "AIMountManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/Generic Model Controller/AIMountManager.cs",
+"line": 6,
+"fields": 15,
+"methods": 3
+},
+{
+"name": "basicAnimatorController",
+"kind": "class",
+"base": [
+"customCharacterControllerBase"
+],
+"file": "Player/Generic Model Controller/basicAnimatorController.cs",
+"line": 5,
+"fields": 11,
+"methods": 7
+},
+{
+"name": "bodyMountPointsSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/Character Builder/bodyMountPointsSystem.cs",
+"line": 5,
+"fields": 11,
+"methods": 11
+},
+{
+"name": "buildPlayer",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/Character Builder/buildPlayer.cs",
+"line": 7,
+"fields": 46,
+"methods": 31
+},
+{
+"name": "bulletTimeFiringSystem",
+"kind": "class",
+"base": [
+"OnAnimatorIKComponent"
+],
+"file": "Player/Extra Movements/bulletTimeFiringSystem.cs",
+"line": 6,
+"fields": 69,
+"methods": 10
+},
+{
+"name": "characterModelElementInfo",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/Character Builder/characterModelElementInfo.cs",
+"line": 5,
+"fields": 37,
+"methods": 2
+},
+{
+"name": "characterModelListManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/Character Builder/characterModelListManager.cs",
+"line": 6,
+"fields": 19,
+"methods": 7
+},
+{
+"name": "characterPropertiesSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/States/characterPropertiesSystem.cs",
+"line": 5,
+"fields": 2,
+"methods": 6
+},
+{
+"name": "characterSettingsTemplate",
+"kind": "class",
+"base": [
+"ScriptableObject"
+],
+"file": "Player/Character Builder/characterSettingsTemplate.cs",
+"line": 5,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "characterSlowDownVelocity",
+"kind": "class",
+"base": [
+"characterStateAffectedInfo"
+],
+"file": "Player/States/Examples/characterSlowDownVelocity.cs",
+"line": 5,
+"fields": 2,
+"methods": 1
+},
+{
+"name": "characterStateAffectedInfo",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/States/characterStateAffectedInfo.cs",
+"line": 5,
+"fields": 3,
+"methods": 3
+},
+{
+"name": "characterStateIconSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/characterStateIconSystem.cs",
+"line": 6,
+"fields": 9,
+"methods": 10
+},
+{
+"name": "climbDetectionCollisionSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/Extra Movements/climbDetectionCollisionSystem.cs",
+"line": 5,
+"fields": 50,
+"methods": 9
+},
+{
+"name": "climbRopeSystem",
+"kind": "class",
+"base": [
+"externalControllerBehavior"
+],
+"file": "Player/Extra Movements/climbRopeSystem.cs",
+"line": 6,
+"fields": 67,
+"methods": 25
+},
+{
+"name": "climbRopeTriggerMatchSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/Extra Movements/climbRopeTriggerMatchSystem.cs",
+"line": 5,
+"fields": 5,
+"methods": 1
+},
+{
+"name": "climbRopeTriggerSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/Extra Movements/climbRopeTriggerSystem.cs",
+"line": 5,
+"fields": 15,
+"methods": 1
+},
+{
+"name": "customCharacterControllerBase",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/Generic Model Controller/customCharacterControllerBase.cs",
+"line": 6,
+"fields": 85,
+"methods": 53
+},
+{
+"name": "customCharacterControllerBaseBuilder",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/Generic Model Controller/customCharacterControllerBaseBuilder.cs",
+"line": 5,
+"fields": 2,
+"methods": 3
+},
+{
+"name": "customCharacterControllerManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/Generic Model Controller/customCharacterControllerManager.cs",
+"line": 6,
+"fields": 36,
+"methods": 14
+},
+{
+"name": "customCharacterControllerSystem",
+"kind": "class",
+"base": [
+"customCharacterControllerBase"
+],
+"file": "Player/Generic Model Controller/customCharacterControllerSystem.cs",
+"line": 5,
+"fields": 25,
+"methods": 7
+},
+{
+"name": "doubleJumpAnimationTrigger",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/doubleJumpAnimationTrigger.cs",
+"line": 5,
+"fields": 13,
+"methods": 7
+},
+{
+"name": "externalControllerBehavior",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/Extra Movements/externalControllerBehavior.cs",
+"line": 5,
+"fields": 8,
+"methods": 18
+},
+{
+"name": "externalControllerBehaviorManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/Extra Movements/externalControllerBehaviorManager.cs",
+"line": 6,
+"fields": 5,
+"methods": 4
+},
+{
+"name": "flySystem",
+"kind": "class",
+"base": [
+"externalControllerBehavior"
+],
+"file": "Player/Extra Movements/flySystem.cs",
+"line": 6,
+"fields": 42,
+"methods": 16
+},
+{
+"name": "freeClimbSystem",
+"kind": "class",
+"base": [
+"externalControllerBehavior"
+],
+"file": "Player/Extra Movements/freeClimbSystem.cs",
+"line": 6,
+"fields": 161,
+"methods": 43
+},
+{
+"name": "freeClimbSystemIK",
+"kind": "class",
+"base": [
+"OnAnimatorIKComponent"
+],
+"file": "Player/Extra Movements/freeClimbSystemIK.cs",
+"line": 5,
+"fields": 10,
+"methods": 2
+},
+{
+"name": "freeClimbZoneSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/Extra Movements/freeClimbZoneSystem.cs",
+"line": 5,
+"fields": 12,
+"methods": 5
+},
+{
+"name": "freeFallCharacterActivator",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/Extra Movements/freeFallCharacterActivator.cs",
+"line": 6,
+"fields": 29,
+"methods": 6
+},
+{
+"name": "freezeCharacterState",
+"kind": "class",
+"base": [
+"characterStateAffectedInfo"
+],
+"file": "Player/States/Examples/freezeCharacterState.cs",
+"line": 5,
+"fields": 2,
+"methods": 1
+},
+{
+"name": "genericRagdollBuilder",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/genericRagdollBuilder.cs",
+"line": 7,
+"fields": 25,
+"methods": 11
+},
+{
+"name": "GKCCharacterController",
+"kind": "class",
+"base": [
+"playerController"
+],
+"file": "Player/Generic Model Controller/GKCCharacterController.cs",
+"line": 5,
+"fields": 1,
+"methods": 6
+},
+{
+"name": "handsOnMeleeWeaponIKSystem",
+"kind": "class",
+"base": [
+"OnAnimatorIKComponent"
+],
+"file": "Player/Animator IK/handsOnMeleeWeaponIKSystem.cs",
+"line": 7,
+"fields": 19,
+"methods": 16
+},
+{
+"name": "handsOnSurfaceIKSystem",
+"kind": "class",
+"base": [
+"OnAnimatorIKComponent"
+],
+"file": "Player/Animator IK/handsOnSurfaceIKSystem.cs",
+"line": 6,
+"fields": 23,
+"methods": 11
+},
+{
+"name": "IKFootSystem",
+"kind": "class",
+"base": [
+"OnAnimatorIKComponent"
+],
+"file": "Player/Animator IK/IKFootSystem.cs",
+"line": 5,
+"fields": 25,
+"methods": 8
+},
+{
+"name": "IKSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/Animator IK/IKSystem.cs",
+"line": 6,
+"fields": 49,
+"methods": 59
+},
+{
+"name": "jetpackSystem",
+"kind": "class",
+"base": [
+"externalControllerBehavior"
+],
+"file": "Player/Extra Movements/jetpackSystem.cs",
+"line": 7,
+"fields": 45,
+"methods": 19
+},
+{
+"name": "multipleInteractionSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/multipleInteractionSystem.cs",
+"line": 6,
+"fields": 12,
+"methods": 11
+},
+{
+"name": "OnAnimatorIKComponent",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/Animator IK/OnAnimatorIKComponent.cs",
+"line": 5,
+"fields": 1,
+"methods": 9
+},
+{
+"name": "paragliderSystem",
+"kind": "class",
+"base": [
+"externalControllerBehavior"
+],
+"file": "Player/Extra Movements/paragliderSystem.cs",
+"line": 6,
+"fields": 30,
+"methods": 16
+},
+{
+"name": "playerComponentsManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/playerComponentsManager.cs",
+"line": 5,
+"fields": 97,
+"methods": 97
+},
+{
+"name": "playerController",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/playerController.cs",
+"line": 7,
+"fields": 509,
+"methods": 611
+},
+{
+"name": "playerIdleSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/playerIdleSystem.cs",
+"line": 6,
+"fields": 8,
+"methods": 3
+},
+{
+"name": "playerSphereModeSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/Extra Movements/playerSphereModeSystem.cs",
+"line": 6,
+"fields": 15,
+"methods": 3
+},
+{
+"name": "playerStatesManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/playerStatesManager.cs",
+"line": 7,
+"fields": 52,
+"methods": 48
+},
+{
+"name": "playerStateSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/playerStateSystem.cs",
+"line": 6,
+"fields": 6,
+"methods": 12
+},
+{
+"name": "portableClimbRopeTriggerSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/Extra Movements/portableClimbRopeTriggerSystem.cs",
+"line": 5,
+"fields": 15,
+"methods": 1
+},
+{
+"name": "portableWalkOnBalanceTriggerSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/Extra Movements/portableWalkOnBalanceTriggerSystem.cs",
+"line": 5,
+"fields": 14,
+"methods": 1
+},
+{
+"name": "quickPlayerModeChangeSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/quickPlayerModeChangeSystem.cs",
+"line": 6,
+"fields": 28,
+"methods": 18
+},
+{
+"name": "ragdollActivator",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/ragdollActivator.cs",
+"line": 7,
+"fields": 91,
+"methods": 73
+},
+{
+"name": "ragdollBuilder",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/Character Builder/ragdollBuilder.cs",
+"line": 7,
+"fields": 34,
+"methods": 15
+},
+{
+"name": "railSystem",
+"kind": "class",
+"base": [
+"externalControllerBehavior"
+],
+"file": "Player/Extra Movements/railSystem.cs",
+"line": 6,
+"fields": 57,
+"methods": 20
+},
+{
+"name": "railTriggerSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/Extra Movements/railTriggerSystem.cs",
+"line": 5,
+"fields": 13,
+"methods": 1
+},
+{
+"name": "remotePlayerNavmeshOverride",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/remotePlayerNavmeshOverride.cs",
+"line": 5,
+"fields": 2,
+"methods": 6
+},
+{
+"name": "remotePlayerNavmeshOverrideSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/remotePlayerNavmeshOverrideSystem.cs",
+"line": 5,
+"fields": 5,
+"methods": 4
+},
+{
+"name": "rollOnLandingSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/Extra Movements/rollOnLandingSystem.cs",
+"line": 6,
+"fields": 14,
+"methods": 3
+},
+{
+"name": "setCharacterAffectedState",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/States/setCharacterAffectedState.cs",
+"line": 5,
+"fields": 4,
+"methods": 1
+},
+{
+"name": "setCustomCharacterStateTriggerSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/Generic Model Controller/setCustomCharacterStateTriggerSystem.cs",
+"line": 5,
+"fields": 3,
+"methods": 1
+},
+{
+"name": "simpleIKHand",
+"kind": "class",
+"base": [
+"OnAnimatorIKComponent"
+],
+"file": "Player/Animator IK/simpleIKHand.cs",
+"line": 5,
+"fields": 5,
+"methods": 3
+},
+{
+"name": "simpleWaypointSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/Extra Movements/simpleWaypointSystem.cs",
+"line": 5,
+"fields": 4,
+"methods": 1
+},
+{
+"name": "slideSystem",
+"kind": "class",
+"base": [
+"externalControllerBehavior"
+],
+"file": "Player/Extra Movements/slideSystem.cs",
+"line": 6,
+"fields": 86,
+"methods": 28
+},
+{
+"name": "slideZoneSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/Extra Movements/slideZoneSystem.cs",
+"line": 5,
+"fields": 13,
+"methods": 1
+},
+{
+"name": "spiderCharacterController",
+"kind": "class",
+"base": [
+"vehicleController"
+],
+"file": "Player/Generic Model Controller/spiderCharacterController.cs",
+"line": 5,
+"fields": 3,
+"methods": 5
+},
+{
+"name": "spriteAnimatorSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/spriteAnimatorSystem.cs",
+"line": 7,
+"fields": 47,
+"methods": 3
+},
+{
+"name": "stairAdherenceSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/stairAdherenceSystem.cs",
+"line": 5,
+"fields": 4,
+"methods": 1
+},
+{
+"name": "swimSystem",
+"kind": "class",
+"base": [
+"externalControllerBehavior"
+],
+"file": "Player/Extra Movements/swimSystem.cs",
+"line": 6,
+"fields": 112,
+"methods": 21
+},
+{
+"name": "swimTriggerSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/Extra Movements/swimTriggerSystem.cs",
+"line": 5,
+"fields": 26,
+"methods": 1
+},
+{
+"name": "upperBodyRotationSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/upperBodyRotationSystem.cs",
+"line": 5,
+"fields": 40,
+"methods": 34
+},
+{
+"name": "usingDevicesSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/usingDevicesSystem.cs",
+"line": 11,
+"fields": 101,
+"methods": 72
+},
+{
+"name": "walkOnBalanceSystem",
+"kind": "class",
+"base": [
+"externalControllerBehavior"
+],
+"file": "Player/Extra Movements/walkOnBalanceSystem.cs",
+"line": 6,
+"fields": 61,
+"methods": 20
+},
+{
+"name": "walkOnBalanceTriggerSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/Extra Movements/walkOnBalanceTriggerSystem.cs",
+"line": 5,
+"fields": 15,
+"methods": 1
+},
+{
+"name": "wallRunningSystem",
+"kind": "class",
+"base": [
+"externalControllerBehavior"
+],
+"file": "Player/Extra Movements/wallRunningSystem.cs",
+"line": 6,
+"fields": 74,
+"methods": 19
+},
+{
+"name": "wallSlideJumpSystem",
+"kind": "class",
+"base": [
+"externalControllerBehavior"
+],
+"file": "Player/Extra Movements/wallSlideJumpSystem.cs",
+"line": 6,
+"fields": 66,
+"methods": 24
+},
+{
+"name": "wallSlideJumpZoneSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Player/Extra Movements/wallSlideJumpZoneSystem.cs",
+"line": 5,
+"fields": 4,
+"methods": 1
+},
+{
+"name": "wolfCharacterController",
+"kind": "class",
+"base": [
+"vehicleController"
+],
+"file": "Player/Generic Model Controller/wolfCharacterController.cs",
+"line": 5,
+"fields": 23,
+"methods": 22
+},
+{
+"name": "playerNavMeshSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Point And Click/playerNavMeshSystem.cs",
+"line": 12,
+"fields": 101,
+"methods": 44
+},
+{
+"name": "pointAndClickElement",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Point And Click/pointAndClickElement.cs",
+"line": 6,
+"fields": 31,
+"methods": 12
+},
+{
+"name": "GKC_PoolingAIManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Pooling System/GKC_PoolingAIManager.cs",
+"line": 5,
+"fields": 2,
+"methods": 6
+},
+{
+"name": "GKC_PoolingElement",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Pooling System/GKC_PoolingElement.cs",
+"line": 6,
+"fields": 10,
+"methods": 12
+},
+{
+"name": "GKC_PoolingElementAI",
+"kind": "class",
+"base": [
+"GKC_PoolingElement"
+],
+"file": "Pooling System/GKC_PoolingElementAI.cs",
+"line": 5,
+"fields": 9,
+"methods": 2
+},
+{
+"name": "GKC_PoolingSystem",
+"kind": "class",
+"base": [],
+"file": "Pooling System/GKC_PoolingSystem.cs",
+"line": 4,
+"fields": 0,
+"methods": 4
+},
+{
+"name": "GKC_SimplePoolPreloadSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Pooling System/GKC_SimplePoolPreloadSystem.cs",
+"line": 5,
+"fields": 2,
+"methods": 1
+},
+{
+"name": "blackHoleProjectile",
+"kind": "class",
+"base": [
+"projectileSystem"
+],
+"file": "Powers/blackHoleProjectile.cs",
+"line": 6,
+"fields": 16,
+"methods": 4
+},
+{
+"name": "brainwashAIProjectile",
+"kind": "class",
+"base": [
+"projectileSystem"
+],
+"file": "Powers/New Projectiles Behaviors/brainwashAIProjectile.cs",
+"line": 6,
+"fields": 8,
+"methods": 2
+},
+{
+"name": "changeGlobalGravityPower",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Powers/New Powers Behaviors/changeGlobalGravityPower.cs",
+"line": 5,
+"fields": 11,
+"methods": 2
+},
+{
+"name": "changeObjectsPositionPower",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Powers/New Powers Behaviors/changeObjectsPositionPower.cs",
+"line": 5,
+"fields": 8,
+"methods": 1
+},
+{
+"name": "deviceToControlAtDistance",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Powers/New Powers Behaviors/deviceToControlAtDistance.cs",
+"line": 5,
+"fields": 2,
+"methods": 2
+},
+{
+"name": "gravityBootsSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Powers/gravityBootsSystem.cs",
+"line": 6,
+"fields": 21,
+"methods": 6
+},
+{
+"name": "gravityWallRunSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Powers/gravityWallRunSystem.cs",
+"line": 6,
+"fields": 30,
+"methods": 19
+},
+{
+"name": "gravityWallRunTriggerSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Powers/gravityWallRunTriggerSystem.cs",
+"line": 5,
+"fields": 8,
+"methods": 1
+},
+{
+"name": "hitCombat",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Powers/hitCombat.cs",
+"line": 6,
+"fields": 49,
+"methods": 51
+},
+{
+"name": "joinObjectsPower",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Powers/New Powers Behaviors/joinObjectsPower.cs",
+"line": 5,
+"fields": 19,
+"methods": 4
+},
+{
+"name": "launchedObjects",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Powers/launchedObjects.cs",
+"line": 5,
+"fields": 11,
+"methods": 8
+},
+{
+"name": "nanoBlade",
+"kind": "class",
+"base": [
+"projectileSystem"
+],
+"file": "Powers/nanoBlade.cs",
+"line": 6,
+"fields": 0,
+"methods": 2
+},
+{
+"name": "otherPowers",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Powers/otherPowers.cs",
+"line": 8,
+"fields": 99,
+"methods": 115
+},
+{
+"name": "powersAndAbilitiesSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Powers/powersAndAbilitiesSystem.cs",
+"line": 6,
+"fields": 1,
+"methods": 3
+},
+{
+"name": "powersListElement",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Powers/powersListElement.cs",
+"line": 7,
+"fields": 1,
+"methods": 0
+},
+{
+"name": "powersListManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Powers/powersListManager.cs",
+"line": 11,
+"fields": 42,
+"methods": 20
+},
+{
+"name": "powerSlotElement",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Powers/powerSlotElement.cs",
+"line": 5,
+"fields": 1,
+"methods": 0
+},
+{
+"name": "pushObjectsPower",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Powers/New Powers Behaviors/pushObjectsPower.cs",
+"line": 6,
+"fields": 59,
+"methods": 13
+},
+{
+"name": "removeGravityFromCharactersProjectile",
+"kind": "class",
+"base": [
+"projectileSystem"
+],
+"file": "Powers/New Projectiles Behaviors/removeGravityFromCharactersProjectile.cs",
+"line": 6,
+"fields": 2,
+"methods": 3
+},
+{
+"name": "slowDownTarget",
+"kind": "class",
+"base": [
+"projectileSystem"
+],
+"file": "Powers/slowDownTarget.cs",
+"line": 5,
+"fields": 5,
+"methods": 1
+},
+{
+"name": "slowObject",
+"kind": "class",
+"base": [
+"characterStateAffectedInfo"
+],
+"file": "Powers/slowObject.cs",
+"line": 6,
+"fields": 9,
+"methods": 8
+},
+{
+"name": "slowObjectsColor",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Powers/slowObjectsColor.cs",
+"line": 5,
+"fields": 12,
+"methods": 1
+},
+{
+"name": "timeBullet",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Powers/timeBullet.cs",
+"line": 5,
+"fields": 8,
+"methods": 18
+},
+{
+"name": "useDevicesAtDistancePower",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Powers/New Powers Behaviors/useDevicesAtDistancePower.cs",
+"line": 5,
+"fields": 11,
+"methods": 1
+},
+{
+"name": "pianoSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Puzzles/pianoSystem.cs",
+"line": 7,
+"fields": 12,
+"methods": 7
+},
+{
+"name": "placeObjectSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Puzzles/placeObjectSystem.cs",
+"line": 6,
+"fields": 18,
+"methods": 7
+},
+{
+"name": "pressObjectsInOrderSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Puzzles/pressObjectsInOrderSystem.cs",
+"line": 8,
+"fields": 12,
+"methods": 5
+},
+{
+"name": "puzzleSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Puzzles/puzzleSystem.cs",
+"line": 7,
+"fields": 64,
+"methods": 19
+},
+{
+"name": "puzzleSystemPlayerManagement",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Puzzles/puzzleSystemPlayerManagement.cs",
+"line": 6,
+"fields": 4,
+"methods": 8
+},
+{
+"name": "craftObjectInTimeSimpleInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistanceInventoryListBySaveSlotInfo.cs",
+"line": 114,
+"fields": 6,
+"methods": 0
+},
+{
+"name": "elementOnScene",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Save System/Elements On Scene/elementOnScene.cs",
+"line": 6,
+"fields": 25,
+"methods": 30
+},
+{
+"name": "elementOnSceneHelper",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Save System/Elements On Scene/elementOnSceneHelper.cs",
+"line": 5,
+"fields": 2,
+"methods": 6
+},
+{
+"name": "elementOnSceneInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Elements On Scene/elementOnSceneInfo.cs",
+"line": 12,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "elementOnSceneManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Save System/Elements On Scene/elementOnSceneManager.cs",
+"line": 5,
+"fields": 12,
+"methods": 22
+},
+{
+"name": "elementsOnSceneData",
+"kind": "class",
+"base": [
+"ScriptableObject"
+],
+"file": "Save System/Elements On Scene/elementsOnSceneData.cs",
+"line": 5,
+"fields": 1,
+"methods": 2
+},
+{
+"name": "elementsOnSceneInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Elements On Scene/elementOnSceneInfo.cs",
+"line": 5,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "persistanceAttachmentInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistanceWeaponListBySaveSlotInfo.cs",
+"line": 39,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "persistanceAttachmentWeaponInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistanceWeaponAttachmentListBySaveSlotInfo.cs",
+"line": 26,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "persistanceAttachmentWeaponListByPlayerInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistanceWeaponAttachmentListBySaveSlotInfo.cs",
+"line": 12,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "persistanceAttachmentWeaponPlaceInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistanceWeaponAttachmentListBySaveSlotInfo.cs",
+"line": 19,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "persistanceBlendshapesInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistanceBlendshapesListBySaveSlotInfo.cs",
+"line": 24,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "persistanceBlendshapesListBySaveSlotInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistanceBlendshapesListBySaveSlotInfo.cs",
+"line": 5,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "persistanceCategorySkillInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistancePlayerSkillsListBySaveSlotInfo.cs",
+"line": 19,
+"fields": 1,
+"methods": 0
+},
+{
+"name": "persistanceDialogContentInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistanceDialogContentListBySaveSlotInfo.cs",
+"line": 19,
+"fields": 3,
+"methods": 0
+},
+{
+"name": "persistanceDialogContentListBySaveSlotInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistanceDialogContentListBySaveSlotInfo.cs",
+"line": 5,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "persistanceElementOnSceneInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistanceElementsOnSceneBySaveSlotInfo.cs",
+"line": 20,
+"fields": 16,
+"methods": 0
+},
+{
+"name": "persistanceElementsOnSceneBySaveSlotInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistanceElementsOnSceneBySaveSlotInfo.cs",
+"line": 5,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "persistanceInventoryListByPlayerInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistanceInventoryListBySaveSlotInfo.cs",
+"line": 13,
+"fields": 11,
+"methods": 0
+},
+{
+"name": "persistanceInventoryListBySaveSlotInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistanceInventoryListBySaveSlotInfo.cs",
+"line": 5,
+"fields": 3,
+"methods": 0
+},
+{
+"name": "persistanceInventoryObjectInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistanceInventoryListBySaveSlotInfo.cs",
+"line": 36,
+"fields": 21,
+"methods": 0
+},
+{
+"name": "persistanceMeleeInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistanceMeleeWeaponListBySaveSlotInfo.cs",
+"line": 19,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "persistanceMeleeWeaponInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistanceMeleeWeaponListBySaveSlotInfo.cs",
+"line": 12,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "persistanceMeleeWeaponListBySaveSlotInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistanceMeleeWeaponListBySaveSlotInfo.cs",
+"line": 5,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "persistanceMissionInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistancePlayerMissionsListBySaveSlotInfo.cs",
+"line": 19,
+"fields": 14,
+"methods": 0
+},
+{
+"name": "persistanceOptionsInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistancePlayerOptionsListBySaveSlotInfo.cs",
+"line": 19,
+"fields": 5,
+"methods": 0
+},
+{
+"name": "persistancePlayerBlendshapesInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistanceBlendshapesListBySaveSlotInfo.cs",
+"line": 12,
+"fields": 4,
+"methods": 0
+},
+{
+"name": "persistancePlayerCategorySkillInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistancePlayerSkillsListBySaveSlotInfo.cs",
+"line": 12,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "persistancePlayerDialogContentInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistanceDialogContentListBySaveSlotInfo.cs",
+"line": 12,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "persistancePlayerElementOnSceneInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistanceElementsOnSceneBySaveSlotInfo.cs",
+"line": 13,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "persistancePlayerMissionInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistancePlayerMissionsListBySaveSlotInfo.cs",
+"line": 12,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "persistancePlayerMissionsListBySaveSlotInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistancePlayerMissionsListBySaveSlotInfo.cs",
+"line": 5,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "persistancePlayerOptionsInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistancePlayerOptionsListBySaveSlotInfo.cs",
+"line": 12,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "persistancePlayerOptionsListBySaveSlotInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistancePlayerOptionsListBySaveSlotInfo.cs",
+"line": 5,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "persistancePlayerSkillsListBySaveSlotInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistancePlayerSkillsListBySaveSlotInfo.cs",
+"line": 5,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "persistancePlayerStatInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistancePlayerStatsListBySaveSlotInfo.cs",
+"line": 12,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "persistancePlayerStatsListBySaveSlotInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistancePlayerStatsListBySaveSlotInfo.cs",
+"line": 5,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "persistancePlayerTravelStationInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistanceTravelStationListBySaveSlotInfo.cs",
+"line": 12,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "persistanceSkillInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistancePlayerSkillsListBySaveSlotInfo.cs",
+"line": 25,
+"fields": 6,
+"methods": 0
+},
+{
+"name": "persistanceStatInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistancePlayerStatsListBySaveSlotInfo.cs",
+"line": 19,
+"fields": 3,
+"methods": 0
+},
+{
+"name": "persistanceTravelStationInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistanceTravelStationListBySaveSlotInfo.cs",
+"line": 19,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "persistanceTravelStationListBySaveSlotInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistanceTravelStationListBySaveSlotInfo.cs",
+"line": 5,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "persistanceWeaponAttachmentListBySaveSlotInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistanceWeaponAttachmentListBySaveSlotInfo.cs",
+"line": 5,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "persistanceWeaponAttachmentPlaceInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistanceWeaponListBySaveSlotInfo.cs",
+"line": 32,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "persistanceWeaponInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistanceWeaponListBySaveSlotInfo.cs",
+"line": 19,
+"fields": 7,
+"methods": 0
+},
+{
+"name": "persistanceWeaponListByPlayerInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistanceWeaponListBySaveSlotInfo.cs",
+"line": 12,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "persistanceWeaponListBySaveSlotInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Persistance Classes/persistanceWeaponListBySaveSlotInfo.cs",
+"line": 5,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "playerPrefsCustomData",
+"kind": "class",
+"base": [
+"ScriptableObject"
+],
+"file": "Save System/playerPrefsCustomData.cs",
+"line": 5,
+"fields": 1,
+"methods": 0
+},
+{
+"name": "playerPrefsCustomInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/playerPrefsCustomInfo.cs",
+"line": 5,
+"fields": 4,
+"methods": 0
+},
+{
+"name": "saveDialogInfo",
+"kind": "class",
+"base": [
+"saveGameInfo"
+],
+"file": "Save System/Custom Class To Save/saveDialogInfo.cs",
+"line": 8,
+"fields": 4,
+"methods": 5
+},
+{
+"name": "saveElementsOnSceneInfo",
+"kind": "class",
+"base": [
+"saveGameInfo"
+],
+"file": "Save System/Custom Class To Save/saveElementsOnSceneInfo.cs",
+"line": 10,
+"fields": 3,
+"methods": 10
+},
+{
+"name": "saveGameInfo",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Save System/Custom Class To Save/saveGameInfo.cs",
+"line": 5,
+"fields": 7,
+"methods": 8
+},
+{
+"name": "saveGameInfoHelper",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Save System/saveGameInfoHelper.cs",
+"line": 6,
+"fields": 5,
+"methods": 3
+},
+{
+"name": "saveGameSlot",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Save System/saveGameSlot.cs",
+"line": 4,
+"fields": 1,
+"methods": 0
+},
+{
+"name": "saveGameSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Save System/saveGameSystem.cs",
+"line": 13,
+"fields": 67,
+"methods": 45
+},
+{
+"name": "saveInfo",
+"kind": "class",
+"base": [],
+"file": "Save System/Custom Class To Save/saveInfo.cs",
+"line": 5,
+"fields": 6,
+"methods": 0
+},
+{
+"name": "saveInventoryBankInfo",
+"kind": "class",
+"base": [
+"saveGameInfo"
+],
+"file": "Save System/Custom Class To Save/saveInventoryBankInfo.cs",
+"line": 8,
+"fields": 2,
+"methods": 8
+},
+{
+"name": "saveMeleeWeaponsInfo",
+"kind": "class",
+"base": [
+"saveGameInfo"
+],
+"file": "Save System/Custom Class To Save/saveMeleeWeaponsInfo.cs",
+"line": 8,
+"fields": 1,
+"methods": 5
+},
+{
+"name": "saveMissionsInfo",
+"kind": "class",
+"base": [
+"saveGameInfo"
+],
+"file": "Save System/Custom Class To Save/saveMissionsInfo.cs",
+"line": 8,
+"fields": 1,
+"methods": 7
+},
+{
+"name": "savePlayerBlendshapesInfo",
+"kind": "class",
+"base": [
+"saveGameInfo"
+],
+"file": "Save System/Custom Class To Save/savePlayerBlendshapesInfo.cs",
+"line": 8,
+"fields": 1,
+"methods": 6
+},
+{
+"name": "savePlayerInventoryInfo",
+"kind": "class",
+"base": [
+"saveGameInfo"
+],
+"file": "Save System/Custom Class To Save/savePlayerInventoryInfo.cs",
+"line": 8,
+"fields": 3,
+"methods": 9
+},
+{
+"name": "savePlayerOptionsInfo",
+"kind": "class",
+"base": [
+"saveGameInfo"
+],
+"file": "Save System/Custom Class To Save/savePlayerOptionsInfo.cs",
+"line": 8,
+"fields": 1,
+"methods": 6
+},
+{
+"name": "savePlayerWeaponsInfo",
+"kind": "class",
+"base": [
+"saveGameInfo"
+],
+"file": "Save System/Custom Class To Save/savePlayerWeaponsInfo.cs",
+"line": 8,
+"fields": 1,
+"methods": 6
+},
+{
+"name": "saveSkillsInfo",
+"kind": "class",
+"base": [
+"saveGameInfo"
+],
+"file": "Save System/Custom Class To Save/saveSkillsInfo.cs",
+"line": 8,
+"fields": 1,
+"methods": 6
+},
+{
+"name": "saveStatsInfo",
+"kind": "class",
+"base": [
+"saveGameInfo"
+],
+"file": "Save System/Custom Class To Save/saveStatsInfo.cs",
+"line": 8,
+"fields": 1,
+"methods": 6
+},
+{
+"name": "saveTravelStationInfo",
+"kind": "class",
+"base": [
+"saveGameInfo"
+],
+"file": "Save System/Custom Class To Save/saveTravelStationInfo.cs",
+"line": 8,
+"fields": 1,
+"methods": 5
+},
+{
+"name": "saveVendorInfo",
+"kind": "class",
+"base": [
+"saveGameInfo"
+],
+"file": "Save System/Custom Class To Save/saveVendorInfo.cs",
+"line": 8,
+"fields": 1,
+"methods": 8
+},
+{
+"name": "playerSkillsSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Skills System/playerSkillsSystem.cs",
+"line": 6,
+"fields": 11,
+"methods": 33
+},
+{
+"name": "playerSkillsUISystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Skills System/playerSkillsUISystem.cs",
+"line": 8,
+"fields": 30,
+"methods": 14
+},
+{
+"name": "skillSettingsTemplate",
+"kind": "class",
+"base": [
+"ScriptableObject"
+],
+"file": "Skills System/skillSettingsTemplate.cs",
+"line": 5,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "skillSlotPanel",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Skills System/skillSlotPanel.cs",
+"line": 5,
+"fields": 1,
+"methods": 0
+},
+{
+"name": "skillSlotPanelInfo",
+"kind": "class",
+"base": [],
+"file": "Skills System/skillSlotPanelInfo.cs",
+"line": 6,
+"fields": 7,
+"methods": 0
+},
+{
+"name": "externalStatsManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Stats System/externalStatsManager.cs",
+"line": 5,
+"fields": 2,
+"methods": 4
+},
+{
+"name": "generalStatComponent",
+"kind": "class",
+"base": [
+"statType"
+],
+"file": "Stats System/generalStatComponent.cs",
+"line": 5,
+"fields": 1,
+"methods": 9
+},
+{
+"name": "Istat",
+"kind": "interface",
+"base": [],
+"file": "Stats System/Istat.cs",
+"line": 5,
+"fields": 0,
+"methods": 0
+},
+{
+"name": "objectsStatsSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Stats System/Objects Stats/objectsStatsSystem.cs",
+"line": 5,
+"fields": 4,
+"methods": 7
+},
+{
+"name": "objectStatButtonInfo",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Stats System/Objects Stats/objectStatButtonInfo.cs",
+"line": 6,
+"fields": 10,
+"methods": 0
+},
+{
+"name": "objectStatInfo",
+"kind": "class",
+"base": [],
+"file": "Stats System/Objects Stats/objectStatsInfo.cs",
+"line": 21,
+"fields": 6,
+"methods": 0
+},
+{
+"name": "objectStatsInfo",
+"kind": "class",
+"base": [],
+"file": "Stats System/Objects Stats/objectStatsInfo.cs",
+"line": 5,
+"fields": 4,
+"methods": 0
+},
+{
+"name": "objectStatsInfoTemplate",
+"kind": "class",
+"base": [
+"ScriptableObject"
+],
+"file": "Stats System/Objects Stats/objectStatsInfoTemplate.cs",
+"line": 5,
+"fields": 5,
+"methods": 0
+},
+{
+"name": "objectStatsInfoTemplateData",
+"kind": "class",
+"base": [
+"ScriptableObject"
+],
+"file": "Stats System/Objects Stats/objectStatsInfoTemplateData.cs",
+"line": 5,
+"fields": 4,
+"methods": 0
+},
+{
+"name": "objectStatsSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Stats System/Objects Stats/objectStatsSystem.cs",
+"line": 6,
+"fields": 8,
+"methods": 11
+},
+{
+"name": "objectStatsSystemOnMeleeWeapons",
+"kind": "class",
+"base": [
+"objectStatsSystem"
+],
+"file": "Stats System/Objects Stats/objectStatsSystemOnMeleeWeapons.cs",
+"line": 5,
+"fields": 0,
+"methods": 1
+},
+{
+"name": "persuasionSystem",
+"kind": "class",
+"base": [
+"statType"
+],
+"file": "Stats System/persuasionSystem.cs",
+"line": 5,
+"fields": 1,
+"methods": 8
+},
+{
+"name": "playerStatsSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Stats System/playerStatsSystem.cs",
+"line": 7,
+"fields": 9,
+"methods": 36
+},
+{
+"name": "showValuesOnScreenSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Stats System/showValuesOnScreenSystem.cs",
+"line": 6,
+"fields": 11,
+"methods": 4
+},
+{
+"name": "statsSettingsTemplate",
+"kind": "class",
+"base": [
+"ScriptableObject"
+],
+"file": "Stats System/statsSettingsTemplate.cs",
+"line": 5,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "statType",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Stats System/statType.cs",
+"line": 5,
+"fields": 0,
+"methods": 9
+},
+{
+"name": "templateStatTypeComponent",
+"kind": "class",
+"base": [
+"statType"
+],
+"file": "Stats System/templateStatTypeComponent.cs",
+"line": 5,
+"fields": 2,
+"methods": 9
+},
+{
+"name": "turnBasedCombatActionsSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Turn Based Combat/turnBasedCombatActionsSystem.cs",
+"line": 6,
+"fields": 43,
+"methods": 35
+},
+{
+"name": "turnBasedCombatChararcterUIInfoObject",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Turn Based Combat/turnBasedCombatChararcterUIInfoObject.cs",
+"line": 6,
+"fields": 1,
+"methods": 0
+},
+{
+"name": "turnBasedCombatSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Turn Based Combat/turnBasedCombatSystem.cs",
+"line": 6,
+"fields": 21,
+"methods": 34
+},
+{
+"name": "turnBasedCombatTeamInfo",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Turn Based Combat/turnBasedCombatTeamInfo.cs",
+"line": 6,
+"fields": 13,
+"methods": 9
+},
+{
+"name": "turnBasedCombatTeamPositionsInfoData",
+"kind": "class",
+"base": [
+"ScriptableObject"
+],
+"file": "Turn Based Combat/turnBasedCombatTeamPositionsInfoData.cs",
+"line": 5,
+"fields": 4,
+"methods": 0
+},
+{
+"name": "turnBasedCombatUISystem",
+"kind": "class",
+"base": [
+"ingameMenuPanel"
+],
+"file": "Turn Based Combat/turnBasedCombatUISystem.cs",
+"line": 7,
+"fields": 102,
+"methods": 51
+},
+{
+"name": "panelInfo",
+"kind": "class",
+"base": [],
+"file": "Tutorial System/tutorialInfo.cs",
+"line": 65,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "playerTutorialSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Tutorial System/playerTutorialSystem.cs",
+"line": 15,
+"fields": 15,
+"methods": 21
+},
+{
+"name": "tutorialActivatorSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Tutorial System/tutorialActivatorSystem.cs",
+"line": 5,
+"fields": 3,
+"methods": 2
+},
+{
+"name": "tutorialInfo",
+"kind": "class",
+"base": [],
+"file": "Tutorial System/tutorialInfo.cs",
+"line": 11,
+"fields": 19,
+"methods": 1
+},
+{
+"name": "tutorialUISystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Tutorial System/tutorialUISystem.cs",
+"line": 5,
+"fields": 5,
+"methods": 7
+},
+{
+"name": "videoInfo",
+"kind": "class",
+"base": [],
+"file": "Tutorial System/tutorialInfo.cs",
+"line": 49,
+"fields": 7,
+"methods": 0
+},
+{
+"name": "airCraftController",
+"kind": "class",
+"base": [
+"vehicleController"
+],
+"file": "Vehicles/Vehicle Controllers/airCraftController.cs",
+"line": 7,
+"fields": 33,
+"methods": 22
+},
+{
+"name": "boatController",
+"kind": "class",
+"base": [
+"vehicleController"
+],
+"file": "Vehicles/Vehicle Controllers/boatController.cs",
+"line": 5,
+"fields": 56,
+"methods": 31
+},
+{
+"name": "carController",
+"kind": "class",
+"base": [
+"vehicleController"
+],
+"file": "Vehicles/Vehicle Controllers/carController.cs",
+"line": 6,
+"fields": 17,
+"methods": 41
+},
+{
+"name": "dummyVehicleController",
+"kind": "class",
+"base": [
+"vehicleController"
+],
+"file": "Vehicles/Vehicle Controllers/dummyVehicleController.cs",
+"line": 5,
+"fields": 0,
+"methods": 0
+},
+{
+"name": "flyingController",
+"kind": "class",
+"base": [
+"vehicleController"
+],
+"file": "Vehicles/Vehicle Controllers/flyingController.cs",
+"line": 6,
+"fields": 39,
+"methods": 25
+},
+{
+"name": "GKCRiderSocketSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Vehicles/GKCRiderSocketSystem.cs",
+"line": 5,
+"fields": 1,
+"methods": 1
+},
+{
+"name": "GKCSimpleRiderSystem",
+"kind": "class",
+"base": [
+"mainRiderSystem"
+],
+"file": "Vehicles/GKCSimpleRiderSystem.cs",
+"line": 7,
+"fields": 56,
+"methods": 49
+},
+{
+"name": "hoverBoardAnimationSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Vehicles/Vehicle Controllers/hoverBoardAnimationSystem.cs",
+"line": 5,
+"fields": 21,
+"methods": 1
+},
+{
+"name": "hoverBoardController",
+"kind": "class",
+"base": [
+"vehicleController"
+],
+"file": "Vehicles/Vehicle Controllers/hoverBoardController.cs",
+"line": 6,
+"fields": 8,
+"methods": 30
+},
+{
+"name": "hoverBoardWayPoints",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Vehicles/hoverBoardWayPoints.cs",
+"line": 5,
+"fields": 21,
+"methods": 6
+},
+{
+"name": "hoverCraftController",
+"kind": "class",
+"base": [
+"vehicleController"
+],
+"file": "Vehicles/Vehicle Controllers/hoverCraftController.cs",
+"line": 6,
+"fields": 28,
+"methods": 27
+},
+{
+"name": "IKDrivingSystem",
+"kind": "class",
+"base": [
+"mainRiderSystem"
+],
+"file": "Vehicles/IKDrivingSystem.cs",
+"line": 6,
+"fields": 88,
+"methods": 71
+},
+{
+"name": "launchTrayectory",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Vehicles/launchTrayectory.cs",
+"line": 4,
+"fields": 37,
+"methods": 4
+},
+{
+"name": "mainRiderSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Vehicles/mainRiderSystem.cs",
+"line": 5,
+"fields": 2,
+"methods": 16
+},
+{
+"name": "motorBikeController",
+"kind": "class",
+"base": [
+"vehicleController"
+],
+"file": "Vehicles/Vehicle Controllers/motorBikeController.cs",
+"line": 6,
+"fields": 28,
+"methods": 34
+},
+{
+"name": "playerHUDManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Vehicles/playerHUDManager.cs",
+"line": 6,
+"fields": 26,
+"methods": 33
+},
+{
+"name": "remoteVehicleNavmeshOverride",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Vehicles/AI/remoteVehicleNavmeshOverride.cs",
+"line": 5,
+"fields": 6,
+"methods": 2
+},
+{
+"name": "shipInterfaceInfo",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Vehicles/shipInterfaceInfo.cs",
+"line": 7,
+"fields": 37,
+"methods": 3
+},
+{
+"name": "skidsManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Vehicles/skidsManager.cs",
+"line": 4,
+"fields": 6,
+"methods": 2
+},
+{
+"name": "sphereController",
+"kind": "class",
+"base": [
+"vehicleController"
+],
+"file": "Vehicles/Vehicle Controllers/sphereController.cs",
+"line": 4,
+"fields": 40,
+"methods": 24
+},
+{
+"name": "turretController",
+"kind": "class",
+"base": [
+"vehicleController"
+],
+"file": "Vehicles/Vehicle Controllers/turretController.cs",
+"line": 4,
+"fields": 2,
+"methods": 4
+},
+{
+"name": "vehicleAINavMesh",
+"kind": "class",
+"base": [
+"AINavMesh"
+],
+"file": "Vehicles/AI/vehicleAINavMesh.cs",
+"line": 7,
+"fields": 45,
+"methods": 16
+},
+{
+"name": "vehicleBuilder",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Vehicles/vehicleBuilder.cs",
+"line": 6,
+"fields": 16,
+"methods": 12
+},
+{
+"name": "vehicleController",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Vehicles/Vehicle Controllers/vehicleController.cs",
+"line": 6,
+"fields": 60,
+"methods": 68
+},
+{
+"name": "vehicleDamageReceiver",
+"kind": "class",
+"base": [
+"healthManagement"
+],
+"file": "Vehicles/vehicleDamageReceiver.cs",
+"line": 4,
+"fields": 3,
+"methods": 56
+},
+{
+"name": "vehicleHUDManager",
+"kind": "class",
+"base": [
+"healthManagement"
+],
+"file": "Vehicles/vehicleHUDManager.cs",
+"line": 8,
+"fields": 185,
+"methods": 230
+},
+{
+"name": "vehicleInteractionPanelSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Vehicles/vehicleInteractionPanelSystem.cs",
+"line": 6,
+"fields": 23,
+"methods": 4
+},
+{
+"name": "vehicleInterface",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Vehicles/vehicleInterface.cs",
+"line": 7,
+"fields": 11,
+"methods": 10
+},
+{
+"name": "vehicleLaser",
+"kind": "class",
+"base": [
+"laser"
+],
+"file": "Vehicles/vehicleLaser.cs",
+"line": 5,
+"fields": 15,
+"methods": 2
+},
+{
+"name": "vehicleWeaponSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Vehicles/vehicleWeaponSystem.cs",
+"line": 7,
+"fields": 53,
+"methods": 47
+},
+{
+"name": "WaypointCircuit",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Vehicles/AI/WaypointCircuit.cs",
+"line": 6,
+"fields": 10,
+"methods": 9
+},
+{
+"name": "WaypointProgressTracker",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Vehicles/AI/WaypointProgressTracker.cs",
+"line": 4,
+"fields": 14,
+"methods": 4
+},
+{
+"name": "vendorCategorySlotPanel",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Vendor System/vendorCategorySlotPanel.cs",
+"line": 5,
+"fields": 1,
+"methods": 0
+},
+{
+"name": "vendorCategorySlotPanelInfo",
+"kind": "class",
+"base": [],
+"file": "Vendor System/vendorCategorySlotPanelInfo.cs",
+"line": 6,
+"fields": 5,
+"methods": 0
+},
+{
+"name": "vendorObjectSlotPanel",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Vendor System/vendorObjectSlotPanel.cs",
+"line": 5,
+"fields": 1,
+"methods": 0
+},
+{
+"name": "vendorObjectSlotPanelInfo",
+"kind": "class",
+"base": [],
+"file": "Vendor System/vendorObjectSlotPanelInfo.cs",
+"line": 6,
+"fields": 8,
+"methods": 0
+},
+{
+"name": "vendorSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Vendor System/vendorSystem.cs",
+"line": 5,
+"fields": 13,
+"methods": 9
+},
+{
+"name": "vendorUISystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Vendor System/vendorUISystem.cs",
+"line": 8,
+"fields": 60,
+"methods": 47
+},
+{
+"name": "addGrenadeToThrowAwayFromCharacter",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/addGrenadeToThrowAwayFromCharacter.cs",
+"line": 5,
+"fields": 7,
+"methods": 3
+},
+{
+"name": "armorSurfaceSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/armorSurfaceSystem.cs",
+"line": 7,
+"fields": 26,
+"methods": 17
+},
+{
+"name": "arrowManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/arrowManager.cs",
+"line": 7,
+"fields": 9,
+"methods": 6
+},
+{
+"name": "arrowProjectile",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/Projectiles/arrowProjectile.cs",
+"line": 6,
+"fields": 16,
+"methods": 5
+},
+{
+"name": "attachmentIcon",
+"kind": "class",
+"base": [],
+"file": "Weapons/Attachments/attachmentInfo.cs",
+"line": 48,
+"fields": 7,
+"methods": 0
+},
+{
+"name": "attachmentIconInfo",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/Attachments/attachmentIconInfo.cs",
+"line": 5,
+"fields": 1,
+"methods": 0
+},
+{
+"name": "attachmentInfo",
+"kind": "class",
+"base": [],
+"file": "Weapons/Attachments/attachmentInfo.cs",
+"line": 8,
+"fields": 23,
+"methods": 1
+},
+{
+"name": "attachmentSlot",
+"kind": "class",
+"base": [],
+"file": "Weapons/Attachments/attachmentInfo.cs",
+"line": 61,
+"fields": 4,
+"methods": 0
+},
+{
+"name": "attachmentSlotInfo",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/Attachments/attachmentSlotInfo.cs",
+"line": 5,
+"fields": 1,
+"methods": 0
+},
+{
+"name": "attrackObjectsSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/New Weapon Behaviors/attrackObjectsSystem.cs",
+"line": 7,
+"fields": 24,
+"methods": 11
+},
+{
+"name": "audioClipBip",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/Projectiles/audioClipBip.cs",
+"line": 6,
+"fields": 14,
+"methods": 2
+},
+{
+"name": "bowHolderSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/bowHolderSystem.cs",
+"line": 6,
+"fields": 11,
+"methods": 8
+},
+{
+"name": "bowSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/bowSystem.cs",
+"line": 6,
+"fields": 81,
+"methods": 43
+},
+{
+"name": "dissolveProjectile",
+"kind": "class",
+"base": [
+"projectileSystem"
+],
+"file": "Weapons/Projectiles/dissolveProjectile.cs",
+"line": 6,
+"fields": 15,
+"methods": 4
+},
+{
+"name": "dragObjectSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/New Weapon Behaviors/dragObjectSystem.cs",
+"line": 6,
+"fields": 16,
+"methods": 8
+},
+{
+"name": "dualWeaponInfo",
+"kind": "class",
+"base": [],
+"file": "Weapons/IKWeaponInfo.cs",
+"line": 296,
+"fields": 39,
+"methods": 0
+},
+{
+"name": "dynamicReticleSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/dynamicReticleSystem.cs",
+"line": 6,
+"fields": 11,
+"methods": 3
+},
+{
+"name": "fakeProjectileTrailSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/fakeProjectileTrailSystem.cs",
+"line": 5,
+"fields": 10,
+"methods": 6
+},
+{
+"name": "FBAAimInfo",
+"kind": "class",
+"base": [],
+"file": "Weapons/IKWeaponInfo.cs",
+"line": 284,
+"fields": 5,
+"methods": 0
+},
+{
+"name": "flamethrowerWeapon",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/New Weapon Behaviors/flamethrowerWeapon.cs",
+"line": 7,
+"fields": 23,
+"methods": 5
+},
+{
+"name": "flashlight",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/New Weapon Behaviors/flashlight.cs",
+"line": 7,
+"fields": 26,
+"methods": 12
+},
+{
+"name": "gravityGun",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/New Weapon Behaviors/gravityGun.cs",
+"line": 7,
+"fields": 76,
+"methods": 29
+},
+{
+"name": "healerWeapon",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/New Weapon Behaviors/healerWeapon.cs",
+"line": 6,
+"fields": 31,
+"methods": 13
+},
+{
+"name": "IKWeaponInfo",
+"kind": "class",
+"base": [],
+"file": "Weapons/IKWeaponInfo.cs",
+"line": 6,
+"fields": 193,
+"methods": 1
+},
+{
+"name": "IKWeaponsPosition",
+"kind": "class",
+"base": [],
+"file": "Weapons/IKWeaponInfo.cs",
+"line": 356,
+"fields": 24,
+"methods": 0
+},
+{
+"name": "IKWeaponsPositionElbow",
+"kind": "class",
+"base": [],
+"file": "Weapons/IKWeaponInfo.cs",
+"line": 390,
+"fields": 6,
+"methods": 0
+},
+{
+"name": "IKWeaponSystem",
+"kind": "class",
+"base": [
+"weaponObjectInfo"
+],
+"file": "Weapons/IKWeaponSystem.cs",
+"line": 6,
+"fields": 152,
+"methods": 239
+},
+{
+"name": "laserAttachment",
+"kind": "class",
+"base": [
+"laser"
+],
+"file": "Weapons/Attachments/laserAttachment.cs",
+"line": 5,
+"fields": 20,
+"methods": 2
+},
+{
+"name": "laserDotOnScreenSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/Attachments/laserDotOnScreenSystem.cs",
+"line": 6,
+"fields": 7,
+"methods": 2
+},
+{
+"name": "laserMine",
+"kind": "class",
+"base": [
+"projectileSystem"
+],
+"file": "Weapons/Projectiles/laserMine.cs",
+"line": 6,
+"fields": 5,
+"methods": 3
+},
+{
+"name": "objectsTransformInfo",
+"kind": "class",
+"base": [],
+"file": "Weapons/Scriptable Objects/objectTransformInfo.cs",
+"line": 12,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "objectTransformData",
+"kind": "class",
+"base": [
+"ScriptableObject"
+],
+"file": "Weapons/Scriptable Objects/objectTransformData.cs",
+"line": 5,
+"fields": 1,
+"methods": 0
+},
+{
+"name": "objectTransformInfo",
+"kind": "class",
+"base": [],
+"file": "Weapons/Scriptable Objects/objectTransformInfo.cs",
+"line": 5,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "plasmaCutterProjectile",
+"kind": "class",
+"base": [
+"projectileSystem"
+],
+"file": "Weapons/Projectiles/plasmaCutterProjectile.cs",
+"line": 6,
+"fields": 38,
+"methods": 10
+},
+{
+"name": "plasmaCutterSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/New Weapon Behaviors/plasmaCutterSystem.cs",
+"line": 6,
+"fields": 8,
+"methods": 5
+},
+{
+"name": "playerWeaponsManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/playerWeaponsManager.cs",
+"line": 8,
+"fields": 261,
+"methods": 551
+},
+{
+"name": "playerWeaponSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/playerWeaponSystem.cs",
+"line": 8,
+"fields": 79,
+"methods": 209
+},
+{
+"name": "projectileImpactSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/projectileImpactSystem.cs",
+"line": 6,
+"fields": 2,
+"methods": 3
+},
+{
+"name": "projectileInfo",
+"kind": "class",
+"base": [],
+"file": "Weapons/Projectiles/projectileInfo.cs",
+"line": 6,
+"fields": 107,
+"methods": 1
+},
+{
+"name": "projectilesOnCharacterBodyManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/projectilesOnCharacterBodyManager.cs",
+"line": 5,
+"fields": 3,
+"methods": 2
+},
+{
+"name": "projectileSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/Projectiles/projectileSystem.cs",
+"line": 8,
+"fields": 34,
+"methods": 50
+},
+{
+"name": "simpleChainSaw",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/New Weapon Behaviors/simpleChainSaw.cs",
+"line": 6,
+"fields": 16,
+"methods": 7
+},
+{
+"name": "simpleSniperSightSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/simpleSniperSightSystem.cs",
+"line": 5,
+"fields": 21,
+"methods": 4
+},
+{
+"name": "simpleWeaponSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/simpleWeaponSystem.cs",
+"line": 10,
+"fields": 37,
+"methods": 48
+},
+{
+"name": "sliceObject",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/New Weapon Behaviors/sliceObject.cs",
+"line": 5,
+"fields": 49,
+"methods": 9
+},
+{
+"name": "smartphoneDevice",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/New Weapon Behaviors/smartphoneDevice.cs",
+"line": 7,
+"fields": 46,
+"methods": 18
+},
+{
+"name": "spearProjectile",
+"kind": "class",
+"base": [
+"projectileSystem"
+],
+"file": "Weapons/Projectiles/spearProjectile.cs",
+"line": 6,
+"fields": 11,
+"methods": 3
+},
+{
+"name": "surfaceToSlice",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/New Weapon Behaviors/surfaceToSlice.cs",
+"line": 6,
+"fields": 41,
+"methods": 25
+},
+{
+"name": "taserProjectile",
+"kind": "class",
+"base": [
+"projectileSystem"
+],
+"file": "Weapons/Projectiles/taserProjectile.cs",
+"line": 6,
+"fields": 9,
+"methods": 3
+},
+{
+"name": "throwGrenadeSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/throwGrenadeSystem.cs",
+"line": 7,
+"fields": 9,
+"methods": 4
+},
+{
+"name": "vacuumGun",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/New Weapon Behaviors/vacuumGun.cs",
+"line": 5,
+"fields": 34,
+"methods": 7
+},
+{
+"name": "weaponAmmoUsingPlayerStat",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/weaponAmmoUsingPlayerStat.cs",
+"line": 6,
+"fields": 3,
+"methods": 1
+},
+{
+"name": "weaponAnimatorSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/weaponAnimatorSystem.cs",
+"line": 6,
+"fields": 73,
+"methods": 20
+},
+{
+"name": "weaponAttachmentSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/Attachments/weaponAttachmentSystem.cs",
+"line": 11,
+"fields": 35,
+"methods": 35
+},
+{
+"name": "weaponBuilder",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/weaponBuilder.cs",
+"line": 6,
+"fields": 29,
+"methods": 35
+},
+{
+"name": "weaponInfo",
+"kind": "class",
+"base": [],
+"file": "Weapons/weaponInfo.cs",
+"line": 8,
+"fields": 344,
+"methods": 1
+},
+{
+"name": "weaponLaser",
+"kind": "class",
+"base": [
+"laser"
+],
+"file": "Weapons/New Weapon Behaviors/weaponLaser.cs",
+"line": 6,
+"fields": 22,
+"methods": 6
+},
+{
+"name": "weaponListManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/weaponListManager.cs",
+"line": 11,
+"fields": 39,
+"methods": 14
+},
+{
+"name": "weaponObjectInfo",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/weaponObjectInfo.cs",
+"line": 5,
+"fields": 0,
+"methods": 8
+},
+{
+"name": "weaponPartstToRemoveOnPickupCreation",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/weaponPartstToRemoveOnPickupCreation.cs",
+"line": 5,
+"fields": 1,
+"methods": 1
+},
+{
+"name": "weaponRotationPointInfo",
+"kind": "class",
+"base": [],
+"file": "Weapons/IKWeaponInfo.cs",
+"line": 401,
+"fields": 7,
+"methods": 0
+},
+{
+"name": "weaponsAttachmentUIManager",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/Attachments/weaponsAttachmentUIManager.cs",
+"line": 6,
+"fields": 6,
+"methods": 0
+},
+{
+"name": "weaponShellSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/weaponShellSystem.cs",
+"line": 6,
+"fields": 9,
+"methods": 2
+},
+{
+"name": "weaponSlotElement",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/weaponSlotElement.cs",
+"line": 5,
+"fields": 1,
+"methods": 0
+},
+{
+"name": "weaponSwayInfo",
+"kind": "class",
+"base": [],
+"file": "Weapons/weaponSwayInfo.cs",
+"line": 5,
+"fields": 38,
+"methods": 0
+},
+{
+"name": "weaponSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/weaponSystem.cs",
+"line": 8,
+"fields": 47,
+"methods": 41
+},
+{
+"name": "weaponTransformData",
+"kind": "class",
+"base": [
+"ScriptableObject"
+],
+"file": "Weapons/weaponTransformData.cs",
+"line": 5,
+"fields": 2,
+"methods": 0
+},
+{
+"name": "weaponTransformInfoSystem",
+"kind": "class",
+"base": [
+"MonoBehaviour"
+],
+"file": "Weapons/weaponTransformInfoSystem.cs",
+"line": 5,
+"fields": 14,
+"methods": 14
+}
+]

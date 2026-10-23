@@ -1,0 +1,546 @@
+[
+ {
+  "type": "grabPhysicalObjectMeleeAttackSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Grab Objects\\grabPhysicalObjectMeleeAttackSystem.cs",
+  "methods": [
+   {
+    "sig": "setRegularDeflectProjectilesTriggerScaleValues()",
+    "line": 453
+   },
+   {
+    "sig": "setBlockDeflectProjectilesTriggerScaleValues()",
+    "line": 462
+   },
+   {
+    "sig": "setMainObjectColliderEnabledState(bool state)",
+    "line": 471
+   },
+   {
+    "sig": "getAttackListCount()",
+    "line": 478
+   },
+   {
+    "sig": "getMainHitCombat()",
+    "line": 483
+   },
+   {
+    "sig": "setKeepOrCarryGrabbebObjectState(bool state)",
+    "line": 488
+   },
+   {
+    "sig": "iskeepGrabbedObjectStateActive()",
+    "line": 493
+   },
+   {
+    "sig": "setObjectThrownState(bool state)",
+    "line": 498
+   },
+   {
+    "sig": "isObjectThrown()",
+    "line": 503
+   },
+   {
+    "sig": "checkEventOnThrow(bool state)",
+    "line": 508
+   },
+   {
+    "sig": "checkEventOnReturn(bool state)",
+    "line": 523
+   },
+   {
+    "sig": "checkEventOnAttackStartAndEnd(bool state)",
+    "line": 538
+   },
+   {
+    "sig": "checkEventWhenKeepingOrDrawingMeleeWeapon(bool state)",
+    "line": 549
+   },
+   {
+    "sig": "setUseCustomReferencePositionToKeepObjectMesh(bool state, Transform newTransform)",
+    "line": 560
+   },
+   {
+    "sig": "setUseCustomReferencePositionToKeepObjectMesh(bool state, Vector3 localPosition, Vector3 localEulerAngles)",
+    "line": 572
+   },
+   {
+    "sig": "getCustomReferenceToKeepObjectMeshPosition()",
+    "line": 580
+   },
+   {
+    "sig": "getCustomReferenceToKeepObjectMeshEuler()",
+    "line": 585
+   },
+   {
+    "sig": "checkDisableTrail()",
+    "line": 590
+   },
+   {
+    "sig": "setTrailActiveState(bool state)",
+    "line": 597
+   },
+   {
+    "sig": "setPreviousStrafeModeState(bool state)",
+    "line": 640
+   },
+   {
+    "sig": "wasStrafeModeActivePreviously()",
+    "line": 645
+   },
+   {
+    "sig": "getGrabPhysicalObjectMeleeAttackSystem()",
+    "line": 650
+   },
+   {
+    "sig": "renameWeapon(string newWeaponName)",
+    "line": 665
+   },
+   {
+    "sig": "enableOrDisableRemoteEventsOnSurfacesDetected(bool state)",
+    "line": 670
+   },
+   {
+    "sig": "enableOrDisableRemoteEventsOnSurfacesDetectedElement(bool state, string remoteEventName)",
+    "line": 675
+   },
+   {
+    "sig": "enableRemoteEventsOnSurfacesDetectedElement(string remoteEventName)",
+    "line": 686
+   },
+   {
+    "sig": "disableRemoteEventsOnSurfacesDetectedElement(string remoteEventName)",
+    "line": 691
+   },
+   {
+    "sig": "isRemoteEventIncluded(string remoteEventName)",
+    "line": 696
+   },
+   {
+    "sig": "enableOrDisableRemoteEventsOnAttackList(bool state)",
+    "line": 709
+   },
+   {
+    "sig": "setSecondaryAbilityActiveState(bool state)",
+    "line": 716
+   },
+   {
+    "sig": "isSecondaryAbilityActive()",
+    "line": 721
+   },
+   {
+    "sig": "setNewGeneralDamageTypeID(int newValue)",
+    "line": 726
+   },
+   {
+    "sig": "setDamageTypeAndReactionInfo(string newBuffObjectName)",
+    "line": 731
+   },
+   {
+    "sig": "activateReturnProjectilesOnContact()",
+    "line": 788
+   },
+   {
+    "sig": "sendReturnProjectilesOnContactInfo(Transform playerTransform, Transform mainCameraTransform)",
+    "line": 795
+   },
+   {
+    "sig": "setNewArmorOwner(Transform playerTransform)",
+    "line": 804
+   },
+   {
+    "sig": "enableOrDisableWeaponMeshActiveState(bool state)",
+    "line": 813
+   },
+   {
+    "sig": "setNextExtraActionOnMeleeWeapon(remoteEventSystem currentRemoteEventSystem)",
+    "line": 818
+   },
+   {
+    "sig": "setNewExtraActionByIndex(int newIndex, remoteEventSystem currentRemoteEventSystem)",
+    "line": 853
+   },
+   {
+    "sig": "getActionIconTexture()",
+    "line": 884
+   },
+   {
+    "sig": "getCurrentExtraActionIndex()",
+    "line": 895
+   },
+   {
+    "sig": "activateCurrentExtraActionOnMeleeWeapon(remoteEventSystem currentRemoteEventSystem)",
+    "line": 900
+   },
+   {
+    "sig": "checkIfCarryingMeleeWeaponToActivateAction()",
+    "line": 913
+   },
+   {
+    "sig": "enableExtraActionByName(string actionName)",
+    "line": 922
+   },
+   {
+    "sig": "disableExtraActionByName(string actionName)",
+    "line": 927
+   },
+   {
+    "sig": "enableOrDisableExtraActionByName(string actionName, bool state)",
+    "line": 932
+   },
+   {
+    "sig": "checkDurabilityOnAttack(float extraMultiplier)",
+    "line": 943
+   },
+   {
+    "sig": "checkDurabilityOnBlock(float extraMultiplier)",
+    "line": 960
+   },
+   {
+    "sig": "updateDurabilityAmountState()",
+    "line": 973
+   },
+   {
+    "sig": "getDurabilityAmount()",
+    "line": 980
+   },
+   {
+    "sig": "initializeDurabilityValue(float newAmount, int currentObjectIndex)",
+    "line": 989
+   },
+   {
+    "sig": "setInventoryObjectIndex(int currentObjectIndex)",
+    "line": 998
+   },
+   {
+    "sig": "repairObjectFully()",
+    "line": 1005
+   },
+   {
+    "sig": "breakFullDurabilityOnCurrentWeapon()",
+    "line": 1012
+   },
+   {
+    "sig": "setObjectNameFromEditor(string newName)",
+    "line": 1019
+   },
+   {
+    "sig": "setDurabilityAmountFromEditor(float newValue)",
+    "line": 1026
+   },
+   {
+    "sig": "setMaxDurabilityAmountFromEditor(float newValue)",
+    "line": 1033
+   },
+   {
+    "sig": "addObjectStatsToMainManager()",
+    "line": 1040
+   },
+   {
+    "sig": "setCurrentCharacter(GameObject newObject)",
+    "line": 1047
+   },
+   {
+    "sig": "getCurrentCharacter()",
+    "line": 1052
+   },
+   {
+    "sig": "isWeaponCarriedByCharacter()",
+    "line": 1057
+   },
+   {
+    "sig": "getLastTimeWeaponDropped()",
+    "line": 1064
+   },
+   {
+    "sig": "setLastTimeWeaponDropped()",
+    "line": 1069
+   },
+   {
+    "sig": "setUseObjectDurabilityOnAttackValue(bool newValue)",
+    "line": 1074
+   },
+   {
+    "sig": "setDurabilityUsedOnAttackValue(float newValue)",
+    "line": 1079
+   },
+   {
+    "sig": "setUseObjectDurabilityOnBlockValue(bool newValue)",
+    "line": 1084
+   },
+   {
+    "sig": "setDurabilityUsedOnBlockValue(float newValue)",
+    "line": 1089
+   },
+   {
+    "sig": "setReferencePositionToKeepObjectMeshPositionFromEditor(Vector3 newPosition, Quaternion newRotation)",
+    "line": 1096
+   },
+   {
+    "sig": "setUseObjectDurabilityOnAttackValueFromEditor(bool newValue)",
+    "line": 1106
+   },
+   {
+    "sig": "setDurabilityUsedOnAttackValueFromEditor(float newValue)",
+    "line": 1113
+   },
+   {
+    "sig": "setUseObjectDurabilityOnBlockValueFromEditor(bool newValue)",
+    "line": 1120
+   },
+   {
+    "sig": "setDurabilityUsedOnBlockValueFromEditor(float newValue)",
+    "line": 1127
+   },
+   {
+    "sig": "copyWeaponInfoToTemplate(bool settingInfoOnEditorTime)",
+    "line": 1134
+   },
+   {
+    "sig": "copyTemplateToWeaponAttackInfo(bool settingInfoOnEditorTime)",
+    "line": 1149
+   },
+   {
+    "sig": "setNewMeleeWeaponAttackInfoTemplate(meleeWeaponAttackInfo newMeleeWeaponAttackInfo, bool settingInfoOnEditorTime)",
+    "line": 1162
+   },
+   {
+    "sig": "updateMeleeAttackInfo(int attackListIndex, float attackDamage, string attackType, string actionSystemAnimationName, float actionSystemDuration, float actionSystemSpeed, List<damageTriggerActiveInfo> damageTriggerActiveInfoList)",
+    "line": 1171
+   },
+   {
+    "sig": "renameWeaponFromEditor(string newWeaponName)",
+    "line": 1204
+   }
+  ]
+ },
+ {
+  "type": "grabPhysicalObjectSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Grab Objects\\grabPhysicalObjectSystem.cs",
+  "methods": [
+   {
+    "sig": "assignObjectToGrabParentIfNull()",
+    "line": 269
+   },
+   {
+    "sig": "setRigidbodyList()",
+    "line": 276
+   },
+   {
+    "sig": "grabObject(GameObject currentPlayer)",
+    "line": 300
+   },
+   {
+    "sig": "dropObject()",
+    "line": 413
+   },
+   {
+    "sig": "checkParentAssignedState()",
+    "line": 480
+   },
+   {
+    "sig": "checkNewParentAssignedState(Transform newParent)",
+    "line": 485
+   },
+   {
+    "sig": "isUseReferencePositionForEveryViewActive()",
+    "line": 490
+   },
+   {
+    "sig": "getReferencePositionThirdPerson()",
+    "line": 495
+   },
+   {
+    "sig": "getReferencePositionFirstPerson()",
+    "line": 500
+   },
+   {
+    "sig": "getReferencePositionFBA()",
+    "line": 505
+   },
+   {
+    "sig": "getReferencePosition()",
+    "line": 510
+   },
+   {
+    "sig": "getObjectName()",
+    "line": 515
+   },
+   {
+    "sig": "isIgnoreShowObjectNameOnGrabObjectsSystemActive()",
+    "line": 524
+   },
+   {
+    "sig": "isCanBeGrabbedOnGenericModeEnabled()",
+    "line": 529
+   },
+   {
+    "sig": "isIgnoreToGrabPhysicallyIfPickedWithAimingModeActive()",
+    "line": 534
+   },
+   {
+    "sig": "checkTriggerInfo(Collider col, bool isEnter)",
+    "line": 549
+   },
+   {
+    "sig": "removeAllGrabObjectsFound()",
+    "line": 592
+   },
+   {
+    "sig": "setCurrentPlayer(GameObject newPlayer)",
+    "line": 610
+   },
+   {
+    "sig": "isGrabObjectPhysicallyEnabled()",
+    "line": 615
+   },
+   {
+    "sig": "isCanBeGrabbedOnFirstPersonEnabled()",
+    "line": 620
+   },
+   {
+    "sig": "isCanBeGrabbedOnThirdPersonEnabled()",
+    "line": 625
+   },
+   {
+    "sig": "disableGrabPhysicalObject()",
+    "line": 630
+   },
+   {
+    "sig": "setGrabObjectPhysicallyEnabledState(bool state)",
+    "line": 642
+   },
+   {
+    "sig": "setGrabObjectPhysicallyEnabledStateFromEditor(bool state)",
+    "line": 647
+   },
+   {
+    "sig": "setMainColliderEnabledState(bool state)",
+    "line": 654
+   },
+   {
+    "sig": "setGrabObjectTriggerState(bool state)",
+    "line": 661
+   },
+   {
+    "sig": "setGrabObjectTriggerStateFromEditor(bool state)",
+    "line": 668
+   },
+   {
+    "sig": "setCharacterBody(Transform newCharacterBody)",
+    "line": 675
+   },
+   {
+    "sig": "setCharacter(GameObject newCharacter)",
+    "line": 682
+   },
+   {
+    "sig": "setObjectToGrabParent(GameObject newObjectToGrabParent)",
+    "line": 690
+   },
+   {
+    "sig": "setActiveOrInactiveObjectState(bool state)",
+    "line": 697
+   },
+   {
+    "sig": "checkEventsOnGrabDrop(bool state)",
+    "line": 714
+   },
+   {
+    "sig": "disableGrabPhysicalObjectComponent()",
+    "line": 725
+   },
+   {
+    "sig": "isUseRightHandActive()",
+    "line": 734
+   },
+   {
+    "sig": "isUseLeftHandActive()",
+    "line": 739
+   },
+   {
+    "sig": "hasObjectMeleeAttackSystem()",
+    "line": 744
+   },
+   {
+    "sig": "getMainGrabPhysicalObjectMeleeAttackSystem()",
+    "line": 749
+   },
+   {
+    "sig": "activateReturnProjectilesOnContact()",
+    "line": 754
+   },
+   {
+    "sig": "checkRemoteEvents(bool state)",
+    "line": 761
+   },
+   {
+    "sig": "checkRemoteEventOnStart()",
+    "line": 770
+   },
+   {
+    "sig": "checkRemoteEventOnEnd()",
+    "line": 785
+   },
+   {
+    "sig": "setKeepOrCarryGrabbebObjectState(bool state)",
+    "line": 800
+   },
+   {
+    "sig": "assignObjectParent(Transform newParent)",
+    "line": 811
+   },
+   {
+    "sig": "getCurrentObjectParent()",
+    "line": 816
+   },
+   {
+    "sig": "getLastPositionBeforeGrabbed()",
+    "line": 821
+   },
+   {
+    "sig": "getLastRotationBeforeGrabbed()",
+    "line": 826
+   },
+   {
+    "sig": "getLastPositionBeforeDropped()",
+    "line": 831
+   },
+   {
+    "sig": "getLastRotationBeforeDropped()",
+    "line": 836
+   },
+   {
+    "sig": "setLastParentAssigned(Transform newParent)",
+    "line": 843
+   },
+   {
+    "sig": "getLastParentAssigned()",
+    "line": 848
+   },
+   {
+    "sig": "grabPhysicalObjectExternally(GameObject currentPlayer)",
+    "line": 853
+   },
+   {
+    "sig": "getMainRigidbody()",
+    "line": 862
+   },
+   {
+    "sig": "setCustomScale(Vector3 newValue)",
+    "line": 871
+   },
+   {
+    "sig": "setOriginalScale()",
+    "line": 880
+   },
+   {
+    "sig": "getExtraColliderList()",
+    "line": 887
+   },
+   {
+    "sig": "getObjectUsesExtraColliderListState()",
+    "line": 919
+   }
+  ]
+ }
+]

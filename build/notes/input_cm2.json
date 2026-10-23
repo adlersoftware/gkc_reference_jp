@@ -1,0 +1,596 @@
+[
+ {
+  "type": "camera2_5dSplineZoneOptions",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Camera\\Player Camera\\camera2_5dSplineZoneOptions.cs",
+  "methods": [
+   {
+    "sig": "setCurrentPlayerAndActivateCameraState(GameObject newPlayer)",
+    "line": 36
+   },
+   {
+    "sig": "setCurrentPlayer(GameObject newPlayer)",
+    "line": 43
+   },
+   {
+    "sig": "setCameraStateOnPlayer()",
+    "line": 60
+   }
+  ]
+ },
+ {
+  "type": "camera2_5dZoneLimitSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Camera\\Player Camera\\camera2_5dZoneLimitSystem.cs",
+  "methods": [
+   {
+    "sig": "setCameraLimitOnPlayer()",
+    "line": 98
+   },
+   {
+    "sig": "setCameraLimitOnPlayer(GameObject newPlayer)",
+    "line": 110
+   },
+   {
+    "sig": "setCurrentPlayer(GameObject newPlayer)",
+    "line": 117
+   },
+   {
+    "sig": "setConfigurationToPlayer()",
+    "line": 150
+   }
+  ]
+ },
+ {
+  "type": "cameraEffect",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Camera\\Camera Effect\\cameraEffect.cs",
+  "methods": [
+   {
+    "sig": "renderEffect(RenderTexture source, RenderTexture destination, Camera mainCamera)",
+    "line": 9
+   }
+  ]
+ },
+ {
+  "type": "cameraEffectSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Camera\\Camera Effect\\cameraEffectSystem.cs",
+  "methods": [
+   {
+    "sig": "extraRenderImage(RenderTexture source, RenderTexture destination, Camera currentCamera)",
+    "line": 75
+   },
+   {
+    "sig": "setCameraEffectByName(string cameraStateName)",
+    "line": 86
+   },
+   {
+    "sig": "setMainCameraEffectByName(string cameraStateName)",
+    "line": 97
+   },
+   {
+    "sig": "disableMainCameraEffectActiveState(string cameraStateName)",
+    "line": 116
+   },
+   {
+    "sig": "setIfCurrentCameraEffectRemainActive(bool state)",
+    "line": 129
+   },
+   {
+    "sig": "checkIfMainCameraEffectsAreActive()",
+    "line": 140
+   },
+   {
+    "sig": "canUseCameraEffect()",
+    "line": 156
+   },
+   {
+    "sig": "enableOrDisableCameraEffectActive()",
+    "line": 169
+   },
+   {
+    "sig": "setCameraEffectActiveState(bool state)",
+    "line": 174
+   },
+   {
+    "sig": "setCurrentCameraEffect(cameraEffect newCameraEffect)",
+    "line": 215
+   },
+   {
+    "sig": "setNextCameraEffect()",
+    "line": 220
+   },
+   {
+    "sig": "setPreviousCameraEffect()",
+    "line": 243
+   },
+   {
+    "sig": "inputSetNextCameraEffect()",
+    "line": 266
+   },
+   {
+    "sig": "inputSetPreviousCameraEffect()",
+    "line": 271
+   },
+   {
+    "sig": "inputEnableOrDisableCameraEffectActive()",
+    "line": 276
+   }
+  ]
+ },
+ {
+  "type": "cameraPerspectiveSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Camera\\Captures\\cameraPerspectiveSystem.cs",
+  "methods": [
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 118
+   },
+   {
+    "sig": "checkCurrentPlayerPosition(Transform playerPosition, Transform cameraTransform, Camera deviceCamera)",
+    "line": 167
+   },
+   {
+    "sig": "playSound()",
+    "line": 247
+   },
+   {
+    "sig": "checkTriggerInfo(Collider col, bool isEnter)",
+    "line": 267
+   }
+  ]
+ },
+ {
+  "type": "cameraStateInfo",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Camera\\Player Camera\\cameraStateInfo.cs",
+  "methods": [
+   {
+    "sig": "assignCameraStateValues(cameraStateInfo from, float lerpSpeed)",
+    "line": 125
+   }
+  ]
+ },
+ {
+  "type": "dynamicSplitScreenSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Camera\\Others\\dynamicSplitScreenSystem.cs",
+  "methods": [
+   {
+    "sig": "setDynamicSplitScreenActiveState(bool state, GameObject newPlayer1, GameObject newPlayer2, bool creatingCharactersOnEditor)",
+    "line": 321
+   },
+   {
+    "sig": "setDynamicSplitScreenActiveState(bool state)",
+    "line": 363
+   }
+  ]
+ },
+ {
+  "type": "externalCameraShakeSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Camera\\Player Camera\\externalCameraShakeSystem.cs",
+  "methods": [
+   {
+    "sig": "getExternalShakeList()",
+    "line": 42
+   },
+   {
+    "sig": "setCurrentPlayer(GameObject player)",
+    "line": 91
+   },
+   {
+    "sig": "setCurrentPlayerAndActivateCameraShake(GameObject player)",
+    "line": 108
+   },
+   {
+    "sig": "setCameraShake()",
+    "line": 115
+   },
+   {
+    "sig": "setCameraShakeByAction(string actionName)",
+    "line": 141
+   },
+   {
+    "sig": "setCameraShakeByName(string shakeName)",
+    "line": 173
+   },
+   {
+    "sig": "setExternalShakeSignal(GameObject objectToCall, string shakeName)",
+    "line": 200
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 238
+   }
+  ]
+ },
+ {
+  "type": "externalShakeListManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Camera\\Player Camera\\externalShakeListManager.cs",
+  "methods": [
+   {
+    "sig": "getComponentInstance()",
+    "line": 25
+   },
+   {
+    "sig": "setShakeInManagerList(externalShakeInfoListElement element, int index)",
+    "line": 49
+   },
+   {
+    "sig": "udpateAllHeadbobShakeList()",
+    "line": 54
+   },
+   {
+    "sig": "setExternalShakeStateByIndex(int index, bool isFirstPerson)",
+    "line": 64
+   }
+  ]
+ },
+ {
+  "type": "pauseOrResumePlayerControllerAndCameraSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Camera\\Cutscene\\pauseOrResumePlayerControllerAndCameraSystem.cs",
+  "methods": [
+   {
+    "sig": "getCurrentPlayer(GameObject player)",
+    "line": 114
+   },
+   {
+    "sig": "pauseOrPlayPlayerComponents(bool state)",
+    "line": 151
+   },
+   {
+    "sig": "setTimeScale(float newValue)",
+    "line": 313
+   },
+   {
+    "sig": "checkCharacterMesh(bool state)",
+    "line": 324
+   },
+   {
+    "sig": "resetCameraPositionIfCharacterPaused()",
+    "line": 339
+   },
+   {
+    "sig": "resetCameraPositionIfCharacterPausedWithoutTransition()",
+    "line": 346
+   },
+   {
+    "sig": "resetCameraPosition()",
+    "line": 366
+   },
+   {
+    "sig": "setCameraDirection()",
+    "line": 423
+   },
+   {
+    "sig": "resumePlayerAfterTimeDelay()",
+    "line": 442
+   },
+   {
+    "sig": "stopResumePlayerAfterTimeDelay()",
+    "line": 449
+   },
+   {
+    "sig": "findPlayerOnScene()",
+    "line": 463
+   }
+  ]
+ },
+ {
+  "type": "photoModeSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Camera\\Camera Effect\\photoModeSystem.cs",
+  "methods": [
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 98
+   },
+   {
+    "sig": "setPhotoModeActiveState(bool state)",
+    "line": 191
+   },
+   {
+    "sig": "enableOrDisablePhotoMode()",
+    "line": 273
+   },
+   {
+    "sig": "takePhoto()",
+    "line": 278
+   },
+   {
+    "sig": "resetCameraPosition()",
+    "line": 283
+   },
+   {
+    "sig": "setCameraDirection()",
+    "line": 324
+   },
+   {
+    "sig": "inputTakePhoto()",
+    "line": 348
+   },
+   {
+    "sig": "inputToogleCameraRotation()",
+    "line": 355
+   },
+   {
+    "sig": "inputEnableOrDisablePhotoMode()",
+    "line": 362
+   },
+   {
+    "sig": "inputSetTurboMode(bool state)",
+    "line": 367
+   },
+   {
+    "sig": "inputMoveCameraUp()",
+    "line": 376
+   },
+   {
+    "sig": "inputMoveCameraDown()",
+    "line": 381
+   },
+   {
+    "sig": "inputRotategCameraToRight()",
+    "line": 386
+   },
+   {
+    "sig": "inputRotateCameraToLeft()",
+    "line": 391
+   }
+  ]
+ },
+ {
+  "type": "pixelCameraEffect",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Camera\\Camera Effect\\pixelCameraEffect.cs",
+  "methods": [
+   {
+    "sig": "setMaterial()",
+    "line": 53
+   }
+  ]
+ },
+ {
+  "type": "playerCullingSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Camera\\Others\\playerCullingSystem.cs",
+  "methods": [
+   {
+    "sig": "setPauseCullingState(bool state)",
+    "line": 163
+   },
+   {
+    "sig": "getMaterialList()",
+    "line": 168
+   },
+   {
+    "sig": "clearRendererList()",
+    "line": 198
+   },
+   {
+    "sig": "setNewPlayerGameObject(GameObject newObject)",
+    "line": 205
+   },
+   {
+    "sig": "storePlayerRenderer()",
+    "line": 213
+   },
+   {
+    "sig": "storePlayerRendererFromEditor()",
+    "line": 246
+   },
+   {
+    "sig": "clearRendererListFromEditor()",
+    "line": 253
+   },
+   {
+    "sig": "setCullingSystemEnabledState(bool state)",
+    "line": 260
+   },
+   {
+    "sig": "setCullingSystemEnabledStateFromEditor(bool state)",
+    "line": 265
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 272
+   }
+  ]
+ },
+ {
+  "type": "remoteEventOnCameraCaptureSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Camera\\Captures\\remoteEventOnCameraCaptureSystem.cs",
+  "methods": [
+   {
+    "sig": "checkCapture()",
+    "line": 38
+   },
+   {
+    "sig": "setNewCameraTransform(Transform newCamera)",
+    "line": 93
+   }
+  ]
+ },
+ {
+  "type": "setCameraFOVValue",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Camera\\Player Camera\\setCameraFOVValue.cs",
+  "methods": [
+   {
+    "sig": "enableOrDisableCameraFOVChange(bool state)",
+    "line": 35
+   },
+   {
+    "sig": "increaseFov()",
+    "line": 40
+   },
+   {
+    "sig": "decreaseFOV()",
+    "line": 49
+   },
+   {
+    "sig": "setCameraFOV(float newValue)",
+    "line": 75
+   },
+   {
+    "sig": "setFOVClampValueX(float newValue)",
+    "line": 93
+   },
+   {
+    "sig": "setFOVClampValueY(float newValue)",
+    "line": 98
+   }
+  ]
+ },
+ {
+  "type": "setTransparentSurfaces",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Camera\\Others\\setTransparentSurfaces.cs",
+  "methods": [
+   {
+    "sig": "checkSurfacesToRemove()",
+    "line": 229
+   },
+   {
+    "sig": "changeSurfacesToTransparentOrRegularTemporaly(bool state)",
+    "line": 244
+   },
+   {
+    "sig": "setCheckSurfaceActiveState(bool state)",
+    "line": 259
+   },
+   {
+    "sig": "setLockedCameraActiveState(bool state)",
+    "line": 285
+   },
+   {
+    "sig": "setCheckSurfaceEnabledState(bool state)",
+    "line": 335
+   },
+   {
+    "sig": "setCheckSurfaceEnabledStateFromEditor(bool state)",
+    "line": 341
+   }
+  ]
+ },
+ {
+  "type": "setTransparentSurfacesSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Camera\\Others\\setTransparentSurfacesSystem.cs",
+  "methods": [
+   {
+    "sig": "getComponentInstance()",
+    "line": 50
+   },
+   {
+    "sig": "addNewSurface(GameObject newSurface, Shader customShader)",
+    "line": 72
+   },
+   {
+    "sig": "listContainsSurface(GameObject surfaceToCheck)",
+    "line": 138
+   },
+   {
+    "sig": "setSurfaceToRegular(int surfaceIndex, bool removeSurfaceAtEnd)",
+    "line": 151
+   },
+   {
+    "sig": "checkSurfaceToSetTransparentAgain(GameObject surfaceToCheck)",
+    "line": 171
+   },
+   {
+    "sig": "setSurfaceTransparent(surfaceInfo currentSurfaceToCheck)",
+    "line": 189
+   },
+   {
+    "sig": "setAlphaValue(surfaceInfo currentSurfaceToCheck, int surfaceIndex, Material currentMaterial, bool changingToTransparent, Shader originalShader, float originalAlphaColor, bool removeSurfaceAtEnd)",
+    "line": 202
+   },
+   {
+    "sig": "checkSurfacesToRemove()",
+    "line": 296
+   },
+   {
+    "sig": "changeSurfacesToTransparentOrRegularTemporaly(int playerID, int surfaceIndex, bool setTransparentSurface)",
+    "line": 311
+   },
+   {
+    "sig": "addPlayerIDToSurface(int playerID, GameObject surfaceToCheck)",
+    "line": 324
+   },
+   {
+    "sig": "removePlayerIDToSurface(int playerID, int surfaceIndex)",
+    "line": 343
+   }
+  ]
+ },
+ {
+  "type": "simpleMoveCameraToPosition",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Camera\\Others\\simpleMoveCameraToPosition.cs",
+  "methods": [
+   {
+    "sig": "moveCamera(bool state)",
+    "line": 46
+   },
+   {
+    "sig": "setCurrentPlayer(GameObject player)",
+    "line": 155
+   },
+   {
+    "sig": "stopMovement()",
+    "line": 168
+   }
+  ]
+ },
+ {
+  "type": "simpleShowHideMouseCursor",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Camera\\Cutscene\\simpleShowHideMouseCursor.cs",
+  "methods": [
+   {
+    "sig": "showMouseCursor()",
+    "line": 30
+   },
+   {
+    "sig": "hideMouseCursor()",
+    "line": 35
+   },
+   {
+    "sig": "showOrHideMouseCursor(bool state)",
+    "line": 40
+   }
+  ]
+ },
+ {
+  "type": "solidCameraEffect",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Camera\\Camera Effect\\solidCameraEffect.cs",
+  "methods": [
+   {
+    "sig": "setMaterial()",
+    "line": 71
+   }
+  ]
+ },
+ {
+  "type": "vehicleCameraShake",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Camera\\Vehicles\\vehicleCameraShake.cs",
+  "methods": [
+   {
+    "sig": "startShake(string shakeName)",
+    "line": 37
+   },
+   {
+    "sig": "stopUpdateCoroutine()",
+    "line": 63
+   },
+   {
+    "sig": "stopShake()",
+    "line": 89
+   },
+   {
+    "sig": "getCurrentCameraTransform(Transform currentCameraTransform)",
+    "line": 148
+   },
+   {
+    "sig": "setExternalShakeState(externalShakeInfo shakeInfo)",
+    "line": 155
+   },
+   {
+    "sig": "setExternalShakeDuration()",
+    "line": 167
+   },
+   {
+    "sig": "setVehicleActiveState(bool state)",
+    "line": 191
+   }
+  ]
+ }
+]

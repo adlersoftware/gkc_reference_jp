@@ -1,0 +1,523 @@
+[
+ {
+  "type": "playerWeaponsManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\playerWeaponsManager.cs",
+  "source": "Weapons/playerWeaponsManager.cs",
+  "part": 2,
+  "total_parts": 2,
+  "fields": [
+   {
+    "field": "temporalParentForWeapons",
+    "label": "",
+    "section": "HUD Elements"
+   },
+   {
+    "field": "pauseManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "playerScreenObjectivesManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "playerCameraManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "headBobManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "playerInput",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "IKManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "playerManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "upperBodyRotationManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "headTrackManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "grabObjectsManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "playerInventoryManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "usingDevicesManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "mainCollider",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "ragdollManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "mainCameraTransform",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "mainCamera",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "mainWeaponListManager",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "mainSimpleSniperSightSystem",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "mainDynamicReticleSystem",
+    "label": "",
+    "section": "Player Elements"
+   },
+   {
+    "field": "rightHandTransform",
+    "label": "",
+    "section": "IK Hands Transform"
+   },
+   {
+    "field": "leftHandTransform",
+    "label": "",
+    "section": "IK Hands Transform"
+   },
+   {
+    "field": "rightHandMountPoint",
+    "label": "",
+    "section": "IK Hands Transform"
+   },
+   {
+    "field": "leftHandMountPoint",
+    "label": "",
+    "section": "IK Hands Transform"
+   },
+   {
+    "field": "showDebugLog",
+    "label": "",
+    "section": "Debug Controls"
+   },
+   {
+    "field": "list",
+    "label": "",
+    "section": "Debug Controls"
+   }
+  ]
+ },
+ {
+  "type": "prefabsManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Game Manager\\prefabsManager.cs",
+  "source": "Game Manager/prefabsManager.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "prefabsUrl",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "layerToPlaceObjects",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "placeObjectsOffset",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "seePrefabTypesExplanation",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "prefabNameToSearch",
+    "label": "Prefab Name To Search",
+    "section": "Prefabs Searcher Options"
+   },
+   {
+    "field": "prefabCategoryNameToSearch",
+    "label": "Prefab Category To Search",
+    "section": "Prefabs Searcher Options"
+   },
+   {
+    "field": "currentArrayElement",
+    "label": "",
+    "section": "Prefab List"
+   },
+   {
+    "field": "currentArrayElement",
+    "label": "",
+    "section": "Prefab List"
+   },
+   {
+    "field": "currentArrayElement",
+    "label": "",
+    "section": "Prefab List"
+   }
+  ]
+ },
+ {
+  "type": "pressObjectsInOrderSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Puzzles\\pressObjectsInOrderSystem.cs",
+  "source": "Puzzles/pressObjectsInOrderSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "useIncorrectOrderSound",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "incorrectOrderSound",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "incorrectOrderAudioElement",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "pressObjectsWhileMousePressed",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "pressObjectsLayer",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "usingPressedObjectSystem",
+    "label": "",
+    "section": "Current State"
+   },
+   {
+    "field": "allPositionsPressed",
+    "label": "",
+    "section": "Current State"
+   },
+   {
+    "field": "correctPressedIndex",
+    "label": "",
+    "section": "Current State"
+   },
+   {
+    "field": "allPositionsPressedEvent",
+    "label": "",
+    "section": "Events State"
+   },
+   {
+    "field": "mainCamera",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "mainAudioSource",
+    "label": "",
+    "section": "Components"
+   }
+  ]
+ },
+ {
+  "type": "projectileSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Weapons\\Projectiles\\projectileSystem.cs",
+  "source": "Weapons/Projectiles/projectileSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "setContinuousSpeculativeIngame",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "armorSurfaceLayer",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "abilityFunctionNameAtStart",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "abilityFunctionName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useCustomValues",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "fakeProjectileTrail",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "projectileDamage",
+    "label": "",
+    "section": "Projectile Settings"
+   },
+   {
+    "field": "projectileSpeed",
+    "label": "",
+    "section": "Projectile Settings"
+   },
+   {
+    "field": "killInOneShot",
+    "label": "",
+    "section": "Projectile Settings"
+   },
+   {
+    "field": "projectileWithAbility",
+    "label": "",
+    "section": "Projectile Settings"
+   },
+   {
+    "field": "isHommingProjectile",
+    "label": "",
+    "section": "Search Target Settings"
+   },
+   {
+    "field": "isSeeker",
+    "label": "",
+    "section": "Search Target Settings"
+   },
+   {
+    "field": "waitTimeToSearchTarget",
+    "label": "",
+    "section": "Search Target Settings"
+   },
+   {
+    "field": "targetOnScreenForSeeker",
+    "label": "",
+    "section": "Search Target Settings"
+   },
+   {
+    "field": "impactForceApplied",
+    "label": "",
+    "section": "Force Settings"
+   },
+   {
+    "field": "forceMode",
+    "label": "",
+    "section": "Force Settings"
+   },
+   {
+    "field": "applyImpactForceToVehicles",
+    "label": "",
+    "section": "Force Settings"
+   },
+   {
+    "field": "isExplosive",
+    "label": "",
+    "section": "Explosion Settings"
+   },
+   {
+    "field": "isImplosive",
+    "label": "",
+    "section": "Explosion Settings"
+   },
+   {
+    "field": "explosionForce",
+    "label": "",
+    "section": "Explosion Settings"
+   },
+   {
+    "field": "explosionRadius",
+    "label": "",
+    "section": "Explosion Settings"
+   },
+   {
+    "field": "useDisableTimer",
+    "label": "",
+    "section": "Disable Projectile Settings"
+   },
+   {
+    "field": "noImpactDisableTimer",
+    "label": "",
+    "section": "Disable Projectile Settings"
+   },
+   {
+    "field": "impactDisableTimer",
+    "label": "",
+    "section": "Disable Projectile Settings"
+   },
+   {
+    "field": "impactSoundEffect",
+    "label": "",
+    "section": "Sound Settings"
+   },
+   {
+    "field": "impactAudioElement",
+    "label": "",
+    "section": "Sound Settings"
+   },
+   {
+    "field": "impactParticles",
+    "label": "",
+    "section": "Particle Settings"
+   },
+   {
+    "field": "scorch",
+    "label": "",
+    "section": "Regular Scorch"
+   },
+   {
+    "field": "scorchRayCastDistance",
+    "label": "",
+    "section": "Regular Scorch"
+   },
+   {
+    "field": "targetForScorchLayer",
+    "label": "",
+    "section": "Regular Scorch"
+   },
+   {
+    "field": "useEventOnImpact",
+    "label": "",
+    "section": "Impact Event Settings"
+   },
+   {
+    "field": "eventOnImpact",
+    "label": "",
+    "section": "Impact Event Settings"
+   },
+   {
+    "field": "useLayerMaskImpact",
+    "label": "",
+    "section": "Impact Event Settings"
+   },
+   {
+    "field": "layerMaskImpact",
+    "label": "",
+    "section": "Impact Event Settings"
+   },
+   {
+    "field": "sendObjectDetectedOnImpactEvent",
+    "label": "",
+    "section": "Impact Event Settings"
+   },
+   {
+    "field": "objectDetectedOnImpactEvent",
+    "label": "",
+    "section": "Impact Event Settings"
+   },
+   {
+    "field": "useEventOnExplosion",
+    "label": "",
+    "section": "Explosion Event Settings"
+   },
+   {
+    "field": "evenOnExplosion",
+    "label": "",
+    "section": "Explosion Event Settings"
+   },
+   {
+    "field": "useEventOnAdhereToSurface",
+    "label": "",
+    "section": "Events On Adhere To Surface Settings"
+   },
+   {
+    "field": "eventOnAdhereToSurface",
+    "label": "",
+    "section": "Events On Adhere To Surface Settings"
+   },
+   {
+    "field": "useEventOnProjectileFiredExternally",
+    "label": "",
+    "section": "Events On Projectile Fired Externally Settings"
+   },
+   {
+    "field": "eventOnProjectileFiredExternally",
+    "label": "",
+    "section": "Events On Projectile Fired Externally Settings"
+   },
+   {
+    "field": "mainTrailRenderer",
+    "label": "",
+    "section": "Projectile Components"
+   },
+   {
+    "field": "mainCollider",
+    "label": "",
+    "section": "Projectile Components"
+   },
+   {
+    "field": "secondaryBulletMeshCollider",
+    "label": "",
+    "section": "Projectile Components"
+   },
+   {
+    "field": "mainMapObjectInformation",
+    "label": "",
+    "section": "Projectile Components"
+   },
+   {
+    "field": "audioClipBipManager",
+    "label": "",
+    "section": "Projectile Components"
+   },
+   {
+    "field": "mainRigidbody",
+    "label": "",
+    "section": "Projectile Components"
+   },
+   {
+    "field": "bulletMesh",
+    "label": "",
+    "section": "Projectile Components"
+   },
+   {
+    "field": "secondaryBulletMesh",
+    "label": "",
+    "section": "Projectile Components"
+   },
+   {
+    "field": "mainProjectileImpactSystem",
+    "label": "",
+    "section": "Projectile Components"
+   }
+  ]
+ }
+]

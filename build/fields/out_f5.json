@@ -1,0 +1,67 @@
+[
+ {
+  "type": "consoleMode",
+  "fields": {
+   "consoleModeEnabled": "オンにすると入力からコンソールを開閉できる。",
+   "incorrectCommandMessage": "存在しないコマンドを入力したときに表示するテキスト。",
+   "lineSpacingAmount": "履歴1行あたりの縦間隔。行数に応じて表示位置をずらす。",
+   "consoleOpened": "コンソールを開いているかどうかの状態。実行時に切り替わる。",
+   "maxRadiusToInstantiate": "`spawn`で生成するオブジェクトを散らすランダム半径。",
+   "deletingTextRate": "削除キーを押し続けたとき、1文字消す間隔（秒）。",
+   "startDeletingTimeAmount": "削除キーを押してから連続削除が始まるまでの遅延（秒）。",
+   "consoleWindow": "コンソールUIのルート。開閉時にアクティブを切り替える。",
+   "commandTextParent": "実行コマンドの履歴テキストを並べる親Transform。",
+   "commandTextParentRectTransform": "履歴の親RectTransform。行数に応じて位置をスクロールする。",
+   "currentConsoleCommandText": "入力中のコマンド表示と、履歴行の複製元になるText。",
+   "input": "キー入力を取得するinputManager。未設定なら自動で検索する。",
+   "playerInput": "コンソール表示中にプレイヤー入力を止めるplayerInputManager。",
+   "pauseManager": "コンソール開閉時にカーソルやポーズを制御するmenuPause。",
+   "playerControllerManager": "開いている間だけ停止させるプレイヤーのplayerController。",
+   "mainGameManager": "コンソール開閉時にゲームのポーズを切り替えるgameManager。",
+   "spawnPosition": "`spawn`で生成するオブジェクトの位置と向きの基準。",
+   "commandListScrollRect": "コンソール履歴をスクロールするScrollRect。",
+   "tabKeyName": "入力中のコマンドを補完するTabキーの識別名。",
+   "deleteKeyName": "1文字削除に使うDeleteキーの識別名。",
+   "spaceKeyName": "コマンドに空白を挿入するSpaceキーの識別名。",
+   "backSpaceKeyName": "1文字削除に使うBackspaceキーの識別名。",
+   "returnKeyName": "コマンドを実行するReturnキーの識別名。",
+   "enterKeyName": "コマンドを実行するEnterキーの識別名。",
+   "leftShiftKeyName": "大文字と小文字を切り替える左Shiftキーの識別名。",
+   "downArrowKeyName": "入力履歴を新しい方向へたどる下矢印キーの識別名。",
+   "upArrowKeyName": "入力履歴を古い方向へたどる上矢印キーの識別名。",
+   "alphaKeyName": "英字キーを表す接頭辞。押された文字の判定に使う。",
+   "capslockKeyName": "大文字と小文字を切り替えるCapsLockキーの識別名。",
+   "showDebugPrint": "コマンド解析や補完の過程をログ出力するデバッグ用。"
+  }
+ },
+ {
+  "type": "customCharacterControllerBaseBuilder",
+  "fields": {
+   "mainCustomCharacterControllerBase": "設定リスト適用後に更新する対象のキャラクター制御。",
+   "currentArrayElement": "Inspector表示用のエディタ内部参照で、保存される設定値ではない。"
+  }
+ },
+ {
+  "type": "decalManager",
+  "fields": {
+   "fadeDecals": "オンにすると着弾デカールをフェードさせて消す。",
+   "fadeSpeed": "デカールのフェード速度。値が大きいほど早く消える。",
+   "projectileImpactSoundPrefab": "着弾音用のプレハブ。開始時に静的変数へコピーされる。",
+   "disableFullDecallSystem": "オンにすると着弾デカール処理全体を停止する。",
+   "decalsPlacedOnSurfacesEnabled": "オンにすると着弾点に焦げ跡デカールを配置する。",
+   "particlesPlacedOnSurfaceEnabled": "オンにすると着弾点にパーティクルを生成する。",
+   "soundsPlacedOnSurfaceEnabled": "オンにすると着弾時に効果音を再生する。"
+  }
+ },
+ {
+  "type": "decalTypeInformation",
+  "fields": {
+   "mainManagerName": "参照するデカールマネージャーの識別名（既定は`Decal Manager`）。",
+   "decalSurfaceActive": "オフにするとこのオブジェクトへのデカール付着を無効にする。",
+   "parentScorchOnThisObject": "オンにすると焦げ跡をこのオブジェクトの子として付ける。",
+   "showGizmo": "シーンビューにデカール名のラベルを表示する。",
+   "gizmoLabelColor": "シーンビューに出すラベルの文字色。",
+   "showDebugPrint": "デカールタイプ変更時にログを出すデバッグ用フラグ。"
+  }
+ }
+]

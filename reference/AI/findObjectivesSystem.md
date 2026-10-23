@@ -1,0 +1,643 @@
+# findObjectivesSystem
+
+- **種別**: MonoBehaviour（コンポーネント）
+- **継承 / 実装**: `MonoBehaviour`
+- **ソース**: `AI/findObjectivesSystem.cs:6`
+
+**概要**: AIキャラクターの索敵と目標選択を担うMonoBehaviour。FOVトリガーやレイキャストで敵を検出して脅威確認・敵リスト管理・徘徊や巡回・相棒追従・ノイズ反応・攻撃タイプ別の距離制御までをまとめて行い、実際の移動や攻撃は`AINavMesh`と各`AIBehaviorInfo`へ委譲する。
+
+## インスペクター設定
+
+カスタムエディタで表示順・表示名が制御されています。
+
+### Main Target Detection Settings
+
+| ラベル | フィールド | 型 | 既定値 | 補足 |
+| --- | --- | --- | --- | --- |
+| Layer Mask | `layerMask` | `LayerMask` | – | – |
+| Layer To Check Targets | `layerToCheckTargets` | `LayerMask` | – | – |
+| Use Custom Layer On Target Detected | `useCustomLayerOnTargetDetected` | `bool` | – | – |
+| Custom Layer On Target Detected | `customLayerOnTargetDetected` | `LayerMask` | – | – |
+| Min Distance To Look At Target | `minDistanceToLookAtTarget` | `float` | 6 | – |
+| Extra Field Of View Radius On Spot | `extraFieldOfViewRadiusOnSpot` | `float` | – | – |
+| Avoid Enemies | `avoidEnemies` | `bool` | – | – |
+| Disable Avoid Enemies On Target Lost | `disableAvoidEnemiesOnTargetLost` | `bool` | – | – |
+| Look At Target Speed | `lookAtTargetSpeed` | `float` | 10 | – |
+| Delay To Enable View Trigger After Target Lost | `delayToEnableViewTriggerAfterTargetLost` | `float` | 1 | – |
+| Use Max Distance Range To Detect Targets | `useMaxDistanceRangeToDetectTargets` | `bool` | – | – |
+| Max Distance Range To Detect Targets | `maxDistanceRangeToDetectTargets` | `float` | – | – |
+| Avoid Lose Track Of Detected Targets | `avoidLoseTrackOfDetectedTargets` | `bool` | – | – |
+| Ignore Triggers On Target Detection | `ignoreTriggersOnTargetDetection` | `bool` | true | – |
+| Check Layer On Trigger Target Detection | `checkLayerOnTriggerTargetDetection` | `bool` | – | – |
+| Layer On Trigger Target Detection | `layerOnTriggerTargetDetection` | `LayerMask` | – | – |
+| Ignore On Trigger Enter And Exit On Main AI Object Enabled | `ignoreOnTriggerEnterAndExitOnMainAIObjectEnabled` | `bool` | – | – |
+| Ignore If Target Visible With Raycast Enabled | `ignoreIfTargetVisibleWithRaycastEnabled` | `bool` | – | – |
+
+### Attack On Place Settings
+
+| ラベル | フィールド | 型 | 既定値 | 補足 |
+| --- | --- | --- | --- | --- |
+| Attack Always On Place | `attackAlwaysOnPlace` | `bool` | – | – |
+| Max Raycast Distance To Always Attack On Place | `maxRaycastDistanceToAlwaysAttackOnPlace` | `float` | 200 | – |
+| Min Distance To Attack On Place | `minDistanceToAttackOnPlace` | `float` | 3 | – |
+| Max Distance To Attack On Place | `maxDistanceToAttackOnPlace` | `float` | 8 | – |
+| Max Raycast Distance To Attack On Place | `maxRaycastDistanceToAttackOnPlace` | `float` | 7 | – |
+
+### Checking Threat Settings
+
+| ラベル | フィールド | 型 | 既定値 | 補足 |
+| --- | --- | --- | --- | --- |
+| Time To Check Suspect | `timeToCheckSuspect` | `float` | – | – |
+| Check Threats Enabled | `checkThreatsEnabled` | `bool` | true | – |
+| Pause Movement When Checking Threats | `pauseMovementWhenCheckingThreats` | `bool` | – | – |
+
+### Attack Mode By Distance Settings
+
+| ラベル | フィールド | 型 | 既定値 | 補足 |
+| --- | --- | --- | --- | --- |
+| Change Attack Mode Based On Distance To Target | `changeAttackModeBasedOnDistanceToTarget` | `bool` | – | – |
+| Main Dhange AI Attack Mode By Distance | `mainDhangeAIAttackModeByDistance` | `changeAIAttackModeByDistance` | – | – |
+
+### Weapons Settings
+
+| ラベル | フィールド | 型 | 既定値 | 補足 |
+| --- | --- | --- | --- | --- |
+| Min Distance To Draw | `minDistanceToDraw` | `float` | – | – |
+| Min Distance To Aim | `minDistanceToAim` | `float` | – | – |
+| Min Distance To Shoot | `minDistanceToShoot` | `float` | – | – |
+| Min Distance To Enemy Using Weapons | `minDistanceToEnemyUsingWeapons` | `float` | 2 | – |
+| Main Weapon AI Behavior | `mainWeaponAIBehavior` | `AIBehaviorInfo` | – | – |
+
+### Powers Settings
+
+| ラベル | フィールド | 型 | 既定値 | 補足 |
+| --- | --- | --- | --- | --- |
+| Min Distance To Aim Power | `minDistanceToAimPower` | `float` | 5 | – |
+| Min Distance To Shoot Power | `minDistanceToShootPower` | `float` | 4 | – |
+| Min Distance To Enemy Using Powers | `minDistanceToEnemyUsingPowers` | `float` | 2 | – |
+| Main Power AI Behavior | `mainPowerAIBehavior` | `AIBehaviorInfo` | – | – |
+
+### Close Combat Settings
+
+| ラベル | フィールド | 型 | 既定値 | 補足 |
+| --- | --- | --- | --- | --- |
+| Min Distance To Close Combat | `minDistanceToCloseCombat` | `float` | 1.5f | – |
+| Min Distance To Enemy Using Close Combat | `minDistanceToEnemyUsingCloseCombat` | `float` | 1 | – |
+| Main Close Combat AI Behavior | `mainCloseCombatAIBehavior` | `AIBehaviorInfo` | – | – |
+
+### Melee Combat Settings
+
+| ラベル | フィールド | 型 | 既定値 | 補足 |
+| --- | --- | --- | --- | --- |
+| Min Distance To Melee | `minDistanceToMelee` | `float` | 1.5f | – |
+| Min Distance To Enemy Using Melee | `minDistanceToEnemyUsingMelee` | `float` | 1.5f | – |
+| Min Distance To Melee At Distance | `minDistanceToMeleeAtDistance` | `float` | 4.1f | – |
+| Min Distance To Enemy Using Melee At Distance | `minDistanceToEnemyUsingMeleeAtDistance` | `float` | 4 | – |
+| Main Mele AI Behavior | `mainMeleAIBehavior` | `AIBehaviorInfo` | – | – |
+
+### AI Abilities Behavior State
+
+| ラベル | フィールド | 型 | 既定値 | 補足 |
+| --- | --- | --- | --- | --- |
+| Use Abilities Behavior | `useAbilitiesBehavior` | `bool` | – | – |
+| Abilities AI Behavior | `abilitiesAIBehavior` | `AIBehaviorInfo` | – | – |
+
+### AI Turn Based Combat Behavior State
+
+| ラベル | フィールド | 型 | 既定値 | 補足 |
+| --- | --- | --- | --- | --- |
+| Turn Based Combat AI Behavior | `turnBasedCombatAIBehavior` | `AIBehaviorInfo` | – | – |
+
+### AI Vehicle Behavior
+
+| ラベル | フィールド | 型 | 既定値 | 補足 |
+| --- | --- | --- | --- | --- |
+| Vehicle AI Behavior | `vehicleAIBehavior` | `AIBehaviorInfo` | – | – |
+
+### Vision Range Settings
+
+| ラベル | フィールド | 型 | 既定値 | 補足 |
+| --- | --- | --- | --- | --- |
+| Use Vision Range | `useVisionRange` | `bool` | true | – |
+| Vision Range | `visionRange` | `float` | 90 | – |
+| Allow Detection When Too Close Even Not Visible | `allowDetectionWhenTooCloseEvenNotVisible` | `bool` | – | – |
+| Min Distance To Adquire Target | `minDistanceToAdquireTarget` | `float` | 2 | – |
+| Ignore Vision Range When Get Up | `ignoreVisionRangeWhenGetUp` | `bool` | – | – |
+| Time To Ignore Vision Range | `timeToIgnoreVisionRange` | `float` | 1 | – |
+| Use Min Angle To Target To Attack | `useMinAngleToTargetToAttack` | `bool` | true | – |
+| Min Angle To Target To Attack | `minAngleToTargetToAttack` | `float` | 60 | – |
+| Use Max Time To Lose Target If Not Visible | `useMaxTimeToLoseTargetIfNotVisible` | `bool` | – | – |
+| Max Time To Lose Target If Not Visible | `maxTimeToLoseTargetIfNotVisible` | `float` | 4 | – |
+| Lose Target If Not Visibile Only If Spotted | `loseTargetIfNotVisibileOnlyIfSpotted` | `bool` | – | – |
+| Search Enemies Around On Get Up Enabled | `searchEnemiesAroundOnGetUpEnabled` | `bool` | true | – |
+| Check For Extra Colliders On Owner If Detected | `checkForExtraCollidersOnOwnerIfDetected` | `bool` | – | – |
+
+### Hearing Settings
+
+| ラベル | フィールド | 型 | 既定値 | 補足 |
+| --- | --- | --- | --- | --- |
+| Can Hear Noises | `canHearNoises` | `bool` | true | – |
+| Check Noise Decibels | `checkNoiseDecibels` | `bool` | – | – |
+| Decibels Detection Amount | `decibelsDetectionAmount` | `float` | 0.1f | Range (0, 2) |
+| Layer To Check Noises | `layerToCheckNoises` | `LayerMask` | – | – |
+| Raycast Distance To Check Noises | `raycastDistanceToCheckNoises` | `float` | 2 | – |
+| Time To Check Noise | `timeToCheckNoise` | `float` | 4 | – |
+| Use Max Hear Distance | `useMaxHearDistance` | `bool` | – | – |
+| Max Hear Distance | `maxHearDistance` | `float` | – | – |
+| Check Noises Even If Partner Found | `checkNoisesEvenIfPartnerFound` | `bool` | true | – |
+| Use Event On Start Check Noise | `useEventOnStartCheckNoise` | `bool` | – | – |
+| Event On Start Check Noise | `eventOnStartCheckNoise` | `UnityEvent` | – | – |
+| Use Noise Reaction Info | `useNoiseReactionInfo` | `bool` | – | – |
+| Check Regular Noise State If Reaction Info Not Found | `checkRegularNoiseStateIfReactionInfoNotFound` | `bool` | true | – |
+| Main Noise Reaction Data | `mainNoiseReactionData` | `noiseReactionData` | – | – |
+| Use Noise Reaction List | `useNoiseReactionList` | `bool` | – | – |
+| Main Noise Reaction Data List | `mainNoiseReactionDataList` | `List<noiseReactionData>` | new List<noiseReactionData> () | – |
+
+### Hidden Target Visibility Settings
+
+| ラベル | フィールド | 型 | 既定値 | 補足 |
+| --- | --- | --- | --- | --- |
+| Can See Hidden Targets | `canSeeHiddenTargets` | `bool` | – | – |
+| Can See Targets On Stealth Mode | `canSeeTargetsOnStealthMode` | `bool` | – | – |
+
+### Partner Settings
+
+| ラベル | フィールド | 型 | 既定値 | 補足 |
+| --- | --- | --- | --- | --- |
+| Follow Partner On Trigger | `followPartnerOnTrigger` | `bool` | true | – |
+| Faction To Follow As Partner | `factionToFollowAsPartner` | `string` | "Player" | – |
+| Remove Partner If Too Far From AI | `removePartnerIfTooFarFromAI` | `bool` | – | – |
+| Min Distance To Remove Partner | `minDistanceToRemovePartner` | `float` | – | – |
+| Ignore Attack Targets If Following Partner | `ignoreAttackTargetsIfFollowingPartner` | `bool` | – | – |
+| Remove Partner If Dead | `removePartnerIfDead` | `bool` | – | – |
+| Remove Partner After Delay | `removePartnerAfterDelay` | `bool` | – | – |
+| Delay To Remove Current Partner | `delayToRemoveCurrentPartner` | `float` | – | – |
+| Use Event On Partner Found | `useEventOnPartnerFound` | `bool` | – | – |
+| Event On Partner Found | `eventOnPartnerFound` | `UnityEvent` | – | – |
+
+### Wander Settings
+
+| ラベル | フィールド | 型 | 既定値 | 補足 |
+| --- | --- | --- | --- | --- |
+| Wander Enabled | `wanderEnabled` | `bool` | – | – |
+| Delay Seconds To Wander To Random Position Range | `delaySecondsToWanderToRandomPositionRange` | `Vector2` | – | – |
+| Wander Position Range | `wanderPositionRange` | `Vector2` | – | – |
+| Use Max Distance To Wander From Initial Position | `useMaxDistanceToWanderFromInitialPosition` | `bool` | – | – |
+| Max Distance To Wander From Initial Position | `maxDistanceToWanderFromInitialPosition` | `float` | – | – |
+| Wander Always Farther From Initial Position | `wanderAlwaysFartherFromInitialPosition` | `bool` | – | – |
+| Ground Hit Point Offset | `groundHitPointOffset` | `float` | 0.3f | – |
+| Max Height To Wander | `maxHeightToWander` | `float` | – | – |
+| Layer Mask To Raycast To Wander | `layerMaskToRaycastToWander` | `LayerMask` | – | – |
+| Use Custom Movement Speed On Wonder | `useCustomMovementSpeedOnWonder` | `bool` | – | – |
+| Use Random Movement Speed On Wander | `useRandomMovementSpeedOnWander` | `bool` | – | – |
+| Random Range Movement Speed On Wander | `randomRangeMovementSpeedOnWander` | `Vector2` | – | – |
+| Movement Speed On Wander | `movementSpeedOnWander` | `float` | – | – |
+| Use Event On Wander Position Reached | `useEventOnWanderPositionReached` | `bool` | – | – |
+| Event On Wander Position Reached | `eventOnWanderPositionReached` | `UnityEvent` | – | – |
+| Use Events On Interrupt Wander State | `useEventsOnInterruptWanderState` | `bool` | – | – |
+| Events On Interrupt Wander State | `eventsOnInterruptWanderState` | `UnityEvent` | – | – |
+
+### Wander States Settings
+
+| ラベル | フィールド | 型 | 既定値 | 補足 |
+| --- | --- | --- | --- | --- |
+| Use Events On Wandering Info List On Position Reached | `useEventsOnWanderingInfoListOnPositionReached` | `bool` | – | – |
+| Wandering Info List | `wanderingInfoList` | `List<wanderingInfo>` | new List<wanderingInfo> () | – |
+
+### Return To Position After Action Settings
+
+| ラベル | フィールド | 型 | 既定値 | 補足 |
+| --- | --- | --- | --- | --- |
+| Return To Position When Noise Checked | `returnToPositionWhenNoiseChecked` | `bool` | – | – |
+| Position To Return After Noise Checked | `positionToReturnAfterNoiseChecked` | `Transform` | – | – |
+| Adjust Player Rotation After Noise Checked | `adjustPlayerRotationAfterNoiseChecked` | `bool` | – | – |
+| Return To Position When Partner Removed | `returnToPositionWhenPartnerRemoved` | `bool` | – | – |
+| Position To Return After Partner Removed | `positionToReturnAfterPartnerRemoved` | `Transform` | – | – |
+| Adjust Player Rotation After Player Removed | `adjustPlayerRotationAfterPlayerRemoved` | `bool` | – | – |
+| Return To Position After No Enemies Found | `returnToPositionAfterNoEnemiesFound` | `bool` | – | – |
+| Position To Return After No Enemies Found | `positionToReturnAfterNoEnemiesFound` | `Transform` | – | – |
+| Adjust Player Rotation After No Enemies Found | `adjustPlayerRotationAfterNoEnemiesFound` | `bool` | – | – |
+
+### Alert About Target Settings
+
+| ラベル | フィールド | 型 | 既定値 | 補足 |
+| --- | --- | --- | --- | --- |
+| Alert Faction On Spotted | `alertFactionOnSpotted` | `bool` | – | – |
+| Alert Faction Radius | `alertFactionRadius` | `float` | 10 | – |
+| Alert Faction From Player On Death | `alertFactionFromPlayerOnDeath` | `bool` | – | – |
+
+### Other Settings
+
+| ラベル | フィールド | 型 | 既定値 | 補足 |
+| --- | --- | --- | --- | --- |
+| Check Raycast To View Target | `checkRaycastToViewTarget` | `bool` | true | – |
+| Layer To Check Raycast To View Target | `layerToCheckRaycastToViewTarget` | `LayerMask` | – | – |
+| Surprised Character State Name | `surprisedCharacterStateName` | `string` | "Surprised" | – |
+| Wondering Character State Name | `wonderingCharacterStateName` | `string` | "Wondering" | – |
+| Min Distance To Target To Use Strafe Mode | `minDistanceToTargetToUseStrafeMode` | `float` | – | – |
+| Use Delay To Resume Activity After On Spotted Disable | `useDelayToResumeActivityAfterOnSpottedDisable` | `bool` | – | – |
+| Delay To Resume Activity After On Spotted Disable | `delayToResumeActivityAfterOnSpottedDisable` | `float` | – | – |
+| Reset Camera Rotation On Start | `resetCameraRotationOnStart` | `bool` | – | – |
+| Ignore Wait To Attack With Other AI Around Enabled | `ignoreWaitToAttackWithOtherAIAroundEnabled` | `bool` | – | – |
+
+### 2.5d Mode Settings
+
+| ラベル | フィールド | 型 | 既定値 | 補足 |
+| --- | --- | --- | --- | --- |
+| Activate2 5d Mode On Start | `activate2_5dModeOnStart` | `bool` | – | – |
+| Move In X Axis On2 5d Mode | `moveInXAxisOn2_5dMode` | `bool` | – | – |
+| Look At Target Speed On2 5d Mode | `lookAtTargetSpeedOn2_5dMode` | `float` | 20 | – |
+| Camera Vertical Rotation Speed On2 5d Mode | `cameraVerticalRotationSpeedOn2_5dMode` | `float` | – | – |
+| Camera Horizontal Rotation Speed On2 5d Mode | `cameraHorizontalRotationSpeedOn2_5dMode` | `float` | – | – |
+| Check If2 5 Mode Active On Scene On Start | `checkIf2_5ModeActiveOnSceneOnStart` | `bool` | – | – |
+| Ignore Enable Or Disable2 5d Mode | `ignoreEnableOrDisable2_5dMode` | `bool` | – | – |
+| Event On Enable2 5d Mode | `eventOnEnable2_5dMode` | `UnityEvent` | – | – |
+| Event On Disable2 5d Mode | `eventOnDisable2_5dMode` | `UnityEvent` | – | – |
+
+### Send Event To Player Detected Settings
+
+| ラベル | フィールド | 型 | 既定値 | 補足 |
+| --- | --- | --- | --- | --- |
+| Add And Remove Enemy Around To Detected Players | `addAndRemoveEnemyAroundToDetectedPlayers` | `bool` | – | – |
+| Send Character Around To Add Name | `sendCharacterAroundToAddName` | `string` | "Add Character Around" | – |
+| Send Character Around To Remove Name | `sendCharacterAroundToRemoveName` | `string` | "Remove Character Around" | – |
+| Send Remove Enemy Around On Death | `sendRemoveEnemyAroundOnDeath` | `bool` | – | – |
+
+### Event Settings
+
+| ラベル | フィールド | 型 | 既定値 | 補足 |
+| --- | --- | --- | --- | --- |
+| Use Event On Spotted | `useEventOnSpotted` | `bool` | – | – |
+| Event On Spotted | `eventOnSpotted` | `UnityEvent` | – | – |
+| Use Event On No Enemies | `useEventOnNoEnemies` | `bool` | – | – |
+| Event On No Enemies | `eventOnNoEnemies` | `UnityEvent` | – | – |
+| Use Event On Any Target Detected | `useEventOnAnyTargetDetected` | `bool` | – | – |
+| Event On Any Target Detected | `eventOnAnyTargetDetected` | `UnityEvent` | – | – |
+| Use Event To Send Current Target | `useEventToSendCurrentTarget` | `bool` | – | – |
+| Event To Send Current Target | `eventToSendCurrentTarget` | `eventParameters.eventToCallWithGameObject` | – | – |
+| Use Event To Send Removed Target | `useEventToSendRemovedTarget` | `bool` | – | – |
+| Event To Send Removed Target | `eventToSendRemovedTarget` | `eventParameters.eventToCallWithGameObject` | – | – |
+| Use Event To Send Current Target Faction Name | `useEventToSendCurrentTargetFactionName` | `bool` | – | – |
+| Event To Send Current Target Faction Name | `eventToSendCurrentTargetFactionName` | `eventParameters.eventToCallWithString` | – | – |
+| Use Event To Send Removed Target Faction Name | `useEventToSendRemovedTargetFactionName` | `bool` | – | – |
+| Event To Send Removed Target Faction Name | `eventToSendRemovedTargetFactionName` | `eventParameters.eventToCallWithString` | – | – |
+
+### AI State and Debug
+
+| ラベル | フィールド | 型 | 既定値 | 補足 |
+| --- | --- | --- | --- | --- |
+| Show Debug Print | `showDebugPrint` | `bool` | – | – |
+| Attack Type | `attackType` | `AIAttackType` | – | – |
+| On Spotted | `onSpotted` | `bool` | – | – |
+| Running Away | `runningAway` | `bool` | – | – |
+| Running Away From Position | `runningAwayFromPosition` | `bool` | – | – |
+| AI Paused | `AIPaused` | `bool` | – | – |
+| Current Enemy Info Stored | `currentEnemyInfoStored` | `bool` | – | – |
+| Searching Weapon | `searchingWeapon` | `bool` | – | – |
+| Searching Object | `searchingObject` | `bool` | – | – |
+| Seeing Current Target | `seeingCurrentTarget` | `bool` | – | – |
+| Looking At Target Position | `lookingAtTargetPosition` | `bool` | – | – |
+| AI Dead | `AIDead` | `bool` | – | – |
+| Target Is Visible | `targetIsVisible` | `bool` | – | – |
+| Checking Noise Active | `checkingNoiseActive` | `bool` | – | – |
+| Target To Attack | `targetToAttack` | `GameObject` | – | – |
+| Place To Shoot | `placeToShoot` | `Transform` | – | – |
+| Current Player Controller | `currentPlayerController` | `playerController` | – | – |
+| Returning To Position Active | `returningToPositionActive` | `bool` | – | – |
+| Adjust Rotation On Return To Position Active | `adjustRotationOnReturnToPositionActive` | `bool` | – | – |
+| AI Can See Current Target | `AICanSeeCurrentTarget` | `bool` | – | – |
+| AI Can Detect Current Target | `AICanDetectCurrentTarget` | `bool` | – | – |
+| Check If Return Complete Active | `checkIfReturnCompleteActive` | `bool` | – | – |
+| Wander State Paused | `wanderStatePaused` | `bool` | – | – |
+| Wander State Active | `wanderStateActive` | `bool` | – | – |
+| Strafe Mode Active | `strafeModeActive` | `bool` | – | – |
+| Strafe Currently Active | `strafeCurrentlyActive` | `bool` | – | – |
+| Random Walk Position Active | `randomWalkPositionActive` | `bool` | – | – |
+| Current Melee Weapon At Distance | `currentMeleeWeaponAtDistance` | `bool` | – | – |
+| Reset Vertical Camera Rotation Active | `resetVerticalCameraRotationActive` | `bool` | – | – |
+| Ignore Vision Range Active | `ignoreVisionRangeActive` | `bool` | – | – |
+| Locked2 5d Mode Active | `locked2_5dModeActive` | `bool` | – | – |
+| Turn Based Combat Action Active | `turnBasedCombatActionActive` | `bool` | – | – |
+| Pause Look At Target Debug | `pauseLookAtTargetDebug` | `bool` | – | – |
+| Pause Look At Direction Debug | `pauseLookAtDirectionDebug` | `bool` | – | – |
+
+### Partner Info
+
+| ラベル | フィールド | 型 | 既定値 | 補足 |
+| --- | --- | --- | --- | --- |
+| Partner | `partner` | `GameObject` | – | – |
+| Partner Found | `partnerFound` | `bool` | – | – |
+
+### Target Type Info
+
+| ラベル | フィールド | 型 | 既定値 | 補足 |
+| --- | --- | --- | --- | --- |
+| Target Is Character | `targetIsCharacter` | `bool` | – | – |
+| Target Is Vehicle | `targetIsVehicle` | `bool` | – | – |
+| Target Is Other Type | `targetIsOtherType` | `bool` | – | – |
+| Target Is Rider Object | `targetIsRiderObject` | `bool` | – | – |
+| Current Target Faction Name | `currentTargetFactionName` | `string` | – | – |
+
+### AI Vehicle Info
+
+| ラベル | フィールド | 型 | 既定値 | 補足 |
+| --- | --- | --- | --- | --- |
+| Current Vehicle HUD Manager | `currentVehicleHUDManager` | `vehicleHUDManager` | – | – |
+| Current Vehicle To Attack | `currentVehicleToAttack` | `vehicleHUDManager` | – | – |
+| Current Rider System | `currentRiderSystem` | `mainRiderSystem` | – | – |
+| Current Rider To Attack | `currentRiderToAttack` | `mainRiderSystem` | – | – |
+
+### AI Behavior State
+
+| ラベル | フィールド | 型 | 既定値 | 補足 |
+| --- | --- | --- | --- | --- |
+| Current AI Behavior Assigned | `currentAIBehaviorAssigned` | `bool` | – | – |
+| Current AI Behavior | `currentAIBehavior` | `AIBehaviorInfo` | – | – |
+
+### Checking Attack State
+
+| ラベル | フィールド | 型 | 既定値 | 補足 |
+| --- | --- | --- | --- | --- |
+| Current Distance To Target | `currentDistanceToTarget` | `float` | – | – |
+| Current Path Distance To Target | `currentPathDistanceToTarget` | `float` | – | – |
+| Distance Difference | `distanceDifference` | `float` | – | – |
+| Current Angle With Target | `currentAngleWithTarget` | `float` | – | – |
+| Attack Target Directly | `attackTargetDirectly` | `bool` | – | – |
+| Can Use Attack Active | `canUseAttackActive` | `bool` | – | – |
+| Inside Min Distance To Attack | `insideMinDistanceToAttack` | `bool` | – | – |
+| Min Range To Activate Attack Behavior Active | `minRangeToActivateAttackBehaviorActive` | `bool` | – | – |
+| Can Attack On Minimum Angle | `canAttackOnMinimumAngle` | `bool` | – | – |
+| Checking If Target Visible Result | `checkingIfTargetVisibleResult` | `bool` | – | – |
+
+### Checking Threat State
+
+| ラベル | フィールド | 型 | 既定値 | 補足 |
+| --- | --- | --- | --- | --- |
+| Checking Threat Visible | `checkingThreatVisible` | `bool` | – | – |
+| Checking Threat Not Visible | `checkingThreatNotVisible` | `bool` | – | – |
+| Threat Info Stored | `threatInfoStored` | `bool` | – | – |
+| Time To Check Threat | `timeToCheckThreat` | `float` | – | – |
+| Seeing Current Threath | `seeingCurrentThreath` | `bool` | – | – |
+| Posible Threat | `posibleThreat` | `GameObject` | – | – |
+| Possible Threat Detected | `possibleThreatDetected` | `bool` | – | – |
+
+### Current Enemies/Targets Detected
+
+| ラベル | フィールド | 型 | 既定値 | 補足 |
+| --- | --- | --- | --- | --- |
+| Enemies | `enemies` | `List<GameObject>` | new List<GameObject> () | – |
+| Not Enemies | `notEnemies` | `List<GameObject>` | new List<GameObject> () | – |
+| Full Enemy List | `fullEnemyList` | `List<GameObject>` | new List<GameObject> () | – |
+| Enemy Info List | `enemyInfoList` | `List<enemyInfo>` | new List<enemyInfo> () | – |
+
+### Gizmo Settings
+
+| ラベル | フィールド | 型 | 既定値 | 補足 |
+| --- | --- | --- | --- | --- |
+| Show Gizmo | `showGizmo` | `bool` | – | – |
+| Gizmo Color | `gizmoColor` | `Color` | Color.red | – |
+| Vision Range Gizmo Radius | `visionRangeGizmoRadius` | `float` | 2 | – |
+
+### Main AI Patrol Component
+
+| ラベル | フィールド | 型 | 既定値 | 補足 |
+| --- | --- | --- | --- | --- |
+| AI Patrol Manager | `AIPatrolManager` | `AIPatrolSystem` | – | – |
+
+### Components
+
+| ラベル | フィールド | 型 | 既定値 | 補足 |
+| --- | --- | --- | --- | --- |
+| Ray Cast Position | `rayCastPosition` | `Transform` | – | – |
+| Fov Trigger | `fovTrigger` | `SphereCollider` | – | – |
+| Main AI View Trigger System | `mainAIViewTriggerSystem` | `AIViewTriggerSystem` | – | – |
+| AI Nav Mesh Manager | `AINavMeshManager` | `AINavMesh` | – | – |
+| Faction Manager | `factionManager` | `characterFactionManager` | – | – |
+| Using Devices Manager | `usingDevicesManager` | `usingDevicesSystem` | – | – |
+| Player Controller Manager | `playerControllerManager` | `playerController` | – | – |
+| AI Game Object | `AIGameObject` | `GameObject` | – | – |
+
+## 公開メソッド
+
+| シグネチャ | 説明 |
+| --- | --- |
+| `checkWanderState()` | `wanderEnabled`時、相棒がいれば徘徊を止め、いなければランダム地点を算出してNavMeshの目標に設定する。 |
+| `clampPositionTo2_5dMode(Vector3 newPosition)` | 2.5Dモード有効時、固定カメラのピボットに合わせてXまたはZを固定した座標を返す。 |
+| `disableWanderValues()` | 徘徊の待機・到達フラグをfalseにし、徘徊用のNavMesh速度設定を解除する。 |
+| `checkIfInterruptWanderState()` | 徘徊実行中なら`disableWanderValues`で徘徊状態を解除し、中断時イベントを発火する。 |
+| `disableWanderState()` | `wanderEnabled`なら徘徊を中断してイベントを送り、`wanderEnabled`をfalseにする。 |
+| `setWanderEnabledState(bool state)` | `wanderEnabled`フラグを設定するだけ。 |
+| `setOriginalWanderEnabled()` | `wanderEnabled`を保存済みの初期値`originalWanderEnabled`に戻す。 |
+| `checkIfUseEventsOnInterruptWanderState()` | 徘徊中断イベントを使う設定なら`eventsOnInterruptWanderState`を発火するだけ。 |
+| `setWanderStatePaused(bool state)` | `wanderStatePaused`を設定し、その値をコンソールに出力する。 |
+| `setWanderingInfoState(string nameToSearch)` | 名前一致の`wanderingInfoList`要素を現在の徘徊情報に選び、他要素の`isCurrentState`をfalseにする。 |
+| `setMoveInXAxisOn2_5dModeState(bool state)` | `moveInXAxisOn2_5dMode`フラグを設定するだけ。 |
+| `enableOrDisable2_5ModeOnAIWithPivotPositionValues(bool state, Vector3 newLockedCameraPivotPosition, bool moveInXAxisOn2_5dModeState)` | 無視フラグが立っていなければ2.5D切替を行い、プレイヤーカメラの固定ピボット座標を指定値に差し替える。 |
+| `enableOrDisable2_5ModeOnAI(bool state)` | 2.5D有効状態をカメラ・NavMesh・注視速度へ反映し、切替イベントを発火する。 |
+| `isLocked2_5dModeActive()` | `locked2_5dModeActive`を返すだけ。 |
+| `isTurnBasedCombatActionActive()` | `turnBasedCombatActionActive`を返すだけ。 |
+| `setTurnBasedCombatActionActiveState(bool state)` | ターン制戦闘フラグを設定し、ターン制・現在・アビリティの各ビヘイビアへ同じ状態を伝える。 |
+| `setPossibleTargetForTurnBasedCombatSystem(GameObject newTarget)` | `possibleTargetForTurnBasedCombatSystem`に指定オブジェクトを設定するだけ。 |
+| `setPossibleTargetForTurnBasedCombatSystemAsCustomTargetToLook()` | 保持中の`possibleTargetForTurnBasedCombatSystem`を注視対象に設定する。 |
+| `setIsCurrentCharacterTurn(bool state)` | ターン制戦闘が有効なとき、手番かどうかをターン制ビヘイビアへ伝える。 |
+| `setAIOnPlayerTeamState(bool state)` | ターン制戦闘が有効なとき、プレイヤー陣営かどうかをターン制ビヘイビアへ伝える。 |
+| `setCurrentCharacterTurnTarget(GameObject newTarget)` | ターン制戦闘が有効なとき、手番の対象をターン制ビヘイビアへ設定する。 |
+| `isAIOnGround()` | `AINavMeshManager`に問い合わせて接地中かどうかを返す。 |
+| `activateJumpExternally(float jumpDistance)` | 指定距離でジャンプするよう`AINavMeshManager`へ外部から指示する。 |
+| `setJumpPower(float newValue)` | ジャンプ力を`AINavMeshManager`に設定するだけ。 |
+| `setOriginalJumpPower()` | ジャンプ力を初期値へ戻すよう`AINavMeshManager`に指示する。 |
+| `checkTargetToAttack()` | 索敵中に目標までの経路・直線距離と可視状態を更新し、攻撃オンザスポットやストレートモード、攻撃モードを切り替える。 |
+| `setStrafeModeActive(bool state)` | `strafeModeActive`フラグを設定するだけ。 |
+| `updateStrafeModeActiveState()` | 本体が空のメソッドで、何も処理しない。 |
+| `disableStrafeModeIfActive()` | ストレートモード実行中なら、プレイヤーとNavMesh側のストレート設定を解除する。 |
+| `setignoreRandomWalkInFrontDirectionEnabledState(bool state)` | `ignoreRandomWalkInFrontDirectionEnabled`フラグを設定するだけ。 |
+| `setRandomWalkPositionState(float newRandomWalkRadius)` | 半径0ならランダム歩行を停止し、それ以外は半径内の到達可能地点を探してNavMeshの目標に設定する。 |
+| `checkCurrentThreat()` | 脅威候補の可視状態を一定時間かけて確認し、確認できれば敵リストへ追加して警戒アイコンや巡回停止を更新する。 |
+| `checkTargetToRunAway()` | 逃走中に目標の可視と潜伏状態を再確認し、見失えば敵から外し、脅威確認中なら`checkCurrentThreat`を呼ぶ。 |
+| `checkIfTargetVisible(float raycastDistance)` | 射撃位置から目標方向へレイキャストし、目標に当たるかで可視判定を返す（距離0は最大距離を使用）。 |
+| `checkIfMinimumAngleToAttack()` | 目標が攻撃可能な角度内にいるかを計算して返し、`canAttackOnMinimumAngle`も更新する。 |
+| `resetCheckThreatValues()` | 脅威候補・確認タイマー・巡回停止・状態アイコンなど脅威確認関連の状態をすべて初期化する。 |
+| `checkPauseOrResumePatrolStateDuringActionActive(bool state)` | 索敵中でなければ、行動開始時に巡回を停止し、終了時に最寄りウェイポイントから巡回を再開する。 |
+| `setLookingAtTargetPositionState(bool state)` | `lookingAtTargetPosition`フラグを設定するだけ。 |
+| `isLookingAtTargetPosition()` | `lookingAtTargetPosition`を返すだけ。 |
+| `addLookDirectionToTargetOffset(float newValue)` | 注視方向のオフセット角を設定し、0以外ならオフセット有効フラグを立てる。 |
+| `lookAtCurrentPlaceToShoot()` | 現在の射撃対象位置`placeToShoot`へ向けて視線を補間回転させる。 |
+| `setCustomTargetToLook(GameObject newTarget)` | 指定オブジェクトの射撃位置を取得して`placeToShoot`に設定し、注視対象を差し替える。 |
+| `setIgnoreLookAtDirectionActiveState(bool state)` | `ignoreLookAtDirectionActive`フラグを設定するだけ。 |
+| `setRayCastPositionOffsetValue(float offsetValue)` | `rayCastPosition`のローカル位置を指定値だけ上方向へ移動する。 |
+| `setOriginalRayCastPositionOffsetValue()` | `rayCastPosition`の高さを保存済みの初期値`originalRayCastPosition`に戻す。 |
+| `setLookAtTargetSpeedValue(float newValue)` | 注視の補間速度`lookAtTargetSpeed`を設定するだけ。 |
+| `checkCharacterFaction(GameObject character, bool damageReceived, bool ignoreAddVehicleDriverAsEnemy)` | 対象やその運転手の陣営を敵かどうか判定し、敵なら運転手追加の無視設定を除いて敵リストへ追加してtrueを返す。 |
+| `checkSuspect(GameObject currentSuspect)` | 脅威確認が有効でターン制戦闘中でなければ、指定オブジェクトを疑わしい対象として確認を開始する。 |
+| `cancelCheckSuspect(GameObject currentSuspect)` | 疑わしい対象がいなくなったとき、条件を満たせば脅威確認状態を破棄する。 |
+| `checkShootOrigin(GameObject attacker)` | 攻撃者を陣営判定し、敵なら敵リストへ追加して被攻撃フラグと陣営の検出記録を立てる。 |
+| `addNotEnemy(GameObject notEnemy)` | `characterFactionManager`を持つ対象を非敵リスト`notEnemies`に追加する。 |
+| `updateCurrentTargetSelectedInfo()` | 現在のAIビヘイビアへ現在目標の選択情報更新を委譲する。 |
+| `removeTargetInfo()` | 索敵状態を解除して目標と射撃位置を消去し、FOVを戻して巡回や通常行動を再開する。 |
+| `stopResumeRegularActivityCoroutine()` | 通常行動の再開を遅延させるコルーチンが実行中なら停止する。 |
+| `checkResumeRegularActivity()` | 既存コルーチンを止めたうえで、指定遅延後に`resumeRegularActivity`を呼ぶコルーチンを開始する。 |
+| `resumeRegularActivity()` | 注視を解除し、相棒または巡回へ目標を切り替えて脅威確認状態をリセットする。 |
+| `stopEnableViewTriggerCoroutine()` | 視界トリガーを再有効化する遅延コルーチンを停止する。 |
+| `enableViewTrigger()` | 遅延後に`mainAIViewTriggerSystem`をアクティブ化するコルーチンを開始し、既存のコルーチンは停止する。 |
+| `checkIfResumeAfterNoEnemiesFound()` | 敵が見つからなかった際、指定の帰還地点をNavMeshの目標に設定して帰還状態を開始する。 |
+| `checkIfResumeAfterCheckingNoise()` | 雑音確認を終了し、相棒追従か巡回の再開、必要ならノイズ確認後の帰還地点への移動を行う。 |
+| `checkIfResumeAfterRemovingPartner()` | 相棒解除後、巡回を再開するか設定された帰還地点へ戻るかを選んで実行する。 |
+| `resetCheckingNoiseState()` | 雑音確認フラグをfalseにし、回転調整中ならキャラクターの回転コルーチンを停止する。 |
+| `setIgnoreVisionRangeActiveState(bool state)` | `ignoreVisionRangeActive`フラグを設定するだけ。 |
+| `setAvoidEnemiesState(bool state)` | `avoidEnemies`フラグを設定するだけ。 |
+| `setRunningAwayState(bool state)` | `runningAway`フラグを設定するだけ。 |
+| `checkIfTargetIsPhysicallyVisible(GameObject targetToCheck, bool checkingSuspect)` | 射撃位置から対象へレイキャストし、対象（車両やライダー含む）の部位に当たるかで物理的可視を返す。 |
+| `setAttackMode(bool attackTargetDirectlyValue, bool targetCurrentlyVisible)` | 攻撃タイプ別の距離・角度判定で`canUseAttackActive`を更新し各攻撃ビヘイビアを更新する（第1引数は未使用）。 |
+| `checkIfAIDetectsTargetOnRangeOutOfViewWithProbability(int probablityAmount)` | 0〜100の乱数が指定確率未満なら`closestTarget`で目標を選び`targetAdquired`を呼ぶ。 |
+| `targetAdquired()` | 捕捉状態にしてFOV半径を拡大し、視界トリガー停止・陣営通知・驚きアイコン・イベント送信を行う。 |
+| `alertAIFactionFromTargetToAttack(GameObject newTarget)` | 指定目標を陣営システムへ通知し、周囲の同陣営AIに索敵と攻撃を促す。 |
+| `alertAIFactionToSearchAndAttackPlayer()` | シーン内のメインプレイヤーを対象に陣営へ警戒を通知する。 |
+| `alertAIFactionToSearchAndAttackPlayerOnDeath()` | 死亡時に通知する設定なら、メインプレイヤーへの警戒通知を実行する。 |
+| `setBehaviorStatesPausedState(bool state)` | `behaviorStatesPaused`を保存し、現在のAIビヘイビアへ一時停止状態を伝える。 |
+| `setWaitToActivateAttackActiveState(bool state)` | 攻撃開始待ちフラグを現在のビヘイビアと、有効ならアビリティビヘイビアへ伝える。 |
+| `setBehaviorAttackEnabledState(bool state)` | 現在のAIビヘイビアの攻撃許可状態を設定する。 |
+| `isIgnoreWaitToAttackWithOtherAIAroundEnabled()` | `ignoreWaitToAttackWithOtherAIAroundEnabled`を返すだけ。 |
+| `setUseRandomWalkEnabledState(bool state)` | 現在のAIビヘイビアのランダム歩行使用状態を設定する。 |
+| `setOriginalUseRandomWalkEnabledState()` | 現在のAIビヘイビアのランダム歩行設定を初期値へ戻す。 |
+| `setIgnoreRandomWalkActiveState(bool state)` | 現在のAIビヘイビアのランダム歩行無視状態を設定する。 |
+| `updatePowersBehavior()` | `mainPowerAIBehavior`のAI行動状態更新を呼ぶ。 |
+| `updatePowersAttack()` | `mainPowerAIBehavior`へ攻撃可否`canUseAttackActive`を渡して攻撃状態を更新させる。 |
+| `updatePowersInsideMinRange()` | `mainPowerAIBehavior`へ最小距離内かどうかを渡して距離状態を更新させる。 |
+| `updateFireWeaponsBehavior()` | `mainWeaponAIBehavior`のAI行動状態更新を呼ぶ。 |
+| `updateFireWeaponsAttack()` | `mainWeaponAIBehavior`へ攻撃可否を渡して攻撃状態を更新させる。 |
+| `updateFireWeaponsInsideMinRange()` | `mainWeaponAIBehavior`へ最小距離内かどうかを渡して距離状態を更新させる。 |
+| `updateCloseCombatBehavior()` | `mainCloseCombatAIBehavior`のAI行動状態更新を呼ぶ。 |
+| `updateCloseCombatAttack()` | `mainCloseCombatAIBehavior`へ攻撃可否を渡して攻撃状態を更新させる。 |
+| `updateCloseCombatInsideMinRange()` | `mainCloseCombatAIBehavior`へ最小距離内かどうかを渡して距離状態を更新させる。 |
+| `updateMeleeBehavior()` | `mainMeleAIBehavior`のAI行動状態更新を呼ぶ。 |
+| `updateMeleeAttack()` | `mainMeleAIBehavior`へ攻撃可否を渡して攻撃状態を更新させる。 |
+| `updateMeleeInsideMinRange()` | `mainMeleAIBehavior`へ最小距離内かどうかを渡して距離状態を更新させる。 |
+| `resetBehaviorStates()` | 武器・パワー・近接・メレーの各攻撃ビヘイビアの行動状態をリセットする。 |
+| `setAIPausedState(bool state)` | `AIPaused`フラグを設定するだけ。 |
+| `pauseAction(bool state)` | AIの停止・死亡状態を更新し、攻撃状態や徘徊・目標検出フラグをリセットして死亡時は巡回を止める。 |
+| `setAIStateToAlive()` | 死亡状態を再取得し、停止中でなければ巡回の再開と通常行動への復帰を行う。 |
+| `isAIPaused()` | `AIPaused`を返すだけ。 |
+| `setTargetDetectionActiveOnPausedAIState(bool state)` | `targetDetectionActiveOnPausedAIState`フラグを設定するだけ。 |
+| `checkObject(GameObject objectToCheck)` | 対象のColliderを取得し、トリガー進入として`checkTriggerInfo`を呼ぶ。 |
+| `setObjectOutOfRange(GameObject objectToCheck)` | 対象のColliderを取得し、トリガー退出として`checkTriggerInfo`を呼ぶ。 |
+| `setRemovePartnerAfterDelayState(bool state)` | `removePartnerAfterDelay`フラグを設定するだけ。 |
+| `setDelayToRemoveCurrentPartnerValue(float newValue)` | `delayToRemoveCurrentPartner`を設定するだけ。 |
+| `addPlayerAsPartner(GameObject objectToCheck)` | 相棒追従を有効にして、指定オブジェクトをトリガー進入扱いで確認する。 |
+| `removeCurrentPartner()` | 相棒追従フラグをfalseにして`removePartner`で相棒を解除する。 |
+| `isPartnerFound()` | `partnerFound`を返すだけ。 |
+| `canCheckSuspect(int suspectLayer)` | 指定レイヤーが検出対象レイヤー`layerToCheckTargets`に含まれるかを返す。 |
+| `checkTriggerInfo(Collider col, bool isEnter)` | トリガー進入・退出で陣営を判定し、敵なら敵リストへ追加、退出なら削除、同陣営なら相棒設定を試みる。 |
+| `setRemovePartnerPausedState(bool state)` | `removePartnerPausedState`を設定し、NavMesh側の相棒解除停止状態も同期する。 |
+| `removePartner()` | 相棒解除が停止されていなければ、相棒情報とNavMesh側の相棒設定を解除する。 |
+| `sendRemoteEventToPartner(string remoteEventName)` | 相棒が見つかっている場合のみ、相棒に指定のリモートイベントを送る。 |
+| `checkNoisePosition(Vector3 noisePosition, float noiseDecibels, bool forceNoiseDetection, int noiseID)` | 聴覚可否とデシベル・ID別の反応設定を確認し、条件を満たせばノイズ地点を目標にして確認や逃走を開始する。 |
+| `resetAttackState()` | 武器・パワー・近接・メレーの各攻撃ビヘイビアの攻撃状態をリセットする。 |
+| `setNewFireWeaponMinDistanceValues(float minDistanceToDrawValue, float minDistanceToAimValue, float minDistanceToShootValue)` | 武器の抜刀・照準・射撃の各最小距離をまとめて設定する。 |
+| `setExtraMinDistanceState(bool state, float extraDistance)` | 指定距離を各攻撃の最小距離へ加算し、falseなら初期値に戻す。 |
+| `setNewMinDistanceToCloseCombat(float newValue)` | 近接攻撃の最小距離とその初期値を設定する。 |
+| `setNewMinDistanceToEnemyUsingCloseCombat(float newValue)` | 近接攻撃時に敵へ詰める距離を設定する。 |
+| `setNewMinDistanceToMelee(float newValue)` | メレー攻撃の最小距離とその初期値を設定する。 |
+| `setMinDistanceToEnemyUsingMelee(float newValue)` | メレー時に敵へ詰める距離を設定する。 |
+| `checkCharactersAroundAI()` | 非敵リストの全オブジェクトを対象に敵判定をやり直す。 |
+| `isSearchingWeapon()` | `searchingWeapon`を返すだけ。 |
+| `setSearchigWeaponState(bool state)` | `searchingWeapon`フラグを設定するだけ。 |
+| `setSearchingObjectState(bool state)` | `searchingObject`フラグを設定するだけ。 |
+| `isSearchingObject()` | `searchingObject`を返すだけ。 |
+| `getDistanceToTarget()` | 索敵中なら目標までの直線距離を返し、それ以外は-1を返す。 |
+| `getCurrentTargetToAttack()` | `targetToAttack`を返すだけ。 |
+| `getAIGameObject()` | `AIGameObject`を返すだけ。 |
+| `isOnSpotted()` | `onSpotted`を返すだけ。 |
+| `getRemainingPathDistanceToTarget()` | NavMeshの残り経路距離を返し、取得できなければ直線距離に切り替える。 |
+| `getCurrentDistanceToTarget()` | `AINavMeshManager`から現在の目標距離を取得して返す。 |
+| `updateCurrentPathDistanceToTargetValue()` | NavMeshの残り経路距離で`currentPathDistanceToTarget`を更新し、無効時は直線距離を使う。 |
+| `checkEventOnSpottedStateChange()` | 索敵状態に応じて発見時または敵なし時のイベントを発火し、未発見時は行動状態をリセットする。 |
+| `searchEnemiesAround()` | 敵・非敵・敵情報リストを空にして最寄り目標を選び直し、必要ならFOVで再検出させる。 |
+| `resetAITargets()` | 索敵・脅威状態と敵リストを初期化したうえで、周囲の敵を再検索する。 |
+| `clearFullEnemiesList()` | `fullEnemyList`を空にするだけ。 |
+| `removeCharacterAsTargetOnSameFaction()` | 陣営システムへ自オブジェクトを同陣営の攻撃対象から外すよう要求する。 |
+| `sendSignalToRemoveCharacterAsTarget(GameObject objectToRemove)` | 指定対象を敵リストと全敵リストから削除し、脅威候補なら脅威状態をリセットする。 |
+| `checkAIBehaviorStateOnCharacterSpawn()` | キャラクター出現時の状態確認を現在のビヘイビアとアビリティビヘイビアへ委譲する。 |
+| `checkAIBehaviorStateOnCharacterDespawn()` | キャラクター消滅時の状態確認を現在のビヘイビアとアビリティビヘイビアへ委譲する。 |
+| `checkAIStateToResetIfModelSwapped()` | プレイ中のみ、敵リストと索敵状態を初期化してモデル差し替え後のAI状態を再構築する。 |
+| `forceFovTriggerToDetectAnythingAround()` | `fovTrigger`を一度無効化してから再度有効化し、周囲の再検出を強制する。 |
+| `updateWeaponsAvailableValue()` | 現在のAIビヘイビアへ武器の所持状況更新を委譲する。 |
+| `setNewMinDistanceToEnemyUsingWeapons(float newValue)` | 武器使用時に敵へ詰める距離を設定し、NavMesh側にも同じ距離を渡す。 |
+| `setOriginalMinDistanceToEnemyUsingWeapons()` | 武器使用時の敵接近距離を保存済みの初期値に戻す。 |
+| `getOriginalMinDistanceToEnemyUsingWeapons()` | `originalMinDistanceToEnemyUsingWeapons`を返すだけ。 |
+| `getCurrentCharacterToAttackRadius()` | 索敵中なら目標のキャラ半径または車両半径を返し、それ以外は-1を返す。 |
+| `setWeaponsAttackMode()` | 攻撃状態をリセットして武器攻撃モードへ切り替え、敵接近距離と使用ビヘイビアを設定する。 |
+| `setPowersAttackMode()` | 攻撃状態をリセットしてパワー攻撃モードへ切り替え、敵接近距離と使用ビヘイビアを設定する。 |
+| `setCloseCombatAttackMode()` | 攻撃状態をリセットして近接攻撃モードへ切り替え、敵接近距離と使用ビヘイビアを設定する。 |
+| `setMeleeAttackMode()` | 攻撃状態をリセットしてメレー攻撃モードへ切り替え、敵接近距離と使用ビヘイビアを設定する。 |
+| `setMeleeAttackModeAtDistanceState(bool state)` | 遠距離メレー武器の使用状態に応じて、敵接近距離とメレー最小距離を切り替える。 |
+| `disableAttackMode()` | 攻撃状態をリセットし、攻撃タイプを`none`にする。 |
+| `stopAnDisableAttackMode()` | 現在のビヘイビアの攻撃を停止させたうえで、攻撃モードを無効化する。 |
+| `dropWeapon()` | 停止中でなく武器を所持していれば、現在のビヘイビアに武器を落とさせる。 |
+| `checkNoWeaponsAvailableState()` | 停止中でなければ、現在のビヘイビアに武器切れ状態の確認を行わせる。 |
+| `setIgnoreCheckPartnerOnVehicleState(bool state)` | `ignoreCheckPartnerOnVehicle`フラグを設定するだけ。 |
+| `checkPartnerState()` | 相棒が死亡しており削除設定が有効なら、相棒を解除する。 |
+| `updateAIPassengerBehaviorState()` | 車両ビヘイビアの有無を初回のみ判定し、あれば乗車中の挙動更新を呼ぶ。 |
+| `getOffFromVehicle()` | 車両ビヘイビアがあれば、AIを車両から降ろす処理を呼ぶ。 |
+| `removeStateOnVehicle()` | 車両ビヘイビアがあれば、乗車状態の解除処理を呼ぶ。 |
+| `setAICharacterOnVehicle(GameObject newVehicle)` | 車両ビヘイビアがあれば、AIを指定車両に乗せる処理を呼ぶ。 |
+| `setCheckTargetsOnTriggerPausedState(bool state)` | `checkTargetsOnTriggerPaused`フラグを設定するだけ。 |
+| `setPauseTargetDetectionOnTriggerDuration(float newDuration)` | トリガー検出の一時停止時間を設定し、基準時刻を現在時刻に更新する。 |
+| `takeObject(GameObject newObject)` | 指定オブジェクトをデバイスとして登録し、最寄りデバイス選択を経て使用する。 |
+| `placeAIOnNewPosition(Vector3 newPosition)` | AIを指定座標へ移動させるよう`AINavMeshManager`へ指示する。 |
+| `setAINewRotation(Vector3 newRotation)` | AIの回転を指定値に設定するよう`AINavMeshManager`へ指示する。 |
+| `resetAIToOriginalPosition()` | `AIParent`があれば、AIを親の位置と回転へ戻す。 |
+| `getCanReachCurrentTargetValue()` | `AINavMeshManager`に問い合わせて現在の目標へ到達可能かを返す。 |
+| `isAttackTargetDirectlyActive()` | `attackTargetDirectly`を返すだけ。 |
+| `getCurrentPartner()` | `AINavMeshManager`から現在の相棒のTransformを取得して返す。 |
+| `setUseAbilitiesBehaviorState(bool state)` | アビリティビヘイビアの使用フラグを設定し、存在すれば有効状態も同期する。 |
+| `stopCurrentAbilityAttackInProcess()` | アビリティ使用中なら、実行中のアビリティ攻撃を停止する。 |
+| `isAIBehaviorAttackInProcess()` | 現在のAIビヘイビアに攻撃処理中かどうかを問い合わせて返す。 |
+| `setDrawOrHolsterWeaponState(bool state)` | 現在のAIビヘイビアへ武器の抜刀・収納指示を渡す。 |
+| `stopCurrentAttackInProcess()` | 現在のAIビヘイビアの実行中攻撃を停止させる。 |
+| `changeCurrentAttackMode(string newModeName)` | 現在のAIビヘイビアへ攻撃モード名の変更を委譲する。 |
+| `isAttackAlwaysOnPlace()` | `attackAlwaysOnPlace`を返すだけ。 |
+| `getAINavMesh()` | `AINavMeshManager`を返すだけ。 |
+| `getPlayerControllerManager()` | `playerControllerManager`を返すだけ。 |
+| `setAttackAlwaysOnPlace(bool state)` | `attackAlwaysOnPlace`フラグを設定するだけ。 |
+| `toggleAttackAlwaysOnPlace()` | `attackAlwaysOnPlace`を反転させるだけ。 |
+| `setIgnoreAttackTargetsIfFollowingPartnerState(bool state)` | 相棒追従中の攻撃無視フラグを設定し、無効化時は索敵対象をリセットする。 |
+| `isActionActive()` | プレイヤーコントローラに現在アクション中かを問い合わせて返す。 |
+| `getCurrentEnemyPosition()` | `currentEnemyPosition`を返すだけ。 |
+| `getVerticalDistanceToCurrentEnemyPosition()` | 敵位置が設定されていれば、AIとのY方向の距離を絶対値で返す。 |
+| `setCheckForExtraCollidersOnOwnerIfDetectedState(bool state)` | `checkForExtraCollidersOnOwnerIfDetected`フラグを設定するだけ。 |
+| `setCheckForExtraCollidersOnOwnerIfDetectedStateFromEditor(bool state)` | フラグを設定した後に`updateComponent`を呼び、エディタ上で変更を反映する。 |
+| `setExtraFieldOfViewRadiusOnSpotFromEditor(float newValue)` | 発見時のFOV半径加算値を設定し、コンポーネント更新を呼ぶ。 |
+| `setAvoidEnemiesStateFromEditor(bool state)` | `avoidEnemies`を設定してコンポーネント更新を呼ぶ。 |
+| `setVisonRangeValueFromEditor(float newValue)` | 視野角`visionRange`を設定してコンポーネント更新を呼ぶ。 |
+| `setUseVisionRangeValueFromEditor(bool state)` | 視野角制限の使用フラグを設定してコンポーネント更新を呼ぶ。 |
+| `setCanHearNoiseStateFromEditor(bool state)` | 雑音聴取フラグを設定してコンポーネント更新を呼ぶ。 |
+| `setWanderEnabledStateFromEditor(bool state)` | 徘徊有効フラグを設定してコンポーネント更新を呼ぶ。 |
+| `setFollowPartnerOnTriggerFromEditor(bool state)` | 相棒追従フラグを設定し、値を出力してコンポーネント更新を呼ぶ。 |
+| `setFollowPartnerOnTriggerState(bool state)` | `followPartnerOnTrigger`フラグを設定するだけ。 |
+| `setUseNoiseReactionInfoState(bool state)` | `useNoiseReactionInfo`フラグを設定するだけ。 |
+| `setMainNoiseReactionData(noiseReactionData newNoiseReactionData)` | `mainNoiseReactionData`を差し替えるだけ。 |
+| `setUseNoiseReactionInfoStateFromEditor(bool state)` | ノイズ反応情報の使用フラグを設定してコンポーネント更新を呼ぶ。 |
+| `setMainNoiseReactionDataFromEditor(noiseReactionData newNoiseReactionData)` | ノイズ反応データを差し替えてコンポーネント更新を呼ぶ。 |
+| `setUseAbilitiesBehaviorStateFromEditor(bool state)` | アビリティビヘイビア使用フラグを設定してコンポーネント更新を呼ぶ。 |
+| `setBehaviorAttackEnabledStateFromEditor(bool state)` | 武器・パワー・近接・メレーの各ビヘイビアの攻撃許可状態をエディタから設定する。 |
+| `updateComponent()` | `GKC_Utils.updateComponent`とダーティシーン更新で、このコンポーネントの変更を反映する。 |
+
+## Unity イベント
+
+| フィールド | 型 | 説明 |
+| --- | --- | --- |
+| `eventOnStartCheckNoise` | `UnityEvent` | – |
+| `eventOnPartnerFound` | `UnityEvent` | – |
+| `eventOnWanderPositionReached` | `UnityEvent` | – |
+| `eventsOnInterruptWanderState` | `UnityEvent` | – |
+| `eventOnEnable2_5dMode` | `UnityEvent` | – |
+| `eventOnDisable2_5dMode` | `UnityEvent` | – |
+| `eventOnSpotted` | `UnityEvent` | – |
+| `eventOnNoEnemies` | `UnityEvent` | – |
+| `eventOnAnyTargetDetected` | `UnityEvent` | – |
+
+## 内部型
+
+- `AIAttackType`（enum）
+- `enemyInfo`（class）
+- `wanderingInfo`（class）

@@ -1,0 +1,558 @@
+[
+ {
+  "type": "playerCharactersManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Game Manager\\playerCharactersManager.cs",
+  "methods": [
+   {
+    "sig": "getComponentInstance()",
+    "line": 101
+   },
+   {
+    "sig": "getComponentInstanceOnApplicationPlaying()",
+    "line": 118
+   },
+   {
+    "sig": "checkPlayerElementsOnScene()",
+    "line": 202
+   },
+   {
+    "sig": "spawnPlayerOnSceneForMultiplayer()",
+    "line": 211
+   },
+   {
+    "sig": "addSpawnedPlayerOnSceneForMultiplayerWithCustomPositionRotation(GameObject newCharacter, Vector3 newPosition, Quaternion newRotation)",
+    "line": 220
+   },
+   {
+    "sig": "addSpawnedPlayerOnSceneForMultiplayer(GameObject newCharacter)",
+    "line": 233
+   },
+   {
+    "sig": "addExtraPlayerOnSceneForMultiplayer(int numberOfExtraPlayers)",
+    "line": 328
+   },
+   {
+    "sig": "addNewPlayerSpawned(GameObject newPlayer)",
+    "line": 372
+   },
+   {
+    "sig": "setNewPositionToPlayersOnScene(List<Transform> positionList)",
+    "line": 400
+   },
+   {
+    "sig": "updatePlayersInfoOnTheLevel()",
+    "line": 417
+   },
+   {
+    "sig": "checkNotNullPlayerElements()",
+    "line": 422
+   },
+   {
+    "sig": "searchPlayersOnTheLevel(bool creatingNewPlayers, bool creatingCharactersOnEditor)",
+    "line": 437
+   },
+   {
+    "sig": "setExtraCharacterList()",
+    "line": 488
+   },
+   {
+    "sig": "setPlayerID(bool creatingCharactersOnEditor)",
+    "line": 502
+   },
+   {
+    "sig": "setNumberOfPlayers(bool creatingCharactersOnEditor)",
+    "line": 528
+   },
+   {
+    "sig": "setCameraConfiguration(bool creatingCharactersOnEditor)",
+    "line": 578
+   },
+   {
+    "sig": "updateCanvasValuesByPlayer(GameObject playerControllerGameObject, GameObject pauseManagerObject, GameObject newCanvasPanel)",
+    "line": 668
+   },
+   {
+    "sig": "updateHUD(bool creatingCharactersOnEditor)",
+    "line": 734
+   },
+   {
+    "sig": "assignMapSystem(bool creatingCharactersOnEditor)",
+    "line": 744
+   },
+   {
+    "sig": "updateMainPlayerComponentsOnGameManager(bool creatingCharactersOnEditor)",
+    "line": 776
+   },
+   {
+    "sig": "enableOrDisableSingleCameraState(bool state, bool creatingCharactersOnEditor)",
+    "line": 783
+   },
+   {
+    "sig": "enableOrDisableDynamicSplitCameraState(bool state, bool creatingCharactersOnEditor)",
+    "line": 808
+   },
+   {
+    "sig": "getCameraStateByName(string cameraStateName)",
+    "line": 849
+   },
+   {
+    "sig": "setAsCurrentPlayerActive(string playerName)",
+    "line": 860
+   },
+   {
+    "sig": "setAsCurrentCharacterToControlByName(string playerName)",
+    "line": 886
+   },
+   {
+    "sig": "toogleUseOnlyKeyboardGamepad(string playerName)",
+    "line": 1126
+   },
+   {
+    "sig": "setNextCharacterToControl()",
+    "line": 1144
+   },
+   {
+    "sig": "setAsCurrentCharacterToControlByPlayerGameObject(GameObject playerGameObjectToSearch)",
+    "line": 1159
+   },
+   {
+    "sig": "setAsCurrentCharacterToControlByPlayerTransform(Transform playerTransformToSearch)",
+    "line": 1170
+   },
+   {
+    "sig": "getPauseManagerFromPlayerByIndex(int index)",
+    "line": 1177
+   },
+   {
+    "sig": "setCharactersManagerPauseState(bool state)",
+    "line": 1186
+   },
+   {
+    "sig": "isCharacterInList(GameObject characterToSearch)",
+    "line": 1199
+   },
+   {
+    "sig": "anyCharacterDead()",
+    "line": 1210
+   },
+   {
+    "sig": "getMainPlayerController()",
+    "line": 1235
+   },
+   {
+    "sig": "getMainPlayerGameObject()",
+    "line": 1244
+   },
+   {
+    "sig": "getMainPlayerCamera()",
+    "line": 1253
+   },
+   {
+    "sig": "getMainPlayerCameraComponent()",
+    "line": 1262
+   },
+   {
+    "sig": "getMainPlayerCameraTransform()",
+    "line": 1271
+   },
+   {
+    "sig": "getMainPlayerTransform()",
+    "line": 1280
+   },
+   {
+    "sig": "getMainPlayerPauseManager()",
+    "line": 1289
+   },
+   {
+    "sig": "getPlayerList()",
+    "line": 1298
+   },
+   {
+    "sig": "getCameraStateListString()",
+    "line": 1317
+   },
+   {
+    "sig": "inputSetNextCharacterToControl()",
+    "line": 1330
+   },
+   {
+    "sig": "getPlayerListCount()",
+    "line": 1350
+   },
+   {
+    "sig": "checkGameInfoToLoad(int lastSaveNumber, string currentSaveDataPath, string extraFileString)",
+    "line": 1355
+   },
+   {
+    "sig": "deleteGameInfo(int saveNumberToDelete, string currentSaveDataPath, string extraFileString)",
+    "line": 1368
+   },
+   {
+    "sig": "showSaveInfoDebug(int saveNumberToShow, string currentSaveDataPath, string extraFileString)",
+    "line": 1381
+   },
+   {
+    "sig": "checkComponentsToInitialize()",
+    "line": 1394
+   },
+   {
+    "sig": "checkSaveInfoListToLoadOnStartOnAllScenes()",
+    "line": 1409
+   },
+   {
+    "sig": "saveGameInfoFromEditor(int lastSaveNumber, string infoTypeName, string extraFileString)",
+    "line": 1422
+   },
+   {
+    "sig": "saveGameWhenReturningHomeMenu()",
+    "line": 1435
+   },
+   {
+    "sig": "checkIfPlayerIsLookingAtDeadTarget(Transform deadTarget, Transform placeToShoot)",
+    "line": 1448
+   }
+  ]
+ },
+ {
+  "type": "gameManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Game Manager\\gameManager.cs",
+  "methods": [
+   {
+    "sig": "getComponentInstance()",
+    "line": 152
+   },
+   {
+    "sig": "getComponentInstanceOnApplicationPlaying()",
+    "line": 169
+   },
+   {
+    "sig": "deleteGameInfo(int saveNumberToDelete)",
+    "line": 237
+   },
+   {
+    "sig": "showSaveInfoDebug(int saveNumberToShow)",
+    "line": 251
+   },
+   {
+    "sig": "saveGameInfoFromEditor(string infoTypeName)",
+    "line": 266
+   },
+   {
+    "sig": "saveGameWhenReturningHomeMenu()",
+    "line": 276
+   },
+   {
+    "sig": "getPlayerPrefsInfo(saveGameSystem.saveStationInfo save)",
+    "line": 550
+   },
+   {
+    "sig": "getDataPath()",
+    "line": 604
+   },
+   {
+    "sig": "getDataName()",
+    "line": 623
+   },
+   {
+    "sig": "getVersionNumber()",
+    "line": 628
+   },
+   {
+    "sig": "getFileExtension()",
+    "line": 633
+   },
+   {
+    "sig": "getCurrentSaveList()",
+    "line": 638
+   },
+   {
+    "sig": "setSaveList(List<saveGameSystem.saveStationInfo> currentList)",
+    "line": 643
+   },
+   {
+    "sig": "getLastSaveNumber()",
+    "line": 648
+   },
+   {
+    "sig": "getSlotBySaveStation()",
+    "line": 662
+   },
+   {
+    "sig": "setGamePauseState(bool state)",
+    "line": 667
+   },
+   {
+    "sig": "isGamePaused()",
+    "line": 672
+   },
+   {
+    "sig": "isUsingTouchControls()",
+    "line": 677
+   },
+   {
+    "sig": "setUseTouchControlsState(bool state)",
+    "line": 682
+   },
+   {
+    "sig": "setCharactersManagerPauseState(bool state)",
+    "line": 687
+   },
+   {
+    "sig": "getMainPlayerController()",
+    "line": 692
+   },
+   {
+    "sig": "anyCharacterDead()",
+    "line": 697
+   },
+   {
+    "sig": "getSaveCaptureFolder()",
+    "line": 702
+   },
+   {
+    "sig": "getSaveCaptureFileName()",
+    "line": 707
+   },
+   {
+    "sig": "getTouchControlsPositionFolderName()",
+    "line": 712
+   },
+   {
+    "sig": "getTouchControlsPositionFileName()",
+    "line": 717
+   },
+   {
+    "sig": "isLoadGameEnabled()",
+    "line": 722
+   },
+   {
+    "sig": "setNewChapterName(string newName)",
+    "line": 727
+   },
+   {
+    "sig": "getChapterName()",
+    "line": 732
+   },
+   {
+    "sig": "getPlayTime()",
+    "line": 737
+   },
+   {
+    "sig": "setPlayTimeValue(float newValue)",
+    "line": 742
+   },
+   {
+    "sig": "setMainCamera(Camera newCamera)",
+    "line": 747
+   },
+   {
+    "sig": "setMainPlayerGameObject(GameObject newMainPlayerGameObject)",
+    "line": 752
+   },
+   {
+    "sig": "setMainPlayerCameraGameObject(GameObject newMainPlayerCameraGameObject)",
+    "line": 757
+   },
+   {
+    "sig": "setCurrentPlayerCamera(playerCamera newCurrentPlayerCamera)",
+    "line": 762
+   },
+   {
+    "sig": "updateMainPlayerComponentsOnGameManager(GameObject newPlayerParent)",
+    "line": 767
+   },
+   {
+    "sig": "setUseTouchControlsStateFromEditor(bool state)",
+    "line": 787
+   },
+   {
+    "sig": "setCurrentPersistentDataPath()",
+    "line": 794
+   },
+   {
+    "sig": "deletePlayerPrefs()",
+    "line": 801
+   },
+   {
+    "sig": "openCurrentSaveFolder()",
+    "line": 808
+   },
+   {
+    "sig": "showExplorer(string itemPath)",
+    "line": 815
+   },
+   {
+    "sig": "getCurrentDataPath()",
+    "line": 823
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 832
+   }
+  ]
+ },
+ {
+  "type": "prefabsManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Game Manager\\prefabsManager.cs",
+  "methods": [
+   {
+    "sig": "placePrefabInScene(int typeIndex, int prefabIndex)",
+    "line": 30
+   },
+   {
+    "sig": "addPrefab(int prefabTypeIndex)",
+    "line": 71
+   },
+   {
+    "sig": "addPrefabType()",
+    "line": 82
+   },
+   {
+    "sig": "addPrefabType(int prefabTypeIndex)",
+    "line": 93
+   },
+   {
+    "sig": "getPrefabPath(string prefabType, string prefabName)",
+    "line": 104
+   },
+   {
+    "sig": "updatePrefabsListToPlaceOnScene()",
+    "line": 126
+   },
+   {
+    "sig": "makePrefabsSearchByName()",
+    "line": 160
+   },
+   {
+    "sig": "makePrefabsSearchByCategory()",
+    "line": 227
+   },
+   {
+    "sig": "placePrefabInSceneByGameObject(GameObject objectToSearch)",
+    "line": 292
+   },
+   {
+    "sig": "cleanSearchResults()",
+    "line": 310
+   },
+   {
+    "sig": "getPrefabGameObject(string prefabName)",
+    "line": 321
+   },
+   {
+    "sig": "spawnPrefabByName(string prefabName)",
+    "line": 341
+   },
+   {
+    "sig": "getPrefabSpawnOffset(string prefabName)",
+    "line": 363
+   },
+   {
+    "sig": "setURLWithNames(int prefabTypeIndex)",
+    "line": 383
+   },
+   {
+    "sig": "getAndSetAllPrefabsInFolder(int prefabTypeIndex, bool searchOnSubFolders)",
+    "line": 399
+   },
+   {
+    "sig": "selectLastPrefabSpawned()",
+    "line": 449
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 458
+   }
+  ]
+ },
+ {
+  "type": "mainManagerAdministrator",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Game Manager\\mainManagerAdministrator.cs",
+  "methods": [
+   {
+    "sig": "getComponentInstance()",
+    "line": 54
+   },
+   {
+    "sig": "getComponentInstanceOnApplicationPlaying()",
+    "line": 65
+   },
+   {
+    "sig": "setSpawnManagerOnAwakeEnabledByName(string managerName)",
+    "line": 84
+   },
+   {
+    "sig": "setSpawnManagerOnAwakeDisableddByName(string managerName)",
+    "line": 89
+   },
+   {
+    "sig": "setSpawnManagerOnAwakeEnabledStateByName(string managerName, bool state)",
+    "line": 94
+   },
+   {
+    "sig": "updateMainManagersInfoToPrefabs()",
+    "line": 107
+   },
+   {
+    "sig": "addAllMainManagersToScene()",
+    "line": 129
+   },
+   {
+    "sig": "setMainManagersOnParent()",
+    "line": 140
+   },
+   {
+    "sig": "setMainManagersOnParentFromEditor()",
+    "line": 182
+   },
+   {
+    "sig": "selectMainManagersParent()",
+    "line": 189
+   },
+   {
+    "sig": "addMainManagerToScene(string managerName)",
+    "line": 204
+   },
+   {
+    "sig": "addMainManagerToSceneWithType(string managerName, Type typeToSearch, bool callGetComponentInstance)",
+    "line": 253
+   }
+  ]
+ },
+ {
+  "type": "switchCompanionSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Game Manager\\switchCompanionSystem.cs",
+  "methods": [
+   {
+    "sig": "activateEventToSetCharacterAsAI()",
+    "line": 41
+   },
+   {
+    "sig": "activateEventToSetCharacterAsPlayer()",
+    "line": 46
+   },
+   {
+    "sig": "activateEventToSetCharacterAsOnlyPlayerActive()",
+    "line": 51
+   },
+   {
+    "sig": "activateEventToSetCharacterAsPlayerNotActive()",
+    "line": 56
+   },
+   {
+    "sig": "inputSwitchToNextCharacter()",
+    "line": 61
+   }
+  ]
+ },
+ {
+  "type": "basicSingleManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Game Manager\\basicSingleManager.cs",
+  "methods": [
+   {
+    "sig": "getComponentInstance()",
+    "line": 7
+   }
+  ]
+ }
+]

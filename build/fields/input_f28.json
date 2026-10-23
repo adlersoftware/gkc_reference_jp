@@ -1,0 +1,403 @@
+[
+ {
+  "type": "screenObjectivesSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Objectives Mission System\\screenObjectivesSystem.cs",
+  "source": "Objectives Mission System/screenObjectivesSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "showObjectivesActive",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "mainMapCreatorManagerName",
+    "label": "",
+    "section": "Other Settings"
+   }
+  ]
+ },
+ {
+  "type": "setGravity",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Gravity\\setGravity.cs",
+  "source": "Gravity/setGravity.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "useWithPlayer",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useWithNPC",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useWithVehicles",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "rotateVehicleToGravityDirection",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useCenterPointOnVehicle",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "playerTag",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "friendTag",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "enemyTag",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useWithAnyRigidbody",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "checkOnlyForArtificialGravitySystem",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "typeOfTrigger",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "setGravityMode",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "setRegularGravity",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "setZeroGravity",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "disableZeroGravity",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "setCustomGravityForce",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "customGravityForce",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "setCustomGravityForceOnCharactersEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "dropObjectIfGabbed",
+    "label": "",
+    "section": "Grabbed Objects Settings"
+   },
+   {
+    "field": "dropObjectOnlyIfNotGrabbedPhysically",
+    "label": "",
+    "section": "Grabbed Objects Settings"
+   },
+   {
+    "field": "useCustomGravityDirection",
+    "label": "",
+    "section": "Gravity Settings"
+   },
+   {
+    "field": "customGravityDirection",
+    "label": "",
+    "section": "Gravity Settings"
+   },
+   {
+    "field": "useCenterPoint",
+    "label": "",
+    "section": "Gravity Settings"
+   },
+   {
+    "field": "centerPoint",
+    "label": "",
+    "section": "Gravity Settings"
+   },
+   {
+    "field": "useCenterPointOnCharacters",
+    "label": "",
+    "section": "Gravity Settings"
+   },
+   {
+    "field": "useCenterPointForRigidbodies",
+    "label": "",
+    "section": "Gravity Settings"
+   },
+   {
+    "field": "useInverseDirectionToCenterPoint",
+    "label": "",
+    "section": "Gravity Settings"
+   },
+   {
+    "field": "changeGravityDirectionActive",
+    "label": "",
+    "section": "Gravity Settings"
+   },
+   {
+    "field": "rotateToSurfaceSmoothly",
+    "label": "",
+    "section": "Gravity Settings"
+   },
+   {
+    "field": "setCircumnavigateSurfaceState",
+    "label": "",
+    "section": "Gravity Settings"
+   },
+   {
+    "field": "circumnavigateSurfaceState",
+    "label": "",
+    "section": "Gravity Settings"
+   },
+   {
+    "field": "setCheckSurfaceInFrontState",
+    "label": "",
+    "section": "Gravity Settings"
+   },
+   {
+    "field": "checkSurfaceInFrontState",
+    "label": "",
+    "section": "Gravity Settings"
+   },
+   {
+    "field": "setCheckSurfaceBelowLedgeState",
+    "label": "",
+    "section": "Gravity Settings"
+   },
+   {
+    "field": "checkSurfaceBelowLedgeState",
+    "label": "",
+    "section": "Gravity Settings"
+   },
+   {
+    "field": "preservePlayerVelocity",
+    "label": "",
+    "section": "Gravity Settings"
+   },
+   {
+    "field": "storeSetGravityManager",
+    "label": "",
+    "section": "Gravity Settings"
+   },
+   {
+    "field": "setTargetParent",
+    "label": "",
+    "section": "Set Parent Settings"
+   },
+   {
+    "field": "setRigidbodiesParent",
+    "label": "",
+    "section": "Set Parent Settings"
+   },
+   {
+    "field": "targetParent",
+    "label": "",
+    "section": "Set Parent Settings"
+   },
+   {
+    "field": "useAnimation",
+    "label": "",
+    "section": "Animation Settings"
+   },
+   {
+    "field": "animationName",
+    "label": "",
+    "section": "Animation Settings"
+   },
+   {
+    "field": "mainAnimation",
+    "label": "",
+    "section": "Animation Settings"
+   },
+   {
+    "field": "useCenterPointList",
+    "label": "",
+    "section": "Center Point List Settings"
+   },
+   {
+    "field": "useCenterIfPointListTooClose",
+    "label": "",
+    "section": "Center Point List Settings"
+   },
+   {
+    "field": "useCenterPointListForRigidbodies",
+    "label": "",
+    "section": "Center Point List Settings"
+   },
+   {
+    "field": "useInitialObjectsOnGravityList",
+    "label": "",
+    "section": "Initial Objects On Gravity List Settings"
+   },
+   {
+    "field": "showDebugPrint",
+    "label": "",
+    "section": "Debug"
+   }
+  ]
+ },
+ {
+  "type": "simpleSwitch",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\simpleSwitch.cs",
+  "source": "Devices/simpleSwitch.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "buttonEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useSingleSwitch",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "buttonUsesAnimation",
+    "label": "",
+    "section": "Animation Settings"
+   },
+   {
+    "field": "switchAnimationName",
+    "label": "",
+    "section": "Animation Settings"
+   },
+   {
+    "field": "animationSpeed",
+    "label": "",
+    "section": "Animation Settings"
+   },
+   {
+    "field": "notUsableWhileAnimationIsPlaying",
+    "label": "",
+    "section": "Animation Settings"
+   },
+   {
+    "field": "pressSound",
+    "label": "",
+    "section": "Sound Settings"
+   },
+   {
+    "field": "pressAudioElement",
+    "label": "",
+    "section": "Sound Settings"
+   },
+   {
+    "field": "sendCurrentUser",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "useUnityEvents",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "objectToCallFunctions",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "switchTurnedOn",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "turnOnEvent",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "turnOffEvent",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "objectToActive",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "activeFunctionName",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "sendThisButton",
+    "label": "",
+    "section": "Events Settings"
+   },
+   {
+    "field": "audioSource",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "buttonAnimation",
+    "label": "",
+    "section": "Components"
+   },
+   {
+    "field": "deviceStringActionManager",
+    "label": "",
+    "section": "Components"
+   }
+  ]
+ },
+ {
+  "type": "tagLayerSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Others\\tagLayerSystem.cs",
+  "source": "Others/tagLayerSystem.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "newTag",
+    "label": "New Tag To Add",
+    "section": "Tag Manager"
+   },
+   {
+    "field": "minLayerIndexToCheck",
+    "label": "",
+    "section": "Layer Manager"
+   },
+   {
+    "field": "newLayer",
+    "label": "New Layer To Add",
+    "section": "Layer Manager"
+   }
+  ]
+ }
+]

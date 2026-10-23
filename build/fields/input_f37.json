@@ -1,0 +1,344 @@
+[
+ {
+  "type": "vehicleBuilder",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Vehicles\\vehicleBuilder.cs",
+  "source": "Vehicles/vehicleBuilder.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "vehicleName",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "layerToPlaceVehicle",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "placeVehicleOffset",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "vehicle",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "vehicleCamera",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "mainVehicleHUDManager",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "vehicleViewTransform",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "buildVehicleExplanation",
+    "label": "",
+    "section": "Explanation"
+   },
+   {
+    "field": "showGizmo",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "showGizmoLabel",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoLabelColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoRadius",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "useHandle",
+    "label": "",
+    "section": "Gizmo Settings"
+   }
+  ]
+ },
+ {
+  "type": "vehicleCameraController",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Camera\\Vehicles\\vehicleCameraController.cs",
+  "source": "Camera/Vehicles/vehicleCameraController.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "thirdPersonVerticalRotationSpeed",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "thirdPersonHorizontalRotationSpeed",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "firstPersonVerticalRotationSpeed",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "firstPersonHorizontalRotationSpeed",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "clipCastRadius",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "backClipSpeed",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "maximumBoostDistance",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "cameraBoostSpeed",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "cameraChangeEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "smoothBetweenState",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "layer",
+    "label": "Collision Layer",
+    "section": "Main Settings"
+   },
+   {
+    "field": "smoothTransitionsInNewCameraFov",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "resetCameraRotationOnGetOff",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "useSmoothCameraRotation",
+    "label": "",
+    "section": "Smooth Camera Rotation Settings"
+   },
+   {
+    "field": "useSmoothCameraRotationThirdPerson",
+    "label": "",
+    "section": "Smooth Camera Rotation Settings"
+   },
+   {
+    "field": "smoothCameraRotationSpeedVerticalThirdPerson",
+    "label": "",
+    "section": "Smooth Camera Rotation Settings"
+   },
+   {
+    "field": "smoothCameraRotationSpeedHorizontalThirdPerson",
+    "label": "",
+    "section": "Smooth Camera Rotation Settings"
+   },
+   {
+    "field": "useSmoothCameraRotationFirstPerson",
+    "label": "",
+    "section": "Smooth Camera Rotation Settings"
+   },
+   {
+    "field": "smoothCameraRotationSpeedVerticalFirstPerson",
+    "label": "",
+    "section": "Smooth Camera Rotation Settings"
+   },
+   {
+    "field": "smoothCameraRotationSpeedHorizontalFirstPerson",
+    "label": "",
+    "section": "Smooth Camera Rotation Settings"
+   },
+   {
+    "field": "useSmoothCameraFollow",
+    "label": "",
+    "section": "Follow Position Settings"
+   },
+   {
+    "field": "smoothCameraFollowSpeed",
+    "label": "",
+    "section": "Follow Position Settings"
+   },
+   {
+    "field": "smoothCameraFollowMaxDistance",
+    "label": "",
+    "section": "Follow Position Settings"
+   },
+   {
+    "field": "smoothCameraFollowMaxDistanceSpeed",
+    "label": "",
+    "section": "Follow Position Settings"
+   },
+   {
+    "field": "zoomEnabled",
+    "label": "",
+    "section": "Zoom Settings"
+   },
+   {
+    "field": "defaultStateName",
+    "label": "",
+    "section": "Vehicle Camera States"
+   },
+   {
+    "field": "currentStateName",
+    "label": "",
+    "section": "Vehicle Camera States"
+   },
+   {
+    "field": "sendCurrentCameraTransformOnChangeState",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "eventToSendCurrentCameraTransformOnChangeState",
+    "label": "",
+    "section": "Event Settings"
+   },
+   {
+    "field": "useDamageShake",
+    "label": "",
+    "section": "Camera Shake Settings"
+   },
+   {
+    "field": "useDamageShakeInThirdPerson",
+    "label": "",
+    "section": "Camera Shake Settings"
+   },
+   {
+    "field": "useDamageShakeInFirstPerson",
+    "label": "",
+    "section": "Camera Shake Settings"
+   },
+   {
+    "field": "vehicle",
+    "label": "",
+    "section": "Vehicle Elements"
+   },
+   {
+    "field": "vehicleTransformToFollow",
+    "label": "",
+    "section": "Vehicle Elements"
+   },
+   {
+    "field": "IKDrivingManager",
+    "label": "",
+    "section": "Vehicle Elements"
+   },
+   {
+    "field": "weaponManager",
+    "label": "",
+    "section": "Vehicle Elements"
+   },
+   {
+    "field": "hudManager",
+    "label": "",
+    "section": "Vehicle Elements"
+   },
+   {
+    "field": "actionManager",
+    "label": "",
+    "section": "Vehicle Elements"
+   },
+   {
+    "field": "gravityControl",
+    "label": "",
+    "section": "Vehicle Elements"
+   },
+   {
+    "field": "mainRigidbody",
+    "label": "",
+    "section": "Vehicle Elements"
+   },
+   {
+    "field": "shakingManager",
+    "label": "",
+    "section": "Vehicle Elements"
+   },
+   {
+    "field": "showGizmo",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoRadius",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "labelGizmoColor",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "showCameraDirectionGizmo",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoArrowLength",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoArrowLineLength",
+    "label": "",
+    "section": "Gizmo Settings"
+   },
+   {
+    "field": "gizmoArrowAngle",
+    "label": "",
+    "section": "Gizmo Settings"
+   }
+  ]
+ },
+ {
+  "type": "vehicleCameraShake",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Camera\\Vehicles\\vehicleCameraShake.cs",
+  "source": "Camera/Vehicles/vehicleCameraShake.cs",
+  "part": 1,
+  "total_parts": 1,
+  "fields": [
+   {
+    "field": "headBobEnabled",
+    "label": "",
+    "section": "Main Settings"
+   },
+   {
+    "field": "externalForceStateName",
+    "label": "",
+    "section": "Main Settings"
+   }
+  ]
+ }
+]

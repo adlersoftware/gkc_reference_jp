@@ -1,0 +1,181 @@
+[
+ {
+  "type": "objectToPlaceSystem",
+  "summary": "配置対象オブジェクト（ケーブル端末など）が配置済み・把持中・他オブジェクト接続中かを保持する。`putObjectSystem` との接続、イベント通知、周囲の配置先探索を仲介する。",
+  "methods": {
+   "getObjectName()": "`objectName` をそのまま返すだけ。",
+   "assignPutObjectSystem(putObjectSystem putObjectSystemToAssign)": "`currentPutObjectSystem` に引数の `putObjectSystem` を代入するだけ。",
+   "setObjectPlaceState(bool state)": "配置済みフラグ `objectPlaced` に引数を代入するだけ。",
+   "isObjectPlaced()": "配置済みフラグ `objectPlaced` を返すだけ。",
+   "isObjectInGrabbedState()": "把持中フラグ `objectInGrabbedState` を返すだけ。",
+   "setObjectToPlacedEnabledState(bool state)": "配置機能の有効フラグ `objectToPlacedEnabled` に引数を代入するだけ。",
+   "isobjectToPlacedEnabled()": "配置機能の有効フラグ `objectToPlacedEnabled` を返すだけ。",
+   "canObjectCanCallPlacedEvent()": "配置イベントを呼んでよいかの `objectCanCallPlacedEvent` を返すだけ。",
+   "canObjectCanCallRemovedEvent()": "削除イベントを呼んでよいかの `objectCanCallRemovedEvent` を返すだけ。",
+   "setObjectCanCallPlacedEventState(bool state)": "`objectCanCallPlacedEvent` に引数を代入するだけ。",
+   "setObjectCanCallRemovedEventState(bool state)": "`objectCanCallRemovedEvent` に引数を代入するだけ。",
+   "isUseCustomPlaceToPutObjectTransformActive()": "専用配置位置を使う `useCustomPlaceToPutObjectTransform` を返すだけ。",
+   "getCustomPlaceToPutObjectTransform()": "専用配置位置 `customPlaceToPutObjectTransform` を返すだけ。",
+   "isUseSecondaryObjectToPlaceConnectedEnabled()": "もう一方の端との連動設定 `useSecondaryObjectToPlaceConnected` を返すだけ。",
+   "isSecondaryObjectToPlaceConnected()": "二次側の接続状態 `secondaryObjectToPlaceConnectedState` を返すだけ。",
+   "getOtherObjectsToPlaceOnDropName()": "接続先を探す名前 `otherObjectsToPlaceOnDropName` を返すだけ。",
+   "isConnectedToOtherObjectToPlace()": "他オブジェクトと接続中かの `connectedToOtherObjectToPlace` を返すだけ。",
+   "setAdjustingObjectToPlaceInProcessState(bool state)": "配置調整中フラグ `adjustingObjectToPlaceInProcess` に引数を代入するだけ。",
+   "isAdjustingObjectToPlaceInProcess()": "配置調整中フラグ `adjustingObjectToPlaceInProcess` を返すだけ。",
+   "removeObjectIfPlaced()": "配置済みなら把持状態に戻し、`Rigidbody` の `isKinematic` を解除して重力を有効にする。",
+   "removeObjectIfConnectedToOtherObject()": "他オブジェクトと接続中なら把持状態に戻し、`Rigidbody` の `isKinematic` を解除して重力を有効にする。",
+   "setObjectInGrabbedState(bool state)": "配置有効時のみ把持状態を設定し、配置中なら解除して `removePlacedObject` と配置解除イベントを呼ぶ。",
+   "checkToSetStateOnSecondaryObjectToPlaceOnObjectPlaceStateChange(bool state, objectToPlaceSystem originalObjectToPlace)": "30回で打ち切る再帰で接続先の端へ `state` を伝播し、各端のイベントを呼ぶ。",
+   "checkStateOnExtremesDisconnected()": "接続が切れた端のうち配置済みのもののイベントとイベント呼び出し可否を解除し、二次側へ false を伝播する。",
+   "checkStateOnExtremesOnObjectPlaced()": "配置済みかつ名前条件を満たす場合に、二次側オブジェクトへ true を伝播してイベントを呼ぶ。",
+   "checkNameOnPutObjectSystemToCallEventResult(ref bool result, objectToPlaceSystem originalObjectToPlace)": "名前チェックが無効なら `result` を true にし、有効なら配置先名の一致を端まで再帰的に調べて `result` を更新する。",
+   "checkIfExtremeConnected(ref bool result, bool ignoreIfThisObjectPlaced, objectToPlaceSystem originalObjectToPlace)": "配置済みでイベント可なら `result` を true にし、そうでなければ接続先の端まで再帰して接続を判定する。",
+   "setSecondaryObjectToPlaceConnectedState(bool state)": "`secondaryObjectToPlaceConnectedState` を設定し、配置／解除イベントを出させる。",
+   "checkEventsOnCurrentPutObjectSystemState(bool state)": "`currentPutObjectSystem` へ、可否フラグを確認しつつ配置／解除イベントを出させる。",
+   "checkEventOnObjectPlacedStateChanged(bool state)": "設定が有効なら `state` に応じて `eventOnObjectPlaced` か `eventOnObjectRemoved` を発火する。",
+   "checkEventOnConnectedToOtherObjectStateChanged(bool state)": "設定が有効なら `state` に応じて接続／切断の UnityEvent を発火する。",
+   "setConnectedToOtherObjectToPlaceState(bool state, objectToPlaceSystem newObjectToPlaceSystem)": "接続／切断を設定し、親子付け・`Rigidbody` の kinematic・コリジョン無視・両端のイベントと接続状態をまとめて更新する。",
+   "checkObjectsAround()": "範囲内の `putObjectSystem` と接続対象の `objectToPlaceSystem` を探し、最近傍への配置または接続を行う。",
+   "checkIfObjectNameIsCompatible(string nameToCheck)": "名前リスト使用時のみ `otherObjectsToPlaceOnDropInfoList` に同名があるかを返し、未使用なら常に true を返す。",
+   "getCustomPlaceToPutOtherObjectToPlaceTransform(string nameToCheck)": "名前リストの一致項目の専用配置トランスフォームを返し、無ければ既定のものを返す。"
+  }
+ },
+ {
+  "type": "putObjectSystem",
+  "summary": "オブジェクトを受け取って配置する側のコンポーネントで、トリガー進入／退出や名前条件で対象を判定する。配置位置への移動、配置／解除イベント、配置数の管理を行う。",
+  "methods": {
+   "destroyCurrentObjectPlaced()": "配置位置への調整が済んでいれば `removeObject` の後に `currentObjectPlaced` を `Destroy` する。",
+   "OnTriggerEnter(Collider col)": "`ignoreTriggerEnterExitFunctionsEnabled` なら何もせず、進入として `checkTriggerInfo` を呼ぶ。",
+   "OnTriggerExit(Collider col)": "`ignoreTriggerEnterExitFunctionsEnabled` なら何もせず、退出として `checkTriggerInfo` を呼ぶ。",
+   "checkTriggerInfo(bool isEnter, GameObject objectToCheck)": "`checkObjectToPlace` へそのまま渡すだけ。",
+   "placeObject(GameObject objectToCheck)": "外部から進入扱いで `checkObjectToPlace` を呼び、対象オブジェクトの配置を試みる。",
+   "checkIfCanBePlaced(bool objectPlacedPreviously)": "前提配置数を満たせば `Rigidbody` を kinematic にし、移動を開始して `objectPlaced` を true にする。",
+   "canBeDragged(GameObject objectToCheck)": "特定オブジェクト指定か `objectToPlaceSystem` の名前条件で判定し、配置可能ならその `GameObject`、不可なら null を返す。",
+   "moveObjectToPlace(bool objectPlacedPreviously)": "移動と待機の既存コルーチンを止めてから `placeObjectIntoPosition` コルーチンを開始する。",
+   "stopMoveObjectToPlaceCoroutine()": "`placeObjectCoroutine` があれば `StopCoroutine` するだけ。",
+   "removePlacedObject()": "`useLimitToCheckIfObjectRemoved` なら距離判定用フラグを立て、そうでなければ `removeObject` を実行する。",
+   "dropCurrentObjectPlaced(bool reactivateObjectToUseOnPlaceSystem)": "配置を解除し、引数が true なら配置元の状態とイベントを戻し、`Rigidbody` に前方への力を加えて落とす。",
+   "removeObject()": "解除イベントと効果音を出し、コルーチン停止・親子解除・`objectPlaced` を false・参照の null 化を行う。",
+   "checkEventsOnObjectPlacedOrRemoved(bool state)": "`state` に応じて `objectPlacedEvent` か `objectRemovedEvent` を発火するだけ。",
+   "disableObjectPlacedFromGrab()": "配置中のオブジェクトのタグを `Untagged` にするだけ。",
+   "increaseNumberObjectsPlaced()": "`currentNumberObjectsPlaced` を 1 増やすだけ。",
+   "decreaseNumberObjectsPlaced()": "`currentNumberObjectsPlaced` を 1 減らし、負になったら 0 に戻す。",
+   "resetNumberObjectsPlaced()": "移動コルーチンを止め、配置数を 0 にして配置・進入・調整の各フラグを false にする。",
+   "playSound(AudioElement soundToPlay)": "null でなければ `AudioPlayer.PlayOneShot` でその `AudioElement` を再生する。",
+   "pausePutObject()": "既存の待機コルーチンを止めて `pausePutObjectCoroutine` を開始する。",
+   "stopPausePutObjectCoroutine()": "`pauseCoroutine` があれば `StopCoroutine` するだけ。",
+   "isPutObjectSystemEnabled()": "`putObjectSystemEnabled` を返すだけ。",
+   "getObjectName()": "`objectName` を返すだけ。",
+   "getPlaceToPutObjectPosition()": "`placeToPutObject` があればその position、無ければ自身の position を返す。"
+  }
+ },
+ {
+  "type": "grabbedObjectState",
+  "summary": "オブジェクトが把持されているかを保持する状態コンポーネントで、把持者・無重力室・物理把持の各フラグを管理する。把持／解放時の UnityEvent も持つ。",
+  "methods": {
+   "setGrabbedState(bool state)": "`grabbed` を設定し、`useEventsOnGrabbedState` が有効なら把持／解放の UnityEvent を発火する。",
+   "isGrabbed()": "`grabbed` を返すだけ。",
+   "setCurrentHolder(GameObject current)": "`currentHolder` に引数を代入するだけ。",
+   "getCurrentHolder()": "`currentHolder` を返すだけ。",
+   "setInsideZeroGravityRoomState(bool state)": "`insideZeroGravityRoom` に引数を代入するだけ。",
+   "isInsideZeroGravityRoom()": "`insideZeroGravityRoom` を返すだけ。",
+   "setCurrentZeroGravityRoom(zeroGravityRoomSystem gravityRoom)": "`currentZeroGravityRoom` に引数を代入するだけ。",
+   "getCurrentZeroGravityRoom()": "`currentZeroGravityRoom` を返すだけ。",
+   "checkGravityRoomState()": "`insideZeroGravityRoom` なら `currentZeroGravityRoom` に自分を渡して室内状態を通知する。",
+   "setCarryingObjectPhysicallyState(bool state)": "`carryingObjectPhysically` に引数を代入するだけ。",
+   "isCarryingObjectPhysically()": "`carryingObjectPhysically` を返すだけ。",
+   "removeGrabbedObjectComponent()": "`removeComponentOnDropObject` が有効なら自分自身のコンポーネントを `Destroy` する。"
+  }
+ },
+ {
+  "type": "outlineObjectSystem",
+  "summary": "マテリアルのシェーダー差し替えでアウトラインと透過を制御するコンポーネントで、描画要素と元シェーダーを保存する。表示中のプレイヤーをリスト管理し、解除時に元へ戻す。",
+  "methods": {
+   "enableCustomOutlineStateTemporaly()": "自身がアクティブなら一時表示コルーチンを開始し、`customActiveDuration` 経過後にアウトラインを自動で消す。",
+   "stopUpdateTemporalStateCoroutine()": "`temporalStateCoroutine` があれば `StopCoroutine` するだけ。",
+   "enableCustomOutlineState()": "カスタム設定値で `setOutlineState` を true として呼び、アウトラインを有効にする。",
+   "disableCustomOutlineState()": "カスタム設定値で `setOutlineState` を false として呼び、アウトラインを無効にする。",
+   "setOutlineState(bool state, Shader shaderToApply, float shaderOutlineWidth, Color shaderOutlineColor, playerController newPlayerToCheck)": "状態が変わった時だけ各 `Renderer` にシェーダー・幅・色を適用または `originalShader` へ戻し、プレイヤー登録とイベントを行う。",
+   "isOutlineActive()": "`outlineActive` を返すだけ。",
+   "getMeshParent()": "`meshParent` が未設定なら自身を代入してから返す。",
+   "storeRenderElements()": "初回のみ `meshParent` 配下の `Renderer` と元シェーダーを集め、除外設定を反映して保存する。",
+   "checkChildsObjectsToIgnore(Transform obj)": "`meshesToIgnore` か `objectsToIgnoreChildren` に含まれるかを返す。",
+   "disableOutlineAndRemoveUsers()": "プレイヤーリストを空にし、アウトラインと透過を解除して関連フラグを false にする。",
+   "setTransparencyState(bool state, Shader shaderToApply, float alphaTransparency)": "状態が変わった時だけシェーダーを差し替え `transparencyColorName` のアルファを設定し、解除時は元シェーダーかアウトラインへ戻す。",
+   "isTransparencyActive()": "`transparencyActive` を返すだけ。"
+  }
+ },
+ {
+  "type": "grabObjectsPowerSystem",
+  "summary": "パワーで周囲または注視先のオブジェクトを掴み、ボタン長押しでためた力を加えて投擲するシステム。把持リスト、照準スライダー、投擲イベントを管理する。",
+  "methods": {
+   "grabCloseObjects()": "未把持なら `grabRadius` 内のコライダーから掴めるものを登録し、1つ以上あれば `eventOnGrabObject` を発火する。",
+   "grabSingleObject()": "未把持ならカメラ前方へのレイキャストで得たコライダーを掴み、成功時に `eventOnGrabObject` を発火する。",
+   "dropObjects()": "カメラ前方の着弾点を投擲方向として全把持オブジェクトを `dropObject` し、リスト・カーソル・スライダーを片付ける。",
+   "addForceToLaunchObjects()": "待機時間の経過後、`currentForceToLaunchObjects` を増やして最小値を超えたらスライダーとカーソルを有効にする。",
+   "dropObject(grabbedObject currentGrabbedObject, Vector3 launchDirection)": "親から外してタグとレイヤーを戻し、ためた力で投擲または落下させ、把持状態と各種イベントを更新する。",
+   "checkIfDropObject(GameObject objectToCheck)": "把持リストから一致するものを探して `dropObject` を呼び、その参照を null にする。",
+   "setGrabObjectsEnabledState(bool state)": "`grabObjectsEnabled` に引数を代入するだけ。",
+   "inputGrabObjects()": "忙しくなく未把持なら、アニメを再生しカメラ注視設定に応じて単体／周囲の把持を実行してためる力を 0 に戻す。",
+   "inputHoldToLaunchObjects()": "忙しくなく把持中なら `addForceToLaunchObjects` を呼び、押下時間に応じて力をためる。",
+   "inputReleaseToLaunchObjects()": "把持中かつ待機時間の経過後に `dropObjects` を呼び、ためた力が大きければ投擲イベント、小さければ落下イベントを発火する。"
+  }
+ },
+ {
+  "type": "grabObjectGenericModeMountPointSystem",
+  "summary": "ジェネリックモードの把持で使うマウントポイントと参照位置を名前で引くためのデータ保持コンポーネント。既定ポイントとスケール倍率の設定も持つ。",
+  "methods": {
+   "isUseCustomGrabbedObjectScaleMultiplierActive()": "`useCustomGrabbedObjectScaleMultiplier` を返すだけ。",
+   "getCustomGrabbedObjectScaleMultiplier()": "`customGrabbedObjectScaleMultiplier` を返すだけ。",
+   "isGrabObjectsEnabled()": "`grabObjectsEnabled` を返すだけ。",
+   "getMountPointByName(string mountPointName)": "`objectPointInfoList` から同名の `objectTransform` を返し、見つからなければ null を返す。",
+   "getDefaultMountPoint()": "`usePointAsDefault` が true の最初の項目の `objectTransform` を返し、無ければ null を返す。",
+   "getReferencePositionByName(string mountPointName, string referencePositionName)": "指定マウント内の同名 `referencePosition` を返し、見つからなければ null を返す。"
+  }
+ },
+ {
+  "type": "grabObjectProperties",
+  "summary": "オブジェクト個別の重さ・追加把持距離・投擲用の質量などを保持し、把持／解放イベントを中継するコンポーネント。",
+  "methods": {
+   "getObjectWeight()": "`objectUsesWeight` が有効なら `objectWeight`、無効なら 0 を返す。",
+   "getExtraGrabDistance()": "`useExtraGrabDistance` が有効なら `extraGrabDistance`、無効なら 0 を返す。",
+   "checkEventsOnGrabObject()": "`useEventsOnGrabObject` が有効なら `eventOnGrabObject` を発火するだけ。",
+   "checkEventsOnDropObject()": "`useEventsOnDropObject` が有効なら `eventOnDropObject` を発火するだけ。",
+   "checkEventToSetPlayer(GameObject newPlayer)": "`useEventToSetPlayer` が有効なら `eventToSetPlayer` に引数のプレイヤーを渡して発火する。",
+   "getMainTrigger()": "`mainTrigger` を返すだけ。"
+  }
+ },
+ {
+  "type": "objectDistributorSystem",
+  "summary": "`objectToSpawn` を配置位置から生成して放出する自販機型のコンポーネント。残数制限、開閉アニメーション、生成／空／開閉イベントを扱う。",
+  "methods": {
+   "spawnObject()": "無効時は何もせず、残数を減らして表示を更新し、生成コルーチンを開始してオブジェクトを出す。",
+   "stopDistributorCoroutine()": "`playAnimationCoroutine` があれば `StopCoroutine` するだけ。",
+   "OnTriggerExit(Collider col)": "生成済みで退出したのが生成物なら、生成フラグと参照を消して閉じるコルーチンを開始する。",
+   "removeDeviceFromList()": "`electronicDeviceManager` から現在のプレイヤーを得て、その `usingDevicesSystem` の操作対象一覧から自身を外す。"
+  }
+ },
+ {
+  "type": "checkObjectOnTrigger",
+  "summary": "トリガー内に入った配置可能オブジェクトをリストで保持し、配置／退出に応じて UnityEvent を発火する判定コンポーネント。",
+  "methods": {
+   "checkObjectOnTriggerEnter(GameObject newObject)": "配置可能かつ未登録ならリストに追加し、`objectPlacedEvent` を発火して `anyObjectPlaced` を true にする。",
+   "checkObjectOnTriggerExit(GameObject newObject)": "配置可能かつ登録済みならリストから外し、空なら `anyObjectPlaced` を false にして削除イベントを発火する。"
+  }
+ },
+ {
+  "type": "grabObjectEventSystem",
+  "summary": "把持・解放時に UnityEvent を呼ぶだけの小規模なイベント中継コンポーネント。",
+  "methods": {
+   "callEventOnGrab()": "`useEventOnGrab` が有効なら `eventOnGrab` を発火するだけ。",
+   "callEventOnDrop()": "`useEventOnDrop` が有効なら `eventOnDrop` を発火するだけ。"
+  }
+ },
+ {
+  "type": "grabObjectParent",
+  "summary": "把持対象の `GameObject` を1つ保持して返すだけの参照用コンポーネント。",
+  "methods": {
+   "getObjectToGrab()": "`objectToGrab` を返すだけ。"
+  }
+ }
+]

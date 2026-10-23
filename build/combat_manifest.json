@@ -1,0 +1,1528 @@
+{
+"cuttingModeSystem": {
+"type": "cuttingModeSystem",
+"file": "Combat System/Melee Combat System/Slice System/cuttingModeSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\Melee Combat System\\Slice System\\cuttingModeSystem.cs",
+"methods": [
+{
+"sig": "setSliceInputPausedForStaminaState(bool state)",
+"line": 159
+},
+{
+"sig": "inputToggleCameraRotation()",
+"line": 164
+},
+{
+"sig": "inputActivateCut()",
+"line": 175
+},
+{
+"sig": "setCuttingModeActiveState(bool state)",
+"line": 204
+},
+{
+"sig": "checkSetBulletTime()",
+"line": 285
+},
+{
+"sig": "stopCheckSetBulletTimeCoroutine()",
+"line": 298
+},
+{
+"sig": "stopActivateCutCoroutine()",
+"line": 314
+},
+{
+"sig": "setGeneralStaminaUseMultiplierValue(float newValue)",
+"line": 362
+},
+{
+"sig": "setUseStaminaOnSliceEnabledState(bool state)",
+"line": 367
+}
+]
+},
+"runtimeShatterRecursive": {
+"type": "runtimeShatterRecursive",
+"file": "Combat System/Melee Combat System/Slice System/runtimeShatterRecursive.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\Melee Combat System\\Slice System\\runtimeShatterRecursive.cs",
+"methods": [
+{
+"sig": "activateShatterOnObject()",
+"line": 75
+},
+{
+"sig": "randomShatter()",
+"line": 100
+},
+{
+"sig": "addObjectsToShatter(GameObject newObject)",
+"line": 126
+},
+{
+"sig": "randomShatterSingle(GameObject objectToShatter)",
+"line": 133
+},
+{
+"sig": "checkEventOnShatter()",
+"line": 186
+}
+]
+},
+"simpleSliceSystem": {
+"type": "simpleSliceSystem",
+"file": "Combat System/Melee Combat System/Slice System/simpleSliceSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\Melee Combat System\\Slice System\\simpleSliceSystem.cs",
+"methods": [
+{
+"sig": "getRandomString()",
+"line": 65
+},
+{
+"sig": "setRandomString(string newValue)",
+"line": 70
+},
+{
+"sig": "setRandomString()",
+"line": 77
+},
+{
+"sig": "destroyAllSlicedPiecesByRandomString()",
+"line": 90
+},
+{
+"sig": "initializeValuesOnHackableComponent()",
+"line": 104
+},
+{
+"sig": "setDestructionPending(bool state)",
+"line": 115
+},
+{
+"sig": "activateSlice(Collider objectCollider, Vector3 newNormalInWorldSpaceValue, Vector3 positionInWorldSpace, Vector3 slicePosition, bool updateLastObjectSpeed, Vector3 lastSpeed)",
+"line": 120
+},
+{
+"sig": "searchBodyParts()",
+"line": 142
+},
+{
+"sig": "setTagOnBodyParts(string newTag)",
+"line": 178
+},
+{
+"sig": "getMainAlternatePrefab()",
+"line": 187
+},
+{
+"sig": "getSeverables()",
+"line": 192
+},
+{
+"sig": "setNewSeverablesList(GameObject newObject)",
+"line": 197
+},
+{
+"sig": "createRagdollPrefab()",
+"line": 214
+},
+{
+"sig": "setSliceEnabledState(bool state)",
+"line": 223
+},
+{
+"sig": "setMainSurfaceToSlice(surfaceToSlice newSurface)",
+"line": 232
+},
+{
+"sig": "setSliceEnabledStateFromEditor(bool state)",
+"line": 238
+}
+]
+},
+"sliceSystem": {
+"type": "sliceSystem",
+"file": "Combat System/Melee Combat System/Slice System/sliceSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\Melee Combat System\\Slice System\\sliceSystem.cs",
+"methods": [
+{
+"sig": "setCustomSliceTransformValues(string sliceInfoName)",
+"line": 126
+},
+{
+"sig": "setCustomCutTransformValues(Vector3 newCutOverlapBoxSize, Transform newcutPositionTransform, Transform newCutDirectionTransform, Transform newPlaneDefiner1, Transform newPlaneDefiner2, Transform newPlaneDefiner3)",
+"line": 147
+},
+{
+"sig": "activateCutExternally()",
+"line": 196
+},
+{
+"sig": "activateCut()",
+"line": 203
+},
+{
+"sig": "getLastCollidersListDetected()",
+"line": 232
+},
+{
+"sig": "processObject(GameObject obj, Collider objectCollider, Vector3 slicePosition)",
+"line": 249
+},
+{
+"sig": "sliceCurrentObject(GameObject obj, Collider objectCollider, Material crossSectionMaterial, Vector3 slicePosition)",
+"line": 356
+},
+{
+"sig": "checkForceToApplyOnObject(GameObject objectToDamage)",
+"line": 558
+},
+{
+"sig": "anyObjectDetectedOnLastSlice()",
+"line": 747
+}
+]
+},
+"airAttackToLandSystem": {
+"type": "airAttackToLandSystem",
+"file": "Combat System/Melee Combat System/airAttackToLandSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\Melee Combat System\\airAttackToLandSystem.cs",
+"methods": [
+{
+"sig": "activateAirAttackToLand()",
+"line": 42
+}
+]
+},
+"dualWieldMeleeWeaponObjectSystem": {
+"type": "dualWieldMeleeWeaponObjectSystem",
+"file": "Combat System/Melee Combat System/dualWieldMeleeWeaponObjectSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\Melee Combat System\\dualWieldMeleeWeaponObjectSystem.cs",
+"methods": [
+{
+"sig": "enableDualWieldMeleeweapobObject(grabbedObjectMeleeAttackSystem newGrabbedObjectMeleeAttackSystem, bool useEventsOnDamageDetected)",
+"line": 54
+},
+{
+"sig": "enableOrDisableDualWieldMeleeWeaponObject(bool state)",
+"line": 99
+},
+{
+"sig": "disableDualWieldMeleeweapobObject()",
+"line": 106
+},
+{
+"sig": "setHitCombatScale(Vector3 newScale)",
+"line": 121
+},
+{
+"sig": "setHitCombatScaleMultiplier(float newMultiplier)",
+"line": 128
+},
+{
+"sig": "setHitCombatOffset(Vector3 newValue)",
+"line": 135
+},
+{
+"sig": "setOriginalHitCombatScale()",
+"line": 142
+},
+{
+"sig": "setOriginalHitCombatOffset()",
+"line": 147
+}
+]
+},
+"hiddenMeleeSurface": {
+"type": "hiddenMeleeSurface",
+"file": "Combat System/Melee Combat System/hiddenMeleeSurface.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\Melee Combat System\\hiddenMeleeSurface.cs",
+"methods": [
+{
+"sig": "isSurfaceEnabled()",
+"line": 11
+},
+{
+"sig": "setHiddenSurfaceEnabledState(bool state)",
+"line": 16
+}
+]
+},
+"meleeAttackSurfaceInfo": {
+"type": "meleeAttackSurfaceInfo",
+"file": "Combat System/Melee Combat System/meleeAttackSurfaceInfo.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\Melee Combat System\\meleeAttackSurfaceInfo.cs",
+"methods": [
+{
+"sig": "getSurfaceName()",
+"line": 86
+},
+{
+"sig": "isSurfaceEnabled()",
+"line": 91
+},
+{
+"sig": "setNewSurfaceName(string newSurfaceName)",
+"line": 96
+},
+{
+"sig": "setOriginalSurfaceName()",
+"line": 105
+},
+{
+"sig": "setIgnoreSurfaceActiveState(bool state)",
+"line": 110
+},
+{
+"sig": "setUseRemoteEventState(bool state)",
+"line": 119
+},
+{
+"sig": "setUseRemoteEventOnWeaponState(bool state)",
+"line": 124
+},
+{
+"sig": "checkEventOnSurfaceDetected()",
+"line": 129
+},
+{
+"sig": "checkEventOnThrowWeapon()",
+"line": 136
+},
+{
+"sig": "checkEventOnReturnWeapon()",
+"line": 147
+}
+]
+},
+"meleeCombatAttackStartState": {
+"type": "meleeCombatAttackStartState",
+"file": "Combat System/Melee Combat System/meleeCombatAttackStartState.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\Melee Combat System\\meleeCombatAttackStartState.cs",
+"methods": [
+{
+"sig": "resetActivateDamageTriggerCoroutine()",
+"line": 11
+}
+]
+},
+"meleeCombatThrowReturnWeaponSystem": {
+"type": "meleeCombatThrowReturnWeaponSystem",
+"file": "Combat System/Melee Combat System/meleeCombatThrowReturnWeaponSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\Melee Combat System\\meleeCombatThrowReturnWeaponSystem.cs",
+"methods": [
+{
+"sig": "setNewGrabPhysicalObjectSystem(grabPhysicalObjectSystem newGrabPhysicalObjectSystem)",
+"line": 340
+},
+{
+"sig": "setCurrentGrabbedWeaponInfo(grabbedObjectMeleeAttackSystem.grabbedWeaponInfo newCurrentGrabbedWeaponInfo)",
+"line": 345
+},
+{
+"sig": "setNewGrabPhysicalObjectMeleeAttackSystem(grabPhysicalObjectMeleeAttackSystem newGrabPhysicalObjectMeleeAttackSystem)",
+"line": 350
+},
+{
+"sig": "removeGrabPhysicalObjectMeleeAttackSystem()",
+"line": 373
+},
+{
+"sig": "setThrowWeaponActionPausedState(bool state)",
+"line": 390
+},
+{
+"sig": "inputPressDownThrowObject()",
+"line": 395
+},
+{
+"sig": "inputPressUpThrowObject()",
+"line": 400
+},
+{
+"sig": "stopUpdateLocateTargetsCoroutine()",
+"line": 684
+},
+{
+"sig": "playSound(AudioElement newClip)",
+"line": 773
+},
+{
+"sig": "inputThrowOrReturnObject()",
+"line": 797
+},
+{
+"sig": "inputActivateTeleport()",
+"line": 838
+},
+{
+"sig": "throwObject()",
+"line": 867
+},
+{
+"sig": "setObjectThrownState(bool state)",
+"line": 892
+},
+{
+"sig": "continueThrowObject()",
+"line": 1040
+},
+{
+"sig": "checkSurfaceOnThrowWeapon(GameObject objectToCheck)",
+"line": 1758
+},
+{
+"sig": "returnObject()",
+"line": 1889
+},
+{
+"sig": "getLastTimeObjectReturn()",
+"line": 2249
+},
+{
+"sig": "checkEventOnThrowOrReturnObject(bool state)",
+"line": 2254
+},
+{
+"sig": "cancelThrowObject()",
+"line": 2265
+},
+{
+"sig": "activateTeleport()",
+"line": 2288
+},
+{
+"sig": "stopActivateTeleportCoroutine()",
+"line": 2320
+},
+{
+"sig": "setThrowObjectEnabledState(bool state)",
+"line": 2391
+},
+{
+"sig": "setReturnObjectEnabledState(bool state)",
+"line": 2400
+},
+{
+"sig": "setApplyDamageOnSurfaceDetectedOnReturnEnabledState(bool state)",
+"line": 2405
+},
+{
+"sig": "setApplyDamageOnObjectReturnPathEnabledState(bool state)",
+"line": 2410
+},
+{
+"sig": "setGeneralDamageMultiplierOnObjectReturnValue(float newValue)",
+"line": 2415
+},
+{
+"sig": "setGeneralDamageMultiplierOnReturnPathValue(float newValue)",
+"line": 2420
+},
+{
+"sig": "setGeneralDamageOnSurfaceDetectedOnThrowValue(float newValue)",
+"line": 2425
+},
+{
+"sig": "setObjectThrownTravellingToTargetState(bool state)",
+"line": 2430
+},
+{
+"sig": "isObjectThrownTravellingToTarget()",
+"line": 2435
+},
+{
+"sig": "isContinueObjecThrowActivated()",
+"line": 2440
+},
+{
+"sig": "isReturningThrownObject()",
+"line": 2445
+},
+{
+"sig": "getLastTimeObjectThrown()",
+"line": 2450
+},
+{
+"sig": "isCurrentWeaponThrown()",
+"line": 2455
+},
+{
+"sig": "setThrowObjectInputPausedForStaminaState(bool state)",
+"line": 2460
+},
+{
+"sig": "stopThrowStateOnRemoveMeleeWeapon()",
+"line": 2465
+},
+{
+"sig": "setSurfacecNotFoundState(bool state)",
+"line": 2511
+}
+]
+},
+"meleeShieldObjectSystem": {
+"type": "meleeShieldObjectSystem",
+"file": "Combat System/Melee Combat System/meleeShieldObjectSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\Melee Combat System\\meleeShieldObjectSystem.cs",
+"methods": [
+{
+"sig": "setCurrentCharacter(GameObject newObject)",
+"line": 43
+},
+{
+"sig": "getCurrentCharacter()",
+"line": 48
+},
+{
+"sig": "checkDurabilityOnBlockWithShield(float extraMultiplier)",
+"line": 53
+},
+{
+"sig": "updateDurabilityAmountState()",
+"line": 66
+},
+{
+"sig": "getDurabilityAmount()",
+"line": 73
+},
+{
+"sig": "initializeDurabilityValue(float newAmount, int currentObjectIndex)",
+"line": 82
+},
+{
+"sig": "setInventoryObjectIndex(int currentObjectIndex)",
+"line": 91
+},
+{
+"sig": "repairObjectFully()",
+"line": 98
+},
+{
+"sig": "breakFullDurabilityOnCurrentWeapon()",
+"line": 105
+},
+{
+"sig": "setUseObjectDurabilityOnBlockValue(bool newValue)",
+"line": 112
+},
+{
+"sig": "setDurabilityUsedOnBlockValue(float newValue)",
+"line": 117
+},
+{
+"sig": "setUseObjectDurabilityOnBlockValueFromEditor(bool newValue)",
+"line": 122
+},
+{
+"sig": "setDurabilityUsedOnBlockValueFromEditor(float newValue)",
+"line": 129
+},
+{
+"sig": "setObjectNameFromEditor(string newName)",
+"line": 136
+},
+{
+"sig": "setDurabilityAmountFromEditor(float newValue)",
+"line": 143
+},
+{
+"sig": "setMaxDurabilityAmountFromEditor(float newValue)",
+"line": 150
+}
+]
+},
+"meleeUISystem": {
+"type": "meleeUISystem",
+"file": "Combat System/Melee Combat System/meleeUISystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\Melee Combat System\\meleeUISystem.cs",
+"methods": [
+{
+"sig": "setCurrentMeleeWeaponName(string newName)",
+"line": 38
+},
+{
+"sig": "setCurrrentMeleeWeaponIcon(Texture newIcon)",
+"line": 45
+},
+{
+"sig": "enableOrDisableMeleeUI(bool state)",
+"line": 50
+}
+]
+},
+"meleeWeaponAttackListInfoSocket": {
+"type": "meleeWeaponAttackListInfoSocket",
+"file": "Combat System/Melee Combat System/meleeWeaponAttackListInfoSocket.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\Melee Combat System\\meleeWeaponAttackListInfoSocket.cs",
+"methods": [
+{
+"sig": "copyWeaponInfoToTemplate(bool settingInfoOnEditorTime)",
+"line": 10
+},
+{
+"sig": "copyTemplateToWeaponAttackInfo(bool settingInfoOnEditorTime)",
+"line": 19
+}
+]
+},
+"meleeWeaponRangeAttacksManager": {
+"type": "meleeWeaponRangeAttacksManager",
+"file": "Combat System/Melee Combat System/meleeWeaponRangeAttacksManager.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\Melee Combat System\\meleeWeaponRangeAttacksManager.cs",
+"methods": [
+{
+"sig": "setMeleeWeaponRangeAttackManagerActiveState(bool state)",
+"line": 63
+},
+{
+"sig": "setCurrentRangeWeaponSystemByID(int rangeWeaponID)",
+"line": 105
+},
+{
+"sig": "fireCurrentRangeWeapon()",
+"line": 129
+},
+{
+"sig": "fireCurrentRangeWeaponByAttackRangeID(int newRangeID)",
+"line": 142
+},
+{
+"sig": "startFireCurrentRangeWeapon()",
+"line": 163
+},
+{
+"sig": "stopFireCurrentRangeWeapon()",
+"line": 206
+},
+{
+"sig": "startFireCurrentRangeWeaponByAttackRangeID(int newRangeID)",
+"line": 256
+},
+{
+"sig": "enableCustomReticle(string reticleName)",
+"line": 283
+},
+{
+"sig": "disableCustomReticle(string reticleName)",
+"line": 290
+},
+{
+"sig": "disableAllCustomReticle()",
+"line": 297
+},
+{
+"sig": "inputSetAimState(bool state)",
+"line": 304
+},
+{
+"sig": "inputToggleAimState()",
+"line": 313
+},
+{
+"sig": "setAimState(bool state)",
+"line": 322
+}
+]
+},
+"meleeWeaponTransformInfoSystem": {
+"type": "meleeWeaponTransformInfoSystem",
+"file": "Combat System/Melee Combat System/meleeWeaponTransformInfoSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\Melee Combat System\\meleeWeaponTransformInfoSystem.cs",
+"methods": [
+{
+"sig": "toggleEditWeaponTransformValuesIngameStateState()",
+"line": 44
+},
+{
+"sig": "setEditWeaponTransformValuesIngameState(bool state)",
+"line": 51
+},
+{
+"sig": "selectCurrentWeaponObjectInGame()",
+"line": 68
+},
+{
+"sig": "copyTransformValuesToBuffer()",
+"line": 148
+},
+{
+"sig": "getMeleeWeaponTypeNameByRegularWeaponName(string weaponName)",
+"line": 189
+},
+{
+"sig": "pasteTransformValuesToBuffer()",
+"line": 205
+},
+{
+"sig": "cleanPositionsOnScriptable()",
+"line": 268
+},
+{
+"sig": "toggleShowHandleGizmo()",
+"line": 282
+},
+{
+"sig": "updateGrabbedWeaponReferenceValuesOnAllWeaponInfoList()",
+"line": 310
+}
+]
+},
+"meleeWeaponsGrabbedManager": {
+"type": "meleeWeaponsGrabbedManager",
+"file": "Combat System/Melee Combat System/meleeWeaponsGrabbedManager.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\Melee Combat System\\meleeWeaponsGrabbedManager.cs",
+"methods": [
+{
+"sig": "initializeMeleeManagerValues()",
+"line": 180
+},
+{
+"sig": "drawNextWeaponAvailable()",
+"line": 194
+},
+{
+"sig": "drawRandomWeaponFromPrefabList(string previousWeaponName)",
+"line": 204
+},
+{
+"sig": "inputSetWeaponByIndex(int currentNumberInput)",
+"line": 244
+},
+{
+"sig": "resetStartWithWeaponCheckedOnCharacterSpawn()",
+"line": 357
+},
+{
+"sig": "checkMeleeWeaponToUse(string weaponNameToSearch, bool checkIfWeaponNotFound)",
+"line": 436
+},
+{
+"sig": "setCheckDrawKeepWeaponAnimationPauseState(bool state)",
+"line": 490
+},
+{
+"sig": "checkIfDrawWeapon()",
+"line": 495
+},
+{
+"sig": "stopActivateDrawkeepMeleeWeaponAnimationCoroutine()",
+"line": 512
+},
+{
+"sig": "enableOrDisableMeleeWeaponsGrabbedManager(bool state)",
+"line": 694
+},
+{
+"sig": "setDrawMeleeWeaponsPausedState(bool state)",
+"line": 768
+},
+{
+"sig": "disableCurrentMeleeWeapon(string weaponName)",
+"line": 831
+},
+{
+"sig": "checkObjectMeshToEnableOrDisable(bool enableWeaponMesh, meleeWeaponGrabbedInfo currentMeleeWeaponGrabbedInfo)",
+"line": 873
+},
+{
+"sig": "getWeaponPrefabByName(string weaponName)",
+"line": 977
+},
+{
+"sig": "checkIfCanUseMeleeWeaponPrefabByName(string weaponName)",
+"line": 988
+},
+{
+"sig": "getWeaponGrabbedByName(string weaponName)",
+"line": 999
+},
+{
+"sig": "checkWeaponToStore(string weaponName, GameObject weaponGameObject)",
+"line": 1014
+},
+{
+"sig": "checkToDropWeaponFromList(string weaponName)",
+"line": 1152
+},
+{
+"sig": "disableIsCurrentWeaponStateOnAllWeapons()",
+"line": 1273
+},
+{
+"sig": "isCurrentMeleeWeaponSheathedOrCarried()",
+"line": 1280
+},
+{
+"sig": "isGrabObjectsEnabled()",
+"line": 1285
+},
+{
+"sig": "isCarryingRegularPhysicalObject()",
+"line": 1290
+},
+{
+"sig": "enableOrDisableMeleeWeaponMeshesOnCharacterBody(bool state)",
+"line": 1295
+},
+{
+"sig": "enableOrDisableMeleeWeaponMeshOnCharacterBodyByNameAndInstantiateMesh(bool state, string weaponName)",
+"line": 1335
+},
+{
+"sig": "checkIfHideWeaponMeshWhenNotUsedByName(string weaponNameToSearch)",
+"line": 1357
+},
+{
+"sig": "checkIfHideShieldMeshWhenNotUsedByName(string shieldNameToSearch)",
+"line": 1370
+},
+{
+"sig": "enableOrDisableMeleeWeaponMeshOnCharacterBodyByName(bool state, string weaponNameToSearch)",
+"line": 1383
+},
+{
+"sig": "enableOrDisableAllMeleeWeaponMeshesOnCharacterBody(bool state)",
+"line": 1400
+},
+{
+"sig": "enableOrDisableAllMeleeWeaponMeshesOnCharacterBodyCheckingIfHiddingMeshes(bool state)",
+"line": 1429
+},
+{
+"sig": "enableOrDisableAllMeleeWeaponShieldMeshesOnCharacterBody(bool state)",
+"line": 1466
+},
+{
+"sig": "enableOrDisableAllMeleeWeaponShieldMeshesOnCharacterBodyCheckingIfHiddingMeshes(bool state)",
+"line": 1497
+},
+{
+"sig": "characterIsCarryingWeapon()",
+"line": 1536
+},
+{
+"sig": "getLastTimeDrawMeleeWeapon()",
+"line": 1541
+},
+{
+"sig": "equipMeleeWeapon(string weaponNameToSearch, bool checkIfWeaponNotFound, bool ignoreDrawMeleeWeapon)",
+"line": 1547
+},
+{
+"sig": "unEquipMeleeWeapon(string weaponNameToSearch, bool dropWeaponObject)",
+"line": 1669
+},
+{
+"sig": "checkWeaponToSelectOnQuickAccessSlots(string weaponName)",
+"line": 1734
+},
+{
+"sig": "getCurrentGrabbedObjectTransform()",
+"line": 1753
+},
+{
+"sig": "isMeleeWeaponsGrabbedManagerActive()",
+"line": 1762
+},
+{
+"sig": "getCurrentWeaponName()",
+"line": 1767
+},
+{
+"sig": "getCurrentShieldName()",
+"line": 1778
+},
+{
+"sig": "getEmptyWeaponToUseOnlyShield()",
+"line": 1789
+},
+{
+"sig": "getCurrentWeaponMeshByName(string weaponName)",
+"line": 1794
+},
+{
+"sig": "isWeaponInGrabbedInfoList(string weaponName)",
+"line": 1805
+},
+{
+"sig": "getCurrentWeaponActiveName()",
+"line": 1816
+},
+{
+"sig": "isUseEquipShieldCheckWhenActivatingShieldActive()",
+"line": 1827
+},
+{
+"sig": "setUseEquipShieldCheckWhenActivatingShieldState(bool state)",
+"line": 1832
+},
+{
+"sig": "equipShield(string shieldName)",
+"line": 1837
+},
+{
+"sig": "unequipeShield(string shieldName)",
+"line": 1842
+},
+{
+"sig": "setShieldActiveState(bool state, string shieldName)",
+"line": 1882
+},
+{
+"sig": "checkEquipShieldIfNotCarryingPreviously()",
+"line": 2000
+},
+{
+"sig": "toggleDrawOrSheatheShield(string shieldName)",
+"line": 2021
+},
+{
+"sig": "drawOrSheatheShield(bool state, string shieldName, bool ignoreSetShieldActiveState)",
+"line": 2052
+},
+{
+"sig": "checkToKeepWeapon()",
+"line": 2070
+},
+{
+"sig": "checkToKeepWeaponWithoutCheckingInputActive()",
+"line": 2075
+},
+{
+"sig": "setStartGameWithWeaponState(bool state)",
+"line": 2099
+},
+{
+"sig": "setStartGameWithWeaponStateFromEditor(bool state)",
+"line": 2104
+},
+{
+"sig": "setWeaponNameToStartGame(string newName)",
+"line": 2111
+},
+{
+"sig": "updateDurabilityAmountStateOnAllObjects()",
+"line": 2116
+},
+{
+"sig": "updateDurabilityAmountStateOnObjectByName(string weaponName)",
+"line": 2148
+},
+{
+"sig": "getDurabilityAmountStateOnObjectByName(string weaponName)",
+"line": 2167
+},
+{
+"sig": "getDurabilityAmountStateOnObjectShieldByName(string weaponName)",
+"line": 2194
+},
+{
+"sig": "initializeDurabilityValue(float newAmount, string weaponName, int currentObjectIndex)",
+"line": 2222
+},
+{
+"sig": "setInventoryObjectIndex(string weaponName, int currentObjectIndex)",
+"line": 2241
+},
+{
+"sig": "initializeDurabilityValueOnShield(float newAmount, string shieldName, int currentObjectIndex)",
+"line": 2260
+},
+{
+"sig": "setInventoryObjectIndexOnShield(string shieldName, int currentObjectIndex)",
+"line": 2280
+},
+{
+"sig": "repairObjectFully(string weaponName)",
+"line": 2300
+},
+{
+"sig": "repairObjectShieldFully(string weaponName)",
+"line": 2319
+},
+{
+"sig": "breakFullDurabilityOnCurrentWeapon()",
+"line": 2339
+},
+{
+"sig": "breakFullDurabilityOnCurrentShield()",
+"line": 2354
+},
+{
+"sig": "checkDurabilityOnBlockWithShield(float extraMultiplier)",
+"line": 2367
+},
+{
+"sig": "checkIfReturnThrowWeaponOrDropItExternally()",
+"line": 2376
+},
+{
+"sig": "checkIfDropThrownWeaponWhenUsingDevice()",
+"line": 2393
+},
+{
+"sig": "isCurrentWeaponThrown()",
+"line": 2402
+},
+{
+"sig": "isAimingBowActive()",
+"line": 2407
+},
+{
+"sig": "isCuttingModeActive()",
+"line": 2412
+},
+{
+"sig": "isBlockActive()",
+"line": 2417
+},
+{
+"sig": "isDrawWeaponAtStartIfFoundOnInitializingInventoryActive()",
+"line": 2422
+},
+{
+"sig": "setWeaponNameToStartGameFromEditor(string newName)",
+"line": 2428
+},
+{
+"sig": "addNewMeleeWeaponPrefab(GameObject newWeaponPrefab, string newWeaponName, bool useBowWeaponType)",
+"line": 2435
+},
+{
+"sig": "removeMeleeWeaponPrefab(string newWeaponName)",
+"line": 2467
+},
+{
+"sig": "checkIfMeleeShieldExists(string shieldName)",
+"line": 2486
+},
+{
+"sig": "removeMeleeShieldPrefab(string shieldName)",
+"line": 2497
+},
+{
+"sig": "addNewMeleeShieldPrefab(GameObject newShieldPrefab, string newShieldName)",
+"line": 2516
+},
+{
+"sig": "inputDrawOrKeepMeleeWeapon()",
+"line": 2565
+},
+{
+"sig": "drawOrKeepMeleeWeaponWithoutCheckingInputActive()",
+"line": 2580
+},
+{
+"sig": "drawMeleeWeaponGrabbedCheckingAnimationDelay()",
+"line": 2585
+},
+{
+"sig": "resetCurrentAttackByIndex()",
+"line": 2639
+},
+{
+"sig": "activateGrabbedObjectMeleeAttackByIndex()",
+"line": 2644
+},
+{
+"sig": "activateOrDeactivateBlockGrabbedObjectMeleee(bool state)",
+"line": 2649
+},
+{
+"sig": "activateOrDeactivateBlockGrabbedObjectMeleeeCheckingCurrentState(bool state)",
+"line": 2658
+},
+{
+"sig": "setIgnoreUseDrawKeepWeaponAnimationState(bool state)",
+"line": 2671
+},
+{
+"sig": "setOriginalIgnoreUseDrawKeepWeaponAnimationState()",
+"line": 2676
+},
+{
+"sig": "setIsCarryingObjectState(bool state)",
+"line": 2681
+},
+{
+"sig": "setFullBodyAwarenessActiveState(bool state)",
+"line": 2741
+},
+{
+"sig": "getCurrentNumberOfWeaponsAvailable()",
+"line": 2760
+},
+{
+"sig": "checkIfCarryingWeaponByName(string weaponName)",
+"line": 2779
+},
+{
+"sig": "getFirstRegularMeleeWeaponTypeAvailableName()",
+"line": 2792
+},
+{
+"sig": "getFirstBowMeleeWeaponTypeAvailableName()",
+"line": 2809
+},
+{
+"sig": "isThereAnyBowMeleeWeaponTypeAvailable()",
+"line": 2826
+},
+{
+"sig": "renameWeapon(string currentWeaponName, string newWeaponName)",
+"line": 2841
+},
+{
+"sig": "selectAndDrawFirstBowMeleeWeaponTypeAvailable()",
+"line": 2864
+},
+{
+"sig": "checkEventOnWeaponStolen()",
+"line": 2881
+},
+{
+"sig": "setCustomMeleeWeaponMeshScaleActive(float newValue)",
+"line": 2895
+},
+{
+"sig": "setWeaponMeshScaleOnAllWeapons(float newValue)",
+"line": 2902
+},
+{
+"sig": "setPlaceTriggerInFrontOfCharacterOnAllAttacksState(bool state)",
+"line": 2930
+},
+{
+"sig": "setExtraTriggerMultiplierScaleOnAllMeleeAttacksActiveState(bool state, float value)",
+"line": 2935
+}
+]
+},
+"objectToFollowOnThrowMeleeWeapon": {
+"type": "objectToFollowOnThrowMeleeWeapon",
+"file": "Combat System/Melee Combat System/objectToFollowOnThrowMeleeWeapon.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\Melee Combat System\\objectToFollowOnThrowMeleeWeapon.cs",
+"methods": [
+{
+"sig": "getMainObjectToFollow()",
+"line": 11
+},
+{
+"sig": "setComponentedAddedTemporalyState(bool state)",
+"line": 20
+}
+]
+},
+"searchMeleeSurfaceSystem": {
+"type": "searchMeleeSurfaceSystem",
+"file": "Combat System/Melee Combat System/searchMeleeSurfaceSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\Melee Combat System\\searchMeleeSurfaceSystem.cs",
+"methods": [
+{
+"sig": "checkSurfaceDown()",
+"line": 55
+},
+{
+"sig": "checkHiddenSurfacesDown()",
+"line": 60
+},
+{
+"sig": "checkSurface()",
+"line": 167
+}
+]
+},
+"closeCombatSystem": {
+"type": "closeCombatSystem",
+"file": "Combat System/closeCombatSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\closeCombatSystem.cs",
+"methods": [
+{
+"sig": "disableCurrentAttackInProcess()",
+"line": 400
+},
+{
+"sig": "canActivateAttack()",
+"line": 407
+},
+{
+"sig": "useAttack(string attackName)",
+"line": 449
+},
+{
+"sig": "getCombatTypeInfoByName(string comboName)",
+"line": 910
+},
+{
+"sig": "setAttackStartState(string attackName)",
+"line": 927
+},
+{
+"sig": "setGeneralStaminaUseMultiplierValue(float newValue)",
+"line": 997
+},
+{
+"sig": "setAttackInputPausedForStaminaState(bool state)",
+"line": 1002
+},
+{
+"sig": "setAttackEndState(string attackName)",
+"line": 1007
+},
+{
+"sig": "resetAttacksIndex(int combatTypeIndexToIgnore)",
+"line": 1148
+},
+{
+"sig": "setDamageDetectedOnTriggerById(int newId)",
+"line": 1186
+},
+{
+"sig": "checkEventOnDamage(int combatTypeIndex, int attackIndex, GameObject objectDetected, int combatLimbID)",
+"line": 1196
+},
+{
+"sig": "resetAttackIdOnAnimator()",
+"line": 1274
+},
+{
+"sig": "callEventWithDelay(combatAttackInfo currentCombatAttackInfoEvent, bool playAtStart)",
+"line": 1297
+},
+{
+"sig": "activateNextAttackIgnoringWaitingTimes()",
+"line": 1398
+},
+{
+"sig": "activateAttackWithoutCombatActive(string attackName)",
+"line": 1417
+},
+{
+"sig": "setCurrentPlayerMode(bool state)",
+"line": 1475
+},
+{
+"sig": "resetIdleStateOnCloseCombat()",
+"line": 1577
+},
+{
+"sig": "resetAttackInputStack()",
+"line": 1592
+},
+{
+"sig": "enableOrDisableUseAttackInputStack(bool state)",
+"line": 1603
+},
+{
+"sig": "checkEventsOnStateChange(bool state)",
+"line": 1608
+},
+{
+"sig": "checkEventsOnFBAStateChange(bool state)",
+"line": 1619
+},
+{
+"sig": "isAttackInProcess()",
+"line": 1730
+},
+{
+"sig": "checkIfFullBodyAwarenessActive()",
+"line": 1835
+},
+{
+"sig": "stopActivateDamageTriggerCoroutine()",
+"line": 1977
+},
+{
+"sig": "enableOrDisableTriggers(bool value)",
+"line": 2187
+},
+{
+"sig": "enableTriggersIfCombatModeActive()",
+"line": 2198
+},
+{
+"sig": "stopCheckEventInfoList()",
+"line": 2205
+},
+{
+"sig": "checkEventInfoList(combatAttackInfo currentCombatAttackInfo)",
+"line": 2212
+},
+{
+"sig": "stopAllAttacks()",
+"line": 2296
+},
+{
+"sig": "checkLookAtTargetActiveState()",
+"line": 2311
+},
+{
+"sig": "checkLookAtTargetDeactivateState()",
+"line": 2328
+},
+{
+"sig": "inputAttack(string attackName)",
+"line": 2338
+},
+{
+"sig": "inputSetBlockState(bool state)",
+"line": 2357
+},
+{
+"sig": "setBlockStateWithoutInputCheck(bool state)",
+"line": 2366
+},
+{
+"sig": "setBlockActiveState(bool state)",
+"line": 2410
+},
+{
+"sig": "checkEventsOnBlockDamage(bool state)",
+"line": 2452
+},
+{
+"sig": "updateRegularBlockDamageProtectionValue()",
+"line": 2464
+},
+{
+"sig": "updateReducedBlockDamageProtectionValue()",
+"line": 2469
+},
+{
+"sig": "setBlockDamageProtectionValue(bool state)",
+"line": 2474
+},
+{
+"sig": "setMeleeAttackInputPausedState(bool state)",
+"line": 2493
+},
+{
+"sig": "disableMeleeAttackInputPausedStateWithDuration(float pauseDuration)",
+"line": 2499
+},
+{
+"sig": "checkIfBlockActive()",
+"line": 2524
+},
+{
+"sig": "disableBlockInputPausedStateWithDuration(float pauseDuration)",
+"line": 2531
+},
+{
+"sig": "setCanCancelBlockToStartAttackActiveState(bool state)",
+"line": 2566
+},
+{
+"sig": "checkIfBlockInputIsCurrentlyInUse()",
+"line": 2572
+},
+{
+"sig": "disableBlockStateInProcess()",
+"line": 2587
+},
+{
+"sig": "checkOnAttackBlocked()",
+"line": 2596
+},
+{
+"sig": "checkOnAttackBlockedPerfectly()",
+"line": 2610
+},
+{
+"sig": "setNoDamageDetectedOnTriggerById(GameObject objectDetected)",
+"line": 2626
+},
+{
+"sig": "checkSurfaceFoundOnAttack(bool surfaceLocated, GameObject lastSurfaceDetected, int combatLimbID)",
+"line": 2631
+},
+{
+"sig": "checkSurfaceFoundOnAttackToProcess(string surfaceName, bool surfaceLocated, Vector3 attackPosition, Vector3 attackNormal, bool ignoreBounceEvent)",
+"line": 2754
+},
+{
+"sig": "setCombatTypeID(int newValue)",
+"line": 2835
+},
+{
+"sig": "getCombatTypeID()",
+"line": 2840
+},
+{
+"sig": "setNewParentForDamageTriggers(Transform newParent)",
+"line": 2847
+},
+{
+"sig": "setOriginalParentForDamageTriggers()",
+"line": 2874
+},
+{
+"sig": "setUseMatchTargetSystemOnAttackState(bool state)",
+"line": 2903
+},
+{
+"sig": "setOriginalUseMatchTargetSystemOnAttackState()",
+"line": 2908
+},
+{
+"sig": "setGeneralAttackDamageMultiplierValue(float newValue)",
+"line": 2913
+},
+{
+"sig": "generalAttackDamageMultiplierIncreaseStat(float extraValue)",
+"line": 2918
+},
+{
+"sig": "initializeGeneralAttackDamageMultiplierStatAmount(float newValue)",
+"line": 2923
+},
+{
+"sig": "getGeneralAttackDamageMultiplierValue()",
+"line": 2928
+},
+{
+"sig": "setPlaceTriggerInFrontOfCharacterOnAllAttacksState(bool state)",
+"line": 2933
+},
+{
+"sig": "getCombatPrefabs(GameObject combatPrefab)",
+"line": 2939
+},
+{
+"sig": "addCombatPlace(string name, float hitDamage, GameObject limb, colliderPlace limbType)",
+"line": 2946
+},
+{
+"sig": "assignBasicCombatTriggers()",
+"line": 2960
+},
+{
+"sig": "udpateHitCombatInfo()",
+"line": 3039
+},
+{
+"sig": "updateHitCombatTriggerRadius(float newValue)",
+"line": 3076
+},
+{
+"sig": "removeLimbParts()",
+"line": 3093
+},
+{
+"sig": "enableOrDisableCloseCombatTriggers(bool state)",
+"line": 3113
+},
+{
+"sig": "addOrRemoveObjectToIgnoreByHitTriggers(GameObject newObject, bool state)",
+"line": 3122
+},
+{
+"sig": "enableOrDisableUseAttackInputStackFromEditor(bool state)",
+"line": 3131
+},
+{
+"sig": "setCustomIgnoreTagsForCharacterFromEditor()",
+"line": 3138
+},
+{
+"sig": "setUseMatchTargetSystemOnAttackStateFromEditor(bool state)",
+"line": 3151
+},
+{
+"sig": "updateComponent()",
+"line": 3190
+}
+]
+},
+"matchPlayerToTargetSystem": {
+"type": "matchPlayerToTargetSystem",
+"file": "Combat System/matchPlayerToTargetSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\matchPlayerToTargetSystem.cs",
+"methods": [
+{
+"sig": "findPlayerOnScene()",
+"line": 137
+},
+{
+"sig": "addCharacterAround(Transform newCharacter)",
+"line": 142
+},
+{
+"sig": "removeCharacterAround(Transform newCharacter)",
+"line": 165
+},
+{
+"sig": "clearAllCharactersAround()",
+"line": 184
+},
+{
+"sig": "setMatchPositionPausedState(bool state)",
+"line": 195
+},
+{
+"sig": "setMatchSystemEnabledstate(bool state)",
+"line": 200
+},
+{
+"sig": "setAddMainPlayerOnListForAIState(bool state)",
+"line": 205
+},
+{
+"sig": "activateMatchPosition(float customOffset)",
+"line": 210
+},
+{
+"sig": "activateMatchPosition(Transform targetToUse, float customOffset)",
+"line": 255
+},
+{
+"sig": "stopMovementIfActive()",
+"line": 266
+},
+{
+"sig": "stopMovement()",
+"line": 273
+},
+{
+"sig": "setUseFrontPositionAsPositionToMatchState(bool state)",
+"line": 282
+},
+{
+"sig": "getCurrentTargetToMatchPosition()",
+"line": 437
+},
+{
+"sig": "setGetClosestTargetWithoutConditionsActiveState(bool state)",
+"line": 651
+}
+]
+},
+"objectToUseMatchTargetSystem": {
+"type": "objectToUseMatchTargetSystem",
+"file": "Combat System/objectToUseMatchTargetSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\objectToUseMatchTargetSystem.cs",
+"methods": [
+{
+"sig": "removeAllMatchTargetList()",
+"line": 89
+}
+]
+},
+"perfectDodgeSystem": {
+"type": "perfectDodgeSystem",
+"file": "Combat System/perfectDodgeSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Combat System\\perfectDodgeSystem.cs",
+"methods": [
+{
+"sig": "activatePerfectDodgeToCharacter(GameObject newCharacter)",
+"line": 60
+},
+{
+"sig": "activatePerfectDodge()",
+"line": 77
+}
+]
+}
+}

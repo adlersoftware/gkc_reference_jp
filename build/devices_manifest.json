@@ -1,0 +1,1612 @@
+{
+"radioSystem": {
+"type": "radioSystem",
+"file": "Devices/Radio/radioSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\Radio\\radioSystem.cs",
+"methods": [
+{
+"sig": "playCurrentSong()",
+"line": 192
+},
+{
+"sig": "stopCurrentSong()",
+"line": 209
+},
+{
+"sig": "pauseCurrentSong()",
+"line": 220
+},
+{
+"sig": "setNextSong()",
+"line": 229
+},
+{
+"sig": "setPreviousSong()",
+"line": 246
+},
+{
+"sig": "setRandomSong()",
+"line": 266
+},
+{
+"sig": "setRandomSongIndex()",
+"line": 273
+},
+{
+"sig": "setRadioVolume()",
+"line": 294
+},
+{
+"sig": "setPlaySongsRandomlyState(bool state)",
+"line": 336
+},
+{
+"sig": "setRepeatListState(bool state)",
+"line": 341
+},
+{
+"sig": "setMovingSongLenghtSliderState(bool state)",
+"line": 346
+},
+{
+"sig": "setSongPart()",
+"line": 353
+},
+{
+"sig": "setRadioActiveState(bool state)",
+"line": 362
+},
+{
+"sig": "setOnlyRadioActiveState(bool state)",
+"line": 387
+},
+{
+"sig": "setPlayPauseButtonState(bool state)",
+"line": 392
+},
+{
+"sig": "selectSongOnList(GameObject songButtonPressed)",
+"line": 399
+},
+{
+"sig": "getSongsList()",
+"line": 414
+}
+]
+},
+"songsManager": {
+"type": "songsManager",
+"file": "Devices/Radio/songsManager.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\Radio\\songsManager.cs",
+"methods": [
+{
+"sig": "getComponentInstance()",
+"line": 68
+},
+{
+"sig": "getSongsList()",
+"line": 145
+},
+{
+"sig": "allSongsLoaded()",
+"line": 229
+}
+]
+},
+"accessTerminal": {
+"type": "accessTerminal",
+"file": "Devices/accessTerminal.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\accessTerminal.cs",
+"methods": [
+{
+"sig": "stopUpdateCoroutine()",
+"line": 211
+},
+{
+"sig": "pressButtonOnScreen()",
+"line": 332
+},
+{
+"sig": "activateTerminal()",
+"line": 339
+},
+{
+"sig": "enableTerminal()",
+"line": 362
+},
+{
+"sig": "disableTerminal()",
+"line": 375
+},
+{
+"sig": "getCurrentUser()",
+"line": 388
+},
+{
+"sig": "checkNumber(string numberString)",
+"line": 420
+},
+{
+"sig": "setLockedState(bool state)",
+"line": 458
+},
+{
+"sig": "setLockState(Scrollbar info)",
+"line": 523
+},
+{
+"sig": "showPasswordOnHackPanel()",
+"line": 553
+},
+{
+"sig": "unlockAccessTerminal()",
+"line": 558
+},
+{
+"sig": "activateHackButton()",
+"line": 567
+},
+{
+"sig": "setNewCode(string newCode)",
+"line": 574
+}
+]
+},
+"closetSystem": {
+"type": "closetSystem",
+"file": "Devices/closetSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\closetSystem.cs",
+"methods": [
+{
+"sig": "changeDoorOpenCloseState(Transform currentDoor)",
+"line": 50
+},
+{
+"sig": "setCurrentPlayer(GameObject player)",
+"line": 267
+},
+{
+"sig": "removeDeviceFromList(GameObject objecToRemove)",
+"line": 276
+},
+{
+"sig": "setObjectToAddToCloset(GameObject objectToAdd)",
+"line": 283
+},
+{
+"sig": "setObjectToRemoveFromCloset(GameObject objectToRemove)",
+"line": 288
+},
+{
+"sig": "addObjectToCloset(Transform doorToAdd)",
+"line": 294
+},
+{
+"sig": "removeObjectFromCloset(Transform doorToAdd)",
+"line": 328
+},
+{
+"sig": "addNewDoor()",
+"line": 343
+},
+{
+"sig": "updateComponent()",
+"line": 354
+}
+]
+},
+"computerDevice": {
+"type": "computerDevice",
+"file": "Devices/computerDevice.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\computerDevice.cs",
+"methods": [
+{
+"sig": "activateComputer()",
+"line": 265
+},
+{
+"sig": "checkKeyPressed(string keyPressed)",
+"line": 303
+},
+{
+"sig": "unlockComputer()",
+"line": 408
+},
+{
+"sig": "enableAccessToCompturer()",
+"line": 413
+},
+{
+"sig": "unlockComputerWithUsb()",
+"line": 430
+},
+{
+"sig": "playSound(AudioElement clipToPlay)",
+"line": 437
+}
+]
+},
+"deviceStringAction": {
+"type": "deviceStringAction",
+"file": "Devices/deviceStringAction.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\deviceStringAction.cs",
+"methods": [
+{
+"sig": "getRegularTransformForIcon()",
+"line": 105
+},
+{
+"sig": "useSeparatedTransformForEveryViewEnabled()",
+"line": 114
+},
+{
+"sig": "getTransformForIconThirdPerson()",
+"line": 119
+},
+{
+"sig": "getTransformForIconFirstPerson()",
+"line": 124
+},
+{
+"sig": "setIconEnabledState(bool state)",
+"line": 129
+},
+{
+"sig": "setShowIconState(bool state)",
+"line": 134
+},
+{
+"sig": "enableIcon()",
+"line": 139
+},
+{
+"sig": "disableIcon()",
+"line": 144
+},
+{
+"sig": "getDeviceAction()",
+"line": 149
+},
+{
+"sig": "setDeviceAction(string newDeviceAction)",
+"line": 154
+},
+{
+"sig": "changeActionName(bool state)",
+"line": 161
+},
+{
+"sig": "toggleActionName()",
+"line": 172
+},
+{
+"sig": "checkSetUsingDeviceState()",
+"line": 177
+},
+{
+"sig": "checkSetUsingDeviceState(bool state)",
+"line": 182
+},
+{
+"sig": "getDeviceName()",
+"line": 189
+},
+{
+"sig": "setNewDeviceName(string newName)",
+"line": 194
+},
+{
+"sig": "getTextFontSize()",
+"line": 199
+}
+]
+},
+"doorSystem": {
+"type": "doorSystem",
+"file": "Devices/doorSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\doorSystem.cs",
+"methods": [
+{
+"sig": "setDoorState()",
+"line": 269
+},
+{
+"sig": "lockDoor()",
+"line": 290
+},
+{
+"sig": "unlockDoor()",
+"line": 333
+},
+{
+"sig": "isDisableDoorOpenCloseActionActive()",
+"line": 379
+},
+{
+"sig": "setEnableDisableDoorOpenCloseActionValue(bool state)",
+"line": 384
+},
+{
+"sig": "openOrCloseElevatorDoor()",
+"line": 389
+},
+{
+"sig": "changeDoorsStateByButton()",
+"line": 399
+},
+{
+"sig": "openDoorsIfClosed()",
+"line": 421
+},
+{
+"sig": "closeDoorsIfOpened()",
+"line": 432
+},
+{
+"sig": "openDoors()",
+"line": 444
+},
+{
+"sig": "closeDoors()",
+"line": 502
+},
+{
+"sig": "playSound(AudioElement clipSound)",
+"line": 539
+},
+{
+"sig": "setDeviceStringActionState(bool state)",
+"line": 544
+},
+{
+"sig": "doorsShooted(GameObject projectile)",
+"line": 624
+},
+{
+"sig": "checkIfTagCanOpen(string tagToCheck)",
+"line": 645
+},
+{
+"sig": "doorIsMoving()",
+"line": 654
+},
+{
+"sig": "playDoorAnimation(bool playForward)",
+"line": 659
+},
+{
+"sig": "isDoorOpened()",
+"line": 683
+},
+{
+"sig": "isDoorClosed()",
+"line": 688
+},
+{
+"sig": "isDoorOpening()",
+"line": 693
+},
+{
+"sig": "isDoorClosing()",
+"line": 698
+},
+{
+"sig": "setReducedVelocity(float newValue)",
+"line": 703
+},
+{
+"sig": "setNormalVelocity()",
+"line": 708
+}
+]
+},
+"electronicDevice": {
+"type": "electronicDevice",
+"file": "Devices/electronicDevice.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\electronicDevice.cs",
+"methods": [
+{
+"sig": "activateDevice()",
+"line": 106
+},
+{
+"sig": "setDeviceState(bool state)",
+"line": 177
+},
+{
+"sig": "moveCamera(bool state)",
+"line": 214
+},
+{
+"sig": "setCurrentUser(GameObject newPlayer)",
+"line": 225
+},
+{
+"sig": "setPlayerManually(GameObject newPlayer)",
+"line": 240
+},
+{
+"sig": "checkTriggerInfo(Collider col, bool isEnter)",
+"line": 262
+},
+{
+"sig": "setUsingDeviceState(bool state)",
+"line": 373
+},
+{
+"sig": "getCurrentPlayer()",
+"line": 378
+},
+{
+"sig": "unlockObject()",
+"line": 383
+},
+{
+"sig": "lockObject()",
+"line": 394
+},
+{
+"sig": "removeDeviceFromListWithoutDisablingDevice()",
+"line": 401
+},
+{
+"sig": "clearDeviceList()",
+"line": 413
+},
+{
+"sig": "addDeviceToList()",
+"line": 422
+},
+{
+"sig": "removeDeviceFromList()",
+"line": 431
+},
+{
+"sig": "removeDeviceFromListOnAllPlayersOnSceneWithoutDisablingDevice()",
+"line": 444
+},
+{
+"sig": "removeDeviceFromListExternalCall()",
+"line": 449
+},
+{
+"sig": "stopUsindDevice()",
+"line": 462
+},
+{
+"sig": "stopUseDeviceToPlayer()",
+"line": 469
+},
+{
+"sig": "reloadDeviceStringActionOnPlayer()",
+"line": 476
+},
+{
+"sig": "setDeviceCanBeUsedState(bool state)",
+"line": 485
+},
+{
+"sig": "cancelUseElectronicDevice()",
+"line": 490
+},
+{
+"sig": "useDeviceObjectExternally(GameObject currentPlayer)",
+"line": 497
+},
+{
+"sig": "useDeviceObjectExternallyForCharacterInside()",
+"line": 502
+}
+]
+},
+"elevatorFloorsPanel": {
+"type": "elevatorFloorsPanel",
+"file": "Devices/elevatorFloorsPanel.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\elevatorFloorsPanel.cs",
+"methods": [
+{
+"sig": "activateElevatorFloorPanel()",
+"line": 52
+},
+{
+"sig": "goToFloor(Button button)",
+"line": 57
+}
+]
+},
+"elevatorSystem": {
+"type": "elevatorSystem",
+"file": "Devices/elevatorSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\elevatorSystem.cs",
+"methods": [
+{
+"sig": "nextFloor()",
+"line": 105
+},
+{
+"sig": "previousFloor()",
+"line": 115
+},
+{
+"sig": "moveBetweenTwoPositions()",
+"line": 124
+},
+{
+"sig": "checkIfInsideElevatorDoorSystem()",
+"line": 160
+},
+{
+"sig": "goToNumberFloor(int floorNumber)",
+"line": 172
+},
+{
+"sig": "callElevator(GameObject button)",
+"line": 204
+},
+{
+"sig": "addPassenger(Transform newPassenger)",
+"line": 435
+},
+{
+"sig": "setElevatorSystemEnabledState(bool state)",
+"line": 464
+},
+{
+"sig": "addNewFloor()",
+"line": 470
+},
+{
+"sig": "removeFloor(int floorIndex)",
+"line": 532
+},
+{
+"sig": "removeAllFloors()",
+"line": 543
+},
+{
+"sig": "checkEventsOnMove(bool state)",
+"line": 554
+},
+{
+"sig": "updateComponent()",
+"line": 565
+}
+]
+},
+"enemyHackPanel": {
+"type": "enemyHackPanel",
+"file": "Devices/enemyHackPanel.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\enemyHackPanel.cs",
+"methods": [
+{
+"sig": "activateHackPanel(bool state)",
+"line": 40
+},
+{
+"sig": "setCorrectlyHackedState()",
+"line": 55
+},
+{
+"sig": "setIncorrectlyHackedState()",
+"line": 60
+},
+{
+"sig": "setHackResult(bool state)",
+"line": 66
+},
+{
+"sig": "disablePanelHack()",
+"line": 80
+}
+]
+},
+"examineObjectSystem": {
+"type": "examineObjectSystem",
+"file": "Devices/examineObjectSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\examineObjectSystem.cs",
+"methods": [
+{
+"sig": "showExamineMessage(bool state)",
+"line": 195
+},
+{
+"sig": "stopExamineDevice()",
+"line": 208
+},
+{
+"sig": "disableAndRemoveExamineDevice()",
+"line": 215
+},
+{
+"sig": "cancelExamine()",
+"line": 226
+},
+{
+"sig": "pauseOrResumePlayerInteractionButton(bool state)",
+"line": 233
+},
+{
+"sig": "examineDevice()",
+"line": 241
+},
+{
+"sig": "setExamineDeviceState(bool state)",
+"line": 268
+},
+{
+"sig": "setRotationState(bool state)",
+"line": 289
+},
+{
+"sig": "getPlayerComponents()",
+"line": 294
+},
+{
+"sig": "checkExaminePlaceInfo(Transform examinePlaceToCheck)",
+"line": 319
+},
+{
+"sig": "setExaminePlaceEnabledState(Transform examinePlaceToCheck)",
+"line": 387
+},
+{
+"sig": "inputSetZoomValue(bool state)",
+"line": 399
+},
+{
+"sig": "inputResetRotation()",
+"line": 413
+},
+{
+"sig": "inputResetRotationAndPosition()",
+"line": 424
+},
+{
+"sig": "inputCancelExamine()",
+"line": 435
+},
+{
+"sig": "inputCheckIfMessage()",
+"line": 444
+}
+]
+},
+"examineObjectSystemPlayerManagement": {
+"type": "examineObjectSystemPlayerManagement",
+"file": "Devices/examineObjectSystemPlayerManagement.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\examineObjectSystemPlayerManagement.cs",
+"methods": [
+{
+"sig": "setExaminingObjectState(bool state)",
+"line": 27
+},
+{
+"sig": "setcurrentExanimeObject(examineObjectSystem newExamineObject)",
+"line": 44
+},
+{
+"sig": "examineObjectInputSetZoomValue(bool value)",
+"line": 50
+},
+{
+"sig": "examineObjectInputResetRotation()",
+"line": 61
+},
+{
+"sig": "examineObjectInputResetRotationAndPosition()",
+"line": 72
+},
+{
+"sig": "examineObjectInputCancelExamine()",
+"line": 83
+},
+{
+"sig": "examineObjectInputCheckIfMessage()",
+"line": 100
+},
+{
+"sig": "checkEventsOnStateChange(bool state)",
+"line": 111
+}
+]
+},
+"hackTerminal": {
+"type": "hackTerminal",
+"file": "Devices/hackTerminal.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\hackTerminal.cs",
+"methods": [
+{
+"sig": "activeHack()",
+"line": 326
+},
+{
+"sig": "disableHack(bool state)",
+"line": 371
+},
+{
+"sig": "moveHackTerminal(bool state)",
+"line": 395
+},
+{
+"sig": "incorretlyHacked()",
+"line": 484
+},
+{
+"sig": "stopHacking()",
+"line": 499
+},
+{
+"sig": "hasMoveCameraToDevice()",
+"line": 537
+},
+{
+"sig": "setCurrentPlayer()",
+"line": 544
+},
+{
+"sig": "getCameraMovementManager()",
+"line": 556
+},
+{
+"sig": "setTextContent(string textContent)",
+"line": 563
+}
+]
+},
+"hologramDoor": {
+"type": "hologramDoor",
+"file": "Devices/hologramDoor.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\hologramDoor.cs",
+"methods": [
+{
+"sig": "activateDevice()",
+"line": 214
+},
+{
+"sig": "openCurrentDoor()",
+"line": 219
+},
+{
+"sig": "startChangeTransparencyCoroutine(bool state)",
+"line": 235
+},
+{
+"sig": "stopChangeTransparency()",
+"line": 244
+},
+{
+"sig": "setHologramTransparencyAtOnce(bool state)",
+"line": 306
+},
+{
+"sig": "startSetHologramColorsCoroutine(bool useUnlockedColors)",
+"line": 334
+},
+{
+"sig": "stopSetHologramColors()",
+"line": 341
+},
+{
+"sig": "unlockHologram()",
+"line": 390
+},
+{
+"sig": "lockHologram()",
+"line": 402
+},
+{
+"sig": "startOpenDoorCoroutine()",
+"line": 413
+},
+{
+"sig": "stopOpenDoor()",
+"line": 420
+},
+{
+"sig": "checkTriggerInfo(Collider col, bool isEnter)",
+"line": 455
+},
+{
+"sig": "enteringDoor()",
+"line": 473
+},
+{
+"sig": "exitingDoor()",
+"line": 495
+},
+{
+"sig": "checkIfTagCanOpen(string tagToCheck)",
+"line": 525
+},
+{
+"sig": "openHologramDoorByExternalInput()",
+"line": 534
+}
+]
+},
+"interactionObjectMessage": {
+"type": "interactionObjectMessage",
+"file": "Devices/interactionObjectMessage.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\interactionObjectMessage.cs",
+"methods": [
+{
+"sig": "activateDevice()",
+"line": 61
+},
+{
+"sig": "checkTriggerInfo(Collider col, bool isEnter)",
+"line": 138
+},
+{
+"sig": "setDeviceState(bool state)",
+"line": 176
+},
+{
+"sig": "removeMessage()",
+"line": 185
+}
+]
+},
+"jumpPlatform": {
+"type": "jumpPlatform",
+"file": "Devices/jumpPlatform.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\jumpPlatform.cs",
+"methods": [
+{
+"sig": "setPlatformEnabledState(bool state)",
+"line": 275
+}
+]
+},
+"laser": {
+"type": "laser",
+"file": "Devices/laser.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\laser.cs",
+"methods": [
+{
+"sig": "animateLaser()",
+"line": 40
+},
+{
+"sig": "laserAnimation()",
+"line": 55
+},
+{
+"sig": "disableLaser()",
+"line": 69
+}
+]
+},
+"laserConnector": {
+"type": "laserConnector",
+"file": "Devices/laserConnector.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\laserConnector.cs",
+"methods": [
+{
+"sig": "disableRefractionState()",
+"line": 63
+},
+{
+"sig": "setColor()",
+"line": 96
+},
+{
+"sig": "setCurrentLaser(GameObject laser)",
+"line": 103
+},
+{
+"sig": "setCubeRefractionLaser(GameObject cube)",
+"line": 108
+}
+]
+},
+"laserDevice": {
+"type": "laserDevice",
+"file": "Devices/laserDevice.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\laserDevice.cs",
+"methods": [
+{
+"sig": "setAssignLaserState(bool state)",
+"line": 260
+}
+]
+},
+"laserReceiver": {
+"type": "laserReceiver",
+"file": "Devices/laserReceiver.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\laserReceiver.cs",
+"methods": [
+{
+"sig": "laserConnected(Color col)",
+"line": 32
+},
+{
+"sig": "laserDisconnected()",
+"line": 44
+}
+]
+},
+"lockedCameraSystem": {
+"type": "lockedCameraSystem",
+"file": "Devices/lockedCameraSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\lockedCameraSystem.cs",
+"methods": [
+{
+"sig": "setCameraTransform(GameObject cameraTransform)",
+"line": 181
+},
+{
+"sig": "findPlayerOnScene()",
+"line": 221
+},
+{
+"sig": "getPlayerGameObject(GameObject objectToCheck)",
+"line": 226
+},
+{
+"sig": "setLockedCameraToEditorCameraPosition(int lockedCameraListIndex, int cameraTransformListIndex)",
+"line": 257
+},
+{
+"sig": "setEditorCameraPositionToLockedCamera(int lockedCameraListIndex, int cameraTransformListIndex)",
+"line": 320
+},
+{
+"sig": "duplicateLockedCamera(int lockedCameraListIndex, int cameraTransformListIndex)",
+"line": 563
+},
+{
+"sig": "assignPlayerToStartOnLockedCamera(GameObject newPlayer)",
+"line": 593
+},
+{
+"sig": "addLookAtCustomMultipleTargetsList(Transform newTransform)",
+"line": 611
+},
+{
+"sig": "removeLookAtCustomMultipleTargetsList(Transform newTransform)",
+"line": 616
+},
+{
+"sig": "addOrRemoveLookAtCustomMultipleTargetsList(Transform newTransform, bool state)",
+"line": 621
+},
+{
+"sig": "addNewCameraTransformElememnt(int index)",
+"line": 648
+},
+{
+"sig": "removeNewCameraTransformElememnt(int lockedCameraListIndex, int cameraTransformListIndex, bool updateInspector)",
+"line": 703
+},
+{
+"sig": "removeAllCameraTransformElements(int index)",
+"line": 719
+},
+{
+"sig": "removeAllCameraZones()",
+"line": 730
+},
+{
+"sig": "addNewCameraZone()",
+"line": 743
+},
+{
+"sig": "removeCameraZone(int index, bool updateInspector)",
+"line": 760
+},
+{
+"sig": "addCameraTrigger(int lockedCameraListIndex, int cameraTransformListIndex)",
+"line": 775
+},
+{
+"sig": "removeCameraTrigger(int lockedCameraListIndex, int cameraTransformListIndex, int cameraTriggerIndex, bool updateInspector)",
+"line": 809
+},
+{
+"sig": "removeAllCameraTriggers(int lockedCameraListIndex, int cameraTransformListIndex)",
+"line": 824
+},
+{
+"sig": "selectCurrentTrigger(int lockedCameraListIndex, int cameraTransformListIndex, int cameraTriggerIndex)",
+"line": 839
+},
+{
+"sig": "addWaypoint(int lockedCameraListIndex, int cameraTransformListIndex)",
+"line": 844
+},
+{
+"sig": "removeWaypoint(int lockedCameraListIndex, int cameraTransformListIndex, int waypointIndex, bool updateInspector)",
+"line": 893
+},
+{
+"sig": "removeAllWaypoints(int lockedCameraListIndex, int cameraTransformListIndex)",
+"line": 908
+},
+{
+"sig": "setGizmosState(bool state)",
+"line": 923
+},
+{
+"sig": "setCameraParentListName(string name, int index)",
+"line": 930
+},
+{
+"sig": "addLockedCameraPivot(int lockedCameraListIndex, int cameraTransformListIndex)",
+"line": 935
+},
+{
+"sig": "addLockedCameraPivot2_5d(int lockedCameraListIndex, int cameraTransformListIndex)",
+"line": 956
+},
+{
+"sig": "addLockedCameraPivotTopDown(int lockedCameraListIndex, int cameraTransformListIndex)",
+"line": 985
+},
+{
+"sig": "setAllCamerasAsPointAndClickOrFree(bool state)",
+"line": 1014
+},
+{
+"sig": "setCanChangeCameraToFreeViewByInputInAllCameras(bool state)",
+"line": 1025
+},
+{
+"sig": "setAllCamerasAsTankControlsOrRegular(bool state)",
+"line": 1036
+},
+{
+"sig": "setAllCamerasAsRelativeMovementsOrRegular(bool state)",
+"line": 1047
+},
+{
+"sig": "setAllCamerasAsChangeRootMotionEnabledOrDisabled(bool state)",
+"line": 1058
+},
+{
+"sig": "setAllCamerasAsUseRootMotionEnabledOrDisabled(bool state)",
+"line": 1069
+},
+{
+"sig": "setAllCamerasAsUseClampAimDirectionEnabledOrDisabled(bool state)",
+"line": 1080
+},
+{
+"sig": "updateTriggers()",
+"line": 1091
+},
+{
+"sig": "changeViewToCameraInEditor(int lockedCameraListIndex, int cameraTransformListIndex)",
+"line": 1117
+}
+]
+},
+"moveCameraToDevice": {
+"type": "moveCameraToDevice",
+"file": "Devices/moveCameraToDevice.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\moveCameraToDevice.cs",
+"methods": [
+{
+"sig": "moveCamera(bool state)",
+"line": 121
+},
+{
+"sig": "hasSecondMoveCameraToDevice()",
+"line": 681
+},
+{
+"sig": "setCurrentPlayer(GameObject player)",
+"line": 686
+},
+{
+"sig": "enableFreeInteractionState()",
+"line": 715
+},
+{
+"sig": "disableFreeInteractionState()",
+"line": 724
+},
+{
+"sig": "stopMovement()",
+"line": 733
+},
+{
+"sig": "isCameraMoving()",
+"line": 742
+},
+{
+"sig": "setCurrentPlayerUseDeviceButtonEnabledState(bool state)",
+"line": 747
+}
+]
+},
+"moveDeviceToCamera": {
+"type": "moveDeviceToCamera",
+"file": "Devices/moveDeviceToCamera.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\moveDeviceToCamera.cs",
+"methods": [
+{
+"sig": "moveCamera(bool state)",
+"line": 147
+},
+{
+"sig": "checkCameraPosition()",
+"line": 380
+},
+{
+"sig": "setRigidbodyState(bool state)",
+"line": 485
+},
+{
+"sig": "setCurrentPlayer(GameObject player)",
+"line": 500
+},
+{
+"sig": "setColliderListState(bool state)",
+"line": 530
+},
+{
+"sig": "setIgnoreDeviceTriggerEnabledState(bool state)",
+"line": 553
+},
+{
+"sig": "setLayerList()",
+"line": 558
+},
+{
+"sig": "setLayerListState(bool state)",
+"line": 582
+},
+{
+"sig": "changeDeviceZoom(bool zoomIn)",
+"line": 597
+},
+{
+"sig": "resetRotation()",
+"line": 618
+},
+{
+"sig": "resetRotationAndPosition()",
+"line": 626
+}
+]
+},
+"oneWayPlatformSystem": {
+"type": "oneWayPlatformSystem",
+"file": "Devices/oneWayPlatformSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\oneWayPlatformSystem.cs",
+"methods": [
+{
+"sig": "OnTriggerEnter(Collider col)",
+"line": 99
+},
+{
+"sig": "OnTriggerExit(Collider col)",
+"line": 104
+},
+{
+"sig": "checkTriggerInfo(Collider col, bool isEnter)",
+"line": 109
+},
+{
+"sig": "addPassenger(Transform newPassenger)",
+"line": 152
+}
+]
+},
+"padlockSystem": {
+"type": "padlockSystem",
+"file": "Devices/padlockSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\padlockSystem.cs",
+"methods": [
+{
+"sig": "setCurrentWheelIndex(int amount)",
+"line": 282
+},
+{
+"sig": "setPreviousNumber()",
+"line": 299
+},
+{
+"sig": "setNextNumber()",
+"line": 306
+},
+{
+"sig": "activatePadlock()",
+"line": 313
+},
+{
+"sig": "checkNumberByKeyboard(int number)",
+"line": 332
+},
+{
+"sig": "checkNumber(wheelInfo wheel, int wheelNumber)",
+"line": 343
+},
+{
+"sig": "getCurrentCodeOnWheels()",
+"line": 382
+},
+{
+"sig": "setLockedState(bool state)",
+"line": 393
+},
+{
+"sig": "checkRotateWheel(int direction, wheelInfo wheel, int number)",
+"line": 435
+},
+{
+"sig": "rotateCenter(int direction, wheelInfo wheel, int number)",
+"line": 440
+},
+{
+"sig": "resetPadLock()",
+"line": 463
+},
+{
+"sig": "setCorrectCode()",
+"line": 478
+},
+{
+"sig": "changeExamineObjectState(bool state)",
+"line": 493
+},
+{
+"sig": "inputRotateWheel(bool directionUp)",
+"line": 500
+}
+]
+},
+"padlockSystemPlayerManagement": {
+"type": "padlockSystemPlayerManagement",
+"file": "Devices/padlockSystemPlayerManagement.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\padlockSystemPlayerManagement.cs",
+"methods": [
+{
+"sig": "setCurrentPadlockSystem(padlockSystem newPadlockSystem)",
+"line": 23
+},
+{
+"sig": "setUsingPadlockState(bool state)",
+"line": 28
+},
+{
+"sig": "inputRotateWheel(bool directionUp)",
+"line": 36
+},
+{
+"sig": "checkEventsOnStateChange(bool state)",
+"line": 47
+}
+]
+},
+"rechargerStation": {
+"type": "rechargerStation",
+"file": "Devices/rechargerStation.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\rechargerStation.cs",
+"methods": [
+{
+"sig": "healPlayer()",
+"line": 127
+},
+{
+"sig": "stopHealing()",
+"line": 147
+}
+]
+},
+"refractionCube": {
+"type": "refractionCube",
+"file": "Devices/refractionCube.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\refractionCube.cs",
+"methods": [
+{
+"sig": "setRefractingLaserState(bool state)",
+"line": 18
+},
+{
+"sig": "isRefracting()",
+"line": 23
+}
+]
+},
+"rotatingPlatform": {
+"type": "rotatingPlatform",
+"file": "Devices/rotatingPlatform.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\rotatingPlatform.cs",
+"methods": [
+{
+"sig": "rotatePlatform()",
+"line": 28
+},
+{
+"sig": "stopRotationCoroutine()",
+"line": 34
+},
+{
+"sig": "setRotationActiveState(bool state)",
+"line": 66
+}
+]
+},
+"securityCamera": {
+"type": "securityCamera",
+"file": "Devices/securityCamera.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\securityCamera.cs",
+"methods": [
+{
+"sig": "getLookValue(Vector2 currentAxisValues)",
+"line": 97
+},
+{
+"sig": "setZoom(int mult)",
+"line": 103
+},
+{
+"sig": "changeCameraState(bool state)",
+"line": 112
+},
+{
+"sig": "startOverride()",
+"line": 125
+},
+{
+"sig": "stopOverride()",
+"line": 130
+},
+{
+"sig": "overrideControlState(bool state)",
+"line": 135
+}
+]
+},
+"securityCameraControl": {
+"type": "securityCameraControl",
+"file": "Devices/securityCameraControl.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\securityCameraControl.cs",
+"methods": [
+{
+"sig": "rotateCamera(Vector2 values)",
+"line": 183
+},
+{
+"sig": "activateSecurityControl()",
+"line": 213
+},
+{
+"sig": "deactivateSecurityCameraControl()",
+"line": 218
+},
+{
+"sig": "setSecurityCameraControlState(bool state)",
+"line": 223
+}
+]
+},
+"simpleSwitch": {
+"type": "simpleSwitch",
+"file": "Devices/simpleSwitch.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\simpleSwitch.cs",
+"methods": [
+{
+"sig": "setCurrentPlayer(GameObject newPlayer)",
+"line": 69
+},
+{
+"sig": "setCurrentUser(GameObject newPlayer)",
+"line": 74
+},
+{
+"sig": "turnSwitchOff()",
+"line": 79
+},
+{
+"sig": "turnSwitchOn()",
+"line": 86
+},
+{
+"sig": "activateDevice()",
+"line": 93
+},
+{
+"sig": "setButtonEnabledState(bool state)",
+"line": 150
+},
+{
+"sig": "triggerButtonEventFromEditor()",
+"line": 155
+},
+{
+"sig": "playSingleAnimation()",
+"line": 160
+},
+{
+"sig": "playDualAnimation(bool playForward)",
+"line": 172
+},
+{
+"sig": "setDeviceStringActionState(bool state)",
+"line": 198
+}
+]
+},
+"teleportationPlatform": {
+"type": "teleportationPlatform",
+"file": "Devices/teleportationPlatform.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\teleportationPlatform.cs",
+"methods": [
+{
+"sig": "removeObjectInside()",
+"line": 143
+},
+{
+"sig": "activateTeleport()",
+"line": 159
+},
+{
+"sig": "sendObject(GameObject objectToMove)",
+"line": 183
+},
+{
+"sig": "setTeleportEnabledState(bool state)",
+"line": 236
+}
+]
+},
+"vendingMachine": {
+"type": "vendingMachine",
+"file": "Devices/vendingMachine.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\vendingMachine.cs",
+"methods": [
+{
+"sig": "setVendingMachineEnabledState(bool state)",
+"line": 35
+},
+{
+"sig": "getObject()",
+"line": 41
+},
+{
+"sig": "spawnObject(GameObject newObject)",
+"line": 53
+}
+]
+},
+"waypointPlatform": {
+"type": "waypointPlatform",
+"file": "Devices/waypointPlatform.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\waypointPlatform.cs",
+"methods": [
+{
+"sig": "setMirroringPlatformActiveState(bool state)",
+"line": 115
+},
+{
+"sig": "addPassenger(Transform newPassenger)",
+"line": 238
+},
+{
+"sig": "addVehicle(Transform newVehicle)",
+"line": 289
+},
+{
+"sig": "disablePlatform()",
+"line": 317
+},
+{
+"sig": "activatePlatformMovement()",
+"line": 332
+},
+{
+"sig": "deactivatePlatformMovement()",
+"line": 343
+},
+{
+"sig": "checkMovementCoroutine(bool play)",
+"line": 349
+},
+{
+"sig": "stopPlatformMovement()",
+"line": 368
+},
+{
+"sig": "activetMovementByButton()",
+"line": 519
+},
+{
+"sig": "setDeviceStringActionState(bool state)",
+"line": 542
+},
+{
+"sig": "addObjectDetectedBelow(GameObject objectToCheck)",
+"line": 549
+},
+{
+"sig": "removeObjectDetectedBelow(GameObject objectToCheck)",
+"line": 563
+},
+{
+"sig": "addNewWayPoint()",
+"line": 571
+}
+]
+},
+"waypointPlayerPathSystem": {
+"type": "waypointPlayerPathSystem",
+"file": "Devices/waypointPlayerPathSystem.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\waypointPlayerPathSystem.cs",
+"methods": [
+{
+"sig": "convertSeconds()",
+"line": 170
+},
+{
+"sig": "addNewWayPoint()",
+"line": 178
+},
+{
+"sig": "renamePoints()",
+"line": 205
+},
+{
+"sig": "pointReached(Transform point)",
+"line": 215
+},
+{
+"sig": "setCurrentUser(GameObject user)",
+"line": 282
+},
+{
+"sig": "resetPath()",
+"line": 287
+},
+{
+"sig": "stopPath()",
+"line": 345
+},
+{
+"sig": "playAudioSourceShoot(AudioElement clip)",
+"line": 368
+},
+{
+"sig": "updateComponent()",
+"line": 379
+}
+]
+},
+"zipline": {
+"type": "zipline",
+"file": "Devices/zipline.cs",
+"abs": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Devices\\zipline.cs",
+"methods": [
+{
+"sig": "stopUpdateCoroutine()",
+"line": 107
+},
+{
+"sig": "activateZipLine()",
+"line": 146
+},
+{
+"sig": "changeZiplineState(bool state)",
+"line": 162
+},
+{
+"sig": "setCurrentPlayer(GameObject player)",
+"line": 240
+},
+{
+"sig": "checkZiplineMovement()",
+"line": 259
+},
+{
+"sig": "setZiplineConnectedState(bool state)",
+"line": 315
+},
+{
+"sig": "connectZipine()",
+"line": 325
+}
+]
+}
+}

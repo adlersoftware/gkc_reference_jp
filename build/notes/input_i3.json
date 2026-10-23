@@ -1,0 +1,468 @@
+[
+ {
+  "type": "carryPhysicallyObjectFromInventory",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Inventory\\carryPhysicallyObjectFromInventory.cs",
+  "methods": [
+   {
+    "sig": "setCurrentPlayer(GameObject newPlayer)",
+    "line": 25
+   },
+   {
+    "sig": "checkObjectStateOnGrab()",
+    "line": 30
+   },
+   {
+    "sig": "checkObjectStateOnDrop()",
+    "line": 49
+   }
+  ]
+ },
+ {
+  "type": "currencySystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Inventory\\currencySystem.cs",
+  "methods": [
+   {
+    "sig": "increaseTotalMoneyAmount(float extraValue, float customMoneyChangeSpeedValue)",
+    "line": 59
+   },
+   {
+    "sig": "increaseTotalMoneyAmount(float extraValue)",
+    "line": 66
+   },
+   {
+    "sig": "initializeMoneyAmount(float newValue)",
+    "line": 109
+   },
+   {
+    "sig": "updateMoneyAmountWithoutUpdatingStatManager(int statId, float amount)",
+    "line": 116
+   },
+   {
+    "sig": "useMoney(float amountToUse)",
+    "line": 123
+   },
+   {
+    "sig": "getCurrentMoneyAmount()",
+    "line": 136
+   },
+   {
+    "sig": "canSpendMoneyAmount(float amountToSpend)",
+    "line": 143
+   },
+   {
+    "sig": "showTotalMoneyAmountPanel()",
+    "line": 148
+   },
+   {
+    "sig": "stopShowTotalMoneyAmountPanelCoroutine()",
+    "line": 155
+   }
+  ]
+ },
+ {
+  "type": "getInventoryObjectSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Inventory\\getInventoryObjectSystem.cs",
+  "methods": [
+   {
+    "sig": "removeCurrentPlayer(GameObject player)",
+    "line": 67
+   },
+   {
+    "sig": "getCurrentPlayer(GameObject player)",
+    "line": 74
+   },
+   {
+    "sig": "giveObjectToPlayer()",
+    "line": 79
+   }
+  ]
+ },
+ {
+  "type": "getObjectFromInventorySystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Inventory\\getObjectFromInventorySystem.cs",
+  "methods": [
+   {
+    "sig": "addExtraInventoryObjectAmount(int extraAmount)",
+    "line": 37
+   },
+   {
+    "sig": "checkIfObjectFoundOnInventory()",
+    "line": 46
+   },
+   {
+    "sig": "useInventoryObject(int amountToUse)",
+    "line": 83
+   },
+   {
+    "sig": "useInventoryObjectAndGetResult(int amountToUse)",
+    "line": 126
+   },
+   {
+    "sig": "setCurrentPlayer(GameObject newPlayer)",
+    "line": 173
+   },
+   {
+    "sig": "setNewInventoryObjectName(string newName)",
+    "line": 184
+   }
+  ]
+ },
+ {
+  "type": "inventoryBankManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Inventory\\inventoryBankManager.cs",
+  "methods": [
+   {
+    "sig": "setNewInventoryListManagerList(List<inventoryListElement> newList)",
+    "line": 23
+   },
+   {
+    "sig": "setInventoryFromInventoryListManager()",
+    "line": 33
+   },
+   {
+    "sig": "getBankInventoryList()",
+    "line": 54
+   },
+   {
+    "sig": "addInventoryObjectByName(string objectName, int amountToAdd)",
+    "line": 59
+   },
+   {
+    "sig": "getInventoryObjectAmountByName(string inventoryObjectName)",
+    "line": 84
+   },
+   {
+    "sig": "removeObjectAmountFromInventory(string objectName, int amountToRemove)",
+    "line": 105
+   },
+   {
+    "sig": "getInventoryListManagerList()",
+    "line": 123
+   },
+   {
+    "sig": "setInventoryObjectListNames()",
+    "line": 151
+   },
+   {
+    "sig": "addNewInventoryObjectToInventoryListManagerList()",
+    "line": 160
+   },
+   {
+    "sig": "saveCurrentInventoryListToFile()",
+    "line": 169
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 184
+   }
+  ]
+ },
+ {
+  "type": "inventoryCaptureManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Inventory\\inventoryCaptureManager.cs",
+  "methods": [
+   {
+    "sig": "init()",
+    "line": 69
+   },
+   {
+    "sig": "OnDisable()",
+    "line": 104
+   },
+   {
+    "sig": "getCapture()",
+    "line": 263
+   },
+   {
+    "sig": "closeWindow()",
+    "line": 324
+   },
+   {
+    "sig": "destroyAuxObjects()",
+    "line": 333
+   },
+   {
+    "sig": "setCurrentInventoryObjectInfo(inventoryInfo info, string savePath)",
+    "line": 338
+   }
+  ]
+ },
+ {
+  "type": "inventoryCaptureManagerTransparent",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Inventory\\inventoryCaptureManagerTransparent.cs",
+  "methods": [
+   {
+    "sig": "takeCapture()",
+    "line": 55
+   }
+  ]
+ },
+ {
+  "type": "inventoryInfo",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Inventory\\inventoryInfo.cs",
+  "methods": [
+   {
+    "sig": "InitializeAudioElements()",
+    "line": 256
+   },
+   {
+    "sig": "setNewName(string newName)",
+    "line": 263
+   },
+   {
+    "sig": "resetInventoryInfo()",
+    "line": 268
+   },
+   {
+    "sig": "copyInventoryObject(inventoryInfo objectToStore, inventoryInfo objectToCopy)",
+    "line": 378
+   }
+  ]
+ },
+ {
+  "type": "inventoryMenuPanelsSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Inventory\\inventoryMenuPanelsSystem.cs",
+  "methods": [
+   {
+    "sig": "setInventoryPanelByName(string panelName)",
+    "line": 27
+   }
+  ]
+ },
+ {
+  "type": "inventoryObject",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Inventory\\inventoryObject.cs",
+  "methods": [
+   {
+    "sig": "useObjectOnNewBehavior(GameObject currentPlayer, int amountToUse)",
+    "line": 36
+   },
+   {
+    "sig": "useObjectOnNewBehaviorWithExternalCharacter(GameObject currentPlayer, GameObject currentExternalCharacterForInventoryUsage, int amountToUse)",
+    "line": 43
+   },
+   {
+    "sig": "combineObjectsOnNewBehavior(GameObject currentPlayer, inventoryInfo inventoryInfoToUse)",
+    "line": 50
+   },
+   {
+    "sig": "carryPhysicalObjectFromInventory(GameObject currentPlayer)",
+    "line": 57
+   },
+   {
+    "sig": "eventOnPickObjectNewBehaviour(GameObject currentPlayer)",
+    "line": 64
+   },
+   {
+    "sig": "eventOnDropObjectNewBehaviour(GameObject currentPlayer)",
+    "line": 71
+   },
+   {
+    "sig": "setObjectEquippedStateOnInventoryOnNewBehavior(GameObject currentPlayer, bool state)",
+    "line": 78
+   },
+   {
+    "sig": "getCustomMessageOnNotAbleToEquip()",
+    "line": 87
+   }
+  ]
+ },
+ {
+  "type": "inventoryObjectToEquipInfo",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Inventory\\inventoryObjectToEquipInfo.cs",
+  "methods": [
+   {
+    "sig": "setObjectEquippedState(bool state)",
+    "line": 7
+   },
+   {
+    "sig": "isObjectEquipped()",
+    "line": 13
+   },
+   {
+    "sig": "updateObjectState()",
+    "line": 19
+   }
+  ]
+ },
+ {
+  "type": "inventoryPrefabCreationSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Inventory\\inventoryPrefabCreationSystem.cs",
+  "methods": [
+   {
+    "sig": "createInventoryPrefabObject()",
+    "line": 7
+   }
+  ]
+ },
+ {
+  "type": "inventorySlotOptionsButtons",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Inventory\\inventorySlotOptionsButtons.cs",
+  "methods": [
+   {
+    "sig": "setButtonsState(bool useState, bool equipState, bool unEquipState, bool dropState, bool combineState, bool examineState, bool holdState, bool discardState, bool setOnQuickSlotsState, bool repairState)",
+    "line": 57
+   }
+  ]
+ },
+ {
+  "type": "inventoryWeightManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Inventory\\inventoryWeightManager.cs",
+  "methods": [
+   {
+    "sig": "updateCurrentInventoryObjectWeight()",
+    "line": 74
+   },
+   {
+    "sig": "disableCurrentInventoryObjectWeight()",
+    "line": 111
+   },
+   {
+    "sig": "updateInventoryWeight()",
+    "line": 118
+   },
+   {
+    "sig": "checkIfCanCarryObjectWeight(inventoryInfo inventoryInfoToCheck)",
+    "line": 192
+   },
+   {
+    "sig": "checkIfCanCarrySingleObjectWeight(inventoryInfo inventoryInfoToCheck)",
+    "line": 221
+   },
+   {
+    "sig": "initializeInventoryWeightLimitAmount(float newValue)",
+    "line": 252
+   },
+   {
+    "sig": "increaseInventoryWeightLimitAmount(float newValue)",
+    "line": 257
+   },
+   {
+    "sig": "updateInventoryWeightLimitAmountWithoutUpdatingStatManager(int statId, float amount)",
+    "line": 264
+   },
+   {
+    "sig": "increaseInventoryBagWeight(float newValue)",
+    "line": 269
+   },
+   {
+    "sig": "setUseInventoryWeightEnabledState(bool state)",
+    "line": 288
+   },
+   {
+    "sig": "setUseInventoryWeightEnabledStateFromEditor(bool state)",
+    "line": 293
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 300
+   }
+  ]
+ },
+ {
+  "type": "playerInventoryCategoriesListManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Inventory\\playerInventoryCategoriesListManager.cs",
+  "methods": [
+   {
+    "sig": "selectInventoryCategoryList(List<string> categoryNameList)",
+    "line": 65
+   },
+   {
+    "sig": "selectInventoryCategory(string categoryName)",
+    "line": 75
+   },
+   {
+    "sig": "enableOrDisableCategoryListPanel()",
+    "line": 180
+   },
+   {
+    "sig": "enableCategoryListPanel()",
+    "line": 187
+   },
+   {
+    "sig": "disableCategoryListPanel()",
+    "line": 194
+   },
+   {
+    "sig": "updateInventoryListPanelPosition()",
+    "line": 201
+   },
+   {
+    "sig": "enableAllCategories()",
+    "line": 239
+   },
+   {
+    "sig": "enableSelectingMultipleCategories()",
+    "line": 252
+   },
+   {
+    "sig": "disableSelectingMultipleCategories()",
+    "line": 259
+   },
+   {
+    "sig": "enableOrDisableSelectingMultipleCategories()",
+    "line": 265
+   },
+   {
+    "sig": "disableAllCategoriesIcons()",
+    "line": 290
+   },
+   {
+    "sig": "resetScroll()",
+    "line": 303
+   }
+  ]
+ },
+ {
+  "type": "simpleInventoryContentManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Inventory\\simpleInventoryContentManager.cs",
+  "methods": [
+   {
+    "sig": "setCurrentWeaponObject(string weaponName)",
+    "line": 89
+   },
+   {
+    "sig": "updateCurrentWeaponRemainMagazine(int amount)",
+    "line": 109
+   },
+   {
+    "sig": "updateSimpleInventoryObjectInfo(string objectName, int amount)",
+    "line": 117
+   },
+   {
+    "sig": "updateCurrentSimpleInventoryList()",
+    "line": 129
+   },
+   {
+    "sig": "getCurrentInventoryList()",
+    "line": 167
+   },
+   {
+    "sig": "setCurrentAmmoValues(List<int> ammoAmountList)",
+    "line": 211
+   },
+   {
+    "sig": "setCurrentAmmoValuesOnWeapon(int weaponIndex, int currentAmmoAmountToSet)",
+    "line": 229
+   },
+   {
+    "sig": "addAmmoToWeapon(int weaponIndex, int ammoAmountToAdd)",
+    "line": 270
+   }
+  ]
+ },
+ {
+  "type": "weaponOnInventory",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Inventory\\Inventory Pickups Behaviour\\weaponOnInventory.cs",
+  "methods": [
+   {
+    "sig": "getRemainingAmmoValue()",
+    "line": 56
+   },
+   {
+    "sig": "getWeaponPickup()",
+    "line": 61
+   }
+  ]
+ }
+]

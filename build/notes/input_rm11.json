@@ -1,0 +1,632 @@
+[
+ {
+  "type": "playerExperienceSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Experience System\\playerExperienceSystem.cs",
+  "methods": [
+   {
+    "sig": "checkEventOnSystemDisabled()",
+    "line": 229
+   },
+   {
+    "sig": "checkIncreasePlayerLevel()",
+    "line": 236
+   },
+   {
+    "sig": "getExperienceAmount(int newExperienceAmount)",
+    "line": 319
+   },
+   {
+    "sig": "getExperienceAmount(int newExperienceAmount, Transform objectTransform, bool useTransformAsExpTextPosition, string extraExperienceText)",
+    "line": 328
+   },
+   {
+    "sig": "updateExperienceInfo()",
+    "line": 526
+   },
+   {
+    "sig": "showLevelUpPanel()",
+    "line": 539
+   },
+   {
+    "sig": "stopShowLevelUpPanelCoroutine()",
+    "line": 546
+   },
+   {
+    "sig": "showExperienceSlider()",
+    "line": 577
+   },
+   {
+    "sig": "stopShowExperienceSliderCoroutine()",
+    "line": 584
+   },
+   {
+    "sig": "openOrCloseExperienceMenu(bool state)",
+    "line": 600
+   },
+   {
+    "sig": "enableOrDisableHUD(bool state)",
+    "line": 652
+   },
+   {
+    "sig": "openOrCLoseObjectiveMenuFromTouch()",
+    "line": 661
+   },
+   {
+    "sig": "inputOpenOrCloseObjectiveMenu()",
+    "line": 666
+   },
+   {
+    "sig": "updateStatsInfo()",
+    "line": 678
+   },
+   {
+    "sig": "initializeCurrentLevelExperienceAmount(float newValue)",
+    "line": 691
+   },
+   {
+    "sig": "initializeTotalExperienceAmount(float newValue)",
+    "line": 698
+   },
+   {
+    "sig": "initializeTotalExperiencePointsAmount(float newValue)",
+    "line": 705
+   },
+   {
+    "sig": "initializeCurrentLevelAmount(float newValue)",
+    "line": 712
+   },
+   {
+    "sig": "increaseTotalExperiencePointsAmount(float extraValue)",
+    "line": 719
+   },
+   {
+    "sig": "increaseTotalExperienceAmount(float extraValue)",
+    "line": 724
+   },
+   {
+    "sig": "initializeCurrentLevelExperienceToNextLevelAmount(float newValue)",
+    "line": 729
+   },
+   {
+    "sig": "updateCurrentLevelAmountWithoutUpdatingStatManager(int statId, float amount)",
+    "line": 736
+   },
+   {
+    "sig": "updateTotalExperiencePointsAmountWithoutUpdatingStatManager(int statId, float amount)",
+    "line": 741
+   },
+   {
+    "sig": "updateTotalExperienceAmountWithoutUpdatingStatManager(int statId, float amount)",
+    "line": 746
+   },
+   {
+    "sig": "updateCurrentLevelExperienceToNextLevelAmountWithoutUpdatingStatManager(int statId, float amount)",
+    "line": 751
+   },
+   {
+    "sig": "updateCurrentLevelExperienceAmountWithoutUpdatingStatManager(int statId, float amount)",
+    "line": 756
+   },
+   {
+    "sig": "getCurrentLevel()",
+    "line": 761
+   },
+   {
+    "sig": "getSkillPointsAmount()",
+    "line": 766
+   },
+   {
+    "sig": "useSkillPoints(int amountToUse)",
+    "line": 771
+   },
+   {
+    "sig": "getSkillPoints(int amountToUse)",
+    "line": 784
+   },
+   {
+    "sig": "setExperienceMultiplier(float experienceMultiplierAmount, float experienceMultiplierDuration)",
+    "line": 793
+   },
+   {
+    "sig": "stopSetExperienceMultiplier()",
+    "line": 800
+   },
+   {
+    "sig": "enableOrDisableStatsMenuPanel(bool state)",
+    "line": 839
+   },
+   {
+    "sig": "setExperienceSystemEnabledState(bool state)",
+    "line": 846
+   },
+   {
+    "sig": "setHideExperienceSliderAfterTimeState(bool state)",
+    "line": 851
+   }
+  ]
+ },
+ {
+  "type": "objectExperienceSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Experience System\\objectExperienceSystem.cs",
+  "methods": [
+   {
+    "sig": "sendExperienceToPlayerManually()",
+    "line": 190
+   },
+   {
+    "sig": "sendExperienceToPlayer(GameObject playerToUse)",
+    "line": 197
+   },
+   {
+    "sig": "sendExperienceToAttacker(GameObject attackerGameObject)",
+    "line": 206
+   }
+  ]
+ },
+ {
+  "type": "footStepManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Foot Step\\footStepManager.cs",
+  "methods": [
+   {
+    "sig": "changeFootStespType(bool state)",
+    "line": 312
+   },
+   {
+    "sig": "GetMainTexture(Vector3 playerPos)",
+    "line": 329
+   },
+   {
+    "sig": "getSound(Vector3 pos, GameObject ground, footStep.footType footSide)",
+    "line": 364
+   },
+   {
+    "sig": "placeFootPrint(footStep.footType footSide, int footStepIndex)",
+    "line": 491
+   },
+   {
+    "sig": "createFootPrint(GameObject foot, Vector3 position, Quaternion rotation, Vector3 normal, Transform currentSurfaceParent)",
+    "line": 574
+   },
+   {
+    "sig": "createParticles(footStep.footType footSide, int footStepIndex)",
+    "line": 621
+   },
+   {
+    "sig": "enableOrDisableFootSteps(bool state)",
+    "line": 654
+   },
+   {
+    "sig": "enableOrDisableFootStepsWithDelay(bool state, float delayAmount)",
+    "line": 665
+   },
+   {
+    "sig": "enableOrDisableFootStepsComponents(bool state)",
+    "line": 676
+   },
+   {
+    "sig": "setRightFootStep(GameObject rigth)",
+    "line": 687
+   },
+   {
+    "sig": "setLeftFootStep(GameObject left)",
+    "line": 692
+   },
+   {
+    "sig": "setDefaultGroundFootStepState()",
+    "line": 697
+   },
+   {
+    "sig": "setFootStepState(string stateName)",
+    "line": 702
+   },
+   {
+    "sig": "setNewFootStepStateAfterDelay(string newState, float delayAmount)",
+    "line": 756
+   },
+   {
+    "sig": "stopSetNewFootStepStateAfterDelayCoroutine()",
+    "line": 763
+   },
+   {
+    "sig": "isDelayToNewStateActive()",
+    "line": 783
+   },
+   {
+    "sig": "setUseNoiseMeshState(bool state)",
+    "line": 788
+   },
+   {
+    "sig": "setNoiseOnStep(Vector3 footPosition)",
+    "line": 793
+   },
+   {
+    "sig": "setDefaultFeelVolumeRange()",
+    "line": 834
+   },
+   {
+    "sig": "removeSound(int footStepIndex, int soundIndex)",
+    "line": 841
+   },
+   {
+    "sig": "setWallRunningState(bool wallRunningActiveValue, bool wallRunningOnRightSideValue)",
+    "line": 847
+   },
+   {
+    "sig": "setFootStepPausedState(bool state)",
+    "line": 853
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 858
+   }
+  ]
+ },
+ {
+  "type": "noiseSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Foot Step\\noiseSystem.cs",
+  "methods": [
+   {
+    "sig": "activateNoise()",
+    "line": 85
+   },
+   {
+    "sig": "OnCollisionEnter(Collision col)",
+    "line": 240
+   },
+   {
+    "sig": "activateNoiseExternally()",
+    "line": 257
+   },
+   {
+    "sig": "setUseNoiseState(bool state)",
+    "line": 264
+   },
+   {
+    "sig": "setimpactObject(GameObject newObject)",
+    "line": 269
+   }
+  ]
+ },
+ {
+  "type": "footStep",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Foot Step\\footStep.cs",
+  "methods": [
+   {
+    "sig": "setStepVolumeRange(Vector2 newVolumeRange)",
+    "line": 100
+   },
+   {
+    "sig": "setOriginalStepVolume()",
+    "line": 105
+   },
+   {
+    "sig": "enableOrDisableFootStep(bool state)",
+    "line": 110
+   },
+   {
+    "sig": "setFooStepStateWithDelay(bool state, float delayAmount)",
+    "line": 115
+   }
+  ]
+ },
+ {
+  "type": "customNoiseSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Foot Step\\customNoiseSystem.cs",
+  "methods": [
+   {
+    "sig": "setNoiseState(string stateName)",
+    "line": 35
+   },
+   {
+    "sig": "activateNoise()",
+    "line": 45
+   }
+  ]
+ },
+ {
+  "type": "noiseMeshSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Foot Step\\noiseMeshSystem.cs",
+  "methods": [
+   {
+    "sig": "getComponentInstance()",
+    "line": 33
+   },
+   {
+    "sig": "addNoiseMesh(float scaleMultiplier, Vector3 noisePosition, float noiseExpandSpeed)",
+    "line": 62
+   }
+  ]
+ },
+ {
+  "type": "footStepSurfaceSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Foot Step\\footStepSurfaceSystem.cs",
+  "methods": [
+   {
+    "sig": "getSurfaceName()",
+    "line": 9
+   }
+  ]
+ },
+ {
+  "type": "playerTutorialSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Tutorial System\\playerTutorialSystem.cs",
+  "methods": [
+   {
+    "sig": "stopCheckTutorialOpenedState()",
+    "line": 136
+   },
+   {
+    "sig": "checkTutorialOpenedState()",
+    "line": 143
+   },
+   {
+    "sig": "activatingTutorialByNameFromEditor()",
+    "line": 151
+   },
+   {
+    "sig": "activateTutorialByName(string tutorialName)",
+    "line": 156
+   },
+   {
+    "sig": "checkOpenOrCloseTutorial(bool state)",
+    "line": 212
+   },
+   {
+    "sig": "stopCheckOpenOrCloseTutorial()",
+    "line": 231
+   },
+   {
+    "sig": "setNextPanelOnTutorial()",
+    "line": 245
+   },
+   {
+    "sig": "setPreviousPanelOnTutorial()",
+    "line": 273
+   },
+   {
+    "sig": "openOrCloseTutorial(bool opened)",
+    "line": 289
+   },
+   {
+    "sig": "resumePlayerInput()",
+    "line": 382
+   },
+   {
+    "sig": "stopResumePlayerInputCoroutine()",
+    "line": 393
+   },
+   {
+    "sig": "playTutorialVideo(tutorialInfo newTutorialInfo)",
+    "line": 410
+   },
+   {
+    "sig": "stopTutorialVideoCoroutine()",
+    "line": 417
+   },
+   {
+    "sig": "closeTutorial()",
+    "line": 506
+   },
+   {
+    "sig": "callNextTutorialPanel()",
+    "line": 526
+   },
+   {
+    "sig": "resetAllTutorials()",
+    "line": 535
+   },
+   {
+    "sig": "setTutorialsEnabledState(bool state)",
+    "line": 554
+   },
+   {
+    "sig": "setTutorialUISystem(tutorialUISystem newTutorialUISystem)",
+    "line": 559
+   },
+   {
+    "sig": "instantiateTutorialPanelPrefab()",
+    "line": 566
+   },
+   {
+    "sig": "setTutorialsEnabledStateFromEditor(bool state)",
+    "line": 588
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 595
+   }
+  ]
+ },
+ {
+  "type": "tutorialUISystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Tutorial System\\tutorialUISystem.cs",
+  "methods": [
+   {
+    "sig": "getTutorialsPanel()",
+    "line": 22
+   },
+   {
+    "sig": "getVideoAudioSource()",
+    "line": 27
+   },
+   {
+    "sig": "getMainVideoPlayerPanel()",
+    "line": 32
+   },
+   {
+    "sig": "getTutorialInfoList()",
+    "line": 37
+   },
+   {
+    "sig": "activateTutorialByName(string tutorialName)",
+    "line": 42
+   },
+   {
+    "sig": "searchPlayerTutorialSystem()",
+    "line": 50
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 63
+   }
+  ]
+ },
+ {
+  "type": "tutorialActivatorSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Tutorial System\\tutorialActivatorSystem.cs",
+  "methods": [
+   {
+    "sig": "activateTutorial(GameObject newPlayer)",
+    "line": 19
+   },
+   {
+    "sig": "setTutorialEnabledState(bool state)",
+    "line": 40
+   }
+  ]
+ },
+ {
+  "type": "tutorialInfo",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Tutorial System\\tutorialInfo.cs",
+  "methods": [
+   {
+    "sig": "InitializeAudioElements()",
+    "line": 40
+   }
+  ]
+ },
+ {
+  "type": "hideCharacterFixedPlaceSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Hide System\\hideCharacterFixedPlaceSystem.cs",
+  "methods": [
+   {
+    "sig": "enableOrDisableHideState()",
+    "line": 264
+   },
+   {
+    "sig": "setCharacterState()",
+    "line": 315
+   },
+   {
+    "sig": "callUnityEvents()",
+    "line": 326
+   },
+   {
+    "sig": "resetCameraInputValues()",
+    "line": 352
+   },
+   {
+    "sig": "changeResetCameraTransfrom()",
+    "line": 370
+   },
+   {
+    "sig": "setCurrentPlayer(GameObject player)",
+    "line": 378
+   },
+   {
+    "sig": "checkIfDetected()",
+    "line": 408
+   },
+   {
+    "sig": "showUnableToHideMessage()",
+    "line": 427
+   },
+   {
+    "sig": "inputResetCameraTransform()",
+    "line": 436
+   },
+   {
+    "sig": "inputSetIncreaseZoomStateByButton(bool state)",
+    "line": 443
+   },
+   {
+    "sig": "inputSetDecreaseZoomStateByButton(bool state)",
+    "line": 454
+   },
+   {
+    "sig": "inputSetZoomValueByMouseWheel(bool state)",
+    "line": 465
+   }
+  ]
+ },
+ {
+  "type": "hideCharacterFixedPlaceSystemPlayerManagement",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Hide System\\hideCharacterFixedPlaceSystemPlayerManagement.cs",
+  "methods": [
+   {
+    "sig": "setPlayerHidingState(bool state)",
+    "line": 36
+   },
+   {
+    "sig": "setCurrentFixedHideSystem(hideCharacterFixedPlaceSystem newFixedHideSystem)",
+    "line": 43
+   },
+   {
+    "sig": "setPlayerHidingOnFreeZoneState(bool state)",
+    "line": 50
+   },
+   {
+    "sig": "setCurrentHideFromEnemiesSystem(hideFromEnemiesSystem newHideFromEnemiesSystem)",
+    "line": 55
+   },
+   {
+    "sig": "removeCurrentHideFromEnemiesSystem()",
+    "line": 60
+   },
+   {
+    "sig": "hideInputResetCameraTransform()",
+    "line": 68
+   },
+   {
+    "sig": "hideInputSetIncreaseZoomStateByButton(bool state)",
+    "line": 79
+   },
+   {
+    "sig": "hideInputSetDecreaseZoomStateByButton(bool state)",
+    "line": 90
+   },
+   {
+    "sig": "hideInputSetZoomValueByMouseWheel(bool state)",
+    "line": 101
+   },
+   {
+    "sig": "checkEventsOnStateChange(bool state)",
+    "line": 112
+   }
+  ]
+ },
+ {
+  "type": "hideFromEnemiesSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Hide System\\hideFromEnemiesSystem.cs",
+  "methods": [
+   {
+    "sig": "setCharacterState(string stateName, int characterIndex)",
+    "line": 167
+   },
+   {
+    "sig": "OnTriggerEnter(Collider col)",
+    "line": 174
+   },
+   {
+    "sig": "OnTriggerExit(Collider col)",
+    "line": 179
+   },
+   {
+    "sig": "addCharacterFromHiddenZone(GameObject newCharacter)",
+    "line": 184
+   },
+   {
+    "sig": "removeCharacterFromHiddenZone(GameObject newCharacter)",
+    "line": 191
+   },
+   {
+    "sig": "checkTriggerInfo(Collider col, bool isEnter)",
+    "line": 198
+   },
+   {
+    "sig": "isCharacterHiddenOnZone(GameObject characterToCheck)",
+    "line": 284
+   }
+  ]
+ }
+]

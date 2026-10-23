@@ -1,0 +1,424 @@
+[
+ {
+  "type": "IKWeaponInfo",
+  "summary": "近接武器のIKや攻撃時サーフェス音を保持する情報クラス。音は`InitializeAudioElements`で`AudioElement`へ複写する。",
+  "methods": {
+   "InitializeAudioElements()": "2つの近接攻撃音が設定されていれば、対応する`AudioElement.clip`へ代入する。"
+  }
+ },
+ {
+  "type": "addGrenadeToThrowAwayFromCharacter",
+  "summary": "投擲グレナードをプレイヤーのアビリティ所持数へ足し引きする補助コンポーネント。確定時は投射物を投げられる状態へ戻す。",
+  "methods": {
+   "addGrenadeToCharacterSystem(GameObject playerToCheck)": "`currentPlayer`を設定し、有効なら`checkPlayer(true)`で所持数を1増やす。",
+   "removeGrenadeToCharacterSystem()": "`currentPlayer`がいれば`checkPlayer(false)`を呼び、所持数と外部投射物の設定を解除する。",
+   "confirmThrowAwayGrenade()": "`confirmThrowGrenadeActive`を立て、投射物の発射済み状態を戻して元の所有者との衝突判定を再有効化する。"
+  }
+ },
+ {
+  "type": "arrowManager",
+  "summary": "弓の矢をインベントリの個数と連動させ、HUDの矢パネル・個数・種類アイコンを更新する管理クラス。",
+  "methods": {
+   "enableOrDisableArrowInfoPanel(bool state)": "矢機能が有効なときだけ、`arrowInfoPanel`のアクティブ状態を`state`に合わせる。",
+   "checkIfArrowsFoundOnInventory()": "矢の個数を取得し、0より多ければ発見イベント、そうでなければ未発見イベントを呼ぶ。",
+   "useArrowFromInventory(int amountToUse)": "在庫を確認して矢があれば`amountToUse`個をインベントリから減らし、表示を更新する。",
+   "updateArrowAmountText()": "インベントリから矢の個数を取り直し、負値を0に補正して`arrowAmountText`へ表示する。",
+   "setCurrentArrowInventoryObjectName(string newName)": "`currentArrowInventoryObjectName`を`newName`に変更するだけ。",
+   "setArrowTypeIcon(Texture newIcon, bool useInfiniteArrows)": "アイコンにテクスチャを設定し、無限矢なら専用アイコンを出して個数表示を隠す。"
+  }
+ },
+ {
+  "type": "arrowProjectile",
+  "summary": "矢用の投射物で、着弾面への刺さり・跳ね返り・拾い直しを面の種類ごとに処理する。",
+  "methods": {
+   "checkObjectDetected(GameObject objectToDamage)": "着弾時に矢を停止させて対象へ親子付けし、面の種類別の跳ね返りや胴体への刺さり登録を行う。",
+   "resetProjectile()": "`applyArrowForces`を戻し、調整コルーチンを止め、親を解除して落下力を1に戻す。",
+   "setNewArrowDownForce(float newValue)": "`currentArrowDownForce`を`newValue`に設定するだけ。",
+   "setArrowSurfaceTypeInfoList(List<bowSystem.arrowSurfaceTypeInfo> newArrowSurfaceTypeInfoList)": "面の種類リストを差し替え、`checkSurfaceTypeDetected`を真にして判定を有効にする。",
+   "disableCheckSurfaceTypeDetected()": "`checkSurfaceTypeDetected`を偽にして面の種類判定を止めるだけ。"
+  }
+ },
+ {
+  "type": "attachmentInfo",
+  "summary": "武器アタッチメント1種の名前・スロット・イベント・選択音をまとめた情報クラス。",
+  "methods": {
+   "InitializeAudioElements()": "`selectAttachmentSound`があれば`selectAttachmentAudioElement.clip`に代入する。"
+  }
+ },
+ {
+  "type": "attrackObjectsSystem",
+  "summary": "照準方向のオブジェクトを引き寄せて保持し、ため撃ちで投げる吸引武器の挙動。掴んだ物のタグ・レイヤー・重力を退避して復元する。",
+  "methods": {
+   "stopUpdateCoroutine()": "実行中の`updateCoroutine`があれば停止するだけ。",
+   "setAttractionEnabledState(bool state)": "`attractionEnabled`を設定し、偽のときは`updateSystemCoroutine()`を呼ぶだけ。",
+   "checkGrabObject()": "既存の`grabObjectsCoroutine`を止め、0.05秒後に掴み処理を行うコルーチンを開始する。",
+   "inputGrabObjects()": "入力から`checkGrabObject()`を呼び出すだけ。",
+   "inputHoldToLaunchObject()": "吸引有効かつ保持中で発動から0.5秒過ぎていれば、`addForceToLaunchObjects()`で投擲力を貯める。",
+   "inputReleaseToLaunchObject()": "保持中なら`dropObjects()`で投げ、吸引状態を切りコルーチンを止めて解除イベントを呼ぶ。",
+   "grabCloseObjects()": "`attractionPosition`周辺の対象タグとRigidbodyを集め、衝突・重力・タグを退避して保持リストに入れる。",
+   "dropObjects()": "カメラ前方の着弾点を求め、保持中の全オブジェクトを`dropObject`で放し、一覧とスライダーを初期化する。",
+   "addForceToLaunchObjects()": "`maxThrowForce`未満なら投擲力を増やし、300超でスライダーへ反映する。",
+   "dropObject(grabbedObject currentGrabbedObject, Vector3 launchDirection)": "対象の親・タグ・レイヤー・重力を戻し、力が300超なら`launchedObjects`を付けて投げる。",
+   "checkIfDropObject(GameObject objectToCheck)": "保持リストから一致する物を探し、見つかれば`dropObject`で放して参照を消す。"
+  }
+ },
+ {
+  "type": "audioClipBip",
+  "summary": "ビープ音を時間経過でピッチと間隔を変えながら鳴らし続け、投射物などの警告音を担うコンポーネント。",
+  "methods": {
+   "increasePlayTime(float extraTime)": "未初期化なら初期化し、`playTime`を`extraTime`にして計測を開始し`bipActivated`を立てる。",
+   "disableBip()": "`bipActivated`を下ろし、ピッチ・再生間隔・最終再生時刻を初期値へ戻す。"
+  }
+ },
+ {
+  "type": "bowHolderSystem",
+  "summary": "弓の装着位置を持ち、矢の装填・射撃・照準開始終了などのタイミングでUnityEventを発火するハブ。",
+  "methods": {
+   "checkEventOnLoadArrow()": "`eventOnLoadArrow`を発火し、デバッグ時のみログを出す。",
+   "checkEventOnFireArrow()": "`eventOnFireArrow`を発火し、デバッグ時のみログを出す。",
+   "checkEventOnStartAim()": "`eventOnStartAim`を発火し、デバッグ時のみログを出す。",
+   "checkEventOnEndAim()": "`eventOnEndAim`を発火し、デバッグ時のみログを出す。",
+   "checkEventOnCancelBowAction()": "`eventOnCancelBowAction`を発火し、デバッグ時のみログを出す。",
+   "checkEventOnMaxPullBowMultiplierStart()": "`eventOnMaxPullBowMultiplierStart`を発火し、デバッグ時のみログを出す。",
+   "checkEventOnMaxPullBowMultiplierEnd()": "`eventOnMaxPullBowMultiplierEnd`を発火し、デバッグ時のみログを出す。",
+   "getBowWeaponID()": "`bowWeaponID`を返すだけ。"
+  }
+ },
+ {
+  "type": "dissolveProjectile",
+  "summary": "着弾した物体へ`dissolveObject`を付け、シェーダーや色を渡して溶かす投射物。溶解完了で自身を破棄する。",
+  "methods": {
+   "dissolveObject(GameObject objectToDissolve)": "対象のColliderを取得して`checkObjectDetected`へ渡すだけ。",
+   "checkObjectDetected(Collider col)": "着弾音と停止処理の後、対象やキャラ・乗物に`dissolveObject`を用意して設定し、溶解を開始する。",
+   "destroyObject()": "`destroyProjectile()`を呼んで自身を消すだけ。"
+  }
+ },
+ {
+  "type": "dragObjectSystem",
+  "summary": "掴んだ物体をプレイヤー前方の位置へ追従させ、距離が離れるとイベントを出す運搬用システム。",
+  "methods": {
+   "stopUpdateCoroutine()": "`mainUpdateCoroutine`があれば停止するだけ。",
+   "dragObject()": "プレイヤー前方の目標位置へRigidbodyを補間移動し、向きを合わせ、離れていれば`eventOnFarFromObject`を呼ぶ。",
+   "setCurrentPlayer(GameObject newPlayer)": "`currentPlayerTransform`と`playerInput`を新しいプレイヤーから取り直す。",
+   "grabObject()": "掴み位置への移動を開始し、`objectGrabbed`を立てて更新コルーチンを始める。",
+   "dropObject()": "`objectGrabbed`を下ろし、位置調整中なら止めて更新コルーチンも停止する。",
+   "setObstacleFoundState(bool state)": "`obstacleFound`を設定し、併せて`mainRigidbody.isKinematic`を切り替える。",
+   "translateObjectToGrabPosition()": "既存の移動を止めてから、掴み位置へ寄せるコルーチンを開始する。",
+   "stopTranslateObjectToGrabPosition()": "`objectMovement`コルーチンがあれば停止するだけ。"
+  }
+ },
+ {
+  "type": "dynamicReticleSystem",
+  "summary": "移動・走り・視点回転・射撃・空中などに応じて照準の大きさを変え、武器の拡散値へ反映するシステム。",
+  "methods": {
+   "stopUpdateCoroutine()": "`updateCoroutine`があれば停止するだけ。",
+   "enableOrDisableReticleByName(string reticleName, bool state)": "名前で照準情報を引き、表示と拡散値を切り替え、有効にした場合は更新コルーチンを回す。",
+   "isReticleActive()": "`reticleActive`を返すだけ。"
+  }
+ },
+ {
+  "type": "fakeProjectileTrailSystem",
+  "summary": "実弾を使わず軌跡だけを目標点まで動かして見せるダミー投射物。時間切れや軌跡の消滅で破棄または非アクティブ化する。",
+  "methods": {
+   "instantiateFakeProjectileTrail(Vector3 newTargetPosition)": "`trailEnabled`なら自身を有効化して親を外し、軌跡を初期化して目標点方向を向き、移動を開始する。",
+   "setSpeedMultiplier(float newValue)": "`speedMultiplier`を`newValue`にするだけ。",
+   "stopTrailMovement()": "`movementActive`を偽にして移動を止めるだけ。",
+   "setDestroyTrailAfterTimeState(bool state)": "`destroyTrailAfterTime`を`state`にするだけ。",
+   "changeDestroyForSetActiveFunction(bool state)": "`disableInsteadOfDestroyActive`を`state`にするだけ。",
+   "resetFakeProjectileTrail()": "軌跡中なら`trailActive`を下ろし、軌跡の時間・タイマー・移動設定を初期化して消去する。"
+  }
+ },
+ {
+  "type": "flamethrowerWeapon",
+  "summary": "火炎放射器の連続噴射を制御し、燃料消費・連続音・開始終了音・パーティクルを切り替える武器挙動。",
+  "methods": {
+   "stopUpdateCoroutine()": "`updateCoroutine`を止め、`updateCoroutineActive`を偽にする。",
+   "enableWeapon()": "`setWeaponState(true)`を呼ぶだけ。",
+   "disableWeapon()": "`setWeaponState(false)`を呼び、`reloading`も偽にする。",
+   "setWeaponState(bool state)": "リロード中は遷移を抑えつつ、パーティクルと開始・終了音を切り替え、有効時のみ更新コルーチンを回す。",
+   "stopUpdateCoroutineIfActive()": "`updateCoroutineActive`が真のときだけ`stopUpdateCoroutine()`を呼ぶ。"
+  }
+ },
+ {
+  "type": "flashlight",
+  "summary": "武器に付く懐中電灯で、残弾を電池として消費し、ライト・メッシュ・HUD表示・効果音を切り替える。",
+  "methods": {
+   "checkIfEnoughBattery()": "無限でなく武器システム経由なら残弾の有無を確認し、その結果を返す。",
+   "changeFlashLightState()": "入力停止中なら何もせず、そうでなければ`isActivated`を反転して`setFlashlightState`を呼ぶ。",
+   "setFlashlightState(bool state)": "点灯時は電池と有効設定を確認し、`isActivated`・音・`mainLight`のアクティブ状態を反映する。",
+   "turnOn()": "電池と有効設定を確認してから`isActivated`を真にし、点灯音を鳴らす。",
+   "turnOff()": "`isActivated`を偽にして消灯音を鳴らすだけ。",
+   "playSound(bool state)": "`useSound`が真なら音源ピッチを整え、点灯か消灯かに応じた音を鳴らす。",
+   "changeLightIntensity(bool state)": "`useHighIntentity`が真なら`highIntensityActivated`を設定し、強度を高い値か元の値へ切り替える。",
+   "setHighIntensity()": "武器システム経由でFBA中かつ照準入力がなければ何もせず、条件を満たすと高輝度へ切り替える。",
+   "setOriginalIntensity()": "`changeLightIntensity(false)`で元の明るさへ戻すだけ。",
+   "enableOrDisableFlashlightMeshes(bool state)": "`flashlightMeshes`があれば、有効化時は設定を確認してから表示を`state`に合わせる。",
+   "setFlashLightInputPausedState(bool state)": "`flashLightInputPausedState`を`state`にするだけ。",
+   "enableOrDisableFlashlightIndicator(bool state)": "`usingFlashlight`を設定し、HUDパネル表示と残量スライダーの最大値を更新する。"
+  }
+ },
+ {
+  "type": "healerWeapon",
+  "summary": "回復・ダメージ・燃料やエネルギーの補充を切り替えて使う多機能武器。レイキャストした対象へ効果を適用し、設定に応じて弾を消費または回収する。",
+  "methods": {
+   "stopUpdateCoroutine()": "`updateCoroutine`があれば停止するだけ。",
+   "changeMode()": "初期化後に`healModeActive`を反転し、回復と攻撃のモードを切り替える。",
+   "checkTarget(GameObject target)": "対象が乗物かキャラで対応が有効なら、`changeTriggerState`で対象と計測開始時刻を登録する。",
+   "downButtonAction()": "`searchingTargets`を真にして更新コルーチンを開始し、対象探索と効果適用を始める。",
+   "upButtonAction()": "`searchingTargets`を偽にし、対象登録を解除して更新コルーチンを止める。",
+   "setCanHealState(bool state)": "`canHeal`を設定し、真ならダメージと燃料・エネルギー補充を偽にして回復専用にする。",
+   "setCanDamageState(bool state)": "`canDamage`を設定し、真なら回復と燃料・エネルギー補充を偽にして攻撃専用にする。",
+   "setCanRefillEnergyState(bool state)": "`canRefillEnergy`を設定し、真なら回復・ダメージ・燃料補充を偽にする。",
+   "setCanRefillFuelState(bool state)": "`canRefillFuel`を設定し、真なら回復・ダメージ・エネルギー補充を偽にする。",
+   "setCanGatherHealthState(bool state)": "`canGatherHealth`を`state`にするだけ。",
+   "setCanGatherEnergyState(bool state)": "`canGatherEnergy`を`state`にするだけ。",
+   "setCanGatherFuelState(bool state)": "`canGatherFuel`を`state`にするだけ。",
+   "setHealModeActiveState(bool state)": "`healModeActive`を`state`にするだけ。"
+  }
+ },
+ {
+  "type": "laserAttachment",
+  "summary": "武器に付けるレーザー照準アタッチメント。カメラ前方へレイを飛ばし、レーザーラインと着弾ドットを描画する。",
+  "methods": {
+   "stopUpdateCoroutine()": "`updateCoroutine`があれば停止するだけ。",
+   "setLaserEnabledState(bool state)": "`laserEnabled`を設定してライン表示・回転・ドットを切り替え、有効時は更新コルーチンを開始する。"
+  }
+ },
+ {
+  "type": "laserDotOnScreenSystem",
+  "summary": "レーザーの着弾点を画面座標へ変換し、HUDのドットアイコンとして表示するシステム。",
+  "methods": {
+   "updateLaserDotPosition(Vector3 hitPoint)": "`hitPoint`を画面座標へ変換し、画面内ならアイコンを配置して表示し、外なら隠す。",
+   "setLasetDotIconActiveState(bool state)": "有効設定を確認して`laserDotActive`を設定し、必要ならカメラやキャンバス情報を取得してアイコン表示を反映する。"
+  }
+ },
+ {
+  "type": "laserMine",
+  "summary": "レーザービーム式の地雷で、接触回数や時間経過で無効化される投射物の派生クラス。",
+  "methods": {
+   "increaseNumberOfContacts()": "無限でなければ接触回数を増やし、規定回数に達したら`disableBullet(0)`で無効化する。",
+   "checkObjectDetected(Collider col)": "着弾音と停止処理を行い、必要なら面へ密着させ、時間制か停止状態で無効化を待つ。"
+  }
+ },
+ {
+  "type": "plasmaCutterProjectile",
+  "summary": "プラズマカッター用の投射物で、命中した物体をスライスまたは粉砕し、切断方向へ力を加える。切断回数の上限も持つ。",
+  "methods": {
+   "checkObjectDetected(Collider col)": "着弾音の後`processObject`で切断し、多重切断の上限に達したら自身を破棄する。",
+   "processObject(GameObject objectToCheck, Collider objectCollider, Vector3 slicePosition)": "対象の`surfaceToSlice`と切断条件を確認して切断を試み、不可なら設定に応じてダメージと力を与える。",
+   "sliceCurrentObject(GameObject objectToCheck, Collider objectCollider, Material crossSectionMaterial, Vector3 slicePosition)": "回数を数え、キャラは`processCharacter`、粉砕設定は`shatterObject`、他は二分割して破片を整える。",
+   "checkForceToApplyOnObject(GameObject objectToDamage)": "切断方向と`addForceMultiplier`で質量に応じた力を加え、乗物なら専用の倍率を掛ける。",
+   "setShatterObjectActiveState(bool state)": "`shatterObjectActive`を`state`にするだけ。",
+   "shatterObject(GameObject objectToCheck, Material crossSectionMaterial)": "未粉砕なら対象を親から外して破片リストへ入れ、`shatterAmount`回`randomShatter`を実行して粉砕済みにする。",
+   "randomShatter(Material crossSectionMaterial)": "粉砕対象リストの各要素を`randomShatterSingle`で分割し、元を消して新しい破片をリストへ差し替える。",
+   "randomShatterSingle(GameObject objectToShatter, Material crossSectionMaterial)": "対象を分割し、破片へMeshColliderとRigidbodyを付け、必要なら爆発力を加えて配列を返す。"
+  }
+ },
+ {
+  "type": "plasmaCutterSystem",
+  "summary": "プラズマカッターのローター角度を手動・自動で回転させ、射撃イベントを発火する武器挙動。",
+  "methods": {
+   "firePlasmaCutter()": "`eventOnFireWeapon`を発火するだけ。",
+   "rotateRotorToRight()": "`mainRotor`を`manualRotationAmount`だけZ軸正方向へ回す。",
+   "rotateRotorToLeft()": "`mainRotor`を`manualRotationAmount`だけZ軸負方向へ回す。",
+   "changeRotorRotation()": "回転中でなければ角度を決めて回転イベントを出し、`mainRotor`を目標角へ補間するコルーチンを開始する。",
+   "stopChangeRotorRotation()": "`rotationCoroutine`があれば停止するだけ。"
+  }
+ },
+ {
+  "type": "projectileImpactSystem",
+  "summary": "投射物の着弾地点に音とデカールを出し、一定時間後の破棄やプール返却をまとめて行う小さなシステム。",
+  "methods": {
+   "activateImpactElements(Vector3 newPosition, AudioElement impactSoundEffect)": "位置を`newPosition`へ移し、音の長さで破棄タイマーを設定し、音源ピッチを整えて再生してデカールの親を設定する。",
+   "changeDestroyForSetActiveFunction(bool state)": "`mainDestroyGameObject`の破棄か非アクティブ化かの設定を`state`にするだけ。",
+   "setSendObjectToPoolSystemToDisableState(bool state)": "`mainDestroyGameObject`へプール返却で無効化する設定を渡すだけ。"
+  }
+ },
+ {
+  "type": "projectileInfo",
+  "summary": "投射物の速度・ダメージ・音・切断設定などを保持する情報クラスで、コピー用コンストラクタも持つ。",
+  "methods": {
+   "InitializeAudioElements()": "`impactSoundEffect`があれば`impactAudioElement.clip`に代入する。"
+  }
+ },
+ {
+  "type": "projectilesOnCharacterBodyManager",
+  "summary": "キャラの体に刺さった投射物を一定時間後に1本ずつ消していく管理コンポーネント。",
+  "methods": {
+   "addProjectileToCharacterBody(GameObject newProjectileObject)": "削除が有効なら未登録の投射物をリストに加え、待ち時間をリセットして削除コルーチンを開始する。",
+   "stopRemoveProjectilesCoroutine()": "`removeCoroutine`があれば停止するだけ。"
+  }
+ },
+ {
+  "type": "simpleChainSaw",
+  "summary": "チェーンソーの起動状態と燃料消費、ピボットの手動・自動回転を扱う武器挙動。",
+  "methods": {
+   "stopUpdateCoroutine()": "`updateCoroutine`があれば停止するだけ。",
+   "activateChainSaw()": "`activateOrDeactivateChainsaw(true)`を呼ぶだけ。",
+   "deactivateChainSaw()": "`activateOrDeactivateChainsaw(false)`を呼ぶだけ。",
+   "rotatePivotToRight()": "`mainRotationPivot`を`manualRotationAmount`だけZ軸正方向へ回し、最大角度内に収める。",
+   "rotatePivotToLeft()": "`mainRotationPivot`を`manualRotationAmount`だけZ軸負方向へ回し、最小角度内に収める。",
+   "changePivotRotation()": "回転中でなければ角度を決めて回転イベントを出し、ピボットを目標角へ補間するコルーチンを開始する。",
+   "stopChangePivotRotation()": "`rotationCoroutine`があれば停止するだけ。"
+  }
+ },
+ {
+  "type": "simpleSniperSightSystem",
+  "summary": "スナイパーサイト表示時にカメラ状態とFOVを切り替え、解除時は元のカメラ状態へ戻すシステム。",
+  "methods": {
+   "enableOrDisableSniperSight(bool state)": "一人称・三人称やFBA、照準入力などの条件を確認し、満たせば`setSniperSightState`でサイトを切り替える。",
+   "disableSniperSight()": "一人称状態を渡して`setSniperSightState(false, …)`を呼ぶだけ。",
+   "disableSniperSightIfActive()": "サイトが有効なら解除して`sniperSightActivePreviously`を立て、後で復帰できるようにする。",
+   "enableSniperSightIfActivePreviously()": "以前アクティブで照準中なら再度有効化し、最後に`sniperSightActivePreviously`を下ろす。"
+  }
+ },
+ {
+  "type": "sliceObject",
+  "summary": "近接武器などに付け、トリガー内の物体を任意平面でスライスしたりダメージを与えたりする挙動。対象の`surfaceToSlice`設定に従う。",
+  "methods": {
+   "processObject(GameObject obj, Collider objectCollider, Vector3 slicePosition)": "対象の`surfaceToSlice`と切断可否・方向を確認して切断し、不可なら設定に応じてダメージと力を与える。",
+   "toggleSliceActiveState()": "`sliceActive`を反転して`setSliceActiveState`を呼ぶだけ。",
+   "setSliceActiveState(bool state)": "`sliceActive`を設定し、有効時はコライダーを切り替え、無効時は無視リストを初期化する。",
+   "checkObjectDetected(Collider col)": "対象レイヤーと無視リストを確認し、切断位置を更新して`processObject`へ渡す。",
+   "sliceCurrentObject(GameObject obj, Collider objectCollider, Material crossSectionMaterial, Vector3 slicePosition)": "キャラなら`processCharacter`、それ以外は`sliceSystemUtils`で二分割し、破片の生成と力の適用を行う。",
+   "stopDisableSliceActiveWithDelay()": "`disableSliceCoroutine`があれば停止するだけ。",
+   "disableSliceActiveWithDelay()": "既存の遅延処理を止め、0.5秒と`disableTimeAfterCollision`の後に切断を切るコルーチンを開始する。",
+   "disableIgnoreCollisionList()": "衝突無視リストと検出済みリストを空にし、トリガーコライダーを無効にする。",
+   "checkForceToApplyOnObject(GameObject objectToDamage)": "切断方向と倍率から質量に応じた力を加え、乗物なら専用の倍率を掛ける。"
+  }
+ },
+ {
+  "type": "spearProjectile",
+  "summary": "槍の投射物で、着弾時の刺さりや一撃必殺、ラグドールを貫いて運ぶ処理を持つ。",
+  "methods": {
+   "stopUpdateCoroutine()": "`updateCoroutine`があれば停止するだけ。",
+   "checkObjectDetected(Collider col)": "着弾で停止して対象やラグドールへ親子付けし、一撃必殺判定なら`killCharacter`と運搬を、そうでなければダメージと力を与える。"
+  }
+ },
+ {
+  "type": "taserProjectile",
+  "summary": "テーザー用の投射物で、命中したキャラを指定時間だけ気絶させる。",
+  "methods": {
+   "checkObjectDetected(Collider col)": "着弾音と停止処理の後、対象がキャラなら`sedateCharacter`で気絶させ、必要ならアクションを起動する。",
+   "destroyObject()": "`destroyProjectile()`を呼ぶだけ。"
+  }
+ },
+ {
+  "type": "throwGrenadeSystem",
+  "summary": "投擲グレナードの所持数をHUDへ表示し、投擲開始と確定の入力でイベントを発火するシステム。",
+  "methods": {
+   "checkGrenadesInfo()": "投擲が有効なら所持数表示を更新し、無効なら`grenadeInfoPanel`を閉じる。",
+   "inputStartThrowGrenade()": "所持数を確認し、0より多ければ`canConfirmThrowGrenade`を立てて開始イベントを発火する。",
+   "inputConfirmThrowGrenade()": "確定可能なときだけ確定イベントを発火し、所持数表示を更新する。",
+   "updateGrenadeAmountText()": "インベントリからグレナード数を取り、負値を0にして`grenadeAmountText`へ表示する。"
+  }
+ },
+ {
+  "type": "vacuumGun",
+  "summary": "カメラ前方のオブジェクトを吸い寄せて保持し、射出もできる吸引銃の挙動。掴んだ物のレイヤーを退避して復元する。",
+  "methods": {
+   "stopUpdateCoroutine()": "`updateCoroutine`があれば停止するだけ。",
+   "setVacuumEnabledState(bool state)": "吸引中なら止めてから`vacuumEnabled`を設定する。",
+   "enableVacuum()": "`enableOrDisableVacuum(true)`を呼ぶだけ。",
+   "disableVacuum()": "`enableOrDisableVacuum(false)`を呼ぶだけ。",
+   "enableOrDisableVacuum(bool state)": "有効時は保持距離を戻して更新を開始し、無効時はコルーチンを止めて掴みリストとレイヤーを復元する。",
+   "setExpelEnabledState(bool state)": "射出中なら止めてから`expelEnabled`を設定する。",
+   "enableOrDisableExpel(bool state)": "射出状態を設定し、開始時は更新を回して吸引を解除し、終了時はコルーチンを止める。"
+  }
+ },
+ {
+  "type": "weaponAmmoUsingPlayerStat",
+  "summary": "射撃時に武器弾薬の代わりにプレイヤーステータスを消費する小さなブリッジ。",
+  "methods": {
+   "useWeaponAmmo()": "`statToUseName`のステータスを`amountToUsePerShoot`だけ消費する。"
+  }
+ },
+ {
+  "type": "weaponInfo",
+  "summary": "武器1種の名前・モデル・弾薬・エフェクト・音・イベントなどを保持する中心的な情報クラス。",
+  "methods": {
+   "InitializeAudioElements()": "各サウンドが設定されていれば対応する`AudioElement`のclipへ複写し、薬莢音はリストへ追加する。"
+  }
+ },
+ {
+  "type": "weaponLaser",
+  "summary": "武器から照射するレーザーで、ヒット判定・継続ダメージ・レーザーレシーバーや反射キューブへの接続を扱う挙動。",
+  "methods": {
+   "damageTarget(GameObject objectToDamage, Vector3 laserDirection, Vector3 hitPoint)": "レート制限を確認して可否を決め、可能なら`applyDamage.checkHealth`で対象へダメージを与える。",
+   "setLaserInfo(laserDevice.laserType type, GameObject laser, Vector3 pos)": "当たったレーザーと位置を保存して色を複写し、種類に応じてラインポイント数を設定する。",
+   "removeLaserInfo()": "`currentLaserRenderer`をnullにするだけ。",
+   "enableWeaponLaser()": "`setWeaponLaserState(true)`を呼ぶだけ。",
+   "disableWeaponLaser()": "`setWeaponLaserState(false)`を呼ぶだけ。",
+   "setWeaponLaserState(bool state)": "リロード中は無効のまま、それ以外はレーザー有効状態とライト・軌跡・ヒットエフェクトを切り替える。"
+  }
+ },
+ {
+  "type": "weaponListManager",
+  "summary": "武器ホイールUIを管理し、スロットの表示・武器選択・二丁持ち・ポーズやタイムスケール連携を扱う。",
+  "methods": {
+   "setTouchingMenuPanelState(bool state)": "`fingerPressingTouchPanel`を設定し、タッチゾーン無効化を無視する状態をポーズ管理へ渡す。",
+   "selectWeapon(weaponSlotInfo slotInfo)": "二丁持ち可否を判定してから武器マネージャへ選択を渡し、スロットの選択アイコンを更新する。",
+   "changeSlotSize(weaponSlotInfo slotInfo, bool setRegularSize, float sizeMultiplier, bool smoothSizeChange)": "既存のサイズ変更を止め、通常サイズか倍率適用かとスムーズさを指定して拡縮コルーチンを開始する。",
+   "selectWeaponsSlots(bool state)": "ホイールの開閉に応じてポーズ・メニュー・弾丸時間・スロット情報を切り替え、閉じる時は選択武器を確定する。",
+   "canBeOpened()": "ポーズ中・デバイス使用中・無効時・武器モード外・メニュー中・近接攻撃中なら偽を返し、それ以外は真を返す。",
+   "udpateSlotsInfo()": "綴り違いの名前で`updateSlotsInfo()`を呼ぶだけ。",
+   "updateSlotsInfo()": "所持武器数から角度を割り出し、各スロットへ名前・アイコン・弾薬・選択状態を割り当てて並べる。",
+   "playSound(AudioElement sound)": "`sound`がnullでなければ`AudioPlayer.PlayOneShot`で鳴らすだけ。",
+   "inputOpenOrCloseWeaponsWheel(bool openWeaponsWheel)": "引数に応じて`selectWeaponsSlots(true)`か`selectWeaponsSlots(false)`を呼ぶだけ。",
+   "setSelectingWeaponState(bool state)": "`usingDualWepaon`を`state`にするだけ。",
+   "setRightOrLeftWeapon(bool state)": "二丁持ちが使える構成なら、右手か左手かに応じてホイール位置とアイコンの向きを切り替える。",
+   "setUsedByAIState(bool state)": "`usedByAI`を`state`にするだけ。",
+   "setWeaponListManagerEnabledState(bool state)": "`weaponListManagerEnabled`を`state`にするだけ。",
+   "setWeaponListManagerEnabledStateFromEditor(bool state)": "有効状態を設定した後、`updateComponent`でコンポーネントとシーンを更新する。"
+  }
+ },
+ {
+  "type": "weaponObjectInfo",
+  "summary": "武器情報の取得口を提供する基底クラスで、各メソッドは既定値を返すか空のまま。",
+  "methods": {
+   "getWeaponName()": "空文字を返すだけで、派生クラスでの上書きが前提。",
+   "isMeleeWeapon()": "`false`を返すだけで、派生クラスでの上書きが前提。",
+   "isFireWeapon()": "`false`を返すだけで、派生クラスでの上書きが前提。",
+   "getAmmoText()": "空文字を返すだけ。",
+   "getProjectilesInWeaponMagazine()": "`-1`を返すだけ。",
+   "getWeaponAmmoName()": "空文字を返すだけ。",
+   "setWeaponRemainAmmoAmount(int newRemainAmmoAmount)": "本体が空で何もしない。",
+   "isWeaponUseRemainAmmoFromInventoryActive()": "`false`を返すだけ。"
+  }
+ },
+ {
+  "type": "weaponPartstToRemoveOnPickupCreation",
+  "summary": "拾い物用の武器モデルを作る際に、不要なパーツを削除するための小さなコンポーネント。",
+  "methods": {
+   "removeWeaponObjects()": "リスト内のオブジェクトを`DestroyImmediate`で消してからリストを空にする。"
+  }
+ },
+ {
+  "type": "weaponShellSystem",
+  "summary": "排出される薬莢の初速・ランダム回転・衝突無視・再生音を設定するコンポーネント。",
+  "methods": {
+   "setExtraColliderToIgnore(Collider extraCollider)": "`extraCollider`があれば`mainCollider`との衝突を無視するよう設定する。",
+   "setShellValues(Vector3 forceDirection, Collider playerCollider, AudioElement clipToUse)": "速度をリセットして`forceDirection`の力を加え、ランダム回転・プレイヤーとの衝突無視・再生音を設定する。"
+  }
+ },
+ {
+  "type": "weaponTransformInfoSystem",
+  "summary": "武器の保持・照準位置をTransformリストとして保存し、貼り付けや位置調整を行うエディタ補助システム。",
+  "methods": {
+   "getMainWeaponPositionChildsThirdPerson()": "三人称用の親の子Transformを集めてリストを作り直し、コンポーネントを更新する。",
+   "setCurrentOffsetParentOnThirdPersonWithOffsetValue(Vector3 newOffset)": "三人称の各子と`mainWeaponTransform`を`newOffset`分だけ移動してコンポーネントを更新する。",
+   "setCurrentOffsetParentOnThirdPerson()": "三人称の各子と本体を`currentOffsetParentThirdPerson`分だけずらして更新する。",
+   "getMainWeaponPositionChildsFirstPerson()": "一人称用の親の子Transformを集めてリストを作り直し、コンポーネントを更新する。",
+   "setCurrentOffsetParentOnFirstPerson()": "一人称の各子を`currentOffsetParentFirstPerson`分だけ移動してコンポーネントを更新する。",
+   "adjustDrawKeepPositionToWeaponPosition()": "武器の現在位置と回転を一人称と三人称の`keepPosition`へ複写し、シーンを更新する。",
+   "copyTransformValuesToBuffer()": "武器IDが変わればバッファを初期化し、各リストの子のローカル位置と回転を保存側へ記録する。",
+   "getListIndex(string listName)": "保存済みリストから同名の項目を探して添字を返し、無ければ`-1`を返す。",
+   "pasteTransformValuesToBuffer()": "武器IDが一致する場合のみ、保存値の位置と回転を各子へ書き戻してシーンとコンポーネントを更新する。",
+   "cleanPositionsOnScriptable()": "保存側の武器IDを`-1`にし、位置リストを空にして更新する。",
+   "addNewList()": "指定親の子Transformを新しいリストとして追加し、名前が空なら親名を使い、重複時は警告して中断する。",
+   "addNewEmptyList()": "`New List`という名前の空リストを追加してコンポーネントを更新する。",
+   "removeElementFromWeaponsTransformInfoList(List<Transform> objectTransformInfoList, int index)": "指定リストの`index`が範囲内なら削除し、シーンとコンポーネントを更新する。",
+   "updateComponent()": "`GKC_Utils.updateComponent(this)`で自身の更新を通知するだけ。"
+  }
+ }
+]

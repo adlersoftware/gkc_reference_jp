@@ -1,0 +1,175 @@
+[
+  {
+    "type": "AIHidePositionsManager",
+    "summary": "AIが隠れる位置のリスト`hidePositionList`を保持し、シーン上にギズモで隠れ場所を表示する管理コンポーネント。",
+    "methods": {
+      "addNewWayPoint()": "最後の隠れ位置の前方1m（空なら自身の位置）に子オブジェクトを作り、`hidePositionList`へ追加して更新する。"
+    }
+  },
+  {
+    "type": "AIViewTriggerSystem",
+    "summary": "トリガーの進入・退出時に、UnityEventの呼び出しと`findObjectivesSystem`への容疑者登録/解除を行う。",
+    "methods": {
+      "checkTrigger(Collider col, bool isEnter)": "`isEnter`で進入/退出を分け、設定に応じイベント呼び出しと容疑者・確認対象の登録/解除を行う。",
+      "callEvent(UnityEvent eventToCall)": "受け取った`UnityEvent`を`Invoke`するだけ。",
+      "callEventWithObject(eventParameters.eventToCallWithGameObject eventToCall, GameObject objectToSend)": "`GameObject`を引数に取るイベントを、渡されたオブジェクトで`Invoke`するだけ。",
+      "setCheckTriggerEnabledState(bool state)": "`checkTriggerEnabled`を`state`に設定するだけ。"
+    }
+  },
+  {
+    "type": "AIWalkToPosition",
+    "summary": "指定位置までAIを歩かせ、到達やプレイヤー死亡時にNavMesh設定とAI状態を元へ戻す。",
+    "methods": {
+      "activateWalkToPosition()": "有効時はAIを停止して目的地への移動と速度を設定し、到達を監視するコルーチンを開始する。",
+      "stopActivateWalkPosition()": "移動中ならコルーチンを止めてAI状態を復帰し、`walkToPositionInProcess`をfalseにする。",
+      "stopUpdateCoroutine()": "`updateCoroutine`が実行中なら停止するだけ。"
+    }
+  },
+  {
+    "type": "AIAimRotationManager",
+    "summary": "名前付きの照準回転状態をカメラや旋回速度へ適用し、必要に応じてランダムな照準オフセットを付与する。",
+    "methods": {
+      "stopUpdateCoroutine()": "実行中の更新コルーチンを停止し、`randomAimPositionOffsetActive`をfalseにする。",
+      "setAIAImRotationState(string stateName)": "名前が一致して有効な状態を選び、カメラ回転速度・旋回速度・ランダム照準オフセットを各コンポーネントへ適用する。",
+      "setAIAimRotationEnabledState(bool state)": "`AIAimRotationEnabled`を`state`に設定するだけ。",
+      "setAIAimRotationEnabledStateFromEditor(bool state)": "有効状態を設定したうえで`updateComponent`を呼び、シーンとインスペクタ表示を更新する。",
+      "updateComponent()": "`GKC_Utils.updateComponent`と`updateDirtyScene`でシーン状態を更新するだけ。"
+    }
+  },
+  {
+    "type": "shootBowSimpleAIAction",
+    "summary": "`bowSystem`を操作して弓を射るAIアクションで、射撃時間や発射数、連射間隔を設定できる。",
+    "methods": {
+      "setShootWeaponState(bool state)": "`state`に関係なく`inputFireArrow`で矢を放ち、`shootingWeapon`に`state`を設定する。"
+    }
+  },
+  {
+    "type": "shootFireWeaponSimpleAIAction",
+    "summary": "`playerWeaponsManager`を通じて銃器を射撃するAIアクションで、射撃時間や発射数を設定できる。",
+    "methods": {
+      "setShootWeaponState(bool state)": "操作主体に応じ射撃入力か`shootWeapon(state)`を呼び、`shootingWeapon`と最終射撃時刻を更新する。"
+    }
+  },
+  {
+    "type": "shootPowerSimpleAIAction",
+    "summary": "`otherPowers`を通じて特殊能力の発動入力を送るAIアクションで、発動時間や発射数を設定できる。",
+    "methods": {
+      "setShootWeaponState(bool state)": "`inputHoldShootPower`等の発動入力を送り、`shootingPower`に`state`を設定する。"
+    }
+  },
+  {
+    "type": "useAbilitySimpleAIAction",
+    "summary": "`AIAbilitiesSystemBrain`から指定名のアビリティを発動し、終了後にカメラと注視状態を戻すAIアクション。",
+    "methods": {
+      "setCurrentAbilityName(string abilityName)": "`currentAbilityName`を`abilityName`に設定するだけ。",
+      "setCurrentAbilityNameAndStartAIAction(string abilityName)": "アビリティ名を設定してから`startAIAction`でアクションを開始する。"
+    }
+  },
+  {
+    "type": "useCustomAbilitySimpleAIAction",
+    "summary": "指定名のアビリティを待ち時間後に発動し、対象の注視とNavMeshの一時停止を制御するAIアクション。",
+    "methods": {
+      "setCurrentAbilityName(string abilityName)": "`currentAbilityName`を`abilityName`に設定するだけ。",
+      "setCurrentAbilityNameAndStartAIAction(string abilityName)": "アビリティ名を設定してから`startAIAction`でアクションを開始する。"
+    }
+  },
+  {
+    "type": "characterToReceiveOrders",
+    "summary": "注文名ごとにイベント・継続時間・簡易AIアクションを登録し、キャラクターが注文を受け付ける仕組みを提供する。",
+    "methods": {
+      "containsOrderName(string orderName)": "同名の注文が存在し、かつ`orderEnabled`がtrueの場合のみtrueを返す。",
+      "activateOrder(string orderName)": "一致する有効な注文の受領イベントを呼び、継続時間コルーチンの開始と簡易AIアクションの起動を行う。",
+      "setCustomTarget(Transform newTarget)": "`currentTarget`に設定し、注文設定に応じて対象送信イベントと簡易AIアクションへ対象を渡す。",
+      "isOrderInProcess()": "`orderInProcess`の値を返すだけ。"
+    }
+  },
+  {
+    "type": "customOrderBehavior",
+    "summary": "注文ビヘイビアの基底クラスで、対象の取得や注文実行、ボタン表示条件を派生クラスが上書きする。",
+    "methods": {
+      "activateOrder(Transform character)": "中身が空のvirtualメソッドで、派生クラスでの上書きを前提とする。",
+      "activateOrder(Transform character, Transform orderOwner)": "中身が空のvirtualメソッドで、注文発行者を伴う上書き用に用意されている。",
+      "getCustomTarget(Transform character, Transform orderOwner)": "何もせずnullを返すだけのvirtualメソッド。",
+      "setCustomTarget(Transform newTarget)": "`currentTarget`に設定し、`useEventToSendTarget`が有効なら対象をイベントで送る。",
+      "checkConditionToShowOrderButton(Transform character)": "常にfalseを返すだけのvirtualメソッド。"
+    }
+  },
+  {
+    "type": "customOrderBehaviorToAttack",
+    "summary": "攻撃注文用に、プレイヤーのロックオン対象や画面内の敵から攻撃対象を選ぶビヘイビア。",
+    "methods": {
+      "canAIAttack(Transform AIFriend)": "`attackType`が`none`以外なら攻撃可能と判定する。",
+      "getClosestEnemy(Transform centerPointTransform)": "`tagToLocate`の生存対象から`centerPointTransform`に最も近い1体を返す。",
+      "getClosestEnemyToScreenView()": "画面内かつ遮蔽の無いタグ対象や`pointToLook`対象から、画面中心に最も近いものを1つ返す。"
+    }
+  },
+  {
+    "type": "customOrderBehaviorToFollow",
+    "summary": "追従注文用に、ロックオン中や画面内の対象を選び、無ければ注文発行者を返すビヘイビア。",
+    "methods": {
+      "canAIAttack(Transform AIFriend)": "`attackType`が`none`以外なら攻撃可能と判定する。",
+      "getClosestEnemy(Transform centerPointTransform)": "`tagToLocate`の生存対象から`centerPointTransform`に最も近い1体を返す。",
+      "getClosestEnemyToScreenView()": "画面内かつ遮蔽の無いタグ対象や`pointToLook`対象から、画面中心に最も近いものを1つ返す。"
+    }
+  },
+  {
+    "type": "customOrderBehaviorToHide",
+    "summary": "隠れ注文用に、シーン内の`AIHidePositionsManager`が持つ隠れ位置から対象を選ぶビヘイビア。",
+    "methods": {
+      "getClosestHidePosition(Transform AIFriend)": "`AIHidePositionsManager`を保持し、`AIFriend`から最も近い隠れ位置を返す。"
+    }
+  },
+  {
+    "type": "customOrderBehaviorToUseAbility",
+    "summary": "アビリティ使用注文用に、ロックオン中や画面内の対象を選んで攻撃対象とするビヘイビア。",
+    "methods": {
+      "canAIAttack(Transform AIFriend)": "`attackType`が`none`以外なら攻撃可能と判定する。",
+      "getClosestEnemy(Transform centerPointTransform)": "`tagToLocate`の生存対象から`centerPointTransform`に最も近い1体を返す。",
+      "getClosestEnemyToScreenView()": "画面内かつ遮蔽の無いタグ対象や`pointToLook`対象から、画面中心に最も近いものを1つ返す。"
+    }
+  },
+  {
+    "type": "addPatrolSystemToAI",
+    "summary": "インスペクタのボタンからAIへ巡回システムや`AIWayPointPatrol`を追加・割り当てするエディタ補助。",
+    "methods": {
+      "enableOrdisablePatrolOnAI(bool state)": "必要なら`mainAIPatrolSystem`を取得し、巡回の停止と有効状態を`state`に合わせる。",
+      "assignAIWaypointPatrol()": "既存の`AIWayPointPatrol`を探し（無ければ生成）、AIの`patrolPath`へ設定して巡回を再開する。",
+      "addPatrolSystem()": "プレハブから巡回オブジェクトを生成してAIへ割り当て、設定済みなら警告を出す。"
+    }
+  },
+  {
+    "type": "animalAINavmesh",
+    "summary": "動物AI用に、AIの移動入力を入力上書きと`playerControllerManager`の移動へ変換する派生クラス。",
+    "methods": {
+      "disableOverrideInputValues()": "`overrideInputValues`をゼロ入力かつ無効で呼び、入力の上書きを解除する。"
+    }
+  },
+  {
+    "type": "brainwashAIState",
+    "summary": "キャラクターを洗脳して陣営・タグ・名前・パートナーを変更するステートで、`GKC_Utils`の処理へ設定を渡す。",
+    "methods": {
+      "activateState()": "対象が設定済みなら、陣営やタグ等の設定を`GKC_Utils`の洗脳処理へ渡して実行する。",
+      "setnewPartnerGameObject(GameObject newObject)": "`newPartnerGameObject`を`newObject`に設定するだけ。"
+    }
+  },
+  {
+    "type": "eventOnTargetDetectedFaction",
+    "summary": "陣営名ごとに登録したUnityEventを、対象の検知・解除のタイミングで発火させるコンポーネント。",
+    "methods": {
+      "checkTargetDetected(GameObject newTarget)": "有効時かつ対象がnullでなければ、陣営名を取得して文字列版の`checkTargetDetected`を呼ぶ。",
+      "removeTargetDetected(GameObject newTarget)": "有効時かつ対象がnullでなければ、陣営名を取得して文字列版の`removeTargetDetected`を呼ぶ。",
+      "checkTargetDetected(string targetFactioName)": "同名で有効な陣営情報があれば`eventOnAddTarget`を`Invoke`する。",
+      "removeTargetDetected(string targetFactioName)": "同名で有効な陣営情報があれば`eventOnRemoveTarget`を`Invoke`する。",
+      "setCheckTargetsEnabledState(bool state)": "`checkTargetsEnabled`を`state`に設定するだけ。",
+      "setCheckTargetsEnabledStateFromEditor(bool state)": "有効状態を設定したうえで`updateComponent`を呼び、シーンを更新する。"
+    }
+  },
+  {
+    "type": "sleepingStateIconSystem",
+    "summary": "睡眠状態のキャラクターの頭上に「Z」アイコンを生成し、上昇・拡大・色変化させて睡眠演出を行うシステム。",
+    "methods": {
+      "setSleepState(bool state)": "trueなら鎮静時間を取得してアイコン生成コルーチンを開始、falseなら停止して全アイコンを破棄する。",
+      "stopSleepCoroutine()": "`sleepCoroutine`が実行中なら停止するだけ。"
+    }
+  }
+]

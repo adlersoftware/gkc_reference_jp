@@ -1,0 +1,570 @@
+[
+ {
+  "type": "characterFactionManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\Faction\\characterFactionManager.cs",
+  "methods": [
+   {
+    "sig": "changeCharacterToFaction(string factionToChange)",
+    "line": 45
+   },
+   {
+    "sig": "isCharacterFriendly(string characterToCheckFacionName)",
+    "line": 66
+   },
+   {
+    "sig": "isCharacterEnemy(string characterToCheckFacionName)",
+    "line": 75
+   },
+   {
+    "sig": "isAttackerEnemy(string characterToCheckFacionName)",
+    "line": 84
+   },
+   {
+    "sig": "isCharacterNeutral(string characterToCheckFacionName)",
+    "line": 93
+   },
+   {
+    "sig": "getFactionName()",
+    "line": 102
+   },
+   {
+    "sig": "checkIfCharacterBelongsToFaction(string factionName, GameObject character)",
+    "line": 107
+   },
+   {
+    "sig": "removeCharacterAsTargetOnSameFaction(GameObject characterGameObject)",
+    "line": 116
+   },
+   {
+    "sig": "sendSignalToRemoveCharacterAsTargetOnSameFaction(GameObject targetToRemove)",
+    "line": 123
+   },
+   {
+    "sig": "checkCharactersAround()",
+    "line": 130
+   },
+   {
+    "sig": "alertFaction(GameObject target)",
+    "line": 135
+   },
+   {
+    "sig": "getFactionStringList()",
+    "line": 140
+   },
+   {
+    "sig": "addDetectedEnemyFromFaction(GameObject enemy)",
+    "line": 145
+   },
+   {
+    "sig": "removeDetectedEnemyFromFaction(GameObject enemy)",
+    "line": 152
+   },
+   {
+    "sig": "clearDetectedEnemyFromFaction()",
+    "line": 159
+   },
+   {
+    "sig": "isCharacterDetectedAsEnemyByOtherFaction(GameObject characterToCheck)",
+    "line": 164
+   },
+   {
+    "sig": "addCharacterFromFaction()",
+    "line": 173
+   },
+   {
+    "sig": "removeCharacterDeadFromFaction()",
+    "line": 188
+   },
+   {
+    "sig": "alertFactionOnSpotted(float alertCloseFactionRadius, GameObject target, Vector3 alertPosition)",
+    "line": 197
+   },
+   {
+    "sig": "getCharacterTransform()",
+    "line": 204
+   },
+   {
+    "sig": "getFactionManager()",
+    "line": 209
+   },
+   {
+    "sig": "setNeutralRelationWithFactionByName(string otherFactionName)",
+    "line": 232
+   },
+   {
+    "sig": "setEnemyRelationWithFactionByName(string otherFactionName)",
+    "line": 239
+   },
+   {
+    "sig": "setFriendRelationWithFactionByName(string otherFactionName)",
+    "line": 246
+   },
+   {
+    "sig": "changeCharacterToFactionAndCleanTargetListIngame(string factionToChange)",
+    "line": 253
+   },
+   {
+    "sig": "changeFactionRelation(string otherFactionName, factionSystem.relationInfo.relationType relationType)",
+    "line": 276
+   },
+   {
+    "sig": "isIgnoreCharacterFactionEnabled()",
+    "line": 281
+   },
+   {
+    "sig": "setIgnoreCharacterFactionEnabledState(bool state)",
+    "line": 286
+   },
+   {
+    "sig": "isRemoveAsTargetIfIgnoreCharacterFactionIsActivated()",
+    "line": 310
+   },
+   {
+    "sig": "toggleIngoreCharacterFactionEnabled()",
+    "line": 315
+   },
+   {
+    "sig": "getFactionListFromEditor()",
+    "line": 321
+   },
+   {
+    "sig": "changeCharacterToFactionFromEditor(string factionToChange)",
+    "line": 334
+   },
+   {
+    "sig": "getFactionList()",
+    "line": 343
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 359
+   }
+  ]
+ },
+ {
+  "type": "friendListManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\friendListManager.cs",
+  "methods": [
+   {
+    "sig": "checkEventOnSystemDisabled()",
+    "line": 100
+   },
+   {
+    "sig": "openOrCloseFriendMenu(bool state)",
+    "line": 107
+   },
+   {
+    "sig": "openOrCLoseFriendMenuFromTouch()",
+    "line": 147
+   },
+   {
+    "sig": "closeFriendMenuIfOpen()",
+    "line": 152
+   },
+   {
+    "sig": "closeFriendMenu()",
+    "line": 159
+   },
+   {
+    "sig": "addFriend(GameObject friend)",
+    "line": 164
+   },
+   {
+    "sig": "setFriendListName()",
+    "line": 240
+   },
+   {
+    "sig": "checkIfContains(Transform friend)",
+    "line": 247
+   },
+   {
+    "sig": "setIndividualOrder(Button pressedButton)",
+    "line": 260
+   },
+   {
+    "sig": "setGeneralOrderByName(string orderName)",
+    "line": 378
+   },
+   {
+    "sig": "setGeneralOrder(Button pressedButton)",
+    "line": 383
+   },
+   {
+    "sig": "callToFriends()",
+    "line": 394
+   },
+   {
+    "sig": "findFriendsInRadius(float radius)",
+    "line": 399
+   },
+   {
+    "sig": "setCurrentStateText(int index, string state)",
+    "line": 415
+   },
+   {
+    "sig": "removeFriend(Transform friend)",
+    "line": 422
+   },
+   {
+    "sig": "removeAllFriends()",
+    "line": 443
+   },
+   {
+    "sig": "getAllFriendList()",
+    "line": 452
+   },
+   {
+    "sig": "getClosestByDistanceFriend()",
+    "line": 469
+   },
+   {
+    "sig": "anyFriendOnList()",
+    "line": 502
+   },
+   {
+    "sig": "setUsedByAIState(bool state)",
+    "line": 507
+   },
+   {
+    "sig": "inputOpenOrCloseFriendListMenu()",
+    "line": 512
+   },
+   {
+    "sig": "setFriendManagerEnabledState(bool state)",
+    "line": 527
+   },
+   {
+    "sig": "resurrectFullTeam()",
+    "line": 532
+   },
+   {
+    "sig": "resurrectFullTeamAndPlayer()",
+    "line": 543
+   },
+   {
+    "sig": "setOpenMenuEnabled(bool state)",
+    "line": 552
+   },
+   {
+    "sig": "setFriendManagerEnabledStateFromEditor(bool state)",
+    "line": 558
+   },
+   {
+    "sig": "setOpenMenuEnabledFromEditor(bool state)",
+    "line": 565
+   }
+  ]
+ },
+ {
+  "type": "factionSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\Faction\\factionSystem.cs",
+  "methods": [
+   {
+    "sig": "getComponentInstance()",
+    "line": 28
+   },
+   {
+    "sig": "addCharacterToList(characterFactionManager character)",
+    "line": 50
+   },
+   {
+    "sig": "removeCharacterToList(characterFactionManager character)",
+    "line": 55
+   },
+   {
+    "sig": "isCharacterFriendly(int ownFactionIndex, string characterToCheckFactionName)",
+    "line": 60
+   },
+   {
+    "sig": "isCharacterEnemy(int ownFactionIndex, string characterToCheckFacionName)",
+    "line": 86
+   },
+   {
+    "sig": "isAttackerEnemy(int ownFactionIndex, string characterToCheckFacionName, bool checkForFriendlyFactionAttackers, bool changeFactionRelationWithFriendlyAttackers)",
+    "line": 114
+   },
+   {
+    "sig": "isCharacterNeutral(int ownFactionIndex, string characterToCheckFacionName)",
+    "line": 153
+   },
+   {
+    "sig": "changeFactionRelation(int ownFactionIndex, string otherFactionName, relationInfo.relationType relationType)",
+    "line": 178
+   },
+   {
+    "sig": "removeEnemiesFromNewFriendFaction(int ownFactionIndex)",
+    "line": 205
+   },
+   {
+    "sig": "removeEnemiesFromCharacter(int ownFactionIndex, Transform characterTransform)",
+    "line": 221
+   },
+   {
+    "sig": "removeCharacterAsTargetFromEnemies(int ownFactionIndex, GameObject characterToRemove)",
+    "line": 239
+   },
+   {
+    "sig": "checkIfCharacterBelongsToFaction(string factionName, GameObject character)",
+    "line": 261
+   },
+   {
+    "sig": "isCharacterDetectedAsEnemyByOtherFaction(GameObject characterToCheck)",
+    "line": 278
+   },
+   {
+    "sig": "alertFactionOnSpotted(int ownFactionIndex, float alertCloseFactionRadius, GameObject target, Vector3 alertPosition)",
+    "line": 291
+   },
+   {
+    "sig": "removeCharacterAsTargetOnSameFaction(GameObject characterToCheck, int ownFactionIndex)",
+    "line": 314
+   },
+   {
+    "sig": "addFaction()",
+    "line": 341
+   },
+   {
+    "sig": "removeFaction(int factionIndexToRemove)",
+    "line": 350
+   },
+   {
+    "sig": "updateFactionsList()",
+    "line": 359
+   },
+   {
+    "sig": "getFactionIndex(string factionName)",
+    "line": 449
+   },
+   {
+    "sig": "checkIfFactionExists(string factionName)",
+    "line": 462
+   },
+   {
+    "sig": "checkIfFactionExistsInStringList(string factionName)",
+    "line": 475
+   },
+   {
+    "sig": "factionContainsRelation(int factionIndex, string factionWithRelation)",
+    "line": 488
+   },
+   {
+    "sig": "setAllRelationsAsFriendOrEnemyOnFaction(int factionIndex, int relationTypeIndex)",
+    "line": 507
+   },
+   {
+    "sig": "getFactionStringList()",
+    "line": 534
+   },
+   {
+    "sig": "updateFactionListNames()",
+    "line": 545
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 552
+   }
+  ]
+ },
+ {
+  "type": "manageAITarget",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\Turret\\manageAITarget.cs",
+  "methods": [
+   {
+    "sig": "resetCheckThreatValues()",
+    "line": 240
+   },
+   {
+    "sig": "checkCharacterFaction(GameObject character, bool damageReceived)",
+    "line": 265
+   },
+   {
+    "sig": "checkShootOrigin(GameObject attacker)",
+    "line": 383
+   },
+   {
+    "sig": "checkIfTargetIsPhysicallyVisible(GameObject targetToCheck, bool checkingSuspect)",
+    "line": 595
+   },
+   {
+    "sig": "targetAdquired()",
+    "line": 651
+   },
+   {
+    "sig": "shootTarget()",
+    "line": 680
+   },
+   {
+    "sig": "pauseAI(bool state)",
+    "line": 685
+   },
+   {
+    "sig": "checkPossibleTarget(GameObject objectToCheck)",
+    "line": 702
+   },
+   {
+    "sig": "checkTriggerInfo(Collider col, bool isEnter)",
+    "line": 711
+   },
+   {
+    "sig": "canCheckSuspect(int suspectLayer)",
+    "line": 732
+   },
+   {
+    "sig": "setCorrectlyHackedState()",
+    "line": 741
+   },
+   {
+    "sig": "setIncorrectlyHackedState()",
+    "line": 746
+   },
+   {
+    "sig": "setHackResult(bool state)",
+    "line": 752
+   },
+   {
+    "sig": "activateHack()",
+    "line": 792
+   },
+   {
+    "sig": "checkCharactersAroundAI()",
+    "line": 797
+   },
+   {
+    "sig": "setCharacterStateIcon(string stateName)",
+    "line": 804
+   },
+   {
+    "sig": "disableCharacterStateIcon()",
+    "line": 811
+   },
+   {
+    "sig": "setAIStateToDead()",
+    "line": 819
+   },
+   {
+    "sig": "checkEventsOnSpotted(bool state)",
+    "line": 824
+   }
+  ]
+ },
+ {
+  "type": "AITurret",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\Turret\\AITurret.cs",
+  "methods": [
+   {
+    "sig": "chooseNextWeapon()",
+    "line": 289
+   },
+   {
+    "sig": "choosePreviousWeapon()",
+    "line": 302
+   },
+   {
+    "sig": "enableOrDisableWeapons(bool state)",
+    "line": 315
+   },
+   {
+    "sig": "setOnSpottedState(bool state)",
+    "line": 331
+   },
+   {
+    "sig": "setDeathState()",
+    "line": 516
+   },
+   {
+    "sig": "setRandomWeapon()",
+    "line": 585
+   },
+   {
+    "sig": "setWeapon(int weaponNumber)",
+    "line": 592
+   },
+   {
+    "sig": "startOverride()",
+    "line": 597
+   },
+   {
+    "sig": "stopOverride()",
+    "line": 602
+   },
+   {
+    "sig": "overrideTurretControlState(bool state)",
+    "line": 607
+   },
+   {
+    "sig": "disableOverrideAfterDelay(float delayDuration)",
+    "line": 648
+   },
+   {
+    "sig": "stopDisableOverrideAfterDelayCoroutine()",
+    "line": 657
+   },
+   {
+    "sig": "setNewCurrentCameraTransformDirection(Transform newTransform)",
+    "line": 671
+   },
+   {
+    "sig": "setNewTurretAttacker(GameObject newAttacker)",
+    "line": 676
+   },
+   {
+    "sig": "inputSetShootState(bool state)",
+    "line": 781
+   },
+   {
+    "sig": "inputSetWeaponsState()",
+    "line": 790
+   },
+   {
+    "sig": "inputSetNextOrPreviousWeapon(bool state)",
+    "line": 795
+   }
+  ]
+ },
+ {
+  "type": "fieldOfViewMeshSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\fieldOfViewMeshSystem.cs",
+  "methods": [
+   {
+    "sig": "setActiveState(bool state)",
+    "line": 169
+   },
+   {
+    "sig": "setMaterialColor(Color newColor)",
+    "line": 206
+   },
+   {
+    "sig": "setRegularColor()",
+    "line": 211
+   },
+   {
+    "sig": "setAlertColor()",
+    "line": 216
+   }
+  ]
+ },
+ {
+  "type": "enemyLaser",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\Turret\\enemyLaser.cs",
+  "methods": [
+   {
+    "sig": "setOwner(GameObject laserOwner)",
+    "line": 107
+   }
+  ]
+ },
+ {
+  "type": "objectSignalForTargetToAI",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\AI\\objectSignalForTargetToAI.cs",
+  "methods": [
+   {
+    "sig": "activateSignalWithRate()",
+    "line": 42
+   },
+   {
+    "sig": "checkToDetectAI()",
+    "line": 89
+   }
+  ]
+ }
+]

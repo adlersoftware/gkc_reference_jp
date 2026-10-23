@@ -1,0 +1,612 @@
+[
+ {
+  "type": "vehicleCameraController",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Camera\\Vehicles\\vehicleCameraController.cs",
+  "methods": [
+   {
+    "sig": "getLookDirection()",
+    "line": 585
+   },
+   {
+    "sig": "setZoom(bool state)",
+    "line": 606
+   },
+   {
+    "sig": "disableZoom()",
+    "line": 637
+   },
+   {
+    "sig": "changeRotationSpeedValue(float newVerticalRotationValue, float newHorizontalRotationValue)",
+    "line": 646
+   },
+   {
+    "sig": "setOriginalRotationSpeed()",
+    "line": 657
+   },
+   {
+    "sig": "checkCurrentRotationSpeed()",
+    "line": 665
+   },
+   {
+    "sig": "setCameraState(string stateName)",
+    "line": 676
+   },
+   {
+    "sig": "setCheckCameraShakeActiveState(bool state)",
+    "line": 715
+   },
+   {
+    "sig": "usingBoost(bool state, string shakeName, bool useBoostCameraShake, bool moveCameraAwayOnBoost)",
+    "line": 734
+   },
+   {
+    "sig": "setFirstPersonCameraState()",
+    "line": 769
+   },
+   {
+    "sig": "setCameraStateByName(string cameraStateName)",
+    "line": 782
+   },
+   {
+    "sig": "changeCameraPositionByIndex(int newIndex)",
+    "line": 802
+   },
+   {
+    "sig": "changeCameraPosition()",
+    "line": 816
+   },
+   {
+    "sig": "resetCameraRotation()",
+    "line": 931
+   },
+   {
+    "sig": "resetAxisCameraRotationToVehicleForwardDirection()",
+    "line": 937
+   },
+   {
+    "sig": "setDamageCameraShake()",
+    "line": 949
+   },
+   {
+    "sig": "setCameraExternalShake(externalShakeInfo externalShake)",
+    "line": 962
+   },
+   {
+    "sig": "moveAwayCamera()",
+    "line": 970
+   },
+   {
+    "sig": "getPlayer(GameObject playerElement)",
+    "line": 1004
+   },
+   {
+    "sig": "getVehicleMainCameraTransform()",
+    "line": 1029
+   },
+   {
+    "sig": "getVehicleCameraControllerTransform()",
+    "line": 1034
+   },
+   {
+    "sig": "changeCameraDrivingState(bool state, bool resetCameraRotationWhenGetOn)",
+    "line": 1040
+   },
+   {
+    "sig": "updateTo2_5dor3dWorld(bool state)",
+    "line": 1172
+   },
+   {
+    "sig": "resetCameraTransformRotation()",
+    "line": 1217
+   },
+   {
+    "sig": "setCameraPosition(bool state)",
+    "line": 1225
+   },
+   {
+    "sig": "setFirstOrThirdPerson(bool state)",
+    "line": 1261
+   },
+   {
+    "sig": "adjustCameraToCurrentCollisionDistance()",
+    "line": 1288
+   },
+   {
+    "sig": "checkCameraCollision()",
+    "line": 1323
+   },
+   {
+    "sig": "startOrStopFollowVehiclePosition(bool state)",
+    "line": 1361
+   },
+   {
+    "sig": "pauseOrPlayVehicleCamera(bool state)",
+    "line": 1366
+   },
+   {
+    "sig": "isVehicleCameraPaused()",
+    "line": 1371
+   },
+   {
+    "sig": "isCameraTypeFree()",
+    "line": 1376
+   },
+   {
+    "sig": "isPlayerMovingOn3dWorld()",
+    "line": 1381
+   },
+   {
+    "sig": "getCurrentCameraPivot()",
+    "line": 1396
+   },
+   {
+    "sig": "getCurrentCameraTransform()",
+    "line": 1401
+   },
+   {
+    "sig": "getVehicleLookAngle()",
+    "line": 1406
+   },
+   {
+    "sig": "gameIsPaused()",
+    "line": 1411
+   },
+   {
+    "sig": "setVehicleAndCameraParent(Transform newParent)",
+    "line": 1416
+   },
+   {
+    "sig": "inputChangeCamera()",
+    "line": 1429
+   },
+   {
+    "sig": "inputZoom()",
+    "line": 1437
+   },
+   {
+    "sig": "inputTakeCapture()",
+    "line": 1444
+   }
+  ]
+ },
+ {
+  "type": "cameraControllerManager",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Camera\\Player Camera\\cameraControllerManager.cs",
+  "methods": [
+   {
+    "sig": "isFirstPersonActive()",
+    "line": 7
+   },
+   {
+    "sig": "isMoveInXAxisOn2_5d()",
+    "line": 12
+   },
+   {
+    "sig": "setMoveInXAxisOn2_5dState(bool state)",
+    "line": 17
+   },
+   {
+    "sig": "getOriginalLockedCameraPivotPosition()",
+    "line": 22
+   },
+   {
+    "sig": "getSplineForPlayerPosition(Vector3 playerPosition)",
+    "line": 27
+   },
+   {
+    "sig": "getSplineForwardDirection(Vector3 playerPosition)",
+    "line": 32
+   },
+   {
+    "sig": "changeCameraFov(bool state)",
+    "line": 37
+   },
+   {
+    "sig": "getPivotCameraTransform()",
+    "line": 42
+   },
+   {
+    "sig": "getLockedCameraTransform()",
+    "line": 47
+   },
+   {
+    "sig": "crouch(bool isCrouching)",
+    "line": 52
+   },
+   {
+    "sig": "setMainCameraFovStartAndEnd(float startTargetValue, float endTargetValue, float speed)",
+    "line": 57
+   },
+   {
+    "sig": "getOriginalCameraFov()",
+    "line": 62
+   },
+   {
+    "sig": "isPlayerLookingAtTarget()",
+    "line": 67
+   },
+   {
+    "sig": "isLookintAtTargetByInput()",
+    "line": 72
+   },
+   {
+    "sig": "setShakeCameraState(bool state, string stateName)",
+    "line": 77
+   },
+   {
+    "sig": "getLastTimeMoved()",
+    "line": 82
+   },
+   {
+    "sig": "setDrivingState(bool state)",
+    "line": 87
+   },
+   {
+    "sig": "is2_5ViewActive()",
+    "line": 92
+   },
+   {
+    "sig": "istargetToLookLocated()",
+    "line": 97
+   },
+   {
+    "sig": "setPlayerAndCameraParent(Transform newParent)",
+    "line": 102
+   },
+   {
+    "sig": "stopShakeCamera()",
+    "line": 107
+   },
+   {
+    "sig": "getCurrentTargetToLook()",
+    "line": 112
+   },
+   {
+    "sig": "setUpdatePlayerCameraPositionOnLateUpdateActiveState(bool state)",
+    "line": 117
+   },
+   {
+    "sig": "setUpdatePlayerCameraPositionOnFixedUpdateActiveState(bool state)",
+    "line": 122
+   },
+   {
+    "sig": "isFullBodyAwarenessEnabled()",
+    "line": 127
+   },
+   {
+    "sig": "setPivotCameraTransformParentCurrentTransformToFollow()",
+    "line": 132
+   },
+   {
+    "sig": "setPivotCameraTransformOriginalParent()",
+    "line": 137
+   },
+   {
+    "sig": "resetPivotCameraTransformLocalRotation()",
+    "line": 142
+   },
+   {
+    "sig": "setHeadColliderStateOnFBA(bool state)",
+    "line": 147
+   },
+   {
+    "sig": "setFBAPivotCameraTransformActiveState(bool state)",
+    "line": 152
+   },
+   {
+    "sig": "startOrStopUpdatePivotPositionOnFBA(bool state)",
+    "line": 157
+   },
+   {
+    "sig": "checkActivateOrDeactivateHeadColliderOnFBA(bool state)",
+    "line": 162
+   },
+   {
+    "sig": "checkResetLeanState(bool resetPivotCameraTransform)",
+    "line": 167
+   },
+   {
+    "sig": "isShowCameraCursorWhenNotAimingActive()",
+    "line": 172
+   },
+   {
+    "sig": "setFBAPivotTransformParentFromPlayer(Transform newParent)",
+    "line": 178
+   }
+  ]
+ },
+ {
+  "type": "headBob",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Camera\\Player Camera\\headBob.cs",
+  "methods": [
+   {
+    "sig": "isExternalShakingActive()",
+    "line": 194
+   },
+   {
+    "sig": "canBeUsed()",
+    "line": 199
+   },
+   {
+    "sig": "setFirstPersonViewActiveState(bool state)",
+    "line": 214
+   },
+   {
+    "sig": "setCameraTypeFreeState(bool state)",
+    "line": 219
+   },
+   {
+    "sig": "cameraLockedAllowsShake()",
+    "line": 224
+   },
+   {
+    "sig": "stopBobTransform()",
+    "line": 237
+   },
+   {
+    "sig": "stopBobRotation()",
+    "line": 250
+   },
+   {
+    "sig": "setState(string stateName)",
+    "line": 264
+   },
+   {
+    "sig": "setFirstOrThirdHeadBobView(bool state)",
+    "line": 310
+   },
+   {
+    "sig": "setFirstOrThirdMode(bool state)",
+    "line": 330
+   },
+   {
+    "sig": "setShotShakeState(IKWeaponSystem.weaponShotShakeInfo shotShakeInfo)",
+    "line": 335
+   },
+   {
+    "sig": "setExternalShakeState(externalShakeInfo shakeInfo)",
+    "line": 368
+   },
+   {
+    "sig": "setExternalShakeStateByIndex(int index, bool isFirstPerson)",
+    "line": 417
+   },
+   {
+    "sig": "setExternalShakeStateByName(string shakeName, float multiplier)",
+    "line": 432
+   },
+   {
+    "sig": "setExternalShakeStateToRepeat(externalShakeInfo shakeInfo)",
+    "line": 502
+   },
+   {
+    "sig": "setExternalShakeDuration()",
+    "line": 547
+   },
+   {
+    "sig": "stopExternalShake()",
+    "line": 620
+   },
+   {
+    "sig": "setCurrentExternalCameraShakeSystemEvents(UnityEvent eventAtStart, UnityEvent eventAtEnd)",
+    "line": 645
+   },
+   {
+    "sig": "disableUseShakeEventState()",
+    "line": 652
+   },
+   {
+    "sig": "checkDecreaseShake()",
+    "line": 657
+   },
+   {
+    "sig": "playerAliveOrDead(bool state)",
+    "line": 715
+   },
+   {
+    "sig": "playOrPauseHeadBob(bool state)",
+    "line": 734
+   },
+   {
+    "sig": "stopAllHeadbobMovements()",
+    "line": 739
+   },
+   {
+    "sig": "jumpStarted()",
+    "line": 844
+   },
+   {
+    "sig": "jumpEnded()",
+    "line": 862
+   },
+   {
+    "sig": "setDefaultState()",
+    "line": 998
+   },
+   {
+    "sig": "setShakeInManagerList(int index)",
+    "line": 1009
+   },
+   {
+    "sig": "pauseHeadBodWithDelay(float delayAmount)",
+    "line": 1018
+   },
+   {
+    "sig": "updateExternalShakeInfoList(List<externalShakeInfoListElement> newExternalShakeInfoList)",
+    "line": 1048
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 1055
+   }
+  ]
+ },
+ {
+  "type": "cameraCaptureSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Camera\\Captures\\cameraCaptureSystem.cs",
+  "methods": [
+   {
+    "sig": "setMainSettings()",
+    "line": 76
+   },
+   {
+    "sig": "checkSettings()",
+    "line": 99
+   },
+   {
+    "sig": "loadCaptures()",
+    "line": 107
+   },
+   {
+    "sig": "getSaveButtonSelected(Button button)",
+    "line": 154
+   },
+   {
+    "sig": "addCaptureSlot(int index, string fileName)",
+    "line": 172
+   },
+   {
+    "sig": "changeButtonsColor(bool delete, bool expand)",
+    "line": 192
+   },
+   {
+    "sig": "openCaptureGallery()",
+    "line": 211
+   },
+   {
+    "sig": "closeCaptureGallery()",
+    "line": 216
+   },
+   {
+    "sig": "openOrCloseCapturesGallery(bool state)",
+    "line": 221
+   },
+   {
+    "sig": "getDataPath()",
+    "line": 234
+   },
+   {
+    "sig": "takeCapture(Camera currentCamera)",
+    "line": 253
+   },
+   {
+    "sig": "takeCaptureWithCameraEditor()",
+    "line": 309
+   },
+   {
+    "sig": "deleteCapture()",
+    "line": 316
+   },
+   {
+    "sig": "deleteExpandedCapture()",
+    "line": 340
+   },
+   {
+    "sig": "expandCapture()",
+    "line": 373
+   },
+   {
+    "sig": "expandNextCapture()",
+    "line": 382
+   },
+   {
+    "sig": "expandPreviousCapture()",
+    "line": 395
+   },
+   {
+    "sig": "closeExpandCaptureMenu()",
+    "line": 408
+   },
+   {
+    "sig": "destroyCaptureSlot(int slotIndex)",
+    "line": 413
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 420
+   }
+  ]
+ },
+ {
+  "type": "cameraWaypointSystem",
+  "file": "D:\\dev\\Unity\\GKC AI\\Assets\\Game Kit Controller\\Scripts\\Camera\\Cutscene\\cameraWaypointSystem.cs",
+  "methods": [
+   {
+    "sig": "setCurrentCameraTransform(GameObject cameraGameObject)",
+    "line": 102
+   },
+   {
+    "sig": "findPlayerOnScene()",
+    "line": 118
+   },
+   {
+    "sig": "setCurrentPlayer(GameObject currentPlayer)",
+    "line": 127
+   },
+   {
+    "sig": "checkMovementCoroutine(bool play)",
+    "line": 180
+   },
+   {
+    "sig": "stopMoveThroughWayPointsCoroutine()",
+    "line": 233
+   },
+   {
+    "sig": "stopWaypointsIfInProcess()",
+    "line": 495
+   },
+   {
+    "sig": "stopWaypointsAndResetCameraPosition()",
+    "line": 502
+   },
+   {
+    "sig": "resetCameraPosition()",
+    "line": 513
+   },
+   {
+    "sig": "setCameraDirection()",
+    "line": 578
+   },
+   {
+    "sig": "setCameraWaypointEnabledState(bool state)",
+    "line": 595
+   },
+   {
+    "sig": "setCustomGameObjectToLook(GameObject newGameObject)",
+    "line": 600
+   },
+   {
+    "sig": "setCustomTransformToLook(Transform newTransform)",
+    "line": 609
+   },
+   {
+    "sig": "checkEventToStopCutscene()",
+    "line": 616
+   },
+   {
+    "sig": "addNewWayPoint()",
+    "line": 628
+   },
+   {
+    "sig": "addNewWayPoint(int insertAtIndex)",
+    "line": 651
+   },
+   {
+    "sig": "renameAllWaypoints()",
+    "line": 686
+   },
+   {
+    "sig": "removeWaypoint(int index)",
+    "line": 698
+   },
+   {
+    "sig": "removeAllWaypoints()",
+    "line": 709
+   },
+   {
+    "sig": "updateComponent()",
+    "line": 722
+   }
+  ]
+ }
+]
