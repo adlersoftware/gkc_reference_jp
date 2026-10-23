@@ -55,35 +55,42 @@
 
 ## 3. このワークスペースに作ったもの
 
-```
-GUIDE.md                   リファレンスの読み方・設計前提・呼び出し例（まずこれ）
-REFERENCES.md              全 51 システムの索引（各システム 1 ファイル）
-INSPECTOR_REFERENCE.md     インスペクター設定の日本語解説索引（103 コンポーネント / 約 4,100 項目）
-*_REFERENCE.md             システム別のメソッド注釈（日本語・1 行ずつ）
-PLAYER_REFERENCE.md        統合版（Player / Camera / Weapons / Inventory / Health）
-reference/                 3.77h ソース由来のリファレンス（998 型 / 3.2 MB）
-  _INDEX.md                システム別の全型一覧（設定数・API 数付き）
-  <システム>/<型名>.md      インスペクター設定（日本語説明付き） + 公開メソッド + Unity イベント
-  gkc_api.json             型名 / 継承 / ファイル / 件数の索引
-notes/
-  method_notes.json        メソッド注釈の元データ（型サマリ + メソッド説明）
-  field_notes.json         インスペクター項目の日本語説明（元データ）
-docs/                      GitBook 全 318 ページの Markdown ミラー
-  _INDEX.md                ページ一覧（階層ツリー）
-  index.md                 Welcome ページ
-  llms.txt                 GitBook 公式の全ページ索引
-sources/
-  gkc_3.7_documentation.txt  同梱 PDF をテキスト化（112 ページ、読みやすく整形）
-  pdf_text_raw.txt           抽出そのまま（ページ区切り付き）
-tools/
-  GkcExtract/              Roslyn で全 .cs を解析し types.json を生成
-  parse_editors.py         カスタムエディタからインスペクター構成・表示条件を抽出
-  generate_reference.py    Markdown リファレンス生成
-  mirror_docs.py           GitBook → Markdown 取得（並列 6、.md エンドポイント使用）
-  postprocess_docs.py      バナー除去・索引再生成
-  extract_pdf.py           PDF テキスト抽出（ToUnicode CMap 対応の自作パーサ）
-  clean_pdf_text.py        1 文字ずつバラけた PDF テキストの整形
-```
+### リファレンス本体
+
+| ファイル | 内容 |
+| --- | --- |
+| [GUIDE.md](GUIDE.md) | リファレンスの読み方・設計前提・呼び出し例（まずこれ） |
+| [REFERENCES.md](REFERENCES.md) | 全 51 システムの索引（各システム 1 ファイル） |
+| [INSPECTOR_REFERENCE.md](INSPECTOR_REFERENCE.md) | インスペクター設定の日本語解説索引（35 システム / 102 コンポーネント / 4,085 項目） |
+| `*_REFERENCE.md` | システム別のメソッド注釈（51 システム分） |
+| [PLAYER_REFERENCE.md](PLAYER_REFERENCE.md) | 統合版（Player / Camera / Weapons / Inventory / Health） |
+| [reference/_INDEX.md](reference/_INDEX.md) | 型ページの全一覧（998 型 / 設定数・API 数付き） |
+| `reference/<システム>/<型名>.md` | 型ごとのページ（インスペクター設定＋公開メソッド＋Unity イベント） |
+| `reference/gkc_api.json` | 型名 / 継承 / ファイル / 件数の索引（機械可読） |
+
+### データ・素材
+
+| パス | 内容 |
+| --- | --- |
+| `notes/method_notes.json` | メソッド注釈の元データ（型サマリ + メソッド説明） |
+| `notes/field_notes.json` | インスペクター項目の日本語説明（元データ） |
+| [docs/_INDEX.md](docs/_INDEX.md) | GitBook ミラー（全 318 ページ）のページ一覧 |
+| [docs/index.md](docs/index.md) | GitBook の Welcome ページ |
+| `docs/llms.txt` | GitBook 公式の全ページ索引 |
+| `sources/gkc_3.7_documentation.txt` | 同梱 PDF をテキスト化（112 ページ、読みやすく整形） |
+| `sources/pdf_text_raw.txt` | 抽出そのまま（ページ区切り付き） |
+| `tools/` | 生成スクリプト一式（下記） |
+
+### tools/（生成スクリプト）
+
+- `GkcExtract/` — Roslyn で全 `.cs` を解析し `types.json` を生成
+- `parse_editors.py` — カスタムエディタからインスペクター構成・表示条件を抽出
+- `generate_reference.py` — Markdown リファレンス生成
+- `mirror_docs.py` — GitBook → Markdown 取得（並列 6、`.md` エンドポイント使用）
+- `postprocess_docs.py` — バナー除去・索引再生成
+- `extract_pdf.py` — PDF テキスト抽出（ToUnicode CMap 対応の自作パーサ）
+- `clean_pdf_text.py` — 1 文字ずつバラけた PDF テキストの整形
+- `build_system_pages.py` / `build_index.py` / `build_inspector_index.py` — システム別ページと索引の生成
 
 補足:
 - GitBook は各ページ URL に `.md` を付けると Markdown が返ります。`/docs/llms.txt` が全ページ索引です。
@@ -94,6 +101,6 @@ tools/
 
 ## 4. 次にやると効くこと
 
-1. **インスペクター項目の意味** — 完了（103 コンポーネント / 約 4,100 項目）。
+1. **インスペクター項目の意味** — 完了（102 コンポーネント / 4,085 項目）。
 2. **チェンジログの横断索引** — 3.03〜3.6 の PDF から「どのバージョンで何が入ったか」を検索可能に。
 3. **デモシーン逆引き表** — 78 シーン × 使用コンポーネントの対応表（「この機能の実例はどのシーンか」が引ける）。
